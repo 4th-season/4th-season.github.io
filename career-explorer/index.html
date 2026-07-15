@@ -96,6 +96,7 @@
       <h2 id="field-title">세부 분야 선택</h2>
       <p class="panel-intro" id="field-intro">선택한 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.</p>
       <div class="choice-grid" id="field-grid"></div>
+      <p class="career-note" id="field-boundary-note"></p>
       <div class="nav-actions"><button type="button" class="nav-button" id="back-field">← 이전 단계</button><button type="button" class="nav-button restart-button">처음부터 다시</button></div>
     </section>
 
@@ -153,12 +154,14 @@
     const valueOptions=["안정성","보수","일과 삶의 균형","즐거움","소속감","자기 계발","도전성","영향력","사회적 기여","성취","사회적 인정","자율성"];
 
     const healthcare = {
-      "diagnosis-treatment": {label:"진료·치료",desc:"질병을 진단하고 치료하는 분야",majors:["의예과·의학과","치의예과·치의학과","한의예과·한의학과"],jobs:["의사","치과의사","한의사"]},
+      "diagnosis-treatment": {label:"진료·치료",desc:"환자의 질병과 건강상태를 진단하고 치료계획을 세우는 분야",majors:["의예과·의학과","치의예과·치의학과","한의예과·한의학과"],jobs:["의사","치과의사","한의사"]},
       "nursing": {label:"간호",desc:"환자의 건강 회복과 생활을 지속적으로 지원하는 분야",majors:["간호학과"],jobs:["간호사"]},
-      "rehabilitation": {label:"재활",desc:"신체·인지·의사소통 기능의 회복과 적응을 돕는 분야",majors:["물리치료학과","작업치료학과","언어치료·언어재활 관련 학과","재활학과","스포츠재활 관련 학과"],jobs:["물리치료사","작업치료사","언어재활 관련 직업","재활 관련 직업"]},
-      "testing-technology": {label:"검사·의료기술",desc:"검사와 영상 등 의료기술로 진료를 지원하는 분야",majors:["임상병리학과","방사선학과","치기공학과","치위생학과"],jobs:["임상병리사","방사선사","치과기공사","치과위생사"]},
-      "pharmacy": {label:"약학",desc:"의약품을 연구·조제하고 안전한 사용을 지원하는 분야",majors:["약학과","제약 관련 학과"],jobs:["약사","의약품 연구 관련 직업"]},
-      "public-health": {label:"보건·의료지원",desc:"예방·관리·행정으로 건강과 의료체계를 지원하는 분야",majors:["보건행정학과","보건관리학과","응급구조학과","의료공학 관련 학과"],jobs:["응급구조사","보건행정 관련 직업","의료기기 관련 직업"]}
+      "rehabilitation": {label:"재활·기능회복",desc:"신체·인지·의사소통 기능의 회복과 일상 적응을 돕는 분야",majors:["물리치료학과","작업치료학과","언어치료·언어재활 관련 학과","재활학과","스포츠재활 관련 학과"],jobs:["물리치료사","작업치료사","언어재활 관련 직업","재활 관련 직업"]},
+      "testing-imaging": {label:"검사·영상",desc:"검체·생리검사와 의료영상 기술로 진단과 치료를 지원하는 분야",majors:["임상병리학과","방사선학과"],jobs:["임상병리사","방사선사"]},
+      "dental-oral-health": {label:"치과기술·구강보건",desc:"치과 보철물을 제작하거나 구강질환 예방과 위생관리를 지원하는 분야",majors:["치기공학과","치위생학과"],jobs:["치과기공사","치과위생사"]},
+      "pharmacy": {label:"약학·의약품",desc:"의약품을 조제·관리하거나 연구·개발·생산의 기반을 다루는 분야",majors:["약학과","제약 관련 학과"],jobs:["약사","의약품 연구 관련 직업"]},
+      "emergency-care": {label:"응급·구조",desc:"응급현장과 이송·의료기관에서 상담·구조·이송과 응급처치를 수행하는 분야",majors:["응급구조학과"],jobs:["응급구조사"]},
+      "public-health-system": {label:"보건·의료체계",desc:"예방·건강관리·의료정보·행정·의료기술로 보건의료체계를 지원하는 분야",majors:["보건행정학과","보건관리학과","의료공학 관련 학과"],jobs:["보건행정 관련 직업","보건관리 관련 직업","의료기기 관련 직업"]}
     };
 
     // 공통 데이터 모델: 새 직업군은 fields 안에 분야·학과·직업 데이터만 추가하면 같은 화면 흐름을 사용합니다.
@@ -333,7 +336,7 @@
       const target=document.getElementById("route-list");target.innerHTML="";selected.forEach(id=>{const catalog=careerCatalog[id];const button=document.createElement("button");button.type="button";button.className="item-button"+(id===currentInterestId?" is-active":"");button.textContent=catalog.label+(Object.keys(catalog.fields||{}).length?"":" · 준비 중");button.addEventListener("click",()=>chooseInterest(id));target.appendChild(button);});document.getElementById("route-switcher").hidden=selected.length<2;
     }
     function renderFieldChoices(catalog){
-      document.getElementById("field-title").textContent=catalog.label+" 세부 분야";document.getElementById("field-intro").textContent="선택한 "+catalog.label+" 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.";fieldGrid.innerHTML="";const entries=Object.entries(catalog.fields||{});
+      document.getElementById("field-title").textContent=catalog.label+" 세부 분야";document.getElementById("field-intro").textContent="선택한 "+catalog.label+" 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.";document.getElementById("field-boundary-note").textContent=catalog.id==="healthcare"?"이 구분은 청소년이 업무 목적을 이해하기 위한 탐색용 분류입니다. 법령상 면허·자격 직종 구분과 완전히 같지 않으며, 실제 진입요건은 직업별 공식 안내에서 확인합니다.":"세부 분야는 탐색을 돕기 위한 구분이며 실제 학과·직업의 경계는 서로 겹칠 수 있습니다.";fieldGrid.innerHTML="";const entries=Object.entries(catalog.fields||{});
       if(!entries.length){const box=document.createElement("div");box.className="empty";box.style.gridColumn="1/-1";box.innerHTML="<strong>공통 탐색 구조가 준비되었습니다.</strong><br>"+catalog.label+"의 세부 분야·학과·직업 데이터는 검증 후 이 자리에 추가됩니다. 데이터가 추가되면 별도 화면 수정 없이 다음 단계가 자동으로 열립니다.";fieldGrid.appendChild(box);return;}
       entries.forEach(([id,data])=>{const button=document.createElement("button");button.type="button";button.className="choice";button.innerHTML="<strong>"+data.label+"</strong><span>"+data.desc+"</span>";button.addEventListener("click",()=>chooseField(id,button));fieldGrid.appendChild(button);});
     }
