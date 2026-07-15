@@ -9,7 +9,7 @@
     :root{--navy:#13284a;--blue:#3268d6;--sky:#edf4ff;--mint:#dff7ee;--ink:#243148;--muted:#687386;--line:#dbe4ef;--white:#fff;--shadow:0 18px 50px rgba(19,40,74,.1)}
     *{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#f4f8ff 0,#fff 520px);line-height:1.65}button,a{font:inherit}.wrap{width:min(1080px,calc(100% - 32px));margin:auto}.topbar{padding:18px 0}.brand{color:var(--navy);font-weight:900;text-decoration:none}.hero{padding:58px 0 46px;text-align:center}.eyebrow{margin:0;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:.1em}.hero h1{margin:10px 0 14px;color:var(--navy);font-size:clamp(32px,6vw,58px);line-height:1.12}.hero p{max-width:690px;margin:0 auto;color:var(--muted)}.panel{margin-bottom:24px;padding:clamp(20px,4vw,38px);border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:var(--shadow)}.panel h2{margin:0 0 8px;color:var(--navy);font-size:clamp(23px,4vw,31px)}.panel-intro{margin:0 0 22px;color:var(--muted)}.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.profile-card{padding:18px;border-radius:16px;background:var(--sky)}.profile-card small{display:block;color:var(--muted);font-weight:700}.profile-card strong{display:block;margin-top:4px;color:var(--navy);font-size:18px}.selected-list{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}.selected-list li{padding:8px 12px;border-radius:999px;background:var(--navy);color:#fff;font-size:14px;font-weight:800}.selected-list li:first-child{background:var(--blue)}.choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.choice{display:block;min-height:110px;padding:17px;text-align:left;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);cursor:pointer;transition:.2s ease}.choice:hover,.choice:focus-visible{transform:translateY(-2px);border-color:#8cafeb;box-shadow:0 10px 24px rgba(50,104,214,.1)}.choice strong{display:block;margin-bottom:5px;color:var(--navy);font-size:17px}.choice span{display:block;color:var(--muted);font-size:13px}.choice.is-active{border:2px solid var(--blue);padding:16px;background:var(--sky)}.choice.is-disabled{opacity:.64}.step{display:none;opacity:0;transform:translateY(14px)}.step.show{display:block;animation:reveal .45s ease forwards}@keyframes reveal{to{opacity:1;transform:none}}.path{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px;padding:0;list-style:none}.path li{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px}.path li:not(:last-child)::after{content:"→";color:#a0aabc}.data-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.data-box{padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}.data-box h3{margin:0 0 12px;color:var(--navy)}.item-buttons{display:flex;flex-wrap:wrap;gap:8px}.item-button{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);cursor:pointer}.item-button:hover,.item-button.is-active{border-color:var(--blue);background:var(--sky);color:var(--blue);font-weight:800}.result-card{padding:clamp(20px,4vw,34px);border-radius:20px;background:var(--navy);color:#fff}.result-card h2,.result-card h3{color:#fff}.result-card h2{margin-top:0}.result-card .path li{color:#dce7ff}.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.result-block{padding:18px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.07)}.result-block h3{margin:0 0 8px;font-size:17px}.result-block p,.result-block ul{margin:0;color:#e7eeff}.result-block ul{padding-left:20px}.source-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.source-links a{padding:9px 12px;border-radius:10px;background:#fff;color:var(--navy);font-weight:800;text-decoration:none}.empty{padding:20px;border-radius:14px;background:#fff7df;color:#6d5620}.reset{display:inline-flex;margin-top:18px;padding:11px 16px;border:0;border-radius:11px;background:var(--blue);color:#fff;font-weight:800;text-decoration:none;cursor:pointer}.reset:disabled{opacity:.5;cursor:not-allowed}.footer{padding:35px 0 50px;text-align:center;color:var(--muted);font-size:13px}
     @media(max-width:760px){.hero{padding-top:35px}.profile-grid,.choice-grid,.data-columns,.result-grid{grid-template-columns:1fr}.panel{border-radius:18px}.choice{min-height:auto}}
-    .nav-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.nav-actions--footer{margin:18px 0 0}.nav-button{padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.nav-button:hover{border-color:var(--blue);color:var(--blue)}.reset--light{border:1px solid var(--line);background:#fff;color:var(--navy)}
+    .nav-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.nav-button{padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.nav-button:hover{border-color:var(--blue);color:var(--blue)}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step.show{animation:none;opacity:1;transform:none}.choice{transition:none}}
   </style>
 </head>
@@ -83,7 +83,6 @@
       <div class="nav-actions"><button type="button" class="nav-button" id="back-result">← 이전 단계</button><button type="button" class="nav-button restart-button">처음부터 다시</button></div>
     </section>
 
-    <div class="nav-actions nav-actions--footer"><button type="button" class="reset restart-button">처음부터 다시 선택</button><a class="reset reset--light" href="https://pencilgon00.tistory.com/">블로그 대문으로</a></div>
   </main>
   <footer class="footer"><div class="wrap">직업·학과·면허 정보는 지원 전에 반드시 해당 공식기관의 최신 자료를 확인하세요.</div></footer>
 
@@ -192,6 +191,7 @@
     function chooseInterest(id){
       document.getElementById("expansion-note").hidden=id==="healthcare";
       if(id!=="healthcare")return;
+      interestPanel.hidden=true;
       showStep("field-step");
       setPath("field-path",["청소년",source==="official-test"?"공식검사 결과":"관심 직접 선택","보건의료"]);
       document.getElementById("field-step").scrollIntoView({behavior:"smooth",block:"start"});
@@ -207,6 +207,7 @@
 
     function chooseField(id,button){
       fieldGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
+      document.getElementById("field-step").classList.remove("show");
       const data=healthcare[id];showStep("detail-step");setPath("detail-path",["청소년","보건의료",data.label]);document.getElementById("detail-title").textContent=data.label+" 관련 학과 선택";
       const target=document.getElementById("major-list");target.innerHTML="";data.majors.forEach(major=>{const b=document.createElement("button");b.type="button";b.className="item-button";b.textContent=major;b.addEventListener("click",()=>chooseMajor(major,data,b));target.appendChild(b);});
       document.getElementById("job-step").classList.remove("show");document.getElementById("result-step").classList.remove("show");document.getElementById("detail-step").scrollIntoView({behavior:"smooth",block:"start"});
@@ -214,6 +215,7 @@
 
     function chooseMajor(major,field,button){
       document.getElementById("major-list").querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
+      document.getElementById("detail-step").classList.remove("show");
       setPath("job-path",["청소년","보건의료",field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
       const jobs=majorJobs[major]||field.jobs;const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(job=>{const b=document.createElement("button");b.type="button";b.className="item-button";b.textContent=job;b.addEventListener("click",()=>showResult(job,field,major,b));target.appendChild(b);});
       showStep("job-step");document.getElementById("result-step").classList.remove("show");document.getElementById("job-step").scrollIntoView({behavior:"smooth",block:"start"});
@@ -221,6 +223,7 @@
 
     function showResult(job,field,major,button){
       document.getElementById("job-list").querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
+      document.getElementById("job-step").classList.remove("show");
       const guide=jobGuides[job]||jobGuides.default;const sourceText=source==="official-test"?"공식검사 결과 입력":"관심 영역 직접 선택";
       const interestNames=selected.map(id=>labels[id]).join("·")||"보건의료";
       const reason=source==="official-test"?`공식검사 결과에서 ${interestNames} 영역이 높게 나타났고, ${field.label} 분야와 ${major}를 선택했으므로 ${job}을 우선 탐색할 가능성이 있습니다. 검사 결과만으로 적합성을 확정하지는 않습니다.`:`${interestNames} 영역에 관심을 표시하고 ${field.label} 분야와 ${major}를 선택했으므로 ${job}을 우선 탐색할 가능성이 있습니다. 현재의 관심은 경험에 따라 달라질 수 있습니다.`;
