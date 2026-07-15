@@ -173,9 +173,17 @@
         {name:"임상병리학과",description:"혈액·미생물·조직·생리검사와 검사실 실무를 배웁니다. 면허에 상응하는 전공과 법정 현장실습과목 이수 여부를 확인해야 합니다.",licenseType:"면허 직결 경로",licensePath:"임상병리사 면허에 상응하는 보건의료 전공·법정 현장실습 이수 및 졸업 → 임상병리사 국가시험 합격 → 보건복지부장관 면허",licenseSource:"https://www.kuksiwon.or.kr/subcnt/c_2012/2/view.do?seq=7",jobs:[{name:"임상병리사",requiredCredentials:["임상병리사 국가시험 합격 및 보건복지부장관 임상병리사 면허"]}]},
         {name:"방사선학과",description:"방사선 물리, 의료영상검사·치료기술과 안전관리를 배웁니다. 면허에 상응하는 전공과 법정 현장실습과목 이수 여부를 확인해야 합니다.",licenseType:"면허 직결 경로",licensePath:"방사선사 면허에 상응하는 보건의료 전공·법정 현장실습 이수 및 졸업 → 방사선사 국가시험 합격 → 보건복지부장관 면허",licenseSource:"https://www.kuksiwon.or.kr/subcnt/c_2013/2/view.do?seq=7",jobs:[{name:"방사선사",requiredCredentials:["방사선사 국가시험 합격 및 보건복지부장관 방사선사 면허"]}]}
       ],jobs:["임상병리사","방사선사"]},
-      "dental-oral-health": {label:"치과기술·구강보건",desc:"치과 보철물을 제작하거나 구강질환 예방과 위생관리를 지원하는 분야",majors:["치기공학과","치위생학과"],jobs:["치과기공사","치과위생사"]},
-      "pharmacy": {label:"약학·의약품",desc:"의약품을 조제·관리하거나 연구·개발·생산의 기반을 다루는 분야",majors:["약학과","제약 관련 학과"],jobs:["약사","의약품 연구 관련 직업"]},
-      "emergency-care": {label:"응급·구조",desc:"응급현장과 이송·의료기관에서 상담·구조·이송과 응급처치를 수행하는 분야",majors:["응급구조학과"],jobs:["응급구조사"]},
+      "dental-oral-health": {label:"치과기술·구강보건",desc:"치과 보철물을 제작하거나 구강질환 예방과 위생관리를 지원하는 분야",majors:[
+        {name:"치기공학과",description:"치과 보철물·교정장치의 설계, 제작, 수리와 재료·디지털 기공을 배웁니다. 면허에 상응하는 전공과 법정 현장실습과목 이수 여부를 확인해야 합니다.",licenseType:"면허 직결 경로",licensePath:"치과기공사 면허에 상응하는 보건의료 전공·법정 현장실습 이수 및 졸업 → 치과기공사 국가시험 합격 → 보건복지부장관 면허",licenseSource:"https://www.kuksiwon.or.kr/subcnt/c_2016/2/view.do?seq=7",jobs:[{name:"치과기공사",requiredCredentials:["치과기공사 국가시험 합격 및 보건복지부장관 치과기공사 면허"]}]},
+        {name:"치위생학과",description:"구강보건, 예방처치와 치과 임상지원 실습을 배웁니다. 면허에 상응하는 전공과 법정 현장실습과목 이수 여부를 확인해야 합니다.",licenseType:"면허 직결 경로",licensePath:"치과위생사 면허에 상응하는 보건의료 전공·법정 현장실습 이수 및 졸업 → 치과위생사 국가시험 합격 → 보건복지부장관 면허",licenseSource:"https://www.kuksiwon.or.kr/subcnt/c_2017/2/view.do?seq=7",jobs:[{name:"치과위생사",requiredCredentials:["치과위생사 국가시험 합격 및 보건복지부장관 치과위생사 면허"]}]}
+      ],jobs:["치과기공사","치과위생사"]},
+      "pharmacy": {label:"약학·의약품",desc:"의약품을 조제·관리하거나 연구·개발·생산의 기반을 다루는 분야",majors:[
+        {name:"약학과",description:"의약품의 작용·개발·조제·복약관리와 실무실습을 배웁니다. 인정기관의 인정을 받은 약학대학을 졸업하고 약학사 학위를 취득해야 약사 국가시험 경로로 연결됩니다.",licenseType:"면허 직결 경로",licensePath:"인정받은 약학대학 교육과정 이수·졸업 및 약학사 학위 취득 → 약사 국가시험 합격 → 보건복지부장관 약사 면허",licenseSource:"https://www.kuksiwon.or.kr/subcnt/c_2009/2/view.do?seq=7",jobs:[{name:"약사",requiredCredentials:["인정받은 약학대학의 약학사 학위, 약사 국가시험 합격 및 보건복지부장관 약사 면허"]}]},
+        {name:"제약 관련 학과",description:"의약품 연구·개발·생산·품질·바이오 분야의 기초를 배우는 학과군입니다. 일반적인 제약 관련 학과 졸업은 약학사 학위가 아니며 약사 국가시험 응시자격으로 바로 연결되지 않습니다.",licenseType:"약사 면허 비직결",licenseBadgeSuffix:" · 약학과와 구분",licenseHeading:"면허 경로 구분",licensePath:"제약공학·바이오제약 등 제약 관련 학과와 약학과는 같은 과정이 아닙니다. 약사를 목표로 한다면 인정받은 약학대학의 약학사 학위 취득 경로인지 확인하세요.",licenseSource:"https://www.kuksiwon.or.kr/subcnt/c_2009/2/view.do?seq=7",jobs:["의약품 연구 관련 직업"]}
+      ],jobs:["약사","의약품 연구 관련 직업"]},
+      "emergency-care": {label:"응급·구조",desc:"응급현장과 이송·의료기관에서 상담·구조·이송과 응급처치를 수행하는 분야",majors:[
+        {name:"응급구조학과",description:"응급환자 평가·처치, 구조·이송과 현장 대응을 배우고 실습합니다. 대학 또는 전문대학에서 응급구조학을 전공해 졸업하면 1급 응급구조사 국가시험 경로로 연결됩니다.",licenseType:"국가자격 직결 경로",licenseBadgeSuffix:" · 1급 국가시험 필요",licenseHeading:"국가자격 취득 경로",licensePath:"대학·전문대학 응급구조학 전공 이수 및 졸업 → 1급 응급구조사 국가시험 합격 → 보건복지부장관 자격인정",licenseSource:"https://www.kuksiwon.or.kr/subcnt/c_2022/2/view.do?seq=7",jobs:[{name:"응급구조사",requiredCredentials:["1급 응급구조사 국가시험 합격 및 보건복지부장관 자격인정"]}]}
+      ],jobs:["응급구조사"]},
       "public-health-system": {label:"보건·의료체계",desc:"예방·건강관리·의료정보·행정·의료기술로 보건의료체계를 지원하는 분야",majors:["보건행정학과","보건관리학과","의료공학 관련 학과"],jobs:["보건행정 관련 직업","보건관리 관련 직업","의료기기 관련 직업"]}
     };
 
