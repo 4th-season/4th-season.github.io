@@ -234,11 +234,29 @@
     };
 
     const universityData = {
+      "의예과·의학과":[{university:"연세대학교",department:"의과대학",url:"https://medicine.yonsei.ac.kr/medicine/index.do",verifiedAt:"2026-07-15"}],
+      "치의예과·치의학과":[{university:"서울대학교",department:"치의학대학원 학·석사통합과정",url:"https://dentistry.snu.ac.kr/",verifiedAt:"2026-07-15"}],
+      "한의예과·한의학과":[{university:"경희대학교",department:"한의과대학",url:"https://kmc.khu.ac.kr/kmc_kor/user/main/view.do",verifiedAt:"2026-07-15"}],
+      "간호학과":[{university:"서울대학교",department:"간호대학",url:"https://nursing.snu.ac.kr/",verifiedAt:"2026-07-15"}],
       "물리치료학과":[
-        {university:"연세대학교 미래캠퍼스",department:"물리치료학과",url:"https://yspt.yonsei.ac.kr/yspt_n/intro/course_intro.do"},
-        {university:"을지대학교",department:"물리치료학과",url:"https://major.eulji.ac.kr/therapy/index.html?menuno=2907"},
-        {university:"대구대학교",department:"물리치료학과",url:"https://lovept.daegu.ac.kr/summary/detail/258"}
-      ]
+        {university:"연세대학교 미래캠퍼스",department:"물리치료학과",url:"https://yspt.yonsei.ac.kr/yspt_n/intro/course_intro.do",verifiedAt:"2026-07-15"},
+        {university:"을지대학교",department:"물리치료학과",url:"https://major.eulji.ac.kr/therapy/index.html?menuno=2907",verifiedAt:"2026-07-15"},
+        {university:"대구대학교",department:"물리치료학과",url:"https://lovept.daegu.ac.kr/summary/detail/258",verifiedAt:"2026-07-15"}
+      ],
+      "작업치료학과":[{university:"연세대학교 미래캠퍼스",department:"작업치료학과",url:"https://ot.yonsei.ac.kr/ot/index.do",verifiedAt:"2026-07-15"}],
+      "언어치료·언어재활 관련 학과":[{university:"대구대학교",department:"언어치료학과",url:"https://slp.daegu.ac.kr/",verifiedAt:"2026-07-15"}],
+      "재활학과":[{university:"대구대학교",department:"재활학과",url:"https://rehab.daegu.ac.kr/",verifiedAt:"2026-07-15"}],
+      "스포츠재활 관련 학과":[{university:"을지대학교",department:"스포츠아웃도어학과",url:"https://major.eulji.ac.kr/sports/index.html",verifiedAt:"2026-07-15"}],
+      "임상병리학과":[{university:"을지대학교",department:"임상병리학과",url:"https://major.eulji.ac.kr/clinical/index.html",verifiedAt:"2026-07-15"}],
+      "방사선학과":[{university:"연세대학교 미래캠퍼스",department:"방사선학과",url:"https://rad.yonsei.ac.kr/",verifiedAt:"2026-07-15"}],
+      "치기공학과":[{university:"신구대학교",department:"치기공학과",url:"https://dentaltech.shingu.ac.kr/",verifiedAt:"2026-07-15"}],
+      "치위생학과":[{university:"연세대학교 미래캠퍼스",department:"치위생학과",url:"https://dentalhygiene.yonsei.ac.kr/",verifiedAt:"2026-07-15"}],
+      "약학과":[{university:"서울대학교",department:"약학대학",url:"https://pharmacy.snu.ac.kr/",verifiedAt:"2026-07-15"}],
+      "제약 관련 학과":[{university:"대구가톨릭대학교",department:"제약공학과",url:"https://pharmeng.cu.ac.kr/",verifiedAt:"2026-07-15"}],
+      "보건행정학과":[{university:"연세대학교 미래캠퍼스",department:"보건행정학부",url:"https://health.yonsei.ac.kr/",verifiedAt:"2026-07-15"}],
+      "보건관리학과":[{university:"을지대학교",department:"보건환경안전학과",url:"https://major.eulji.ac.kr/environment/index.html",verifiedAt:"2026-07-15"}],
+      "응급구조학과":[{university:"을지대학교",department:"응급구조학과",url:"https://major.eulji.ac.kr/emergency/index.html",verifiedAt:"2026-07-15"}],
+      "의료공학 관련 학과":[{university:"연세대학교 미래캠퍼스",department:"의공학부",url:"https://bme.yonsei.ac.kr/ymbme/index.do",verifiedAt:"2026-07-15"}]
     };
 
     const majorDescriptions = {
@@ -459,7 +477,7 @@
       const universities=inlineUniversities||universityData[major]||[];target.innerHTML="";
       if(universities.length){
         note.textContent="2026년 7월 공식 대학 페이지에서 확인한 대표 예시입니다. 전체 목록은 대학알리미·대학어디가에서 다시 확인하세요.";
-        universities.forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.style.textDecoration="none";a.innerHTML="<strong>"+item.university+"</strong><br><span>"+item.department+" · 공식 학과소개 ↗</span>";target.appendChild(a);});
+        universities.forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.style.textDecoration="none";a.innerHTML="<strong>"+item.university+"</strong><br><span>"+item.department+" · 공식 학과소개 ↗</span><br><small>확인 기준일 "+(item.verifiedAt||"2026-07-15")+"</small>";target.appendChild(a);});
       }else{
         note.textContent="이 학과의 대학별 공식 페이지는 검증 후 순차적으로 추가합니다. 현재는 공신력 있는 대학정보 서비스에서 학과명을 검색하세요.";
         [{name:"대학알리미에서 확인",url:"https://www.academyinfo.go.kr/"},{name:"대학어디가에서 확인",url:"https://www.adiga.kr/"}].forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.textContent=item.name+" ↗";a.style.textDecoration="none";target.appendChild(a);});
