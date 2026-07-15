@@ -121,7 +121,7 @@
 
     <section class="step" id="result-step">
       <div class="result-card" id="result-card"></div>
-      <div class="nav-actions"><button type="button" class="nav-button" id="back-result">← 이전 단계</button><button type="button" class="nav-button" id="print-result">결과 인쇄·PDF 저장</button><button type="button" class="nav-button restart-button">처음부터 다시</button></div>
+      <div class="nav-actions"><button type="button" class="nav-button" id="back-result">← 이전 단계</button><button type="button" class="nav-button" id="download-result">인쇄용 결과 파일 저장</button><button type="button" class="nav-button" id="print-result">바로 인쇄·PDF 저장</button><button type="button" class="nav-button restart-button">처음부터 다시</button></div>
     </section>
 
   </main>
@@ -386,6 +386,7 @@
     document.getElementById("back-job").addEventListener("click",()=>{document.getElementById("result-step").classList.remove("show");goBack("job-step","detail-step");});
     document.getElementById("back-result").addEventListener("click",()=>goBack("result-step","job-step"));
     document.getElementById("print-result").addEventListener("click",()=>window.print());
+    document.getElementById("download-result").addEventListener("click",downloadResultFile);
     document.getElementById("open-chatgpt").addEventListener("click",()=>openAIWithPrompt("https://chatgpt.com/","ChatGPT"));
     document.getElementById("open-gemini").addEventListener("click",()=>openAIWithPrompt("https://gemini.google.com/app","Gemini"));
     document.getElementById("ai-prompt-editor").addEventListener("input",()=>{promptEdited=true;});
@@ -413,7 +414,7 @@
       let html="";if(interest.length)html+="<p><strong>관심 있음</strong></p><ul>"+interest.map(v=>"<li>"+v+"</li>").join("")+"</ul>";if(verify.length)html+="<p><strong>추가 확인</strong></p><ul>"+verify.map(v=>"<li>"+v+"</li>").join("")+"</ul>";if(!html)html="<p>학습·업무 조건을 선택하지 않았습니다. 입력하지 않은 내용은 부족으로 판단하지 않습니다.</p>";return{interest,verify,html};
     }
     function buildAIHandoffPrompt(){
-      const conditionResult=buildConditionResult();const jobs=(majorJobs[currentMajor]||(currentField?currentField.jobs:[])).join("·")||"아직 선택하지 않음";return `나는 진로를 탐색 중인 청소년입니다.\n\n관심 영역: ${selected.map(id=>labels[id]).join("·")||"입력하지 않음"}\n직업적성 상위 영역: ${aptitudes.join("·")||"입력하지 않음"}\n직업가치관: ${values.join("·")||"입력하지 않음"}\n선택 분야: ${currentField?currentField.label:"아직 선택하지 않음"}\n선택 학과: ${currentMajor||"아직 선택하지 않음"}\n연결 직업 후보: ${jobs}\n관심 있다고 입력한 학습·업무 조건: ${conditionResult.interest.join("·")||"입력하지 않음"}\n추가 확인이 필요한 조건: ${conditionResult.verify.join(" / ")||"입력하지 않음"}\n\n위 내용만 근거로 다음을 설명해 주세요.\n1. 선택 정보와 학과·직업 특성이 연결되는 지점\n2. 아직 판단할 수 없는 부분\n3. 직접 체험하거나 공식기관에서 확인할 내용\n4. 다음 단계에서 비교할 질문 3개\n\n적합도나 성공 확률을 만들지 말고, 선택하지 않은 항목을 부족하다고 판단하지 마세요.`; 
+      const conditionResult=buildConditionResult();const jobs=(majorJobs[currentMajor]||(currentField?currentField.jobs:[])).join("·")||"아직 선택하지 않음";return `나는 진로를 탐색 중인 청소년입니다.\n\n관심 영역: ${selected.map(id=>labels[id]).join("·")||"입력하지 않음"}\n직업적성 상위 영역: ${aptitudes.join("·")||"입력하지 않음"}\n직업가치관: ${values.join("·")||"입력하지 않음"}\n선택 분야: ${currentField?currentField.label:"아직 선택하지 않음"}\n선택 학과: ${currentMajor||"아직 선택하지 않음"}\n연결 직업 후보: ${jobs}\n관심 있다고 입력한 학습·업무 조건: ${conditionResult.interest.join("·")||"입력하지 않음"}\n추가 확인이 필요한 조건: ${conditionResult.verify.join(" / ")||"입력하지 않음"}\n\n위 내용만 근거로 다음을 설명해 주세요.\n1. 선택 정보와 학과·직업 특성이 연결되는 지점\n2. 아직 판단할 수 없는 부분\n3. 직접 체험하거나 공식기관에서 확인할 내용\n4. 다음 단계에서 비교할 질문 3개\n\n출력 형식:\n- 제목과 작성일이 있는 '청소년 진로·진학 탐색 보고서'로 작성하세요.\n- A4로 인쇄하기 쉬운 순서와 표·목록 구조로 구성하세요.\n- 마지막에 '다음 행동 체크리스트'와 '확인한 공식 출처' 항목을 넣으세요.\n- 현재 AI 서비스가 파일 생성을 지원하면 내용을 DOCX 또는 PDF 파일로도 만들어 다운로드할 수 있게 제공하세요. 파일 생성이 지원되지 않으면 복사·인쇄 가능한 완성된 보고서 본문을 제공하세요.\n\n적합도나 성공 확률을 만들지 말고, 선택하지 않은 항목을 부족하다고 판단하지 마세요.`; 
     }
     function refreshPromptEditor(force=false){
       const editor=document.getElementById("ai-prompt-editor");if(!editor||(!force&&promptEdited))return;editor.value=buildAIHandoffPrompt();
@@ -426,6 +427,9 @@
     }
     async function copyPrompt(text){
       try{await navigator.clipboard.writeText(text);return true;}catch(error){const area=document.createElement("textarea");area.value=text;area.setAttribute("readonly","");area.style.position="fixed";area.style.opacity="0";document.body.appendChild(area);area.select();let ok=false;try{ok=document.execCommand("copy");}catch(ignore){}document.body.removeChild(area);return ok;}
+    }
+    function downloadResultFile(){
+      const card=document.getElementById("result-card");if(!card.innerHTML.trim())return;const title=(currentMajor||"진로")+"_진로진학_탐색결과";const safeTitle=title.replace(/[\\/:*?"<>|]/g,"_");const styles=`body{margin:0;padding:32px;color:#1f2937;font-family:Arial,'Noto Sans KR',sans-serif;line-height:1.65}main{max-width:900px;margin:auto}h1,h2,h3{color:#13284a}.path{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}.path li:not(:last-child)::after{content:' →';color:#94a3b8}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result-block,.result-summary{padding:16px;border:1px solid #cbd5e1;border-radius:10px}.result-wide{grid-column:1/-1}.result-chips,.source-links{display:flex;flex-wrap:wrap;gap:8px}.result-chip,.source-links a{padding:5px 9px;border-radius:999px;background:#edf4ff;color:#1d4ed8}.source-links a{border-radius:6px}.result-date{color:#64748b;font-size:12px}@media(max-width:700px){.result-grid{grid-template-columns:1fr}.result-wide{grid-column:auto}}@media print{body{padding:0}.result-block,.result-summary{break-inside:avoid}.source-links a{color:#111;background:none;padding:0}}`;const html=`<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${safeTitle}</title><style>${styles}</style></head><body><main>${card.innerHTML}</main></body></html>`;const blob=new Blob([html],{type:"text/html;charset=utf-8"});const url=URL.createObjectURL(blob);const link=document.createElement("a");link.href=url;link.download=safeTitle+".html";document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
     }
     function hasBatchim(text){const code=text.charCodeAt(text.length-1)-44032;return code>=0&&code<=11171&&code%28!==0;}
     function showStep(id){document.getElementById(id).classList.add("show");}
