@@ -97,6 +97,7 @@
       <h2 id="job-title">연결 직업 선택</h2>
       <p class="panel-intro">선택한 학과의 일반적인 진출 직업입니다. 면허 직업은 반드시 해당 학과와 국가시험 응시요건을 확인하세요.</p>
       <div class="data-box" style="margin-bottom:16px"><h3>학과 개설 대학·공식 학과소개</h3><p class="panel-intro" id="university-note"></p><div class="item-buttons" id="university-list"></div></div>
+      <div class="empty" id="adiga-guide" style="margin-bottom:16px"></div>
       <div class="data-box"><h3>연결 직업</h3><div class="item-buttons" id="job-list"></div></div>
       <div class="nav-actions"><button type="button" class="nav-button" id="back-job">← 이전 단계</button><button type="button" class="nav-button restart-button">처음부터 다시</button></div>
     </section>
@@ -297,6 +298,7 @@
     function renderUniversities(major){
       const target=document.getElementById("university-list");
       const note=document.getElementById("university-note");
+      document.getElementById("adiga-guide").innerHTML="<strong>대학어디가에서 입시정보 확인</strong><br>대학어디가에서 <strong>‘"+major+"’</strong>를 검색하면 대학별 모집단위, 전형방법과 전년도 입시결과를 비교할 수 있습니다.<br><a class=\"reset\" href=\"https://www.adiga.kr/\" target=\"_blank\" rel=\"noopener\">대학어디가 공식 사이트 열기 ↗</a>";
       const universities=universityData[major]||[];target.innerHTML="";
       if(universities.length){
         note.textContent="2026년 7월 공식 대학 페이지에서 확인한 대표 예시입니다. 전체 목록은 대학알리미·대학어디가에서 다시 확인하세요.";
