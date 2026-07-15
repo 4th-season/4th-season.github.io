@@ -64,7 +64,7 @@
         <strong id="input-count">0 / 3 선택</strong>
         <button class="reset" type="button" id="continue-button" disabled style="margin-left:12px">선택 완료 · 다음 단계</button>
       </div>
-      <p class="empty" id="expansion-note" hidden>이 영역의 세부 데이터는 순차적으로 추가할 예정입니다. 현재는 보건의료 경로를 먼저 이용할 수 있습니다.</p>
+      <p class="empty" id="expansion-note" hidden>선택한 직업흥미군의 세부 데이터는 공식 자료 검증 후 순차적으로 추가됩니다.</p>
       <div class="nav-actions"><button type="button" class="nav-button" id="back-start">← 시작 방법 다시 선택</button></div>
     </section>
 
@@ -92,8 +92,9 @@
 
     <section class="panel step" id="field-step">
       <ol class="path" id="field-path"></ol>
-      <h2>보건의료 세부 분야</h2>
-      <p class="panel-intro">어떤 방식으로 건강과 의료에 기여하고 싶은지 선택하세요.</p>
+      <div class="data-box" id="route-switcher" style="margin-bottom:16px"><h3>추천·관심 직업군 전환</h3><p class="panel-intro">여러 직업흥미군을 입력했다면 여기에서 탐색할 직업군을 바꿀 수 있습니다.</p><div class="item-buttons" id="route-list"></div></div>
+      <h2 id="field-title">세부 분야 선택</h2>
+      <p class="panel-intro" id="field-intro">선택한 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.</p>
       <div class="choice-grid" id="field-grid"></div>
       <div class="nav-actions"><button type="button" class="nav-button" id="back-field">← 이전 단계</button><button type="button" class="nav-button restart-button">처음부터 다시</button></div>
     </section>
@@ -160,6 +161,17 @@
       "public-health": {label:"보건·의료지원",desc:"예방·관리·행정으로 건강과 의료체계를 지원하는 분야",majors:["보건행정학과","보건관리학과","응급구조학과","의료공학 관련 학과"],jobs:["응급구조사","보건행정 관련 직업","의료기기 관련 직업"]}
     };
 
+    // 공통 데이터 모델: 새 직업군은 fields 안에 분야·학과·직업 데이터만 추가하면 같은 화면 흐름을 사용합니다.
+    const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
+    careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
+    /* 확장 데이터 형식
+      careerCatalog[직업군ID].fields[분야ID] = {
+        label, desc,
+        majors:[{name, description, jobs:[{name, summary, requirements, subjects, activities}], universities:[{university, department, url}]}]
+      };
+      기존 보건의료처럼 학과명 문자열과 majorJobs·jobGuides 분리 방식도 계속 지원합니다.
+    */
+
     const majorJobs = {
       "의예과·의학과":["의사"],"치의예과·치의학과":["치과의사"],"한의예과·한의학과":["한의사"],
       "간호학과":["간호사"],"물리치료학과":["물리치료사"],"작업치료학과":["작업치료사"],
@@ -203,7 +215,7 @@
     const jobGuides = {
       "물리치료사":{summary:"신체 기능의 회복과 움직임 개선을 돕는 보건의료 직업입니다.",major:"물리치료학과의 교육과정과 진입 요건을 대학별로 비교해 보세요.",requirements:"면허·국가시험 등 법적 진입 조건은 한국보건의료인국가시험원과 관계 법령의 최신 내용을 확인해야 합니다.",subjects:["생명과학과 인체·건강 관련 교과 탐색","물리와 운동 원리를 연결한 탐구","의사소통과 대인관계 역량을 기르는 활동"],activities:["근골격계와 운동의 관계 탐구","재활 보조기술 사례 조사","의료·재활기관의 직무와 윤리 조사"],employers:["병원·의원과 재활의료기관에서 환자 기능 회복 지원","보건·복지 관련 기관에서 재활서비스 지원","스포츠·운동 관련 기관에서 기능 회복과 신체관리 지원 가능 여부 탐색"],skills:["환자의 상태와 움직임을 관찰하는 능력","치료계획을 이해하고 안전하게 수행하는 능력","환자·보호자·의료진과 의사소통하는 능력","신체활동을 지속적으로 지원할 체력과 책임감"],requiredCredentials:["물리치료사 면허: 응시자격·국가시험·면허 절차는 국시원과 관계 법령에서 확인"],helpfulCredentials:["심폐소생술·응급처치 교육: 환자 안전 대응 역량 보완(채용 필수 여부는 기관별 확인)","문서·데이터 활용 교육: 치료기록과 행정업무 적응에 도움(면허를 대체하지 않음)"],universityGuide:"개설 대학은 대학알리미·대입정보포털에서 ‘물리치료학과’를 검색해 현재 학과명과 모집 여부를 확인하세요.",admissionGuide:"중상위·중하위처럼 한 등급으로 고정하면 부정확합니다. 대학·전형·연도별 전년도 입시결과를 대학어디가에서 비교해야 합니다."},
       "작업치료사":{summary:"일상생활에 필요한 신체·인지 기능과 활동 참여의 회복을 지원하는 직업입니다.",major:"작업치료학과의 교과목과 임상실습 구조를 비교해 보세요.",requirements:"면허·국가시험 등 진입 조건은 공식기관의 최신 안내를 확인해야 합니다.",subjects:["생명과학과 인간 발달 탐색","심리·인지와 일상활동의 관계 탐구","관찰과 의사소통 역량 활동"],activities:["연령별 일상생활 활동 분석","보조도구와 환경개선 사례 조사","재활 분야 직업윤리 탐구"]},
-      "default":{summary:"선택한 보건의료 분야에서 사람의 건강과 의료서비스를 지원하는 직업입니다.",major:"관련 학과의 교육과정과 졸업 후 진로를 대학별로 비교해 보세요.",requirements:"면허·자격·국가시험 여부는 직업마다 다르므로 공식기관에서 최신 조건을 확인해야 합니다.",subjects:["생명과학과 건강 관련 교과 탐색","직업에서 요구하는 과학적 사고와 의사소통 탐색","관심 직업의 실제 업무 조사"],activities:["관련 학과 교육과정 비교","직업인 인터뷰와 직무영상 조사","공식기관에서 면허·자격 조건 확인"]}
+      "default":{summary:"선택한 분야와 학과에서 연결해 탐색할 수 있는 직업입니다.",major:"관련 학과의 교육과정과 졸업 후 진로를 대학별로 비교해 보세요.",requirements:"면허·자격·국가시험 여부는 직업마다 다르므로 공식기관에서 최신 조건을 확인해야 합니다.",subjects:["관련 교과와 기초 지식 탐색","직업에서 요구하는 문제해결과 의사소통 탐색","관심 직업의 실제 업무 조사"],activities:["관련 학과 교육과정 비교","직업인 인터뷰와 직무영상 조사","공식기관에서 면허·자격 조건 확인"]}
     };
 
     const conditionDefinitions = {
@@ -228,7 +240,9 @@
     let values = [];
     let studentConditions = {};
     let currentMajor = "";
+    let currentMajorData = {};
     let currentField = null;
+    let currentInterestId = "";
     let promptEdited = false;
     const primary = params.get("primary");
     if (validIds.has(primary)) selected.push(primary);
@@ -248,7 +262,7 @@
     const interestGrid = document.getElementById("interest-grid");
     interests.forEach(item => {
       const button=document.createElement("button"); button.type="button"; button.className="choice"+(selected.includes(item[0])?" is-active":"");button.dataset.interest=item[0];
-      button.innerHTML="<strong>"+item[1]+"</strong><span>"+item[2]+(item[0]!=="healthcare"?" · 확장 준비 중":" · 현재 탐색 가능")+"</span>";
+      const catalog=careerCatalog[item[0]];const available=Object.keys(catalog.fields||{}).length>0;button.innerHTML="<strong>"+item[1]+"</strong><span>"+item[2]+(available?" · 현재 탐색 가능":" · 데이터 입력 대기")+"</span>";
       button.addEventListener("click",()=>toggleInterest(item[0],button)); interestGrid.appendChild(button);
     });
 
@@ -289,8 +303,7 @@
     }
 
     function proceedAfterPsych(){
-      document.getElementById("psych-step").classList.remove("show");const route=selected.includes("healthcare")?"healthcare":selected[0];document.getElementById("expansion-note").hidden=route==="healthcare";
-      if(route==="healthcare")chooseInterest(route);else{interestPanel.hidden=false;document.getElementById("expansion-note").scrollIntoView({behavior:"smooth",block:"center"});}
+      document.getElementById("psych-step").classList.remove("show");const route=selected.find(id=>Object.keys(careerCatalog[id]?.fields||{}).length>0)||selected[0];chooseInterest(route);
     }
 
     document.getElementById("continue-psych").addEventListener("click",proceedAfterPsych);
@@ -304,48 +317,53 @@
     }
 
     function chooseInterest(id){
-      document.getElementById("expansion-note").hidden=id==="healthcare";
-      if(id!=="healthcare")return;
+      const catalog=careerCatalog[id];if(!catalog)return;currentInterestId=id;currentField=null;currentMajor="";currentMajorData={};
       interestPanel.hidden=true;
+      renderRouteSwitcher();
+      renderFieldChoices(catalog);
       showStep("field-step");
-      setPath("field-path",["청소년",source==="official-test"?"공식검사 결과":"관심 직접 선택","보건의료"]);
+      setPath("field-path",["청소년",source==="official-test"?"공식검사 결과":"관심 직접 선택",catalog.label]);
       document.getElementById("field-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
     if(selected.length){startPanel.hidden=true;profilePanel.hidden=false;interestPanel.hidden=true;renderProfile();updateInput();showStep("psych-step");}
 
     const fieldGrid=document.getElementById("field-grid");
-    Object.entries(healthcare).forEach(([id,data])=>{
-      const button=document.createElement("button");button.type="button";button.className="choice";button.innerHTML="<strong>"+data.label+"</strong><span>"+data.desc+"</span>";
-      button.addEventListener("click",()=>chooseField(id,button));fieldGrid.appendChild(button);
-    });
+    function renderRouteSwitcher(){
+      const target=document.getElementById("route-list");target.innerHTML="";selected.forEach(id=>{const catalog=careerCatalog[id];const button=document.createElement("button");button.type="button";button.className="item-button"+(id===currentInterestId?" is-active":"");button.textContent=catalog.label+(Object.keys(catalog.fields||{}).length?"":" · 준비 중");button.addEventListener("click",()=>chooseInterest(id));target.appendChild(button);});document.getElementById("route-switcher").hidden=selected.length<2;
+    }
+    function renderFieldChoices(catalog){
+      document.getElementById("field-title").textContent=catalog.label+" 세부 분야";document.getElementById("field-intro").textContent="선택한 "+catalog.label+" 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.";fieldGrid.innerHTML="";const entries=Object.entries(catalog.fields||{});
+      if(!entries.length){const box=document.createElement("div");box.className="empty";box.style.gridColumn="1/-1";box.innerHTML="<strong>공통 탐색 구조가 준비되었습니다.</strong><br>"+catalog.label+"의 세부 분야·학과·직업 데이터는 검증 후 이 자리에 추가됩니다. 데이터가 추가되면 별도 화면 수정 없이 다음 단계가 자동으로 열립니다.";fieldGrid.appendChild(box);return;}
+      entries.forEach(([id,data])=>{const button=document.createElement("button");button.type="button";button.className="choice";button.innerHTML="<strong>"+data.label+"</strong><span>"+data.desc+"</span>";button.addEventListener("click",()=>chooseField(id,button));fieldGrid.appendChild(button);});
+    }
 
     function chooseField(id,button){
       fieldGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
       document.getElementById("field-step").classList.remove("show");
-      const data=healthcare[id];showStep("detail-step");setPath("detail-path",["청소년","보건의료",data.label]);document.getElementById("detail-title").textContent=data.label+" 관련 학과 선택";
-      const target=document.getElementById("major-list");target.innerHTML="";data.majors.forEach(major=>{const b=document.createElement("button");b.type="button";b.className="choice";b.innerHTML="<strong>"+major+"</strong><span>"+(majorDescriptions[major]||"대학별 교육과정과 졸업 후 진로를 비교한 뒤 선택하세요.")+"</span>";b.addEventListener("click",()=>chooseMajor(major,data,b));target.appendChild(b);});
+      const catalog=careerCatalog[currentInterestId];const data=catalog?.fields?.[id];if(!data)return;showStep("detail-step");setPath("detail-path",["청소년",catalog.label,data.label]);document.getElementById("detail-title").textContent=data.label+" 관련 학과 선택";
+      const target=document.getElementById("major-list");target.innerHTML="";data.majors.forEach(entry=>{const major=typeof entry==="string"?entry:entry.name;const majorData=typeof entry==="string"?{}:entry;const b=document.createElement("button");b.type="button";b.className="choice";b.innerHTML="<strong>"+major+"</strong><span>"+(majorData.description||majorDescriptions[major]||"대학별 교육과정과 졸업 후 진로를 비교한 뒤 선택하세요.")+"</span>";b.addEventListener("click",()=>chooseMajor(major,data,b,majorData));target.appendChild(b);});
       document.getElementById("job-step").classList.remove("show");document.getElementById("result-step").classList.remove("show");document.getElementById("detail-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
-    function chooseMajor(major,field,button){
-      currentMajor=major;currentField=field;
+    function chooseMajor(major,field,button,majorData={}){
+      currentMajor=major;currentMajorData=majorData;currentField=field;
       promptEdited=false;
       document.getElementById("ai-handoff-status").textContent="AI를 사용하지 않으려면 아래 직업을 바로 선택하세요.";
       document.getElementById("major-list").querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
       document.getElementById("detail-step").classList.remove("show");
-      setPath("job-path",["청소년","보건의료",field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
-      renderUniversities(major);
-      const jobs=majorJobs[major]||field.jobs;const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(job=>{const b=document.createElement("button");b.type="button";b.className="item-button";b.textContent=job;b.addEventListener("click",()=>showResult(job,field,major,b));target.appendChild(b);});
+      setPath("job-path",["청소년",careerCatalog[currentInterestId].label,field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
+      renderUniversities(major,majorData.universities);
+      const jobs=majorData.jobs||majorJobs[major]||field.jobs||[];const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(entry=>{const job=typeof entry==="string"?entry:entry.name;const b=document.createElement("button");b.type="button";b.className="item-button";b.textContent=job;b.addEventListener("click",()=>showResult(job,field,major,b,typeof entry==="string"?{}:entry));target.appendChild(b);});
       refreshPromptEditor(true);
       showStep("job-step");document.getElementById("result-step").classList.remove("show");document.getElementById("job-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
-    function renderUniversities(major){
+    function renderUniversities(major,inlineUniversities){
       const target=document.getElementById("university-list");
       const note=document.getElementById("university-note");
       document.getElementById("adiga-guide").innerHTML="<strong>대학어디가에서 입시정보 확인</strong><br>대학어디가에서 <strong>‘"+major+"’</strong>를 검색하면 대학별 모집단위, 전형방법과 전년도 입시결과를 비교할 수 있습니다.<br><a class=\"reset\" href=\"https://www.adiga.kr/\" target=\"_blank\" rel=\"noopener\">대학어디가 공식 사이트 열기 ↗</a>";
-      const universities=universityData[major]||[];target.innerHTML="";
+      const universities=inlineUniversities||universityData[major]||[];target.innerHTML="";
       if(universities.length){
         note.textContent="2026년 7월 공식 대학 페이지에서 확인한 대표 예시입니다. 전체 목록은 대학알리미·대학어디가에서 다시 확인하세요.";
         universities.forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.style.textDecoration="none";a.innerHTML="<strong>"+item.university+"</strong><br><span>"+item.department+" · 공식 학과소개 ↗</span>";target.appendChild(a);});
@@ -355,11 +373,11 @@
       }
     }
 
-    function showResult(job,field,major,button){
+    function showResult(job,field,major,button,jobData={}){
       document.getElementById("job-list").querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
       document.getElementById("job-step").classList.remove("show");
-      const guide=jobGuides[job]||jobGuides.default;const sourceText=source==="official-test"?"공식검사 결과 입력":"관심 영역 직접 선택";
-      const interestNames=selected.map(id=>labels[id]).join("·")||"보건의료";
+      const storedGuide=jobGuides[job]||{};const guide={...jobGuides.default,...storedGuide,major:currentMajorData.description||storedGuide.major||jobGuides.default.major,...jobData};const sourceText=source==="official-test"?"공식검사 결과 입력":"관심 영역 직접 선택";
+      const groupLabel=careerCatalog[currentInterestId]?.label||labels[currentInterestId]||"선택 직업군";const interestNames=selected.map(id=>labels[id]).join("·")||groupLabel;
       const psychReason=(aptitudes.length?` 직업적성 상위 영역으로 ${aptitudes.join("·")}을 입력했습니다.`:"")+(values.length?` 직업가치관에서는 ${values.join("·")}을 중요하게 선택했습니다.`:"");
       const jobWithObject=job+(hasBatchim(job)?"을":"를");
       const reason=(source==="official-test"?`공식검사 결과에서 ${interestNames} 영역이 높게 나타났고, ${field.label} 분야와 ${major}를 선택했으므로 ${jobWithObject} 우선 탐색해 볼 근거가 있습니다.`:`${interestNames} 영역에 관심을 표시하고 ${field.label} 분야와 ${major}를 선택했으므로 ${jobWithObject} 우선 탐색해 볼 근거가 있습니다.`)+psychReason+` 이 결과는 적합성을 확정하지 않으며 실제 교과·체험활동을 통해 추가로 확인해야 합니다.`;
@@ -367,7 +385,7 @@
       const skills=guide.skills||["관련 분야 지식","관찰과 문제해결 능력","협업과 의사소통 능력"];
       const required=guide.requiredCredentials||[guide.requirements];
       const helpful=guide.helpfulCredentials||["도움이 되는 자격·교육은 실제 업무와 채용공고를 기준으로 검토"];
-      const universities=universityData[major]||[];
+      const universities=currentMajorData.universities||universityData[major]||[];
       const careerUrl=job==="물리치료사"?"https://www.career.go.kr/cloud/w/job/view?seq=369":"https://www.career.go.kr/cloud/w/job/list";
       const careerLinkLabel=job==="물리치료사"?"커리어넷 물리치료사 정보":"커리어넷에서 직업명 검색";
       const universityResult=universities.length?`<ul>${universities.map(item=>`<li><a href="${item.url}" target="_blank" rel="noopener">${item.university} ${item.department} 공식 소개 ↗</a></li>`).join("")}</ul><p class="career-note">공식 페이지 확인 예시이며 전체 개설 대학 목록은 아닙니다.</p>`:`<p>${guide.universityGuide||guide.major}</p>`;
@@ -376,6 +394,7 @@
       const evidenceChips=[...selected.map(id=>labels[id]),...aptitudes,...values,...conditionResult.interest.map(v=>"조건 · "+v)].map(v=>`<span class="result-chip">${v}</span>`).join("");
       const firstSubject=guide.subjects[0];const firstActivity=guide.activities[0];
       document.getElementById("result-card").innerHTML=`<ol class="path"><li>청소년</li><li>${sourceText}</li><li>보건의료</li><li>${field.label}</li><li>${major}</li><li>${job}</li></ol><h2>${job} 진로·진학 탐색 결과</h2><p>${guide.summary}</p><div class="result-summary"><h3>한눈에 보는 선택 근거</h3><p>${reason}${conditionNarrative}</p><div class="result-chips">${evidenceChips}</div></div><div class="result-grid"><div class="result-block result-wide"><h3>학생이 직접 입력한 학습·업무 조건</h3>${conditionResult.html}<p class="career-note">자기보고 선택을 정리한 것이며 적합도·능력 점수가 아닙니다. ‘잘 모르겠음’과 ‘부담스러움’은 감점하지 않고 체험·상담으로 확인할 항목으로 처리했습니다.</p></div><div class="result-block"><h3>선택 학과</h3><p><strong>${major}</strong><br>${majorDescriptions[major]||guide.major}</p></div><div class="result-block"><h3>확인된 개설 대학 예시</h3>${universityResult}</div><div class="result-block"><h3>입시에서 확인할 항목</h3><ol><li>대학어디가에서 ${major} 검색</li><li>대학·전형·모집연도별 모집요강 확인</li><li>전년도 입시결과는 참고자료로만 비교</li></ol><p>${guide.admissionGuide||"대학·전형·연도에 따라 결과가 달라집니다."}</p></div><div class="result-block"><h3>취업기관과 실제 업무</h3><ul>${employers.map(v=>`<li>${v}</li>`).join("")}</ul></div><div class="result-block"><h3>업무 적응에 필요한 능력</h3><ul>${skills.map(v=>`<li>${v}</li>`).join("")}</ul></div><div class="result-block"><h3>필수 면허·자격</h3><ul>${required.map(v=>`<li>${v}</li>`).join("")}</ul></div><div class="result-block"><h3>도움이 되는 자격·교육</h3><ul>${helpful.map(v=>`<li>${v}</li>`).join("")}</ul></div><div class="result-block"><h3>교과·진로활동 후보</h3><ul>${guide.subjects.concat(guide.activities).map(v=>`<li>${v}</li>`).join("")}</ul></div><div class="result-block result-wide"><h3>결정 전에 추가로 확인할 점</h3><ul>${conditionResult.verify.map(v=>`<li>${v}</li>`).join("")}<li>${job}의 실제 하루 업무를 직업영상·인터뷰로 확인하기</li><li>대학별 학과명·교육과정·면허 응시요건이 같은지 공식 자료로 교차 확인하기</li></ul></div><div class="result-block result-wide"><h3>나의 3단계 실천 계획</h3><ol><li><strong>이번 주:</strong> ${firstSubject}</li><li><strong>이번 달:</strong> ${firstActivity}</li><li><strong>지원 준비:</strong> 관심 대학 3곳의 교육과정·모집요강·전년도 입시결과를 표로 비교하기</li></ol></div></div><div class="source-links"><a href="${careerUrl}" target="_blank" rel="noopener">${careerLinkLabel}</a><a href="https://www.academyinfo.go.kr/" target="_blank" rel="noopener">대학알리미 개설학과</a><a href="https://www.adiga.kr/" target="_blank" rel="noopener">대학어디가 모집·입시결과</a><a href="https://www.work24.go.kr/" target="_blank" rel="noopener">고용24 직업·채용정보</a><a href="https://www.kuksiwon.or.kr/" target="_blank" rel="noopener">국시원 면허·시험</a></div><p class="result-date">정보 확인 기준: 2026년 7월 · 지원 전 공식기관의 최신 자료를 다시 확인하세요. 이 결과는 브라우저를 닫으면 저장되지 않습니다.</p>`;
+      const resultPath=document.querySelectorAll("#result-card .path li");if(resultPath[2])resultPath[2].textContent=groupLabel;
       showStep("result-step");document.getElementById("result-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
@@ -402,6 +421,8 @@
     }
 
     function restartExplorer(){
+      currentInterestId="";
+      currentMajorData={};
       selected=[];aptitudes=[];values=[];studentConditions={};currentMajor="";currentField=null;promptEdited=false;source="direct";interestGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));fieldGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));aptitudeList.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));valueList.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));document.querySelectorAll(".condition-option").forEach(el=>el.classList.remove("is-active"));document.getElementById("ai-prompt-editor").value="";
       ["psych-step","field-step","detail-step","job-step","result-step"].forEach(id=>document.getElementById(id).classList.remove("show"));
       document.getElementById("aptitude-count").textContent="0 / 3";document.getElementById("value-count").textContent="0 / 3";profilePanel.hidden=true;interestPanel.hidden=true;startPanel.hidden=false;updateInput();history.replaceState(null,"",location.pathname);startPanel.scrollIntoView({behavior:"smooth",block:"start"});
