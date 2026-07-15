@@ -213,9 +213,19 @@
     };
 
     const aiSoftware = {
-      "ai-ml":{label:"인공지능·머신러닝",desc:"학습 데이터와 알고리즘을 활용해 예측·분류·생성형 AI 모델과 서비스를 개발하는 분야",majors:[]},
-      "data":{label:"데이터과학·분석",desc:"데이터를 수집·정제·분석·시각화해 현상을 설명하고 의사결정을 지원하는 분야",majors:[]},
-      "software":{label:"소프트웨어·응용프로그램",desc:"사용 목적과 요구사항에 맞는 프로그램, 업무 시스템과 소프트웨어 제품을 설계·개발하는 분야",majors:[]},
+      "ai-ml":{label:"인공지능·머신러닝",desc:"학습 데이터와 알고리즘을 활용해 예측·분류·생성형 AI 모델과 서비스를 개발하는 분야",majors:[
+        {name:"인공지능학과",description:"프로그래밍·자료구조·선형대수·확률통계를 기초로 머신러닝, 딥러닝과 AI 응용을 배웁니다. 대학별로 컴퓨터공학 기초과목 비중을 확인해야 합니다.",jobs:[]},
+        {name:"AI융합학부",description:"인공지능을 소프트웨어·로봇·의료·콘텐츠 등 다른 영역과 결합해 배우는 학과군입니다. ‘융합’ 대상과 전공 선택 구조가 대학마다 다릅니다.",jobs:[]}
+      ]},
+      "data":{label:"데이터과학·분석",desc:"데이터를 수집·정제·분석·시각화해 현상을 설명하고 의사결정을 지원하는 분야",majors:[
+        {name:"데이터사이언스학과",description:"통계·수학·프로그래밍과 데이터베이스를 바탕으로 데이터 분석, 시각화와 머신러닝을 배웁니다. 이론·분석·개발 과목의 비중을 비교하세요.",jobs:[]},
+        {name:"빅데이터융합학과",description:"대규모 데이터 처리와 분석을 경영·사회·보건 등 응용영역과 연결하는 학과군입니다. 결합 분야와 코딩·통계 필수과목을 확인해야 합니다.",jobs:[]},
+        {name:"통계학과",description:"확률과 통계이론, 조사·실험 설계와 데이터 해석을 깊게 배웁니다. 데이터 직무를 목표로 한다면 프로그래밍·데이터베이스·머신러닝 과목도 확인하세요.",jobs:[]}
+      ]},
+      "software":{label:"소프트웨어·응용프로그램",desc:"사용 목적과 요구사항에 맞는 프로그램, 업무 시스템과 소프트웨어 제품을 설계·개발하는 분야",majors:[
+        {name:"컴퓨터공학과",description:"프로그래밍뿐 아니라 자료구조·알고리즘·운영체제·컴퓨터구조·네트워크 등 컴퓨터 시스템 전반을 배웁니다.",jobs:[]},
+        {name:"소프트웨어학과",description:"소프트웨어 설계·개발, 알고리즘, 데이터베이스와 프로젝트 실습을 중심으로 배웁니다. 대학에 따라 컴퓨터공학과의 교육과정과 매우 유사할 수 있습니다.",jobs:[]}
+      ]},
       "web-mobile":{label:"웹·모바일 서비스",desc:"웹사이트와 모바일 앱의 화면·서버·데이터 연결을 설계하고 운영하는 분야",majors:[]},
       "cloud-platform":{label:"클라우드·플랫폼 운영",desc:"서비스가 안정적으로 실행되도록 서버·클라우드·배포 자동화와 운영환경을 구축하는 분야",majors:[]},
       "security":{label:"정보보안",desc:"시스템·네트워크·데이터의 취약점을 점검하고 침해를 예방·탐지·대응하는 기술 분야",majors:[]},
@@ -247,6 +257,41 @@
     };
 
     const universityData = {
+      "인공지능학과":[
+        {university:"중앙대학교",department:"AI학과",url:"https://ai.cau.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"연세대학교",department:"첨단컴퓨팅학부",url:"https://cs.yonsei.ac.kr/csai/index.do",verifiedAt:"2026-07-16"},
+        {university:"인하대학교",department:"인공지능공학과·AI융합 교육 안내",url:"https://aix.inha.ac.kr/",verifiedAt:"2026-07-16"}
+      ],
+      "AI융합학부":[
+        {university:"숭실대학교",department:"AI융합학부",url:"https://aix.ssu.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"중앙대학교",department:"AI학과",url:"https://ai.cau.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"연세대학교",department:"첨단컴퓨팅학부",url:"https://cs.yonsei.ac.kr/csai/index.do",verifiedAt:"2026-07-16"}
+      ],
+      "데이터사이언스학과":[
+        {university:"고려대학교",department:"데이터과학과",url:"https://datascience.korea.ac.kr/ds/index.do",verifiedAt:"2026-07-16"},
+        {university:"세종대학교",department:"데이터사이언스 관련 학과 안내",url:"https://datascience.sejong.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"서울대학교",department:"통계학과",url:"https://stat.snu.ac.kr/",verifiedAt:"2026-07-16"}
+      ],
+      "빅데이터융합학과":[
+        {university:"고려대학교",department:"데이터과학과",url:"https://datascience.korea.ac.kr/ds/index.do",verifiedAt:"2026-07-16"},
+        {university:"고려대학교",department:"통계학과·융합데이터과학",url:"https://stat.korea.ac.kr/stat/index.do",verifiedAt:"2026-07-16"},
+        {university:"세종대학교",department:"데이터사이언스 관련 학과 안내",url:"https://datascience.sejong.ac.kr/",verifiedAt:"2026-07-16"}
+      ],
+      "통계학과":[
+        {university:"서울대학교",department:"통계학과",url:"https://stat.snu.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"고려대학교",department:"통계학과",url:"https://stat.korea.ac.kr/stat/index.do",verifiedAt:"2026-07-16"},
+        {university:"성균관대학교",department:"통계학과",url:"https://stat.skku.edu/",verifiedAt:"2026-07-16"}
+      ],
+      "컴퓨터공학과":[
+        {university:"서울대학교",department:"컴퓨터공학부",url:"https://cse.snu.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"KAIST",department:"전산학부",url:"https://cs.kaist.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"연세대학교",department:"첨단컴퓨팅학부",url:"https://cs.yonsei.ac.kr/csai/index.do",verifiedAt:"2026-07-16"}
+      ],
+      "소프트웨어학과":[
+        {university:"숭실대학교",department:"소프트웨어학부",url:"https://sw.ssu.ac.kr/",verifiedAt:"2026-07-16"},
+        {university:"성균관대학교",department:"소프트웨어융합대학",url:"https://sw.skku.edu/sw/index.do",verifiedAt:"2026-07-16"},
+        {university:"경희대학교",department:"소프트웨어융합학과",url:"https://software.khu.ac.kr/software25/user/main/view.do",verifiedAt:"2026-07-16"}
+      ],
       "의예과·의학과":[{university:"연세대학교",department:"의과대학",url:"https://medicine.yonsei.ac.kr/medicine/index.do",verifiedAt:"2026-07-15"}],
       "치의예과·치의학과":[{university:"서울대학교",department:"치의학대학원 학·석사통합과정",url:"https://dentistry.snu.ac.kr/",verifiedAt:"2026-07-15"}],
       "한의예과·한의학과":[{university:"경희대학교",department:"한의과대학",url:"https://kmc.khu.ac.kr/kmc_kor/user/main/view.do",verifiedAt:"2026-07-15"}],
@@ -262,7 +307,7 @@
       "스포츠재활 관련 학과":[{university:"을지대학교",department:"스포츠아웃도어학과",url:"https://major.eulji.ac.kr/sports/index.html",verifiedAt:"2026-07-15"}],
       "임상병리학과":[{university:"을지대학교",department:"임상병리학과",url:"https://major.eulji.ac.kr/clinical/index.html",verifiedAt:"2026-07-15"}],
       "방사선학과":[{university:"연세대학교 미래캠퍼스",department:"방사선학과",url:"https://rad.yonsei.ac.kr/",verifiedAt:"2026-07-15"}],
-      "치기공학과":[{university:"신구대학교",department:"치기공학과",url:"https://dentaltech.shingu.ac.kr/",verifiedAt:"2026-07-15"}],
+      "치기공학과":[{university:"대전보건대학교",department:"치기공학과",url:"https://www.hit.ac.kr/chigi",verifiedAt:"2026-07-16",linkType:"학과소개 직접 연결"}],
       "치위생학과":[{university:"연세대학교 미래캠퍼스",department:"치위생학과",url:"https://dentalhygiene.yonsei.ac.kr/",verifiedAt:"2026-07-15"}],
       "약학과":[{university:"서울대학교",department:"약학대학",url:"https://pharmacy.snu.ac.kr/",verifiedAt:"2026-07-15"}],
       "제약 관련 학과":[{university:"대구가톨릭대학교",department:"제약공학과",url:"https://pharmeng.cu.ac.kr/",verifiedAt:"2026-07-15"}],
@@ -270,6 +315,37 @@
       "보건관리학과":[{university:"을지대학교",department:"보건환경안전학과",url:"https://major.eulji.ac.kr/environment/index.html",verifiedAt:"2026-07-15"}],
       "응급구조학과":[{university:"을지대학교",department:"응급구조학과",url:"https://major.eulji.ac.kr/emergency/index.html",verifiedAt:"2026-07-15"}],
       "의료공학 관련 학과":[{university:"연세대학교 미래캠퍼스",department:"의공학부",url:"https://bme.yonsei.ac.kr/ymbme/index.do",verifiedAt:"2026-07-15"}]
+    };
+
+    // 직접 학과 페이지가 확인된 자료를 우선 표시하고, 나머지는 주소 변경에 강한 대학 공식 홈페이지로 보완합니다.
+    // 공식 홈페이지 카드는 해당 학과의 현재 개설·모집 여부를 대학알리미/대학어디가에서 다시 확인해야 합니다.
+    const representativeUniversities = {
+      "인공지능학과":[["한양대학교","인공지능학과","https://www.hanyang.ac.kr/"],["서울시립대학교","인공지능학과","https://www.uos.ac.kr/"]],
+      "AI융합학부":[["가천대학교","AI·소프트웨어학부","https://www.gachon.ac.kr/"],["광운대학교","인공지능융합대학","https://www.kw.ac.kr/"]],
+      "데이터사이언스학과":[["한양대학교","데이터사이언스학부","https://www.hanyang.ac.kr/"],["국민대학교","AI빅데이터융합경영학과","https://www.kookmin.ac.kr/"]],
+      "빅데이터융합학과":[["국민대학교","AI빅데이터융합경영학과","https://www.kookmin.ac.kr/"],["경희대학교","빅데이터응용학과","https://www.khu.ac.kr/"]],
+      "통계학과":[["연세대학교","응용통계학과","https://www.yonsei.ac.kr/"],["이화여자대학교","통계학과","https://www.ewha.ac.kr/"]],
+      "컴퓨터공학과":[["고려대학교","컴퓨터학과","https://www.korea.ac.kr/"],["한양대학교","컴퓨터소프트웨어학부","https://www.hanyang.ac.kr/"]],
+      "소프트웨어학과":[["중앙대학교","소프트웨어학부","https://www.cau.ac.kr/"],["가천대학교","소프트웨어학과","https://www.gachon.ac.kr/"]],
+      "의예과·의학과":[["서울대학교","의과대학","https://www.snu.ac.kr/"],["고려대학교","의과대학","https://www.korea.ac.kr/"],["성균관대학교","의과대학","https://www.skku.edu/"],["울산대학교","의과대학","https://www.ulsan.ac.kr/"]],
+      "치의예과·치의학과":[["연세대학교","치과대학","https://www.yonsei.ac.kr/"],["경희대학교","치과대학","https://www.khu.ac.kr/"],["부산대학교","치의학전문대학원","https://www.pusan.ac.kr/"],["전남대학교","치의학전문대학원","https://www.jnu.ac.kr/"]],
+      "한의예과·한의학과":[["대구한의대학교","한의과대학","https://www.dhu.ac.kr/"],["대전대학교","한의과대학","https://www.dju.ac.kr/"],["동국대학교 WISE캠퍼스","한의과대학","https://wise.dongguk.ac.kr/"],["원광대학교","한의과대학","https://www.wku.ac.kr/"]],
+      "간호학과":[["연세대학교","간호대학","https://www.yonsei.ac.kr/"],["고려대학교","간호대학","https://www.korea.ac.kr/"],["이화여자대학교","간호대학","https://www.ewha.ac.kr/"],["부산대학교","간호대학","https://www.pusan.ac.kr/"]],
+      "물리치료학과":[["삼육대학교","물리치료학과","https://www.syu.ac.kr/"],["가천대학교","물리치료학과","https://www.gachon.ac.kr/"]],
+      "작업치료학과":[["대구대학교","작업치료학과","https://www.daegu.ac.kr/"],["을지대학교","작업치료학과","https://www.eulji.ac.kr/"],["인제대학교","작업치료학과","https://www.inje.ac.kr/"],["건양대학교","작업치료학과","https://www.konyang.ac.kr/"]],
+      "언어치료·언어재활 관련 학과":[["나사렛대학교","언어치료학과","https://www.kornu.ac.kr/"],["광주대학교","언어치료학과","https://www.gwangju.ac.kr/"],["부산가톨릭대학교","언어청각치료학과","https://www.cup.ac.kr/"],["우송대학교","언어치료·청각재활학과","https://www.wsu.ac.kr/"]],
+      "재활학과":[["나사렛대학교","인간재활학과","https://www.kornu.ac.kr/"],["부산대학교","특수교육·재활과학 관련 전공","https://www.pusan.ac.kr/"],["우석대학교","재활상담학과","https://www.woosuk.ac.kr/"],["가톨릭관동대학교","사회복지·재활 관련 전공","https://www.cku.ac.kr/"]],
+      "스포츠재활 관련 학과":[["한국체육대학교","건강관리학과","https://www.knsu.ac.kr/"],["대구한의대학교","한방스포츠의학과","https://www.dhu.ac.kr/"],["가천대학교","운동재활학과","https://www.gachon.ac.kr/"],["용인대학교","재활복지·스포츠 관련 전공","https://www.yongin.ac.kr/"]],
+      "임상병리학과":[["연세대학교 미래캠퍼스","임상병리학과","https://www.yonsei.ac.kr/wj/"],["대구가톨릭대학교","임상병리학과","https://www.cu.ac.kr/"],["인제대학교","임상병리학과","https://www.inje.ac.kr/"],["부산가톨릭대학교","임상병리학과","https://www.cup.ac.kr/"]],
+      "방사선학과":[["을지대학교","방사선학과","https://www.eulji.ac.kr/"],["대구가톨릭대학교","방사선학과","https://www.cu.ac.kr/"],["신구대학교","방사선학과","https://www.shingu.ac.kr/"],["부산가톨릭대학교","방사선학과","https://www.cup.ac.kr/"]],
+      "치기공학과":[["대구보건대학교","치기공학과","https://www.dhc.ac.kr/"],["광주보건대학교","치기공학과","https://www.ghu.ac.kr/"],["김천대학교","치기공학과","https://www.gimcheon.ac.kr/"],["부산가톨릭대학교","치기공학과","https://www.cup.ac.kr/"]],
+      "치위생학과":[["을지대학교","치위생학과","https://www.eulji.ac.kr/"],["대구보건대학교","치위생학과","https://www.dhc.ac.kr/"],["광주보건대학교","치위생학과","https://www.ghu.ac.kr/"],["신구대학교","치위생학과","https://www.shingu.ac.kr/"]],
+      "약학과":[["연세대학교","약학대학","https://www.yonsei.ac.kr/"],["성균관대학교","약학대학","https://www.skku.edu/"],["이화여자대학교","약학대학","https://www.ewha.ac.kr/"],["부산대학교","약학대학","https://www.pusan.ac.kr/"]],
+      "제약 관련 학과":[["인제대학교","제약공학과","https://www.inje.ac.kr/"],["우석대학교","제약공학과","https://www.woosuk.ac.kr/"],["건양대학교","제약생명공학과","https://www.konyang.ac.kr/"],["경남대학교","제약공학과","https://www.kyungnam.ac.kr/"]],
+      "보건행정학과":[["을지대학교","의료경영학과","https://www.eulji.ac.kr/"],["남서울대학교","보건행정학과","https://www.nsu.ac.kr/"],["건양대학교","병원경영학과","https://www.konyang.ac.kr/"],["부산가톨릭대학교","병원경영학과","https://www.cup.ac.kr/"]],
+      "보건관리학과":[["고려대학교","보건정책관리학부","https://www.korea.ac.kr/"],["인제대학교","보건안전공학과","https://www.inje.ac.kr/"],["대구가톨릭대학교","산업보건학과","https://www.cu.ac.kr/"],["건양대학교","보건의료 관련 전공","https://www.konyang.ac.kr/"]],
+      "응급구조학과":[["공주대학교","응급구조학과","https://www.kongju.ac.kr/"],["대전보건대학교","응급구조학과","https://www.hit.ac.kr/"],["을지대학교","응급구조학과","https://www.eulji.ac.kr/"],["가천대학교","응급구조학과","https://www.gachon.ac.kr/"],["남서울대학교","응급구조학과","https://www.nsu.ac.kr/"]],
+      "의료공학 관련 학과":[["건국대학교","의학공학과","https://www.konkuk.ac.kr/"],["을지대학교","의료공학과","https://www.eulji.ac.kr/"],["가천대학교","의공학과","https://www.gachon.ac.kr/"],["한양대학교","바이오메디컬공학전공","https://www.hanyang.ac.kr/"]]
     };
 
     const majorDescriptions = {
@@ -480,18 +556,25 @@
       setPath("job-path",["청소년",careerCatalog[currentInterestId].label,field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
       renderUniversities(major,majorData.universities);
       const jobs=majorData.jobs||majorJobs[major]||field.jobs||[];const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(entry=>{const job=typeof entry==="string"?entry:entry.name;const jobData=typeof entry==="string"?{}:entry;const credentialLabel=jobData.credentialType||(jobData.requiredCredentials?"면허·국가자격 필수":"진입조건 확인");const b=document.createElement("button");b.type="button";b.className="item-button";b.innerHTML="<strong>"+job+"</strong><br><small>"+credentialLabel+"</small>";b.addEventListener("click",()=>showResult(job,field,major,b,jobData));target.appendChild(b);});
+      if(!jobs.length){const box=document.createElement("div");box.className="empty";box.innerHTML="<strong>학과 연결이 먼저 완료되었습니다.</strong><br>대표 직업과 실제 업무는 다음 검증 작업에서 추가됩니다. 대학별 교육과정은 위 공식 정보 서비스에서 먼저 비교할 수 있습니다.";target.appendChild(box);}
       refreshPromptEditor(true);
       showStep("job-step");document.getElementById("result-step").classList.remove("show");document.getElementById("job-step").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+
+    function getUniversities(major,inlineUniversities){
+      const direct=inlineUniversities||universityData[major]||[];
+      const supplements=(representativeUniversities[major]||[]).map(([university,department,url])=>({university,department,url,verifiedAt:"2026-07-16",linkType:"대학 공식 홈페이지 · 학과명 검색"}));
+      const seen=new Set();return direct.concat(supplements).filter(item=>{const key=item.university+"|"+item.department;if(seen.has(key))return false;seen.add(key);return true;}).slice(0,5);
     }
 
     function renderUniversities(major,inlineUniversities){
       const target=document.getElementById("university-list");
       const note=document.getElementById("university-note");
       document.getElementById("adiga-guide").innerHTML="<strong>대학어디가에서 입시정보 확인</strong><br>대학어디가에서 <strong>‘"+major+"’</strong>를 검색하면 대학별 모집단위, 전형방법과 전년도 입시결과를 비교할 수 있습니다.<br><a class=\"reset\" href=\"https://www.adiga.kr/\" target=\"_blank\" rel=\"noopener\">대학어디가 공식 사이트 열기 ↗</a>";
-      const universities=inlineUniversities||universityData[major]||[];target.innerHTML="";
+      const universities=getUniversities(major,inlineUniversities);target.innerHTML="";
       if(universities.length){
-        note.textContent="2026년 7월 공식 대학 페이지에서 확인한 대표 예시입니다. 전체 목록은 대학알리미·대학어디가에서 다시 확인하세요.";
-        universities.forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.style.textDecoration="none";a.innerHTML="<strong>"+item.university+"</strong><br><span>"+item.department+" · 공식 학과소개 ↗</span><br><small>확인 기준일 "+(item.verifiedAt||"2026-07-15")+"</small>";target.appendChild(a);});
+        note.textContent="대표 대학 약 5곳을 표시합니다. ‘직접 연결’과 ‘대학 홈페이지에서 학과명 검색’을 구분했으며, 전체 개설·모집 현황은 대학알리미·대학어디가에서 확인하세요.";
+        universities.forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.style.textDecoration="none";const linkType=item.linkType||"학과소개 직접 연결";a.innerHTML="<strong>"+item.university+"</strong><br><span>"+item.department+" · "+linkType+" ↗</span><br><small>정보 정리 기준일 "+(item.verifiedAt||"2026-07-16")+"</small>";target.appendChild(a);});
       }else{
         note.textContent="이 학과의 대학별 공식 페이지는 검증 후 순차적으로 추가합니다. 현재는 공신력 있는 대학정보 서비스에서 학과명을 검색하세요.";
         [{name:"대학알리미에서 확인",url:"https://www.academyinfo.go.kr/"},{name:"대학어디가에서 확인",url:"https://www.adiga.kr/"}].forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.textContent=item.name+" ↗";a.style.textDecoration="none";target.appendChild(a);});
@@ -511,7 +594,7 @@
       const skills=guide.skills||["관련 분야 지식","관찰과 문제해결 능력","협업과 의사소통 능력"];
       const required=guide.requiredCredentials||[guide.requirements];
       const helpful=guide.helpfulCredentials||["도움이 되는 자격·교육은 실제 업무와 채용공고를 기준으로 검토"];
-      const universities=currentMajorData.universities||universityData[major]||[];
+      const universities=getUniversities(major,currentMajorData.universities);
       const careerUrl=job==="물리치료사"?"https://www.career.go.kr/cloud/w/job/view?seq=369":"https://www.career.go.kr/cloud/w/job/list";
       const careerLinkLabel=job==="물리치료사"?"커리어넷 물리치료사 정보":"커리어넷에서 직업명 검색";
       const universityResult=universities.length?`<ul>${universities.map(item=>`<li><a href="${item.url}" target="_blank" rel="noopener">${item.university} ${item.department} 공식 소개 ↗</a></li>`).join("")}</ul><p class="career-note">공식 페이지 확인 예시이며 전체 개설 대학 목록은 아닙니다.</p>`:`<p>${guide.universityGuide||guide.major}</p>`;
