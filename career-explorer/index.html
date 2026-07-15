@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="청소년 관심 영역을 학과와 직업으로 연결하는 진로 탐색 프로그램">
+  <title>청소년 진로·학과 탐색기</title>
+  <style>
+    :root{--navy:#13284a;--blue:#3268d6;--sky:#edf4ff;--mint:#dff7ee;--ink:#243148;--muted:#687386;--line:#dbe4ef;--white:#fff;--shadow:0 18px 50px rgba(19,40,74,.1)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#f4f8ff 0,#fff 520px);line-height:1.65}button,a{font:inherit}.wrap{width:min(1080px,calc(100% - 32px));margin:auto}.topbar{padding:18px 0}.brand{color:var(--navy);font-weight:900;text-decoration:none}.hero{padding:58px 0 46px;text-align:center}.eyebrow{margin:0;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:.1em}.hero h1{margin:10px 0 14px;color:var(--navy);font-size:clamp(32px,6vw,58px);line-height:1.12}.hero p{max-width:690px;margin:0 auto;color:var(--muted)}.panel{margin-bottom:24px;padding:clamp(20px,4vw,38px);border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:var(--shadow)}.panel h2{margin:0 0 8px;color:var(--navy);font-size:clamp(23px,4vw,31px)}.panel-intro{margin:0 0 22px;color:var(--muted)}.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.profile-card{padding:18px;border-radius:16px;background:var(--sky)}.profile-card small{display:block;color:var(--muted);font-weight:700}.profile-card strong{display:block;margin-top:4px;color:var(--navy);font-size:18px}.selected-list{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}.selected-list li{padding:8px 12px;border-radius:999px;background:var(--navy);color:#fff;font-size:14px;font-weight:800}.selected-list li:first-child{background:var(--blue)}.choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.choice{min-height:110px;padding:17px;text-align:left;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);cursor:pointer;transition:.2s ease}.choice:hover,.choice:focus-visible{transform:translateY(-2px);border-color:#8cafeb;box-shadow:0 10px 24px rgba(50,104,214,.1)}.choice strong{display:block;margin-bottom:5px;color:var(--navy);font-size:17px}.choice span{display:block;color:var(--muted);font-size:13px}.choice.is-active{border:2px solid var(--blue);padding:16px;background:var(--sky)}.choice.is-disabled{opacity:.64}.step{display:none;opacity:0;transform:translateY(14px)}.step.show{display:block;animation:reveal .45s ease forwards}@keyframes reveal{to{opacity:1;transform:none}}.path{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px;padding:0;list-style:none}.path li{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px}.path li:not(:last-child)::after{content:"→";color:#a0aabc}.data-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.data-box{padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}.data-box h3{margin:0 0 12px;color:var(--navy)}.item-buttons{display:flex;flex-wrap:wrap;gap:8px}.item-button{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);cursor:pointer}.item-button:hover,.item-button.is-active{border-color:var(--blue);background:var(--sky);color:var(--blue);font-weight:800}.result-card{padding:clamp(20px,4vw,34px);border-radius:20px;background:var(--navy);color:#fff}.result-card h2,.result-card h3{color:#fff}.result-card h2{margin-top:0}.result-card .path li{color:#dce7ff}.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.result-block{padding:18px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.07)}.result-block h3{margin:0 0 8px;font-size:17px}.result-block p,.result-block ul{margin:0;color:#e7eeff}.result-block ul{padding-left:20px}.source-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.source-links a{padding:9px 12px;border-radius:10px;background:#fff;color:var(--navy);font-weight:800;text-decoration:none}.empty{padding:20px;border-radius:14px;background:#fff7df;color:#6d5620}.reset{display:inline-flex;margin-top:18px;padding:11px 16px;border:0;border-radius:11px;background:var(--blue);color:#fff;font-weight:800;text-decoration:none}.footer{padding:35px 0 50px;text-align:center;color:var(--muted);font-size:13px}
+    @media(max-width:760px){.hero{padding-top:35px}.profile-grid,.choice-grid,.data-columns,.result-grid{grid-template-columns:1fr}.panel{border-radius:18px}.choice{min-height:auto}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step.show{animation:none;opacity:1;transform:none}.choice{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap"><a class="brand" href="https://pencilgon00.tistory.com/">진로 탐색·직업 정보 플랫폼</a></div></header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">YOUTH CAREER EXPLORER</p>
+      <h1>관심에서 학과와 직업까지</h1>
+      <p>선택한 직업흥미군을 출발점으로 세부 분야, 관련 학과와 직업을 차례로 살펴보세요. 결과는 진로를 결정하는 판정이 아니라 다음 탐색을 돕는 안내입니다.</p>
+    </section>
+
+    <section class="panel" id="profile-panel">
+      <h2>나의 탐색 출발점</h2>
+      <p class="panel-intro" id="profile-intro"></p>
+      <div class="profile-grid">
+        <div class="profile-card"><small>이용자</small><strong>청소년</strong></div>
+        <div class="profile-card"><small>시작 방법</small><strong id="source-label">관심 영역 직접 선택</strong></div>
+        <div class="profile-card"><small>선택 영역</small><strong id="selection-count">0개</strong></div>
+      </div>
+      <ul class="selected-list" id="selected-list"></ul>
+    </section>
+
+    <section class="panel" id="interest-panel">
+      <h2>탐색할 직업흥미군</h2>
+      <p class="panel-intro">티스토리에서 선택한 영역이 먼저 표시됩니다. 다른 영역도 살펴볼 수 있습니다.</p>
+      <div class="choice-grid" id="interest-grid"></div>
+      <p class="empty" id="expansion-note" hidden>이 영역의 세부 데이터는 순차적으로 추가할 예정입니다. 현재는 보건의료 경로를 먼저 이용할 수 있습니다.</p>
+    </section>
+
+    <section class="panel step" id="field-step">
+      <ol class="path" id="field-path"></ol>
+      <h2>보건의료 세부 분야</h2>
+      <p class="panel-intro">어떤 방식으로 건강과 의료에 기여하고 싶은지 선택하세요.</p>
+      <div class="choice-grid" id="field-grid"></div>
+    </section>
+
+    <section class="panel step" id="detail-step">
+      <ol class="path" id="detail-path"></ol>
+      <h2 id="detail-title">관련 학과와 직업</h2>
+      <p class="panel-intro">학과와 직업을 비교한 뒤 가장 궁금한 직업을 선택하세요.</p>
+      <div class="data-columns">
+        <div class="data-box"><h3>관련 학과</h3><div class="item-buttons" id="major-list"></div></div>
+        <div class="data-box"><h3>관련 직업</h3><div class="item-buttons" id="job-list"></div></div>
+      </div>
+    </section>
+
+    <section class="step" id="result-step">
+      <div class="result-card" id="result-card"></div>
+    </section>
+
+    <a class="reset" href="https://pencilgon00.tistory.com/">처음 화면으로 돌아가기</a>
+  </main>
+  <footer class="footer"><div class="wrap">직업·학과·면허 정보는 지원 전에 반드시 해당 공식기관의 최신 자료를 확인하세요.</div></footer>
+
+  <script>
+    const interests = [
+      ["natural-science","자연과학","자연 현상과 과학 원리를 연구하는 분야"],
+      ["ai-software","AI·소프트웨어","컴퓨터 시스템과 프로그램을 연구·활용하는 분야"],
+      ["engineering","공학","과학 지식과 기술을 응용하는 분야"],
+      ["law-public","법률·행정","법과 제도를 만들고 적용하는 분야"],
+      ["welfare","복지","사람의 삶의 질과 사회 참여를 지원하는 분야"],
+      ["education","교육","지식과 기술을 가르치고 성장을 돕는 분야"],
+      ["art-media","예술·미디어","예술과 미디어로 재능과 생각을 표현하는 분야"],
+      ["sports","스포츠","경기·지도·서비스 등 스포츠 관련 분야"],
+      ["marketing","마케팅","상품과 서비스를 알리고 고객을 관리하는 분야"],
+      ["finance-management","금융·경영","자산과 조직을 관리·운영하는 분야"],
+      ["leisure-tourism","여가·관광","여행·관광·행사를 기획하고 운영하는 분야"],
+      ["healthcare","보건의료","건강 보호와 치료·간호·의료지원을 담당하는 분야"],
+      ["agri-life","농생명","식량·산림·동식물 자원을 생산·관리하는 분야"],
+      ["environment","환경","환경을 조사·분석하고 보전·개선하는 분야"],
+      ["manufacturing","제조","제품과 부품을 생산·관리·수리하는 분야"],
+      ["logistics","물류·운송·유통","사람과 상품의 이동과 유통을 담당하는 분야"],
+      ["architecture-civil","설계·건축·토목","건물과 사회기반시설을 설계·관리하는 분야"]
+    ];
+
+    const healthcare = {
+      "diagnosis-treatment": {label:"진료·치료",desc:"질병을 진단하고 치료하는 분야",majors:["의예과·의학과","치의예과·치의학과","한의예과·한의학과"],jobs:["의사","치과의사","한의사"]},
+      "nursing": {label:"간호",desc:"환자의 건강 회복과 생활을 지속적으로 지원하는 분야",majors:["간호학과"],jobs:["간호사"]},
+      "rehabilitation": {label:"재활",desc:"신체·인지·의사소통 기능의 회복과 적응을 돕는 분야",majors:["물리치료학과","작업치료학과","언어치료·언어재활 관련 학과","재활학과","스포츠재활 관련 학과"],jobs:["물리치료사","작업치료사","언어재활 관련 직업","재활 관련 직업"]},
+      "testing-technology": {label:"검사·의료기술",desc:"검사와 영상 등 의료기술로 진료를 지원하는 분야",majors:["임상병리학과","방사선학과","치기공학과","치위생학과"],jobs:["임상병리사","방사선사","치과기공사","치과위생사"]},
+      "pharmacy": {label:"약학",desc:"의약품을 연구·조제하고 안전한 사용을 지원하는 분야",majors:["약학과","제약 관련 학과"],jobs:["약사","의약품 연구 관련 직업"]},
+      "public-health": {label:"보건·의료지원",desc:"예방·관리·행정으로 건강과 의료체계를 지원하는 분야",majors:["보건행정학과","보건관리학과","응급구조학과","의료공학 관련 학과"],jobs:["응급구조사","보건행정 관련 직업","의료기기 관련 직업"]}
+    };
+
+    const jobGuides = {
+      "물리치료사":{summary:"신체 기능의 회복과 움직임 개선을 돕는 보건의료 직업입니다.",major:"물리치료학과의 교육과정과 진입 요건을 대학별로 비교해 보세요.",requirements:"면허·국가시험 등 법적 진입 조건은 한국보건의료인국가시험원과 관계 법령의 최신 내용을 확인해야 합니다.",subjects:["생명과학과 인체·건강 관련 교과 탐색","물리와 운동 원리를 연결한 탐구","의사소통과 대인관계 역량을 기르는 활동"],activities:["근골격계와 운동의 관계 탐구","재활 보조기술 사례 조사","의료·재활기관의 직무와 윤리 조사"]},
+      "작업치료사":{summary:"일상생활에 필요한 신체·인지 기능과 활동 참여의 회복을 지원하는 직업입니다.",major:"작업치료학과의 교과목과 임상실습 구조를 비교해 보세요.",requirements:"면허·국가시험 등 진입 조건은 공식기관의 최신 안내를 확인해야 합니다.",subjects:["생명과학과 인간 발달 탐색","심리·인지와 일상활동의 관계 탐구","관찰과 의사소통 역량 활동"],activities:["연령별 일상생활 활동 분석","보조도구와 환경개선 사례 조사","재활 분야 직업윤리 탐구"]},
+      "default":{summary:"선택한 보건의료 분야에서 사람의 건강과 의료서비스를 지원하는 직업입니다.",major:"관련 학과의 교육과정과 졸업 후 진로를 대학별로 비교해 보세요.",requirements:"면허·자격·국가시험 여부는 직업마다 다르므로 공식기관에서 최신 조건을 확인해야 합니다.",subjects:["생명과학과 건강 관련 교과 탐색","직업에서 요구하는 과학적 사고와 의사소통 탐색","관심 직업의 실제 업무 조사"],activities:["관련 학과 교육과정 비교","직업인 인터뷰와 직무영상 조사","공식기관에서 면허·자격 조건 확인"]}
+    };
+
+    const params = new URLSearchParams(location.search);
+    const source = params.get("source") === "official-test" ? "official-test" : "direct";
+    const validIds = new Set(interests.map(item => item[0]));
+    let selected = [];
+    const primary = params.get("primary");
+    if (validIds.has(primary)) selected.push(primary);
+    (params.get("additional") || "").split(",").forEach(id => { if (validIds.has(id) && !selected.includes(id) && selected.length < 3) selected.push(id); });
+
+    const labels = Object.fromEntries(interests.map(item => [item[0],item[1]]));
+    const profileIntro = document.getElementById("profile-intro");
+    document.getElementById("source-label").textContent = source === "official-test" ? "공식검사 결과 입력" : "관심 영역 직접 선택";
+    document.getElementById("selection-count").textContent = selected.length + "개";
+    profileIntro.textContent = source === "official-test" ? "입력한 공식검사의 상위 직업흥미군을 출발점으로 표시했습니다." : "직접 선택한 현재의 관심 영역을 출발점으로 표시했습니다.";
+    const selectedList = document.getElementById("selected-list");
+    selected.forEach((id,index) => { const li=document.createElement("li"); li.textContent=(index===0?"주관심 · ":"추가 관심 · ")+labels[id]; selectedList.appendChild(li); });
+    if (!selected.length) { const li=document.createElement("li"); li.textContent="아래에서 영역을 선택하세요"; selectedList.appendChild(li); }
+
+    const interestGrid = document.getElementById("interest-grid");
+    interests.forEach(item => {
+      const button=document.createElement("button"); button.type="button"; button.className="choice"+(selected.includes(item[0])?" is-active":"")+(item[0]!=="healthcare"?" is-disabled":"");
+      button.innerHTML="<strong>"+item[1]+"</strong><span>"+item[2]+(item[0]!=="healthcare"?" · 확장 준비 중":" · 현재 탐색 가능")+"</span>";
+      button.addEventListener("click",()=>chooseInterest(item[0])); interestGrid.appendChild(button);
+    });
+
+    function chooseInterest(id){
+      document.getElementById("expansion-note").hidden=id==="healthcare";
+      if(id!=="healthcare")return;
+      showStep("field-step");
+      setPath("field-path",["청소년",source==="official-test"?"공식검사 결과":"관심 직접 선택","보건의료"]);
+      document.getElementById("field-step").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+
+    const fieldGrid=document.getElementById("field-grid");
+    Object.entries(healthcare).forEach(([id,data])=>{
+      const button=document.createElement("button");button.type="button";button.className="choice";button.innerHTML="<strong>"+data.label+"</strong><span>"+data.desc+"</span>";
+      button.addEventListener("click",()=>chooseField(id,button));fieldGrid.appendChild(button);
+    });
+
+    function chooseField(id,button){
+      fieldGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
+      const data=healthcare[id];showStep("detail-step");setPath("detail-path",["청소년","보건의료",data.label]);document.getElementById("detail-title").textContent=data.label+" 관련 학과와 직업";
+      fillButtons("major-list",data.majors,false,data);fillButtons("job-list",data.jobs,true,data);document.getElementById("result-step").classList.remove("show");document.getElementById("detail-step").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+
+    function fillButtons(targetId,items,isJob,field){
+      const target=document.getElementById(targetId);target.innerHTML="";items.forEach(item=>{const b=document.createElement("button");b.type="button";b.className="item-button";b.textContent=item;if(isJob)b.addEventListener("click",()=>showResult(item,field,b));target.appendChild(b);});
+    }
+
+    function showResult(job,field,button){
+      document.getElementById("job-list").querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));button.classList.add("is-active");
+      const guide=jobGuides[job]||jobGuides.default;const sourceText=source==="official-test"?"공식검사 결과 입력":"관심 영역 직접 선택";
+      document.getElementById("result-card").innerHTML=`<ol class="path"><li>청소년</li><li>${sourceText}</li><li>보건의료</li><li>${field.label}</li><li>${job}</li></ol><h2>${job} 진로 탐색 결과</h2><p>${guide.summary}</p><div class="result-grid"><div class="result-block"><h3>관련 학과 확인</h3><p>${guide.major}</p></div><div class="result-block"><h3>면허·자격 확인</h3><p>${guide.requirements}</p></div><div class="result-block"><h3>교과 탐색 방향</h3><ul>${guide.subjects.map(v=>`<li>${v}</li>`).join("")}</ul></div><div class="result-block"><h3>추천 진로활동</h3><ul>${guide.activities.map(v=>`<li>${v}</li>`).join("")}</ul></div></div><div class="source-links"><a href="https://www.career.go.kr/" target="_blank" rel="noopener">커리어넷 확인</a><a href="https://www.adiga.kr/" target="_blank" rel="noopener">대입정보포털 확인</a><a href="https://www.kuksiwon.or.kr/" target="_blank" rel="noopener">국시원 확인</a></div>`;
+      showStep("result-step");document.getElementById("result-step").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+
+    function setPath(id,items){document.getElementById(id).innerHTML=items.map(v=>"<li>"+v+"</li>").join("");}
+    function showStep(id){document.getElementById(id).classList.add("show");}
+    if(selected[0]==="healthcare")chooseInterest("healthcare");
+  </script>
+</body>
+</html>
