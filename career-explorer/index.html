@@ -212,9 +212,21 @@
       ],jobs:[]}
     };
 
+    const aiSoftware = {
+      "ai-ml":{label:"인공지능·머신러닝",desc:"학습 데이터와 알고리즘을 활용해 예측·분류·생성형 AI 모델과 서비스를 개발하는 분야",majors:[]},
+      "data":{label:"데이터과학·분석",desc:"데이터를 수집·정제·분석·시각화해 현상을 설명하고 의사결정을 지원하는 분야",majors:[]},
+      "software":{label:"소프트웨어·응용프로그램",desc:"사용 목적과 요구사항에 맞는 프로그램, 업무 시스템과 소프트웨어 제품을 설계·개발하는 분야",majors:[]},
+      "web-mobile":{label:"웹·모바일 서비스",desc:"웹사이트와 모바일 앱의 화면·서버·데이터 연결을 설계하고 운영하는 분야",majors:[]},
+      "cloud-platform":{label:"클라우드·플랫폼 운영",desc:"서비스가 안정적으로 실행되도록 서버·클라우드·배포 자동화와 운영환경을 구축하는 분야",majors:[]},
+      "security":{label:"정보보안",desc:"시스템·네트워크·데이터의 취약점을 점검하고 침해를 예방·탐지·대응하는 기술 분야",majors:[]},
+      "game-content":{label:"게임·인터랙티브 소프트웨어",desc:"게임 규칙과 상호작용을 코드로 구현하고 클라이언트·서버·엔진을 개발하는 분야",majors:[]},
+      "embedded-iot":{label:"임베디드·IoT 소프트웨어",desc:"기기와 센서 안에서 동작하는 펌웨어·제어 프로그램과 연결 서비스를 개발하는 분야",majors:[]}
+    };
+
     // 공통 데이터 모델: 새 직업군은 fields 안에 분야·학과·직업 데이터만 추가하면 같은 화면 흐름을 사용합니다.
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
+    careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"fields-ready",fields:aiSoftware};
     /* 확장 데이터 형식
       careerCatalog[직업군ID].fields[분야ID] = {
         label, desc,
@@ -446,7 +458,7 @@
       const target=document.getElementById("route-list");target.innerHTML="";selected.forEach(id=>{const catalog=careerCatalog[id];const button=document.createElement("button");button.type="button";button.className="item-button"+(id===currentInterestId?" is-active":"");button.textContent=catalog.label+(Object.keys(catalog.fields||{}).length?"":" · 준비 중");button.addEventListener("click",()=>chooseInterest(id));target.appendChild(button);});document.getElementById("route-switcher").hidden=selected.length<2;
     }
     function renderFieldChoices(catalog){
-      document.getElementById("field-title").textContent=catalog.label+" 세부 분야";document.getElementById("field-intro").textContent="선택한 "+catalog.label+" 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.";document.getElementById("field-boundary-note").textContent=catalog.id==="healthcare"?"이 구분은 청소년이 업무 목적을 이해하기 위한 탐색용 분류입니다. 법령상 면허·자격 직종 구분과 완전히 같지 않으며, 실제 진입요건은 직업별 공식 안내에서 확인합니다.":"세부 분야는 탐색을 돕기 위한 구분이며 실제 학과·직업의 경계는 서로 겹칠 수 있습니다.";fieldGrid.innerHTML="";const entries=Object.entries(catalog.fields||{});
+      document.getElementById("field-title").textContent=catalog.label+" 세부 분야";document.getElementById("field-intro").textContent="선택한 "+catalog.label+" 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.";document.getElementById("field-boundary-note").textContent=catalog.id==="healthcare"?"이 구분은 청소년이 업무 목적을 이해하기 위한 탐색용 분류입니다. 법령상 면허·자격 직종 구분과 완전히 같지 않으며, 실제 진입요건은 직업별 공식 안내에서 확인합니다.":catalog.id==="ai-software"?"탐색용 경계: AI는 모델 개발, 데이터는 수집·분석, 소프트웨어는 프로그램 구현, 클라우드는 배포·운영, 보안은 기술적 보호에 초점을 둡니다. 게임의 기획·그래픽은 예술·미디어, 기기 회로·하드웨어는 공학, 개인정보 법·제도는 법률·행정과 겹칠 수 있습니다.":"세부 분야는 탐색을 돕기 위한 구분이며 실제 학과·직업의 경계는 서로 겹칠 수 있습니다.";fieldGrid.innerHTML="";const entries=Object.entries(catalog.fields||{});
       if(!entries.length){const box=document.createElement("div");box.className="empty";box.style.gridColumn="1/-1";box.innerHTML="<strong>공통 탐색 구조가 준비되었습니다.</strong><br>"+catalog.label+"의 세부 분야·학과·직업 데이터는 검증 후 이 자리에 추가됩니다. 데이터가 추가되면 별도 화면 수정 없이 다음 단계가 자동으로 열립니다.";fieldGrid.appendChild(box);return;}
       entries.forEach(([id,data])=>{const button=document.createElement("button");button.type="button";button.className="choice";button.innerHTML="<strong>"+data.label+"</strong><span>"+data.desc+"</span>";button.addEventListener("click",()=>chooseField(id,button));fieldGrid.appendChild(button);});
     }
