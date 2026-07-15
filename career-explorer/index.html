@@ -9,7 +9,7 @@
     :root{--navy:#13284a;--blue:#3268d6;--sky:#edf4ff;--mint:#dff7ee;--ink:#243148;--muted:#687386;--line:#dbe4ef;--white:#fff;--shadow:0 18px 50px rgba(19,40,74,.1)}
     *{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#f4f8ff 0,#fff 520px);line-height:1.65}button,a{font:inherit}.wrap{width:min(1080px,calc(100% - 32px));margin:auto}.topbar{padding:18px 0}.brand{color:var(--navy);font-weight:900;text-decoration:none}.hero{padding:58px 0 46px;text-align:center}.eyebrow{margin:0;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:.1em}.hero h1{margin:10px 0 14px;color:var(--navy);font-size:clamp(32px,6vw,58px);line-height:1.12}.hero p{max-width:690px;margin:0 auto;color:var(--muted)}.panel{margin-bottom:24px;padding:clamp(20px,4vw,38px);border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:var(--shadow)}.panel h2{margin:0 0 8px;color:var(--navy);font-size:clamp(23px,4vw,31px)}.panel-intro{margin:0 0 22px;color:var(--muted)}.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.profile-card{padding:18px;border-radius:16px;background:var(--sky)}.profile-card small{display:block;color:var(--muted);font-weight:700}.profile-card strong{display:block;margin-top:4px;color:var(--navy);font-size:18px}.selected-list{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}.selected-list li{padding:8px 12px;border-radius:999px;background:var(--navy);color:#fff;font-size:14px;font-weight:800}.selected-list li:first-child{background:var(--blue)}.choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.choice{display:block;min-height:110px;padding:17px;text-align:left;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);cursor:pointer;transition:.2s ease}.choice:hover,.choice:focus-visible{transform:translateY(-2px);border-color:#8cafeb;box-shadow:0 10px 24px rgba(50,104,214,.1)}.choice strong{display:block;margin-bottom:5px;color:var(--navy);font-size:17px}.choice span{display:block;color:var(--muted);font-size:13px}.choice.is-active{border:2px solid var(--blue);padding:16px;background:var(--sky)}.choice.is-disabled{opacity:.64}.step{display:none;opacity:0;transform:translateY(14px)}.step.show{display:block;animation:reveal .45s ease forwards}@keyframes reveal{to{opacity:1;transform:none}}.path{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px;padding:0;list-style:none}.path li{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px}.path li:not(:last-child)::after{content:"→";color:#a0aabc}.data-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.data-box{padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}.data-box h3{margin:0 0 12px;color:var(--navy)}.item-buttons{display:flex;flex-wrap:wrap;gap:8px}.item-button{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);cursor:pointer}.item-button:hover,.item-button.is-active{border-color:var(--blue);background:var(--sky);color:var(--blue);font-weight:800}.result-card{padding:clamp(20px,4vw,34px);border-radius:20px;background:var(--navy);color:#fff}.result-card h2,.result-card h3{color:#fff}.result-card h2{margin-top:0}.result-card .path li{color:#dce7ff}.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.result-block{padding:18px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.07)}.result-block h3{margin:0 0 8px;font-size:17px}.result-block p,.result-block ul{margin:0;color:#e7eeff}.result-block ul{padding-left:20px}.source-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.source-links a{padding:9px 12px;border-radius:10px;background:#fff;color:var(--navy);font-weight:800;text-decoration:none}.empty{padding:20px;border-radius:14px;background:#fff7df;color:#6d5620}.reset{display:inline-flex;margin-top:18px;padding:11px 16px;border:0;border-radius:11px;background:var(--blue);color:#fff;font-weight:800;text-decoration:none;cursor:pointer}.reset:disabled{opacity:.5;cursor:not-allowed}.footer{padding:35px 0 50px;text-align:center;color:var(--muted);font-size:13px}
     @media(max-width:760px){.hero{padding-top:35px}.profile-grid,.choice-grid,.data-columns,.result-grid{grid-template-columns:1fr}.panel{border-radius:18px}.choice{min-height:auto}}
-    .nav-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.nav-button{padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.nav-button:hover{border-color:var(--blue);color:var(--blue)}
+    .nav-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.nav-button{padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.nav-button:hover{border-color:var(--blue);color:var(--blue)}.career-note{margin:14px 0 0;color:var(--muted);font-size:13px}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step.show{animation:none;opacity:1;transform:none}.choice{transition:none}}
   </style>
 </head>
@@ -52,6 +52,28 @@
         <button class="reset" type="button" id="continue-button" disabled style="margin-left:12px">선택 완료 · 다음 단계</button>
       </div>
       <p class="empty" id="expansion-note" hidden>이 영역의 세부 데이터는 순차적으로 추가할 예정입니다. 현재는 보건의료 경로를 먼저 이용할 수 있습니다.</p>
+    </section>
+
+    <section class="panel step" id="psych-step">
+      <ol class="path"><li>청소년</li><li>직업흥미군 선택</li><li>선택형 정밀 탐색</li></ol>
+      <h2>진로심리검사 결과 추가</h2>
+      <p class="panel-intro">검사 결과가 있다면 상위 항목을 추가하세요. 없어도 `건너뛰고 계속`을 눌러 진행할 수 있습니다.</p>
+      <div class="data-columns">
+        <div class="data-box">
+          <h3>직업적성 상위 영역 <small id="aptitude-count">0 / 3</small></h3>
+          <p>잘 발휘할 가능성이 있다고 나온 능력을 최대 3개까지 선택하세요.</p>
+          <div class="item-buttons" id="aptitude-list"></div>
+          <a href="https://www.career.go.kr/cloud/w/inspect/vocation/intro" target="_blank" rel="noopener">커리어넷 직업적성검사</a>
+        </div>
+        <div class="data-box">
+          <h3>직업가치관 상위 항목 <small id="value-count">0 / 3</small></h3>
+          <p>직업에서 중요하게 생각한다고 나온 가치를 최대 3개까지 선택하세요.</p>
+          <div class="item-buttons" id="value-list"></div>
+          <a href="https://www.career.go.kr/cloud/w/inspect/value2/intro" target="_blank" rel="noopener">커리어넷 직업가치관검사</a>
+        </div>
+      </div>
+      <div class="nav-actions"><button type="button" class="nav-button" id="back-psych">← 이전 단계</button><button type="button" class="nav-button" id="skip-psych">건너뛰고 계속</button><button type="button" class="reset" id="continue-psych">선택 결과 추가하고 계속</button><button type="button" class="nav-button restart-button">처음부터 다시</button></div>
+      <p class="career-note">이 입력은 공식검사를 대신하지 않으며, 검사 문항이나 원점수는 저장하지 않습니다.</p>
     </section>
 
     <section class="panel step" id="field-step">
@@ -107,6 +129,9 @@
       ["architecture-civil","설계·건축·토목","건물과 사회기반시설을 설계·관리하는 분야"]
     ];
 
+    const aptitudeOptions=["신체·운동능력","손재능","공간지각력","음악능력","창의력","언어능력","수리·논리력","자기성찰능력","대인관계능력","자연친화력","예술시각능력"];
+    const valueOptions=["안정성","보수","일과 삶의 균형","즐거움","소속감","자기 계발","도전성","영향력","사회적 기여","성취","사회적 인정","자율성"];
+
     const healthcare = {
       "diagnosis-treatment": {label:"진료·치료",desc:"질병을 진단하고 치료하는 분야",majors:["의예과·의학과","치의예과·치의학과","한의예과·한의학과"],jobs:["의사","치과의사","한의사"]},
       "nursing": {label:"간호",desc:"환자의 건강 회복과 생활을 지속적으로 지원하는 분야",majors:["간호학과"],jobs:["간호사"]},
@@ -136,6 +161,8 @@
     let source = params.get("source") === "official-test" ? "official-test" : "direct";
     const validIds = new Set(interests.map(item => item[0]));
     let selected = [];
+    let aptitudes = [];
+    let values = [];
     const primary = params.get("primary");
     if (validIds.has(primary)) selected.push(primary);
     (params.get("additional") || "").split(",").forEach(id => { if (validIds.has(id) && !selected.includes(id) && selected.length < 3) selected.push(id); });
@@ -148,6 +175,8 @@
     const interestPanel=document.getElementById("interest-panel");
     const inputCount=document.getElementById("input-count");
     const continueButton=document.getElementById("continue-button");
+    const aptitudeList=document.getElementById("aptitude-list");
+    const valueList=document.getElementById("value-list");
 
     const interestGrid = document.getElementById("interest-grid");
     interests.forEach(item => {
@@ -159,6 +188,8 @@
     document.getElementById("start-direct").addEventListener("click",()=>beginInput("direct"));
     document.getElementById("start-official").addEventListener("click",()=>beginInput("official-test"));
     continueButton.addEventListener("click",completeInput);
+    buildOptionalButtons(aptitudeList,aptitudeOptions,aptitudes,"aptitude-count");
+    buildOptionalButtons(valueList,valueOptions,values,"value-count");
 
     function beginInput(mode){
       source=mode;selected=[];interestGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));updateInput();interestPanel.hidden=false;
@@ -176,10 +207,20 @@
     function updateInput(){inputCount.textContent=selected.length+" / 3 선택";continueButton.disabled=selected.length===0;}
 
     function completeInput(){
-      startPanel.hidden=true;profilePanel.hidden=false;renderProfile();
-      const first=selected[0];document.getElementById("expansion-note").hidden=first==="healthcare";
-      if(first==="healthcare")chooseInterest(first);else document.getElementById("expansion-note").scrollIntoView({behavior:"smooth",block:"center"});
+      startPanel.hidden=true;profilePanel.hidden=false;renderProfile();interestPanel.hidden=true;showStep("psych-step");document.getElementById("psych-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
+
+    function buildOptionalButtons(target,options,store,countId){
+      options.forEach(label=>{const b=document.createElement("button");b.type="button";b.className="item-button";b.textContent=label;b.addEventListener("click",()=>{const i=store.indexOf(label);if(i>=0){store.splice(i,1);b.classList.remove("is-active");}else if(store.length<3){store.push(label);b.classList.add("is-active");}document.getElementById(countId).textContent=store.length+" / 3";});target.appendChild(b);});
+    }
+
+    function proceedAfterPsych(){
+      document.getElementById("psych-step").classList.remove("show");const first=selected[0];document.getElementById("expansion-note").hidden=first==="healthcare";
+      if(first==="healthcare")chooseInterest(first);else{interestPanel.hidden=false;document.getElementById("expansion-note").scrollIntoView({behavior:"smooth",block:"center"});}
+    }
+
+    document.getElementById("continue-psych").addEventListener("click",proceedAfterPsych);
+    document.getElementById("skip-psych").addEventListener("click",()=>{aptitudes=[];values=[];aptitudeList.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));valueList.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));document.getElementById("aptitude-count").textContent="0 / 3";document.getElementById("value-count").textContent="0 / 3";proceedAfterPsych();});
 
     function renderProfile(){
       document.getElementById("source-label").textContent=source==="official-test"?"공식검사 결과 입력":"관심 영역 직접 선택";
@@ -197,7 +238,7 @@
       document.getElementById("field-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
-    if(selected.length){startPanel.hidden=true;profilePanel.hidden=false;interestPanel.hidden=false;renderProfile();updateInput();}
+    if(selected.length){startPanel.hidden=true;profilePanel.hidden=false;interestPanel.hidden=true;renderProfile();updateInput();showStep("psych-step");}
 
     const fieldGrid=document.getElementById("field-grid");
     Object.entries(healthcare).forEach(([id,data])=>{
@@ -226,7 +267,8 @@
       document.getElementById("job-step").classList.remove("show");
       const guide=jobGuides[job]||jobGuides.default;const sourceText=source==="official-test"?"공식검사 결과 입력":"관심 영역 직접 선택";
       const interestNames=selected.map(id=>labels[id]).join("·")||"보건의료";
-      const reason=source==="official-test"?`공식검사 결과에서 ${interestNames} 영역이 높게 나타났고, ${field.label} 분야와 ${major}를 선택했으므로 ${job}을 우선 탐색할 가능성이 있습니다. 검사 결과만으로 적합성을 확정하지는 않습니다.`:`${interestNames} 영역에 관심을 표시하고 ${field.label} 분야와 ${major}를 선택했으므로 ${job}을 우선 탐색할 가능성이 있습니다. 현재의 관심은 경험에 따라 달라질 수 있습니다.`;
+      const psychReason=(aptitudes.length?` 직업적성 상위 영역으로 ${aptitudes.join("·")}을 입력했습니다.`:"")+(values.length?` 직업가치관에서는 ${values.join("·")}을 중요하게 선택했습니다.`:"");
+      const reason=(source==="official-test"?`공식검사 결과에서 ${interestNames} 영역이 높게 나타났고, ${field.label} 분야와 ${major}를 선택했으므로 ${job}을 우선 탐색할 가능성이 있습니다.`:`${interestNames} 영역에 관심을 표시하고 ${field.label} 분야와 ${major}를 선택했으므로 ${job}을 우선 탐색할 가능성이 있습니다.`)+psychReason+` 이 결과는 적합성을 확정하지 않으며 실제 교과·체험활동을 통해 추가로 확인해야 합니다.`;
       const employers=guide.employers||["근무기관과 담당업무는 직업정보와 실제 채용공고에서 확인","기관별 채용조건과 업무 범위를 비교"];
       const skills=guide.skills||["관련 분야 지식","관찰과 문제해결 능력","협업과 의사소통 능력"];
       const required=guide.requiredCredentials||[guide.requirements];
@@ -235,7 +277,8 @@
       showStep("result-step");document.getElementById("result-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
-    document.getElementById("back-field").addEventListener("click",()=>goBack("field-step","interest-panel"));
+    document.getElementById("back-psych").addEventListener("click",()=>goBack("psych-step","interest-panel"));
+    document.getElementById("back-field").addEventListener("click",()=>goBack("field-step","psych-step"));
     document.getElementById("back-detail").addEventListener("click",()=>{document.getElementById("job-step").classList.remove("show");document.getElementById("result-step").classList.remove("show");goBack("detail-step","field-step");});
     document.getElementById("back-job").addEventListener("click",()=>{document.getElementById("result-step").classList.remove("show");goBack("job-step","detail-step");});
     document.getElementById("back-result").addEventListener("click",()=>goBack("result-step","job-step"));
@@ -243,18 +286,17 @@
 
     function goBack(currentId,previousId){
       document.getElementById(currentId).classList.remove("show");
-      const previous=document.getElementById(previousId);previous.hidden=false;previous.scrollIntoView({behavior:"smooth",block:"start"});
+      const previous=document.getElementById(previousId);previous.hidden=false;if(previous.classList.contains("step"))previous.classList.add("show");previous.scrollIntoView({behavior:"smooth",block:"start"});
     }
 
     function restartExplorer(){
-      selected=[];source="direct";interestGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));fieldGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));
-      ["field-step","detail-step","job-step","result-step"].forEach(id=>document.getElementById(id).classList.remove("show"));
-      profilePanel.hidden=true;interestPanel.hidden=true;startPanel.hidden=false;updateInput();history.replaceState(null,"",location.pathname);startPanel.scrollIntoView({behavior:"smooth",block:"start"});
+      selected=[];aptitudes=[];values=[];source="direct";interestGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));fieldGrid.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));aptitudeList.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));valueList.querySelectorAll("button").forEach(el=>el.classList.remove("is-active"));
+      ["psych-step","field-step","detail-step","job-step","result-step"].forEach(id=>document.getElementById(id).classList.remove("show"));
+      document.getElementById("aptitude-count").textContent="0 / 3";document.getElementById("value-count").textContent="0 / 3";profilePanel.hidden=true;interestPanel.hidden=true;startPanel.hidden=false;updateInput();history.replaceState(null,"",location.pathname);startPanel.scrollIntoView({behavior:"smooth",block:"start"});
     }
 
     function setPath(id,items){document.getElementById(id).innerHTML=items.map(v=>"<li>"+v+"</li>").join("");}
     function showStep(id){document.getElementById(id).classList.add("show");}
-    if(selected[0]==="healthcare")chooseInterest("healthcare");
   </script>
 </body>
 </html>
