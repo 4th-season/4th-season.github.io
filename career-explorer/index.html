@@ -283,9 +283,19 @@
       "게임프로그래머":{summary:"게임 시나리오와 규칙에 따라 배경·상황·상호작용을 프로그래밍하고, 게임이 실행되도록 필요한 프로그램을 제작합니다.",employers:["게임 개발·퍼블리싱 기업의 개발 조직","인터랙티브 콘텐츠를 제작하는 소프트웨어 기업"],skills:["프로그래밍과 알고리즘","게임 엔진·클라이언트·서버 구조 이해","기획·그래픽·사운드 팀과의 협업"]},
       "사물 인터넷 전문가":{summary:"사람·사물·공간의 데이터를 인터넷으로 연결해 수집·공유·활용하고, 이를 바탕으로 새로운 서비스와 제품을 기획·개발합니다.",employers:["사물인터넷 서비스 기업","정보통신 관련 기업의 IoT 부서","소프트웨어 개발 기업·연구기관의 관련 조직"],skills:["수리·논리력과 공간지각력","센서·통신·데이터 연결 이해","문제 해결을 위한 서비스 기획"]}
     };
+    // W05-D2: 커리어넷 직업정보를 바탕으로 두 번째 대표 직업의 실제 업무와 진출 기관 유형을 검증해 선택 결과에 연결합니다.
+    Object.assign(aiJobDetails,{
+      "인공지능연구원":{summary:"인공지능 모델과 알고리즘을 연구하고, 학습 데이터와 실험 결과를 분석해 성능을 개선합니다.",employers:["AI 연구소·소프트웨어 기업의 연구개발 부서","대학·정부출연연구기관 등 인공지능 연구 조직"],skills:["수학·통계와 머신러닝 원리 이해","데이터 실험 설계와 모델 성능 검증","연구 결과를 문서와 발표로 설명하는 소통"]},
+      "데이터마이너":{summary:"데이터를 목적에 맞는 형태로 바꾸고 분석해 필요한 정보를 찾고, 결과의 유용성과 오류를 확인합니다.",employers:["데이터를 관리·활용하는 일반기업과 공공기관","정보통신·제조·서비스 분야의 데이터 분석 부서"],skills:["데이터 정제·분류·요약과 분석 도구 활용","통계적 관점에서 분석 결과 해석","분석 목적을 정의하고 결과를 설명하는 능력"]},
+      "가상현실전문가":{summary:"3차원 모델링과 프로그래밍을 활용해 가상의 시공간에서 작동하는 시스템을 기획·개발·테스트합니다.",employers:["가상현실·콘텐츠·소프트웨어 개발 기업","교육·산업·문화 분야의 실감형 서비스 개발 부서"],skills:["3D 모델링·그래픽과 프로그래밍 기초","사용자 요구 분석과 개발 방향 설정","테스트 결과를 반영해 오류를 고치는 문제 해결"]},
+      "웹프로듀서":{summary:"웹사이트의 기획·구축·운영·마케팅을 총괄하고, 제공할 내용과 디자인을 포함한 홈페이지 관리를 조정합니다.",employers:["웹사이트 제작업체와 웹·서버 호스팅업체","기업·공공기관 전산실과 시스템통합(SI) 업체"],skills:["웹 서비스 기획과 사용자 요구 정리","개발·디자인 인력과의 협업·일정 조정","웹 콘텐츠와 운영 성과를 점검하는 능력"]},
+      "디지털포렌식전문가":{summary:"저장 매체와 인터넷에 남은 디지털 정보를 수집·분석하고, 법적 증거로 활용할 수 있도록 복구·보관합니다.",employers:["경찰·검찰·관세·국방 등 국가기관","기업 법무팀·회계법인·법무법인과 국가연구소"],skills:["디지털 자료 수집·복구와 분석 절차 이해","증거의 신뢰성과 보관 절차를 지키는 꼼꼼함","분석 내용을 논리적으로 기록·설명하는 언어 능력"]},
+      "게임기획자":{summary:"게임 장르·이용 연령·난이도·캐릭터·스토리 흐름을 설정하고 개발 인력과 함께 게임 제작을 이끕니다.",employers:["대기업·중소 게임 전문 업체와 모바일 게임 업체","개인·소규모 팀의 모바일 게임 제작 활동"],skills:["게임 규칙과 사용자 경험을 기획하는 창의력","그래픽·프로그래밍 인력과 협업하는 의사소통","기획 내용을 문서화하고 일정·우선순위를 조정하는 능력"]},
+      "사물 인터넷 표준 전문가":{summary:"사물인터넷 기기와 서비스가 연결될 때 필요한 통신 방식과 호환성 기준을 검토하고, 표준 기반의 연결 구조를 설계합니다.",employers:["사물인터넷 서비스·정보통신 관련 기업의 IoT 부서","소프트웨어 개발업체 연구소와 정보통신 관련 연구기관"],skills:["센서·통신·네트워크의 연결 구조 이해","기기·서비스 간 호환성과 보안 요구 확인","기술 기준을 문서로 정리하고 관계자와 조율하는 능력"]}
+    });
     const aiCredentialGuide = Object.fromEntries(Object.keys(aiJobDetails).map(name=>[name,{credentialType:"법정 필수 면허 없음",requiredCredentials:["대표 직업에 공통으로 요구되는 법정 필수 면허는 확인되지 않았습니다. 채용기관별 직무·경력·학력 요건을 공고에서 다시 확인하세요."],helpfulCredentials:[name==="정보보호전문가"?"정보보안기사·정보처리기사 등은 채용요건과 담당 업무가 맞는지 확인한 뒤 준비":name==="사물 인터넷 전문가"?"정보처리기사·정보통신기사 등은 개발·통신 업무와의 관련성을 확인한 뒤 준비":name==="게임프로그래머"?"정보처리기사·게임프로그래밍 관련 자격은 채용요건과 포트폴리오 요구를 함께 확인":name==="빅 데이터 전문가"?"정보처리기사·빅데이터분석기사 등은 분석 도구·직무 요구와의 관련성을 확인":name==="클라우드 시스템 엔지니어"?"정보처리기사·정보통신기사 등은 운영 환경과 채용요건을 확인": "정보처리기사 등 국가기술자격은 채용요건과 직무 관련성을 확인한 뒤 선택"],credentialSourceUrl:"https://q-net.or.kr/crf005.do?id=crf00503&jmCd=1320",credentialSourceLabel:"Q-Net 국가기술자격 정보"}]));
     Object.entries(aiJobScope).forEach(([fieldId,jobScope])=>{const jobs=jobScope.jobs.map(job=>({...job,...aiJobDetails[job.name],...aiCredentialGuide[job.name]}));aiSoftware[fieldId].jobScope={...jobScope,jobs};aiSoftware[fieldId].jobs=jobs;});
-    Object.entries(aiJobExpansionScope).forEach(([fieldId,scope])=>{aiSoftware[fieldId].nextJobScope=scope;});
+    Object.entries(aiJobExpansionScope).forEach(([fieldId,scope])=>{const expansionJobs=scope.jobs.map(job=>({...job,...aiJobDetails[job.name],...aiCredentialGuide[job.name]}));aiSoftware[fieldId].jobs=aiSoftware[fieldId].jobs.concat(expansionJobs);});
 
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
