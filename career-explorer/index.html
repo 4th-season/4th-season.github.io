@@ -262,6 +262,17 @@
       "game-content":{intro:"게임의 규칙과 상호작용을 코드로 구현하는 직무를 우선 확인합니다.",jobs:[{name:"게임프로그래머",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cnet/epub/pdfEpub/2012%20%ED%8A%B9%EC%88%98%EA%B5%90%EC%9C%A1%EB%8C%80%EC%83%81%ED%95%99%EC%83%9D%EC%9D%84%EC%9C%84%ED%95%9C%20%EC%A7%84%EB%A1%9C%EC%A0%95%EB%B3%B4-%EC%A7%81%EC%97%85%ED%8E%B8.pdf",verifiedAt:"2026-07-16"}]},
       "embedded-iot":{intro:"사물과 공간을 인터넷으로 연결해 서비스를 만드는 직무를 우선 확인합니다.",jobs:[{name:"사물 인터넷 전문가",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10035",verifiedAt:"2026-07-16"}]}
     };
+    // W05-D1: 두 번째 대표 직업은 범위와 공식 출처만 먼저 제시합니다. 실제 업무·취업기관·자격 데이터는 W05-D2에서 검증한 뒤 선택 결과에 연결합니다.
+    const aiJobExpansionScope = {
+      "ai-ml":{intro:"AI 모델 연구 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"인공지능연구원",sourceLabel:"커리어넷 인공지능 관련 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10117",verifiedAt:"2026-07-16"}]},
+      "data":{intro:"데이터에서 규칙과 의미를 찾는 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"데이터마이너",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10051",verifiedAt:"2026-07-16"}]},
+      "software":{intro:"가상 환경용 소프트웨어를 만드는 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"가상현실전문가",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=1093",verifiedAt:"2026-07-16"}]},
+      "web-mobile":{intro:"웹 서비스의 기획·구현 연결 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"웹프로듀서",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=1096",verifiedAt:"2026-07-16"}]},
+      "cloud-platform":{intro:"시스템 기반 소프트웨어와 플랫폼 운영을 잇는 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"시스템소프트웨어개발자",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=834",verifiedAt:"2026-07-16"}]},
+      "security":{intro:"디지털 증거를 분석하는 보안 연계 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"디지털포렌식전문가",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10030",verifiedAt:"2026-07-16"}]},
+      "game-content":{intro:"게임의 규칙과 경험을 설계하는 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"게임기획자",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=923",verifiedAt:"2026-07-16"}]},
+      "embedded-iot":{intro:"사물인터넷 표준·연결 구조와 관련된 직무를 두 번째 후보로 검증합니다.",jobs:[{name:"사물 인터넷 표준 전문가",sourceLabel:"커리어넷 사물 인터넷 전문가 관련직업 정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10035",verifiedAt:"2026-07-16"}]}
+    };
     const aiJobDetails = {
       "인공지능 엔지니어":{summary:"데이터를 정리·전처리하고 머신러닝·딥러닝 모델을 설계·학습·개선해 인식·예측·분류 기능을 구현합니다.",employers:["AI·소프트웨어 기업의 연구·개발 조직","데이터 기반 제품·서비스를 운영하는 기업의 AI 개발 부서"],skills:["수리·논리력과 알고리즘 이해","데이터 전처리와 모델 성능 검증","개발팀과 문제를 설명·협업하는 의사소통"]},
       "빅 데이터 전문가":{summary:"대규모 데이터를 수집·정제·분석하고, 분석 결과를 시각화해 조직의 의사결정에 활용할 수 있도록 지원합니다.",employers:["데이터 분석·컨설팅 기업","기업·공공기관의 데이터 분석·디지털전환 부서"],skills:["통계와 데이터 분석 기초","데이터베이스·분석도구 활용","결과를 이해하기 쉽게 설명하는 능력"]},
@@ -274,6 +285,7 @@
     };
     const aiCredentialGuide = Object.fromEntries(Object.keys(aiJobDetails).map(name=>[name,{credentialType:"법정 필수 면허 없음",requiredCredentials:["대표 직업에 공통으로 요구되는 법정 필수 면허는 확인되지 않았습니다. 채용기관별 직무·경력·학력 요건을 공고에서 다시 확인하세요."],helpfulCredentials:[name==="정보보호전문가"?"정보보안기사·정보처리기사 등은 채용요건과 담당 업무가 맞는지 확인한 뒤 준비":name==="사물 인터넷 전문가"?"정보처리기사·정보통신기사 등은 개발·통신 업무와의 관련성을 확인한 뒤 준비":name==="게임프로그래머"?"정보처리기사·게임프로그래밍 관련 자격은 채용요건과 포트폴리오 요구를 함께 확인":name==="빅 데이터 전문가"?"정보처리기사·빅데이터분석기사 등은 분석 도구·직무 요구와의 관련성을 확인":name==="클라우드 시스템 엔지니어"?"정보처리기사·정보통신기사 등은 운영 환경과 채용요건을 확인": "정보처리기사 등 국가기술자격은 채용요건과 직무 관련성을 확인한 뒤 선택"],credentialSourceUrl:"https://q-net.or.kr/crf005.do?id=crf00503&jmCd=1320",credentialSourceLabel:"Q-Net 국가기술자격 정보"}]));
     Object.entries(aiJobScope).forEach(([fieldId,jobScope])=>{const jobs=jobScope.jobs.map(job=>({...job,...aiJobDetails[job.name],...aiCredentialGuide[job.name]}));aiSoftware[fieldId].jobScope={...jobScope,jobs};aiSoftware[fieldId].jobs=jobs;});
+    Object.entries(aiJobExpansionScope).forEach(([fieldId,scope])=>{aiSoftware[fieldId].nextJobScope=scope;});
 
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
@@ -623,7 +635,7 @@
       setPath("job-path",["청소년",careerCatalog[currentInterestId].label,field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
       renderUniversities(major,majorData.universities);
       const jobs=(majorData.jobs?.length?majorData.jobs:majorJobs[major]||field.jobs||[]);const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(entry=>{const job=typeof entry==="string"?entry:entry.name;const jobData=typeof entry==="string"?{}:entry;const credentialLabel=jobData.credentialType||(jobData.requiredCredentials?"면허·국가자격 필수":"진입조건 확인");const b=document.createElement("button");b.type="button";b.className="item-button";b.innerHTML="<strong>"+job+"</strong><br><small>"+credentialLabel+"</small>";b.addEventListener("click",()=>showResult(job,field,major,b,jobData));target.appendChild(b);});
-      if(!jobs.length){renderJobScope(target,field.jobScope);}
+      if(!jobs.length){renderJobScope(target,field.jobScope);}else{renderNextJobScope(target,field.nextJobScope);}
       refreshPromptEditor(true);
       showStep("job-step");document.getElementById("result-step").classList.remove("show");document.getElementById("job-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
@@ -633,6 +645,13 @@
       if(!scope){box.innerHTML="<strong>학과 연결이 먼저 완료되었습니다.</strong><br>대표 직업과 실제 업무는 다음 검증 작업에서 추가됩니다. 대학별 교육과정은 위 공식 정보 서비스에서 먼저 비교할 수 있습니다.";target.appendChild(box);return;}
       const intro=document.createElement("div");intro.innerHTML="<strong>이번 차수에서 검증한 대표 직업 범위</strong><br>"+scope.intro+" 실제 업무·진입조건·채용기관과 결과 화면 연결은 다음 작업에서 직업별로 추가됩니다.";box.appendChild(intro);
       const list=document.createElement("ul");list.className="job-scope-list";scope.jobs.forEach(job=>{const item=document.createElement("li");const link=document.createElement("a");link.href=job.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent=job.name+" · "+job.sourceLabel+" ↗";item.appendChild(link);list.appendChild(item);});box.appendChild(list);target.appendChild(box);
+    }
+
+    function renderNextJobScope(target,scope){
+      if(!scope)return;
+      const box=document.createElement("div");box.className="empty";
+      const intro=document.createElement("div");intro.innerHTML="<strong>W05-D1 보완 검증 범위</strong><br>"+scope.intro+" 실제 업무·취업기관·자격과 결과 화면 연결은 다음 작업에서 직업별 근거를 확인한 뒤 추가합니다.";box.appendChild(intro);
+      const list=document.createElement("ul");list.className="job-scope-list";scope.jobs.forEach(job=>{const item=document.createElement("li");const link=document.createElement("a");link.href=job.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent=job.name+" · "+job.sourceLabel+" 보기";item.appendChild(link);list.appendChild(item);});box.appendChild(list);target.appendChild(box);
     }
 
     function getUniversities(major,inlineUniversities){
