@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="문해력과 지식을 쌓고, 세상을 여러 관점으로 읽고, 삶의 다음 단계를 준비하는 글과 자료를 찾아보세요.">
+  <meta name="description" content="4번째 계절은 더 깊고 성숙한 삶을 향해 문해력과 지식을 쌓고, 세상을 읽고, 삶의 다음을 준비하는 공간입니다.">
   <link rel="canonical" href="https://4th-season.com/">
-  <title>4th Season | 읽고 이해하고 다음을 준비하는 곳</title>
+  <title>4th Season | 4번째 계절</title>
   <style>
     :root{
       --ink:#18202a;--paper:#f5f1ea;--paper-deep:#ece5dc;--night:#111923;
@@ -19,25 +19,26 @@
     .wrap{width:min(1200px,calc(100% - 44px));margin:auto}
     .skip{position:absolute;left:-9999px}.skip:focus{left:14px;top:14px;z-index:99;padding:10px 14px;background:#fff;color:#111}
 
-    .hero{min-height:760px;position:relative;display:flex;align-items:center;overflow:hidden;color:#fff;background:#17212c}
+    .hero{min-height:800px;position:relative;display:flex;align-items:center;overflow:hidden;color:#fff;background:#17212c}
     .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,12,18,.76) 0%,rgba(7,12,18,.48) 52%,rgba(7,12,18,.36) 100%)}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,12,18,.78) 0%,rgba(7,12,18,.51) 52%,rgba(7,12,18,.37) 100%)}
     .brandbar{position:absolute;z-index:3;top:0;left:0;right:0}
     .nav{height:74px;display:flex;align-items:center;justify-content:space-between;font-family:Arial,sans-serif}
-    .brand{font-size:.95rem;font-weight:800;letter-spacing:.04em}.brand i{font-style:normal;color:#d8c5eb}
+    .brand{font-size:.98rem;font-weight:800;letter-spacing:.05em}
     .nav-link{font-size:.72rem;font-weight:800;letter-spacing:.12em;border-bottom:1px solid rgba(255,255,255,.72);padding-bottom:7px}
-    .hero-inner{position:relative;z-index:2;width:100%;padding:112px 0 62px}
-    .overline{font:800 .72rem Arial,sans-serif;letter-spacing:.18em;color:#dfcff0}
-    .hero h1{max-width:720px;margin:14px 0 14px;font-size:clamp(2.4rem,5vw,4.45rem);line-height:1.1;letter-spacing:-.075em}
-    .hero-intro{max-width:700px;margin:0;color:#f2ede8;font-size:clamp(.98rem,1.6vw,1.12rem);line-height:1.75}
-    .choice-label{margin:34px 0 12px;font:800 .72rem Arial,sans-serif;letter-spacing:.15em;color:#e4d6f0}
+    .hero-inner{position:relative;z-index:2;width:100%;padding:108px 0 52px}
+    .welcome{font-size:.92rem;font-weight:700;color:#eee5f5;letter-spacing:-.02em}
+    .hero h1{max-width:720px;margin:10px 0 12px;font-size:clamp(2.8rem,5.4vw,4.8rem);line-height:1.08;letter-spacing:-.075em}
+    .season-meaning{max-width:790px;margin:0;color:#f4eee8;font-size:clamp(1rem,1.7vw,1.16rem);line-height:1.78}
+    .hero-intro{max-width:720px;margin:12px 0 0;color:#ddd8d3;font-size:.93rem;line-height:1.68}
+    .choice-label{margin:27px 0 11px;font:800 .72rem Arial,sans-serif;letter-spacing:.15em;color:#e4d6f0}
     .hero-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1000px}
-    .hero-choice{position:relative;min-height:146px;padding:24px 54px 22px 22px;border:1px solid rgba(255,255,255,.34);background:rgba(15,22,31,.62);backdrop-filter:blur(8px);transition:.22s ease}
+    .hero-choice{position:relative;min-height:132px;padding:21px 54px 19px 21px;border:1px solid rgba(255,255,255,.34);background:rgba(15,22,31,.62);backdrop-filter:blur(8px);transition:.22s ease}
     .hero-choice:hover,.hero-choice:focus-visible{transform:translateY(-4px);background:rgba(255,255,255,.94);color:#17212b;box-shadow:0 16px 34px rgba(0,0,0,.2);outline:none}
-    .hero-choice small{display:block;margin-bottom:9px;font:800 .66rem Arial,sans-serif;letter-spacing:.13em;color:#d9c4ed}
+    .hero-choice small{display:block;margin-bottom:8px;font:800 .66rem Arial,sans-serif;letter-spacing:.13em;color:#d9c4ed}
     .hero-choice:hover small,.hero-choice:focus-visible small{color:var(--purple)}
     .hero-choice strong{display:block;font-size:clamp(1.22rem,2vw,1.55rem);letter-spacing:-.045em}
-    .hero-choice span{display:block;margin-top:8px;color:#e6e2de;font-size:.85rem;line-height:1.55}
+    .hero-choice span{display:block;margin-top:7px;color:#e6e2de;font-size:.83rem;line-height:1.5}
     .hero-choice:hover span,.hero-choice:focus-visible span{color:#59616a}
     .hero-choice b{position:absolute;right:20px;bottom:20px;font:800 1.1rem Arial,sans-serif}
 
@@ -74,14 +75,14 @@
     footer{padding:36px 0;background:#101720;color:#aeb4b8;text-align:center;font:400 .72rem Arial,sans-serif;letter-spacing:.05em}
 
     @media(max-width:900px){
-      .hero{min-height:720px}.hero-choices{grid-template-columns:1fr}.hero-choice{min-height:100px;padding:18px 48px 17px 18px}
-      .choice-label{margin-top:26px}.intro-grid{grid-template-columns:1fr;gap:20px}.section-head{display:block}.section-head p{margin-top:14px}
+      .hero{min-height:900px}.hero-choices{grid-template-columns:1fr}.hero-choice{min-height:96px;padding:17px 48px 16px 18px}
+      .choice-label{margin-top:24px}.intro-grid{grid-template-columns:1fr;gap:20px}.section-head{display:block}.section-head p{margin-top:14px}
       .cards.three,.cards.six{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:620px){
       .wrap{width:min(100% - 28px,1200px)}.nav{height:62px}.nav-link{display:none}
-      .hero{min-height:700px;align-items:flex-start}.hero-inner{padding:88px 0 34px}.hero h1{font-size:clamp(2.15rem,11vw,3rem);margin-top:10px}.hero-intro{font-size:.92rem;line-height:1.65}
-      .choice-label{margin:20px 0 9px}.hero-choices{gap:8px}.hero-choice{min-height:88px;padding:15px 43px 14px 16px}.hero-choice small{margin-bottom:5px}.hero-choice strong{font-size:1.13rem}.hero-choice span{margin-top:5px;font-size:.76rem}.hero-choice b{right:15px;bottom:15px}
+      .hero{min-height:auto;align-items:flex-start}.hero-inner{padding:88px 0 34px}.welcome{font-size:.82rem}.hero h1{font-size:clamp(2.35rem,12vw,3.25rem);margin:8px 0 9px}.season-meaning{font-size:.92rem;line-height:1.62}.hero-intro{font-size:.82rem;line-height:1.55}
+      .choice-label{margin:18px 0 8px}.hero-choices{gap:8px}.hero-choice{min-height:84px;padding:14px 43px 13px 16px}.hero-choice small{margin-bottom:4px}.hero-choice strong{font-size:1.1rem}.hero-choice span{margin-top:4px;font-size:.74rem}.hero-choice b{right:15px;bottom:15px}
       .intro,.route{padding:60px 0}.cards.three,.cards.six,.cards.two,.guide-grid{grid-template-columns:1fr}.card img{aspect-ratio:1.9/1}.guide{padding:55px 0}
     }
   </style>
@@ -91,11 +92,12 @@
 
   <section class="hero" id="top">
     <img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-have.png" alt="계절의 경계에 놓인 산책길과 창가의 책">
-    <div class="brandbar"><div class="wrap nav"><a class="brand" href="#top">4th Season <i>·</i> 4th-season.com</a><a class="nav-link" href="#main">EXPLORE</a></div></div>
+    <div class="brandbar"><div class="wrap nav"><a class="brand" href="#top">4th Season</a><a class="nav-link" href="#main">EXPLORE</a></div></div>
     <div class="wrap hero-inner">
-      <div class="overline">READ · UNDERSTAND · PLAN</div>
-      <h1>읽고, 이해하고,<br>다음을 준비하는 곳</h1>
-      <p class="hero-intro">찾고 싶은 방향을 선택하면 관련 글과 학습 자료, 생각할 거리와 생활 정보를 한눈에 둘러볼 수 있습니다.</p>
+      <div class="welcome">네 번째 계절에 오신 것을 환영합니다.</div>
+      <h1>4번째 계절</h1>
+      <p class="season-meaning">삶의 성숙 이후 소멸을 기다리는 계절이 아니라, 배움과 성찰을 통해 더 깊고 성숙한 삶을 향해 가는 계절을 뜻합니다.</p>
+      <p class="hero-intro">문해력과 지식을 쌓고, 세상을 읽고, 삶의 다음을 준비할 방향을 선택해 보세요.</p>
       <div class="choice-label">바로 시작하기</div>
       <div class="hero-choices" aria-label="관심 영역 선택">
         <a class="hero-choice" href="#learn"><small>NOTE</small><strong>문해력·지식 쌓기</strong><span>문해력, 수능 국어, 고전과 배움의 자료</span><b>↓</b></a>
@@ -108,7 +110,7 @@
   <main id="main">
     <section class="intro">
       <div class="wrap intro-grid">
-        <div><div class="eyebrow">4TH SEASON</div><h2>필요한 자료를 찾고,<br>관심의 범위를 넓혀 보세요.</h2></div>
+        <div><div class="eyebrow">EXPLORE &amp; DISCOVER</div><h2>필요한 자료를 찾고,<br>관심의 범위를 넓혀 보세요.</h2></div>
         <p>한 가지 주제를 읽다가도 관련된 개념과 다른 관점, 다음에 필요한 자료로 자연스럽게 이어질 수 있도록 구성했습니다.</p>
       </div>
     </section>
