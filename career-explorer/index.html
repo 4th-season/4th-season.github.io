@@ -644,10 +644,10 @@
     function renderUniversities(major,inlineUniversities){
       const target=document.getElementById("university-list");
       const note=document.getElementById("university-note");
-      document.getElementById("adiga-guide").innerHTML="<strong>대학어디가에서 입시정보 확인</strong><br>대학어디가에서 <strong>‘"+major+"’</strong>를 검색하면 대학별 모집단위, 전형방법과 전년도 입시결과를 비교할 수 있습니다.<br><a class=\"reset\" href=\"https://www.adiga.kr/\" target=\"_blank\" rel=\"noopener\">대학어디가 공식 사이트 열기 ↗</a>";
+      document.getElementById("adiga-guide").innerHTML="<strong>대학 공식 학과소개·입시 출처 교차 확인</strong><br>학과소개는 위 대학 공식 페이지에서, 개설·공시 정보는 대학알리미에서, 모집단위·전형·전년도 입시결과는 대학어디가에서 <strong>‘"+major+"’</strong>로 다시 확인하세요.<br><a class=\"reset\" href=\"https://www.academyinfo.go.kr/\" target=\"_blank\" rel=\"noopener noreferrer\">대학알리미 공식 사이트 ↗</a> <a class=\"reset\" href=\"https://www.adiga.kr/\" target=\"_blank\" rel=\"noopener noreferrer\">대학어디가 공식 사이트 ↗</a>";
       const universities=getUniversities(major,inlineUniversities);target.innerHTML="";
       if(universities.length){
-        note.textContent="대표 대학 약 5곳을 표시합니다. ‘직접 연결’과 ‘대학 홈페이지에서 학과명 검색’을 구분했으며, 전체 개설·모집 현황은 대학알리미·대학어디가에서 확인하세요.";
+        note.textContent="대표 대학 약 5곳의 공식 학과소개를 표시합니다. 링크 유형과 기준일을 확인한 뒤, 전체 개설·모집·전형 정보는 대학알리미와 대학어디가에서 교차 확인하세요.";
         universities.forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.style.textDecoration="none";const linkType=item.linkType||"학과소개 직접 연결";a.innerHTML="<strong>"+item.university+"</strong><br><span>"+item.department+" · "+linkType+" ↗</span><br><small>정보 정리 기준일 "+(item.verifiedAt||"2026-07-16")+"</small>";target.appendChild(a);});
       }else{
         note.textContent="이 학과의 대학별 공식 페이지는 검증 후 순차적으로 추가합니다. 현재는 공신력 있는 대학정보 서비스에서 학과명을 검색하세요.";
