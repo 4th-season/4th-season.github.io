@@ -1,0 +1,15 @@
+[
+  {
+    "id": "2026-suneung-reading-01",
+    "year": 2026,
+    "exam": "수능",
+    "form": "odd",
+    "formLabel": "홀수형",
+    "area": "독서",
+    "subarea": "독서론",
+    "questions": "1~3",
+    "title": "독해 능력에 대한 단순 관점",
+    "url": "/csat/reading/2026/suneung/01/",
+    "status": "published"
+  }
+]
