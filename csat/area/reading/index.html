@@ -49,49 +49,23 @@
   <footer><a class="brand" href="/"><b>4S</b><span>4th Season</span></a><p>수능 국어 독서 기출 아카이브</p><a href="/csat/area/">영역별 홈 →</a></footer>
   <script>
     const EXAMS = [
-      {
-        year:2026,
-        exam:'수능',
-        items:[
-          {range:'1～3번',start:'01',title:'독해 능력의 단순 관점',state:'done',href:'/csat/reading/2026/suneung/01/'}
-        ]
-      },
-      {
-        year:2022,
-        exam:'9월 모의평가',
-        items:[
-          {range:'1～3번',start:'01',title:'『서양 미술사』 독서 일지',state:'done',href:'/csat/reading/2022/september/01/'},
-          {range:'4～9번',start:'04',title:'광고와 독점적 경쟁 시장',state:'done',href:'/csat/reading/2022/september/04/'},
-          {range:'10～13번',start:'10',title:'반자유의지 논증',state:'done',href:'/csat/reading/2022/september/10/'},
-          {range:'14～17번',start:'14',title:'다음 독서 지문',state:'next'}
-        ]
-      }
+      {year:2026,exam:'수능',items:[{range:'1～3번',start:'01',title:'독해 능력의 단순 관점',state:'done',href:'/csat/reading/2026/suneung/01/'}]},
+      {year:2022,exam:'9월 모의평가',items:[
+        {range:'1～3번',start:'01',title:'『서양 미술사』 독서 일지',state:'done',href:'/csat/reading/2022/september/01/'},
+        {range:'4～9번',start:'04',title:'광고와 독점적 경쟁 시장',state:'done',href:'/csat/reading/2022/september/04/'},
+        {range:'10～13번',start:'10',title:'반자유의지 논증',state:'done',href:'/csat/reading/2022/september/10/'},
+        {range:'14～17번',start:'14',title:'메타버스 몰입 기술',state:'done',href:'/csat/reading/2022/september/14/'}
+      ]}
     ];
     const stateLabel={done:'완료',next:'다음 작업',waiting:'준비'};
     const list=document.getElementById('yearList');
     for(let year=2026;year>=2010;year--){
       const yearExams=EXAMS.filter(v=>v.year===year);
       const completed=yearExams.reduce((n,e)=>n+e.items.filter(i=>i.state==='done').length,0);
-      const details=document.createElement('details');
-      if(yearExams.length) details.open=true;
-      const summary=document.createElement('summary');
-      summary.innerHTML=`<strong>${year}</strong><span>학년도</span><em>${yearExams.length?'<span class="year-count">완료 '+completed+'개</span>':'연결 준비'}</em><i></i>`;
-      details.appendChild(summary);
+      const details=document.createElement('details');if(yearExams.length) details.open=true;
+      const summary=document.createElement('summary');summary.innerHTML=`<strong>${year}</strong><span>학년도</span><em>${yearExams.length?'<span class="year-count">완료 '+completed+'개</span>':'연결 준비'}</em><i></i>`;details.appendChild(summary);
       const body=document.createElement('div');body.className='subgrid';
-      if(!yearExams.length){body.innerHTML='<div class="empty-year">아직 작업을 시작하지 않은 학년도입니다.</div>'}
-      else{
-        yearExams.forEach(exam=>{
-          const group=document.createElement('section');group.className='exam-group';
-          group.innerHTML=`<div class="exam-head"><h3>${exam.exam}</h3><span>문항 순서대로 진행</span></div>`;
-          const seq=document.createElement('div');seq.className='sequence';
-          exam.items.sort((a,b)=>Number(a.start)-Number(b.start)).forEach(item=>{
-            const el=document.createElement(item.href?'a':'div');el.className='item';if(item.href)el.href=item.href;
-            el.innerHTML=`<span class="range">${item.range}</span><span><strong>${item.title}</strong><small>시작 문항 ${item.start} · 시험지 순서 기준</small></span><span class="status ${item.state}">${stateLabel[item.state]}</span>`;
-            seq.appendChild(el);
-          });
-          group.appendChild(seq);body.appendChild(group);
-        });
-      }
+      if(!yearExams.length){body.innerHTML='<div class="empty-year">아직 작업을 시작하지 않은 학년도입니다.</div>'}else{yearExams.forEach(exam=>{const group=document.createElement('section');group.className='exam-group';group.innerHTML=`<div class="exam-head"><h3>${exam.exam}</h3><span>문항 순서대로 진행</span></div>`;const seq=document.createElement('div');seq.className='sequence';exam.items.sort((a,b)=>Number(a.start)-Number(b.start)).forEach(item=>{const el=document.createElement(item.href?'a':'div');el.className='item';if(item.href)el.href=item.href;el.innerHTML=`<span class="range">${item.range}</span><span><strong>${item.title}</strong><small>시작 문항 ${item.start} · 시험지 순서 기준</small></span><span class="status ${item.state}">${stateLabel[item.state]}</span>`;seq.appendChild(el)});group.appendChild(seq);body.appendChild(group)})}
       details.appendChild(body);list.appendChild(details);
     }
   </script>
