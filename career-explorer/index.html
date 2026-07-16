@@ -11,7 +11,7 @@
     @media(max-width:760px){.hero{padding-top:35px}.profile-grid,.choice-grid,.data-columns,.result-grid{grid-template-columns:1fr}.panel{border-radius:18px}.choice{min-height:auto}}
     .nav-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.nav-button{padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.nav-button:hover{border-color:var(--blue);color:var(--blue)}.career-note,.file-output-status{margin:14px 0 0;color:var(--muted);font-size:13px}.result-card .career-note{color:#cbd9f4}#major-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#major-list .choice{width:100%}.condition-list{display:grid;gap:12px}.condition-card{padding:15px;border:1px solid var(--line);border-radius:14px;background:#f8fbff}.condition-card strong{display:block;margin-bottom:9px;color:var(--navy)}.condition-options{display:flex;flex-wrap:wrap;gap:7px}.condition-option{padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer}.condition-option.is-active{border-color:var(--blue);background:var(--blue);color:#fff;font-weight:800}.prompt-editor{width:100%;min-height:310px;margin-top:10px;padding:15px;border:1px solid var(--line);border-radius:12px;background:#fbfdff;color:var(--ink);font:14px/1.6 Arial,"Noto Sans KR",sans-serif;resize:vertical}.prompt-editor:focus{outline:3px solid rgba(50,104,214,.18);border-color:var(--blue)}@media(max-width:760px){#major-list{grid-template-columns:1fr}.prompt-editor{min-height:380px}}
     @media(max-width:760px){.nav-actions{display:grid;grid-template-columns:1fr}.nav-actions button,.nav-actions a{width:100%;justify-content:center;text-align:center}.source-links{display:grid}.source-links a{overflow-wrap:anywhere}.result-card{border-radius:14px}.wrap{width:min(100% - 20px,1080px)}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step.show{animation:none;opacity:1;transform:none}.choice{transition:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step.show{animation:none;opacity:1;transform:none}.choice{transition:none}}.job-scope-list{margin:12px 0 0;padding-left:20px}.job-scope-list li+li{margin-top:8px}.job-scope-list a{color:#2857af;font-weight:800}
     @media print{.topbar,.hero,#profile-panel,.nav-actions,.footer{display:none!important}.wrap{width:100%}.result-card{background:#fff!important;color:#111!important;padding:0}.result-card h2,.result-card h3,.result-block p,.result-block ul,.result-block ol,.result-card .path li{color:#111!important}.result-block{border:1px solid #bbb;background:#fff}.source-links a{color:#111!important;background:none;padding:0;text-decoration:underline}.result-summary{border:1px solid #bbb}.prompt-editor{min-height:220px;border:1px solid #bbb}}
   </style>
 </head>
@@ -251,9 +251,22 @@
     };
 
     // 공통 데이터 모델: 새 직업군은 fields 안에 분야·학과·직업 데이터만 추가하면 같은 화면 흐름을 사용합니다.
+    // W04-D1: 대표 직업은 분야별 탐색의 출발점으로만 검증한다. 실제 업무·진입조건·결과 화면 데이터는 후속 작업에서 직업별로 추가한다.
+    const aiJobScope = {
+      "ai-ml":{intro:"모델·데이터·알고리즘을 연결하는 AI 개발 직무를 우선 확인합니다.",jobs:[{name:"인공지능 엔지니어",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10117",verifiedAt:"2026-07-16"}]},
+      "data":{intro:"데이터를 수집·분석해 의사결정을 돕는 직무를 우선 확인합니다.",jobs:[{name:"빅 데이터 전문가",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10032",verifiedAt:"2026-07-16"}]},
+      "software":{intro:"운영체제와 시스템 기반 소프트웨어를 개발하는 직무를 우선 확인합니다.",jobs:[{name:"시스템소프트웨어개발자",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=834",verifiedAt:"2026-07-16"}]},
+      "web-mobile":{intro:"모바일 기기에서 사용하는 서비스를 구현하는 직무를 우선 확인합니다.",jobs:[{name:"모바일앱개발자",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10076",verifiedAt:"2026-07-16"}]},
+      "cloud-platform":{intro:"클라우드 환경에서 서비스가 안정적으로 운영되도록 지원하는 직무를 우선 확인합니다.",jobs:[{name:"클라우드 시스템 엔지니어",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10031",verifiedAt:"2026-07-16"}]},
+      "security":{intro:"정보시스템의 침해를 예방·대응하는 직무를 우선 확인합니다.",jobs:[{name:"정보보호전문가",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=435",verifiedAt:"2026-07-16"}]},
+      "game-content":{intro:"게임의 규칙과 상호작용을 코드로 구현하는 직무를 우선 확인합니다.",jobs:[{name:"게임프로그래머",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cnet/epub/pdfEpub/2012%20%ED%8A%B9%EC%88%98%EA%B5%90%EC%9C%A1%EB%8C%80%EC%83%81%ED%95%99%EC%83%9D%EC%9D%84%EC%9C%84%ED%95%9C%20%EC%A7%84%EB%A1%9C%EC%A0%95%EB%B3%B4-%EC%A7%81%EC%97%85%ED%8E%B8.pdf",verifiedAt:"2026-07-16"}]},
+      "embedded-iot":{intro:"사물과 공간을 인터넷으로 연결해 서비스를 만드는 직무를 우선 확인합니다.",jobs:[{name:"사물 인터넷 전문가",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10035",verifiedAt:"2026-07-16"}]}
+    };
+    Object.entries(aiJobScope).forEach(([fieldId,jobScope])=>{aiSoftware[fieldId].jobScope=jobScope;});
+
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
-    careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"fields-ready",fields:aiSoftware};
+    careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"job-scope-ready",fields:aiSoftware};
     /* 확장 데이터 형식
       careerCatalog[직업군ID].fields[분야ID] = {
         label, desc,
@@ -599,9 +612,16 @@
       setPath("job-path",["청소년",careerCatalog[currentInterestId].label,field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
       renderUniversities(major,majorData.universities);
       const jobs=majorData.jobs||majorJobs[major]||field.jobs||[];const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(entry=>{const job=typeof entry==="string"?entry:entry.name;const jobData=typeof entry==="string"?{}:entry;const credentialLabel=jobData.credentialType||(jobData.requiredCredentials?"면허·국가자격 필수":"진입조건 확인");const b=document.createElement("button");b.type="button";b.className="item-button";b.innerHTML="<strong>"+job+"</strong><br><small>"+credentialLabel+"</small>";b.addEventListener("click",()=>showResult(job,field,major,b,jobData));target.appendChild(b);});
-      if(!jobs.length){const box=document.createElement("div");box.className="empty";box.innerHTML="<strong>학과 연결이 먼저 완료되었습니다.</strong><br>대표 직업과 실제 업무는 다음 검증 작업에서 추가됩니다. 대학별 교육과정은 위 공식 정보 서비스에서 먼저 비교할 수 있습니다.";target.appendChild(box);}
+      if(!jobs.length){renderJobScope(target,field.jobScope);}
       refreshPromptEditor(true);
       showStep("job-step");document.getElementById("result-step").classList.remove("show");document.getElementById("job-step").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+
+    function renderJobScope(target,scope){
+      const box=document.createElement("div");box.className="empty";
+      if(!scope){box.innerHTML="<strong>학과 연결이 먼저 완료되었습니다.</strong><br>대표 직업과 실제 업무는 다음 검증 작업에서 추가됩니다. 대학별 교육과정은 위 공식 정보 서비스에서 먼저 비교할 수 있습니다.";target.appendChild(box);return;}
+      const intro=document.createElement("div");intro.innerHTML="<strong>이번 차수에서 검증한 대표 직업 범위</strong><br>"+scope.intro+" 실제 업무·진입조건·채용기관과 결과 화면 연결은 다음 작업에서 직업별로 추가됩니다.";box.appendChild(intro);
+      const list=document.createElement("ul");list.className="job-scope-list";scope.jobs.forEach(job=>{const item=document.createElement("li");const link=document.createElement("a");link.href=job.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent=job.name+" · "+job.sourceLabel+" ↗";item.appendChild(link);list.appendChild(item);});box.appendChild(list);target.appendChild(box);
     }
 
     function getUniversities(major,inlineUniversities){
