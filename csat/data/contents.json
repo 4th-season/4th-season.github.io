@@ -11,5 +11,18 @@
     "title": "독해 능력에 대한 단순 관점",
     "url": "/csat/reading/2026/suneung/01/",
     "status": "published"
+  },
+  {
+    "id": "2022-september-reading-01",
+    "year": 2022,
+    "exam": "9월 모의평가",
+    "form": "language-media",
+    "formLabel": "언어와 매체",
+    "area": "독서",
+    "subarea": "독서론",
+    "questions": "1~3",
+    "title": "『서양 미술사』 독서 일지",
+    "url": "/csat/reading/2022/september/01/",
+    "status": "published"
   }
 ]
