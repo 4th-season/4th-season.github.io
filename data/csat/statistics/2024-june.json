@@ -1,0 +1,23 @@
+{
+  "school_year": 2024,
+  "exam": "6월 모의평가",
+  "source": "user-provided item statistics",
+  "scope": "오답률 상위 15문항",
+  "items": [
+    {"rank":1,"question":14,"error_rate":63.6,"score":2,"answer":"①","correct_rate":36.4,"choice_rates":{"①":36.4,"②":12.8,"③":16.4,"④":20.3,"⑤":14.1}},
+    {"rank":2,"question":33,"error_rate":63.2,"score":3,"answer":"⑤","correct_rate":36.8,"choice_rates":{"①":18.1,"②":3.8,"③":28.2,"④":13.1,"⑤":36.8}},
+    {"rank":3,"question":9,"error_rate":59.8,"score":2,"answer":"①","correct_rate":40.2,"choice_rates":{"①":40.2,"②":8.6,"③":28.2,"④":15.9,"⑤":7.0}},
+    {"rank":4,"question":24,"error_rate":58.9,"score":2,"answer":"①","correct_rate":41.1,"choice_rates":{"①":41.1,"②":15.7,"③":19.3,"④":15.6,"⑤":8.3}},
+    {"rank":5,"question":37,"error_rate":54.3,"score":2,"answer":"②","correct_rate":45.7,"choice_rates":{"①":8.3,"②":45.7,"③":25.1,"④":12.5,"⑤":8.3}},
+    {"rank":6,"question":18,"error_rate":53.5,"score":2,"answer":"①","correct_rate":46.5,"choice_rates":{"①":46.5,"②":11.3,"③":27.3,"④":9.1,"⑤":5.7}},
+    {"rank":7,"question":30,"error_rate":51.7,"score":3,"answer":"②","correct_rate":48.3,"choice_rates":{"①":7.8,"②":48.3,"③":15.2,"④":19.4,"⑤":9.2}},
+    {"rank":8,"question":36,"error_rate":45.3,"score":3,"answer":"⑤","correct_rate":54.7,"choice_rates":{"①":12.1,"②":9.6,"③":10.3,"④":13.4,"⑤":54.7}},
+    {"rank":9,"question":10,"error_rate":43.5,"score":3,"answer":"④","correct_rate":56.5,"choice_rates":{"①":4.4,"②":6.6,"③":22.0,"④":56.5,"⑤":10.5}},
+    {"rank":10,"question":35,"error_rate":43.4,"score":2,"answer":"③","correct_rate":56.6,"choice_rates":{"①":5.7,"②":20.5,"③":56.6,"④":9.5,"⑤":7.7}},
+    {"rank":11,"question":16,"error_rate":42.7,"score":3,"answer":"③","correct_rate":57.3,"choice_rates":{"①":7.2,"②":8.8,"③":57.3,"④":17.0,"⑤":9.7}},
+    {"rank":12,"question":27,"error_rate":42.6,"score":2,"answer":"⑤","correct_rate":57.4,"choice_rates":{"①":5.3,"②":17.2,"③":10.7,"④":9.3,"⑤":57.4}},
+    {"rank":13,"question":42,"error_rate":42.5,"score":3,"answer":"⑤","correct_rate":57.5,"choice_rates":{"①":11.1,"②":3.8,"③":12.0,"④":15.6,"⑤":57.5}},
+    {"rank":14,"question":34,"error_rate":40.1,"score":2,"answer":"③","correct_rate":59.9,"choice_rates":{"①":6.6,"②":9.5,"③":59.9,"④":13.8,"⑤":10.2}},
+    {"rank":15,"question":13,"error_rate":40.0,"score":2,"answer":"③","correct_rate":60.0,"choice_rates":{"①":7.6,"②":6.0,"③":60.0,"④":14.6,"⑤":11.9}}
+  ]
+}
