@@ -1,1002 +1,114 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>2026 수능 국어 독서 해설 | 1차 문해력 파일럿</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026학년도 수능 국어 독서 1~3번 | 홀수형 문해력 학습</title>
+<meta name="description" content="2026학년도 수능 국어 홀수형 독서 1~3번을 종이 문제지와 함께 문단 구조, 의미 연결, 선택지 판단과 채점 후 해설 방식으로 학습합니다.">
+<link rel="canonical" href="https://4th-season.com/csat/reading/2026/suneung/01/">
 <style>
-    :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --line: #d8dee8;
-      --primary: #274c77;
-      --primary-soft: #eef4fb;
-      --accent: #d97706;
-      --success: #1f7a5a;
-      --shadow: 0 8px 28px rgba(31, 41, 55, 0.08);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Arial, sans-serif;
-      line-height: 1.75;
-      word-break: keep-all;
-    }
-
-    a { color: inherit; }
-
-    .page {
-      width: min(860px, calc(100% - 28px));
-      margin: 32px auto 72px;
-    }
-
-    .hero,
-    .section,
-    .notice,
-    details {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero {
-      padding: 34px 28px;
-      margin-bottom: 20px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(28px, 5vw, 42px);
-      line-height: 1.25;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitle {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    button {
-      appearance: none;
-      border: 0;
-      border-radius: 12px;
-      padding: 12px 16px;
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform .15s ease, opacity .15s ease, background .15s ease;
-    }
-
-    button:active { transform: translateY(1px); }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: #eef1f5;
-      color: var(--text);
-    }
-
-    .section,
-    .notice {
-      padding: 24px;
-      margin: 18px 0;
-    }
-
-    .notice {
-      border-left: 6px solid var(--accent);
-    }
-
-    .notice strong { color: #9a4f03; }
-
-    h2 {
-      margin: 0 0 12px;
-      color: var(--primary);
-      font-size: 24px;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      margin: 26px 0 10px;
-      font-size: 18px;
-      color: var(--primary);
-    }
-
-    p { margin: 10px 0; }
-
-    ul, ol {
-      margin: 10px 0 0;
-      padding-left: 22px;
-    }
-
-    .checklist {
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .check-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 12px 14px;
-      background: #f8fafc;
-      border: 1px solid #e5eaf0;
-      border-radius: 12px;
-    }
-
-    .check-item input {
-      width: 18px;
-      height: 18px;
-      margin-top: 4px;
-    }
-
-    details {
-      margin: 16px 0;
-      overflow: hidden;
-    }
-
-    summary {
-      position: relative;
-      padding: 18px 58px 18px 20px;
-      background: linear-gradient(180deg, #f8fbff, #f1f6fc);
-      color: var(--primary);
-      font-weight: 800;
-      cursor: pointer;
-      list-style: none;
-      user-select: none;
-    }
-
-    summary::-webkit-details-marker { display: none; }
-
-    summary::after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      font-size: 24px;
-      font-weight: 400;
-    }
-
-    details[open] summary::after { content: "−"; }
-
-    .detail-body {
-      padding: 22px 20px 24px;
-      border-top: 1px solid var(--line);
-    }
-
-    .guide {
-      margin: 0 0 14px;
-      padding: 12px 14px;
-      border-left: 4px solid var(--primary);
-      background: var(--primary-soft);
-      font-weight: 800;
-    }
-
-    blockquote {
-      margin: 14px 0 20px;
-      padding: 16px 18px;
-      border: 1px solid #dce3ed;
-      border-radius: 12px;
-      background: #fbfcfe;
-      font-weight: 700;
-    }
-
-    .source-note {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .note-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .note-links a {
-      display: inline-flex;
-      padding: 8px 11px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: var(--primary);
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 14px 0;
-      font-size: 15px;
-    }
-
-    th, td {
-      padding: 12px 10px;
-      border: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f3f6fa;
-      color: var(--primary);
-    }
-
-    .flow {
-      margin: 16px 0;
-      padding: 18px;
-      border-radius: 14px;
-      background: #111827;
-      color: #f9fafb;
-      white-space: pre-wrap;
-      overflow-x: auto;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      line-height: 1.65;
-    }
-
-    .voice-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin: 12px 0 4px;
-    }
-
-    .voice-status {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #ecfdf5;
-      color: var(--success);
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .footer {
-      margin-top: 28px;
-      padding: 22px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 640px) {
-      .page { width: min(100% - 18px, 860px); margin-top: 12px; }
-      .hero, .section, .notice { padding: 20px 17px; border-radius: 14px; }
-      summary { padding: 16px 52px 16px 16px; }
-      .detail-body { padding: 18px 15px 20px; }
-      table { display: block; overflow-x: auto; white-space: nowrap; }
-      .toolbar button { width: 100%; }
-    }
-
-
-    /* 어휘 말풍선 */
-    .word-tip { position:relative; display:inline; padding:0 2px; border:0; border-bottom:2px dotted #6b84a3; border-radius:0; background:transparent; color:inherit; font:inherit; font-weight:800; cursor:pointer; }
-    .word-tip::after { content:attr(data-tip); position:absolute; left:50%; bottom:calc(100% + 11px); z-index:200; width:max-content; max-width:270px; padding:10px 12px; border-radius:10px; background:#1f3550; color:#fff; font-size:13px; font-weight:500; line-height:1.55; text-align:left; box-shadow:0 8px 24px rgba(0,0,0,.2); transform:translateX(-50%) translateY(4px); opacity:0; visibility:hidden; pointer-events:none; transition:.16s ease; }
-    .word-tip::before { content:""; position:absolute; left:50%; bottom:calc(100% + 4px); border:7px solid transparent; border-top-color:#1f3550; transform:translateX(-50%); opacity:0; visibility:hidden; }
-    .word-tip.is-open::after,.word-tip.is-open::before { opacity:1; visibility:visible; }
-    .word-tip.is-open::after { transform:translateX(-50%) translateY(0); }
-    .concept-link { color:#174f82; font-weight:800; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; }
-    .concept-link::after { content:" ↗"; font-size:.78em; }
-    .solution-links { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:20px 0; }
-    .solution-card { padding:17px; border:1px solid #dce3eb; border-radius:14px; background:#fff; }
-    .solution-card.knowledge { border-top:4px solid #7357a6; }
-    .solution-card.skill { border-top:4px solid #2f7c69; }
-    .solution-label { display:inline-block; margin-bottom:7px; padding:4px 9px; border-radius:999px; background:#f1f3f7; color:#475467; font-size:12px; font-weight:800; }
-    .solution-card h4 { margin:0 0 7px; font-size:17px; }
-    .solution-card p { margin:0 0 10px; color:#4b5563; }
-    .solution-card a { color:#245d92; font-weight:800; text-decoration:none; }
-    .solution-card a:hover { text-decoration:underline; }
-    .link-note { margin-top:8px; color:#6b7280; font-size:13px; }
-    @media (max-width:640px){ .solution-links{grid-template-columns:1fr;} .word-tip::after{width:220px;max-width:72vw;} }
-
-
-    /* 문항 통계·선택지 분석 */
-    .question-head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .answer-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: #ecfdf5;
-      color: #166534;
-      font-weight: 900;
-    }
-    .question-stats {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin: 14px 0 8px;
-    }
-    .stat-card {
-      min-height: 92px;
-      padding: 13px;
-      border: 1px solid #dde4ed;
-      border-radius: 13px;
-      background: #f8fafc;
-    }
-    .stat-card span {
-      display: block;
-      margin-bottom: 5px;
-      color: #667085;
-      font-size: 12px;
-      font-weight: 800;
-    }
-    .stat-card strong {
-      color: #183b60;
-      font-size: 18px;
-    }
-    .checking {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #8a5b08 !important;
-      font-size: 14px !important;
-    }
-    .checking::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #d99a22;
-    }
-    .stats-source {
-      margin: 8px 0 18px;
-      padding: 11px 13px;
-      border-radius: 10px;
-      background: #fff8e8;
-      color: #79550d;
-      font-size: 13px;
-    }
-    .choice-table td:first-child {
-      width: 78px;
-      white-space: nowrap;
-      font-weight: 900;
-      text-align: center;
-    }
-    .choice-table td:nth-child(2),
-    .choice-table th:nth-child(2) {
-      width: 104px;
-      text-align: center;
-      white-space: nowrap;
-    }
-    .choice-correct { color: #147a55; }
-    .choice-wrong { color: #b14b41; }
-    .diagnosis-box,
-    .strategy-box {
-      margin: 15px 0;
-      padding: 16px 17px;
-      border-radius: 13px;
-    }
-    .diagnosis-box {
-      border-left: 5px solid #c07a12;
-      background: #fff8ec;
-    }
-    .strategy-box {
-      border-left: 5px solid #287a68;
-      background: #effaf6;
-    }
-    .diagnosis-box h3,
-    .strategy-box h3 { margin-top: 0; }
-    .mini-steps {
-      counter-reset: csatstep;
-      list-style: none;
-      padding: 0;
-    }
-    .mini-steps li {
-      position: relative;
-      margin: 9px 0;
-      padding-left: 34px;
-    }
-    .mini-steps li::before {
-      counter-increment: csatstep;
-      content: counter(csatstep);
-      position: absolute;
-      left: 0;
-      top: 2px;
-      display: inline-grid;
-      place-items: center;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: #287a68;
-      color: #fff;
-      font-size: 12px;
-      font-weight: 900;
-    }
-    .answer-choice {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0;
-    }
-    .answer-choice button {
-      min-width: 48px;
-      padding: 9px 12px;
-      border: 1px solid #cad4df;
-      background: #fff;
-      color: #26384a;
-    }
-    .answer-choice button.selected {
-      border-color: #274c77;
-      background: #274c77;
-      color: #fff;
-    }
-    .grade-result {
-      min-height: 26px;
-      margin: 8px 0 2px;
-      font-weight: 800;
-    }
-    @media (max-width: 700px) {
-      .question-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-  
-    /* 채점 전에는 정답·통계·선택지 해설을 노출하지 않음 */
-    .post-grade[hidden] { display: none !important; }
-    .answer-badge[hidden] { display: none !important; }
-    .grade-result { min-height: 1.8em; font-weight: 800; }
-    .post-grade { margin-top: 18px; }
-    .post-grade.revealed { animation: revealAnswer .24s ease; }
-    @keyframes revealAnswer {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* 선택 번호와 채점 버튼을 명확히 구분 */
-    .answer-choice button[data-choice] {
-      background: #ffffff;
-      color: #26384a;
-      border: 2px solid #cad4df;
-    }
-    .answer-choice button[data-choice]:hover {
-      border-color: #2f7c69;
-      background: #effaf6;
-    }
-    .answer-choice button[data-choice].selected {
-      border-color: #1f7a5a;
-      background: #1f7a5a;
-      color: #ffffff;
-      box-shadow: 0 0 0 3px rgba(31,122,90,.16);
-      transform: translateY(-1px);
-    }
-    .answer-choice .grade-choice {
-      background: #d97706 !important;
-      color: #ffffff !important;
-      border: 2px solid #b75f04 !important;
-      min-width: 110px;
-    }
-    .answer-choice .grade-choice:hover {
-      background: #b75f04 !important;
-    }
-
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#667085;--line:#d8dee8;--primary:#274c77;--soft:#eef4fb;--hover:#dcecff;--accent:#d97706;--ok:#147a55;--bad:#b14b41;--shadow:0 8px 28px rgba(31,41,55,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.75;word-break:keep-all}.page{width:min(880px,calc(100% - 24px));margin:24px auto 72px}a{color:#245d92}.hero,.section,details{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.hero,.section{padding:26px;margin:16px 0}.crumb{font-size:14px;color:var(--muted);margin-bottom:12px}.tag{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--soft);color:var(--primary);font-size:13px;font-weight:800}h1{margin:10px 0;font-size:clamp(28px,5vw,42px);line-height:1.25}h2{margin:0 0 12px;color:var(--primary)}h3{margin:22px 0 8px;color:var(--primary)}p{margin:10px 0}.muted{color:var(--muted)}.notice{padding:14px;border-left:5px solid var(--accent);background:#fff8e8;border-radius:10px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}button{border:0;border-radius:11px;padding:10px 14px;font:inherit;font-weight:800;cursor:pointer;transition:background .15s,border-color .15s,color .15s,transform .15s}.btn-primary{background:var(--primary);color:#fff}.btn-secondary{background:#eef1f5;color:var(--text)}.btn-secondary:hover{background:#dde4ec}.checklist{display:grid;gap:9px;margin-top:14px}.check-item{display:flex;gap:10px;padding:12px 14px;background:#f8fafc;border:1px solid #e5eaf0;border-radius:12px}.check-item input{width:18px;height:18px;margin-top:4px}details{margin:15px 0;overflow:hidden}summary{position:relative;padding:18px 55px 18px 20px;background:linear-gradient(#f9fbff,#eef4fb);color:var(--primary);font-weight:900;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:400}details[open] summary:after{content:"−"}.detail-body{padding:20px;border-top:1px solid var(--line)}.guide{padding:13px 15px;border-left:4px solid var(--primary);background:var(--soft);font-weight:900}.flow{margin:14px 0;padding:17px;border-radius:13px;background:#172235;color:#fff;white-space:pre-wrap;line-height:1.7}.relation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:14px 0}.relation-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:#fafcff}.relation-card strong{display:block;margin-bottom:5px;color:var(--primary)}table{width:100%;border-collapse:collapse;margin:14px 0}th,td{padding:11px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f3f6fa;color:var(--primary)}.note-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.note-links a{padding:8px 11px;border-radius:999px;background:var(--soft);font-weight:800;text-decoration:none}.answer-choice{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.answer-choice button[data-choice]{min-width:48px;border:1px solid #b8c9da;background:var(--soft);color:var(--primary)}.answer-choice button[data-choice]:hover,.answer-choice button[data-choice]:focus-visible{background:var(--hover);border-color:#6f91b3;color:#174f82;transform:translateY(-1px)}.answer-choice button[data-choice].selected{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 0 0 3px rgba(39,76,119,.16)}.grade-choice{background:var(--accent);border:1px solid #b45309;color:#fff}.grade-choice:hover,.grade-choice:focus-visible{background:#b45309}.grade-result{min-height:28px;font-weight:900}.post-grade[hidden],.answer-badge[hidden]{display:none!important}.question-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}.answer-badge{padding:7px 11px;border-radius:999px;background:#ecfdf5;color:#166534;font-weight:900}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:14px 0}.stat{padding:12px;border:1px solid var(--line);border-radius:11px;background:#f8fafc}.stat span{display:block;color:var(--muted);font-size:12px;font-weight:800}.checking{color:#8a5b08}.choice-table td:first-child{width:72px;text-align:center;font-weight:900}.correct{color:var(--ok)}.wrong{color:var(--bad)}.box{padding:15px;margin:14px 0;border-radius:12px;background:#f8fafc;border:1px solid var(--line)}.footer{text-align:center;color:var(--muted);padding:22px}.word-tip{position:relative;display:inline;padding:0 2px;border:0;border-bottom:2px dotted #6b84a3;border-radius:0;background:transparent;color:inherit;font:inherit;font-weight:800}.word-tip:after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);z-index:10;width:max-content;max-width:260px;padding:9px 11px;border-radius:9px;background:#1f3550;color:#fff;font-size:13px;font-weight:500;transform:translateX(-50%);opacity:0;visibility:hidden}.word-tip.is-open:after{opacity:1;visibility:visible}@media(max-width:650px){.hero,.section{padding:18px}.stats{grid-template-columns:repeat(2,1fr)}table{display:block;overflow:auto}.toolbar button,.grade-choice{width:100%}}
 </style>
 </head>
 <body>
 <main class="page">
+<nav class="crumb"><a href="/csat/">수능 국어</a> › <a href="/csat/area/reading/">독서</a> › <a href="/csat/year/2026/">2026학년도</a> › 수능 1~3번</nav>
 <header class="hero">
-<div class="eyebrow">수능 국어 기출 해설 · 1차 문해력 파일럿</div>
-<h1>2026학년도 수능 국어 독서<br/>‘독해 능력의 단순 관점’</h1>
-<p class="subtitle">종이 문제지를 옆에 두고, 어디에 줄을 긋고 무엇을 확인했어야 하는지 점검하는 해설입니다.</p>
-<div class="toolbar">
-<button class="btn-primary" id="openAll">모든 해설 펼치기</button>
-<button class="btn-secondary" id="closeAll">모든 해설 접기</button>
-<button class="btn-secondary" id="toggleVoice">음성 안내 켜기</button>
-</div>
-<p class="voice-status" id="voiceStatus">읽기에 집중하도록 음성 지시는 기본적으로 꺼져 있습니다.</p>
+<span class="tag">2026학년도 수능 · 국어 홀수형 · 독서 1~3번</span>
+<h1>독해 능력의 단순 관점</h1>
+<p class="muted">종이 문제지를 옆에 두고, 각 문단의 중심문장과 문장 사이의 의미 연결을 확인한 뒤 문항을 채점하는 보조 학습 페이지입니다.</p>
+<div class="toolbar"><button class="btn-primary" id="openAll">모든 해설 펼치기</button><button class="btn-secondary" id="closeAll">모든 해설 접기</button><button class="btn-secondary" id="toggleVoice">음성 안내 켜기</button></div>
+<p class="muted" id="voiceStatus">해설은 기본적으로 모두 접혀 있습니다. 필요한 부분만 펼쳐 확인하세요.</p>
 </header>
-<section class="notice">
-<strong>이 페이지에서 문제를 풀지 않습니다.</strong>
-<p>2026학년도 수능 국어 문제지 1쪽을 책상 위에 펼쳐 놓고 1～3번을 먼저 푼 뒤, 아래 해설을 순서대로 확인하세요.</p>
-</section>
+<section class="notice"><strong>이 페이지에서 문제를 처음 푸는 것이 아닙니다.</strong><p>2026학년도 수능 국어 홀수형 문제지의 1~3번을 먼저 풀고, 아래 안내에 따라 종이 문제지에 표시한 뒤 해설을 확인하세요.</p></section>
 <section class="section">
-<h2>먼저 직접 표시해 보세요</h2>
+<h2>종이 문제지에 먼저 표시해 보세요</h2>
+<p>아래 항목은 이 화면이 아니라 <strong>옆에 펼쳐 둔 종이 문제지의 지문</strong>에 직접 표시합니다.</p>
 <div class="checklist">
-<label class="check-item"><input type="checkbox"/> 독해 능력을 구성하는 두 요소에 동그라미</label>
-<label class="check-item"><input type="checkbox"/> 두 요소의 발달 관계에 밑줄</label>
-<label class="check-item"><input type="checkbox"/> 네 독자 유형을 나누는 기준에 네모</label>
-<label class="check-item"><input type="checkbox"/> 이론의 한계와 의의에 서로 다른 표시</label>
+<label class="check-item"><input type="checkbox"> 독해 능력을 구성하는 두 요소에 동그라미</label>
+<label class="check-item"><input type="checkbox"> 두 요소가 발달하는 순서와 상호 영향에 밑줄</label>
+<label class="check-item"><input type="checkbox"> 네 독자 유형을 나누는 두 기준에 네모</label>
+<label class="check-item"><input type="checkbox"> 이론의 한계와 의의에 서로 다른 표시</label>
 </div>
 </section>
 <section class="section">
-<span class="tag">1문단</span>
-<h2>독해 능력을 어떻게 설명하는가</h2>
-<p>1문단을 다시 읽고, <button class="word-tip" data-tip="대상을 바라보고 설명하는 방식" type="button">단순 관점</button>이 독해 능력을 무엇과 무엇으로 설명하는지 보여 주는 문장에 줄을 그어 보세요.</p>
-<details open data-voice="다음 문장을 찾아 줄을 치세요.">
-<summary>1문단 핵심 확인하기</summary>
-<div class="detail-body">
-<div class="voice-row">
-<button class="btn-secondary speak">🔊 음성 지시 듣기</button>
-<span class="voice-status">다음 문장을 찾아 줄을 치세요.</span>
-</div>
-<p class="guide">다음 문구가 포함된 문장을 문제지에서 찾으세요.</p>
-<blockquote>“해독과 언어 이해로 단순화하여 설명한다.”</blockquote>
-<h3>왜 이 문장인가?</h3>
-<p>이 문장은 글 전체에서 다루는 이론의 기본 틀을 제시합니다. 이후의 설명은 <a class="concept-link" href="notes/해독과-언어이해.html">해독과 언어 이해</a>가 무엇인지, 두 요소가 어떻게 발달하는지, 그 조합에 따라 독자를 어떻게 구분하는지를 밝히는 방향으로 이어집니다.</p>
-<h3>문단 안에서 구분할 것</h3>
-<table>
-<thead><tr><th>내용</th><th>역할</th></tr></thead>
-<tbody>
-<tr><td>독해에 영향을 주는 요소가 다양함</td><td>문제 상황 제시</td></tr>
-<tr><td>단순 관점 소개</td><td>중심 이론 제시</td></tr>
-<tr><td>해독의 뜻</td><td>첫 번째 구성 요소 정의</td></tr>
-<tr><td>언어 이해의 뜻</td><td>두 번째 구성 요소 정의</td></tr>
-</tbody>
-</table>
-<h3>이 문단의 역할</h3>
-<p><strong>핵심 개념 소개와 <button class="word-tip" data-tip="전체를 이루는 각각의 부분" type="button">구성 요소</button> 정의</strong></p>
-<h3>연결할 Note</h3>
-<div class="note-links">
-<a href="https://gugeoro.tistory.com/68" rel="noopener" target="_blank">중심문장·핵심어 찾기</a>
-<a href="notes/정의와-구성요소.html">정의와 구성 요소 구분</a>
-<a href="notes/해독과-언어이해.html">해독과 언어 이해</a>
-</div>
-</div>
-</details>
+<span class="tag">1문단</span><h2>독해 능력을 무엇으로 나누어 설명하는가</h2>
+<p>종이 문제지에서 독해 능력을 두 요소로 나누어 설명한 문장을 먼저 찾아보세요.</p>
+<details data-voice="독해 능력을 두 요소로 나누어 설명한 중심 문장을 확인하세요."><summary>1문단 해설 펼치기</summary><div class="detail-body">
+<p class="guide">중심문장: 독해 능력을 해독과 언어 이해로 단순화하여 설명한다.</p>
+<h3>쉽게 말하면</h3><p>독해에는 여러 능력이 관여하지만, 이 글은 먼저 두 갈래로 나눕니다. <strong>해독</strong>은 글자를 정확히 읽는 능력이고, <strong>언어 이해</strong>는 읽거나 들은 말의 뜻을 이해하는 능력입니다.</p>
+<h3>앞뒤 문장은 어떻게 이어지는가</h3>
+<div class="flow">독해에 영향을 주는 요소는 많다
+        ↓ 그래서
+설명을 단순하게 정리할 필요가 있다
+        ↓ 그 방법으로
+독해 능력을 ‘해독 + 언어 이해’로 나눈다
+        ↓ 이어서
+두 요소의 뜻을 각각 설명한다</div>
+<div class="relation-grid"><div class="relation-card"><strong>첫 문장 역할</strong>독해가 여러 요소의 영향을 받는다는 문제 상황을 제시합니다.</div><div class="relation-card"><strong>중심문장 역할</strong>이 글이 사용할 설명 틀을 제시합니다.</div><div class="relation-card"><strong>뒤 문장 역할</strong>해독과 언어 이해의 뜻을 각각 풀어 줍니다.</div></div>
+<h3>문단 구조 한 줄 정리</h3><p><strong>문제 제시 → 이론 소개 → 두 구성 요소 정의</strong></p>
+<h3>문제 풀이에 쓰는 방법</h3><p>선택지가 해독과 언어 이해를 서로 바꾸거나, 한 요소의 특징을 독해 전체의 특징처럼 넓히는지 확인합니다.</p>
+<div class="note-links"><a href="notes/정의와-구성요소.html">정의와 구성 요소</a><a href="notes/해독과-언어이해.html">해독과 언어 이해</a></div>
+</div></details>
 </section>
 <section class="section">
-<span class="tag">2문단</span>
-<h2>두 능력은 언제 발달하는가</h2>
-<p>두 능력의 발달 순서와 <button class="word-tip" data-tip="둘 이상의 요소가 서로 영향을 주고받는 것" type="button">상호 작용</button>을 보여 주는 부분을 찾아 표시해 보세요.</p>
-<details open data-voice="다음 내용을 설명하는 부분을 찾아보세요.">
-<summary>2문단 핵심 확인하기</summary>
-<div class="detail-body">
-<div class="voice-row">
-<button class="btn-secondary speak">🔊 음성 지시 듣기</button>
-<span class="voice-status">다음 내용을 설명하는 부분을 찾아보세요.</span>
-</div>
-<p class="guide">문제지에서 다음 내용을 설명하는 부분을 찾으세요.</p>
-<blockquote>해독이 충분히 발달하기 전에도 언어 이해는 발달할 수 있다.</blockquote>
-<p class="source-note">※ 위 문장은 문제지의 내용을 학습용으로 풀어 쓴 표현입니다.</p>
-<h3>이 문단에서 반드시 구분할 것</h3>
-<ul>
-<li>글자를 읽는 능력에는 문자와 소리에 대한 학습이 필요함</li>
-<li>글자를 아직 읽지 못해도 말을 듣고 내용을 이해할 수 있음</li>
-<li>해독이 발달하기 전에도 구어 의사소통을 통해 언어 이해가 발달함</li>
-<li>해독이 발달한 뒤에는 읽기 경험이 언어 이해를 다시 높일 수 있음</li>
-</ul>
-<div class="flow">구어 의사소통 경험
+<span class="tag">2문단</span><h2>두 능력은 어떤 순서와 관계로 발달하는가</h2>
+<p>해독이 충분히 발달하기 전에도 언어 이해가 발달할 수 있다는 부분과, 이후 읽기 경험이 언어 이해에 영향을 주는 부분을 찾아보세요.</p>
+<details data-voice="두 능력의 발달 순서와 서로 영향을 주는 관계를 확인하세요."><summary>2문단 해설 펼치기</summary><div class="detail-body">
+<p class="guide">중심내용: 글자를 읽지 못하는 시기에도 말로 소통하면서 언어 이해는 발달할 수 있다.</p>
+<h3>쉽게 말하면</h3><p>아이는 글자를 배우기 전에도 말을 듣고 뜻을 이해합니다. 이후 해독이 발달하면 책을 읽는 경험이 늘고, 그 경험이 다시 언어 이해를 넓힐 수 있습니다.</p>
+<h3>의미 연결 관계</h3>
+<div class="flow">말을 듣고 대화함
         ↓
-언어 이해 발달
+언어 이해가 먼저 자랄 수 있음
         ↓
-해독 발달
+문자와 소리를 배우며 해독이 발달함
         ↓
-읽기 경험 증가
+읽을 수 있는 글이 많아짐
         ↓
-언어 이해의 추가 발달</div>
-<h3>주의할 점</h3>
-<p>이 흐름을 “언어 이해가 완전히 끝난 다음 해독이 시작된다”로 읽으면 안 됩니다. 지문은 두 능력이 서로 영향을 주며 발달할 수 있다고 설명합니다.</p>
-<h3>이 문단의 역할</h3>
-<p><strong>두 구성 요소의 발달 과정과 상호 영향 설명</strong></p>
-<h3>연결할 Note</h3>
-<div class="note-links">
-<a href="notes/시간순서와-발달과정.html">시간 순서와 발달 과정</a>
-<a href="notes/인과와-선후관계.html">인과와 선후 관계</a>
-<a href="https://gugeoro.tistory.com/70" rel="noopener" target="_blank">상호작용 독서 모형</a>
-</div>
-</div>
-</details>
+읽기 경험이 언어 이해를 다시 넓힘</div>
+<div class="relation-grid"><div class="relation-card"><strong>선후 관계</strong>언어 이해는 해독보다 먼저 발달할 수 있습니다.</div><div class="relation-card"><strong>상호 영향</strong>해독이 발달한 뒤의 읽기 경험은 언어 이해에 다시 영향을 줍니다.</div><div class="relation-card"><strong>주의할 오해</strong>언어 이해가 완성된 뒤 해독이 시작된다는 뜻은 아닙니다.</div></div>
+<h3>문단 구조 한 줄 정리</h3><p><strong>초기 언어 이해 → 해독 발달 → 읽기 경험 증가 → 언어 이해 확장</strong></p>
+<h3>문제 풀이에 쓰는 방법</h3><p>선택지가 단순한 시간 순서를 원인과 결과로 바꾸거나, 한 능력만 일방적으로 영향을 준다고 단정하는지 확인합니다.</p>
+<div class="note-links"><a href="notes/시간순서와-발달과정.html">시간 순서와 발달 과정</a><a href="notes/인과와-선후관계.html">인과와 선후 관계</a></div>
+</div></details>
 </section>
 <section class="section">
-<span class="tag">3문단</span>
-<h2>독자를 어떻게 네 <button class="word-tip" data-tip="공통된 특징에 따라 나눈 종류" type="button">유형</button>으로 나누는가</h2>
-<p>문제지 여백에 2×2 표를 그린 뒤, 해독과 언어 이해의 충분·부족 조합을 직접 채워 보세요.</p>
-<details open data-voice="독자 유형을 나누는 두 기준을 확인해 보세요.">
-<summary>독자 네 유형 확인하기</summary>
-<div class="detail-body">
-<div class="voice-row">
-<button class="btn-secondary speak">🔊 음성 지시 듣기</button>
-<span class="voice-status">독자 유형을 나누는 두 기준을 확인해 보세요.</span>
-</div>
-<table>
-<thead><tr><th>해독</th><th>언어 이해</th><th>독자의 상태</th></tr></thead>
-<tbody>
-<tr><td>충분</td><td>충분</td><td>독해가 원활한 독자</td></tr>
-<tr><td>충분</td><td>부족</td><td>글자는 읽지만 내용을 충분히 이해하지 못하는 독자</td></tr>
-<tr><td>부족</td><td>충분</td><td>말로 들으면 이해하지만 글자를 원활히 읽지 못하는 독자</td></tr>
-<tr><td>부족</td><td>부족</td><td>두 능력 모두 보완이 필요한 독자</td></tr>
-</tbody>
-</table>
-<h3>이 표가 중요한 이유</h3>
-<p>3번 문항은 학생이 어떤 활동을 할 수 있었는지를 제시한 뒤, 그 결과를 해독과 언어 이해로 분리해 판단하게 합니다. 학생 전체를 막연히 ‘독해력이 좋다’ 또는 ‘부족하다’로 평가하면 오답이 나오기 쉽습니다.</p>
-<h3>지문이 밝힌 한계</h3>
-<p>이 관점은 독해 능력을 두 요소로 명료하게 설명하지만, 해독과 언어 이해 사이에서 실제 사고가 어떤 과정을 거치는지는 충분히 설명하지 않습니다.</p>
-<h3>지문이 밝힌 의의</h3>
-<p>한계가 있다고 해서 이론 전체가 무의미한 것은 아닙니다. 독해 능력 연구에서 해독과 언어 이해의 영향을 살필 출발점을 제공했다는 데 의미가 있습니다.</p>
-<h3>연결할 Note</h3>
-<div class="note-links">
-<a href="notes/분류기준과-2x2표.html">분류 기준과 2×2표</a>
-<a href="https://gugeoro.tistory.com/66" rel="noopener" target="_blank">설명적 글의 구성 유형</a>
-<a href="notes/한계와-의의.html">한계와 의의 구분</a>
-</div>
-</div>
-</details>
+<span class="tag">3문단</span><h2>두 기준으로 독자를 어떻게 나누고 이론을 평가하는가</h2>
+<p>종이 문제지 여백에 해독 충분·부족과 언어 이해 충분·부족을 조합한 2×2표를 그려 보세요.</p>
+<details data-voice="두 기준으로 만든 네 유형과 이론의 한계와 의의를 구분하세요."><summary>3문단 해설 펼치기</summary><div class="detail-body">
+<p class="guide">중심내용: 해독과 언어 이해의 충분·부족을 조합하면 독자를 네 유형으로 나눌 수 있다.</p>
+<table><thead><tr><th>해독</th><th>언어 이해</th><th>쉽게 말하면</th></tr></thead><tbody><tr><td>충분</td><td>충분</td><td>글자도 읽고 내용도 이해함</td></tr><tr><td>충분</td><td>부족</td><td>글자는 읽지만 뜻을 충분히 이해하지 못함</td></tr><tr><td>부족</td><td>충분</td><td>글자는 어렵지만 들은 내용은 이해함</td></tr><tr><td>부족</td><td>부족</td><td>두 능력 모두 보완이 필요함</td></tr></tbody></table>
+<h3>문장들은 어떻게 이어지는가</h3>
+<div class="flow">두 요소를 각각 충분/부족으로 나눈다
+        ↓
+두 기준을 조합해 네 독자 유형을 만든다
+        ↓
+이 구분이 독해 연구에 도움을 준다
+        ↓ 그러나
+실제 의미 이해의 세밀한 과정까지 모두 설명하지는 못한다</div>
+<table><thead><tr><th>구분</th><th>뜻</th></tr></thead><tbody><tr><td>한계</td><td>두 요소가 실제 사고 과정에서 어떻게 작동하는지 충분히 보여 주지 못함</td></tr><tr><td>의의</td><td>독해 능력을 두 기준으로 살펴볼 수 있는 출발점을 제공함</td></tr></tbody></table>
+<h3>문단 구조 한 줄 정리</h3><p><strong>기준 조합 → 네 유형 분류 → 이론의 한계 → 연구상의 의의</strong></p>
+<h3>문제 풀이에 쓰는 방법</h3><p>사례 전체를 막연히 평가하지 말고, 제시된 행동이 해독과 언어 이해 중 어느 능력을 보여 주는지 하나씩 대응합니다.</p>
+<div class="note-links"><a href="notes/분류기준과-2x2표.html">분류 기준과 2×2표</a><a href="notes/한계와-의의.html">한계와 의의</a></div>
+</div></details>
 </section>
-<section class="section">
-<h2>지문 전체 구조</h2>
-<details>
-<summary>전체 흐름 확인하기</summary>
-<div class="detail-body">
-<table>
-<thead><tr><th>문단</th><th>기능</th><th>핵심</th></tr></thead>
-<tbody>
-<tr><td>1문단</td><td>개념 소개</td><td>독해 능력은 해독과 언어 이해로 설명됨</td></tr>
-<tr><td>2문단</td><td>발달 과정</td><td>두 요소는 발달 방식이 다르며 서로 영향을 줌</td></tr>
-<tr><td>3문단</td><td>적용과 평가</td><td>네 독자 유형, 이론의 한계와 의의</td></tr>
-</tbody>
-</table>
-<div class="flow">독해 능력의 구성 요소 제시
-            ↓
-두 요소의 발달 과정 설명
-            ↓
+<section class="section"><h2>지문 전체 구조</h2><details><summary>전체 흐름 확인하기</summary><div class="detail-body"><div class="flow">독해 능력의 두 요소 제시
+        ↓
+두 요소의 발달 관계 설명
+        ↓
 두 요소를 조합해 독자 유형 분류
-            ↓
-이론의 한계와 의의 평가</div>
-</div>
-</details>
+        ↓
+이론의 한계와 의의 평가</div></div></details></section>
+<section class="section"><h2>문항별 해설</h2><p>종이 문제지에서 고른 답과 같은 번호를 누르세요. 선택 버튼은 같은 파란색 계열로 통일되어 있으며, 마우스를 올리면 밝아지고 선택하면 진한 파란색으로 바뀝니다.</p>
+<details class="question-detail" data-answer="5"><summary>1번 문항 해설 확인하기</summary><div class="detail-body"><div class="question-head"><h3>내용 일치 판단</h3><span class="answer-badge" hidden>정답 ⑤</span></div><p><strong>먼저 내가 고른 답을 선택하세요.</strong></p><div class="answer-choice"><button data-choice="1">①</button><button data-choice="2">②</button><button data-choice="3">③</button><button data-choice="4">④</button><button data-choice="5">⑤</button><button class="grade-choice">채점하기</button></div><p class="grade-result"></p><div class="post-grade" hidden><div class="stats"><div class="stat"><span>정답</span><strong>⑤</strong></div><div class="stat"><span>정답률</span><strong class="checking">확인 중</strong></div><div class="stat"><span>오답률</span><strong class="checking">확인 중</strong></div><div class="stat"><span>최다 선택 오답</span><strong class="checking">확인 중</strong></div></div><h3>선택지별 판단</h3><table class="choice-table"><tr><th>선택지</th><th>선택률</th><th>이유</th></tr><tr><td class="wrong">① ✕</td><td class="checking">확인 중</td><td>두 구성 요소의 관계를 지문의 설명과 다르게 처리합니다.</td></tr><tr><td class="wrong">② ✕</td><td class="checking">확인 중</td><td>두 능력의 발달 관계를 지나치게 단정합니다.</td></tr><tr><td class="wrong">③ ✕</td><td class="checking">확인 중</td><td>해독과 언어 이해의 역할을 뒤섞습니다.</td></tr><tr><td class="wrong">④ ✕</td><td class="checking">확인 중</td><td>이론의 설명 범위를 지문보다 넓힙니다.</td></tr><tr><td class="correct">⑤ ○</td><td class="checking">확인 중</td><td>지문에서 설명한 대상과 관계에 부합합니다.</td></tr></table><div class="box"><strong>대비책</strong><p>선택지의 핵심어만 보지 말고 대상·범위·관계를 원문과 각각 대조합니다.</p></div></div></div></details>
+<details class="question-detail" data-answer="5"><summary>2번 문항 해설 확인하기</summary><div class="detail-body"><div class="question-head"><h3>이론의 한계 판단</h3><span class="answer-badge" hidden>정답 ⑤</span></div><div class="answer-choice"><button data-choice="1">①</button><button data-choice="2">②</button><button data-choice="3">③</button><button data-choice="4">④</button><button data-choice="5">⑤</button><button class="grade-choice">채점하기</button></div><p class="grade-result"></p><div class="post-grade" hidden><div class="stats"><div class="stat"><span>정답</span><strong>⑤</strong></div><div class="stat"><span>정답률</span><strong class="checking">확인 중</strong></div><div class="stat"><span>오답률</span><strong class="checking">확인 중</strong></div><div class="stat"><span>최다 선택 오답</span><strong class="checking">확인 중</strong></div></div><div class="box"><strong>판단 핵심</strong><p>한계는 이론 전체가 틀렸다는 뜻이 아니라 충분히 설명하지 못한 범위를 뜻합니다.</p></div></div></div></details>
+<details class="question-detail" data-answer="4"><summary>3번 문항 해설 확인하기</summary><div class="detail-body"><div class="question-head"><h3>사례를 두 기준에 적용하기</h3><span class="answer-badge" hidden>정답 ④</span></div><div class="answer-choice"><button data-choice="1">①</button><button data-choice="2">②</button><button data-choice="3">③</button><button data-choice="4">④</button><button data-choice="5">⑤</button><button class="grade-choice">채점하기</button></div><p class="grade-result"></p><div class="post-grade" hidden><div class="stats"><div class="stat"><span>정답</span><strong>④</strong></div><div class="stat"><span>정답률</span><strong class="checking">확인 중</strong></div><div class="stat"><span>오답률</span><strong class="checking">확인 중</strong></div><div class="stat"><span>최다 선택 오답</span><strong class="checking">확인 중</strong></div></div><div class="box"><strong>판단 핵심</strong><p>단어 발음은 어려웠지만 들은 중심 내용은 파악했으므로 해독은 부족하고 언어 이해는 충분하다고 판단합니다.</p></div></div></div></details>
 </section>
-<section class="section">
-<h2>문항별 해설</h2>
-<p>각 문항은 먼저 종이 문제지에서 답을 고른 뒤 확인하세요. 정답률과 선택률은 신뢰할 수 있는 공개 자료가 검증된 경우에만 수치로 표시합니다.</p>
-<details class="question-detail" data-answer="5">
-<summary>1번 문항 해설 확인하기</summary>
-<div class="detail-body">
-<div class="question-head">
-<h3 style="margin:0;">내용 일치 판단</h3>
-<span aria-hidden="true" class="answer-badge" hidden="">정답 ⑤</span>
-</div>
-<p><strong>먼저 내가 고른 답을 표시하세요.</strong></p>
-<div aria-label="1번 답 선택" class="answer-choice">
-<button data-choice="1" type="button">①</button><button data-choice="2" type="button">②</button><button data-choice="3" type="button">③</button><button data-choice="4" type="button">④</button><button data-choice="5" type="button">⑤</button>
-<button class="btn-primary grade-choice" type="button">채점하기</button>
-</div>
-<p aria-live="polite" class="grade-result"></p><div aria-live="polite" class="post-grade" hidden="">
-<div class="question-stats">
-<div class="stat-card"><span>정답</span><strong>⑤</strong></div>
-<div class="stat-card"><span>정답률</span><strong class="checking">확인 중</strong></div>
-<div class="stat-card"><span>오답률</span><strong class="checking">확인 중</strong></div>
-<div class="stat-card"><span>최다 선택 오답</span><strong class="checking">확인 중</strong></div>
-</div>
-<p class="stats-source">※ 문항별·선택지별 응답 비율의 출처와 집계 기준을 확인하고 있습니다. 검증 전에는 임의 수치를 표시하지 않습니다.</p>
-<h3>문제가 묻는 것</h3>
-<p>지문에 직접 제시된 설명과 선택지의 대상·범위·관계가 일치하는지를 확인하는 <strong>사실적 읽기</strong> 문항입니다.</p>
-<h3>선택지별 판단</h3>
-<table class="choice-table">
-<thead><tr><th>선택지</th><th>선택률</th><th>답이거나 답이 아닌 이유</th></tr></thead>
-<tbody>
-<tr><td class="choice-wrong">① ✕</td><td class="checking">확인 중</td><td>해독과 언어 이해의 관계를 지문에서 설명한 방식과 다르게 처리합니다.</td></tr>
-<tr><td class="choice-wrong">② ✕</td><td class="checking">확인 중</td><td>두 능력의 발달 순서나 영향을 지문보다 단순하거나 단정적으로 바꿉니다.</td></tr>
-<tr><td class="choice-wrong">③ ✕</td><td class="checking">확인 중</td><td>지문이 구분해 설명한 두 요소의 범위 또는 역할을 서로 뒤섞습니다.</td></tr>
-<tr><td class="choice-wrong">④ ✕</td><td class="checking">확인 중</td><td>이론의 한계나 의의를 지문에서 밝힌 범위를 넘어 확대합니다.</td></tr>
-<tr><td class="choice-correct">⑤ ○</td><td class="checking">확인 중</td><td>단순 관점 이외의 연구가 여러 요소의 복합적인 작용을 설명한다는 지문 내용과 일치합니다.</td></tr>
-</tbody>
-</table>
-<p class="source-note">※ 선택지 문장을 그대로 옮기지 않고, 각 선택지의 판단 지점을 요약해 설명했습니다. 최종 발행 전 공식 문제지와 문구를 다시 대조합니다.</p>
-<div class="diagnosis-box">
-<h3>이 문항에서 혼동하기 쉬운 이유</h3>
-<ul>
-<li>선택지에 지문의 핵심어가 들어 있다는 이유만으로 맞다고 판단하기 쉽습니다.</li>
-<li>‘해독’, ‘언어 이해’, ‘독해 능력’의 포함 관계와 구분을 놓치기 쉽습니다.</li>
-<li>한계와 의의를 서로 반대되는 평가처럼 읽고, 한계가 있으면 이론 전체가 틀렸다고 오해하기 쉽습니다.</li>
-</ul>
-</div>
-<div class="strategy-box">
-<h3>다음 문제에서의 대비책</h3>
-<ol class="mini-steps">
-<li>선택지의 핵심 명사를 지문에서 먼저 찾습니다.</li>
-<li>대상, 범위, 방향, 정도 표현을 한 요소씩 대조합니다.</li>
-<li>‘항상’, ‘오직’, ‘완전히’처럼 지문보다 강해진 표현을 확인합니다.</li>
-<li>지문에서 직접 확인되지 않는 설명은 상식으로 보충하지 않습니다.</li>
-</ol>
-</div>
-<div class="solution-links">
-<section class="solution-card knowledge"><span class="solution-label">알아야 할 개념</span><h4>사실적 읽기</h4><p>지문에 직접 제시된 정보를 추측 없이 정확히 확인하는 읽기입니다.</p><a href="https://gugeoro.tistory.com/334" rel="noopener" target="_blank">사실적 읽기 익히기 →</a></section>
-<section class="solution-card skill"><span class="solution-label">사용해야 할 능력</span><h4>원문과 선택지 대응하기</h4><p>대상·범위·관계·정도가 원문과 같은지 선택지를 한 요소씩 대조합니다.</p><a href="notes/원문과-선택지-대응.html">선택지 대응 방법 보기 →</a></section>
-</div>
-</div></div>
-</details>
-<details class="question-detail" data-answer="5">
-<summary>2번 문항 해설 확인하기</summary>
-<div class="detail-body">
-<div class="question-head">
-<h3 style="margin:0;">이론의 한계 비판</h3>
-<span aria-hidden="true" class="answer-badge" hidden="">정답 ⑤</span>
-</div>
-<p><strong>먼저 내가 고른 답을 표시하세요.</strong></p>
-<div aria-label="2번 답 선택" class="answer-choice">
-<button data-choice="1" type="button">①</button><button data-choice="2" type="button">②</button><button data-choice="3" type="button">③</button><button data-choice="4" type="button">④</button><button data-choice="5" type="button">⑤</button>
-<button class="btn-primary grade-choice" type="button">채점하기</button>
-</div>
-<p aria-live="polite" class="grade-result"></p><div aria-live="polite" class="post-grade" hidden="">
-<div class="question-stats">
-<div class="stat-card"><span>정답</span><strong>⑤</strong></div>
-<div class="stat-card"><span>정답률</span><strong class="checking">확인 중</strong></div>
-<div class="stat-card"><span>오답률</span><strong class="checking">확인 중</strong></div>
-<div class="stat-card"><span>최다 선택 오답</span><strong class="checking">확인 중</strong></div>
-</div>
-<p class="stats-source">※ 공개된 통계 자료를 확인 중입니다. 선택지별 수치가 제공되지 않는 경우에는 ‘공개 자료 없음’으로 변경합니다.</p>
-<h3>근거를 찾을 위치</h3>
-<p>3문단의 마지막 부분에서 단순 관점이 <strong>설명한 것</strong>과 <strong>충분히 설명하지 못한 것</strong>을 구분합니다.</p>
-<table>
-<thead><tr><th>설명한 것</th><th>충분히 설명하지 않은 것</th></tr></thead>
-<tbody>
-<tr><td>독해 능력을 해독과 언어 이해로 나눈 기본 틀</td><td>두 능력이 의미 이해 과정에서 구체적으로 작동하는 방식</td></tr>
-<tr><td>두 능력이 독해에 미치는 영향</td><td>다양한 독자 특성·환경 요인의 복합적인 작용</td></tr>
-<tr><td>두 기준을 조합한 독자 유형</td><td>실제 독해 과정 내부의 세밀한 사고 과정</td></tr>
-</tbody>
-</table>
-<h3>선택지별 판단</h3>
-<table class="choice-table">
-<thead><tr><th>선택지</th><th>선택률</th><th>답이거나 답이 아닌 이유</th></tr></thead>
-<tbody>
-<tr><td class="choice-wrong">① ✕</td><td class="checking">확인 중</td><td>지문이 이미 설명한 두 요소의 존재나 중요성 자체를 한계로 잘못 봅니다.</td></tr>
-<tr><td class="choice-wrong">② ✕</td><td class="checking">확인 중</td><td>지문의 비판 범위와 직접 관련 없는 내용을 외부에서 추가합니다.</td></tr>
-<tr><td class="choice-wrong">③ ✕</td><td class="checking">확인 중</td><td>단순화의 장점과 설명 부족이라는 한계를 구분하지 못합니다.</td></tr>
-<tr><td class="choice-wrong">④ ✕</td><td class="checking">확인 중</td><td>이론이 제공한 연구의 토대나 의의를 부정하는 방향으로 과도하게 확대합니다.</td></tr>
-<tr><td class="choice-correct">⑤ ○</td><td class="checking">확인 중</td><td>두 능력이 실제 의미 이해 과정에서 어떻게 작동하는지 충분히 밝히지 못했다는 한계와 맞습니다.</td></tr>
-</tbody>
-</table>
-<p class="source-note">※ 선택지의 핵심 판단 구조를 요약했습니다. 최종 게시 시 공식 문제지의 선택지 표현과 다시 대조합니다.</p>
-<div class="diagnosis-box">
-<h3>이 문항에서 혼동하기 쉬운 이유</h3>
-<ul>
-<li>‘한계’를 이론이 틀렸다는 뜻으로 읽기 쉽습니다.</li>
-<li>지문에서 설명하지 않은 범위와, 이론이 부정한 내용을 혼동하기 쉽습니다.</li>
-<li>그럴듯한 외부 지식이 포함된 선택지를 지문 근거 없이 고르기 쉽습니다.</li>
-</ul>
-</div>
-<div class="strategy-box">
-<h3>다음 문제에서의 대비책</h3>
-<ol class="mini-steps">
-<li>비판 대상이 ‘이론 전체’인지 ‘설명하지 못한 범위’인지 구분합니다.</li>
-<li>지문에 이미 설명된 내용은 한계 후보에서 제외합니다.</li>
-<li>선택지가 지문보다 비판 범위를 넓히지 않았는지 확인합니다.</li>
-<li>한계와 의의가 동시에 성립할 수 있음을 기억합니다.</li>
-</ol>
-</div>
-<div class="solution-links">
-<section class="solution-card knowledge"><span class="solution-label">알아야 할 개념</span><h4>이론의 한계와 의의</h4><p>한계는 설명하지 못한 범위이고, 의의는 그럼에도 남긴 가치와 기여입니다.</p><a href="notes/한계와-의의.html">한계와 의의 구분하기 →</a></section>
-<section class="solution-card skill"><span class="solution-label">사용해야 할 능력</span><h4>설명 범위 판단하기</h4><p>지문이 실제로 설명한 범위와 남겨 둔 범위를 분리해 선택지를 판단합니다.</p><a href="notes/설명범위-판단.html">설명 범위 판단법 보기 →</a></section>
-</div>
-</div></div>
-</details>
-<details class="question-detail" data-answer="4">
-<summary>3번 문항 해설 확인하기</summary>
-<div class="detail-body">
-<div class="question-head">
-<h3 style="margin:0;">사례를 두 기준에 적용하기</h3>
-<span aria-hidden="true" class="answer-badge" hidden="">정답 ④</span>
-</div>
-<p><strong>먼저 내가 고른 답을 표시하세요.</strong></p>
-<div aria-label="3번 답 선택" class="answer-choice">
-<button data-choice="1" type="button">①</button><button data-choice="2" type="button">②</button><button data-choice="3" type="button">③</button><button data-choice="4" type="button">④</button><button data-choice="5" type="button">⑤</button>
-<button class="btn-primary grade-choice" type="button">채점하기</button>
-</div>
-<p aria-live="polite" class="grade-result"></p><div aria-live="polite" class="post-grade" hidden="">
-<div class="question-stats">
-<div class="stat-card"><span>정답</span><strong>④</strong></div>
-<div class="stat-card"><span>정답률</span><strong class="checking">확인 중</strong></div>
-<div class="stat-card"><span>오답률</span><strong class="checking">확인 중</strong></div>
-<div class="stat-card"><span>최다 선택 오답</span><strong class="checking">확인 중</strong></div>
-</div>
-<p class="stats-source">※ 문항별 정답률과 선택지별 선택률 자료를 확인하고 있습니다. 근거가 없으면 임의 추정하지 않습니다.</p>
-<h3>문제를 풀기 전에 기준표부터 만드세요</h3>
-<table>
-<thead><tr><th>활동 결과</th><th>확인되는 능력</th><th>판단할 수 없는 것</th></tr></thead>
-<tbody>
-<tr><td>단어를 빠르고 정확하게 소리 내어 읽음</td><td>해독</td><td>그 내용까지 이해했는지는 별도 확인 필요</td></tr>
-<tr><td>단어를 올바르게 발음하지 못함</td><td>해독 부족</td><td>말로 들은 내용을 이해하는 능력</td></tr>
-<tr><td>말로 들은 내용의 중심을 파악함</td><td>언어 이해</td><td>글자를 정확히 읽는 해독 능력</td></tr>
-</tbody>
-</table>
-<h3>선택지별 판단</h3>
-<table class="choice-table">
-<thead><tr><th>선택지</th><th>선택률</th><th>답이거나 답이 아닌 이유</th></tr></thead>
-<tbody>
-<tr><td class="choice-wrong">① ✕</td><td class="checking">확인 중</td><td>하나의 활동 결과만으로 해독과 언어 이해를 모두 판단합니다.</td></tr>
-<tr><td class="choice-wrong">② ✕</td><td class="checking">확인 중</td><td>말로 들은 내용을 이해한 결과를 글자를 읽는 해독 능력의 근거로 잘못 사용합니다.</td></tr>
-<tr><td class="choice-wrong">③ ✕</td><td class="checking">확인 중</td><td>글자를 정확히 읽은 사실만으로 내용 이해까지 충분하다고 확대합니다.</td></tr>
-<tr><td class="choice-correct">④ ○</td><td class="checking">확인 중</td><td>단어 발음은 어려웠지만 말로 들은 중심 내용은 파악했으므로, 해독은 부족하고 언어 이해는 충분하다고 판단합니다.</td></tr>
-<tr><td class="choice-wrong">⑤ ✕</td><td class="checking">확인 중</td><td>사례에 제시되지 않은 능력이나 전체 독해 수준까지 추가로 판단합니다.</td></tr>
-</tbody>
-</table>
-<p class="source-note">※ 사례와 선택지의 판단 원리를 한 줄로 요약했습니다. 공식 문제지의 조건을 벗어나지 않는지 최종 대조가 필요합니다.</p>
-<div class="diagnosis-box">
-<h3>이 문항에서 혼동하기 쉬운 이유</h3>
-<ul>
-<li>‘읽기’라는 한 활동 안에서 해독과 언어 이해를 분리하지 않기 쉽습니다.</li>
-<li>글을 소리 내어 읽는 능력과 내용을 이해하는 능력을 같은 것으로 보기 쉽습니다.</li>
-<li>학생의 일부 활동 결과를 전체 독해 능력으로 확대하기 쉽습니다.</li>
-</ul>
-</div>
-<div class="strategy-box">
-<h3>다음 문제에서의 대비책</h3>
-<ol class="mini-steps">
-<li>사례의 행동과 결과를 한 줄씩 나눕니다.</li>
-<li>각 행동 옆에 적용되는 개념을 하나씩 적습니다.</li>
-<li>제시되지 않은 능력에는 물음표를 표시하고 판단을 보류합니다.</li>
-<li>두 기준이 있으면 반드시 2×2 표로 조합합니다.</li>
-</ol>
-</div>
-<div class="solution-links">
-<section class="solution-card knowledge"><span class="solution-label">알아야 할 개념</span><h4>분류 기준과 해독·언어 이해</h4><p>대상을 나누는 공통 기준과 두 능력의 차이를 먼저 알아야 합니다.</p><a href="notes/분류기준과-2x2표.html">분류 기준과 표 익히기 →</a><br/><a href="notes/해독과-언어이해.html">해독과 언어 이해 보기 →</a></section>
-<section class="solution-card skill"><span class="solution-label">사용해야 할 능력</span><h4>사례를 기준별로 적용하기</h4><p>사례 전체를 한꺼번에 평가하지 않고 행동마다 해당 기준을 대응시킵니다.</p><a href="notes/사례적용-문제해결.html">사례 적용 문제 푸는 법 →</a></section>
-</div>
-</div></div>
-</details>
-</section>
-<section class="section">
-<h2>오답 정리</h2>
-<div class="checklist">
-<label class="check-item"><input type="checkbox"/> 해독과 언어 이해를 같은 능력으로 보았다.</label>
-<label class="check-item"><input type="checkbox"/> 발달 순서를 지나치게 단순하게 이해했다.</label>
-<label class="check-item"><input type="checkbox"/> 이론의 <button class="word-tip" data-tip="설명하지 못하거나 부족한 범위" type="button">한계</button>와 <button class="word-tip" data-tip="어떤 생각이나 연구가 지니는 가치와 의미" type="button">의의</button>를 혼동했다.</label>
-<label class="check-item"><input type="checkbox"/> 지문 근거보다 상식으로 판단했다.</label>
-</div>
-</section>
-<footer class="footer">
-      이 파일럿은 종이 문제지와 함께 사용하는 보조 해설용입니다. 확인된 Note는 디지털 국어도서관 실제 글로, 미발행 개념은 동봉된 간단 Note 페이지로 연결했습니다.
-    </footer>
+<footer class="footer">종이 문제지와 함께 사용하는 1차 문해력 보조 학습 페이지입니다.</footer>
 </main>
 <script>
-    const detailsList = [...document.querySelectorAll('details')];
-    const openAll = document.getElementById('openAll');
-    const closeAll = document.getElementById('closeAll');
-    const toggleVoice = document.getElementById('toggleVoice');
-    const voiceStatus = document.getElementById('voiceStatus');
-    let voiceEnabled = false;
-
-    function speak(text) {
-      if (!('speechSynthesis' in window)) {
-        alert('이 브라우저는 음성 읽기를 지원하지 않습니다.');
-        return;
-      }
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'ko-KR';
-      utterance.rate = 0.95;
-      utterance.pitch = 1;
-      window.speechSynthesis.speak(utterance);
-    }
-
-    openAll.addEventListener('click', () => {
-      detailsList.forEach(item => item.open = true);
-    });
-
-    closeAll.addEventListener('click', () => {
-      detailsList.forEach(item => item.open = false);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    toggleVoice.addEventListener('click', () => {
-      voiceEnabled = !voiceEnabled;
-      toggleVoice.textContent = voiceEnabled ? '음성 안내 끄기' : '음성 안내 켜기';
-      voiceStatus.textContent = voiceEnabled
-        ? '접이식 해설을 펼칠 때 짧은 행동 지시만 재생합니다.'
-        : '읽기에 집중하도록 음성 지시는 기본적으로 꺼져 있습니다.';
-      if (!voiceEnabled && 'speechSynthesis' in window) window.speechSynthesis.cancel();
-    });
-
-    detailsList.forEach(item => {
-      item.addEventListener('toggle', () => {
-        if (item.open && voiceEnabled && item.dataset.voice) {
-          speak(item.dataset.voice);
-        }
-      });
-    });
-
-    document.querySelectorAll('.speak').forEach(button => {
-      button.addEventListener('click', event => {
-        const detail = event.currentTarget.closest('details');
-        speak(detail.dataset.voice || '다음 내용을 확인해 보세요.');
-      });
-    });
-  </script>
-<script>
-    document.addEventListener('click', function(event){
-      const tip=event.target.closest('.word-tip');
-      document.querySelectorAll('.word-tip.is-open').forEach(el=>{ if(el!==tip){el.classList.remove('is-open');el.setAttribute('aria-expanded','false');} });
-      if(tip){ const open=tip.classList.toggle('is-open'); tip.setAttribute('aria-expanded',String(open)); event.stopPropagation(); }
-    });
-    document.querySelectorAll('.word-tip').forEach(t=>{t.setAttribute('aria-expanded','false');t.addEventListener('keydown',e=>{if(e.key==='Escape'){t.classList.remove('is-open');t.setAttribute('aria-expanded','false');}})});
-  </script>
-<script>
-    document.querySelectorAll('.question-detail').forEach(detail => {
-      let selected = null;
-      const answer = detail.dataset.answer;
-      const result = detail.querySelector('.grade-result');
-      const postGrade = detail.querySelector('.post-grade');
-      const badge = detail.querySelector('.answer-badge');
-
-      detail.querySelectorAll('.answer-choice button[data-choice]').forEach(button => {
-        button.addEventListener('click', () => {
-          detail.querySelectorAll('.answer-choice button[data-choice]').forEach(b => b.classList.remove('selected'));
-          button.classList.add('selected');
-          selected = button.dataset.choice;
-          if (result) {
-            result.textContent = `내가 고른 답: ${selected}번 · 채점하기를 눌러 확인하세요.`;
-            result.style.color = '#374151';
-          }
-        });
-      });
-
-      const grade = detail.querySelector('.grade-choice');
-      if (grade) {
-        grade.addEventListener('click', () => {
-          if (!selected) {
-            result.textContent = '먼저 내가 고른 답을 선택하세요.';
-            result.style.color = '#b14b41';
-            return;
-          }
-
-          detail.classList.add('graded');
-          if (badge) {
-            badge.hidden = false;
-            badge.removeAttribute('aria-hidden');
-          }
-          if (postGrade) {
-            postGrade.hidden = false;
-            postGrade.classList.add('revealed');
-          }
-
-          result.textContent = selected === answer
-            ? `○ 정답입니다. 내가 고른 답 ${selected}번 · 정답 ${answer}번`
-            : `✕ 오답입니다. 내가 고른 답 ${selected}번 · 정답 ${answer}번. 아래 선택지별 이유를 확인하세요.`;
-          result.style.color = selected === answer ? '#147a55' : '#b14b41';
-
-          if (postGrade) {
-            postGrade.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      }
-    });
-  </script>
-</body>
-</html>
+const detailsList=[...document.querySelectorAll('details')],openAll=document.getElementById('openAll'),closeAll=document.getElementById('closeAll'),toggleVoice=document.getElementById('toggleVoice'),voiceStatus=document.getElementById('voiceStatus');let voiceEnabled=false;openAll.onclick=()=>detailsList.forEach(d=>d.open=true);closeAll.onclick=()=>{detailsList.forEach(d=>d.open=false);scrollTo({top:0,behavior:'smooth'})};function speak(t){if(!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';u.rate=.95;speechSynthesis.speak(u)}toggleVoice.onclick=()=>{voiceEnabled=!voiceEnabled;toggleVoice.textContent=voiceEnabled?'음성 안내 끄기':'음성 안내 켜기';voiceStatus.textContent=voiceEnabled?'해설을 펼칠 때 짧은 학습 지시를 읽습니다.':'해설은 기본적으로 모두 접혀 있습니다. 필요한 부분만 펼쳐 확인하세요.'};detailsList.forEach(d=>d.addEventListener('toggle',()=>{if(d.open&&voiceEnabled&&d.dataset.voice)speak(d.dataset.voice)}));document.querySelectorAll('.word-tip').forEach(t=>t.onclick=e=>{e.stopPropagation();t.classList.toggle('is-open')});document.querySelectorAll('.question-detail').forEach(detail=>{let selected=null;const answer=detail.dataset.answer,result=detail.querySelector('.grade-result'),post=detail.querySelector('.post-grade'),badge=detail.querySelector('.answer-badge');detail.querySelectorAll('button[data-choice]').forEach(b=>b.onclick=()=>{detail.querySelectorAll('button[data-choice]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');selected=b.dataset.choice;result.textContent=`내가 고른 답: ${selected}번 · 채점하기를 눌러 확인하세요.`;result.style.color='#374151'});detail.querySelector('.grade-choice').onclick=()=>{if(!selected){result.textContent='먼저 내가 고른 답을 선택하세요.';result.style.color='var(--bad)';return}badge.hidden=false;post.hidden=false;result.textContent=selected===answer?`○ 정답입니다. 내가 고른 답 ${selected}번`:`✕ 오답입니다. 내가 고른 답 ${selected}번 · 정답 ${answer}번`;result.style.color=selected===answer?'var(--ok)':'var(--bad)'}});
+</script>
+</body></html>
