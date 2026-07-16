@@ -284,6 +284,17 @@
       "game-content":{nextFocus:"게임 기획·개발·콘텐츠 제작을 잇는 세 번째 직업 후보"},
       "embedded-iot":{nextFocus:"기기·통신·서비스 연결을 잇는 세 번째 직업 후보"}
     };
+    // W06-D2: 후보는 커리어넷의 직업명·연결 범위만 검증한 상태이며, 실제 업무·취업기관·자격·결과 화면 데이터는 다음 작업에서 확인합니다.
+    const aiThirdJobScope = {
+      "ai-ml":{name:"지능형 로봇개발자",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10113"},
+      "data":{name:"지리정보시스템기사",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10050"},
+      "software":{name:"시스템엔지니어",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=440"},
+      "web-mobile":{name:"웹마스터",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=444"},
+      "cloud-platform":{name:"시스템엔지니어",sourceLabel:"커리어넷 관련 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=440"},
+      "security":{name:"컴퓨터 보안 전문가",sourceLabel:"커리어넷 사물인터넷 전문가 관련직업 정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10035"},
+      "game-content":{name:"컴퓨터그래픽디자이너",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=458"},
+      "embedded-iot":{name:"네트워크엔지니어",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=430"}
+    };
     const aiJobDetails = {
       "인공지능 엔지니어":{summary:"데이터를 정리·전처리하고 머신러닝·딥러닝 모델을 설계·학습·개선해 인식·예측·분류 기능을 구현합니다.",employers:["AI·소프트웨어 기업의 연구·개발 조직","데이터 기반 제품·서비스를 운영하는 기업의 AI 개발 부서"],skills:["수리·논리력과 알고리즘 이해","데이터 전처리와 모델 성능 검증","개발팀과 문제를 설명·협업하는 의사소통"]},
       "빅 데이터 전문가":{summary:"대규모 데이터를 수집·정제·분석하고, 분석 결과를 시각화해 조직의 의사결정에 활용할 수 있도록 지원합니다.",employers:["데이터 분석·컨설팅 기업","기업·공공기관의 데이터 분석·디지털전환 부서"],skills:["통계와 데이터 분석 기초","데이터베이스·분석도구 활용","결과를 이해하기 쉽게 설명하는 능력"]},
@@ -330,6 +341,7 @@
     Object.entries(aiJobScope).forEach(([fieldId,jobScope])=>{const jobs=jobScope.jobs.map(job=>({...job,...aiJobDetails[job.name],...aiCredentialGuide[job.name]}));aiSoftware[fieldId].jobScope={...jobScope,jobs};aiSoftware[fieldId].jobs=jobs;});
     Object.entries(aiJobExpansionScope).forEach(([fieldId,scope])=>{const expansionJobs=scope.jobs.map(job=>({...job,...aiJobDetails[job.name],...aiCredentialGuide[job.name]}));aiSoftware[fieldId].jobs=aiSoftware[fieldId].jobs.concat(expansionJobs);});
     Object.entries(aiJobCoverage).forEach(([fieldId,coverage])=>{aiSoftware[fieldId].dataCoverage=coverage;});
+    Object.entries(aiThirdJobScope).forEach(([fieldId,scope])=>{aiSoftware[fieldId].thirdJobScope=scope;});
 
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
@@ -679,7 +691,7 @@
       setPath("job-path",["청소년",careerCatalog[currentInterestId].label,field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
       renderUniversities(major,majorData.universities);
       const jobs=(majorData.jobs?.length?majorData.jobs:majorJobs[major]||field.jobs||[]);const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(entry=>{const job=typeof entry==="string"?entry:entry.name;const jobData=typeof entry==="string"?{}:entry;const credentialLabel=jobData.credentialType||(jobData.requiredCredentials?"면허·국가자격 필수":"진입조건 확인");const b=document.createElement("button");b.type="button";b.className="item-button";b.innerHTML="<strong>"+job+"</strong><br><small>"+credentialLabel+"</small>";b.addEventListener("click",()=>showResult(job,field,major,b,jobData));target.appendChild(b);});
-      if(!jobs.length){renderJobScope(target,field.jobScope);}else{renderDataCoverage(target,field.dataCoverage,jobs);}
+      if(!jobs.length){renderJobScope(target,field.jobScope);}else{renderDataCoverage(target,field.dataCoverage,jobs,field.thirdJobScope);}
       refreshPromptEditor(true);
       showStep("job-step");document.getElementById("result-step").classList.remove("show");document.getElementById("job-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
@@ -691,11 +703,12 @@
       const list=document.createElement("ul");list.className="job-scope-list";scope.jobs.forEach(job=>{const item=document.createElement("li");const link=document.createElement("a");link.href=job.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent=job.name+" · "+job.sourceLabel+" ↗";item.appendChild(link);list.appendChild(item);});box.appendChild(list);target.appendChild(box);
     }
 
-    function renderDataCoverage(target,coverage,jobs){
+    function renderDataCoverage(target,coverage,jobs,thirdScope){
       if(!coverage||jobs.length<2)return;
       const box=document.createElement("div");box.className="empty";
       const names=jobs.map(job=>typeof job==="string"?job:job.name).join(" · ");
       box.innerHTML="<strong>W06-D1 데이터 보완 현황</strong><br>현재 검증 대표 직업 2개: "+names+"<br>다음 확장 범위: "+coverage.nextFocus+". 세 번째 후보는 커리어넷 등 공식 직업정보, 실제 업무·취업기관, 자격, 관련 학과·대학 출처를 모두 확인한 뒤 추가합니다.";
+      if(thirdScope){const candidate=document.createElement("p");candidate.className="career-note";const link=document.createElement("a");link.href=thirdScope.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent="W06-D2 후보 · "+thirdScope.name+" · "+thirdScope.sourceLabel+" 보기";candidate.appendChild(link);box.appendChild(candidate);}
       target.appendChild(box);
     }
 
