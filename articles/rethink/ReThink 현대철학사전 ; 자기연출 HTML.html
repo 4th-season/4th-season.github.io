@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자기연출 | Re:Think</title>
+  <meta name="description" content="자기연출 은 타인에게 보이는 자신의 모습과 행동을 상황에 맞게 구성하는 일입니다. 보여 주는 모습은 단순한 가면인지, 관계 속에서 만들어지는 또 하나의 나인지 살펴봅니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtsp-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #303638;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtsp-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtsp-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #7b486b;
+    background: #faf3f7;
+    border-radius: 10px;
+    color: #5d344f;
+    font-size: 0.98rem;
+  }
+
+  .rtsp-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #edf6f3 0%, #faf3f7 100%);
+    border: 1px solid #d7dcda;
+    border-radius: 18px;
+  }
+
+  .rtsp-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #28564d;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rtsp-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #21483f;
+    letter-spacing: -0.045em;
+  }
+
+  .rtsp-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #7b486b;
+  }
+
+  .rtsp-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtsp-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f1f7f5;
+    border: 1px solid #cfe0db;
+    border-radius: 16px;
+  }
+
+  .rtsp-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #21483f;
+  }
+
+  .rtsp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtsp-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #dfd6dc;
+    border-radius: 13px;
+  }
+
+  .rtsp-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #7b486b;
+    font-size: 1.02rem;
+  }
+
+  .rtsp-grid-item span {
+    display: block;
+    color: #56625f;
+    font-size: 0.94rem;
+  }
+
+  .rtsp-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #edf6f3;
+    border: 1px solid #d0e1dc;
+    border-radius: 16px;
+  }
+
+  .rtsp-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #21483f;
+  }
+
+  .rtsp-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #d9e5e1;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtsp-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #21483f;
+    list-style: none;
+  }
+
+  .rtsp-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtsp-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #7b486b;
+  }
+
+  .rtsp-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtsp-toc-desc {
+    padding: 0 16px 15px;
+    color: #5d6966;
+    font-size: 0.95rem;
+    border-top: 1px solid #e5eeeb;
+  }
+
+  .rtsp-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #d9e5e1;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(40, 86, 77, 0.06);
+  }
+
+  .rtsp-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #7b486b;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #21483f;
+    letter-spacing: -0.035em;
+  }
+
+  .rtsp-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #7b486b;
+  }
+
+  .rtsp-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #faf3f7;
+    border-radius: 12px;
+    color: #5d344f;
+    font-weight: 600;
+  }
+
+  .rtsp-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtsp-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #edf6f3;
+    border-left: 5px solid #7b486b;
+    border-radius: 10px;
+    color: #21483f;
+    font-weight: 700;
+  }
+
+  .rtsp-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtsp-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtsp-table th {
+    background: #28564d;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #cfe0db;
+    text-align: left;
+  }
+
+  .rtsp-table td {
+    padding: 12px 10px;
+    border: 1px solid #cfe0db;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtsp-table tr:nth-child(even) td {
+    background: #faf3f7;
+  }
+
+  .rtsp-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fbfa;
+    border: 1px solid #d9e5e1;
+    border-radius: 14px;
+  }
+
+  .rtsp-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #21483f;
+    font-weight: 800;
+  }
+
+  .rtsp-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #4f5c58;
+  }
+
+  .rtsp-flow-boxes div {
+    padding: 11px 13px;
+    background: #edf6f3;
+    border-radius: 9px;
+  }
+
+  .rtsp-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #28564d 0%, #7b486b 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rtsp-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtsp-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtsp-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rtsp-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rtsp-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rtsp-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rtsp-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rtsp-read-list strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #21483f;
+  }
+
+  .rtsp-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rtsp-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #edf6f3;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtsp-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rtsp-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtsp-section {
+      padding: 24px 18px;
+    }
+
+    .rtsp-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtsp-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtsp-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 자기연출 뜻 - 보여 주는 나는 어디까지 내가 되는가</h1>
+<div class="rtsp-meta">
+    <strong>자기연출</strong>은 타인에게 보이는 자신의 모습과 행동을 상황에 맞게 구성하는 일입니다. 보여 주는 모습은 단순한 가면인지, 관계 속에서 만들어지는 또 하나의 나인지 살펴봅니다.
+  </div>
+
+  <!-- 제목형 안내 영역 -->
+  <section class="rtsp-hero">
+    <div class="rtsp-kicker">Re:Think 현대철학사전</div>
+
+    <div class="rtsp-title-like">자기연출 뜻</div>
+
+    <div class="rtsp-subtitle-like">
+      보여 주는 나는 어디까지 내가 되는가
+    </div>
+
+    <p>
+      휴대전화에 올릴 사진을 고르다가 한참을 망설일 때가 있습니다.
+      같은 날 찍은 사진인데도 어떤 사진은 너무 지쳐 보이고,
+      어떤 사진은 표정이 어색하며,
+      어떤 사진은 내가 보여 주고 싶은 분위기와 맞지 않습니다.
+    </p>
+
+    <p>
+      결국 조금 더 밝아 보이는 사진을 고릅니다.
+      문장을 여러 번 고치고,
+      너무 자랑처럼 보이지 않으면서도
+      내가 잘 지내고 있다는 인상을 줄 수 있는 표현을 붙입니다.
+    </p>
+
+    <p>
+      사진과 문장은 거짓이 아닙니다.
+      실제로 그곳에 갔고,
+      그 순간 즐거웠으며,
+      내가 직접 쓴 말입니다.
+    </p>
+
+    <p>
+      그런데 게시한 뒤에는 묘한 질문이 남습니다.
+      화면 속의 나는 분명 나인데,
+      그날의 피곤함과 망설임과 말하지 않은 감정은 모두 빠져 있습니다.
+    </p>
+
+    <p>
+      <strong>자기연출</strong>은 바로 이런 장면에서 시작됩니다.
+      보여 주기 위해 다듬은 나는 가짜일까요.
+      아니면 타인과 관계를 맺기 위해 선택한 또 하나의 나일까요.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtsp-map">
+    <div class="rtsp-map-title">자기연출 핵심 지도</div>
+
+    <div class="rtsp-grid">
+      <div class="rtsp-grid-item">
+        <strong>상황</strong>
+        <span>우리는 상대와 장소에 따라 말투와 행동을 조절합니다.</span>
+      </div>
+
+      <div class="rtsp-grid-item">
+        <strong>인상</strong>
+        <span>타인이 나를 어떻게 이해할지 예상하며 모습을 구성합니다.</span>
+      </div>
+
+      <div class="rtsp-grid-item">
+        <strong>정체성</strong>
+        <span>반복해서 보여 준 모습은 어느 순간 나의 일부가 되기도 합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtsp-toc">
+    <div class="rtsp-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 사진 한 장을 올리는데 왜 이렇게 오래 망설일까</summary>
+      <div class="rtsp-toc-desc">
+        온라인에 자신의 모습을 올리는 평범한 장면에서 자기연출의 질문을 시작합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 자기연출은 거짓말과 어떻게 다른가</summary>
+      <div class="rtsp-toc-desc">
+        모든 모습을 다 보여 주지 않는 것과 사실을 속이는 행동을 구분합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 고프먼은 왜 일상을 무대처럼 보았는가</summary>
+      <div class="rtsp-toc-desc">
+        앞무대와 뒷무대, 역할과 관객의 관계를 통해 일상적 자기표현을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 보여 주는 모습은 언제 진짜 내가 되는가</summary>
+      <div class="rtsp-toc-desc">
+        반복해서 수행한 모습이 정체성과 성격으로 굳어지는 과정을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 자기연출은 왜 관계에 필요한가</summary>
+      <div class="rtsp-toc-desc">
+        모든 감정과 생각을 그대로 드러내지 않는 일이 관계를 유지하는 조건이 되는 이유를 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 온라인에서는 왜 연출과 삶의 경계가 흐려지는가</summary>
+      <div class="rtsp-toc-desc">
+        편집된 이미지와 반응의 수치가 자기인식에 미치는 영향을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 자기연출</summary>
+      <div class="rtsp-toc-desc">
+        《리플리》와 《블랙 미러: 추락》을 통해 타인의 시선 속에서 만들어지는 자아를 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 자기연출은 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rtsp-toc-desc">
+        자기연출이 설명하는 사회적 자아와, 연출만으로 설명할 수 없는 권력과 감정의 문제를 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtsp-section">
+    <h2>1. 사진 한 장을 올리는데 왜 이렇게 오래 망설일까</h2>
+
+    <div class="rtsp-one-line">
+      👉 자기연출은 거창한 거짓말보다, 어떤 모습을 보여 주고 어떤 모습은 남겨 둘지를 고르는 작은 선택에서 시작됩니다.
+    </div>
+
+    <p>
+      사진을 올리는 일은 단순히 기록을 남기는 행동처럼 보입니다.
+      하지만 실제로는 여러 판단이 그 안에 들어옵니다.
+    </p>
+
+    <p>
+      너무 꾸민 사람처럼 보이지는 않을까.
+      외로워 보이지는 않을까.
+      지나치게 자랑하는 것처럼 느껴지지는 않을까.
+      사람들이 기대하는 내 모습과 어긋나지는 않을까.
+    </p>
+
+    <p>
+      우리는 사진 자체보다
+      그 사진을 본 사람이 어떤 인상을 받을지를 함께 생각합니다.
+      사진을 선택하는 순간 이미 예상되는 관객이 들어와 있는 것입니다.
+    </p>
+
+    <p>
+      이런 판단은 온라인에서만 일어나지 않습니다.
+      회의에서는 자신감 있는 목소리를 내고,
+      처음 만난 사람 앞에서는 조심스럽게 말하며,
+      가까운 사람에게는 조금 더 편한 표정을 보입니다.
+    </p>
+
+    <div class="rtsp-quote">
+      자기연출은 나를 감추는 행동만이 아니라, 관계 속에서 어떤 나를 꺼내 보일지 정하는 행동입니다.
+    </div>
+
+    <p>
+      그래서 자기연출을 단순히 가식이라고 부르면
+      우리가 일상에서 수행하는 수많은 조절과 선택을 충분히 설명하기 어렵습니다.
+    </p>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtsp-section">
+    <h2>2. 자기연출은 거짓말과 어떻게 다른가</h2>
+
+    <div class="rtsp-one-line">
+      👉 자기연출은 실제 모습을 전부 보여 주지 않는 일이지만, 반드시 사실이 아닌 모습을 꾸며 내는 거짓말과 같지는 않습니다.
+    </div>
+
+    <p>
+      우리는 누구에게도 자기 모습을 전부 보여 주지 않습니다.
+      처음 만난 사람에게 오래된 상처를 모두 말하지 않고,
+      회의 자리에서 느낀 모든 불만을 그대로 꺼내지 않으며,
+      가족에게도 설명하지 않는 생각을 남겨 둡니다.
+    </p>
+
+    <p>
+      그렇다고 이런 행동을 모두 거짓이라고 할 수는 없습니다.
+      인간에게는 공개할 수 있는 모습과
+      혼자 간직하고 싶은 모습이 함께 있기 때문입니다.
+    </p>
+
+    <p>
+      자기연출은 이 가운데 어떤 모습을 지금의 관계에 맞게 보여 줄지를 선택하는 일입니다.
+      거짓말은 사실이 아닌 내용을 사실처럼 전달하려 하지만,
+      자기연출은 실제 자기 모습 가운데 일부를 앞에 놓는 경우가 많습니다.
+    </p>
+
+    <div class="rtsp-table-wrap">
+      <table class="rtsp-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>자기연출</th>
+            <th>거짓말</th>
+            <th>사생활의 경계</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>중심 행동</strong></td>
+            <td>보여 줄 모습을 선택하고 조절함</td>
+            <td>사실이 아닌 내용을 사실처럼 전달함</td>
+            <td>보여 주지 않을 영역을 남겨 둠</td>
+          </tr>
+          <tr>
+            <td><strong>관계의 목적</strong></td>
+            <td>적절한 인상을 만들고 관계를 유지함</td>
+            <td>상대의 판단을 사실과 다르게 이끎</td>
+            <td>자기의 안전과 독립성을 지킴</td>
+          </tr>
+          <tr>
+            <td><strong>남는 질문</strong></td>
+            <td>선택한 모습이 나를 지나치게 제한하는가</td>
+            <td>상대가 판단할 근거를 왜곡했는가</td>
+            <td>감춘 영역은 보호인가 단절인가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      물론 자기연출과 거짓말의 경계가 언제나 분명한 것은 아닙니다.
+      실제보다 능력 있어 보이려는 표현,
+      행복하지 않은데 늘 행복한 모습만 보여 주는 행동,
+      관계를 얻기 위해 다른 사람인 것처럼 행동하는 경우에는 경계가 흐려질 수 있습니다.
+    </p>
+
+    <p>
+      그래서 중요한 것은 연출이 있느냐 없느냐가 아닙니다.
+      그 연출이 상대의 판단을 얼마나 왜곡하고,
+      나 자신을 얼마나 한 모습 안에 가두는지를 함께 보아야 합니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtsp-section">
+    <h2>3. 고프먼은 왜 일상을 무대처럼 보았는가</h2>
+
+    <div class="rtsp-one-line">
+      👉 고프먼의 관점에서 사회생활은 역할을 수행하는 무대와 닮았으며, 사람은 관객과 상황에 맞게 자신의 인상을 조절합니다.
+    </div>
+
+    <p>
+      사회학자 어빙 고프먼은 일상의 상호작용을 연극의 장면에 빗대어 바라보았습니다.
+      사람은 무대 위의 배우처럼
+      상대가 자신을 어떻게 이해할지 예상하며 말과 표정과 행동을 조절합니다.
+    </p>
+
+    <p>
+      가게의 직원은 손님 앞에서 친절한 표정과 말투를 유지합니다.
+      발표자는 긴장하고 있어도 자신감 있는 태도를 보이려 합니다.
+      부모는 불안하더라도 아이 앞에서는 침착한 모습을 보여 주기도 합니다.
+    </p>
+
+    <p>
+      이런 공간은 일종의 <strong>앞무대</strong>입니다.
+      역할에 맞는 모습이 요구되고,
+      관객의 기대를 의식하며 행동하는 자리입니다.
+    </p>
+
+    <p>
+      반면 역할의 긴장을 잠시 내려놓고
+      준비하거나 쉬며 감정을 드러낼 수 있는 공간은 <strong>뒷무대</strong>와 닮았습니다.
+    </p>
+
+    <div class="rtsp-flow">
+      <strong class="rtsp-flow-title">고프먼의 연극적 관점으로 본 일상</strong>
+
+      <div class="rtsp-flow-boxes">
+        <div>상황과 관객 — 어디에 있고 누구와 함께 있는가</div>
+        <div>역할의 기대 — 이 자리에서 어떤 행동이 적절하다고 여겨지는가</div>
+        <div>인상 관리 — 말투, 표정, 옷차림, 정보 공개를 조절함</div>
+        <div>반복된 수행 — 특정한 모습이 그 사람의 정체성처럼 굳어짐</div>
+      </div>
+    </div>
+
+    <p>
+      앞무대의 모습이 반드시 가짜이고
+      뒷무대의 모습만 진짜라는 뜻은 아닙니다.
+      친절한 직원의 태도도 그 사람의 실제 행동이며,
+      책임을 다하려는 부모의 침착함도 그 사람의 일부입니다.
+    </p>
+
+    <p>
+      고프먼의 관점이 보여 주는 것은
+      자아가 혼자 있을 때 완성된 채 존재하는 것이 아니라,
+      사람들과 마주치는 장면 속에서 표현되고 조정된다는 점입니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtsp-section">
+    <h2>4. 보여 주는 모습은 언제 진짜 내가 되는가</h2>
+
+    <div class="rtsp-one-line">
+      👉 처음에는 상황에 맞추어 꺼낸 모습이라도 반복해서 수행하면 성격과 정체성의 일부로 자리 잡을 수 있습니다.
+    </div>
+
+    <p>
+      처음 맡은 역할은 어색하게 느껴질 수 있습니다.
+      처음 관리자가 된 사람은 단호하게 지시하는 태도가 자기답지 않다고 느낄 수 있고,
+      처음 부모가 된 사람은 책임감 있는 행동을 연기하는 듯 느낄 수 있습니다.
+    </p>
+
+    <p>
+      그러나 같은 행동을 반복하다 보면
+      그 모습은 더 이상 외부에서 빌려 온 역할로만 남지 않습니다.
+      판단하는 방식과 말투,
+      감정을 조절하는 습관이 조금씩 달라집니다.
+    </p>
+
+    <p>
+      이 지점에서 자기연출과 정체성의 경계는 흐려집니다.
+      자신감 있는 사람처럼 행동하다가 실제로 자신감이 생길 수도 있고,
+      늘 괜찮은 사람처럼 행동하다가 힘들다는 말을 하지 못하는 사람이 될 수도 있습니다.
+    </p>
+
+    <div class="rtsp-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtsp-grid-item">
+        <strong>삶을 넓히는 연출</strong>
+        <span>아직 익숙하지 않은 역할을 시도하며 새로운 능력과 관계의 방식을 배웁니다.</span>
+      </div>
+
+      <div class="rtsp-grid-item">
+        <strong>삶을 가두는 연출</strong>
+        <span>타인이 기대하는 한 가지 모습만 반복하며 다른 감정과 가능성을 숨깁니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      따라서 보여 주는 모습과 진짜 모습을 완전히 나누기는 어렵습니다.
+      인간은 자신이 이미 가진 모습을 보여 주기도 하지만,
+      보여 주는 행동을 통해 새로운 자신을 만들기도 합니다.
+    </p>
+
+    <p>
+      더 중요한 질문은 그 모습이 가짜인가가 아닙니다.
+      그 모습을 내가 받아들일 수 있는지,
+      그 모습 외의 자신도 드러낼 수 있는지가 더 중요합니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtsp-section">
+    <h2>5. 자기연출은 왜 관계에 필요한가</h2>
+
+    <div class="rtsp-one-line">
+      👉 관계는 모든 것을 그대로 드러내는 일만으로 유지되지 않으며, 상황과 상대를 고려한 표현의 조절을 필요로 합니다.
+    </div>
+
+    <p>
+      자기연출을 부정적으로만 보면
+      솔직한 사람은 연출하지 않고,
+      가식적인 사람만 자신의 모습을 꾸민다고 생각하기 쉽습니다.
+    </p>
+
+    <p>
+      그러나 모든 감정을 즉시 드러내는 것이 언제나 솔직하거나 책임 있는 태도는 아닙니다.
+      화가 났다는 이유로 상대를 모욕하고,
+      지루하다는 이유로 대화를 끊으며,
+      마음에 들지 않는다는 생각을 모두 말한다면 관계는 쉽게 무너질 수 있습니다.
+    </p>
+
+    <p>
+      관계에서는 자신의 감정을 알면서도
+      어떻게 표현할지를 조절하는 능력이 필요합니다.
+      상대가 들을 수 있는 말로 바꾸고,
+      지금 말해야 할 것과 나중에 말할 것을 구분하며,
+      상황에 맞는 거리를 선택합니다.
+    </p>
+
+    <div class="rtsp-table-wrap">
+      <table class="rtsp-table">
+        <thead>
+          <tr>
+            <th>관계의 장면</th>
+            <th>필요한 자기연출</th>
+            <th>지나칠 때의 위험</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>처음 만난 사람</strong></td>
+            <td>상대가 이해할 수 있는 범위에서 자신을 소개함</td>
+            <td>좋은 인상을 위해 실제 모습과 지나치게 다른 사람처럼 행동함</td>
+          </tr>
+          <tr>
+            <td><strong>갈등 상황</strong></td>
+            <td>감정을 알아차리되 모욕이 되지 않도록 표현을 조절함</td>
+            <td>관계를 지키려다 불편한 감정을 모두 감춤</td>
+          </tr>
+          <tr>
+            <td><strong>공적인 자리</strong></td>
+            <td>개인 감정과 공적 역할을 어느 정도 구분함</td>
+            <td>역할이 자신의 모든 감정과 삶을 압도함</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      이 점에서 자기연출은 관계를 속이는 기술만이 아닙니다.
+      자신의 감정을 관계 안에서 전달할 수 있는 형태로 바꾸는 사회적 능력이기도 합니다.
+    </p>
+
+    <p>
+      다만 표현을 조절하는 일이 늘 한쪽 사람에게만 요구된다면 문제는 달라집니다.
+      약한 위치에 있는 사람이 계속 웃고,
+      참으며,
+      괜찮은 척해야 한다면
+      자기연출은 관계의 예절이 아니라 권력에 적응하는 방식이 될 수 있습니다.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtsp-section">
+    <h2>6. 온라인에서는 왜 연출과 삶의 경계가 흐려지는가</h2>
+
+    <div class="rtsp-one-line">
+      👉 온라인의 자기연출은 일상을 보여 주는 데서 끝나지 않고, 무엇을 경험하고 선택할지까지 거꾸로 바꾸기도 합니다.
+    </div>
+
+    <p>
+      온라인 공간에서는 자신의 모습을 더 세밀하게 편집할 수 있습니다.
+      사진을 고르고,
+      문장을 수정하며,
+      게시할 시간과 공개할 사람을 선택할 수 있습니다.
+    </p>
+
+    <p>
+      이런 편집은 오프라인의 자기연출보다 더 오래 남습니다.
+      한 번 게시한 모습은 기록으로 축적되고,
+      다른 사람의 반응은 숫자로 표시됩니다.
+    </p>
+
+    <p>
+      처음에는 경험한 일을 보여 주기 위해 사진을 찍습니다.
+      그러나 어느 순간에는 보여 줄 만한 사진을 만들기 위해 장소와 행동을 선택하게 될 수 있습니다.
+    </p>
+
+    <div class="rtsp-flow">
+      <strong class="rtsp-flow-title">온라인 자기연출이 삶으로 되돌아오는 흐름</strong>
+
+      <div class="rtsp-flow-boxes">
+        <div>일상의 일부를 골라 온라인에 보여 준다</div>
+        <div>좋아요, 댓글, 조회 수를 통해 어떤 모습이 환영받는지 배운다</div>
+        <div>반응이 좋은 모습을 더 자주 보여 준다</div>
+        <div>보여 주기 좋은 경험과 선택을 실제 삶에서도 우선하게 된다</div>
+      </div>
+    </div>
+
+    <p>
+      이때 온라인의 모습은 단순한 가상이 아닙니다.
+      실제 선택과 소비,
+      관계와 감정에 다시 영향을 미칩니다.
+    </p>
+
+    <p>
+      반대로 온라인 자기연출이 언제나 나쁜 것도 아닙니다.
+      현실에서는 드러내기 어려웠던 관심과 정체성을 표현하고,
+      비슷한 경험을 가진 사람과 연결되는 공간이 되기도 합니다.
+    </p>
+
+    <p>
+      그래서 온라인 자기연출의 문제는
+      편집된 모습을 보여 주었다는 사실만으로 판단하기 어렵습니다.
+      그 모습이 자신의 가능성을 넓히는지,
+      아니면 반응이 좋은 한 가지 모습에 자신을 묶는지를 함께 살펴야 합니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtsp-section">
+    <h2>7. 작품으로 읽는 자기연출</h2>
+
+    <div class="rtsp-one-line">
+      👉 작품 속 자기연출은 인물이 다른 사람처럼 보이는 장면보다, 보여 준 모습이 실제 삶과 정체성을 지배하기 시작할 때 더 선명해집니다.
+    </div>
+
+    <h3>7-1) 《리플리》 — 다른 사람으로 보이고 싶은 욕망은 어디까지 나를 바꾸는가</h3>
+
+    <p>
+      《리플리》의 주인공은 자신이 속하지 못한 세계를 동경합니다.
+      그는 타인의 말투와 취향,
+      생활 방식을 관찰하고 익히며
+      자신을 그 세계에 어울리는 사람처럼 연출합니다.
+    </p>
+
+    <p>
+      처음에는 원하는 삶에 들어가기 위한 표현처럼 보입니다.
+      그러나 연출한 모습을 유지하기 위해 더 많은 거짓과 행동이 필요해지고,
+      실제의 자신은 점점 설 자리를 잃습니다.
+    </p>
+
+    <p>
+      자기연출의 관점에서 이 작품은 단순히 사칭의 문제만 묻지 않습니다.
+      타인의 인정을 얻기 위해 만든 모습이
+      어느 순간 나의 삶 전체를 지배한다면,
+      그 모습을 나라고 할 수 있을까요.
+    </p>
+
+    <h3>7-2) 《블랙 미러: 추락》 — 좋은 평가를 받는 모습만 남는 사회</h3>
+
+    <p>
+      《블랙 미러》의 에피소드 〈추락〉은
+      사람들이 서로를 점수로 평가하는 사회를 보여 줍니다.
+      말투와 표정,
+      친절과 인간관계가 모두 평점을 높이기 위한 행동으로 바뀝니다.
+    </p>
+
+    <p>
+      인물들은 상대를 배려하는 것처럼 보이지만,
+      그 행동에는 항상 평가에 대한 계산이 들어 있습니다.
+      낮은 점수를 받을 수 있는 감정과 말은 숨겨지고,
+      환영받는 표정만 반복됩니다.
+    </p>
+
+    <p>
+      이 작품은 자기연출이 개인의 성격 문제가 아니라
+      평가 체계가 만든 생존 방식일 수 있음을 보여 줍니다.
+      좋은 모습을 보여 주지 않으면 실제 기회와 관계를 잃는 사회에서는
+      연출하지 않는 선택 자체가 어려워집니다.
+    </p>
+
+    <div class="rtsp-table-wrap">
+      <table class="rtsp-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>자기연출의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《리플리》</strong></td>
+            <td>타인의 삶과 취향을 모방하며 새로운 정체성을 만들어 감</td>
+            <td>연출한 모습이 삶 전체가 되면 원래의 나는 어디에 남는가</td>
+          </tr>
+          <tr>
+            <td><strong>《블랙 미러: 추락》</strong></td>
+            <td>평점을 얻기 위해 표정과 관계와 감정을 조절함</td>
+            <td>연출하지 않으면 불이익을 받는 사회에서 진정성은 가능한가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 자기연출을 개인의 허영이나 가식만으로 설명하지 않습니다.
+      인정받고 싶은 욕망과 평가 체계,
+      계층과 기회의 문제가
+      보여 주는 자아를 어떻게 만들어 내는지 함께 드러냅니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtsp-section">
+    <h2>8. 자기연출은 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rtsp-one-line">
+      👉 자기연출은 자아가 관계 속에서 표현되고 만들어진다는 사실을 보여 주지만, 모든 연출을 개인의 선택만으로 설명할 수는 없습니다.
+    </div>
+
+    <p>
+      자기연출은 인간에게 하나의 고정된 얼굴만 있는 것이 아님을 보여 줍니다.
+      우리는 상대와 상황에 따라
+      말투와 표정,
+      감정의 표현과 공개하는 정보를 달리합니다.
+    </p>
+
+    <p>
+      이것은 반드시 거짓을 뜻하지 않습니다.
+      여러 관계 속에서 나타나는 모습들은 모두 나의 일부일 수 있습니다.
+      직장에서의 책임감,
+      가까운 사람 앞의 장난스러움,
+      낯선 사람 앞의 조심스러움은 서로 다르지만 모두 실제 행동입니다.
+    </p>
+
+    <p>
+      그러나 자기연출만으로 모든 모습을 설명할 수도 없습니다.
+      누군가는 좋은 평가를 받기 위해 자신을 적극적으로 꾸미지만,
+      누군가는 불이익을 피하기 위해 감정과 정체성을 숨겨야 합니다.
+    </p>
+
+    <p>
+      같은 연출처럼 보여도
+      그 안의 선택 가능성과 위험은 서로 다를 수 있습니다.
+      어떤 사람에게 연출은 표현의 자유이지만,
+      다른 사람에게는 살아남기 위한 적응일 수 있습니다.
+    </p>
+
+    <div class="rtsp-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtsp-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>자기연출은 인간이 관계와 상황에 따라 자신의 모습을 선택하고, 그 수행을 통해 정체성을 형성하는 과정을 보여 줍니다.</span>
+      </div>
+
+      <div class="rtsp-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>평가 체계, 권력관계, 생계와 안전의 차이를 보지 않으면 모든 자기연출이 개인의 자유로운 선택처럼 보일 수 있습니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 자기연출을 묻는 일은
+      가짜 모습을 벗고 진짜 나를 찾자는 결론으로 끝나기 어렵습니다.
+      사회적 얼굴을 모두 벗은 순수한 자아가 따로 존재한다고 단정하기도 어렵기 때문입니다.
+    </p>
+
+    <p>
+      더 중요한 질문은
+      내가 어떤 모습을 왜 보여 주고 있는지,
+      그 모습 밖의 나도 안전하게 드러낼 수 있는지,
+      보여 준 모습이 오히려 내 삶의 가능성을 좁히고 있지는 않은지 살피는 일입니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rtsp-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      자기연출은 거짓된 사람만이 하는 행동이 아닙니다.
+      우리는 관계를 맺는 순간부터
+      어떤 말을 하고 어떤 표정을 보이며
+      무엇을 남겨 둘지 선택합니다.
+    </p>
+
+    <p>
+      문제는 연출한다는 사실보다
+      그 연출이 나의 다른 모습을 허용하는가에 있습니다.
+      보여 준 얼굴을 잠시 내려놓을 공간이 없다면
+      연출은 역할을 넘어 감옥이 될 수 있습니다.
+    </p>
+
+    <p>
+      나는 지금 어떤 모습을 보여 주고 있는가.
+      그 모습은 내가 선택한 표현인가,
+      타인의 평가를 잃지 않기 위해 유지하는 얼굴인가.
+    </p>
+
+    <p>
+      그리고 아무도 보고 있지 않을 때에도
+      나는 그 모습을 나라고 받아들일 수 있는가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtsp-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rtsp-read-intro">
+      자기연출을 단순한 가식으로 닫지 않고, 사회적 자아와 역할, 수행성, 현대사회의 평가 구조 속에서 확장해 읽을 수 있습니다.
+    </p>
+
+    <div class="rtsp-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <strong>Re:Think 현대 철학지도</strong>
+        <span>
+          자기연출을 인간의 조건과 정체성, 권력과 규범, 기술과 이미지의 흐름 속에서 넓게 살펴볼 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+        <strong>인간의 조건 안내지도</strong>
+        <span>
+          보여 주는 자아가 페르소나, 역할자아, 자기소외, 수행성의 문제와 어떻게 이어지는지 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <strong>6 Re:Lenz</strong>
+        <span>
+          자기연출을 개인의 성격 문제로만 보지 않고 관계·사회·언어·이미지의 여러 렌즈로 읽을 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtsp-tags">
+    Re:Think, 자기연출 뜻, Self-presentation, 자기연출, 인상관리, 어빙 고프먼, 앞무대와 뒷무대, 사회적 자아, 역할자아, 수행성, SNS 자기연출, 리플리, 블랙 미러 추락, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtsp-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

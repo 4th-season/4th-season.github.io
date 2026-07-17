@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>역할자아 | Re:Think</title>
+  <meta name="description" content="역할자아 는 사회적 역할을 수행하면서 형성되는 자기 모습입니다. 역할은 관계를 가능하게 하고 삶의 방향을 잡아 주지만, 그 역할이 나의 전부가 될 때 나는 역할 밖의 감정과 욕망을 잃을 수 있습니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rt-role-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 42px;
+    font-family: inherit;
+    color: #2f3540;
+    line-height: 1.82;
+    word-break: keep-all;
+  }
+
+  .rt-role-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rt-role-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #1d4ed8;
+    background: #eff6ff;
+    border-radius: 10px;
+    color: #1e3a8a;
+    font-size: 0.98rem;
+  }
+
+  .rt-role-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eff6ff 0%, #fefce8 100%);
+    border: 1px solid #bfdbfe;
+    border-radius: 18px;
+  }
+
+  .rt-role-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #1d4ed8;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .rt-role-title-like {
+    margin: 0 0 8px;
+    font-size: 1.72rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: -0.045em;
+  }
+
+  .rt-role-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.62;
+    font-weight: 700;
+    color: #a16207;
+  }
+
+  .rt-role-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rt-role-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-role-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #1e3a8a;
+  }
+
+  .rt-role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rt-role-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #fde68a;
+    border-radius: 13px;
+  }
+
+  .rt-role-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1d4ed8;
+    font-size: 1.02rem;
+  }
+
+  .rt-role-grid-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.94rem;
+  }
+
+  .rt-role-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 16px;
+  }
+
+  .rt-role-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #854d0e;
+  }
+
+  .rt-role-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #fef3c7;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rt-role-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #713f12;
+    list-style: none;
+  }
+
+  .rt-role-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rt-role-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #1d4ed8;
+  }
+
+  .rt-role-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rt-role-toc-desc {
+    padding: 0 16px 15px;
+    color: #64748b;
+    font-size: 0.95rem;
+    border-top: 1px solid #fef3c7;
+  }
+
+  .rt-role-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #bfdbfe;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(29, 78, 216, 0.06);
+  }
+
+  .rt-role-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #1d4ed8;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #1e3a8a;
+    letter-spacing: -0.035em;
+  }
+
+  .rt-role-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #eff6ff;
+    border-radius: 12px;
+    color: #1e3a8a;
+    font-weight: 600;
+  }
+
+  .rt-role-section p {
+    margin: 0 0 14px;
+  }
+
+  .rt-role-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #fefce8;
+    border-left: 5px solid #1d4ed8;
+    border-radius: 10px;
+    color: #713f12;
+    font-weight: 700;
+  }
+
+  .rt-role-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+  }
+
+  .rt-role-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+    font-weight: 800;
+  }
+
+  .rt-role-flow-step {
+    padding: 11px 13px;
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    color: #475569;
+  }
+
+  .rt-role-flow-arrow {
+    margin: 4px 0;
+    text-align: center;
+    color: #1d4ed8;
+    font-weight: 800;
+  }
+
+  .rt-role-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rt-role-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .rt-role-table th {
+    padding: 12px 10px;
+    background: #1d4ed8;
+    color: #fff;
+    border: 1px solid #bfdbfe;
+    text-align: left;
+  }
+
+  .rt-role-table td {
+    padding: 12px 10px;
+    border: 1px solid #bfdbfe;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rt-role-table tr:nth-child(even) td {
+    background: #fefce8;
+  }
+
+  .rt-role-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 22px 0;
+  }
+
+  .rt-role-card {
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #bfdbfe;
+    border-radius: 15px;
+  }
+
+  .rt-role-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e3a8a;
+  }
+
+  .rt-role-card span {
+    color: #475569;
+  }
+
+  .rt-role-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #a16207 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rt-role-final h2 {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: 1.34rem;
+  }
+
+  .rt-role-final p {
+    margin: 0 0 12px;
+  }
+
+  .rt-role-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+  }
+
+  .rt-role-read h2 {
+    margin: 0 0 16px;
+    color: #334155;
+    font-size: 1.35rem;
+  }
+
+  .rt-role-read p {
+    margin: 0 0 20px;
+    color: #64748b;
+  }
+
+  .rt-role-read a {
+    display: block;
+    margin-bottom: 14px;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    color: #1f2937;
+    text-decoration: none;
+  }
+
+  .rt-role-read strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e3a8a;
+  }
+
+  .rt-role-read span {
+    display: block;
+    color: #475569;
+  }
+
+  .rt-role-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eff6ff;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rt-role-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rt-role-grid,
+    .rt-role-card-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-role-section {
+      padding: 24px 18px;
+    }
+
+    .rt-role-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rt-role-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rt-role-wrap">
+
+  <h1 class="seo-h1">[Re:Think] 역할자아 뜻 - 역할은 왜 나를 보호하면서도 가두는가</h1>
+<div class="rt-role-meta">
+    <strong>역할자아</strong>는 사회적 역할을 수행하면서 형성되는 자기 모습입니다. 역할은 관계를 가능하게 하고 삶의 방향을 잡아 주지만, 그 역할이 나의 전부가 될 때 나는 역할 밖의 감정과 욕망을 잃을 수 있습니다.
+  </div>
+
+  <section class="rt-role-hero">
+    <div class="rt-role-kicker">Re:Think 현대철학사전</div>
+
+    <div class="rt-role-title-like">역할자아 뜻</div>
+
+    <div class="rt-role-subtitle-like">
+      역할은 왜 나를 보호하면서도 가두는가
+    </div>
+
+    <p>
+      힘든 일이 있어도 집에 들어가기 전 표정을 고칩니다.
+      가족에게 걱정을 주고 싶지 않아서입니다.
+      직장에서는 피곤해도 침착한 목소리를 유지하고,
+      누군가의 부탁을 받으면 쉽게 거절하지 못합니다.
+    </p>
+
+    <p>
+      책임감 있는 사람,
+      믿음직한 부모,
+      흔들리지 않는 상사,
+      분위기를 맞추는 동료로 보이고 싶기 때문만은 아닙니다.
+      어느 순간 그 역할은 내가 지켜야 할 질서처럼 느껴집니다.
+    </p>
+
+    <p>
+      그런데 혼자 남으면 이상한 감각이 찾아옵니다.
+      모두가 필요로 하는 역할은 잘 수행했는데,
+      정작 나는 무엇을 원하고 있었는지 잘 모르겠습니다.
+    </p>
+
+    <p>
+      역할자아는 바로 이 장면에서 시작됩니다.
+      역할은 사회생활을 가능하게 하고 나를 보호하지만,
+      때로는 역할 밖의 나를 보지 못하게 만들기도 합니다.
+    </p>
+  </section>
+
+  <section class="rt-role-map">
+    <div class="rt-role-map-title">역할자아 핵심 지도</div>
+
+    <div class="rt-role-grid">
+      <div class="rt-role-grid-item">
+        <strong>기대</strong>
+        <span>어떤 위치에 놓인 사람에게 적절하다고 여겨지는 행동과 태도입니다.</span>
+      </div>
+
+      <div class="rt-role-grid-item">
+        <strong>수행</strong>
+        <span>상황과 관계에 맞춰 역할에 필요한 말과 행동을 반복합니다.</span>
+      </div>
+
+      <div class="rt-role-grid-item">
+        <strong>동일시</strong>
+        <span>반복된 역할을 어느 순간 나의 성격이나 본질처럼 받아들입니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rt-role-toc">
+    <div class="rt-role-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 집에 들어가기 전 표정을 고칠 때</summary>
+      <div class="rt-role-toc-desc">
+        역할에 맞는 얼굴을 준비하는 일상의 장면에서 역할자아의 질문을 시작합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 역할자아 뜻</summary>
+      <div class="rt-role-toc-desc">
+        사회적 기대와 역할 수행이 자기 모습으로 굳어지는 과정을 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 역할은 왜 필요한가</summary>
+      <div class="rt-role-toc-desc">
+        역할이 관계의 질서와 예측 가능성을 만들고 사람을 보호하는 지점을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 역할은 어떻게 나의 성격처럼 굳어지는가</summary>
+      <div class="rt-role-toc-desc">
+        반복되는 수행과 타인의 반응을 통해 역할이 자아로 받아들여지는 과정을 살핍니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 작품으로 읽는 역할자아</summary>
+      <div class="rt-role-toc-desc">
+        《남아 있는 나날》을 통해 직업적 역할이 한 사람의 삶 전체가 되는 장면을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 역할이 삶을 가두기 시작할 때</summary>
+      <div class="rt-role-toc-desc">
+        책임감과 역할 수행이 감정 억압과 자기상실로 바뀌는 경계를 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 역할자아가 보여 주는 것과 놓치는 것</summary>
+      <div class="rt-role-toc-desc">
+        역할의 사회적 힘과 함께, 개인이 역할을 벗어나기 어려운 현실의 조건을 살핍니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 역할 밖의 나는 어디에 있는가</summary>
+      <div class="rt-role-toc-desc">
+        내가 맡은 역할과 내가 원하는 삶이 어디에서 만나고 갈라지는지 다시 묻습니다.
+      </div>
+    </details>
+  </nav>
+
+  <section class="rt-role-section">
+    <h2>1. 집에 들어가기 전 표정을 고칠 때</h2>
+
+    <div class="rt-role-one-line">
+      👉 역할자아는 내가 느끼는 감정보다 지금 보여 주어야 할 태도를 먼저 선택하는 순간에 드러납니다.
+    </div>
+
+    <p>
+      하루 종일 힘든 일을 겪었지만
+      집에 들어가기 전 잠시 숨을 고릅니다.
+      가족에게는 괜찮은 사람으로 보이고 싶고,
+      내 피로가 집 안 전체를 무겁게 만들지 않았으면 합니다.
+    </p>
+
+    <p>
+      이런 조절은 모두 거짓이 아닙니다.
+      자신의 감정을 그대로 쏟아 놓지 않는 일은
+      다른 사람을 배려하는 책임이 될 수 있습니다.
+    </p>
+
+    <p>
+      직장에서도 마찬가지입니다.
+      개인적으로 힘든 날에도 해야 할 일을 처리하고,
+      고객과 동료에게 필요한 태도를 유지합니다.
+      사회생활은 어느 정도의 역할 수행을 요구합니다.
+    </p>
+
+    <p>
+      문제는 그 수행이 끝나지 않을 때 생깁니다.
+      누구 앞에서도 힘들다고 말하지 못하고,
+      도움을 청하면 역할을 잃는 것처럼 느끼며,
+      역할에 어울리지 않는 감정을 스스로 지우기 시작합니다.
+    </p>
+
+    <div class="rt-role-quote">
+      나는 지금 관계를 위해 감정을 조절하고 있는 걸까요,<br>
+      아니면 역할을 지키기 위해 나의 감정을 없애고 있는 걸까요?
+    </div>
+  </section>
+
+  <section class="rt-role-section">
+    <h2>2. 역할자아 뜻</h2>
+
+    <div class="rt-role-one-line">
+      👉 역할자아는 사회적 위치에 따라 기대되는 행동을 수행하면서 형성되는 자기 모습입니다.
+    </div>
+
+    <p>
+      사람은 하나의 역할만 가지고 살아가지 않습니다.
+      한 사람은 누군가의 자녀이면서 부모일 수 있고,
+      직장에서는 관리자이며,
+      친구 사이에서는 조언을 들어 주는 사람이 될 수 있습니다.
+    </p>
+
+    <p>
+      각각의 역할에는 기대되는 태도가 있습니다.
+      부모에게는 책임과 돌봄이,
+      직원에게는 성실함과 협력이,
+      친구에게는 신뢰와 친밀함이 기대됩니다.
+    </p>
+
+    <p>
+      우리는 이런 기대를 배우고 반복하며
+      상황에 맞는 행동을 익힙니다.
+      처음에는 의식적으로 수행한 행동도
+      반복되면 자연스러운 자기 모습처럼 느껴집니다.
+    </p>
+
+    <div class="rt-role-table-wrap">
+      <table class="rt-role-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>역할의 기대</th>
+            <th>자아로 굳어지는 모습</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>부모 역할</strong></td>
+            <td>돌보고 책임져야 함</td>
+            <td>나는 언제나 강하고 희생해야 하는 사람이라고 느낌</td>
+          </tr>
+          <tr>
+            <td><strong>직장 역할</strong></td>
+            <td>성과를 내고 감정을 조절해야 함</td>
+            <td>성과가 없으면 자기 가치도 없다고 느낌</td>
+          </tr>
+          <tr>
+            <td><strong>친구 역할</strong></td>
+            <td>이해하고 지지해야 함</td>
+            <td>자신의 어려움보다 다른 사람의 문제를 먼저 돌봄</td>
+          </tr>
+          <tr>
+            <td><strong>가족 역할</strong></td>
+            <td>갈등을 줄이고 관계를 지켜야 함</td>
+            <td>불편한 감정을 표현하면 관계를 깨는 사람처럼 느낌</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      역할자아는 가짜 자아가 아닙니다.
+      역할을 수행하며 실제로 배우고 형성된 나의 일부입니다.
+      다만 그 일부가 나의 전부가 될 때 문제가 시작됩니다.
+    </p>
+  </section>
+
+  <section class="rt-role-section">
+    <h2>3. 역할은 왜 필요한가</h2>
+
+    <div class="rt-role-one-line">
+      👉 역할은 인간을 억압하기만 하는 틀이 아니라, 관계의 방향과 책임의 범위를 알려 주는 생활의 질서입니다.
+    </div>
+
+    <p>
+      역할이라는 말은 종종 자유의 반대처럼 들립니다.
+      사회가 사람에게 기대하는 정해진 행동이며,
+      개인의 개성과 욕망을 억누르는 틀처럼 보입니다.
+    </p>
+
+    <p>
+      그러나 역할이 전혀 없다면 관계는 쉽게 불안정해집니다.
+      누가 어떤 책임을 져야 하는지,
+      어떤 상황에서 무엇을 기대할 수 있는지 알기 어려워집니다.
+    </p>
+
+    <p>
+      의사, 교사, 부모, 동료처럼
+      사회적 역할에는 일정한 책임이 따릅니다.
+      역할은 개인의 순간적인 기분을 넘어
+      다른 사람에게 예측 가능한 행동을 제공하기도 합니다.
+    </p>
+
+    <div class="rt-role-card-grid">
+      <div class="rt-role-card">
+        <strong>관계의 예측 가능성</strong>
+        <span>상대가 어떤 책임과 행동을 맡을지 어느 정도 예상할 수 있습니다.</span>
+      </div>
+
+      <div class="rt-role-card">
+        <strong>책임의 범위</strong>
+        <span>내가 어디까지 응답하고 무엇을 감당해야 하는지 알려 줍니다.</span>
+      </div>
+
+      <div class="rt-role-card">
+        <strong>감정의 보호</strong>
+        <span>힘든 상황에서도 역할에 필요한 태도를 유지하며 관계의 충격을 줄입니다.</span>
+      </div>
+
+      <div class="rt-role-card">
+        <strong>삶의 소속감</strong>
+        <span>어떤 공동체에서 필요한 사람이라는 감각을 형성합니다.</span>
+      </div>
+    </div>
+
+    <p>
+      역할은 그래서 무조건 벗어야 할 가면이 아닙니다.
+      오히려 함께 살기 위해 필요한 얼굴이자
+      책임을 구체적으로 만드는 사회적 약속에 가깝습니다.
+    </p>
+
+    <p>
+      다만 필요한 역할이 언제
+      한 사람의 감정과 삶 전체를 요구하기 시작하는지는
+      별도로 물어야 합니다.
+    </p>
+  </section>
+
+  <section class="rt-role-section">
+    <h2>4. 역할은 어떻게 나의 성격처럼 굳어지는가</h2>
+
+    <div class="rt-role-one-line">
+      👉 반복해서 수행한 역할은 어느 순간 내가 선택한 행동이 아니라 원래부터 가진 성격처럼 느껴질 수 있습니다.
+    </div>
+
+    <p>
+      처음 맡은 역할은 대개 어색합니다.
+      처음 부모가 되었을 때,
+      처음 관리자가 되었을 때,
+      처음 누군가를 돌봐야 했을 때
+      어떻게 행동해야 할지 쉽게 알 수 없습니다.
+    </p>
+
+    <p>
+      사람은 주변을 보고 기대를 배웁니다.
+      좋은 부모는 어떠해야 하는지,
+      유능한 직장인은 어떻게 말해야 하는지,
+      믿음직한 사람은 어떤 감정을 드러내지 않는지 익힙니다.
+    </p>
+
+    <p>
+      그런 행동을 반복하면 타인의 반응도 달라집니다.
+      사람들은 나를 책임감 있는 사람,
+      침착한 사람,
+      언제든 부탁할 수 있는 사람이라고 부릅니다.
+    </p>
+
+    <p>
+      그 이름을 오래 듣다 보면
+      나 역시 그 역할을 자기 성격처럼 받아들입니다.
+      역할이 나를 설명하고,
+      나도 다시 그 설명에 맞춰 행동합니다.
+    </p>
+
+    <div class="rt-role-flow">
+      <strong class="rt-role-flow-title">역할이 자아로 굳어지는 흐름</strong>
+
+      <div class="rt-role-flow-step">사회적 위치에 따라 기대되는 행동을 배움</div>
+      <div class="rt-role-flow-arrow">↓</div>
+      <div class="rt-role-flow-step">상황에 맞는 말과 행동을 반복함</div>
+      <div class="rt-role-flow-arrow">↓</div>
+      <div class="rt-role-flow-step">타인이 그 역할에 맞는 사람으로 인정함</div>
+      <div class="rt-role-flow-arrow">↓</div>
+      <div class="rt-role-flow-step">역할을 원래부터 가진 성격처럼 받아들임</div>
+    </div>
+
+    <p>
+      이 과정에서 역할과 자아를 완전히 나누기는 어렵습니다.
+      역할을 오래 수행하면서 실제로 책임감과 능력이 생기기도 하기 때문입니다.
+    </p>
+
+    <p>
+      그러나 역할에 맞지 않는 감정과 욕망을
+      모두 틀린 것으로 밀어낼 때,
+      역할은 성장을 돕는 틀이 아니라
+      자기 이해를 좁히는 기준이 됩니다.
+    </p>
+  </section>
+
+  <section class="rt-role-section">
+    <h2>5. 작품으로 읽는 역할자아</h2>
+
+    <div class="rt-role-one-line">
+      👉 작품 속 역할자아는 자신의 역할을 완벽하게 수행하는 동안, 정작 자기 삶의 판단과 감정을 잃는 모습으로 드러납니다.
+    </div>
+
+    <div class="rt-role-card-grid">
+      <div class="rt-role-card">
+        <strong>《남아 있는 나날》 — 완벽한 집사라는 역할</strong>
+        <span>
+          스티븐스는 훌륭한 집사가 되기 위해 감정을 절제하고 주인의 판단을 자신의 책임 밖에 둡니다.
+          그에게 품위란 개인적 감정보다 직업적 역할을 앞세우는 태도입니다.
+          그는 역할 속에서 자부심과 질서를 얻지만, 동시에 사랑과 의심, 자기 판단을 뒤로 미룹니다.
+        </span>
+      </div>
+
+      <div class="rt-role-card">
+        <strong>역할이 삶 전체가 되었을 때</strong>
+        <span>
+          스티븐스는 자신이 무엇을 원했는지보다 얼마나 훌륭한 집사였는지를 기준으로 삶을 평가합니다.
+          그러나 자신이 충성한 주인의 판단이 잘못되었다는 사실과 잃어버린 관계를 돌아보며, 역할에 충실했다는 말만으로 삶 전체가 설명되지 않음을 마주합니다.
+        </span>
+      </div>
+    </div>
+
+    <div class="rt-role-table-wrap">
+      <table class="rt-role-table">
+        <thead>
+          <tr>
+            <th>작품 속 장면</th>
+            <th>역할자아의 모습</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>감정을 드러내지 않음</strong></td>
+            <td>집사의 품위를 지키기 위해 개인적 슬픔과 사랑을 억제함</td>
+            <td>역할을 지키기 위해 감정을 지우는 것은 언제 책임이 되는가</td>
+          </tr>
+          <tr>
+            <td><strong>주인의 판단을 따름</strong></td>
+            <td>직업적 충성을 이유로 자신의 도덕적 판단을 뒤로 미룸</td>
+            <td>역할에 충실했다는 말은 책임을 어디까지 덜어 주는가</td>
+          </tr>
+          <tr>
+            <td><strong>지나온 삶을 돌아봄</strong></td>
+            <td>역할의 성취와 개인의 상실이 동시에 드러남</td>
+            <td>훌륭한 역할 수행은 좋은 삶과 같은 말인가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      《남아 있는 나날》은 역할을 단순히 거짓 가면으로 그리지 않습니다.
+      스티븐스의 역할에는 기술과 자부심, 오랜 헌신이 들어 있습니다.
+    </p>
+
+    <p>
+      작품이 묻는 것은 역할을 버려야 하는지가 아닙니다.
+      역할을 지키는 동안
+      자신의 판단과 감정과 책임을 어디까지 다른 사람에게 맡겼는지입니다.
+    </p>
+  </section>
+
+  <section class="rt-role-section">
+    <h2>6. 역할이 삶을 가두기 시작할 때</h2>
+
+    <div class="rt-role-one-line">
+      👉 역할은 나를 보호하고 관계를 유지하지만, 역할에 어울리지 않는 모든 모습을 금지할 때 삶을 가두기 시작합니다.
+    </div>
+
+    <p>
+      역할은 때로 사람을 보호합니다.
+      무엇을 해야 할지 모르는 상황에서
+      역할은 행동의 기준을 제공합니다.
+      개인적 감정에 휩쓸리지 않고 필요한 일을 해내게도 합니다.
+    </p>
+
+    <p>
+      그러나 역할이 너무 강해지면
+      사람은 역할에 맞지 않는 감정을 부끄러워합니다.
+      부모는 지쳤다고 말하지 못하고,
+      책임자는 모른다고 말하지 못하며,
+      늘 밝은 사람은 슬픔을 드러내기 어려워집니다.
+    </p>
+
+    <p>
+      역할이 나를 가두는 순간은
+      역할을 수행할 때가 아니라
+      역할 밖으로 잠시 나올 수 없을 때입니다.
+    </p>
+
+    <div class="rt-role-table-wrap">
+      <table class="rt-role-table">
+        <thead>
+          <tr>
+            <th>역할의 말</th>
+            <th>나를 보호하는 지점</th>
+            <th>나를 가두는 지점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>내가 책임져야 한다</strong></td>
+            <td>맡은 일을 쉽게 버리지 않게 함</td>
+            <td>도움을 요청하거나 책임을 나누지 못하게 함</td>
+          </tr>
+          <tr>
+            <td><strong>나는 강해야 한다</strong></td>
+            <td>어려운 순간을 견디게 함</td>
+            <td>두려움과 약함을 인정하지 못하게 함</td>
+          </tr>
+          <tr>
+            <td><strong>좋은 사람이어야 한다</strong></td>
+            <td>관계에서 배려와 책임을 지키게 함</td>
+            <td>거절과 갈등을 모두 나쁜 행동으로 느끼게 함</td>
+          </tr>
+          <tr>
+            <td><strong>전문가답게 행동해야 한다</strong></td>
+            <td>업무의 기준과 신뢰를 유지하게 함</td>
+            <td>모름과 실수를 숨기게 만들 수 있음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      역할에서 벗어난다고 해서
+      모든 책임을 내려놓아야 하는 것은 아닙니다.
+      오히려 역할과 자기 삶 사이에 거리를 둘 수 있어야
+      역할의 책임도 더 분명하게 볼 수 있습니다.
+    </p>
+  </section>
+
+  <section class="rt-role-section">
+    <h2>7. 역할자아가 보여 주는 것과 놓치는 것</h2>
+
+    <div class="rt-role-one-line">
+      👉 역할자아는 사회적 기대가 자아를 형성하는 방식을 보여 주지만, 모든 역할 수행을 개인의 선택이나 가면으로만 설명할 수는 없습니다.
+    </div>
+
+    <p>
+      역할자아라는 개념은
+      인간이 혼자 완성된 자아를 가지고 사회에 들어오는 것이 아님을 보여 줍니다.
+      우리는 관계 속에서 기대를 배우고,
+      역할을 수행하며,
+      타인의 반응을 통해 자신을 이해합니다.
+    </p>
+
+    <p>
+      또한 내가 성격이라고 믿은 모습 가운데 일부가
+      오랫동안 수행한 역할의 결과일 수 있음을 보게 합니다.
+      늘 참는 사람,
+      언제나 책임지는 사람,
+      갈등을 피하는 사람이 된 데에는
+      특정한 관계와 역할의 역사가 있을 수 있습니다.
+    </p>
+
+    <p>
+      그러나 역할자아만으로 모든 현실을 설명할 수는 없습니다.
+      어떤 사람은 역할을 좋아해서가 아니라
+      생계와 돌봄, 조직의 위계 때문에 그 역할을 벗어날 수 없을 수 있습니다.
+    </p>
+
+    <div class="rt-role-table-wrap">
+      <table class="rt-role-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>역할자아가 보여 주는 것</th>
+            <th>역할자아만으로 부족한 것</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>자아 형성</strong></td>
+            <td>역할과 타인의 기대가 자기 모습을 형성함</td>
+            <td>개인의 경험과 기질, 욕망 전체를 설명하지 못함</td>
+          </tr>
+          <tr>
+            <td><strong>감정 조절</strong></td>
+            <td>역할에 따라 감정 표현이 달라지는 이유를 보여 줌</td>
+            <td>소진과 우울, 불안 같은 실제 고통을 역할 문제로만 줄일 수 없음</td>
+          </tr>
+          <tr>
+            <td><strong>역할의 지속</strong></td>
+            <td>왜 역할을 쉽게 내려놓지 못하는지 설명함</td>
+            <td>경제적 조건과 제도적 강제가 역할을 유지시키는 현실</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 역할에 갇힌 사람에게
+      단순히 자기답게 살라고 말하는 것은 충분하지 않습니다.
+      역할을 나눌 관계와 제도,
+      물러날 수 있는 시간과 자원,
+      약함을 드러내도 무너지지 않는 환경이 함께 필요합니다.
+    </p>
+
+    <p>
+      역할자아는 개인의 마음을 읽는 개념이면서,
+      어떤 사회가 누구에게 어떤 역할을 오래 요구하는지 묻게 하는 개념이기도 합니다.
+    </p>
+  </section>
+
+  <section class="rt-role-section">
+    <h2>8. 역할 밖의 나는 어디에 있는가</h2>
+
+    <div class="rt-role-one-line">
+      👉 역할 밖의 참된 자아를 하나 따로 찾기보다, 내가 역할을 어떻게 받아들이고 어디에서 거리를 두는지 살펴야 합니다.
+    </div>
+
+    <p>
+      역할을 모두 벗으면 진짜 내가 나타날 것처럼 생각하기 쉽습니다.
+      그러나 인간은 관계와 역할 없이 홀로 존재하지 않습니다.
+      역할 속에서 배운 책임과 능력,
+      관계를 지켜 온 태도도 분명 나의 일부입니다.
+    </p>
+
+    <p>
+      따라서 역할자아의 질문은
+      가짜 역할을 벗고 진짜 나를 찾자는 데 있지 않습니다.
+      어떤 역할을 나의 삶으로 받아들이고 있는지,
+      어떤 역할은 나에게 강요되었는지,
+      그 역할과 어디까지 거리를 둘 수 있는지 묻는 데 있습니다.
+    </p>
+
+    <div class="rt-role-card-grid">
+      <div class="rt-role-card">
+        <strong>첫 번째 질문</strong>
+        <span>나는 어떤 역할을 수행할 때 가장 안전하다고 느끼는가.</span>
+      </div>
+
+      <div class="rt-role-card">
+        <strong>두 번째 질문</strong>
+        <span>그 역할에 어울리지 않는다는 이유로 지우고 있는 감정은 무엇인가.</span>
+      </div>
+
+      <div class="rt-role-card">
+        <strong>세 번째 질문</strong>
+        <span>나는 책임을 지고 있는가, 아니면 모든 책임을 혼자 떠안고 있는가.</span>
+      </div>
+
+      <div class="rt-role-card">
+        <strong>네 번째 질문</strong>
+        <span>내가 역할이라고 생각한 것 가운데 사실은 다른 사람이 나에게 요구한 삶은 무엇인가.</span>
+      </div>
+    </div>
+
+    <p>
+      역할 밖의 나는 완전히 다른 사람이 아닐 수 있습니다.
+      역할을 수행하면서도 힘들다고 말할 수 있고,
+      책임을 지면서도 도움을 청할 수 있으며,
+      관계를 지키면서도 거절할 수 있는 사람이
+      역할과 함께 살아가는 나일 수 있습니다.
+    </p>
+  </section>
+
+  <section class="rt-role-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      역할은 인간을 가리기만 하지 않습니다.
+      역할을 통해 우리는 관계를 배우고,
+      책임을 익히며,
+      혼자서는 갖기 어려웠던 능력과 태도를 얻습니다.
+    </p>
+
+    <p>
+      그러나 역할이 나의 전부가 되는 순간,
+      나는 그 역할에 어울리지 않는 감정과 욕망,
+      약함과 질문을 스스로 지우기 시작할 수 있습니다.
+    </p>
+
+    <p>
+      나는 지금 어떤 역할을 살아가고 있는가.
+      그 역할은 나를 보호하고 관계를 이어 주고 있는가,
+      아니면 역할을 잃을까 두려워
+      나 자신을 말하지 못하게 만들고 있는가.
+    </p>
+
+    <p>
+      그리고 역할을 잠시 내려놓았을 때도
+      나는 여전히 존중받고 관계 안에 머물 수 있는가.
+    </p>
+  </section>
+
+  <section class="rt-role-read">
+    <h2>함께 읽기</h2>
+
+    <p>
+      역할자아는 혼자 만들어진 성격이 아니라 관계의 기대, 반복되는 행동, 사회적 얼굴이 겹쳐 형성됩니다. 아래 글은 역할이 자아와 정체성으로 굳어지는 과정을 서로 다른 방향에서 이어 읽게 합니다.
+    </p>
+
+    <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+      <strong>[Re:Think] 인간의 조건 안내지도 - 존재·자유·정체성으로 읽는 현대 철학사전</strong>
+      <span>역할자아를 한 사람의 성격 문제로만 보지 않고, 자아·정체성·수행성·규범으로 이어지는 인간의 조건 전체 안에서 살펴볼 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/294" target="_blank" rel="noopener">
+      <strong>[Re:Think] 페르소나 뜻 - 우리는 언제부터 나라고 믿기 시작했는가</strong>
+      <span>역할자아가 반복된 역할 속에서 형성된 나라면, 페르소나는 관계마다 사용하는 사회적 얼굴이 왜 모두 거짓은 아닌지 함께 보여 줍니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/5" target="_blank" rel="noopener">
+      <strong>〈현대 철학사전 ; 개념편〉 수행성 — 우리는 왜 행동을 반복하며 나를 만들어 가는가</strong>
+      <span>역할에 맞는 말과 행동이 반복되면서 어느 순간 성격과 정체성처럼 받아들여지는 과정을 수행성의 관점에서 이어 읽을 수 있습니다.</span>
+    </a>
+
+    <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+      <strong>6 Re:Lenz 안내 지도 - 세상을 읽는 여섯 개의 렌즈</strong>
+      <span>역할과 자아의 문제를 철학에만 가두지 않고, 현대사회·언어·상징·경제의 여러 관점과 연결해 읽는 큰 구조를 확인할 수 있습니다.</span>
+    </a>
+  </section>
+
+  <div class="rt-role-tags">
+    Re:Think, 역할자아, 역할자아뜻, RoleSelf, 사회적역할, 자아, 정체성, 수행성, 페르소나, 역할갈등, 역할기대, 자기상실, 남아있는나날, 고프먼, 현대철학
+  </div>
+
+  <div class="rt-role-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

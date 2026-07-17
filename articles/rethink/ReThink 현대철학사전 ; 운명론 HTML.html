@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>운명론 | Re:Think</title>
+  <meta name="description" content="운명론 은 삶의 일이 이미 정해져 있다고 보는 태도입니다. 이 글은 운명이라는 말이 언제 위로가 되고, 언제 선택과 책임을 흐리게 만드는지 일상의 장면에서 다시 묻습니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtf-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #2e332f;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtf-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtf-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #5f6f3a;
+    background: #f6f4ea;
+    border-radius: 10px;
+    color: #40492b;
+    font-size: 0.98rem;
+  }
+
+  .rtf-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eef3f8 0%, #f8f3e7 100%);
+    border: 1px solid #d9d0b8;
+    border-radius: 18px;
+  }
+
+  .rtf-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #22324a;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rtf-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #22324a;
+    letter-spacing: -0.045em;
+  }
+
+  .rtf-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #5f6f3a;
+  }
+
+  .rtf-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtf-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f3f6ee;
+    border: 1px solid #d8dfc9;
+    border-radius: 16px;
+  }
+
+  .rtf-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #40492b;
+  }
+
+  .rtf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtf-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #ded7c4;
+    border-radius: 13px;
+  }
+
+  .rtf-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #22324a;
+    font-size: 1.02rem;
+  }
+
+  .rtf-grid-item span {
+    display: block;
+    color: #525a50;
+    font-size: 0.94rem;
+  }
+
+  .rtf-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eef3f8;
+    border: 1px solid #ccd7e2;
+    border-radius: 16px;
+  }
+
+  .rtf-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #22324a;
+  }
+
+  .rtf-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #d7e0e8;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtf-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #22324a;
+    list-style: none;
+  }
+
+  .rtf-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtf-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #5f6f3a;
+  }
+
+  .rtf-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtf-toc-desc {
+    padding: 0 16px 15px;
+    color: #56616f;
+    font-size: 0.95rem;
+    border-top: 1px solid #e4ebf1;
+  }
+
+  .rtf-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #d7e0e8;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(34, 50, 74, 0.06);
+  }
+
+  .rtf-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #5f6f3a;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #22324a;
+    letter-spacing: -0.035em;
+  }
+
+  .rtf-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #5f6f3a;
+  }
+
+  .rtf-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #f6f4ea;
+    border-radius: 12px;
+    color: #40492b;
+    font-weight: 600;
+  }
+
+  .rtf-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtf-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #eef3f8;
+    border-left: 5px solid #5f6f3a;
+    border-radius: 10px;
+    color: #22324a;
+    font-weight: 700;
+  }
+
+  .rtf-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtf-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtf-table th {
+    background: #22324a;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #ccd7e2;
+    text-align: left;
+  }
+
+  .rtf-table td {
+    padding: 12px 10px;
+    border: 1px solid #ccd7e2;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtf-table tr:nth-child(even) td {
+    background: #f8f3e7;
+  }
+
+  .rtf-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #d7e0e8;
+    border-radius: 14px;
+  }
+
+  .rtf-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #22324a;
+    font-weight: 800;
+  }
+
+  .rtf-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #4d5563;
+  }
+
+  .rtf-flow-boxes div {
+    padding: 11px 13px;
+    background: #eef3f8;
+    border-radius: 9px;
+  }
+
+  .rtf-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #22324a 0%, #5f6f3a 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rtf-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtf-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtf-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rtf-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rtf-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rtf-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rtf-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rtf-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rtf-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eef3f8;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtf-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rtf-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtf-section {
+      padding: 24px 18px;
+    }
+
+    .rtf-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtf-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtf-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 운명론 뜻 - 운명이라는 말은 언제 책임을 덜어 주는가</h1>
+<div class="rtf-meta">
+    <strong>운명론</strong>은 삶의 일이 이미 정해져 있다고 보는 태도입니다. 이 글은 운명이라는 말이 언제 위로가 되고, 언제 선택과 책임을 흐리게 만드는지 일상의 장면에서 다시 묻습니다.
+  </div>
+
+  <!-- 안내 영역: H1 대신 제목형 표시 -->
+  <section class="rtf-hero">
+    <div class="rtf-kicker">Re:Think 현대철학사전</div>
+    <div class="rtf-title-like">운명론 뜻</div>
+    <div class="rtf-subtitle-like">
+      운명이라는 말은 언제 책임을 덜어 주는가
+    </div>
+
+    <p>
+      일이 잘 풀리지 않을 때 우리는 가끔 이렇게 말합니다.
+      <strong>“이건 내 팔자인가 보다.”</strong>
+      <strong>“어차피 이렇게 될 일이었나 보다.”</strong>
+      말하고 나면 마음이 조금 가라앉습니다.
+    </p>
+
+    <p>
+      이상하게도 운명이라는 말은 사람을 위로할 때가 있습니다.
+      내가 더 잘했어야 했다는 후회,
+      다른 선택을 했어야 했다는 자책,
+      왜 나에게만 이런 일이 생기느냐는 억울함을 잠시 내려놓게 해 줍니다.
+    </p>
+
+    <p>
+      그런데 바로 그 지점에서 질문이 생깁니다.
+      운명이라는 말은 나를 지켜 주는 말일까요.
+      아니면 내가 더 묻지 않도록 멈추게 하는 말일까요.
+    </p>
+
+    <p>
+      <strong>운명론</strong>은 삶의 일이 이미 정해져 있다고 보는 태도입니다.
+      하지만 이 개념이 흥미로운 이유는 단지 “운명이 있다 없다”의 문제가 아닙니다.
+      운명이라는 말이 우리의 선택, 후회, 책임, 체념을 어떻게 바꾸는지가 더 중요합니다.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtf-map">
+    <div class="rtf-map-title">운명론 핵심 지도</div>
+
+    <div class="rtf-grid">
+      <div class="rtf-grid-item">
+        <strong>정해짐</strong>
+        <span>삶의 일이 이미 어떤 방향으로 놓여 있다고 느끼는 태도입니다.</span>
+      </div>
+
+      <div class="rtf-grid-item">
+        <strong>위로</strong>
+        <span>모든 것을 내 탓으로 돌리지 않게 해 주는 말이 될 수 있습니다.</span>
+      </div>
+
+      <div class="rtf-grid-item">
+        <strong>체념</strong>
+        <span>더 묻고 바꾸려는 힘을 멈추게 하는 말이 될 수도 있습니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtf-toc">
+    <div class="rtf-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 일이 안 풀릴 때 왜 우리는 운명을 말할까</summary>
+      <div class="rtf-toc-desc">
+        운명이라는 말이 일상의 실패와 후회 속에서 어떤 역할을 하는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 운명론은 결정론과 어떻게 다른가</summary>
+      <div class="rtf-toc-desc">
+        운명론, 결정론, 체념의 차이를 구분하며 개념의 방향을 잡습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 운명이라는 말은 왜 위로가 되는가</summary>
+      <div class="rtf-toc-desc">
+        운명론이 자책을 덜어 주고 감당하기 어려운 사건을 받아들이게 하는 지점을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 운명이라는 말은 언제 책임을 흐리게 하는가</summary>
+      <div class="rtf-toc-desc">
+        운명론이 선택, 책임, 변화 가능성을 멈추게 만드는 순간을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 현대사회는 왜 운명과 자기책임 사이에서 흔들리는가</summary>
+      <div class="rtf-toc-desc">
+        개인 책임을 강조하는 사회에서 운명론이 어떤 반응으로 나타나는지 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 운명을 말하면서도 우리는 왜 다르게 살고 싶어 하는가</summary>
+      <div class="rtf-toc-desc">
+        체념과 변화 욕망이 동시에 존재하는 인간의 모순을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 운명론</summary>
+      <div class="rtf-toc-desc">
+        《오이디푸스 왕》과 《매트릭스》를 통해 운명과 선택의 긴장을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 운명론은 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rtf-toc-desc">
+        운명론이 설명하는 지점과 설명하지 못하는 책임과 조건의 문제를 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtf-section">
+    <h2>1. 일이 안 풀릴 때 왜 우리는 운명을 말할까</h2>
+
+    <div class="rtf-one-line">
+      👉 운명이라는 말은 실패를 설명하기보다, 감당하기 어려운 마음을 잠시 내려놓게 하는 말로 먼저 찾아옵니다.
+    </div>
+
+    <p>
+      원하던 일이 무산되었을 때, 오래 준비한 일이 뜻대로 되지 않았을 때,
+      관계가 내 노력만으로는 붙잡히지 않을 때 우리는 가끔 운명을 말합니다.
+    </p>
+
+    <p>
+      “이렇게 될 일이었나 보다.”
+      “나와는 인연이 아니었나 보다.”
+      “내가 아무리 해도 안 되는 일이었나 보다.”
+      이런 말은 논리적인 설명이라기보다 마음을 버티게 하는 방식에 가깝습니다.
+    </p>
+
+    <p>
+      운명이라는 말은 모든 일을 내 탓으로 돌리지 않게 해 줍니다.
+      내가 조금 더 잘했더라면, 다르게 말했더라면, 더 빨리 움직였더라면 달라졌을 것이라는 후회에서 잠시 물러나게 합니다.
+    </p>
+
+    <p>
+      그래서 운명론은 단순히 비합리적인 믿음으로만 보기 어렵습니다.
+      인간은 설명되지 않는 상실과 실패 앞에서, 자신을 완전히 무너뜨리지 않기 위해 운명이라는 말을 붙잡기도 합니다.
+    </p>
+
+    <div class="rtf-quote">
+      운명이라는 말은 때로 사건의 원인을 설명하기보다, 더 이상 나를 탓하지 않기 위한 마음의 쉼표가 됩니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtf-section">
+    <h2>2. 운명론은 결정론과 어떻게 다른가</h2>
+
+    <div class="rtf-one-line">
+      👉 결정론이 원인과 조건의 흐름을 묻는다면, 운명론은 결과가 이미 정해져 있다는 감각에 더 가깝습니다.
+    </div>
+
+    <p>
+      운명론은 결정론과 비슷하게 들립니다.
+      둘 다 인간의 선택이 완전히 자유롭지 않다는 느낌을 줍니다.
+      하지만 두 개념은 같은 방향으로만 움직이지 않습니다.
+    </p>
+
+    <p>
+      결정론은 어떤 일이 왜 생겼는지를 원인과 조건의 흐름 속에서 보려 합니다.
+      성격, 습관, 환경, 제도, 과거의 사건이 선택을 어떻게 만들었는지 묻습니다.
+    </p>
+
+    <p>
+      반면 운명론은 결과가 이미 정해져 있다는 감각에 더 가깝습니다.
+      원인을 분석하기보다, 결국 그렇게 될 일이었다고 받아들이는 태도입니다.
+    </p>
+
+    <div class="rtf-table-wrap">
+      <table class="rtf-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>결정론</th>
+            <th>운명론</th>
+            <th>체념</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>중심 질문</strong></td>
+            <td>무엇이 이 결과를 만들었는가</td>
+            <td>결국 이렇게 될 일이었는가</td>
+            <td>이제 바꿀 수 없지 않은가</td>
+          </tr>
+          <tr>
+            <td><strong>관심</strong></td>
+            <td>원인과 조건</td>
+            <td>이미 정해진 방향</td>
+            <td>포기와 멈춤</td>
+          </tr>
+          <tr>
+            <td><strong>위험</strong></td>
+            <td>책임이 흐려질 수 있음</td>
+            <td>변화 가능성을 닫을 수 있음</td>
+            <td>질문 자체를 멈출 수 있음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 운명론을 이해할 때는 “맞다, 틀리다”만으로 접근하기 어렵습니다.
+      운명이라는 말이 어떤 장면에서 나오는지,
+      그 말이 사람을 살리는지 멈추게 하는지를 함께 봐야 합니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtf-section">
+    <h2>3. 운명이라는 말은 왜 위로가 되는가</h2>
+
+    <div class="rtf-one-line">
+      👉 운명이라는 말은 모든 결과를 개인의 부족함으로 돌리지 않게 해 주며, 감당하기 어려운 일을 받아들이는 언어가 되기도 합니다.
+    </div>
+
+    <p>
+      사람은 자신이 통제할 수 없는 일을 겪을 때 쉽게 무너집니다.
+      아무리 애써도 막을 수 없는 이별,
+      노력만으로 바꾸기 어려운 조건,
+      예상하지 못한 사고와 상실 앞에서 인간은 이유를 찾습니다.
+    </p>
+
+    <p>
+      하지만 이유가 항상 충분히 주어지는 것은 아닙니다.
+      왜 이런 일이 생겼는지 알 수 없고,
+      누군가를 탓한다고 해서 사건이 되돌아오지도 않습니다.
+    </p>
+
+    <p>
+      이때 운명이라는 말은 마음이 버틸 수 있는 하나의 틀이 됩니다.
+      모든 것을 내 잘못으로 돌리지 않게 하고,
+      인간이 통제할 수 없는 영역이 있다는 사실을 받아들이게 합니다.
+    </p>
+
+    <div class="rtf-flow">
+      <strong class="rtf-flow-title">운명이 위로가 되는 흐름</strong>
+      <div class="rtf-flow-boxes">
+        <div>감당하기 어려운 일이 생긴다</div>
+        <div>모든 원인을 내 탓으로 돌리기 시작한다</div>
+        <div>운명이라는 말이 자책을 잠시 멈추게 한다</div>
+      </div>
+    </div>
+
+    <p>
+      이 점에서 운명론은 단순한 회피만은 아닙니다.
+      인간은 모든 것을 통제할 수 없고,
+      어떤 일은 받아들이는 방식으로만 겨우 지나갈 수 있기 때문입니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtf-section">
+    <h2>4. 운명이라는 말은 언제 책임을 흐리게 하는가</h2>
+
+    <div class="rtf-one-line">
+      👉 운명이라는 말이 반복될 때, 그것은 위로를 넘어 선택과 책임을 피하는 언어가 될 수 있습니다.
+    </div>
+
+    <p>
+      운명이라는 말이 항상 나쁜 것은 아닙니다.
+      그러나 그 말이 너무 빨리 등장하면 문제는 달라집니다.
+    </p>
+
+    <p>
+      아직 돌아볼 수 있는 선택이 있는데도 “어차피 이렇게 될 일이었다”고 말할 수 있습니다.
+      내가 바꿀 수 있는 태도가 있는데도 “내 팔자가 그렇다”고 말할 수 있습니다.
+      관계 안에서 내가 해야 할 사과가 있는데도 “우리는 원래 안 맞는 사이였다”고 정리할 수 있습니다.
+    </p>
+
+    <p>
+      이때 운명은 더 이상 위로가 아닙니다.
+      책임을 덜어 주는 말이 됩니다.
+      내가 묻고, 고치고, 감당해야 할 지점을 보지 않게 만듭니다.
+    </p>
+
+    <div class="rtf-table-wrap">
+      <table class="rtf-table">
+        <thead>
+          <tr>
+            <th>운명의 말</th>
+            <th>겉으로 보이는 의미</th>
+            <th>가려질 수 있는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>어차피 안 될 일이었다</strong></td>
+            <td>결과를 받아들이는 말</td>
+            <td>나는 무엇을 시도하지 않았는가</td>
+          </tr>
+          <tr>
+            <td><strong>내 팔자가 그렇다</strong></td>
+            <td>자책을 줄이는 말</td>
+            <td>나는 어떤 패턴을 반복하고 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>인연이 아니었다</strong></td>
+            <td>관계를 놓아주는 말</td>
+            <td>나는 무엇을 말하지 않았고 듣지 않았는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      운명론이 불편한 이유는 여기 있습니다.
+      그것은 사람을 살릴 수도 있지만,
+      동시에 사람이 더 묻지 않도록 만들 수도 있습니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtf-section">
+    <h2>5. 현대사회는 왜 운명과 자기책임 사이에서 흔들리는가</h2>
+
+    <div class="rtf-one-line">
+      👉 현대사회는 모든 것을 개인의 선택으로 돌리지만, 그 압박이 커질수록 사람들은 다시 운명이라는 말에 기대기도 합니다.
+    </div>
+
+    <p>
+      오늘의 사회는 선택과 책임을 강하게 말합니다.
+      네가 선택한 직업, 네가 선택한 관계, 네가 선택한 소비, 네가 선택한 삶이라는 말이 자주 따라붙습니다.
+    </p>
+
+    <p>
+      이 말은 한편으로 자율성을 존중하는 것처럼 보입니다.
+      하지만 다른 한편으로는 삶의 어려움을 너무 쉽게 개인에게 돌립니다.
+      경제적 조건, 가족의 부담, 사회적 차별, 지역과 교육의 차이까지 개인의 선택 부족으로 설명될 때가 있습니다.
+    </p>
+
+    <p>
+      이런 사회에서 사람은 두 방향으로 흔들립니다.
+      하나는 “모든 것은 내 책임이다”라는 과도한 자책입니다.
+      다른 하나는 “어차피 내 힘으로는 안 된다”는 운명론적 체념입니다.
+    </p>
+
+    <div class="rtf-flow">
+      <strong class="rtf-flow-title">현대사회에서 운명론이 생기는 흐름</strong>
+      <div class="rtf-flow-boxes">
+        <div>사회는 계속 선택과 자기책임을 강조한다</div>
+        <div>하지만 실제 조건의 차이는 충분히 보이지 않는다</div>
+        <div>사람은 자책과 체념 사이에서 운명이라는 말을 붙잡는다</div>
+      </div>
+    </div>
+
+    <p>
+      그래서 운명론은 개인의 약한 마음으로만 볼 수 없습니다.
+      때로 운명론은 너무 많은 책임을 개인에게 떠넘기는 사회에 대한 반응이기도 합니다.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtf-section">
+    <h2>6. 운명을 말하면서도 우리는 왜 다르게 살고 싶어 하는가</h2>
+
+    <div class="rtf-one-line">
+      👉 인간은 운명을 말하면서도 완전히 멈추지 않습니다. 체념 속에서도 다르게 살고 싶은 마음은 남아 있습니다.
+    </div>
+
+    <p>
+      “어차피 내 삶은 이렇다”고 말하면서도 사람은 완전히 멈추지 않습니다.
+      다시 검색을 하고, 누군가에게 조언을 구하고, 조금 다른 선택을 상상합니다.
+    </p>
+
+    <p>
+      이것은 인간이 단순히 운명에 순응하는 존재만은 아니라는 뜻입니다.
+      인간은 자신이 놓인 조건을 느끼면서도, 그 조건이 전부가 아니기를 바랍니다.
+    </p>
+
+    <p>
+      운명론이 흥미로운 이유도 여기에 있습니다.
+      사람은 한편으로는 “정해져 있다”고 말하면서,
+      다른 한편으로는 “그래도 달라질 수 있지 않을까”를 놓지 않습니다.
+    </p>
+
+    <div class="rtf-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtf-grid-item">
+        <strong>운명을 말하는 마음</strong>
+        <span>내 힘으로는 다 바꿀 수 없다는 현실 감각을 담고 있습니다.</span>
+      </div>
+
+      <div class="rtf-grid-item">
+        <strong>다르게 살고 싶은 마음</strong>
+        <span>그럼에도 지금의 삶이 마지막 답은 아니기를 바라는 감각입니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 운명론을 읽을 때 중요한 것은 운명을 믿느냐 믿지 않느냐만이 아닙니다.
+      운명이라는 말 아래에서 어떤 질문이 멈추고,
+      어떤 질문이 아직 살아 있는지를 보는 일입니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtf-section">
+    <h2>7. 작품으로 읽는 운명론</h2>
+
+    <div class="rtf-one-line">
+      👉 작품 속 운명론은 정해진 결말보다, 그 결말을 피하려는 인간의 선택이 어떻게 다시 질문이 되는지를 보여 줄 때 더 깊어집니다.
+    </div>
+
+    <h3>7-1) 《오이디푸스 왕》 — 피하려는 운명은 왜 다시 돌아오는가</h3>
+
+    <p>
+      《오이디푸스 왕》은 운명론을 말할 때 가장 자주 떠올릴 수 있는 작품입니다.
+      예언은 피하려 하지만, 피하려는 선택들 자체가 결국 예언을 향해 가는 길이 됩니다.
+    </p>
+
+    <p>
+      이 작품에서 중요한 것은 단순히 “운명이 있다”는 결론이 아닙니다.
+      인간이 미래를 알고도 그것을 피하려 할 때,
+      그 피하려는 행동조차 운명의 일부가 되는 모순입니다.
+    </p>
+
+    <p>
+      운명론의 관점에서 이 작품은 묻습니다.
+      인간은 자신에게 주어진 조건을 어디까지 알 수 있는가.
+      그리고 알게 된 운명 앞에서 인간의 책임은 사라지는가.
+    </p>
+
+    <h3>7-2) 《매트릭스》 — 선택한 것인가, 선택하도록 이끌린 것인가</h3>
+
+    <p>
+      《매트릭스》는 세계가 이미 설계되어 있다는 감각을 강하게 보여 줍니다.
+      인물들은 자신이 자유롭게 산다고 믿지만,
+      실제로는 보이지 않는 구조 안에서 움직이고 있습니다.
+    </p>
+
+    <p>
+      이 작품을 운명론의 렌즈로 읽으면 질문은 더 복잡해집니다.
+      네오는 선택하는 사람인가,
+      아니면 선택하도록 예정된 사람인가.
+      예언은 인간을 자유롭게 하는가,
+      아니면 그 선택의 방향을 미리 정하는가.
+    </p>
+
+    <p>
+      작품은 운명과 자유를 단순히 둘 중 하나로 나누지 않습니다.
+      오히려 인간은 이미 짜인 구조를 의심하는 순간,
+      비로소 자신이 무엇을 선택한다고 믿어 왔는지 보게 됩니다.
+    </p>
+
+    <div class="rtf-table-wrap">
+      <table class="rtf-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>운명론의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《오이디푸스 왕》</strong></td>
+            <td>피하려는 예언이 오히려 실현되는 구조</td>
+            <td>운명을 알게 된 인간에게 책임은 어디까지 남는가</td>
+          </tr>
+          <tr>
+            <td><strong>《매트릭스》</strong></td>
+            <td>설계된 세계 안에서 자유롭게 선택한다고 믿는 인간</td>
+            <td>나는 선택한 것인가, 선택하도록 이끌린 것인가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 운명론을 단순한 체념으로만 그리지 않습니다.
+      오히려 운명을 알게 되었을 때 인간이 어떻게 반응하는지,
+      그 반응 속에서 자유와 책임이 어떻게 다시 나타나는지를 보여 줍니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtf-section">
+    <h2>8. 운명론은 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rtf-one-line">
+      👉 운명론은 인간이 모든 것을 통제할 수 없다는 사실을 보여 주지만, 모든 책임과 변화 가능성을 지워 버리지는 못합니다.
+    </div>
+
+    <p>
+      운명론은 인간의 한계를 보여 줍니다.
+      우리는 모든 것을 계획할 수 없고,
+      모든 결과를 예측할 수 없으며,
+      모든 상실을 노력으로 막을 수도 없습니다.
+    </p>
+
+    <p>
+      이 점에서 운명론은 인간을 지나친 자책에서 잠시 꺼내 줍니다.
+      모든 일이 내 탓은 아니라는 말,
+      인간이 통제할 수 없는 영역도 있다는 말은 때로 필요한 위로가 됩니다.
+    </p>
+
+    <p>
+      그러나 운명론 하나로 삶 전체를 닫아 버릴 수도 없습니다.
+      모든 것을 운명으로 돌리면,
+      내가 해야 할 선택과 책임,
+      관계 안에서의 응답,
+      사회가 바꾸어야 할 조건까지 함께 흐려질 수 있습니다.
+    </p>
+
+    <div class="rtf-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtf-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>운명론은 인간이 모든 것을 통제할 수 없으며, 어떤 사건은 받아들이는 방식으로만 지나갈 수 있음을 보여 줍니다.</span>
+      </div>
+
+      <div class="rtf-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>모든 것을 운명으로 돌리면 선택, 책임, 변화 가능성, 사회적 조건의 문제를 충분히 보지 못하게 됩니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 운명론은 두 방향으로 읽어야 합니다.
+      하나는 내가 모든 것을 내 탓으로 돌리지 않아도 된다는 사실입니다.
+    </p>
+
+    <p>
+      다른 하나는 운명이라는 말로 너무 빨리 질문을 닫고 있지는 않은가입니다.
+      운명은 때로 나를 살리지만,
+      때로는 내가 더 물어야 할 책임과 조건을 덮어 버리기도 합니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rtf-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      운명이라는 말은 이상한 힘을 가집니다.
+      그것은 감당하기 어려운 일을 받아들이게 해 주고,
+      모든 것을 내 탓으로 돌리지 않게 해 줍니다.
+    </p>
+
+    <p>
+      그러나 같은 말이 너무 빨리 나오면,
+      내가 다시 물어야 할 선택과 책임을 흐리게 만들 수도 있습니다.
+      바꿀 수 있는 일까지 바꿀 수 없는 일처럼 보이게 만들 수도 있습니다.
+    </p>
+
+    <p>
+      나는 지금 운명을 말하며 나를 지키고 있는가.
+      아니면 운명이라는 말로 내가 해야 할 질문을 너무 일찍 멈추고 있는가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtf-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rtf-read-intro">
+      이 글을 읽은 뒤에는 운명론을 현대철학의 큰 흐름 안에서 다시 보고, 자유와 책임의 계열과 여러 해석 렌즈로 확장해 볼 수 있습니다.
+    </p>
+
+    <div class="rtf-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <span>
+          운명론을 단순한 체념으로 닫지 않고 현대 철학이 삶과 사회를 어떤 질문으로 다시 여는지 함께 볼 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+        <span>
+          운명론이 실존, 자유, 선택, 책임의 흐름 안에서 어떻게 이어지는지 넓게 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <span>
+          하나의 철학 개념만으로 현실을 정리하지 않고 여러 렌즈로 삶과 사회를 다시 읽는 관점을 확인할 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtf-tags">
+    Re:Think, 운명론 뜻, Fatalism, 운명론, 운명과 자유, 자유와 책임, 결정론, 체념, 선택의 책임, 오이디푸스 왕, 매트릭스, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtf-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

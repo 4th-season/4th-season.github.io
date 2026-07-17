@@ -1,0 +1,1174 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>계몽의 기획 | Re:Think</title>
+  <meta name="description" content="계몽의 기획 은 이성과 지식의 발전을 인간의 자유와 사회의 개선으로 연결하려 했던 근대의 약속입니다. 그러나 발전한 이성이 실제로 누구를 해방했고 누구를 배제했는지는 여전히 끝나지 않은 질문으로 남습니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtenlight-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 42px;
+    font-family: inherit;
+    color: #30363d;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtenlight-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtenlight-meta {
+    margin: 0 0 24px;
+    padding: 18px 20px;
+    border-left: 5px solid #a97832;
+    background: #fff8ea;
+    border-radius: 12px;
+    color: #65491f;
+    font-size: 0.98rem;
+  }
+
+  .rtenlight-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #edf3f8 0%, #fff8e9 100%);
+    border: 1px solid #d6e0e8;
+    border-radius: 20px;
+  }
+
+  .rtenlight-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #263e57;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .rtenlight-title-like {
+    margin: 0 0 10px;
+    font-size: 1.72rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #263e57;
+    letter-spacing: -0.045em;
+  }
+
+  .rtenlight-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #9a6b29;
+  }
+
+  .rtenlight-hero p {
+    margin: 0 0 13px;
+    font-size: 1.03rem;
+  }
+
+  .rtenlight-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f6f8fa;
+    border: 1px solid #dce3e8;
+    border-radius: 18px;
+  }
+
+  .rtenlight-map-title {
+    margin: 0 0 16px;
+    font-size: 1.16rem;
+    font-weight: 800;
+    color: #263e57;
+  }
+
+  .rtenlight-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtenlight-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #dce3e8;
+    border-radius: 14px;
+  }
+
+  .rtenlight-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #9a6b29;
+    font-size: 1.02rem;
+  }
+
+  .rtenlight-grid-item span {
+    display: block;
+    color: #56616b;
+    font-size: 0.94rem;
+  }
+
+  .rtenlight-question {
+    margin: 30px 0 34px;
+    padding: 22px;
+    background: #fffaf1;
+    border: 1px solid #eadfc9;
+    border-radius: 18px;
+  }
+
+  .rtenlight-question-title {
+    margin: 0 0 12px;
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: #263e57;
+  }
+
+  .rtenlight-question p {
+    margin: 0 0 14px;
+    color: #56616b;
+  }
+
+  .rtenlight-question ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .rtenlight-question li {
+    margin-bottom: 9px;
+  }
+
+  .rtenlight-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #edf3f8;
+    border: 1px solid #d2dfe8;
+    border-radius: 18px;
+  }
+
+  .rtenlight-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #263e57;
+  }
+
+  .rtenlight-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #dbe4ea;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtenlight-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #263e57;
+    list-style: none;
+  }
+
+  .rtenlight-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtenlight-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #a97832;
+  }
+
+  .rtenlight-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtenlight-toc-desc {
+    padding: 0 16px 15px;
+    color: #56616b;
+    font-size: 0.95rem;
+    border-top: 1px solid #e6edf1;
+  }
+
+  .rtenlight-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #dfe5e9;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(38, 62, 87, 0.06);
+  }
+
+  .rtenlight-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #a97832;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #263e57;
+    letter-spacing: -0.035em;
+  }
+
+  .rtenlight-section h3 {
+    margin: 25px 0 12px;
+    font-size: 1.12rem;
+    color: #9a6b29;
+  }
+
+  .rtenlight-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #edf3f8;
+    border-radius: 12px;
+    color: #35516c;
+    font-weight: 700;
+  }
+
+  .rtenlight-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtenlight-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #fff8ea;
+    border-left: 5px solid #a97832;
+    border-radius: 12px;
+    color: #604822;
+    font-weight: 700;
+  }
+
+  .rtenlight-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 6px;
+  }
+
+  .rtenlight-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .rtenlight-table th {
+    padding: 12px 10px;
+    background: #263e57;
+    border: 1px solid #d3dce3;
+    color: #fff;
+    text-align: left;
+  }
+
+  .rtenlight-table td {
+    padding: 12px 10px;
+    border: 1px solid #d9e0e5;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtenlight-table tr:nth-child(even) td {
+    background: #fffaf1;
+  }
+
+  .rtenlight-final {
+    margin: 42px 0 0;
+    padding: 28px 24px;
+    background: linear-gradient(135deg, #263e57 0%, #8e672e 100%);
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  .rtenlight-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtenlight-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtenlight-related {
+    margin: 40px 0 0;
+    padding: 24px;
+    background: #f9faf9;
+    border: 1px solid #dfe3df;
+    border-radius: 20px;
+  }
+
+  .rtenlight-related-title {
+    margin: 0 0 16px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #263e57;
+  }
+
+  .rtenlight-related-item {
+    padding: 17px 0;
+    border-bottom: 1px solid #e0e4e1;
+  }
+
+  .rtenlight-related-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .rtenlight-related-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #263e57;
+    font-size: 1.02rem;
+  }
+
+  .rtenlight-related-item p {
+    margin: 0 0 10px;
+    color: #56616b;
+  }
+
+  .rtenlight-related-item a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 9px;
+    background: #a97832;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+
+  .rtenlight-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #edf3f8;
+    border-radius: 14px;
+    color: #374151;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtenlight-title-like {
+      font-size: 1.44rem;
+    }
+
+    .rtenlight-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtenlight-section {
+      padding: 24px 18px;
+    }
+
+    .rtenlight-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtenlight-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtenlight-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 계몽의 기획 - 계몽이 남긴 약속은 왜 아직 끝나지 않았는가</h1>
+<div class="rtenlight-meta">
+    <strong>계몽의 기획</strong>은 이성과 지식의 발전을 인간의 자유와 사회의 개선으로 연결하려 했던 근대의 약속입니다. 그러나 발전한 이성이 실제로 누구를 해방했고 누구를 배제했는지는 여전히 끝나지 않은 질문으로 남습니다.
+  </div>
+
+  <!-- 안내 영역 / 실제 H1 없음 -->
+  <section class="rtenlight-hero">
+    <div class="rtenlight-kicker">Re:Think 현대철학사전</div>
+
+    <div class="rtenlight-title-like">
+      계몽의 기획
+    </div>
+
+    <div class="rtenlight-subtitle-like">
+      계몽이 남긴 약속은 왜 아직 끝나지 않았는가
+    </div>
+
+    <p data-ke-size="size16">
+      우리는 더 많은 지식을 얻으면 더 나은 판단을 할 수 있다고 믿습니다.
+      과학이 발전하면 질병과 가난을 줄이고,
+      교육이 넓어지면 편견에서 벗어나며,
+      공개적인 토론이 가능해지면 더 정당한 사회를 만들 수 있다고 기대합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이러한 믿음은 현대사회에 너무 깊이 들어와 있어 특별한 철학처럼 느껴지지 않습니다.
+      그러나 인간이 스스로 생각하고,
+      전통과 권위를 비판하며,
+      이성과 토론을 통해 공동의 삶을 개선할 수 있다는 생각은
+      근대 계몽이 남긴 중요한 약속이었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      문제는 이 약속이 예상한 방향으로만 작동하지 않았다는 데 있습니다.
+      과학은 인간을 살리는 기술을 만들었지만 파괴의 기술도 만들었고,
+      행정과 제도는 삶을 안정시켰지만 인간을 숫자와 자료로 관리하기도 했습니다.
+      보편적인 이성은 평등을 말했지만,
+      누가 이성적인 인간으로 인정받을지는 오래도록 제한되어 있었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그렇다면 계몽의 약속은 실패한 것일까요.
+      아니면 아직 충분히 실현되지 않은 것일까요.
+      <strong>계몽의 기획</strong>은 이 두 판단 사이에서
+      우리가 지금도 이성과 자유, 진보와 해방을 어떤 기준으로 믿을 수 있는지 다시 묻게 합니다.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtenlight-map">
+    <div class="rtenlight-map-title">계몽의 기획 핵심 지도</div>
+
+    <div class="rtenlight-grid">
+      <div class="rtenlight-grid-item">
+        <strong>기본 의미</strong>
+        <span>이성·과학·도덕·법과 공적 토론의 발전을 통해 인간의 자유와 사회의 개선을 이루려 한 근대의 철학적 약속입니다.</span>
+      </div>
+
+      <div class="rtenlight-grid-item">
+        <strong>남긴 가치</strong>
+        <span>비판할 권리, 개인의 자율성, 보편적 권리, 공개적인 토론과 민주적 정당화의 기준을 강화했습니다.</span>
+      </div>
+
+      <div class="rtenlight-grid-item">
+        <strong>드러난 한계</strong>
+        <span>이성이 효율과 통제의 도구로 좁아지고, 보편성을 말하는 기준이 특정 집단의 경험만 대표할 수 있었습니다.</span>
+      </div>
+
+      <div class="rtenlight-grid-item">
+        <strong>남는 질문</strong>
+        <span>계몽을 폐기할 것인가보다, 계몽의 약속을 누구의 목소리와 어떤 이성으로 다시 구성할 것인가를 묻게 합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 질문 영역 -->
+  <section class="rtenlight-question">
+    <div class="rtenlight-question-title">생각을 여는 질문</div>
+
+    <p data-ke-size="size16">
+      아래 문항은 계몽에 찬성하는지 반대하는지를 판정하기 위한 질문이 아닙니다.
+      현대의 삶에서 우리가 여전히 어떤 계몽의 약속에 기대고 있는지 돌아보기 위한 질문입니다.
+    </p>
+
+    <ul data-ke-list-type="disc">
+      <li>정보가 많아지면 사람은 자연스럽게 더 현명해질 것이라고 믿고 있지는 않은가.</li>
+      <li>합리적이라는 말로 감정과 경험, 약한 사람의 목소리를 뒤로 밀어낸 적은 없는가.</li>
+      <li>전문가와 제도의 판단을 신뢰하면서도 그 판단 기준이 누구에게 유리한지는 묻지 않은 적이 있는가.</li>
+      <li>내가 보편적이라고 믿는 기준이 사실은 특정 시대와 집단의 경험에서 나온 것은 아닌가.</li>
+      <li>계몽의 실패를 비판하면서도 자유·권리·공개적 토론이라는 계몽의 언어에는 계속 기대고 있지 않은가.</li>
+    </ul>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtenlight-toc">
+    <div class="rtenlight-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 계몽의 기획은 무엇을 뜻하는가</summary>
+      <div class="rtenlight-toc-desc">
+        계몽을 한 시대의 사상으로만 보지 않고, 이성과 자유를 통해 사회를 개선하려 한 장기적인 약속으로 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 계몽은 인간에게 어떤 약속을 남겼는가</summary>
+      <div class="rtenlight-toc-desc">
+        자율성, 비판, 보편적 권리, 과학과 공적 토론이 현대의 삶을 어떻게 바꾸었는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 이성은 왜 해방의 힘이면서 통제의 도구가 되었는가</summary>
+      <div class="rtenlight-toc-desc">
+        인간을 미신과 권위에서 해방하려던 이성이 효율과 계산, 관리의 이성으로 좁아지는 과정을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 보편적 인간이라는 말은 누구를 빠뜨렸는가</summary>
+      <div class="rtenlight-toc-desc">
+        모두에게 적용된다고 주장한 권리와 이성의 기준이 실제 역사에서는 누구를 배제했는지 묻습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 하버마스는 왜 계몽을 미완의 기획이라고 보았는가</summary>
+      <div class="rtenlight-toc-desc">
+        계몽을 폐기하기보다 의사소통과 민주적 정당화의 방향으로 다시 구성하려는 관점을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 계몽의 기획은 오늘 어디에서 계속되는가</summary>
+      <div class="rtenlight-toc-desc">
+        전문가 지식, 데이터, 교육과 공론장이 계몽의 약속을 어떻게 이어 가면서 동시에 흔드는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 계몽을 비판하면서 계몽의 언어를 사용할 수 있는가</summary>
+      <div class="rtenlight-toc-desc">
+        이성과 보편성의 폭력을 비판하는 일과 자유·권리·정의의 가능성을 지키는 일이 함께 가능한지 묻습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 마무리: 계몽의 약속을 누구와 다시 써야 하는가</summary>
+      <div class="rtenlight-toc-desc">
+        계몽을 완성된 답이 아니라 아직 참여자가 충분하지 않았던 공동의 질문으로 되돌립니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtenlight-section">
+    <h2>1. 계몽의 기획은 무엇을 뜻하는가</h2>
+
+    <div class="rtenlight-one-line">
+      계몽의 기획은 지식을 넓히는 운동만이 아니라, 인간이 스스로 판단하고 공동의 삶을 더 자유롭고 정당하게 만들 수 있다는 약속입니다.
+    </div>
+
+    <p data-ke-size="size16">
+      계몽의 기획(Project of Enlightenment)은
+      18세기 유럽 계몽주의의 사상을 단순히 한 시대의 유행으로 보는 대신,
+      근대사회가 오랫동안 추진해 온 철학적·사회적 과제로 읽는 표현입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그 중심에는 인간이 스스로 생각할 수 있다는 믿음이 있습니다.
+      사람은 전통이라는 이유만으로 어떤 규칙을 받아들일 필요가 없고,
+      권력자가 명령했다는 이유만으로 복종할 필요도 없습니다.
+      주장에는 근거가 있어야 하고,
+      제도는 사람들에게 정당성을 설명할 수 있어야 합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      계몽의 기획은 과학의 발전만을 뜻하지 않습니다.
+      과학이 자연을 이해하려는 활동이라면,
+      도덕과 법은 인간이 서로를 어떤 기준으로 대해야 하는지를 묻고,
+      예술은 기존의 종교적·정치적 권위에서 벗어나 고유한 표현과 판단의 영역을 만들려 했습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 서로 다른 영역이 각자의 논리를 발전시키면
+      미신과 독단은 줄어들고,
+      개인의 자유는 넓어지며,
+      사회의 문제도 더 합리적으로 해결할 수 있다는 기대가 있었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그래서 계몽의 기획은 지식의 증가와 삶의 개선을 연결합니다.
+      더 정확히 알면 더 정당하게 판단할 수 있고,
+      더 많은 사람이 토론에 참여하면 더 나은 사회를 만들 수 있다는 믿음입니다.
+    </p>
+
+    <div class="rtenlight-quote">
+      계몽의 기획은 빛이 어둠을 한 번에 몰아낸 사건이 아닙니다.<br>
+      인간이 권위에 묻지 않고 따르는 대신, 근거를 요구하고 스스로 판단하려 한 긴 과정입니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtenlight-section">
+    <h2>2. 계몽은 인간에게 어떤 약속을 남겼는가</h2>
+
+    <div class="rtenlight-one-line">
+      계몽이 남긴 가장 중요한 약속은 인간이 태어난 신분이나 전통이 아니라, 스스로 판단할 수 있는 존재라는 이유로 존중받아야 한다는 생각입니다.
+    </div>
+
+    <p data-ke-size="size16">
+      계몽의 사상은 인간을 외부의 명령에만 따르는 존재로 보지 않았습니다.
+      인간은 자신의 판단을 사용할 수 있고,
+      부당한 제도를 비판하며,
+      공동체의 규칙을 만드는 과정에 참여할 수 있는 존재로 이해되었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 생각은 개인의 자율성과 권리라는 언어를 강화했습니다.
+      개인은 국가와 종교, 가족과 공동체가 마음대로 처분할 수 있는 대상이 아니라
+      자신의 삶에 관해 말하고 판단할 자격이 있는 존재가 됩니다.
+    </p>
+
+    <p data-ke-size="size16">
+      법과 정치의 정당성도 달라집니다.
+      권력이 오래 유지되었다는 사실만으로 정당한 것이 아니라,
+      그 권력이 어떤 근거로 작동하며 사람들의 자유와 권리를 어떻게 보장하는지 설명해야 합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      교육 역시 단순한 지식 전달 이상의 의미를 갖습니다.
+      사람을 주어진 자리에 순응시키는 것이 아니라,
+      자신이 믿는 것의 근거를 묻고 타인의 주장과 비교하며
+      스스로 판단하는 능력을 기르는 일로 이해될 수 있습니다.
+    </p>
+
+    <div class="rtenlight-table-wrap">
+      <table class="rtenlight-table">
+        <thead>
+          <tr>
+            <th>계몽의 약속</th>
+            <th>열어 준 가능성</th>
+            <th>함께 생긴 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>이성</strong></td>
+            <td>전통과 권위를 비판하고 주장에 근거를 요구함</td>
+            <td>무엇을 이성적이라고 정하는 권한은 누구에게 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>자율성</strong></td>
+            <td>자기 삶에 관한 판단과 결정에 참여함</td>
+            <td>실제로 스스로 판단할 수 있는 조건은 모두에게 주어졌는가</td>
+          </tr>
+          <tr>
+            <td><strong>과학</strong></td>
+            <td>자연과 질병을 이해하고 삶의 조건을 개선함</td>
+            <td>알 수 있다는 능력이 통제해도 된다는 권리로 바뀌지는 않는가</td>
+          </tr>
+          <tr>
+            <td><strong>보편적 권리</strong></td>
+            <td>신분과 출신을 넘어 인간의 공통된 권리를 주장함</td>
+            <td>보편적 인간의 범위에서 실제로 배제된 사람은 누구였는가</td>
+          </tr>
+          <tr>
+            <td><strong>공적 토론</strong></td>
+            <td>명령보다 논증과 합의를 통해 공동의 기준을 정함</td>
+            <td>누구나 실제로 같은 조건에서 말하고 들을 수 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p data-ke-size="size16">
+      오늘날 계몽의 한계를 비판하는 사람도
+      부당한 권력에 근거를 요구하고,
+      차별받는 사람의 권리를 주장하며,
+      공개적인 토론과 검증을 요구합니다.
+      계몽은 비판받으면서도 그 비판을 가능하게 하는 언어를 함께 남겼습니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtenlight-section">
+    <h2>3. 이성은 왜 해방의 힘이면서 통제의 도구가 되었는가</h2>
+
+    <div class="rtenlight-one-line">
+      이성은 권위와 미신을 비판하는 힘이었지만, 무엇이 가장 효율적인지를 계산하는 능력으로 좁아질 때 인간과 세계를 관리 대상으로 만들기도 했습니다.
+    </div>
+
+    <p data-ke-size="size16">
+      계몽의 이성은 인간을 두려움과 미신에서 벗어나게 하려 했습니다.
+      설명할 수 없는 현상을 신비한 힘의 뜻으로만 받아들이지 않고,
+      관찰과 검증을 통해 이해하려 했습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 태도는 인간의 삶을 크게 바꾸었습니다.
+      질병의 원인을 연구하고,
+      재난을 예측하며,
+      행정과 제도를 체계적으로 운영할 수 있게 했습니다.
+      이전에는 운명으로 받아들이던 많은 문제를 사회적으로 해결할 가능성도 열었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그러나 이성이 목적을 묻기보다 수단의 효율만 계산하게 될 때 문제가 달라집니다.
+      무엇이 옳은가보다 무엇이 빠른가,
+      누구의 삶을 위한가보다 얼마의 비용을 줄일 수 있는가,
+      어떤 관계를 지켜야 하는가보다 얼마나 측정 가능한 성과를 만들 수 있는가가 앞설 수 있습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이때 인간은 판단하는 주체이면서 동시에 계산되는 대상이 됩니다.
+      성적과 생산성, 위험도와 소비 가능성,
+      건강 수치와 신용 점수로 분류됩니다.
+      숫자는 현실의 일부를 더 정확히 보여 주지만,
+      숫자로 표현되지 않는 삶의 의미를 뒤로 밀어낼 수도 있습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      계몽의 문제는 이성이 필요 없다는 데 있지 않습니다.
+      어떤 이성을 사용할 것인가에 있습니다.
+      목적을 함께 토론하는 이성인지,
+      이미 주어진 목적을 가장 효율적으로 수행하는 이성인지에 따라
+      이성은 해방과 통제의 서로 다른 방향으로 작동합니다.
+    </p>
+
+    <div class="rtenlight-quote">
+      이성의 위험은 너무 많이 생각하는 데만 있지 않습니다.<br>
+      무엇을 위해 생각하는지는 묻지 않은 채, 가장 효율적인 방법만 계산할 때 더 깊어질 수 있습니다.
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtenlight-section">
+    <h2>4. 보편적 인간이라는 말은 누구를 빠뜨렸는가</h2>
+
+    <div class="rtenlight-one-line">
+      계몽은 모든 인간의 자유와 권리를 말했지만, 역사 속에서 ‘모든 인간’의 범위는 실제로 매우 좁게 정해지곤 했습니다.
+    </div>
+
+    <p data-ke-size="size16">
+      계몽은 인간이라면 누구나 이성을 사용할 수 있고,
+      인간이라는 이유로 존중받아야 한다는 보편적인 언어를 발전시켰습니다.
+      이 언어는 신분제와 전제권력, 종교적 독단을 비판하는 강력한 근거가 되었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그러나 보편적 인간을 말한 사회에서도
+      여성과 노예, 식민지 주민,
+      재산이 없는 사람과 교육받지 못한 사람은
+      완전한 판단 능력을 가진 시민으로 인정받지 못하는 경우가 많았습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이들은 보편적 인간의 권리를 갖지 못한 것이 아니라,
+      애초에 그 보편성의 중심에 있는 인간으로 충분히 인정되지 못했습니다.
+      누가 이성적인 사람인지,
+      누가 스스로를 통치할 능력이 있는지에 관한 판단이 배제의 근거가 되었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      식민지배 역시 문명과 계몽의 언어를 사용했습니다.
+      다른 사회를 미개하거나 아직 성숙하지 못한 상태로 설명하고,
+      더 발전한 사회가 대신 가르치고 통치해야 한다는 논리가 만들어졌습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      따라서 계몽의 보편성을 비판한다는 것은
+      모든 보편적 권리를 포기한다는 뜻만은 아닙니다.
+      오히려 누가 보편성의 이름에서 빠졌으며,
+      그 사람들의 경험을 포함할 때 보편성의 의미가 어떻게 달라지는지를 묻는 일입니다.
+    </p>
+
+    <div class="rtenlight-table-wrap">
+      <table class="rtenlight-table">
+        <thead>
+          <tr>
+            <th>계몽의 주장</th>
+            <th>역사적 모순</th>
+            <th>다시 필요한 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>모든 인간은 자유롭다</strong></td>
+            <td>노예제와 식민지배가 함께 유지됨</td>
+            <td>누가 자유를 사용할 능력이 있는 인간으로 인정되었는가</td>
+          </tr>
+          <tr>
+            <td><strong>모든 인간은 이성적이다</strong></td>
+            <td>여성과 피지배 집단의 판단 능력이 낮게 평가됨</td>
+            <td>이성의 기준은 누구의 경험을 표준으로 삼았는가</td>
+          </tr>
+          <tr>
+            <td><strong>권리는 보편적이다</strong></td>
+            <td>재산과 신분에 따라 정치 참여가 제한됨</td>
+            <td>형식적 권리와 실제로 참여할 조건은 어떻게 다른가</td>
+          </tr>
+          <tr>
+            <td><strong>문명은 발전한다</strong></td>
+            <td>다른 문화가 뒤처진 단계로 분류됨</td>
+            <td>하나의 발전 경로만을 보편적인 기준으로 삼을 수 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtenlight-section">
+    <h2>5. 하버마스는 왜 계몽을 미완의 기획이라고 보았는가</h2>
+
+    <div class="rtenlight-one-line">
+      하버마스에게 계몽의 문제는 이성이 너무 많았다는 데만 있지 않았습니다. 서로 이해하고 정당성을 묻는 이성이 효율과 통제의 이성에 밀렸다는 데 있었습니다.
+    </div>
+
+    <p data-ke-size="size16">
+      전쟁과 전체주의, 대량학살과 환경 파괴를 지나며
+      계몽이 약속한 진보를 그대로 믿기는 어려워졌습니다.
+      과학과 기술이 발전한다고 해서
+      사회가 자동으로 더 자유롭고 인간적인 방향으로 나아가는 것은 아니었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      어떤 비판은 이 실패를 계몽 전체의 실패로 읽었습니다.
+      보편적인 이성과 진보의 이야기는
+      실제로 차이를 억압하고 세계를 통제하기 위한 거대한 서사였다는 것입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      하버마스는 이러한 비판을 받아들이면서도
+      계몽의 기획을 완전히 포기해서는 안 된다고 보았습니다.
+      권력과 억압을 비판하려면
+      무엇이 더 정당한지 말할 수 있는 기준도 필요하기 때문입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그는 이성을 혼자 판단하는 주체의 능력이나
+      가장 효율적인 수단을 계산하는 능력으로만 보지 않았습니다.
+      서로 다른 사람들이 자신의 주장을 설명하고,
+      상대의 비판에 답하며,
+      강제 없이 함께 받아들일 수 있는 근거를 찾는 의사소통의 능력에 주목했습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 관점에서 계몽은 완성된 사건이 아닙니다.
+      누구나 자유롭게 말하고,
+      동등하게 반론하며,
+      결정의 영향을 받는 사람이 판단 과정에 참여할 수 있는 조건은
+      아직 충분히 실현되지 않았습니다.
+    </p>
+
+    <div class="rtenlight-quote">
+      계몽이 미완이라는 말은 아직 이성이 부족하다는 뜻만이 아닙니다.<br>
+      누구의 말이 이성적인 말로 인정되고, 누가 공동의 판단에 참여할 수 있는지가 아직 충분히 달라지지 않았다는 뜻입니다.
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtenlight-section">
+    <h2>6. 계몽의 기획은 오늘 어디에서 계속되는가</h2>
+
+    <div class="rtenlight-one-line">
+      계몽의 기획은 역사책 속에만 남아 있지 않습니다. 우리는 지금도 데이터와 전문가, 교육과 토론을 통해 더 나은 판단이 가능하다고 믿습니다.
+    </div>
+
+    <p data-ke-size="size16">
+      감염병이 확산되면 우리는 과학적 자료와 전문가의 판단을 찾습니다.
+      사회적 논쟁이 생기면 정확한 사실을 확인하고,
+      서로 다른 주장을 공개적으로 검토해야 한다고 말합니다.
+      부당한 제도를 바꾸기 위해 권리와 평등의 기준을 제시합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 모든 장면에는 계몽의 기대가 남아 있습니다.
+      사실을 더 정확히 알고,
+      근거를 공개하며,
+      누구나 비판에 참여할 수 있다면
+      더 정당한 결정을 만들 수 있다는 믿음입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그러나 오늘의 계몽은 새로운 문제와 만납니다.
+      정보가 너무 많아 사실과 해석을 구분하기 어려워지고,
+      전문 지식은 필요하지만 일반 시민이 그 판단 과정에 접근하기는 쉽지 않습니다.
+      데이터는 객관적으로 보이지만 어떤 자료를 모으고 어떻게 분류할지는 이미 판단의 결과입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      온라인 공론장은 누구나 말할 수 있는 공간을 넓혔지만,
+      주목을 끄는 분노와 단순한 주장에 더 큰 보상을 주기도 합니다.
+      말할 자유가 넓어진 것과
+      서로의 근거를 듣고 공동의 판단을 만드는 능력이 넓어진 것은 같은 일이 아닙니다.
+    </p>
+
+    <div class="rtenlight-table-wrap">
+      <table class="rtenlight-table">
+        <thead>
+          <tr>
+            <th>오늘의 장면</th>
+            <th>이어지는 계몽의 약속</th>
+            <th>새롭게 생긴 문제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>전문가와 과학</strong></td>
+            <td>검증된 지식으로 위험과 질병에 대응함</td>
+            <td>전문가 판단에 시민이 어떻게 질문하고 참여할 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>데이터 행정</strong></td>
+            <td>경험과 직관을 넘어 자료를 바탕으로 정책을 판단함</td>
+            <td>측정되지 않는 삶과 소수의 경험은 어떻게 반영되는가</td>
+          </tr>
+          <tr>
+            <td><strong>온라인 공론장</strong></td>
+            <td>더 많은 사람이 의견을 말하고 권력을 비판함</td>
+            <td>알고리즘과 관심 경쟁 속에서 상호이해가 가능한가</td>
+          </tr>
+          <tr>
+            <td><strong>보편적 인권</strong></td>
+            <td>국가와 문화의 차이를 넘어 최소한의 권리를 요구함</td>
+            <td>보편성을 강요하지 않으면서도 폭력과 차별을 비판할 수 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p data-ke-size="size16">
+      오늘 계몽의 기획을 이어 간다는 것은
+      더 많은 정보와 기술을 무조건 발전시키는 일이 아닙니다.
+      지식이 어떤 절차로 만들어졌고,
+      결정의 영향을 받는 사람이 그 판단에 어떻게 참여하며,
+      오류가 드러났을 때 수정할 수 있는지를 함께 묻는 일입니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtenlight-section">
+    <h2>7. 계몽을 비판하면서 계몽의 언어를 사용할 수 있는가</h2>
+
+    <div class="rtenlight-one-line">
+      계몽의 폭력을 비판할 때조차 우리는 자유와 평등, 근거와 권리라는 계몽의 언어를 사용합니다. 이 모순은 계몽을 쉽게 버릴 수도 그대로 믿을 수도 없게 합니다.
+    </div>
+
+    <p data-ke-size="size16">
+      계몽은 비판받아야 할 충분한 이유를 남겼습니다.
+      하나의 이성만을 보편적인 기준으로 삼았고,
+      다른 문화와 삶의 방식을 뒤처진 것으로 분류했으며,
+      자연과 인간을 계산하고 관리할 대상으로 보는 태도와 결합했습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그러나 계몽을 비판하는 주장도
+      폭력은 정당화될 수 없고,
+      배제된 사람의 목소리를 들어야 하며,
+      권력은 자신의 기준을 설명해야 한다고 요구합니다.
+      이 요구에는 이미 정당성, 자유, 평등과 같은 보편적인 언어가 들어 있습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그렇다면 문제는 보편적인 기준을 가질 것인가 말 것인가로만 나뉘지 않습니다.
+      누가 그 기준을 만들었는지,
+      누가 말할 기회를 얻었는지,
+      새로운 경험과 반론이 나타날 때 기준을 수정할 수 있는지가 더 중요합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      보편성은 처음부터 완성된 하나의 답이라기보다
+      서로 다른 사람들이 자신의 경험을 가지고 참여하면서
+      계속 다시 쓰는 약속일 수 있습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      계몽의 기획을 이어 간다는 것은
+      과거의 이성을 그대로 복원하는 일이 아닙니다.
+      이성이 배제했던 목소리를 들으며,
+      이성의 기준 자체를 공개적인 질문에 놓는 일입니다.
+    </p>
+
+    <div class="rtenlight-quote">
+      계몽을 지킨다는 것은 계몽을 비판하지 않는 일이 아닙니다.<br>
+      오히려 누구도 비판에서 제외되지 않도록 계몽의 약속을 계몽 자체에 다시 적용하는 일일 수 있습니다.
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtenlight-final">
+    <h2>마무리: 계몽의 약속을 누구와 다시 써야 하는가</h2>
+
+    <p data-ke-size="size16">
+      계몽의 기획은 인간이 스스로 생각하고,
+      권력에 근거를 요구하며,
+      지식과 토론을 통해 더 자유롭고 정당한 사회를 만들 수 있다는 약속이었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 약속은 많은 것을 바꾸었습니다.
+      개인의 권리와 자율성,
+      과학적 검증과 공개적인 비판,
+      법과 권력이 설명될 의무는
+      지금도 우리가 쉽게 포기하기 어려운 기준입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그러나 계몽은 자신이 약속한 보편성을 스스로 충분히 실현하지 못했습니다.
+      모든 인간을 말하면서도 일부 인간만 완전한 주체로 인정했고,
+      해방을 말하면서도 식민지배와 관리의 이성을 만들었습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그렇다고 실패한 계몽을 버리는 일만으로
+      자유와 권리, 비판과 정당성의 문제까지 사라지는 것은 아닙니다.
+      오히려 계몽의 약속을 누가 독점했고,
+      누구의 경험이 빠졌는지 더 정확히 묻는 일이 남습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      계몽의 기획이 아직 끝나지 않았다는 말은
+      언젠가 완전한 이성의 사회가 도착한다는 낙관만을 뜻하지 않습니다.
+      공동의 기준을 만들고 수정하는 과정에
+      더 많은 사람이 실제로 참여해야 한다는 요구에 가깝습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      <strong>
+        나는 무엇을 합리적이고 진보적이라고 믿고 있는가.<br>
+        그 기준은 누구의 경험을 중심에 두고 누구의 목소리를 뒤로 미루는가.<br>
+        지식과 기술이 더 발전하면 사회도 자동으로 더 나아질 것이라고 믿고 있지는 않은가.<br>
+        그리고 계몽이 남긴 자유와 권리의 약속을 포기하지 않으면서도,<br>
+        그 약속을 지금까지 빠져 있던 사람들과 어떻게 다시 쓸 수 있는가.
+      </strong>
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtenlight-related">
+    <div class="rtenlight-related-title">📚 함께 읽기</div>
+
+    <div class="rtenlight-related-item">
+      <strong>[Re:Think] 인식과 언어 안내지도 - 진리·해석·말의 의미로 읽는 현대 철학사전</strong>
+
+      <p data-ke-size="size16">
+        계몽의 기획이 전제한 지식과 진리, 합리성의 기준을 인식과 언어의 전체 흐름 속에서 확장해 볼 수 있습니다.
+      </p>
+
+      <a href="https://pencilgon.tistory.com/249" target="_blank" rel="noopener">
+        읽으러 가기
+      </a>
+    </div>
+
+    <div class="rtenlight-related-item">
+      <strong>[Re:Think] 현대성 뜻 - 우리는 왜 여전히 근대의 약속과 피로 속에 사는가</strong>
+
+      <p data-ke-size="size16">
+        계몽이 약속한 진보와 자율성이 현대의 제도와 일상에서 어떤 성취와 피로를 함께 만들었는지 이어서 읽을 수 있습니다.
+      </p>
+
+      <a href="https://pencilgon.tistory.com/334" target="_blank" rel="noopener">
+        읽으러 가기
+      </a>
+    </div>
+
+    <div class="rtenlight-related-item">
+      <strong>[Re:Think] 지식 뜻 - 정보가 넘칠수록 우리는 왜 더 조심스럽게 알아야 하는가</strong>
+
+      <p data-ke-size="size16">
+        더 많은 지식이 곧 더 나은 판단으로 이어진다는 계몽의 기대가 정보 과잉과 전문가 사회에서 어떻게 달라지는지 살펴볼 수 있습니다.
+      </p>
+
+      <a href="https://pencilgon.tistory.com/335" target="_blank" rel="noopener">
+        읽으러 가기
+      </a>
+    </div>
+
+    <div class="rtenlight-related-item">
+      <strong>6 Re:Lenz 안내 지도 - 세상을 읽는 여섯 개의 렌즈</strong>
+
+      <p data-ke-size="size16">
+        계몽의 기획을 철학적 진보의 문제에만 가두지 않고, 사회·경제·언어·상징과 현대의 삶을 함께 보는 여러 관점으로 넓힐 수 있습니다.
+      </p>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        읽으러 가기
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtenlight-tags">
+    ReThink, 현대철학사전, 계몽의기획, 계몽의기획뜻, ProjectOfEnlightenment, 계몽, 하버마스, 현대성, 이성, 합리성, 도구적이성, 의사소통이성, 보편성, 진보, 자유, 권리, 현대철학
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtenlight-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

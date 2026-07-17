@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>가능성 | Re:Think</title>
+  <meta name="description" content="가능성 은 단순히 선택지가 많다는 뜻이 아닙니다. 아직 닫히지 않은 삶이 있다는 감각이자, 다르게 살 수 있다는 자유가 동시에 불안을 불러오는 자리입니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtp-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #263238;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtp-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtp-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #2f6f5e;
+    background: #f1f7f3;
+    border-radius: 10px;
+    color: #24483f;
+    font-size: 0.98rem;
+  }
+
+  .rtp-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eef5ff 0%, #f7f4e9 100%);
+    border: 1px solid #cddfcf;
+    border-radius: 18px;
+  }
+
+  .rtp-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #1f4e79;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rtp-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #17324d;
+    letter-spacing: -0.045em;
+  }
+
+  .rtp-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #2f6f5e;
+  }
+
+  .rtp-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtp-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f3f8f4;
+    border: 1px solid #cfe3d3;
+    border-radius: 16px;
+  }
+
+  .rtp-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #24483f;
+  }
+
+  .rtp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtp-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #d9e6dc;
+    border-radius: 13px;
+  }
+
+  .rtp-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1f4e79;
+    font-size: 1.02rem;
+  }
+
+  .rtp-grid-item span {
+    display: block;
+    color: #52616b;
+    font-size: 0.94rem;
+  }
+
+  .rtp-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eef5ff;
+    border: 1px solid #c8d9ec;
+    border-radius: 16px;
+  }
+
+  .rtp-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #17324d;
+  }
+
+  .rtp-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #d7e3ef;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtp-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #17324d;
+    list-style: none;
+  }
+
+  .rtp-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtp-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #2f6f5e;
+  }
+
+  .rtp-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtp-toc-desc {
+    padding: 0 16px 15px;
+    color: #52616b;
+    font-size: 0.95rem;
+    border-top: 1px solid #e2edf7;
+  }
+
+  .rtp-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #d7e3ef;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(31, 78, 121, 0.06);
+  }
+
+  .rtp-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #2f6f5e;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #17324d;
+    letter-spacing: -0.035em;
+  }
+
+  .rtp-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #2f6f5e;
+  }
+
+  .rtp-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #f3f8f4;
+    border-radius: 12px;
+    color: #24483f;
+    font-weight: 600;
+  }
+
+  .rtp-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtp-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #eef5ff;
+    border-left: 5px solid #2f6f5e;
+    border-radius: 10px;
+    color: #17324d;
+    font-weight: 700;
+  }
+
+  .rtp-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtp-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtp-table th {
+    background: #1f4e79;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #c8d9ec;
+    text-align: left;
+  }
+
+  .rtp-table td {
+    padding: 12px 10px;
+    border: 1px solid #c8d9ec;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtp-table tr:nth-child(even) td {
+    background: #f7f4e9;
+  }
+
+  .rtp-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fbff;
+    border: 1px solid #d7e3ef;
+    border-radius: 14px;
+  }
+
+  .rtp-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #17324d;
+    font-weight: 800;
+  }
+
+  .rtp-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #425466;
+  }
+
+  .rtp-flow-boxes div {
+    padding: 11px 13px;
+    background: #eef5ff;
+    border-radius: 9px;
+  }
+
+  .rtp-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #17324d 0%, #2f6f5e 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rtp-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtp-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtp-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rtp-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rtp-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rtp-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rtp-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rtp-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rtp-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eef5ff;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtp-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rtp-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtp-section {
+      padding: 24px 18px;
+    }
+
+    .rtp-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtp-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtp-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 가능성 뜻 - 가능성이 많을수록 왜 삶은 더 불안해지는가</h1>
+<div class="rtp-meta">
+    <strong>가능성</strong>은 단순히 선택지가 많다는 뜻이 아닙니다. 아직 닫히지 않은 삶이 있다는 감각이자, 다르게 살 수 있다는 자유가 동시에 불안을 불러오는 자리입니다.
+  </div>
+
+  <!-- 안내 영역: H1 대신 제목형 표시 -->
+  <section class="rtp-hero">
+    <div class="rtp-kicker">Re:Think 현대철학사전</div>
+    <div class="rtp-title-like">가능성 뜻</div>
+    <div class="rtp-subtitle-like">
+      가능성이 많을수록 왜 삶은 더 불안해지는가
+    </div>
+
+    <p>
+      밤늦게 휴대폰을 보다 보면 어느새 여러 창이 열려 있을 때가 있습니다.
+      이직 정보, 자격증 강의, 여행지, 부업 이야기, 건강 관리법, 누군가의 성공담이 한꺼번에 눈앞에 놓입니다.
+    </p>
+
+    <p>
+      처음에는 마음이 조금 들뜹니다.
+      아직 늦지 않은 것 같고, 나도 다르게 살아볼 수 있을 것 같습니다.
+      지금의 삶이 전부가 아니라는 사실은 분명 위로가 됩니다.
+    </p>
+
+    <p>
+      그런데 이상하게도 창이 많아질수록 마음은 더 가벼워지지 않습니다.
+      할 수 있는 일이 많아 보이는데, 정작 무엇을 해야 할지는 더 흐릿해집니다.
+      가능성이 늘어났는데 삶이 넓어진 것이 아니라 오히려 흩어지는 느낌이 듭니다.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtp-map">
+    <div class="rtp-map-title">가능성 핵심 지도</div>
+
+    <div class="rtp-grid">
+      <div class="rtp-grid-item">
+        <strong>열림</strong>
+        <span>지금의 삶이 전부가 아니라는 감각입니다.</span>
+      </div>
+
+      <div class="rtp-grid-item">
+        <strong>흔들림</strong>
+        <span>다르게 살 수 있다는 생각은 현재를 불안하게 만듭니다.</span>
+      </div>
+
+      <div class="rtp-grid-item">
+        <strong>책임</strong>
+        <span>가능성은 결국 어떤 삶을 현실로 만들 것인지 묻게 합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtp-toc">
+    <div class="rtp-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 할 수 있는 일이 많은데 왜 더 막막해질까</summary>
+      <div class="rtp-toc-desc">
+        가능성이 많아질수록 현재의 삶이 왜 더 흔들리는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 가능성은 선택지 목록과 다르다</summary>
+      <div class="rtp-toc-desc">
+        가능성을 단순한 옵션이 아니라 아직 닫히지 않은 삶의 방향으로 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 다르게 살 수 있다는 말은 왜 자유이면서 불안인가</summary>
+      <div class="rtp-toc-desc">
+        자유와 가능성이 왜 희망과 불안을 동시에 만드는지 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 키르케고르는 왜 가능성을 불안의 자리에서 보았는가</summary>
+      <div class="rtp-toc-desc">
+        가능성과 불안의 관계를 실존철학의 질문으로 연결합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 가능성은 언제 삶을 열고 언제 현재를 빼앗는가</summary>
+      <div class="rtp-toc-desc">
+        가능성이 삶을 살리는 순간과 현재를 유예하게 만드는 순간을 함께 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 현대사회는 왜 가능성을 자기관리의 압박으로 바꾸는가</summary>
+      <div class="rtp-toc-desc">
+        성장, 비교, 자기계발의 언어 속에서 가능성이 어떻게 압박이 되는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 가능성</summary>
+      <div class="rtp-toc-desc">
+        《에브리씽 에브리웨어 올 앳 원스》와 《트루먼 쇼》를 통해 가능성의 빛과 불안을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 가능성은 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rtp-toc-desc">
+        가능성이 설명하는 지점과 설명하지 못하는 현실의 조건을 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtp-section">
+    <h2>1. 할 수 있는 일이 많은데 왜 더 막막해질까</h2>
+
+    <div class="rtp-one-line">
+      👉 가능성이 많다는 말은 삶이 넓어진다는 뜻처럼 보이지만, 동시에 아직 아무것도 현실이 되지 않았다는 불안을 함께 불러옵니다.
+    </div>
+
+    <p>
+      우리는 가능성을 좋은 말로 배웁니다.
+      가능성이 있다는 말은 아직 끝나지 않았다는 뜻이고,
+      더 나아질 여지가 있다는 뜻이며,
+      지금과 다른 삶도 열려 있다는 뜻입니다.
+    </p>
+
+    <p>
+      그래서 가능성은 희망처럼 들립니다.
+      “아직 기회가 있다”, “다시 시작할 수 있다”, “다른 길도 있다”는 말은 막힌 삶에 숨 쉴 틈을 만들어 줍니다.
+    </p>
+
+    <p>
+      하지만 가능성이 언제나 편안한 것은 아닙니다.
+      길이 하나뿐이라면 적어도 고민은 줄어듭니다.
+      그런데 여러 길이 동시에 열려 있으면,
+      인간은 선택하지 않은 길들의 무게까지 함께 느끼게 됩니다.
+    </p>
+
+    <p>
+      막막함은 가능성이 없어서만 생기지 않습니다.
+      오히려 가능성이 너무 많아서 생기기도 합니다.
+      할 수 있는 것이 많아 보일수록,
+      지금 내가 하고 있는 일이 충분한지 더 자주 흔들리기 때문입니다.
+    </p>
+
+    <div class="rtp-quote">
+      가능성은 삶을 열어 주지만, 동시에 아직 선택하지 않은 삶들의 그림자를 현재 위에 드리웁니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtp-section">
+    <h2>2. 가능성은 선택지 목록과 다르다</h2>
+
+    <div class="rtp-one-line">
+      👉 가능성은 단순히 고를 수 있는 항목이 많다는 뜻이 아니라, 아직 삶이 완전히 닫히지 않았다는 존재의 감각입니다.
+    </div>
+
+    <p>
+      우리는 가능성을 자주 선택지로 이해합니다.
+      A도 가능하고, B도 가능하고, C도 가능하다고 말합니다.
+      이때 가능성은 메뉴판처럼 보입니다.
+    </p>
+
+    <p>
+      그러나 철학적으로 가능성은 조금 더 깊은 말입니다.
+      가능성은 아직 현실이 되지 않았지만,
+      삶을 다른 방향으로 열 수 있는 여지입니다.
+      그것은 단순한 옵션이 아니라
+      <strong>“나는 지금의 나로만 고정되어 있지 않다”</strong>는 감각과 연결됩니다.
+    </p>
+
+    <div class="rtp-table-wrap">
+      <table class="rtp-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>선택지</th>
+            <th>가능성</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>겉모양</strong></td>
+            <td>고를 수 있는 항목</td>
+            <td>아직 닫히지 않은 삶의 방향</td>
+          </tr>
+          <tr>
+            <td><strong>묻는 말</strong></td>
+            <td>무엇을 고를 것인가</td>
+            <td>나는 어떤 삶을 현실로 만들 것인가</td>
+          </tr>
+          <tr>
+            <td><strong>위험</strong></td>
+            <td>많을수록 판단이 흐려짐</td>
+            <td>현실을 살지 못하고 가능성만 붙잡게 됨</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      가능성은 삶을 열어 주지만, 그 자체가 삶을 대신 살아 주지는 않습니다.
+      가능성은 열림이고, 현실은 그 열림 가운데 무엇인가를 살아내는 일입니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtp-section">
+    <h2>3. 다르게 살 수 있다는 말은 왜 자유이면서 불안인가</h2>
+
+    <div class="rtp-one-line">
+      👉 가능성은 인간을 닫힌 존재로 만들지 않지만, 동시에 내가 어떤 삶을 선택해야 하는지 묻게 하며 불안을 만듭니다.
+    </div>
+
+    <p>
+      “다르게 살 수 있다”는 말은 분명 자유의 말입니다.
+      지금의 직업이 전부가 아닐 수 있고,
+      지금의 관계 방식이 전부가 아닐 수 있으며,
+      지금의 나라고 믿는 모습도 끝이 아닐 수 있습니다.
+    </p>
+
+    <p>
+      이 말은 인간을 숨 쉬게 합니다.
+      지금의 실패가 내 존재 전체를 결정하지 않고,
+      지금의 조건이 내 삶의 마지막 이름이 아니라는 사실은 인간에게 다시 살아갈 틈을 줍니다.
+    </p>
+
+    <p>
+      하지만 바로 그 이유 때문에 가능성은 불안을 만듭니다.
+      다르게 살 수 있다면, 지금 이렇게 사는 것 역시 하나의 선택이 됩니다.
+      더 나은 길이 있을지도 모른다는 생각은 현재의 삶을 의심하게 만듭니다.
+    </p>
+
+    <div class="rtp-flow">
+      <strong class="rtp-flow-title">가능성이 불안으로 바뀌는 흐름</strong>
+      <div class="rtp-flow-boxes">
+        <div>지금과 다른 삶도 가능하다고 느낀다</div>
+        <div>현재의 삶이 유일한 답이 아니게 된다</div>
+        <div>나는 왜 이 삶을 살고 있는가를 묻게 된다</div>
+      </div>
+    </div>
+
+    <p>
+      그래서 가능성은 삶을 열어 주는 동시에 흔듭니다.
+      인간은 닫힌 존재가 아니기 때문에 자유롭지만,
+      닫힌 존재가 아니기 때문에 불안합니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtp-section">
+    <h2>4. 키르케고르는 왜 가능성을 불안의 자리에서 보았는가</h2>
+
+    <div class="rtp-one-line">
+      👉 키르케고르에게 불안은 단순한 공포가 아니라, 인간이 다르게 될 수 있다는 가능성 앞에서 겪는 흔들림입니다.
+    </div>
+
+    <p>
+      키르케고르에게 불안은 구체적인 위험 앞에서 생기는 공포와 다릅니다.
+      공포는 대상을 가리킬 수 있습니다.
+      무엇이 무서운지 말할 수 있습니다.
+    </p>
+
+    <p>
+      하지만 불안은 더 흐릿합니다.
+      그것은 인간이 자유롭다는 사실,
+      다시 말해 다르게 선택할 수 있고 다르게 될 수 있다는 사실 앞에서 생기는 감정입니다.
+    </p>
+
+    <p>
+      가능성은 인간을 열어 줍니다.
+      그러나 가능성이 열린다는 것은 아직 아무것도 확정되지 않았다는 뜻이기도 합니다.
+      그래서 가능성은 희망과 함께 현기증을 만듭니다.
+    </p>
+
+    <div class="rtp-flow">
+      <strong class="rtp-flow-title">키르케고르식 가능성의 구조</strong>
+      <div class="rtp-flow-boxes">
+        <div>가능성 — 다르게 될 수 있다는 열림</div>
+        <div>자유 — 하나의 삶을 선택해야 하는 조건</div>
+        <div>불안 — 선택하지 않은 삶까지 함께 느끼는 흔들림</div>
+      </div>
+    </div>
+
+    <p>
+      이때 불안은 단순히 약한 마음이 아닙니다.
+      그것은 인간이 아직 완전히 정해지지 않은 존재라는 사실의 감각입니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtp-section">
+    <h2>5. 가능성은 언제 삶을 열고 언제 현재를 빼앗는가</h2>
+
+    <div class="rtp-one-line">
+      👉 가능성은 현재를 새롭게 보게 하지만, 가능성만 붙잡으면 지금 살아야 할 삶을 계속 유예하게 만들 수 있습니다.
+    </div>
+
+    <p>
+      가능성은 막힌 삶에 틈을 냅니다.
+      “나는 원래 이런 사람이다”라는 말이 나를 가둘 때,
+      가능성은 다른 방식으로 살아볼 수 있다는 문을 열어 줍니다.
+    </p>
+
+    <p>
+      그래서 가능성은 필요합니다.
+      가능성이 없다면 인간은 주어진 조건을 운명처럼 받아들이기 쉽습니다.
+      지금의 실패, 지금의 역할, 지금의 상처가 나의 전부가 되어 버릴 수 있습니다.
+    </p>
+
+    <p>
+      그러나 가능성만 붙잡는 삶도 위험합니다.
+      언젠가 바뀔 수 있다는 생각이 현재를 견디게 해 주지만,
+      동시에 지금 아무것도 결정하지 않아도 된다는 핑계가 될 수 있습니다.
+    </p>
+
+    <div class="rtp-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtp-grid-item">
+        <strong>삶을 여는 가능성</strong>
+        <span>지금의 조건이 내 전부가 아니라는 사실을 보여 줍니다.</span>
+      </div>
+
+      <div class="rtp-grid-item">
+        <strong>현재를 빼앗는 가능성</strong>
+        <span>언젠가의 삶을 상상하느라 지금의 선택을 계속 미룹니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      가능성은 문입니다.
+      그러나 문 앞에 서 있는 것과 문을 지나 삶을 살아내는 것은 다릅니다.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtp-section">
+    <h2>6. 현대사회는 왜 가능성을 자기관리의 압박으로 바꾸는가</h2>
+
+    <div class="rtp-one-line">
+      👉 오늘의 사회는 가능성을 열어 주는 것처럼 말하지만, 동시에 더 많은 가능성을 관리하고 증명하라고 요구합니다.
+    </div>
+
+    <p>
+      현대사회는 사람들에게 계속 가능성을 말합니다.
+      더 배울 수 있다, 더 성장할 수 있다, 더 나아질 수 있다,
+      더 좋은 삶을 만들 수 있다고 말합니다.
+    </p>
+
+    <p>
+      이 말은 분명 어떤 사람에게 힘이 됩니다.
+      지금의 삶이 막혀 있더라도 다른 길이 있다는 감각은 사람을 다시 움직이게 합니다.
+    </p>
+
+    <p>
+      하지만 가능성의 언어는 쉽게 압박이 됩니다.
+      아직 더 할 수 있는데 왜 하지 않느냐는 말,
+      더 나아질 수 있는데 왜 멈춰 있느냐는 말,
+      네 가능성을 제대로 쓰지 못한 것은 결국 네 책임이라는 말로 바뀌기 쉽습니다.
+    </p>
+
+    <div class="rtp-table-wrap">
+      <table class="rtp-table">
+        <thead>
+          <tr>
+            <th>현대사회의 언어</th>
+            <th>겉으로 보이는 의미</th>
+            <th>감춰진 압박</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>더 성장할 수 있다</strong></td>
+            <td>삶이 닫혀 있지 않다는 격려</td>
+            <td>계속 나아지지 않으면 부족하다는 감각</td>
+          </tr>
+          <tr>
+            <td><strong>기회는 많다</strong></td>
+            <td>선택지가 열려 있다는 말</td>
+            <td>실패의 책임이 개인에게 돌아감</td>
+          </tr>
+          <tr>
+            <td><strong>너의 가능성을 써라</strong></td>
+            <td>잠재력을 믿는 말</td>
+            <td>쉬거나 멈추는 삶을 낭비처럼 느끼게 함</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 가능성은 조심스럽게 읽어야 합니다.
+      가능성은 인간을 닫힌 존재로 보지 않게 해 주지만,
+      모든 것을 개인의 가능성 부족으로 돌리면 현실의 조건을 가리게 됩니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtp-section">
+    <h2>7. 작품으로 읽는 가능성</h2>
+
+    <div class="rtp-one-line">
+      👉 작품 속 가능성은 단순히 여러 길이 있다는 설정이 아니라, 인물이 어떤 삶을 현실로 받아들이는지를 드러내는 장면으로 나타납니다.
+    </div>
+
+    <h3>7-1) 《에브리씽 에브리웨어 올 앳 원스》 — 모든 가능성이 열리면 나는 더 분명해지는가</h3>
+
+    <p>
+      《에브리씽 에브리웨어 올 앳 원스》는 수많은 삶의 가능성이 동시에 열리는 상상에서 출발합니다.
+      다른 선택을 했다면 다른 사람이 되었을 수도 있다는 감각이 작품 전체를 움직입니다.
+    </p>
+
+    <p>
+      이 작품을 가능성의 관점으로 읽으면,
+      중요한 질문은 “얼마나 많은 삶이 가능한가”가 아닙니다.
+      오히려 모든 가능성이 열렸을 때,
+      나는 지금의 삶을 어떻게 받아들일 수 있는가가 더 중요해집니다.
+    </p>
+
+    <h3>7-2) 《트루먼 쇼》 — 익숙한 세계 밖으로 나갈 가능성</h3>
+
+    <p>
+      《트루먼 쇼》의 트루먼은 겉으로는 안정된 세계 안에서 살아갑니다.
+      그러나 어느 순간 그는 자신이 살고 있는 세계가 진짜인지 묻게 됩니다.
+    </p>
+
+    <p>
+      이 작품에서 가능성은 단순한 선택지가 아닙니다.
+      그것은 익숙한 세계 밖으로 나갈 수 있다는 감각입니다.
+      안정된 삶을 계속 살 수도 있지만,
+      그 안정이 만들어진 것이라면 밖으로 나가는 일은 자유이면서 동시에 두려움이 됩니다.
+    </p>
+
+    <div class="rtp-table-wrap">
+      <table class="rtp-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>가능성의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《에브리씽 에브리웨어 올 앳 원스》</strong></td>
+            <td>수많은 다른 삶이 동시에 열리는 장면</td>
+            <td>모든 가능성이 열리면 지금의 삶은 더 의미 있어지는가, 더 작아지는가</td>
+          </tr>
+          <tr>
+            <td><strong>《트루먼 쇼》</strong></td>
+            <td>익숙한 세계 밖으로 나갈 수 있다는 가능성</td>
+            <td>안정된 세계를 떠나는 일은 자유인가, 불안인가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 가능성을 단순한 희망으로만 그리지 않습니다.
+      가능성은 삶을 열지만,
+      동시에 지금의 삶을 어떻게 받아들일 것인지 묻게 만드는 장면으로 작동합니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtp-section">
+    <h2>8. 가능성은 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rtp-one-line">
+      👉 가능성은 인간이 닫힌 존재가 아니라는 사실을 보여 주지만, 모든 삶의 어려움을 개인의 가능성 문제로만 돌려서는 안 됩니다.
+    </div>
+
+    <p>
+      가능성은 인간을 다시 보게 합니다.
+      나는 지금의 나로만 끝나지 않습니다.
+      지금의 실패, 지금의 역할, 지금의 조건이 내 삶 전체를 완전히 결정하지는 않습니다.
+    </p>
+
+    <p>
+      이 점에서 가능성은 삶을 살리는 개념입니다.
+      그것은 인간에게 다시 시작할 수 있다는 감각,
+      다르게 해석할 수 있다는 여지,
+      지금과 다른 관계를 맺을 수 있다는 문을 열어 줍니다.
+    </p>
+
+    <p>
+      그러나 가능성 하나로 현실 전체를 설명할 수는 없습니다.
+      누군가에게 가능성이 많다는 말은 실제로 열려 있는 기회일 수 있지만,
+      누군가에게는 현실 조건을 보지 않는 말일 수 있습니다.
+    </p>
+
+    <div class="rtp-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtp-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>가능성은 인간이 아직 닫히지 않은 존재이며, 다른 삶을 상상하고 선택할 수 있다는 사실을 보여 줍니다.</span>
+      </div>
+
+      <div class="rtp-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>경제적 조건, 돌봄의 부담, 제도적 장벽, 사회적 차이를 지우고 모두에게 같은 가능성이 있다고 말하면 현실이 흐려집니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 가능성은 두 방향으로 읽어야 합니다.
+      하나는 내가 어떤 가능성 앞에서 불안해하고 있는가입니다.
+    </p>
+
+    <p>
+      다른 하나는 그 가능성이 정말 내 앞에 열린 것인가,
+      아니면 사회가 나에게 더 노력하라고 요구하기 위해 보여 주는 이미지인가입니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rtp-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      가능성은 삶을 열어 주는 말입니다.
+      하지만 가능성이 많다는 이유만으로 삶이 자동으로 넓어지는 것은 아닙니다.
+      때로 가능성은 현재를 살아내지 못하게 만드는 유예의 언어가 되기도 합니다.
+    </p>
+
+    <p>
+      내가 붙잡고 있는 가능성은 나의 삶을 여는 문인가,
+      아니면 아직 선택하지 않아도 된다는 안전한 핑계인가.
+    </p>
+
+    <p>
+      그리고 이 가능성은 정말 누구에게나 같은 방식으로 열려 있는가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtp-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rtp-read-intro">
+      이 글을 읽은 뒤에는 가능성을 현대철학의 큰 흐름 안에서 다시 보고, 자유와 책임의 계열과 여러 해석 렌즈로 확장해 볼 수 있습니다.
+    </p>
+
+    <div class="rtp-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <span>
+          가능성을 하나의 선택 문제로만 닫지 않고 현대 철학이 삶과 사회를 어떤 질문으로 다시 여는지 함께 볼 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+        <span>
+          가능성이 실존, 자유, 책임, 정체성의 흐름 안에서 어떻게 이어지는지 넓게 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <span>
+          하나의 철학 개념만으로 현실을 정리하지 않고 여러 렌즈로 삶과 사회를 다시 읽는 관점을 확인할 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtp-tags">
+    Re:Think, 가능성 뜻, Possibility, 가능성의 철학, 키르케고르, 자유와 책임, 선택의 불안, 실존철학, 자기계발 사회, 에브리씽 에브리웨어 올 앳 원스, 트루먼 쇼, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtp-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

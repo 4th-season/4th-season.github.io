@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>결정론 | Re:Think</title>
+  <meta name="description" content="결정론 은 우리의 선택이 완전히 자유로운지, 아니면 과거의 조건과 원인 속에서 이미 어느 정도 정해져 있는지를 묻는 철학 개념입니다. 이 글은 일상의 선택 장면에서 결정론의 질문을 다시 읽습니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtd-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #2d3036;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtd-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtd-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #8b2f3c;
+    background: #fbf3f4;
+    border-radius: 10px;
+    color: #5f1f29;
+    font-size: 0.98rem;
+  }
+
+  .rtd-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eef2f7 0%, #fbf3f4 100%);
+    border: 1px solid #dec5ca;
+    border-radius: 18px;
+  }
+
+  .rtd-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #1f2a44;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rtd-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #1f2a44;
+    letter-spacing: -0.045em;
+  }
+
+  .rtd-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #8b2f3c;
+  }
+
+  .rtd-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtd-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f6f7f9;
+    border: 1px solid #d6dbe4;
+    border-radius: 16px;
+  }
+
+  .rtd-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #1f2a44;
+  }
+
+  .rtd-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtd-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e2d4d7;
+    border-radius: 13px;
+  }
+
+  .rtd-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #8b2f3c;
+    font-size: 1.02rem;
+  }
+
+  .rtd-grid-item span {
+    display: block;
+    color: #525866;
+    font-size: 0.94rem;
+  }
+
+  .rtd-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eef2f7;
+    border: 1px solid #cfd6e1;
+    border-radius: 16px;
+  }
+
+  .rtd-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #1f2a44;
+  }
+
+  .rtd-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #d9dee8;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtd-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #1f2a44;
+    list-style: none;
+  }
+
+  .rtd-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtd-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #8b2f3c;
+  }
+
+  .rtd-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtd-toc-desc {
+    padding: 0 16px 15px;
+    color: #5b6472;
+    font-size: 0.95rem;
+    border-top: 1px solid #e5e9f0;
+  }
+
+  .rtd-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #d9dee8;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(31, 42, 68, 0.06);
+  }
+
+  .rtd-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #8b2f3c;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #1f2a44;
+    letter-spacing: -0.035em;
+  }
+
+  .rtd-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #8b2f3c;
+  }
+
+  .rtd-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fbf3f4;
+    border-radius: 12px;
+    color: #5f1f29;
+    font-weight: 600;
+  }
+
+  .rtd-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtd-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #eef2f7;
+    border-left: 5px solid #8b2f3c;
+    border-radius: 10px;
+    color: #1f2a44;
+    font-weight: 700;
+  }
+
+  .rtd-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtd-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtd-table th {
+    background: #1f2a44;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #cfd6e1;
+    text-align: left;
+  }
+
+  .rtd-table td {
+    padding: 12px 10px;
+    border: 1px solid #cfd6e1;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtd-table tr:nth-child(even) td {
+    background: #fbf3f4;
+  }
+
+  .rtd-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #d9dee8;
+    border-radius: 14px;
+  }
+
+  .rtd-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #1f2a44;
+    font-weight: 800;
+  }
+
+  .rtd-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #4d5563;
+  }
+
+  .rtd-flow-boxes div {
+    padding: 11px 13px;
+    background: #eef2f7;
+    border-radius: 9px;
+  }
+
+  .rtd-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #1f2a44 0%, #8b2f3c 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rtd-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtd-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtd-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rtd-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rtd-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rtd-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rtd-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rtd-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rtd-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eef2f7;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtd-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rtd-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtd-section {
+      padding: 24px 18px;
+    }
+
+    .rtd-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtd-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtd-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 결정론 뜻 - 내 선택은 어디까지 나의 것이라고 말할 수 있는가</h1>
+<div class="rtd-meta">
+    <strong>결정론</strong>은 우리의 선택이 완전히 자유로운지, 아니면 과거의 조건과 원인 속에서 이미 어느 정도 정해져 있는지를 묻는 철학 개념입니다. 이 글은 일상의 선택 장면에서 결정론의 질문을 다시 읽습니다.
+  </div>
+
+  <!-- 안내 영역: H1 대신 제목형 표시 -->
+  <section class="rtd-hero">
+    <div class="rtd-kicker">Re:Think 현대철학사전</div>
+    <div class="rtd-title-like">결정론 뜻</div>
+    <div class="rtd-subtitle-like">
+      내 선택은 어디까지 나의 것이라고 말할 수 있는가
+    </div>
+
+    <p>
+      아침에 알람이 울립니다. 잠깐 눈을 뜨고, 다시 10분만 더 자겠다고 생각합니다.
+      출근길에는 늘 가던 길을 걷고, 점심에는 익숙한 메뉴를 고르고, 퇴근 뒤에는 피곤하다는 이유로 어제와 비슷한 시간을 보냅니다.
+    </p>
+
+    <p>
+      겉으로 보면 모두 내가 선택한 일입니다.
+      내가 알람을 미뤘고, 내가 그 길을 골랐고, 내가 그 메뉴를 주문했고, 내가 쉬는 방식을 택했습니다.
+    </p>
+
+    <p>
+      그런데 조금만 더 들여다보면 질문이 생깁니다.
+      정말 내가 자유롭게 고른 것일까요.
+      아니면 피로, 습관, 환경, 과거의 경험, 경제적 조건, 타인의 기대가 이미 내 선택의 방향을 좁혀 놓은 것일까요.
+    </p>
+
+    <p>
+      <strong>결정론</strong>은 바로 이 지점에서 시작됩니다.
+      우리는 선택한다고 믿지만, 그 선택은 어디까지 나의 것이라고 말할 수 있을까요.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtd-map">
+    <div class="rtd-map-title">결정론 핵심 지도</div>
+
+    <div class="rtd-grid">
+      <div class="rtd-grid-item">
+        <strong>원인</strong>
+        <span>나의 선택은 아무것도 없는 곳에서 갑자기 생기지 않습니다.</span>
+      </div>
+
+      <div class="rtd-grid-item">
+        <strong>조건</strong>
+        <span>성격, 습관, 환경, 제도, 과거 경험이 선택의 범위를 만듭니다.</span>
+      </div>
+
+      <div class="rtd-grid-item">
+        <strong>책임</strong>
+        <span>결정된 조건 속에서도 우리는 책임을 어떻게 이해할지 다시 물어야 합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtd-toc">
+    <div class="rtd-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 내가 고른 줄 알았던 선택은 정말 나의 것일까</summary>
+      <div class="rtd-toc-desc">
+        일상의 사소한 선택이 어떻게 습관과 조건 속에서 만들어지는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 결정론은 자유를 부정하는 말일까</summary>
+      <div class="rtd-toc-desc">
+        결정론의 기본 뜻을 자유의지와의 긴장 속에서 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 선택은 어디에서 시작되는가</summary>
+      <div class="rtd-toc-desc">
+        선택을 만드는 원인, 환경, 성격, 기억, 제도의 작동을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 결정론이 불편한 이유</summary>
+      <div class="rtd-toc-desc">
+        결정론이 왜 책임, 후회, 노력의 의미를 흔들어 놓는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 현대사회는 왜 선택을 개인의 책임으로 돌리는가</summary>
+      <div class="rtd-toc-desc">
+        선택의 자유를 말하면서도 조건의 차이를 지우는 사회적 언어를 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 결정론과 책임은 함께 생각될 수 있을까</summary>
+      <div class="rtd-toc-desc">
+        결정론을 책임 회피가 아니라 조건을 더 정교하게 읽는 관점으로 확장합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 결정론</summary>
+      <div class="rtd-toc-desc">
+        《가타카》와 《마이너리티 리포트》를 통해 정해진 미래와 선택의 문제를 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 결정론은 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rtd-toc-desc">
+        결정론이 설명하는 지점과 설명하지 못하는 자유의 감각을 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtd-section">
+    <h2>1. 내가 고른 줄 알았던 선택은 정말 나의 것일까</h2>
+
+    <div class="rtd-one-line">
+      👉 우리는 선택한다고 느끼지만, 그 선택은 이미 내 몸에 밴 습관과 살아온 조건 속에서 만들어질 때가 많습니다.
+    </div>
+
+    <p>
+      사소한 선택은 자유로워 보입니다.
+      무엇을 먹을지, 누구에게 답장을 할지, 어떤 길로 갈지, 오늘 무엇을 미룰지 정도는 내가 고른다고 느낍니다.
+    </p>
+
+    <p>
+      하지만 같은 선택이 반복될 때 우리는 조금 다른 질문을 하게 됩니다.
+      왜 나는 늘 비슷한 방식으로 미루는가.
+      왜 비슷한 사람에게 끌리는가.
+      왜 같은 상황에서 같은 말투로 방어하는가.
+    </p>
+
+    <p>
+      이때 선택은 갑자기 하늘에서 떨어진 일이 아닙니다.
+      내가 살아온 환경, 몸에 밴 습관, 실패의 기억, 인정받고 싶은 마음, 피하고 싶은 상처가 선택의 방향을 미리 좁히고 있습니다.
+    </p>
+
+    <p>
+      결정론은 바로 이 지점을 보게 합니다.
+      선택은 자유로운 순간처럼 보이지만, 그 순간에는 이미 수많은 원인과 조건이 함께 들어와 있습니다.
+    </p>
+
+    <div class="rtd-quote">
+      “내가 선택했다”는 말은 간단하지만, 그 선택을 만든 조건은 결코 간단하지 않습니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtd-section">
+    <h2>2. 결정론은 자유를 부정하는 말일까</h2>
+
+    <div class="rtd-one-line">
+      👉 결정론은 모든 일이 아무 이유 없이 벌어진다고 보지 않고, 사건과 선택이 원인과 조건의 흐름 속에서 생긴다고 보는 관점입니다.
+    </div>
+
+    <p>
+      결정론은 흔히 “모든 것이 이미 정해져 있다”는 말로 이해됩니다.
+      그래서 결정론을 들으면 운명론과 비슷하게 느껴지기도 합니다.
+    </p>
+
+    <p>
+      하지만 철학에서 결정론은 조금 더 조심스럽게 읽어야 합니다.
+      결정론은 선택과 사건이 아무 원인 없이 생기는 것이 아니라,
+      이전의 원인과 조건 속에서 이어진다고 보는 관점입니다.
+    </p>
+
+    <p>
+      내가 오늘 화를 낸 것도, 아무 이유 없이 갑자기 생긴 일이 아닐 수 있습니다.
+      오래된 피로, 반복된 무시, 익숙한 방어 방식, 관계의 긴장이 그 반응을 만들었을 수 있습니다.
+    </p>
+
+    <div class="rtd-table-wrap">
+      <table class="rtd-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>운명론</th>
+            <th>결정론</th>
+            <th>자유의지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>기본 감각</strong></td>
+            <td>어차피 정해져 있다</td>
+            <td>원인과 조건이 결과를 만든다</td>
+            <td>나는 다르게 선택할 수 있다</td>
+          </tr>
+          <tr>
+            <td><strong>묻는 말</strong></td>
+            <td>피할 수 있는가</td>
+            <td>무엇이 이 선택을 만들었는가</td>
+            <td>나는 무엇을 선택할 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>위험</strong></td>
+            <td>체념으로 흐를 수 있음</td>
+            <td>책임이 흐려질 수 있음</td>
+            <td>조건의 차이를 무시할 수 있음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      결정론은 자유를 단순히 없애는 말로만 읽을 필요는 없습니다.
+      오히려 그것은 자유가 얼마나 많은 조건 위에 서 있는지를 묻게 합니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtd-section">
+    <h2>3. 선택은 어디에서 시작되는가</h2>
+
+    <div class="rtd-one-line">
+      👉 선택은 마음속의 결심 하나에서 시작되는 것처럼 보이지만, 실제로는 몸과 기억과 환경과 제도가 함께 만든 장면에서 시작됩니다.
+    </div>
+
+    <p>
+      우리는 선택을 내면의 문제로 생각하기 쉽습니다.
+      마음만 먹으면 바꿀 수 있고, 의지가 강하면 다른 선택을 할 수 있다고 믿습니다.
+    </p>
+
+    <p>
+      물론 마음과 의지는 중요합니다.
+      그러나 선택은 마음 하나로만 만들어지지 않습니다.
+      내가 자라온 환경, 반복해서 배운 반응, 주변 사람이 허용하는 말, 제도가 열어 둔 길과 닫아 둔 길이 선택의 모양을 만듭니다.
+    </p>
+
+    <p>
+      어떤 사람에게는 도전이 자연스러운 선택입니다.
+      실패해도 다시 시도할 수 있는 안전망이 있기 때문입니다.
+      반면 어떤 사람에게는 같은 도전이 지나치게 위험한 선택입니다.
+      실패했을 때 감당해야 할 비용이 너무 크기 때문입니다.
+    </p>
+
+    <div class="rtd-flow">
+      <strong class="rtd-flow-title">선택을 만드는 조건의 흐름</strong>
+      <div class="rtd-flow-boxes">
+        <div>과거의 경험 — 무엇을 두려워하고 무엇을 익숙하게 여기는가</div>
+        <div>현재의 환경 — 어떤 선택지가 실제로 열려 있는가</div>
+        <div>사회적 조건 — 실패와 책임을 누가 감당하게 되는가</div>
+      </div>
+    </div>
+
+    <p>
+      그래서 결정론은 “나는 선택하지 않았다”고 변명하게 하는 개념이 아닙니다.
+      오히려 선택이 어떤 조건 속에서 만들어졌는지 더 정확하게 보게 하는 렌즈입니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtd-section">
+    <h2>4. 결정론이 불편한 이유</h2>
+
+    <div class="rtd-one-line">
+      👉 결정론은 내가 자유롭게 선택했다고 믿는 감각을 흔들기 때문에, 책임과 후회와 노력의 의미까지 다시 묻게 합니다.
+    </div>
+
+    <p>
+      결정론이 불편한 이유는 단순합니다.
+      그것은 내가 내 삶의 주인이라는 감각을 흔듭니다.
+    </p>
+
+    <p>
+      내가 한 선택이 모두 원인과 조건의 결과라면,
+      나는 어디까지 책임져야 할까요.
+      내가 다른 선택을 할 수 없었다면,
+      후회는 어떤 의미를 가질까요.
+    </p>
+
+    <p>
+      반대로 모든 것을 자유의지로만 설명해도 문제가 생깁니다.
+      “네가 선택한 것 아니냐”는 말은 때로 사람을 너무 쉽게 판단합니다.
+      어떤 선택은 정말 선택처럼 보이지만, 실제로는 좁은 조건 안에서 겨우 고른 것일 수 있습니다.
+    </p>
+
+    <div class="rtd-quote">
+      결정론은 책임을 없애는 말이 아니라, 책임을 말하기 전에 조건을 먼저 보게 하는 불편한 질문입니다.
+    </div>
+
+    <p>
+      그래서 결정론은 우리를 양쪽으로 흔듭니다.
+      하나는 “정말 내 선택이었나”라는 질문이고,
+      다른 하나는 “그렇다고 아무 책임도 없는가”라는 질문입니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtd-section">
+    <h2>5. 현대사회는 왜 선택을 개인의 책임으로 돌리는가</h2>
+
+    <div class="rtd-one-line">
+      👉 현대사회는 자유롭게 선택하라고 말하지만, 실제 선택을 만든 조건의 차이는 자주 보이지 않게 만듭니다.
+    </div>
+
+    <p>
+      오늘의 사회는 선택을 강조합니다.
+      직업을 선택하고, 관계를 선택하고, 소비를 선택하고, 삶의 방식을 선택하라고 말합니다.
+    </p>
+
+    <p>
+      이 말은 한편으로 인간을 존중하는 말처럼 들립니다.
+      각자의 삶을 스스로 결정할 수 있다는 뜻이기 때문입니다.
+    </p>
+
+    <p>
+      그러나 선택의 언어는 쉽게 책임 전가의 언어가 됩니다.
+      실패하면 네가 선택한 결과라고 말하고,
+      불안정하면 네가 준비하지 않았기 때문이라고 말하며,
+      뒤처지면 네가 더 노력하지 않았기 때문이라고 말합니다.
+    </p>
+
+    <div class="rtd-table-wrap">
+      <table class="rtd-table">
+        <thead>
+          <tr>
+            <th>현대사회의 말</th>
+            <th>겉으로 보이는 의미</th>
+            <th>가려지는 조건</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>네가 선택한 삶이다</strong></td>
+            <td>자율성과 책임을 강조함</td>
+            <td>선택지가 실제로 얼마나 열려 있었는지</td>
+          </tr>
+          <tr>
+            <td><strong>노력하면 바뀐다</strong></td>
+            <td>변화 가능성을 말함</td>
+            <td>노력의 출발선과 안전망의 차이</td>
+          </tr>
+          <tr>
+            <td><strong>기회는 모두에게 있다</strong></td>
+            <td>공정한 사회처럼 보이게 함</td>
+            <td>기회에 접근할 수 있는 조건의 차이</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      결정론은 이런 말을 그대로 믿기 전에 묻게 합니다.
+      정말 모든 사람이 같은 조건에서 선택하고 있는가.
+      누군가의 실패는 정말 그 사람의 의지 부족만으로 설명되는가.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtd-section">
+    <h2>6. 결정론과 책임은 함께 생각될 수 있을까</h2>
+
+    <div class="rtd-one-line">
+      👉 결정론이 책임을 모두 지워 버리는 것은 아닙니다. 오히려 책임을 말하는 방식을 더 넓고 조심스럽게 만들 수 있습니다.
+    </div>
+
+    <p>
+      결정론을 받아들이면 책임이 사라질 것처럼 보입니다.
+      모든 선택이 원인과 조건의 결과라면, 누구도 온전히 책임질 수 없다는 결론으로 갈 수 있기 때문입니다.
+    </p>
+
+    <p>
+      하지만 그렇게만 보면 결정론은 너무 쉽게 체념이 됩니다.
+      반대로 자유의지만 강조하면 조건의 차이를 지우게 됩니다.
+      그래서 필요한 것은 둘 중 하나를 완전히 버리는 것이 아니라, 책임을 더 정교하게 묻는 일입니다.
+    </p>
+
+    <p>
+      어떤 행동이 왜 생겼는지 이해하는 일은 그 행동을 무조건 정당화하는 것과 다릅니다.
+      원인을 본다는 것은 책임을 없애기 위해서가 아니라, 같은 일이 반복되지 않도록 조건을 바꾸기 위해서일 수 있습니다.
+    </p>
+
+    <div class="rtd-flow">
+      <strong class="rtd-flow-title">결정론 이후의 책임 질문</strong>
+      <div class="rtd-flow-boxes">
+        <div>그 선택을 만든 조건은 무엇인가</div>
+        <div>그 조건 속에서도 어떤 응답이 가능했는가</div>
+        <div>같은 선택이 반복되지 않으려면 무엇이 바뀌어야 하는가</div>
+      </div>
+    </div>
+
+    <p>
+      이때 책임은 단순히 잘못한 사람을 찾는 일이 아닙니다.
+      개인의 선택과 사회적 조건이 어떻게 얽혀 있는지를 함께 묻는 일이 됩니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtd-section">
+    <h2>7. 작품으로 읽는 결정론</h2>
+
+    <div class="rtd-one-line">
+      👉 작품 속 결정론은 미래나 운명이 정해져 있다는 설정보다, 인간이 정해진 조건을 어떻게 받아들이고 흔드는지를 보여 줄 때 더 깊어집니다.
+    </div>
+
+    <h3>7-1) 《가타카》 — 유전자가 삶을 결정한다면 노력은 무엇이 되는가</h3>
+
+    <p>
+      《가타카》는 유전적 조건이 한 사람의 가능성을 미리 판단하는 세계를 보여 줍니다.
+      태어날 때부터 능력과 한계가 계산되고, 사회는 그 정보를 기준으로 사람의 미래를 나눕니다.
+    </p>
+
+    <p>
+      이 작품을 결정론의 렌즈로 읽으면 질문은 단순히 “유전자가 중요한가”에 머물지 않습니다.
+      인간은 자신에게 주어진 조건으로만 설명될 수 있는가.
+      사회가 조건을 운명처럼 다룰 때, 개인의 노력과 욕망은 어디에 놓이는가.
+    </p>
+
+    <p>
+      《가타카》는 결정론이 인간을 얼마나 쉽게 분류할 수 있는지 보여 주면서도,
+      동시에 인간이 조건을 넘어서는 욕망을 완전히 지울 수 없다는 점을 남깁니다.
+    </p>
+
+    <h3>7-2) 《마이너리티 리포트》 — 미래가 예측된다면 책임은 어디에 있는가</h3>
+
+    <p>
+      《마이너리티 리포트》는 범죄가 일어나기 전에 미래를 예측하고 개입하는 세계를 그립니다.
+      아직 행동하지 않은 사람을 미래의 결과에 따라 판단할 수 있는가라는 질문이 작품의 중심에 놓입니다.
+    </p>
+
+    <p>
+      결정론의 관점에서 이 작품은 묻습니다.
+      미래가 이미 예측 가능하다면, 인간은 아직 선택할 수 있는 존재인가.
+      일어나지 않은 행위에 책임을 물을 수 있는가.
+    </p>
+
+    <p>
+      작품은 정해진 미래와 선택 가능한 현재 사이의 긴장을 보여 줍니다.
+      미래를 안다는 것은 인간을 더 안전하게 만드는가,
+      아니면 아직 선택하지 않은 삶까지 미리 닫아 버리는가.
+    </p>
+
+    <div class="rtd-table-wrap">
+      <table class="rtd-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>결정론의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《가타카》</strong></td>
+            <td>유전적 조건이 삶의 가능성을 미리 분류하는 세계</td>
+            <td>인간은 주어진 조건으로 어디까지 설명될 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《마이너리티 리포트》</strong></td>
+            <td>미래의 행동이 예측되고 현재의 판단 기준이 되는 세계</td>
+            <td>아직 하지 않은 선택에도 책임을 물을 수 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 결정론을 단순히 “모든 것은 정해져 있다”는 말로만 그리지 않습니다.
+      오히려 어떤 조건이 인간을 미리 설명하려 할 때,
+      그 설명 안에서 인간의 자유와 책임이 어떻게 흔들리는지를 보여 줍니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtd-section">
+    <h2>8. 결정론은 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rtd-one-line">
+      👉 결정론은 선택이 조건 없이 생기지 않는다는 사실을 보여 주지만, 인간이 자기 삶을 다시 해석하고 바꿀 수 있다는 감각까지 모두 지우지는 못합니다.
+    </div>
+
+    <p>
+      결정론은 우리가 너무 쉽게 말하는 자유를 다시 보게 합니다.
+      “네가 선택한 것”이라는 말 뒤에는 성격, 습관, 환경, 제도, 과거 경험, 관계의 압박이 함께 들어 있을 수 있습니다.
+    </p>
+
+    <p>
+      이 관점은 사람을 더 쉽게 판단하지 않게 합니다.
+      누군가의 선택을 볼 때, 그 사람이 왜 그렇게 할 수밖에 없었는지,
+      어떤 조건이 그 선택을 좁혔는지 함께 보게 합니다.
+    </p>
+
+    <p>
+      그러나 결정론 하나로 삶 전체를 닫아 버릴 수도 없습니다.
+      인간은 조건의 산물이지만, 조건을 해석하고 바꾸려는 존재이기도 합니다.
+      과거가 나를 만들었지만, 과거가 나의 모든 미래를 완전히 끝까지 대신 살아 주지는 않습니다.
+    </p>
+
+    <div class="rtd-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtd-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>결정론은 선택이 개인의 순수한 의지만이 아니라 원인과 조건 속에서 만들어진다는 사실을 보여 줍니다.</span>
+      </div>
+
+      <div class="rtd-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>모든 것을 이미 정해진 결과로만 보면 변화, 책임, 후회, 실천의 의미가 지나치게 좁아질 수 있습니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 결정론은 두 방향으로 읽어야 합니다.
+      하나는 나의 선택을 만든 조건을 더 깊게 보는 일입니다.
+    </p>
+
+    <p>
+      다른 하나는 그 조건을 알게 된 뒤,
+      나는 어떤 방식으로 다르게 응답할 수 있는지를 묻는 일입니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rtd-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      결정론은 우리에게 불편한 질문을 남깁니다.
+      내가 선택했다고 믿는 것들은 정말 아무 조건 없이 나에게서 나온 것일까요.
+      아니면 내 선택은 이미 살아온 시간, 몸에 밴 습관, 사회의 기준, 관계의 압박 속에서 어느 정도 만들어진 것일까요.
+    </p>
+
+    <p>
+      그렇다고 모든 것을 조건 탓으로 돌릴 수도 없습니다.
+      조건을 본다는 것은 책임을 없애기 위해서가 아니라,
+      책임을 더 정확하게 묻기 위해서일 수 있습니다.
+    </p>
+
+    <p>
+      나는 지금 무엇을 나의 선택이라고 부르고 있는가.
+      그 선택을 만든 조건은 무엇이며,
+      그 조건을 알게 된 나는 이제 어떤 응답을 할 수 있는가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtd-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rtd-read-intro">
+      이 글을 읽은 뒤에는 결정론을 현대철학의 큰 흐름 안에서 다시 보고, 자유와 책임의 계열과 여러 해석 렌즈로 확장해 볼 수 있습니다.
+    </p>
+
+    <div class="rtd-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <span>
+          결정론을 하나의 운명론으로 닫지 않고 현대 철학이 삶과 사회를 어떤 질문으로 다시 여는지 함께 볼 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+        <span>
+          결정론이 실존, 자유, 책임, 정체성의 흐름 안에서 어떻게 이어지는지 넓게 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <span>
+          하나의 철학 개념만으로 현실을 정리하지 않고 여러 렌즈로 삶과 사회를 다시 읽는 관점을 확인할 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtd-tags">
+    Re:Think, 결정론 뜻, Determinism, 자유의지, 자유와 책임, 선택의 조건, 원인과 결과, 운명론, 책임 윤리, 가타카, 마이너리티 리포트, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtd-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

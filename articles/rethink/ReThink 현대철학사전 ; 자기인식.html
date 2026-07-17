@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자기인식 | Re:Think</title>
+  <meta name="description" content="자기인식 은 자신의 생각과 감정, 욕망과 행동을 알아차리는 능력입니다. 그러나 인간은 자신에게 가장 가까운 존재이면서도, 상황과 관계가 바뀔 때마다 스스로를 낯설게 느끼곤 합니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rt-sa-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 42px;
+    font-family: inherit;
+    color: #2e3440;
+    line-height: 1.82;
+    word-break: keep-all;
+  }
+
+  .rt-sa-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rt-sa-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #0369a1;
+    background: #f0f9ff;
+    border-radius: 10px;
+    color: #0c4a6e;
+    font-size: 0.98rem;
+  }
+
+  .rt-sa-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+    border: 1px solid #bae6fd;
+    border-radius: 18px;
+  }
+
+  .rt-sa-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #0369a1;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rt-sa-title-like {
+    margin: 0 0 8px;
+    font-size: 1.72rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #075985;
+    letter-spacing: -0.045em;
+  }
+
+  .rt-sa-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.62;
+    font-weight: 700;
+    color: #15803d;
+  }
+
+  .rt-sa-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rt-sa-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-sa-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #075985;
+  }
+
+  .rt-sa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rt-sa-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #bbf7d0;
+    border-radius: 13px;
+  }
+
+  .rt-sa-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #0369a1;
+    font-size: 1.02rem;
+  }
+
+  .rt-sa-grid-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.94rem;
+  }
+
+  .rt-sa-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 16px;
+  }
+
+  .rt-sa-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #166534;
+  }
+
+  .rt-sa-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #dcfce7;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rt-sa-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #166534;
+    list-style: none;
+  }
+
+  .rt-sa-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rt-sa-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #0369a1;
+  }
+
+  .rt-sa-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rt-sa-toc-desc {
+    padding: 0 16px 15px;
+    color: #64748b;
+    font-size: 0.95rem;
+    border-top: 1px solid #dcfce7;
+  }
+
+  .rt-sa-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #bae6fd;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(3, 105, 161, 0.06);
+  }
+
+  .rt-sa-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #0369a1;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #075985;
+    letter-spacing: -0.035em;
+  }
+
+  .rt-sa-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #f0f9ff;
+    border-radius: 12px;
+    color: #0c4a6e;
+    font-weight: 600;
+  }
+
+  .rt-sa-section p {
+    margin: 0 0 14px;
+  }
+
+  .rt-sa-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #f0fdf4;
+    border-left: 5px solid #0369a1;
+    border-radius: 10px;
+    color: #166534;
+    font-weight: 700;
+  }
+
+  .rt-sa-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 14px;
+  }
+
+  .rt-sa-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #075985;
+    font-weight: 800;
+  }
+
+  .rt-sa-flow-step {
+    padding: 11px 13px;
+    background: #fff;
+    border: 1px solid #e0f2fe;
+    border-radius: 10px;
+    color: #475569;
+  }
+
+  .rt-sa-flow-arrow {
+    text-align: center;
+    color: #0369a1;
+    font-weight: 800;
+    margin: 4px 0;
+  }
+
+  .rt-sa-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rt-sa-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rt-sa-table th {
+    padding: 12px 10px;
+    background: #0369a1;
+    color: #fff;
+    border: 1px solid #bae6fd;
+    text-align: left;
+  }
+
+  .rt-sa-table td {
+    padding: 12px 10px;
+    border: 1px solid #bae6fd;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rt-sa-table tr:nth-child(even) td {
+    background: #f0fdf4;
+  }
+
+  .rt-sa-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 22px 0;
+  }
+
+  .rt-sa-card {
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #bae6fd;
+    border-radius: 15px;
+  }
+
+  .rt-sa-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #075985;
+  }
+
+  .rt-sa-card span {
+    color: #475569;
+  }
+
+  .rt-sa-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #075985 0%, #15803d 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rt-sa-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rt-sa-final p {
+    margin: 0 0 12px;
+  }
+
+  .rt-sa-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+  }
+
+  .rt-sa-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #334155;
+  }
+
+  .rt-sa-read p {
+    margin: 0 0 20px;
+    color: #64748b;
+  }
+
+  .rt-sa-read a {
+    display: block;
+    margin-bottom: 14px;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rt-sa-read strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #075985;
+  }
+
+  .rt-sa-read span {
+    display: block;
+    color: #475569;
+  }
+
+  .rt-sa-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #f0f9ff;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rt-sa-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rt-sa-grid,
+    .rt-sa-card-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-sa-section {
+      padding: 24px 18px;
+    }
+
+    .rt-sa-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rt-sa-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rt-sa-wrap">
+
+  <h1 class="seo-h1">[Re:Think] 자기인식 뜻 - 나를 안다는 감각은 왜 자주 흔들리는가</h1>
+<div class="rt-sa-meta">
+    <strong>자기인식</strong>은 자신의 생각과 감정, 욕망과 행동을 알아차리는 능력입니다. 그러나 인간은 자신에게 가장 가까운 존재이면서도, 상황과 관계가 바뀔 때마다 스스로를 낯설게 느끼곤 합니다.
+  </div>
+
+  <section class="rt-sa-hero">
+    <div class="rt-sa-kicker">Re:Think 현대철학사전</div>
+    <div class="rt-sa-title-like">자기인식 뜻</div>
+    <div class="rt-sa-subtitle-like">
+      나를 안다는 감각은 왜 자주 흔들리는가
+    </div>
+
+    <p>
+      “나는 원래 이런 사람이야.”
+      우리는 생각보다 자주 이 말을 사용합니다.
+      낯선 일을 피할 때도, 관계에서 같은 반응을 반복할 때도,
+      선택을 설명해야 할 때도 성격을 이유로 듭니다.
+    </p>
+
+    <p>
+      그런데 어느 날 예상하지 못한 상황을 만나면
+      익숙하게 알고 있던 내가 흔들립니다.
+      침착하다고 믿었는데 사소한 말에 크게 화가 나고,
+      독립적이라고 생각했는데 누군가의 인정에 오래 매달리기도 합니다.
+    </p>
+
+    <p>
+      사람을 잘 안다고 생각했는데 같은 실수를 반복하고,
+      내가 원하는 것이 분명하다고 믿었는데
+      막상 선택 앞에서는 무엇을 원하는지 알 수 없을 때도 있습니다.
+    </p>
+
+    <p>
+      자기인식은 “나는 이런 사람이다”라는 완성된 답이 아닙니다.
+      오히려 내가 믿어 온 나와 실제로 드러나는 나 사이의 간격을
+      계속 알아차리는 과정에 가깝습니다.
+    </p>
+  </section>
+
+  <section class="rt-sa-map">
+    <div class="rt-sa-map-title">자기인식 핵심 지도</div>
+
+    <div class="rt-sa-grid">
+      <div class="rt-sa-grid-item">
+        <strong>내면 알아차리기</strong>
+        <span>지금 어떤 감정과 생각, 욕망이 움직이는지 살핍니다.</span>
+      </div>
+
+      <div class="rt-sa-grid-item">
+        <strong>행동 돌아보기</strong>
+        <span>나는 무엇을 반복하고 어떤 상황에서 흔들리는지 봅니다.</span>
+      </div>
+
+      <div class="rt-sa-grid-item">
+        <strong>관계 속 확인</strong>
+        <span>혼자 알고 있던 나와 타인 앞에서 드러난 나의 차이를 봅니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rt-sa-toc">
+    <div class="rt-sa-toc-title">목차</div>
+
+    <details open>
+      <summary>1. “나는 원래 이런 사람”이라는 말이 흔들릴 때</summary>
+      <div class="rt-sa-toc-desc">
+        익숙하게 믿던 자기 모습과 실제 행동이 어긋나는 일상의 장면에서 출발합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 자기인식 뜻</summary>
+      <div class="rt-sa-toc-desc">
+        자신의 생각과 감정, 욕망과 행동을 알아차리는 능력을 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 자기인식과 자기이해는 어떻게 다른가</summary>
+      <div class="rt-sa-toc-desc">
+        지금의 상태를 알아차리는 일과 삶 전체를 해석하는 일의 차이를 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 나는 왜 나 자신을 잘못 알 수 있는가</summary>
+      <div class="rt-sa-toc-desc">
+        기억, 욕망, 자기방어, 타인의 기대가 자기인식을 흔드는 방식을 살핍니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 작품으로 읽는 자기인식</summary>
+      <div class="rt-sa-toc-desc">
+        《엘리멘탈》과 《퍼펙트 데이즈》를 통해 자신을 알아차리는 서로 다른 장면을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 관계는 자기인식을 어떻게 바꾸는가</summary>
+      <div class="rt-sa-toc-desc">
+        자기인식이 내면 관찰만이 아니라 타인의 반응과 인정 속에서도 형성되는 이유를 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 자기인식이 보여 주는 것과 놓치는 것</summary>
+      <div class="rt-sa-toc-desc">
+        자기인식의 가능성과 함께, 모든 문제를 개인의 깨달음으로 돌릴 때 생기는 한계를 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 나를 안다는 감각이 남기는 질문</summary>
+      <div class="rt-sa-toc-desc">
+        나는 어떤 상황과 관계 속에서 나를 안다고 믿게 되었는지 다시 묻습니다.
+      </div>
+    </details>
+  </nav>
+
+  <section class="rt-sa-section">
+    <h2>1. “나는 원래 이런 사람”이라는 말이 흔들릴 때</h2>
+
+    <div class="rt-sa-one-line">
+      👉 자기인식은 나에 대한 확신에서 시작되기보다, 내가 생각한 나와 실제로 드러난 나가 어긋날 때 시작됩니다.
+    </div>
+
+    <p>
+      우리는 자신을 설명하는 몇 가지 말을 가지고 있습니다.
+      차분하다, 성실하다, 독립적이다, 사람을 잘 믿지 않는다,
+      책임감이 강하다, 낯을 가린다고 말합니다.
+    </p>
+
+    <p>
+      이런 말은 나를 이해하는 데 도움이 됩니다.
+      그러나 시간이 지나면 그 말이 나를 관찰하는 도구가 아니라
+      나를 고정하는 설명이 되기도 합니다.
+    </p>
+
+    <p>
+      “나는 원래 소극적이니까.”
+      “나는 원래 감정 표현을 못 하니까.”
+      이렇게 말하는 순간,
+      지금 왜 말하지 못하는지 묻는 대신
+      오래된 자기 설명 뒤에 숨을 수 있습니다.
+    </p>
+
+    <p>
+      그러다 예상하지 못한 장면에서 다른 내가 나타납니다.
+      평소보다 용감해지기도 하고,
+      믿었던 것보다 더 약해지기도 하며,
+      자신도 몰랐던 욕망과 두려움을 발견하기도 합니다.
+    </p>
+
+    <div class="rt-sa-quote">
+      내가 나를 잘못 알고 있었던 것일까요,<br>
+      아니면 나는 상황과 관계에 따라 계속 달라지는 존재일까요?
+    </div>
+  </section>
+
+  <section class="rt-sa-section">
+    <h2>2. 자기인식 뜻</h2>
+
+    <div class="rt-sa-one-line">
+      👉 자기인식은 자신의 생각과 감정, 욕망과 행동을 자기 경험으로 알아차리는 능력입니다.
+    </div>
+
+    <p>
+      자기인식은 자신이 지금 무엇을 느끼고 생각하는지 아는 일입니다.
+      화가 났다는 사실, 인정받고 싶다는 마음,
+      실패가 두렵다는 감정,
+      어떤 선택을 피하고 있다는 사실을 알아차리는 것이 여기에 포함됩니다.
+    </p>
+
+    <p>
+      그러나 자기인식은 단순히 감정 이름을 붙이는 것으로 끝나지 않습니다.
+      왜 그 감정이 생겼는지,
+      어떤 상황에서 반복되는지,
+      그 감정이 내 행동을 어떻게 움직이는지도 함께 보게 합니다.
+    </p>
+
+    <div class="rt-sa-table-wrap">
+      <table class="rt-sa-table">
+        <thead>
+          <tr>
+            <th>자기인식의 영역</th>
+            <th>알아차리는 것</th>
+            <th>삶에서 생기는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>감정</strong></td>
+            <td>지금 무엇을 느끼는가</td>
+            <td>나는 왜 이 상황에서 유난히 흔들리는가</td>
+          </tr>
+          <tr>
+            <td><strong>생각</strong></td>
+            <td>어떤 판단과 믿음이 작동하는가</td>
+            <td>이 생각은 사실인가, 오래된 해석인가</td>
+          </tr>
+          <tr>
+            <td><strong>욕망</strong></td>
+            <td>무엇을 원하고 피하려 하는가</td>
+            <td>이 욕망은 정말 나의 것인가</td>
+          </tr>
+          <tr>
+            <td><strong>행동</strong></td>
+            <td>어떤 반응을 반복하는가</td>
+            <td>나는 왜 알면서도 같은 선택을 하는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      자기인식은 자신을 정확히 정의하는 일이 아닙니다.
+      오히려 나에 대한 설명이 언제 흔들리고,
+      어떤 새로운 모습이 드러나는지 계속 살피는 일입니다.
+    </p>
+  </section>
+
+  <section class="rt-sa-section">
+    <h2>3. 자기인식과 자기이해는 어떻게 다른가</h2>
+
+    <div class="rt-sa-one-line">
+      👉 자기인식이 지금의 상태를 알아차리는 일이라면, 자기이해는 그 상태가 나의 삶과 어떤 관계를 갖는지 해석하는 일입니다.
+    </div>
+
+    <p>
+      자기인식과 자기이해는 가까운 말이지만 완전히 같지는 않습니다.
+      자기인식은 지금 화가 났다는 사실,
+      누군가에게 인정받고 싶다는 마음,
+      어떤 결정을 피하고 있다는 행동을 알아차리는 데 가깝습니다.
+    </p>
+
+    <p>
+      자기이해는 그보다 한 걸음 더 나아갑니다.
+      왜 비슷한 관계에서 같은 감정을 느끼는지,
+      어떤 기억과 경험이 지금의 반응을 만들었는지,
+      이 선택이 내가 살아온 이야기와 어떻게 연결되는지를 해석합니다.
+    </p>
+
+    <div class="rt-sa-table-wrap">
+      <table class="rt-sa-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>자기인식</th>
+            <th>자기이해</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>중심</strong></td>
+            <td>지금 무엇이 일어나고 있는가</td>
+            <td>왜 이런 모습이 반복되는가</td>
+          </tr>
+          <tr>
+            <td><strong>관심</strong></td>
+            <td>감정, 생각, 욕망, 행동</td>
+            <td>기억, 관계, 가치, 삶의 맥락</td>
+          </tr>
+          <tr>
+            <td><strong>질문</strong></td>
+            <td>나는 지금 무엇을 느끼는가</td>
+            <td>이 감정은 내 삶에서 무엇을 뜻하는가</td>
+          </tr>
+          <tr>
+            <td><strong>위험</strong></td>
+            <td>순간의 감정을 자기 전체로 오해할 수 있음</td>
+            <td>모든 행동에 지나치게 깊은 의미를 붙일 수 있음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      자기인식만으로는 삶 전체가 설명되지 않습니다.
+      그러나 자기인식이 없으면 자기이해도 시작되기 어렵습니다.
+      무엇이 일어나고 있는지 알아차려야,
+      그것이 내 삶에서 어떤 의미인지 물을 수 있기 때문입니다.
+    </p>
+  </section>
+
+  <section class="rt-sa-section">
+    <h2>4. 나는 왜 나 자신을 잘못 알 수 있는가</h2>
+
+    <div class="rt-sa-one-line">
+      👉 자신에게 가장 가까이 있다는 사실이 반드시 자신을 가장 정확히 안다는 뜻은 아닙니다.
+    </div>
+
+    <p>
+      우리는 자기 마음에 직접 접근할 수 있다고 생각합니다.
+      다른 사람의 마음은 추측해야 하지만,
+      내 감정과 생각은 내가 가장 잘 안다고 믿습니다.
+    </p>
+
+    <p>
+      그러나 인간은 자신에게도 설명을 만들어 냅니다.
+      실패를 피하고 싶지만 신중한 사람이라고 말하고,
+      인정받고 싶지만 공정함을 중요하게 여긴다고 설명하며,
+      상처받기 두려워 관계를 밀어내면서 혼자가 편하다고 말할 수 있습니다.
+    </p>
+
+    <p>
+      이런 설명이 모두 거짓은 아닙니다.
+      문제는 여러 이유 가운데
+      내가 받아들이기 쉬운 이유만 선택할 수 있다는 점입니다.
+    </p>
+
+    <div class="rt-sa-flow">
+      <strong class="rt-sa-flow-title">자기인식이 흔들리는 흐름</strong>
+      <div class="rt-sa-flow-step">어떤 감정이나 행동이 나타남</div>
+      <div class="rt-sa-flow-arrow">↓</div>
+      <div class="rt-sa-flow-step">자신에게 익숙하고 안전한 이유를 붙임</div>
+      <div class="rt-sa-flow-arrow">↓</div>
+      <div class="rt-sa-flow-step">불편한 욕망과 두려움은 보지 않게 됨</div>
+      <div class="rt-sa-flow-arrow">↓</div>
+      <div class="rt-sa-flow-step">자기 설명은 남지만 자기인식은 좁아짐</div>
+    </div>
+
+    <div class="rt-sa-table-wrap">
+      <table class="rt-sa-table">
+        <thead>
+          <tr>
+            <th>자기인식을 흔드는 요소</th>
+            <th>작동 방식</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>기억</strong></td>
+            <td>현재의 관점으로 과거를 다시 구성함</td>
+            <td>내 기억은 사실인가, 지금의 해석인가</td>
+          </tr>
+          <tr>
+            <td><strong>자기방어</strong></td>
+            <td>받아들이기 어려운 욕망과 두려움을 가림</td>
+            <td>나는 무엇을 인정하기 어려워하는가</td>
+          </tr>
+          <tr>
+            <td><strong>타인의 기대</strong></td>
+            <td>인정받은 모습을 자기 본질처럼 믿게 함</td>
+            <td>나는 누구의 기대 속에서 나를 이해하는가</td>
+          </tr>
+          <tr>
+            <td><strong>상황</strong></td>
+            <td>평소와 다른 행동과 감정을 끌어냄</td>
+            <td>어떤 상황에서 다른 내가 나타나는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      자기인식이 흔들린다는 것은 인간이 위선적이라는 뜻만은 아닙니다.
+      인간은 하나의 이유와 한 가지 성격으로만 설명되지 않는 존재라는 뜻에 가깝습니다.
+    </p>
+  </section>
+
+  <section class="rt-sa-section">
+    <h2>5. 작품으로 읽는 자기인식</h2>
+
+    <div class="rt-sa-one-line">
+      👉 작품 속 자기인식은 숨겨진 진짜 자아를 발견하는 장면보다, 익숙한 자기 설명이 흔들리는 장면에서 더 선명하게 드러납니다.
+    </div>
+
+    <div class="rt-sa-card-grid">
+      <div class="rt-sa-card">
+        <strong>《엘리멘탈》 — 완벽한 딸이라는 자기 설명이 흔들릴 때</strong>
+        <span>
+          엠버는 가족의 희생에 보답하기 위해 부모의 가게를 이어받아야 한다고 믿습니다.
+          자신은 책임감 있는 딸이며, 그것이 자신이 원하는 삶이라고 생각합니다.
+          그러나 새로운 관계와 경험을 통해 그 믿음 안에 자신의 욕망보다 가족의 기대가 더 많이 들어 있었음을 알아차립니다.
+        </span>
+      </div>
+
+      <div class="rt-sa-card">
+        <strong>《퍼펙트 데이즈》 — 일상을 살아가는 태도 속에서 드러나는 자기</strong>
+        <span>
+          히라야마는 반복적인 생활을 살아가지만, 그 반복은 무감각한 자동생활과 다릅니다.
+          그는 빛, 나무, 음악, 책, 사람의 작은 변화를 세심하게 바라봅니다.
+          이 작품은 자신을 안다는 일이 거창한 자기 선언보다 무엇을 보고 어떻게 하루를 살아가는지에 드러날 수 있음을 보여 줍니다.
+        </span>
+      </div>
+    </div>
+
+    <div class="rt-sa-table-wrap">
+      <table class="rt-sa-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>자기인식이 흔들리는 지점</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《엘리멘탈》</strong></td>
+            <td>가족을 위한 삶과 자신이 원하는 삶이 어긋남</td>
+            <td>내가 원한다고 믿은 것은 정말 나의 욕망인가</td>
+          </tr>
+          <tr>
+            <td><strong>《퍼펙트 데이즈》</strong></td>
+            <td>반복되는 일상 속에서도 섬세한 자기 감각을 유지함</td>
+            <td>나는 나를 말로 설명하는가, 살아가는 태도로 드러내는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 자기인식의 다른 모습을 보여 줍니다.
+      하나는 오래 믿어 온 자기 설명이 흔들리는 장면이고,
+      다른 하나는 말보다 일상의 태도 속에서 자신이 드러나는 장면입니다.
+    </p>
+  </section>
+
+  <section class="rt-sa-section">
+    <h2>6. 관계는 자기인식을 어떻게 바꾸는가</h2>
+
+    <div class="rt-sa-one-line">
+      👉 우리는 혼자 자신을 들여다보며 나를 알기도 하지만, 타인과의 관계 속에서 예상하지 못한 나를 발견하기도 합니다.
+    </div>
+
+    <p>
+      자기인식은 내면만의 문제처럼 보입니다.
+      조용히 혼자 앉아 생각하면 자신을 더 잘 알 수 있을 것 같습니다.
+      실제로 혼자 있는 시간은 자신의 감정과 생각을 살피는 데 중요합니다.
+    </p>
+
+    <p>
+      그러나 혼자 생각한 나와 관계 속에서 드러나는 나는 다를 수 있습니다.
+      나는 관대하다고 믿었지만 누군가의 성공 앞에서 질투할 수 있고,
+      독립적이라고 믿었지만 거절당하는 순간 크게 흔들릴 수 있습니다.
+    </p>
+
+    <p>
+      타인은 나를 규정하는 사람만이 아닙니다.
+      내가 미처 알지 못했던 반응과 욕망을 드러내는 계기가 되기도 합니다.
+      관계 속에서 우리는 자신이 어떤 말에 상처받고,
+      어떤 인정에 살아나며,
+      어떤 역할 앞에서 작아지는지 발견합니다.
+    </p>
+
+    <div class="rt-sa-card-grid">
+      <div class="rt-sa-card">
+        <strong>타인의 반응</strong>
+        <span>내 행동이 다른 사람에게 어떤 의미로 전달되는지 알게 합니다.</span>
+      </div>
+
+      <div class="rt-sa-card">
+        <strong>갈등</strong>
+        <span>평소에는 감춰져 있던 두려움과 욕망을 드러냅니다.</span>
+      </div>
+
+      <div class="rt-sa-card">
+        <strong>인정</strong>
+        <span>혼자서는 믿기 어려웠던 자기 가능성을 확인하게 합니다.</span>
+      </div>
+
+      <div class="rt-sa-card">
+        <strong>역할</strong>
+        <span>어떤 관계에서 어떤 모습의 내가 반복되는지 보여 줍니다.</span>
+      </div>
+    </div>
+
+    <p>
+      그렇다고 타인의 평가가 언제나 나보다 정확하다는 뜻은 아닙니다.
+      타인도 자신의 기대와 경험을 통해 나를 봅니다.
+      중요한 것은 내면의 시선과 타인의 시선 가운데 하나를 정답으로 고르는 일이 아니라,
+      두 시선이 어디에서 만나고 어디에서 어긋나는지 살피는 일입니다.
+    </p>
+  </section>
+
+  <section class="rt-sa-section">
+    <h2>7. 자기인식이 보여 주는 것과 놓치는 것</h2>
+
+    <div class="rt-sa-one-line">
+      👉 자기인식은 자신의 반복과 욕망을 보게 하지만, 모든 삶의 문제를 개인의 깨달음만으로 바꿀 수 있다고 말하지는 못합니다.
+    </div>
+
+    <p>
+      자기인식은 중요한 힘입니다.
+      감정을 알아차리지 못하면 감정에 끌려가기 쉽고,
+      욕망을 보지 못하면 다른 사람의 욕망을 내 선택처럼 받아들이기 쉽습니다.
+    </p>
+
+    <p>
+      자신의 행동을 돌아보지 못하면
+      같은 관계와 갈등을 반복하면서도
+      언제나 상대와 상황만 문제라고 생각할 수 있습니다.
+    </p>
+
+    <p>
+      그러나 자기인식만으로 현실 전체가 달라지는 것은 아닙니다.
+      자신이 소진되었다는 사실을 알아도 쉴 수 없는 노동 조건이 있을 수 있고,
+      관계가 폭력적이라는 사실을 알아도 쉽게 떠날 수 없는 경제적·사회적 조건이 있을 수 있습니다.
+    </p>
+
+    <div class="rt-sa-table-wrap">
+      <table class="rt-sa-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>자기인식이 보여 주는 것</th>
+            <th>자기인식만으로 부족한 것</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>감정</strong></td>
+            <td>내가 무엇에 상처받고 두려워하는지 알게 함</td>
+            <td>상처를 반복시키는 관계와 환경을 바로 바꾸지는 못함</td>
+          </tr>
+          <tr>
+            <td><strong>욕망</strong></td>
+            <td>무엇을 원하고 누구의 기대를 따르는지 알게 함</td>
+            <td>욕망을 실현할 실제 조건까지 보장하지는 않음</td>
+          </tr>
+          <tr>
+            <td><strong>행동</strong></td>
+            <td>반복되는 선택과 반응을 보게 함</td>
+            <td>선택을 제한하는 제도와 자원의 차이를 설명하지 못함</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      자기인식을 강조하는 말은 때로
+      “네가 자신을 잘 몰라서 힘든 것”이라는 개인 책임의 언어로 바뀔 수 있습니다.
+      하지만 나를 알아차리는 일과
+      내가 놓인 현실을 함께 읽는 일은 분리될 수 없습니다.
+    </p>
+  </section>
+
+  <section class="rt-sa-section">
+    <h2>8. 나를 안다는 감각이 남기는 질문</h2>
+
+    <div class="rt-sa-one-line">
+      👉 자기인식은 나에 대한 확신을 굳히는 일이 아니라, 내가 나를 어떻게 알고 있는지 계속 의심하는 태도에 가깝습니다.
+    </div>
+
+    <p>
+      우리는 자신을 전혀 모른 채 살 수는 없습니다.
+      어떤 선택을 하든,
+      어떤 관계를 이어 가든,
+      자신이 누구인지에 대한 어느 정도의 믿음이 필요합니다.
+    </p>
+
+    <p>
+      그러나 그 믿음이 너무 단단해지면
+      새로운 경험과 다른 모습이 들어올 자리가 사라집니다.
+      “나는 원래 이런 사람”이라는 말은
+      자기이해이면서 동시에 변화를 막는 벽이 될 수 있습니다.
+    </p>
+
+    <div class="rt-sa-card-grid">
+      <div class="rt-sa-card">
+        <strong>첫 번째 질문</strong>
+        <span>나는 어떤 경험을 근거로 나를 이런 사람이라고 믿게 되었는가.</span>
+      </div>
+
+      <div class="rt-sa-card">
+        <strong>두 번째 질문</strong>
+        <span>내가 설명하는 나와 실제 행동으로 드러나는 나는 어디에서 어긋나는가.</span>
+      </div>
+
+      <div class="rt-sa-card">
+        <strong>세 번째 질문</strong>
+        <span>나는 불편한 욕망과 감정을 보지 않기 위해 어떤 설명을 반복하고 있는가.</span>
+      </div>
+
+      <div class="rt-sa-card">
+        <strong>네 번째 질문</strong>
+        <span>타인의 말 가운데 나를 비추는 말과 나를 가두는 말을 어떻게 구분할 수 있는가.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="rt-sa-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      자기인식은 나를 완전히 알아내는 기술이 아닙니다.
+      인간은 자신에게 가장 가까운 존재이면서도,
+      기억과 욕망, 관계와 상황에 따라 자신을 다르게 이해합니다.
+    </p>
+
+    <p>
+      그래서 나를 안다는 말은 하나의 결론이 되기 어렵습니다.
+      그것은 지금의 감정과 행동을 알아차리고,
+      오래된 자기 설명이 현실과 맞지 않을 때 다시 고쳐 읽는 과정입니다.
+    </p>
+
+    <p>
+      나는 지금 나를 알고 있는가.
+      아니면 익숙한 성격 설명과 타인의 기대,
+      오래된 기억으로 만들어진 하나의 이야기를 나라고 믿고 있는가.
+    </p>
+  </section>
+
+  <section class="rt-sa-read">
+    <h2>함께 읽기</h2>
+
+    <p>
+      자기인식은 혼자 마음을 들여다보는 일로 끝나지 않습니다. 자아와 관계, 타인의 시선, 정체성이 함께 작동하는 인간의 조건 안에서 읽을 때 이 개념이 더 분명해집니다.
+    </p>
+
+    <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+      <strong>[Re:Think] 인간의 조건 영역 - 존재·자유·정체성으로 읽는 현대 철학의 첫 갈래</strong>
+      <span>자기인식을 고립된 내면의 문제로 보지 않고, 존재·자유·자아·정체성으로 이어지는 인간의 조건 전체 안에서 살펴볼 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/314" target="_blank" rel="noopener">
+      <strong>[Re:Think] 사회적 자아 뜻 - 우리는 언제부터 나라고 믿기 시작했는가</strong>
+      <span>자기인식이 내면에서 나를 알아차리는 문제라면, 사회적 자아는 타인의 시선과 인정 속에서 나를 배우는 과정을 보여 줍니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/305" target="_blank" rel="noopener">
+      <strong>[Re:Think] 자아 뜻 - 우리는 언제부터 나라고 믿기 시작했는가</strong>
+      <span>자기인식이 나를 알아차리는 능력이라면, 자아는 흩어진 기억과 경험과 선택을 어떻게 하나의 ‘나’로 묶는지 묻게 합니다.</span>
+    </a>
+
+    <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+      <strong>6 Re:Lenz 안내 지도 - 세상을 읽는 여섯 개의 렌즈</strong>
+      <span>자기인식의 질문을 철학에만 가두지 않고, 현대사회·고전·상징·언어·경제의 여러 관점과 연결해 읽는 큰 구조를 확인할 수 있습니다.</span>
+    </a>
+  </section>
+
+  <div class="rt-sa-tags">
+    Re:Think, 자기인식, 자기인식뜻, SelfAwareness, 자기이해, 자아, 사회적자아, 정체성, 내면관찰, 성찰, 욕망, 감정, 엘리멘탈, 퍼펙트데이즈, 현대철학
+  </div>
+
+  <div class="rt-sa-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

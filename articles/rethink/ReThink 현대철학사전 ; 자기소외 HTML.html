@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자기소외 | Re:Think</title>
+  <meta name="description" content="자기소외 는 자신이 살아가는 삶 안에서 오히려 자신과 멀어지는 감각입니다. 일, 역할, 관계, 성과를 이어 가면서도 왜 내 감정과 욕망은 낯설어지는지 살펴봅니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtsa-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #2f3439;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtsa-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtsa-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #b56a32;
+    background: #fff7ef;
+    border-radius: 10px;
+    color: #74401f;
+    font-size: 0.98rem;
+  }
+
+  .rtsa-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #edf3f8 0%, #fff7ef 100%);
+    border: 1px solid #d8d5ce;
+    border-radius: 18px;
+  }
+
+  .rtsa-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #28445f;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .rtsa-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #20374d;
+    letter-spacing: -0.045em;
+  }
+
+  .rtsa-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #a45c2a;
+  }
+
+  .rtsa-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtsa-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f3f6f8;
+    border: 1px solid #d8e0e6;
+    border-radius: 16px;
+  }
+
+  .rtsa-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #20374d;
+  }
+
+  .rtsa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtsa-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #dedbd4;
+    border-radius: 13px;
+  }
+
+  .rtsa-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #a45c2a;
+    font-size: 1.02rem;
+  }
+
+  .rtsa-grid-item span {
+    display: block;
+    color: #56616a;
+    font-size: 0.94rem;
+  }
+
+  .rtsa-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #edf3f8;
+    border: 1px solid #d1dce5;
+    border-radius: 16px;
+  }
+
+  .rtsa-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #20374d;
+  }
+
+  .rtsa-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #d9e2e8;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtsa-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #20374d;
+    list-style: none;
+  }
+
+  .rtsa-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtsa-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #a45c2a;
+  }
+
+  .rtsa-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtsa-toc-desc {
+    padding: 0 16px 15px;
+    color: #5d6871;
+    font-size: 0.95rem;
+    border-top: 1px solid #e6edf2;
+  }
+
+  .rtsa-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #d9e2e8;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(40, 68, 95, 0.06);
+  }
+
+  .rtsa-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #a45c2a;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #20374d;
+    letter-spacing: -0.035em;
+  }
+
+  .rtsa-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #a45c2a;
+  }
+
+  .rtsa-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fff7ef;
+    border-radius: 12px;
+    color: #74401f;
+    font-weight: 600;
+  }
+
+  .rtsa-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtsa-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #edf3f8;
+    border-left: 5px solid #a45c2a;
+    border-radius: 10px;
+    color: #20374d;
+    font-weight: 700;
+  }
+
+  .rtsa-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtsa-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtsa-table th {
+    background: #28445f;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #d1dce5;
+    text-align: left;
+  }
+
+  .rtsa-table td {
+    padding: 12px 10px;
+    border: 1px solid #d1dce5;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtsa-table tr:nth-child(even) td {
+    background: #fff7ef;
+  }
+
+  .rtsa-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #d9e2e8;
+    border-radius: 14px;
+  }
+
+  .rtsa-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #20374d;
+    font-weight: 800;
+  }
+
+  .rtsa-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #4f5b65;
+  }
+
+  .rtsa-flow-boxes div {
+    padding: 11px 13px;
+    background: #edf3f8;
+    border-radius: 9px;
+  }
+
+  .rtsa-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #28445f 0%, #a45c2a 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rtsa-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtsa-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtsa-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rtsa-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rtsa-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rtsa-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rtsa-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rtsa-read-list strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #20374d;
+  }
+
+  .rtsa-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rtsa-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #edf3f8;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtsa-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rtsa-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtsa-section {
+      padding: 24px 18px;
+    }
+
+    .rtsa-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtsa-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtsa-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 자기소외 뜻 - 나는 왜 나 자신과 함께 있으면서도 멀어지는가</h1>
+<div class="rtsa-meta">
+    <strong>자기소외</strong>는 자신이 살아가는 삶 안에서 오히려 자신과 멀어지는 감각입니다. 일, 역할, 관계, 성과를 이어 가면서도 왜 내 감정과 욕망은 낯설어지는지 살펴봅니다.
+  </div>
+
+  <!-- 제목형 안내 영역 -->
+  <section class="rtsa-hero">
+    <div class="rtsa-kicker">Re:Think 현대철학사전</div>
+
+    <div class="rtsa-title-like">자기소외 뜻</div>
+
+    <div class="rtsa-subtitle-like">
+      나는 왜 나 자신과 함께 있으면서도 멀어지는가
+    </div>
+
+    <p>
+      하루를 마치고 집에 돌아왔는데,
+      오늘 무엇을 느꼈는지 잘 떠오르지 않을 때가 있습니다.
+      아침부터 바빴고, 해야 할 일도 대부분 끝냈습니다.
+      사람들과 웃으며 대화했고, 맡은 역할도 크게 어기지 않았습니다.
+    </p>
+
+    <p>
+      그런데 막상 혼자 남으면 이상한 공백이 생깁니다.
+      오늘 내가 무엇을 원했는지,
+      무엇이 싫었는지,
+      어떤 순간에 마음이 상했는지 선명하지 않습니다.
+    </p>
+
+    <p>
+      분명히 내가 보낸 하루인데 내 하루 같지 않습니다.
+      내 이름으로 일했고,
+      내 목소리로 대답했으며,
+      내가 직접 결정을 내렸는데도
+      그 안에서 나는 조금 멀리 떨어져 있었던 것처럼 느껴집니다.
+    </p>
+
+    <p>
+      <strong>자기소외</strong>는 바로 이런 장면에서 시작됩니다.
+      자기소외는 혼자 있다는 뜻이 아니라,
+      자기 삶을 살고 있으면서도 그 삶을 자기 것으로 느끼지 못하는 상태에 가깝습니다.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtsa-map">
+    <div class="rtsa-map-title">자기소외 핵심 지도</div>
+
+    <div class="rtsa-grid">
+      <div class="rtsa-grid-item">
+        <strong>삶과의 거리</strong>
+        <span>내가 만든 하루인데도 내 삶처럼 느껴지지 않습니다.</span>
+      </div>
+
+      <div class="rtsa-grid-item">
+        <strong>감정의 흐림</strong>
+        <span>무엇을 원하는지보다 무엇을 해야 하는지가 먼저 작동합니다.</span>
+      </div>
+
+      <div class="rtsa-grid-item">
+        <strong>자기의 대상화</strong>
+        <span>나를 살아 있는 사람보다 관리하고 평가할 대상으로 바라봅니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtsa-toc">
+    <div class="rtsa-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 내 하루인데 왜 내 삶 같지 않을까</summary>
+      <div class="rtsa-toc-desc">
+        맡은 일을 다했는데도 자신이 빠져 있는 듯한 일상의 감각에서 출발합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 자기소외는 외로움과 어떻게 다른가</summary>
+      <div class="rtsa-toc-desc">
+        사람과의 거리보다 자기 자신과의 거리가 멀어지는 상태를 구분합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 역할을 잘할수록 왜 나는 흐려질 수 있는가</summary>
+      <div class="rtsa-toc-desc">
+        가족, 직장, 관계 속 역할이 자기 자신을 대신하게 되는 과정을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 마르크스는 왜 노동에서 소외를 보았는가</summary>
+      <div class="rtsa-toc-desc">
+        자신이 만든 것이 오히려 자신을 지배하는 노동과 자기소외의 관계를 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 감정을 관리할수록 왜 내 마음은 낯설어질까</summary>
+      <div class="rtsa-toc-desc">
+        감정을 억누르고 적절하게 보이려는 태도가 자기와의 거리를 만드는 과정을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 현대사회는 왜 나를 하나의 상품처럼 보게 하는가</summary>
+      <div class="rtsa-toc-desc">
+        자기계발, 성과, 이미지 관리가 자신을 평가 대상으로 바꾸는 방식을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 자기소외</summary>
+      <div class="rtsa-toc-desc">
+        《세브란스: 단절》과 《트루먼 쇼》를 통해 자기 삶에서 분리된 인물의 모습을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 자기소외는 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rtsa-toc-desc">
+        자기소외가 설명하는 지점과 개인의 마음만으로 설명할 수 없는 조건을 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtsa-section">
+    <h2>1. 내 하루인데 왜 내 삶 같지 않을까</h2>
+
+    <div class="rtsa-one-line">
+      👉 자기소외는 삶을 멈추었을 때보다, 오히려 맡은 일을 잘 수행하고 있을 때 조용히 드러나기도 합니다.
+    </div>
+
+    <p>
+      자기소외는 반드시 큰 위기와 함께 찾아오지 않습니다.
+      직장을 그만두고 싶거나,
+      관계가 모두 무너졌거나,
+      삶의 방향을 완전히 잃었을 때만 생기는 것도 아닙니다.
+    </p>
+
+    <p>
+      오히려 겉으로는 잘 지내고 있을 때 더 알아차리기 어렵습니다.
+      정해진 시간에 출근하고,
+      필요한 말을 하고,
+      요구받은 성과를 내고,
+      집에 돌아와 다음 날을 준비합니다.
+    </p>
+
+    <p>
+      문제는 그 하루 안에서 자신의 감각이 점점 줄어드는 데 있습니다.
+      무엇을 느꼈는지보다 무엇을 처리했는지가 중요해지고,
+      무엇을 원하는지보다 무엇을 해야 하는지가 먼저 떠오릅니다.
+    </p>
+
+    <p>
+      그렇게 하루하루를 살아가다 보면,
+      어느 순간 삶은 계속되고 있지만
+      그 삶을 살아가는 사람이 자기 안에서 빠져나간 듯한 느낌이 생깁니다.
+    </p>
+
+    <div class="rtsa-quote">
+      자기소외는 내가 없는 삶이 아니라, 내가 분명히 있는데도 그 삶을 내 것으로 느끼지 못하는 상태입니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtsa-section">
+    <h2>2. 자기소외는 외로움과 어떻게 다른가</h2>
+
+    <div class="rtsa-one-line">
+      👉 외로움이 다른 사람과의 거리에서 생긴다면, 자기소외는 자기 자신과의 거리가 멀어지는 감각에 가깝습니다.
+    </div>
+
+    <p>
+      자기소외는 외로움과 비슷하게 느껴질 수 있습니다.
+      혼자 있을 때 공허하고,
+      사람들과 함께 있어도 자기 자리가 없는 것처럼 느껴지기 때문입니다.
+    </p>
+
+    <p>
+      그러나 두 감각은 완전히 같지 않습니다.
+      외로움은 관계의 부재나 연결의 부족과 관련됩니다.
+      누군가에게 이해받고 싶고,
+      마음을 나누고 싶다는 욕구가 그 안에 있습니다.
+    </p>
+
+    <p>
+      반면 자기소외는 자신이 무엇을 느끼고 원하는지조차 알기 어려워지는 상태입니다.
+      누군가 곁에 있어도,
+      자신의 마음과 연결되지 못한다면 자기소외는 계속될 수 있습니다.
+    </p>
+
+    <div class="rtsa-table-wrap">
+      <table class="rtsa-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>외로움</th>
+            <th>자기소외</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>거리</strong></td>
+            <td>타인과의 거리</td>
+            <td>자기 자신과의 거리</td>
+          </tr>
+          <tr>
+            <td><strong>주요 감각</strong></td>
+            <td>연결되지 못함</td>
+            <td>내 삶이 낯설게 느껴짐</td>
+          </tr>
+          <tr>
+            <td><strong>묻는 말</strong></td>
+            <td>누구와 연결되어 있는가</td>
+            <td>나는 지금 무엇을 느끼고 원하는가</td>
+          </tr>
+          <tr>
+            <td><strong>겹치는 지점</strong></td>
+            <td colspan="2">관계 속에서도 자기 자신을 잃으면 외로움과 자기소외가 함께 나타날 수 있습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      자기소외는 사람을 더 만나면 곧바로 해결되는 문제만은 아닙니다.
+      관계가 많아도 그 안에서 계속 역할만 수행한다면,
+      자기 자신과의 거리는 오히려 더 멀어질 수 있습니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtsa-section">
+    <h2>3. 역할을 잘할수록 왜 나는 흐려질 수 있는가</h2>
+
+    <div class="rtsa-one-line">
+      👉 역할은 삶을 가능하게 하지만, 역할이 나의 전부가 되면 나는 살아 있는 사람보다 기능으로 남을 수 있습니다.
+    </div>
+
+    <p>
+      우리는 여러 역할 속에서 살아갑니다.
+      직장에서는 직원이고,
+      가족 안에서는 부모나 자녀이며,
+      관계 안에서는 친구이자 동료입니다.
+    </p>
+
+    <p>
+      역할 자체가 자기소외를 만드는 것은 아닙니다.
+      역할은 사람을 연결하고,
+      삶의 책임과 위치를 알려 줍니다.
+      문제는 역할이 나의 감정과 욕구보다 항상 앞설 때 생깁니다.
+    </p>
+
+    <p>
+      힘들어도 책임감 있는 사람처럼 행동하고,
+      화가 나도 이해심 많은 사람처럼 말하며,
+      쉬고 싶어도 성실한 사람의 모습을 유지합니다.
+    </p>
+
+    <p>
+      그렇게 역할을 오래 수행하면
+      사람들은 나를 좋은 직원, 좋은 부모, 좋은 친구로 기억할 수 있습니다.
+      그러나 나는 정작 그 역할을 벗어난 자신이 누구인지 알기 어려워질 수 있습니다.
+    </p>
+
+    <div class="rtsa-flow">
+      <strong class="rtsa-flow-title">역할이 자기소외로 이어지는 흐름</strong>
+
+      <div class="rtsa-flow-boxes">
+        <div>관계와 조직이 나에게 일정한 역할을 기대한다</div>
+        <div>그 역할을 잘 수행하며 인정과 안정감을 얻는다</div>
+        <div>역할에 맞지 않는 감정과 욕구를 계속 미룬다</div>
+        <div>어느 순간 역할 밖의 자신을 설명하기 어려워진다</div>
+      </div>
+    </div>
+
+    <p>
+      자기소외는 역할을 모두 버리라는 말로 이어지지 않습니다.
+      오히려 내가 역할을 수행하고 있는지,
+      아니면 역할이 나를 대신해 살아가고 있는지를 묻게 합니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtsa-section">
+    <h2>4. 마르크스는 왜 노동에서 소외를 보았는가</h2>
+
+    <div class="rtsa-one-line">
+      👉 마르크스에게 소외는 단순히 일이 힘든 상태가 아니라, 인간이 자신의 노동과 생산물과 자기 자신에게서 멀어지는 구조였습니다.
+    </div>
+
+    <p>
+      마르크스는 노동을 인간의 중요한 활동으로 보았습니다.
+      인간은 노동을 통해 세계를 바꾸고,
+      자신의 능력을 드러내며,
+      다른 사람과 관계를 맺습니다.
+    </p>
+
+    <p>
+      그러나 노동의 결과와 과정이 노동자 자신에게 속하지 않을 때,
+      노동은 자기표현보다 생존을 위한 강제가 될 수 있습니다.
+    </p>
+
+    <p>
+      내가 만든 결과물은 나의 것이 아니고,
+      일의 속도와 방식도 내가 정하지 못하며,
+      노동하는 동안 나의 감정과 판단은 중요하지 않게 됩니다.
+    </p>
+
+    <p>
+      이때 인간은 자신이 만든 것을 낯선 힘처럼 마주합니다.
+      일은 내가 살아가기 위해 하는 활동이지만,
+      오히려 내 시간과 몸과 삶을 지배하는 것으로 나타납니다.
+    </p>
+
+    <div class="rtsa-table-wrap">
+      <table class="rtsa-table">
+        <thead>
+          <tr>
+            <th>소외의 대상</th>
+            <th>나타나는 모습</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>노동의 결과</strong></td>
+            <td>내가 만든 것이지만 나의 통제와 의미에서 벗어납니다.</td>
+          </tr>
+          <tr>
+            <td><strong>노동의 과정</strong></td>
+            <td>일의 방식과 속도를 스스로 결정하기 어렵습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>다른 사람</strong></td>
+            <td>동료가 협력자보다 경쟁자나 평가자로 보입니다.</td>
+          </tr>
+          <tr>
+            <td><strong>자기 자신</strong></td>
+            <td>능력과 감정이 살아 있는 사람이 아니라 기능으로 느껴집니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      마르크스의 소외 개념은 자기소외를 개인의 마음 상태로만 보지 않게 합니다.
+      내가 나와 멀어진 이유는 성찰이 부족해서가 아니라,
+      나의 활동이 나의 것이 되기 어려운 구조와 관련될 수 있습니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtsa-section">
+    <h2>5. 감정을 관리할수록 왜 내 마음은 낯설어질까</h2>
+
+    <div class="rtsa-one-line">
+      👉 감정을 조절하는 일은 필요하지만, 감정을 계속 부적절한 것으로 취급하면 자기 마음과의 연결까지 약해질 수 있습니다.
+    </div>
+
+    <p>
+      우리는 사회생활을 하며 감정을 조절합니다.
+      화가 난다고 모두 표현할 수 없고,
+      슬프다고 모든 일을 멈출 수 없으며,
+      불편하다고 관계를 곧바로 끊을 수도 없습니다.
+    </p>
+
+    <p>
+      이런 조절은 공동생활에 필요합니다.
+      그러나 감정을 조절하는 것과 감정을 없던 일로 만드는 것은 다릅니다.
+    </p>
+
+    <p>
+      힘들어도 괜찮다고 말하고,
+      서운해도 이해한다고 말하며,
+      화가 나도 예민한 사람이 되기 싫어 웃어넘기다 보면
+      감정은 표현되지 못한 채 안쪽으로 밀려납니다.
+    </p>
+
+    <p>
+      그렇게 시간이 지나면
+      무엇 때문에 힘든지,
+      누구에게 화가 났는지,
+      왜 관계가 부담스러운지 스스로도 알기 어려워집니다.
+    </p>
+
+    <div class="rtsa-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtsa-grid-item">
+        <strong>감정 조절</strong>
+        <span>감정을 알아차리되 상황에 맞는 표현과 행동을 선택합니다.</span>
+      </div>
+
+      <div class="rtsa-grid-item">
+        <strong>감정 소외</strong>
+        <span>감정을 부적절한 것으로 여기며 느낀 사실 자체를 지웁니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      자기소외는 자신의 감정을 무조건 표현하지 못해서만 생기는 것이 아닙니다.
+      자신이 무엇을 느꼈는지조차 인정하지 못할 때,
+      자기 마음은 점점 낯선 대상이 됩니다.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtsa-section">
+    <h2>6. 현대사회는 왜 나를 하나의 상품처럼 보게 하는가</h2>
+
+    <div class="rtsa-one-line">
+      👉 현대사회에서 자기소외는 나를 살아가는 사람보다 관리하고 평가해야 할 대상으로 볼 때 더 깊어집니다.
+    </div>
+
+    <p>
+      오늘의 사회는 사람에게 자신을 끊임없이 설명하라고 요구합니다.
+      어떤 능력을 가졌는지,
+      무엇을 이루었는지,
+      어떤 이미지를 보여 줄 수 있는지를 정리해야 합니다.
+    </p>
+
+    <p>
+      이력서에서는 경험을 경쟁력으로 바꾸고,
+      온라인에서는 일상을 이미지로 편집하며,
+      자기계발에서는 약점을 개선 항목으로 분류합니다.
+    </p>
+
+    <p>
+      이런 과정이 모두 나쁜 것은 아닙니다.
+      자신을 돌아보고,
+      능력을 키우고,
+      필요한 정보를 전달하는 일은 현실적으로 필요합니다.
+    </p>
+
+    <p>
+      그러나 자기 자신을 늘 평가자의 시선으로 바라보면
+      나는 살아가는 사람이 아니라 관리해야 할 상품처럼 느껴질 수 있습니다.
+    </p>
+
+    <div class="rtsa-table-wrap">
+      <table class="rtsa-table">
+        <thead>
+          <tr>
+            <th>현대사회의 기준</th>
+            <th>자기 자신을 바라보는 방식</th>
+            <th>자기소외의 위험</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>성과</strong></td>
+            <td>무엇을 이루었는지로 자신을 평가함</td>
+            <td>성과가 없으면 존재 가치도 줄어든 듯 느껴짐</td>
+          </tr>
+          <tr>
+            <td><strong>이미지</strong></td>
+            <td>타인에게 어떻게 보일지를 중심으로 자신을 편집함</td>
+            <td>실제 감정과 보여 주는 모습의 거리가 커짐</td>
+          </tr>
+          <tr>
+            <td><strong>자기계발</strong></td>
+            <td>자신을 계속 개선해야 할 대상으로 봄</td>
+            <td>현재의 자신은 늘 부족한 상태로 남음</td>
+          </tr>
+          <tr>
+            <td><strong>비교</strong></td>
+            <td>타인의 삶을 기준으로 자신의 위치를 확인함</td>
+            <td>자기 욕망보다 경쟁의 기준이 앞서게 됨</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      자기소외는 나를 전혀 보지 않을 때만 생기지 않습니다.
+      오히려 나를 너무 자주 바라보되,
+      타인의 평가와 시장의 기준으로만 바라볼 때 생길 수도 있습니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtsa-section">
+    <h2>7. 작품으로 읽는 자기소외</h2>
+
+    <div class="rtsa-one-line">
+      👉 작품 속 자기소외는 인물이 자기 삶을 살고 있으면서도 그 삶을 자기 것으로 느끼지 못하는 장면에서 선명하게 드러납니다.
+    </div>
+
+    <h3>7-1) 《세브란스: 단절》 — 회사의 나와 일상 속 나는 같은 사람인가</h3>
+
+    <p>
+      드라마 《세브란스: 단절》은 직장 안의 기억과 직장 밖의 기억을 분리하는 설정에서 출발합니다.
+      한 사람의 몸 안에 회사에서만 존재하는 자아와 회사 밖에서 살아가는 자아가 나뉩니다.
+    </p>
+
+    <p>
+      이 설정은 극단적이지만,
+      일과 삶이 분리되어야 한다는 현대인의 욕망을 낯설게 보여 줍니다.
+      회사에서의 나는 업무만 수행하고,
+      밖의 나는 그 시간에 무엇을 했는지 알지 못합니다.
+    </p>
+
+    <p>
+      자기소외의 관점에서 이 작품은 묻습니다.
+      고통스러운 기억을 분리하면 나는 더 자유로워지는가.
+      아니면 내 삶의 일부를 또 다른 나에게 떠넘기는가.
+    </p>
+
+    <p>
+      회사의 자아 역시 감정을 느끼고 관계를 맺지만,
+      자신의 삶 전체에 접근할 수 없습니다.
+      그 존재는 한 사람의 일부이면서도,
+      그 사람에게조차 낯선 노동의 도구가 됩니다.
+    </p>
+
+    <h3>7-2) 《트루먼 쇼》 — 나의 일상이 타인의 목적을 위해 만들어졌다면</h3>
+
+    <p>
+      《트루먼 쇼》의 트루먼은 자신의 일상을 자연스러운 삶이라고 믿습니다.
+      그러나 그가 살아가는 공간과 관계는 다른 사람들의 기획과 관람을 위해 만들어진 것입니다.
+    </p>
+
+    <p>
+      그는 자기 삶의 주인처럼 보이지만,
+      실제로는 다른 사람의 목적 속에서 움직이고 있습니다.
+      친구와 가족, 직장과 도시까지 모두 그의 삶을 유지하기 위한 장치입니다.
+    </p>
+
+    <p>
+      자기소외의 관점에서 작품이 던지는 질문은 단순히 현실이 가짜인가에 머물지 않습니다.
+      내가 선택한다고 믿는 삶이 타인의 기준과 목적에 맞게 설계되어 있다면,
+      그 삶을 내 것이라고 말할 수 있는가.
+    </p>
+
+    <div class="rtsa-table-wrap">
+      <table class="rtsa-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>자기소외의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《세브란스: 단절》</strong></td>
+            <td>직장 안의 자아와 직장 밖의 자아가 기억으로 분리됨</td>
+            <td>내 삶의 일부를 알지 못해도 하나의 나라고 말할 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《트루먼 쇼》</strong></td>
+            <td>자신의 일상이 타인의 기획과 관람을 위해 구성됨</td>
+            <td>내가 선택했다고 믿는 삶의 기준은 누가 만들었는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 자기소외를 단순히 마음이 공허한 상태로 그리지 않습니다.
+      삶의 시간과 활동과 관계가 자기 자신에게 속하지 않을 때,
+      인간이 어떻게 자기 삶 안에서 낯선 존재가 되는지를 보여 줍니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtsa-section">
+    <h2>8. 자기소외는 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rtsa-one-line">
+      👉 자기소외는 인간이 자신의 삶을 살면서도 그 삶과 멀어질 수 있음을 보여 주지만, 그 원인을 개인의 내면만으로 설명할 수는 없습니다.
+    </div>
+
+    <p>
+      자기소외는 자신을 충분히 사랑하지 못해서 생기는 문제로만 볼 수 없습니다.
+      자신을 성찰하고,
+      감정을 잘 이해하며,
+      삶의 방향을 스스로 정하려 해도
+      실제 생활의 구조가 이를 어렵게 만들 수 있습니다.
+    </p>
+
+    <p>
+      일의 속도와 방식을 정할 수 없고,
+      관계 안에서 거절할 힘이 없으며,
+      생계를 위해 감정을 계속 감추어야 한다면
+      자기 자신과 연결되는 일은 마음먹는 것만으로 충분하지 않습니다.
+    </p>
+
+    <p>
+      그렇다고 자기소외를 사회 구조의 결과로만 설명해도 부족합니다.
+      같은 조건 속에서도 사람은 서로 다른 방식으로 자신을 해석하고,
+      어떤 역할은 받아들이며,
+      어떤 기준에는 저항하기도 합니다.
+    </p>
+
+    <div class="rtsa-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtsa-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>자기소외는 역할, 노동, 성과, 타인의 시선 속에서 자신의 감정과 욕망이 흐려지는 과정을 보여 줍니다.</span>
+      </div>
+
+      <div class="rtsa-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>자기소외라는 개념 하나만으로는 관계의 상처, 건강 문제, 경제적 조건, 제도적 압박을 모두 설명할 수 없습니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 자기소외를 묻는 일은
+      단순히 진짜 나를 찾는 일로 끝나지 않습니다.
+      진짜 나라는 하나의 고정된 모습이 따로 있다고 단정하기도 어렵습니다.
+    </p>
+
+    <p>
+      더 중요한 질문은
+      내가 지금 무엇을 느끼고 원하는지 말할 수 있는가,
+      내가 하는 활동을 내 삶의 일부로 받아들일 수 있는가,
+      그리고 나의 삶을 낯설게 만드는 조건은 무엇인가입니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rtsa-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      자기소외는 내가 나를 잃어버렸다는 단순한 선언이 아닙니다.
+      그것은 내 삶을 이루는 일과 역할과 관계가
+      어느 순간 나보다 더 커졌다는 감각에 가깝습니다.
+    </p>
+
+    <p>
+      나는 오늘 무엇을 했는지는 쉽게 말할 수 있습니다.
+      그러나 오늘 무엇을 느꼈는지,
+      무엇을 원했고 무엇을 참았는지는 얼마나 말할 수 있을까요.
+    </p>
+
+    <p>
+      나는 지금 내 삶을 살아가고 있는가.
+      아니면 나에게 요구된 역할을 수행하는 동안
+      정작 그 삶을 살아가는 나 자신과 점점 멀어지고 있는가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtsa-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rtsa-read-intro">
+      자기소외를 하나의 내면 문제로만 닫지 않고, 자아와 정체성, 노동과 관계, 현대사회의 기준 속에서 확장해 읽어 볼 수 있습니다.
+    </p>
+
+    <div class="rtsa-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <strong>Re:Think 현대 철학지도</strong>
+        <span>
+          자기소외를 인간의 조건, 권력, 언어, 기술과 이미지의 흐름 속에서 더 넓게 읽을 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+        <strong>인간의 조건 안내지도</strong>
+        <span>
+          자기소외가 정체성, 자아, 실존, 자유와 책임의 질문과 어떻게 이어지는지 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <strong>6 Re:Lenz</strong>
+        <span>
+          자기소외를 철학 개념 하나로만 정리하지 않고 관계·사회·언어·경제의 여러 렌즈로 다시 볼 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtsa-tags">
+    Re:Think, 자기소외 뜻, Self-alienation, 자기소외, 소외, 마르크스 소외, 자아와 정체성, 노동소외, 감정소외, 자기대상화, 세브란스 단절, 트루먼 쇼, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtsa-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

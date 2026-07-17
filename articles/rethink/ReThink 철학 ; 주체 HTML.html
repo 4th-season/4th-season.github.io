@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>주체 | Re:Think</title>
+  <meta name="description" content="주체 는 단순히 ‘나’나 ‘개인’을 뜻하지 않습니다. 생각하고 선택하고 책임지는 자리이면서, 동시에 언어&#183;관계&#183;규범&#183;권력 속에서 만들어지는 자리이기도 합니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rt-subject-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #2f343b;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .rt-subject-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rt-subject-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #b45309;
+    background: #fff7ed;
+    border-radius: 10px;
+    color: #78350f;
+    font-size: 0.98rem;
+  }
+
+  .rt-subject-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 100%);
+    border: 1px solid #fed7aa;
+    border-radius: 18px;
+  }
+
+  .rt-subject-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #1e3a8a;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rt-subject-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: -0.045em;
+  }
+
+  .rt-subject-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #b45309;
+  }
+
+  .rt-subject-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rt-subject-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+  }
+
+  .rt-subject-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #1e3a8a;
+  }
+
+  .rt-subject-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rt-subject-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #fed7aa;
+    border-radius: 13px;
+  }
+
+  .rt-subject-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #b45309;
+    font-size: 1.02rem;
+  }
+
+  .rt-subject-grid-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.94rem;
+  }
+
+  .rt-subject-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+  }
+
+  .rt-subject-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #1e3a8a;
+  }
+
+  .rt-subject-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rt-subject-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #1e3a8a;
+    list-style: none;
+  }
+
+  .rt-subject-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rt-subject-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #b45309;
+  }
+
+  .rt-subject-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rt-subject-toc-desc {
+    padding: 0 16px 15px;
+    color: #475569;
+    font-size: 0.95rem;
+    border-top: 1px solid #e0edff;
+  }
+
+  .rt-subject-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.06);
+  }
+
+  .rt-subject-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #b45309;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #1e3a8a;
+    letter-spacing: -0.035em;
+  }
+
+  .rt-subject-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #b45309;
+  }
+
+  .rt-subject-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fff7ed;
+    border-radius: 12px;
+    color: #78350f;
+    font-weight: 600;
+  }
+
+  .rt-subject-section p {
+    margin: 0 0 14px;
+  }
+
+  .rt-subject-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #eff6ff;
+    border-left: 5px solid #b45309;
+    border-radius: 10px;
+    color: #1e3a8a;
+    font-weight: 700;
+  }
+
+  .rt-subject-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #fed7aa;
+    border-radius: 14px;
+  }
+
+  .rt-subject-flow-title {
+    display: block;
+    margin-bottom: 10px;
+    color: #b45309;
+    font-weight: 800;
+  }
+
+  .rt-subject-flow-step {
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #ffedd5;
+    border-radius: 9px;
+    color: #475569;
+  }
+
+  .rt-subject-flow-arrow {
+    text-align: center;
+    color: #b45309;
+    font-weight: 800;
+  }
+
+  .rt-subject-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rt-subject-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rt-subject-table th {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #bfdbfe;
+    text-align: left;
+  }
+
+  .rt-subject-table td {
+    padding: 12px 10px;
+    border: 1px solid #bfdbfe;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rt-subject-table tr:nth-child(even) td {
+    background: #fff7ed;
+  }
+
+  .rt-subject-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #b45309 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rt-subject-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+    border: none;
+    padding: 0;
+  }
+
+  .rt-subject-final p {
+    margin: 0 0 12px;
+  }
+
+  .rt-subject-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+  }
+
+  .rt-subject-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #1e3a8a;
+  }
+
+  .rt-subject-read p {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rt-subject-read a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rt-subject-read a + a {
+    margin-top: 14px;
+  }
+
+  .rt-subject-read strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e3a8a;
+  }
+
+  .rt-subject-read span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rt-subject-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eff6ff;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rt-subject-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rt-subject-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-subject-section {
+      padding: 24px 18px;
+    }
+
+    .rt-subject-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rt-subject-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rt-subject-wrap">
+
+  <h1 class="seo-h1">[Re:Think] 주체 뜻 - 나는 세계의 중심인가, 세계 속에서 만들어지는 자리인가</h1>
+<div class="rt-subject-meta">
+    <strong>주체</strong>는 단순히 ‘나’나 ‘개인’을 뜻하지 않습니다. 생각하고 선택하고 책임지는 자리이면서, 동시에 언어·관계·규범·권력 속에서 만들어지는 자리이기도 합니다.
+  </div>
+
+  <section class="rt-subject-hero">
+    <div class="rt-subject-kicker">Re:Think 철학</div>
+    <div class="rt-subject-title-like">주체 뜻</div>
+    <div class="rt-subject-subtitle-like">
+      나는 세계의 중심인가, 세계 속에서 만들어지는 자리인가
+    </div>
+
+    <p>
+      누군가 묻습니다. “네가 정말 원하는 게 뭐야?” 우리는 잠깐 멈춘 뒤 대답하려 합니다.
+    </p>
+
+    <p>
+      “내가 선택한 거야.” “내가 결정했어.” “이건 내 생각이야.” 이런 말은 일상에서 자연스럽게 쓰입니다.
+    </p>
+
+    <p>
+      그런데 조금만 더 생각하면 질문이 생깁니다. 내가 원한다고 말하는 것은 정말 온전히 나의 욕망일까요. 내가 결정했다고 믿는 선택은 정말 나 혼자 만든 것일까요.
+    </p>
+
+    <p>
+      내가 쓰는 말, 내가 배운 기준, 타인의 시선, 사회가 정한 성공의 모양, 플랫폼이 보여 주는 선택지까지 이미 나의 생각 안에 들어와 있습니다.
+    </p>
+
+    <p>
+      철학에서 말하는 <strong>주체</strong>는 바로 이 질문에서 시작됩니다. 주체는 단순히 ‘나’라는 뜻이 아니라, 세계를 이해하고 선택하고 책임지는 자리이면서 동시에 세계 속에서 형성되는 자리입니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-map">
+    <div class="rt-subject-map-title">주체 핵심 지도</div>
+
+    <div class="rt-subject-grid">
+      <div class="rt-subject-grid-item">
+        <strong>기본 뜻</strong>
+        <span>생각하고 판단하고 선택하고 책임지는 ‘나’의 자리입니다.</span>
+      </div>
+
+      <div class="rt-subject-grid-item">
+        <strong>핵심 긴장</strong>
+        <span>나는 스스로 선택하는 존재이지만, 동시에 언어와 관계와 제도 속에서 만들어집니다.</span>
+      </div>
+
+      <div class="rt-subject-grid-item">
+        <strong>철학적 질문</strong>
+        <span>나는 세계를 바라보는 중심인가, 세계가 나를 형성하는 자리인가를 묻게 합니다.</span>
+      </div>
+
+      <div class="rt-subject-grid-item">
+        <strong>현대적 배경</strong>
+        <span>정체성, 자기표현, 플랫폼, 규범, 권력의 문제 속에서 주체는 더 이상 고립된 중심으로만 이해되지 않습니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rt-subject-toc">
+    <div class="rt-subject-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 우리는 왜 “내가 선택했다”고 말하는가</summary>
+      <div class="rt-subject-toc-desc">
+        일상 속 선택과 자기표현의 장면에서 주체의 문제가 어떻게 시작되는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 주체는 자아나 개인과 어떻게 다른가</summary>
+      <div class="rt-subject-toc-desc">
+        자아, 개인, 주체의 차이를 구분하며 주체 개념의 자리를 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 근대철학은 왜 주체를 세계의 중심에 놓았는가</summary>
+      <div class="rt-subject-toc-desc">
+        생각하고 판단하는 인간이 세계를 이해하는 중심으로 세워진 흐름을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 현대철학은 왜 주체를 흔들어 보았는가</summary>
+      <div class="rt-subject-toc-desc">
+        언어, 타자, 권력, 몸, 무의식이 주체를 어떻게 다시 묻게 했는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 현대사회는 주체를 어떻게 만들고 흔드는가</summary>
+      <div class="rt-subject-toc-desc">
+        자기계발, SNS, 플랫폼, 규범 속에서 주체가 어떻게 구성되는지 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 작품 속 주체는 어떤 장면에서 드러나는가</summary>
+      <div class="rt-subject-toc-desc">
+        《매트릭스》와 《트루먼 쇼》를 통해 내가 선택한다고 믿는 세계의 조건을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 주체 개념은 무엇을 설명하고 무엇을 설명하지 못하는가</summary>
+      <div class="rt-subject-toc-desc">
+        주체 개념이 보여 주는 책임과 선택의 힘, 그리고 관계와 구조를 놓칠 위험을 함께 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 주체라는 말이 남기는 질문</summary>
+      <div class="rt-subject-toc-desc">
+        나는 스스로 생각하는가, 아니면 이미 주어진 기준 속에서 나를 생각하고 있는가를 묻습니다.
+      </div>
+    </details>
+  </nav>
+
+  <section class="rt-subject-section">
+    <h2>1. 우리는 왜 “내가 선택했다”고 말하는가</h2>
+
+    <div class="rt-subject-one-line">
+      👉 주체의 문제는 거창한 철학 용어에서 시작되지 않습니다. “내가 원했다”, “내가 결정했다”는 일상의 말에서 시작됩니다.
+    </div>
+
+    <p>
+      우리는 자기 삶을 설명할 때 자주 ‘나’를 앞세웁니다. 내가 선택했고, 내가 원했고, 내가 판단했고, 내가 책임진다고 말합니다.
+    </p>
+
+    <p>
+      이런 말은 필요합니다. 자기 삶을 남에게 전부 맡길 수는 없고, 누구도 나를 대신해 모든 결정을 내려 줄 수는 없습니다.
+    </p>
+
+    <p>
+      그러나 “내가 선택했다”는 말은 언제나 단순하지 않습니다. 선택지 자체가 이미 누군가에 의해 마련되어 있을 수 있고, 내가 원한다고 믿는 것도 사회가 가르친 욕망일 수 있습니다.
+    </p>
+
+    <p>
+      예를 들어 좋은 삶, 성공한 삶, 나다운 삶이라는 말은 내가 혼자 만든 기준이 아닙니다. 가족, 학교, 미디어, 직장, 플랫폼, 시대의 분위기가 이미 그 말 안에 들어와 있습니다.
+    </p>
+
+    <div class="rt-subject-quote">
+      주체는 “내가 선택했다”는 확신에서 시작하지만,<br>
+      곧 “그 선택은 어떤 세계 속에서 가능했는가”라는 질문으로 흔들립니다.
+    </div>
+
+    <p>
+      그래서 주체는 단순한 개인의 문제가 아닙니다. 주체는 내가 세계를 향해 말하고 행동하는 자리이면서, 세계가 나를 통해 말하고 행동하게 만드는 자리이기도 합니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-section">
+    <h2>2. 주체는 자아나 개인과 어떻게 다른가</h2>
+
+    <div class="rt-subject-one-line">
+      👉 자아가 ‘나에 대한 감각’에 가깝다면, 주체는 생각하고 판단하고 책임지는 자리까지 포함합니다.
+    </div>
+
+    <p>
+      주체는 자아와 비슷하게 들리지만 완전히 같은 말은 아닙니다.
+    </p>
+
+    <p>
+      자아는 내가 나를 느끼고 이해하는 감각에 가깝습니다. “나는 이런 사람이다”, “나는 이렇게 느낀다”는 자기 이해와 연결됩니다.
+    </p>
+
+    <p>
+      개인은 사회 속에서 구별되는 한 사람을 가리키는 말에 가깝습니다. 법적 권리와 책임을 가진 독립된 단위로 볼 수도 있습니다.
+    </p>
+
+    <p>
+      주체는 조금 더 철학적입니다. 주체는 세계를 인식하고, 의미를 만들고, 선택하고, 책임을 지는 자리입니다.
+    </p>
+
+    <div class="rt-subject-table-wrap">
+      <table class="rt-subject-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>중심 의미</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>자아</strong></td>
+            <td>내가 나를 느끼고 이해하는 감각</td>
+            <td>나는 나를 어떻게 알고 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>개인</strong></td>
+            <td>사회 속에서 구별되는 한 사람</td>
+            <td>나는 어떤 권리와 책임을 가진 존재인가</td>
+          </tr>
+          <tr>
+            <td><strong>주체</strong></td>
+            <td>인식하고 선택하고 책임지는 자리</td>
+            <td>나는 어떤 조건 속에서 생각하고 행동하는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      이 구분은 단어를 나누기 위한 것이 아닙니다. 주체라는 말을 통해 우리는 나를 단순한 마음의 중심이 아니라, 세계와 관계 맺으며 판단하는 자리로 보게 됩니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-section">
+    <h2>3. 근대철학은 왜 주체를 세계의 중심에 놓았는가</h2>
+
+    <div class="rt-subject-one-line">
+      👉 근대철학에서 주체는 세계를 이해하고 판단하는 중심으로 세워졌습니다.
+    </div>
+
+    <p>
+      근대철학에서 중요한 변화 중 하나는 인간이 세계를 이해하는 중심으로 올라섰다는 점입니다.
+    </p>
+
+    <p>
+      더 이상 세계의 질서를 외부 권위에만 맡기지 않고, 인간 자신의 이성과 판단으로 세계를 이해하려는 태도가 강해졌습니다.
+    </p>
+
+    <p>
+      이때 주체는 생각하는 존재, 판단하는 존재, 세계를 인식하는 존재로 중요해졌습니다.
+    </p>
+
+    <p>
+      “나는 생각한다”는 확신은 단순한 문장이 아닙니다. 그것은 세계를 이해하기 위해 먼저 나의 인식과 판단의 자리를 세우려는 시도였습니다.
+    </p>
+
+    <div class="rt-subject-flow">
+      <strong class="rt-subject-flow-title">근대적 주체의 흐름</strong>
+      <div class="rt-subject-flow-step">외부 권위보다 인간의 이성과 판단을 중시함</div>
+      <div class="rt-subject-flow-arrow">↓</div>
+      <div class="rt-subject-flow-step">생각하는 ‘나’가 세계 인식의 중심이 됨</div>
+      <div class="rt-subject-flow-arrow">↓</div>
+      <div class="rt-subject-flow-step">자유와 책임을 가진 독립적 존재로 인간을 이해함</div>
+    </div>
+
+    <p>
+      이 흐름은 인간의 자유와 존엄을 세우는 데 중요한 역할을 했습니다.
+    </p>
+
+    <p>
+      하지만 동시에 질문도 남겼습니다. 정말 인간 주체는 자기 자신을 투명하게 알고, 세계를 객관적으로 바라보며, 온전히 스스로 판단하는 존재일까요.
+    </p>
+  </section>
+
+  <section class="rt-subject-section">
+    <h2>4. 현대철학은 왜 주체를 흔들어 보았는가</h2>
+
+    <div class="rt-subject-one-line">
+      👉 현대철학은 주체가 혼자 완성된 중심이 아니라, 언어·타자·몸·권력 속에서 형성된다는 점을 드러냈습니다.
+    </div>
+
+    <p>
+      현대철학은 근대적 주체의 자신감을 그대로 받아들이지 않았습니다.
+    </p>
+
+    <p>
+      인간은 정말 자기 자신을 완전히 알고 있을까요. 내가 쓰는 언어는 정말 내 생각만을 담고 있을까요. 내가 원하는 것은 정말 나의 욕망일까요.
+    </p>
+
+    <p>
+      이런 질문들은 주체를 흔들었습니다. 주체는 더 이상 혼자 닫힌 중심으로만 이해되지 않았습니다.
+    </p>
+
+    <div class="rt-subject-grid" style="margin: 20px 0;">
+      <div class="rt-subject-grid-item">
+        <strong>언어</strong>
+        <span>나는 이미 주어진 말과 의미 속에서 생각합니다.</span>
+      </div>
+
+      <div class="rt-subject-grid-item">
+        <strong>타자</strong>
+        <span>나는 타인의 시선과 인정 속에서 나를 배웁니다.</span>
+      </div>
+
+      <div class="rt-subject-grid-item">
+        <strong>몸</strong>
+        <span>나는 순수한 이성만이 아니라 몸의 조건 속에서 살아갑니다.</span>
+      </div>
+
+      <div class="rt-subject-grid-item">
+        <strong>권력</strong>
+        <span>나는 제도와 규범이 만든 기준 속에서 주체가 됩니다.</span>
+      </div>
+    </div>
+
+    <p>
+      이 관점에서 주체는 사라지지 않습니다. 다만 더 복잡해집니다.
+    </p>
+
+    <p>
+      나는 생각하고 선택하는 존재이지만, 그 생각과 선택은 이미 언어와 관계와 제도의 영향을 받습니다. 현대철학은 바로 이 복잡함을 보게 합니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-section">
+    <h2>5. 현대사회는 주체를 어떻게 만들고 흔드는가</h2>
+
+    <div class="rt-subject-one-line">
+      👉 현대사회에서 주체는 자기표현의 자유를 얻는 동시에, 끊임없이 선택하고 증명해야 하는 자리로 밀려납니다.
+    </div>
+
+    <p>
+      오늘의 사회는 우리에게 말합니다. 네 삶을 네가 선택하라. 네 취향을 보여 주라. 네 정체성을 표현하라. 네가 원하는 사람이 되라.
+    </p>
+
+    <p>
+      이 말들은 해방적으로 들립니다. 과거보다 더 많은 사람이 자기 삶을 스스로 말하고 선택할 기회를 얻었습니다.
+    </p>
+
+    <p>
+      그러나 동시에 이 말들은 부담이 됩니다. 내가 누구인지 계속 설명해야 하고, 무엇을 원하는지 계속 증명해야 하며, 잘못된 선택의 책임도 개인에게 돌아옵니다.
+    </p>
+
+    <div class="rt-subject-table-wrap">
+      <table class="rt-subject-table">
+        <thead>
+          <tr>
+            <th>현대의 장면</th>
+            <th>주체가 얻는 것</th>
+            <th>주체가 떠안는 것</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SNS</strong></td>
+            <td>자기표현의 공간</td>
+            <td>보여 줄 나를 계속 관리해야 하는 부담</td>
+          </tr>
+          <tr>
+            <td><strong>자기계발</strong></td>
+            <td>변화 가능성의 언어</td>
+            <td>늘 부족한 나를 개선해야 한다는 압박</td>
+          </tr>
+          <tr>
+            <td><strong>플랫폼</strong></td>
+            <td>선택지와 편의</td>
+            <td>알고리즘이 배열한 세계 안에서 선택하는 조건</td>
+          </tr>
+          <tr>
+            <td><strong>성과사회</strong></td>
+            <td>개인의 능력을 인정받을 기회</td>
+            <td>실패를 개인 책임으로 떠안는 구조</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      현대사회는 주체를 강조합니다. 그러나 그 주체는 언제나 자유롭기만 한 것은 아닙니다.
+    </p>
+
+    <p>
+      나는 내 삶의 주인이라고 말하지만, 동시에 끊임없이 평가받고 비교되고 설계된 선택지 안에서 움직입니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-section">
+    <h2>6. 작품 속 주체는 어떤 장면에서 드러나는가</h2>
+
+    <div class="rt-subject-one-line">
+      👉 작품 속 주체는 인물이 스스로 선택한다고 믿는 세계가 사실은 어떤 조건 속에서 만들어졌는지 드러날 때 선명해집니다.
+    </div>
+
+    <p>
+      주체를 작품으로 읽을 때 중요한 것은 단순히 강한 주인공을 찾는 일이 아닙니다.
+    </p>
+
+    <p>
+      중요한 것은 인물이 자신을 둘러싼 세계의 조건을 의식하게 되는 순간입니다.
+    </p>
+
+    <h3>6-1) 《매트릭스》 — 내가 현실이라고 믿은 세계</h3>
+
+    <p>
+      《매트릭스》는 인간이 자신이 살아가는 세계를 현실이라고 믿지만, 그 현실이 이미 구성된 세계일 수 있다는 질문을 던집니다.
+    </p>
+
+    <p>
+      네오는 단순히 선택하는 인물이 아닙니다. 그는 자신이 선택한다고 믿었던 세계 자체가 어떤 조건 위에 놓여 있었는지 알게 됩니다.
+    </p>
+
+    <p>
+      이 작품에서 주체는 세계의 중심에 서는 영웅만이 아닙니다. 오히려 자신이 믿던 세계의 틀이 흔들리는 순간, 주체의 질문이 시작됩니다.
+    </p>
+
+    <h3>6-2) 《트루먼 쇼》 — 이미 짜인 삶 안에서 나를 선택한다는 것</h3>
+
+    <p>
+      《트루먼 쇼》의 트루먼은 자신의 삶이 자연스럽게 흘러간다고 믿습니다. 그러나 그의 일상은 이미 누군가에 의해 연출되고 관리된 세계입니다.
+    </p>
+
+    <p>
+      그는 자신이 살던 세계가 만들어진 무대였음을 알게 되면서, 비로소 자기 삶의 조건을 묻게 됩니다.
+    </p>
+
+    <p>
+      여기서 주체는 “내 마음대로 하겠다”는 단순한 선언이 아닙니다. 내가 살아온 세계가 어떻게 구성되었는지 알고도, 그 너머로 나아가려는 자리입니다.
+    </p>
+
+    <div class="rt-subject-table-wrap">
+      <table class="rt-subject-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>주체가 드러나는 방식</th>
+            <th>철학적 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《매트릭스》</strong></td>
+            <td>현실이라고 믿은 세계가 구성된 조건임을 알게 됨</td>
+            <td>나는 내가 보는 세계를 어디까지 스스로 판단하고 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《트루먼 쇼》</strong></td>
+            <td>연출된 일상 속에서 자기 삶의 조건을 깨닫게 됨</td>
+            <td>이미 짜인 세계 안에서 나의 선택은 어디에서 시작되는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 주체를 단순한 자유의 주인공으로 보여 주지 않습니다. 오히려 내가 자유롭다고 믿는 세계가 어떻게 만들어져 있는지 묻습니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-section">
+    <h2>7. 주체 개념은 무엇을 설명하고 무엇을 설명하지 못하는가</h2>
+
+    <div class="rt-subject-one-line">
+      👉 주체 개념은 인간의 선택과 책임을 설명하지만, 인간을 너무 고립된 중심으로 만들면 관계와 구조를 놓칠 수 있습니다.
+    </div>
+
+    <p>
+      주체 개념은 인간을 수동적인 존재로만 보지 않게 해 줍니다.
+    </p>
+
+    <p>
+      우리는 생각하고, 판단하고, 선택하고, 말하고, 책임지는 존재입니다. 이 점에서 주체 개념은 인간의 자유와 존엄을 설명하는 데 중요합니다.
+    </p>
+
+    <p>
+      그러나 주체를 지나치게 강하게 이해하면 문제가 생깁니다. 모든 것을 개인의 선택과 책임으로 돌리기 쉽기 때문입니다.
+    </p>
+
+    <p>
+      인간은 혼자서 완성된 중심이 아닙니다. 몸, 언어, 관계, 제도, 경제적 조건, 권력의 배열 속에서 생각하고 행동합니다.
+    </p>
+
+    <div class="rt-subject-table-wrap">
+      <table class="rt-subject-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>설명 가능한 지점</strong></td>
+            <td>주체는 인간이 세계를 인식하고 선택하고 책임지는 존재임을 보여 줍니다.</td>
+          </tr>
+          <tr>
+            <td><strong>설명이 부족한 지점</strong></td>
+            <td>인간을 너무 독립적인 중심으로 보면, 주체를 형성하는 언어·관계·규범·권력의 조건이 가려질 수 있습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 주체는 두 방향으로 읽어야 합니다. 하나는 나는 어디까지 내 삶의 선택과 책임을 감당할 수 있는가입니다.
+    </p>
+
+    <p>
+      다른 하나는 나를 그렇게 선택하게 만든 조건은 무엇인가입니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-section">
+    <h2>8. 주체라는 말이 남기는 질문</h2>
+
+    <div class="rt-subject-one-line">
+      👉 주체라는 말은 “나는 누구인가”보다 더 깊게, “나는 어떤 조건 속에서 나로 말하고 행동하는가”를 묻게 합니다.
+    </div>
+
+    <p>
+      주체는 인간을 높여 세운 말입니다. 인간은 생각할 수 있고, 판단할 수 있고, 자기 삶에 대해 책임질 수 있습니다.
+    </p>
+
+    <p>
+      그러나 주체는 동시에 흔들리는 말입니다. 내가 생각한다고 믿는 생각은 이미 배운 말 속에서 이루어지고, 내가 원한다고 믿는 욕망은 사회가 보여 준 이미지 속에서 자랄 수 있습니다.
+    </p>
+
+    <p>
+      이 때문에 주체는 세계의 중심이면서도 세계 속에서 만들어지는 자리입니다.
+    </p>
+
+    <p>
+      나는 완전히 수동적인 존재도 아니고, 완전히 독립적인 중심도 아닙니다. 나는 주어진 조건 속에서 생각하고, 그 조건을 때로는 따르고, 때로는 의심하며, 때로는 바꾸려는 존재입니다.
+    </p>
+  </section>
+
+  <section class="rt-subject-final">
+    <h2>마지막 질문</h2>
+
+    <p>
+      나는 정말 나의 생각으로 생각하고 있는가.
+    </p>
+
+    <p>
+      내가 선택했다고 믿는 것은 어떤 언어, 어떤 관계, 어떤 제도, 어떤 시선 속에서 가능해졌는가.
+    </p>
+
+    <p>
+      <strong>주체는 세계의 중심이라는 확신과 세계 속에서 만들어진다는 불안을 함께 품은 말입니다.</strong>
+    </p>
+
+    <p>
+      그렇다면 나는 지금 세계를 바라보는 중심인가, 아니면 세계가 나를 통해 말하고 있는 자리인가.
+    </p>
+  </section>
+
+  <section class="rt-subject-read">
+    <h2>함께 읽기</h2>
+
+    <p>
+      이 글을 읽은 뒤에는 주체를 현대철학의 큰 흐름과 인간의 조건 안에서 다시 보고, 자아·페르소나의 문제로 이어 읽을 수 있습니다.
+    </p>
+
+    <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+      <strong>Re:Think 현대 철학지도</strong>
+      <span>주체를 자아의 문제에만 가두지 않고, 인식·언어·권력·타자·기술의 질문 속에서 다시 볼 때 연결됩니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+      <strong>Re:Think 인간의 조건 영역</strong>
+      <span>주체가 자아, 정체성, 자유, 책임, 수행성의 문제와 어떻게 이어지는지 큰 흐름 속에서 확인할 때 연결됩니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/305" target="_blank" rel="noopener">
+      <strong>자아</strong>
+      <span>주체가 선택하고 책임지는 자리라면, 자아는 그 선택을 하는 ‘나’가 어떻게 형성되는지 함께 묻게 합니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/294" target="_blank" rel="noopener">
+      <strong>페르소나</strong>
+      <span>주체가 언제나 사회적 역할과 얼굴 속에서 드러난다는 점을 더 구체적으로 읽을 때 연결됩니다.</span>
+    </a>
+  </section>
+
+  <div class="rt-subject-tags">
+    Re:Think, 주체 뜻, 주체, Subject, 자아, 개인, 정체성, 자유와 책임, 주체철학, 현대철학, 데카르트, 사르트르, 푸코, 주체화, 매트릭스, 트루먼 쇼
+  </div>
+
+  <div class="rt-subject-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,104 @@
+.rethink-common-hero {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  width: min(1100px, calc(100% - 16px));
+  min-height: clamp(330px, 48vw, 500px);
+  margin: 8px auto 38px;
+  overflow: hidden;
+  border: 1px solid rgba(88, 71, 44, 0.16);
+  border-radius: 24px;
+  background: #e9ddc6 url("assets/rethink-hero.webp") center center / cover no-repeat;
+  box-shadow: 0 20px 48px rgba(56, 46, 31, 0.14);
+  color: #173b35;
+  font-family: inherit;
+  word-break: keep-all;
+}
+
+.rethink-common-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(252, 247, 236, 0.98) 0%, rgba(252, 247, 236, 0.91) 34%, rgba(252, 247, 236, 0.44) 58%, rgba(252, 247, 236, 0.06) 82%),
+    linear-gradient(0deg, rgba(31, 49, 43, 0.14), transparent 45%);
+}
+
+.rethink-common-hero__inner {
+  box-sizing: border-box;
+  display: flex;
+  min-height: inherit;
+  width: min(620px, 61%);
+  padding: clamp(34px, 6vw, 72px);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rethink-common-hero__series {
+  margin: 0 0 14px;
+  color: #9a642e;
+  font-size: clamp(0.78rem, 1.5vw, 0.94rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.rethink-common-hero__title {
+  margin: 0;
+  color: #173b35;
+  font-size: clamp(2rem, 4.3vw, 3.55rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.rethink-common-hero__line {
+  width: 54px;
+  height: 2px;
+  margin-top: 26px;
+  background: #b98243;
+}
+
+body.rethink-common-hero-ready > h1:first-of-type,
+body.rethink-common-hero-ready .seo-h1,
+body.rethink-common-hero-ready .rta-wrap > .rta-hero:first-child {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .rethink-common-hero {
+    width: calc(100% - 8px);
+    min-height: 420px;
+    margin: 4px auto 28px;
+    border-radius: 18px;
+    background-position: 63% center;
+  }
+
+  .rethink-common-hero::before {
+    background:
+      linear-gradient(180deg, rgba(252, 247, 236, 0.97) 0%, rgba(252, 247, 236, 0.88) 48%, rgba(252, 247, 236, 0.24) 77%, rgba(23, 42, 36, 0.20) 100%);
+  }
+
+  .rethink-common-hero__inner {
+    width: 100%;
+    min-height: 420px;
+    padding: 34px 26px 150px;
+    justify-content: flex-start;
+  }
+
+  .rethink-common-hero__title {
+    font-size: clamp(1.85rem, 8.6vw, 2.7rem);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rethink-common-hero__inner {
+    animation: rethink-hero-enter 520ms ease-out both;
+  }
+
+  @keyframes rethink-hero-enter {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>경험주의 | Re:Think</title>
+  <meta name="description" content="경험주의 는 지식이 감각과 경험에서 출발한다고 보는 철학적 입장입니다. 직접 보고 겪은 것을 중시하는 태도가 어떻게 지식의 근거가 되며, 동시에 무엇을 놓칠 수 있는지 살펴봅니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rte-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #30353b;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rte-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rte-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #c18a27;
+    background: #fff9e9;
+    border-radius: 10px;
+    color: #6b4a0f;
+    font-size: 0.98rem;
+  }
+
+  .rte-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #edf4fa 0%, #fff9e9 100%);
+    border: 1px solid #d8d9d3;
+    border-radius: 18px;
+  }
+
+  .rte-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #294d68;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .rte-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #203e55;
+    letter-spacing: -0.045em;
+  }
+
+  .rte-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #a56f18;
+  }
+
+  .rte-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rte-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f2f7fa;
+    border: 1px solid #d5e1e8;
+    border-radius: 16px;
+  }
+
+  .rte-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #203e55;
+  }
+
+  .rte-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rte-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e2dccd;
+    border-radius: 13px;
+  }
+
+  .rte-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #a56f18;
+    font-size: 1.02rem;
+  }
+
+  .rte-grid-item span {
+    display: block;
+    color: #56616a;
+    font-size: 0.94rem;
+  }
+
+  .rte-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #edf4fa;
+    border: 1px solid #d1dee8;
+    border-radius: 16px;
+  }
+
+  .rte-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #203e55;
+  }
+
+  .rte-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #dae4eb;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rte-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #203e55;
+    list-style: none;
+  }
+
+  .rte-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rte-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #a56f18;
+  }
+
+  .rte-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rte-toc-desc {
+    padding: 0 16px 15px;
+    color: #5e6871;
+    font-size: 0.95rem;
+    border-top: 1px solid #e6edf2;
+  }
+
+  .rte-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #dae4eb;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(41, 77, 104, 0.06);
+  }
+
+  .rte-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #c18a27;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #203e55;
+    letter-spacing: -0.035em;
+  }
+
+  .rte-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #a56f18;
+  }
+
+  .rte-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fff9e9;
+    border-radius: 12px;
+    color: #6b4a0f;
+    font-weight: 600;
+  }
+
+  .rte-section p {
+    margin: 0 0 14px;
+  }
+
+  .rte-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #edf4fa;
+    border-left: 5px solid #c18a27;
+    border-radius: 10px;
+    color: #203e55;
+    font-weight: 700;
+  }
+
+  .rte-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rte-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rte-table th {
+    background: #294d68;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #d1dee8;
+    text-align: left;
+  }
+
+  .rte-table td {
+    padding: 12px 10px;
+    border: 1px solid #d1dee8;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rte-table tr:nth-child(even) td {
+    background: #fff9e9;
+  }
+
+  .rte-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #dae4eb;
+    border-radius: 14px;
+  }
+
+  .rte-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #203e55;
+    font-weight: 800;
+  }
+
+  .rte-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #4f5b65;
+  }
+
+  .rte-flow-boxes div {
+    padding: 11px 13px;
+    background: #edf4fa;
+    border-radius: 9px;
+  }
+
+  .rte-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #294d68 0%, #a56f18 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rte-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rte-final p {
+    margin: 0 0 12px;
+  }
+
+  .rte-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rte-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rte-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rte-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rte-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rte-read-list strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #203e55;
+  }
+
+  .rte-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rte-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #edf4fa;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rte-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rte-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rte-section {
+      padding: 24px 18px;
+    }
+
+    .rte-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rte-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rte-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 경험주의 뜻 - 경험한 것만 믿는 태도는 현실을 얼마나 넓게 볼 수 있는가</h1>
+<div class="rte-meta">
+    <strong>경험주의</strong>는 지식이 감각과 경험에서 출발한다고 보는 철학적 입장입니다. 직접 보고 겪은 것을 중시하는 태도가 어떻게 지식의 근거가 되며, 동시에 무엇을 놓칠 수 있는지 살펴봅니다.
+  </div>
+
+  <!-- 제목형 안내 영역 -->
+  <section class="rte-hero">
+    <div class="rte-kicker">Re:Think 현대철학사전</div>
+
+    <div class="rte-title-like">경험주의 뜻</div>
+
+    <div class="rte-subtitle-like">
+      경험한 것만 믿는 태도는 현실을 얼마나 넓게 볼 수 있는가
+    </div>
+
+    <p>
+      누군가 자신이 겪은 일을 이야기할 때,
+      우리는 가끔 이렇게 답합니다.
+      <strong>“나는 그런 일을 겪어 보지 않아서 잘 모르겠어.”</strong>
+    </p>
+
+    <p>
+      이 말은 신중해 보입니다.
+      직접 경험하지 않은 일을 쉽게 판단하지 않겠다는 뜻이기 때문입니다.
+      실제로 겪어 본 사람의 말에는 설명만으로는 알기 어려운 무게가 있습니다.
+    </p>
+
+    <p>
+      하지만 같은 말이 다른 방향으로 쓰이기도 합니다.
+      <strong>“내 주변에는 그런 사람이 없던데.”</strong>
+      <strong>“나는 불편하지 않았으니 큰 문제는 아닌 것 같아.”</strong>
+    </p>
+
+    <p>
+      직접 겪지 않았다는 사실이
+      어떤 현실을 믿지 않아도 되는 근거가 되기도 하는 것입니다.
+      경험은 우리를 세계와 연결하지만,
+      동시에 내가 경험한 범위 안에 현실을 가두기도 합니다.
+    </p>
+
+    <p>
+      <strong>경험주의</strong>는 지식이 어디에서 시작되는지 묻는 철학입니다.
+      우리는 무엇을 보고,
+      듣고,
+      만지고,
+      겪었기 때문에 안다고 말할 수 있을까요.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rte-map">
+    <div class="rte-map-title">경험주의 핵심 지도</div>
+
+    <div class="rte-grid">
+      <div class="rte-grid-item">
+        <strong>감각</strong>
+        <span>지식은 먼저 보고 듣고 만나는 감각적 경험에서 출발합니다.</span>
+      </div>
+
+      <div class="rte-grid-item">
+        <strong>관찰</strong>
+        <span>주장은 실제 현상과 사례를 통해 확인되어야 합니다.</span>
+      </div>
+
+      <div class="rte-grid-item">
+        <strong>한계</strong>
+        <span>개인의 경험만으로는 보이지 않는 현실과 구조가 남습니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rte-toc">
+    <div class="rte-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 직접 겪어 보지 않으면 믿기 어려운가</summary>
+      <div class="rte-toc-desc">
+        자신이 겪은 경험을 지식의 기준으로 삼는 일상의 장면에서 출발합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 경험주의는 무엇을 뜻하는가</summary>
+      <div class="rte-toc-desc">
+        인간의 지식이 감각과 경험에서 시작된다는 경험주의의 기본 관점을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 경험은 어떻게 지식이 되는가</summary>
+      <div class="rte-toc-desc">
+        감각, 관찰, 비교, 반복을 통해 경험이 판단의 근거로 바뀌는 과정을 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 경험주의는 왜 과학과 가까워졌는가</summary>
+      <div class="rte-toc-desc">
+        관찰과 실험, 검증을 중시하는 태도가 과학적 지식과 연결되는 방식을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 나의 경험은 현실 전체를 보여 주는가</summary>
+      <div class="rte-toc-desc">
+        개인의 경험이 얼마나 중요하며 동시에 얼마나 좁은 범위에 머무를 수 있는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 데이터가 많으면 현실을 더 정확히 알 수 있는가</summary>
+      <div class="rte-toc-desc">
+        현대사회에서 경험이 데이터로 바뀌면서 무엇이 보이고 무엇이 지워지는지 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 경험주의</summary>
+      <div class="rte-toc-desc">
+        《컨택트》와 《12인의 성난 사람들》을 통해 관찰, 경험, 해석의 문제를 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 경험주의는 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rte-toc-desc">
+        경험주의가 설명하는 지점과 경험만으로 설명하기 어려운 현실을 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rte-section">
+    <h2>1. 직접 겪어 보지 않으면 믿기 어려운가</h2>
+
+    <div class="rte-one-line">
+      👉 직접 경험은 강한 근거가 되지만, 내가 경험하지 못했다는 사실이 현실의 부재를 뜻하지는 않습니다.
+    </div>
+
+    <p>
+      사람은 자신이 직접 겪은 일을 쉽게 믿습니다.
+      몸이 아팠던 경험,
+      관계에서 상처받았던 기억,
+      어떤 제도 때문에 불편을 겪었던 순간은 설명하지 않아도 선명합니다.
+    </p>
+
+    <p>
+      반대로 직접 겪지 않은 일은 멀게 느껴집니다.
+      다른 지역의 문제,
+      다른 세대가 겪는 불안,
+      자신과 다른 조건에서 살아가는 사람의 어려움은
+      설명을 들어도 충분히 실감하기 어렵습니다.
+    </p>
+
+    <p>
+      그래서 우리는 경험을 진실의 기준처럼 사용합니다.
+      “내가 직접 봤다.”
+      “내가 겪어 봐서 안다.”
+      이런 말은 논쟁을 멈추게 할 만큼 강한 힘을 가집니다.
+    </p>
+
+    <p>
+      하지만 개인의 경험은 언제나 한정되어 있습니다.
+      내가 보지 못한 일이 일어나지 않았다는 뜻은 아니고,
+      내가 불편하지 않았다는 사실이 다른 사람도 불편하지 않았다는 뜻은 아닙니다.
+    </p>
+
+    <div class="rte-quote">
+      경험은 현실을 만나는 통로이지만, 내가 만난 현실이 곧 현실 전체는 아닙니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rte-section">
+    <h2>2. 경험주의는 무엇을 뜻하는가</h2>
+
+    <div class="rte-one-line">
+      👉 경험주의는 인간의 지식이 감각과 경험에서 시작되며, 실제로 확인되지 않은 관념을 조심스럽게 다루어야 한다는 입장입니다.
+    </div>
+
+    <p>
+      경험주의는 지식의 출발점을 인간의 경험에서 찾습니다.
+      우리는 태어날 때부터 세계의 모든 원리를 알고 있는 것이 아니라,
+      보고,
+      듣고,
+      만지고,
+      반복해서 겪으며 세계를 배워 간다는 것입니다.
+    </p>
+
+    <p>
+      뜨거운 물체를 만지면 손을 뗍니다.
+      같은 일이 반복되면 뜨거운 물체가 몸을 다치게 할 수 있다는 것을 배웁니다.
+      경험은 단순한 감각을 넘어 앞으로의 행동을 바꾸는 지식이 됩니다.
+    </p>
+
+    <p>
+      경험주의는 머릿속에서만 완성된 설명보다
+      실제 세계에서 확인할 수 있는 근거를 중요하게 봅니다.
+      어떤 주장이 그럴듯하게 들리더라도,
+      관찰과 경험에 맞지 않는다면 다시 검토해야 한다는 태도입니다.
+    </p>
+
+    <div class="rte-table-wrap">
+      <table class="rte-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>경험주의</th>
+            <th>합리주의</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>지식의 출발</strong></td>
+            <td>감각과 경험</td>
+            <td>이성과 사고의 원리</td>
+          </tr>
+          <tr>
+            <td><strong>중심 질문</strong></td>
+            <td>실제로 무엇을 보고 확인했는가</td>
+            <td>논리적으로 무엇이 참이어야 하는가</td>
+          </tr>
+          <tr>
+            <td><strong>강점</strong></td>
+            <td>현실과 관찰을 중시함</td>
+            <td>경험을 넘어서는 원리와 구조를 설명함</td>
+          </tr>
+          <tr>
+            <td><strong>위험</strong></td>
+            <td>보이지 않는 원리와 구조를 놓칠 수 있음</td>
+            <td>현실과 멀어진 추상적 설명이 될 수 있음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      경험주의와 합리주의를 단순히 둘 중 하나로만 고를 필요는 없습니다.
+      실제 지식은 경험과 이성이 서로를 확인하고 수정하는 과정에서 만들어지는 경우가 많습니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rte-section">
+    <h2>3. 경험은 어떻게 지식이 되는가</h2>
+
+    <div class="rte-one-line">
+      👉 경험은 한 번 겪었다는 사실만으로 지식이 되기보다, 관찰하고 비교하며 반복해서 확인하는 과정을 통해 지식으로 바뀝니다.
+    </div>
+
+    <p>
+      모든 경험이 곧바로 믿을 만한 지식이 되는 것은 아닙니다.
+      한 번의 경험은 우연일 수 있고,
+      기억은 달라질 수 있으며,
+      같은 장면도 사람에 따라 다르게 보일 수 있습니다.
+    </p>
+
+    <p>
+      예를 들어 어떤 음식을 먹고 몸이 아팠다고 해서
+      그 음식이 반드시 원인이라고 단정하기는 어렵습니다.
+      다른 음식,
+      몸의 상태,
+      당시의 환경도 함께 살펴야 합니다.
+    </p>
+
+    <p>
+      그래서 경험이 지식이 되려면
+      한 번의 인상에서 멈추지 않고
+      여러 사례를 비교하고,
+      조건을 구분하며,
+      같은 결과가 반복되는지 확인해야 합니다.
+    </p>
+
+    <div class="rte-flow">
+      <strong class="rte-flow-title">경험이 지식으로 바뀌는 흐름</strong>
+
+      <div class="rte-flow-boxes">
+        <div>감각 — 어떤 현상과 사건을 직접 만난다</div>
+        <div>관찰 — 무엇이 일어났는지 주의 깊게 살핀다</div>
+        <div>비교 — 다른 사례와 조건을 함께 본다</div>
+        <div>반복 확인 — 비슷한 조건에서 같은 결과가 나타나는지 본다</div>
+        <div>판단 — 경험을 설명하는 잠정적인 지식을 만든다</div>
+      </div>
+    </div>
+
+    <p>
+      여기에서 중요한 말은 <strong>잠정적</strong>이라는 점입니다.
+      경험을 통해 만든 지식은 새로운 경험과 증거가 나타나면 다시 수정될 수 있습니다.
+    </p>
+
+    <p>
+      경험주의의 힘은 언제나 확실한 답을 준다는 데 있지 않습니다.
+      오히려 실제 세계가 기존의 믿음과 다르게 나타날 때,
+      생각을 고칠 수 있게 한다는 데 있습니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rte-section">
+    <h2>4. 경험주의는 왜 과학과 가까워졌는가</h2>
+
+    <div class="rte-one-line">
+      👉 과학은 관찰과 실험을 통해 주장을 확인하고, 같은 조건에서 다시 검토할 수 있다는 점에서 경험주의와 연결됩니다.
+    </div>
+
+    <p>
+      과학적 설명은 단지 권위 있는 사람이 말했다는 이유로 받아들여지지 않습니다.
+      어떤 현상을 관찰했고,
+      어떤 방법으로 확인했으며,
+      다른 사람도 비슷한 조건에서 같은 결과를 얻을 수 있는지가 중요합니다.
+    </p>
+
+    <p>
+      이 태도는 경험주의와 가깝습니다.
+      머릿속에서 그럴듯한 설명을 만드는 것보다
+      실제 현상이 그 설명을 뒷받침하는지 확인하려 하기 때문입니다.
+    </p>
+
+    <p>
+      다만 과학은 단순히 경험을 많이 모으는 일과 같지 않습니다.
+      관찰을 위해서는 무엇을 측정할지 정해야 하고,
+      실험 결과를 해석하기 위해서는 개념과 이론이 필요합니다.
+    </p>
+
+    <div class="rte-table-wrap">
+      <table class="rte-table">
+        <thead>
+          <tr>
+            <th>과학적 과정</th>
+            <th>경험주의와의 연결</th>
+            <th>함께 필요한 요소</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>관찰</strong></td>
+            <td>실제 현상에서 출발함</td>
+            <td>무엇을 볼 것인지 정하는 관점</td>
+          </tr>
+          <tr>
+            <td><strong>실험</strong></td>
+            <td>조건을 바꾸며 결과를 확인함</td>
+            <td>가설과 비교 기준</td>
+          </tr>
+          <tr>
+            <td><strong>측정</strong></td>
+            <td>감각적 경험을 기록 가능한 자료로 바꿈</td>
+            <td>측정 방식과 단위에 대한 합의</td>
+          </tr>
+          <tr>
+            <td><strong>검증</strong></td>
+            <td>다른 사람도 확인할 수 있게 함</td>
+            <td>해석과 논리적 설명</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      따라서 경험과 이론은 서로 반대편에만 있지 않습니다.
+      경험은 이론을 시험하고,
+      이론은 경험 속에서 무엇을 살펴야 하는지 방향을 제시합니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rte-section">
+    <h2>5. 나의 경험은 현실 전체를 보여 주는가</h2>
+
+    <div class="rte-one-line">
+      👉 개인의 경험은 현실의 중요한 증거이지만, 경험의 범위와 위치에 따라 전혀 다른 현실이 보일 수 있습니다.
+    </div>
+
+    <p>
+      같은 사회에서 살아도 사람들은 서로 다른 현실을 경험합니다.
+      어떤 사람에게 대중교통은 편리한 이동수단이지만,
+      다른 사람에게는 계단과 좁은 통로 때문에 접근하기 어려운 공간일 수 있습니다.
+    </p>
+
+    <p>
+      어떤 조직은 누군가에게 공정하게 느껴지지만,
+      다른 사람에게는 말하기 어려운 위계와 편견이 작동하는 곳일 수 있습니다.
+    </p>
+
+    <p>
+      이 차이는 누가 거짓말하고 있기 때문에 생기는 것만은 아닙니다.
+      서로 다른 위치와 조건에서 같은 현실을 만나기 때문에
+      경험의 모습이 달라질 수 있습니다.
+    </p>
+
+    <div class="rte-quote">
+      “나는 그런 일을 겪지 않았다”는 말은 경험의 사실일 수 있지만, “그런 일은 없다”는 결론까지 자동으로 만들어 주지는 않습니다.
+    </div>
+
+    <p>
+      경험주의를 현실에 적용할 때는
+      자신의 경험을 중요하게 여기면서도
+      다른 사람의 경험을 함께 자료로 받아들여야 합니다.
+    </p>
+
+    <p>
+      특히 경험할 기회 자체가 불평등할 수 있다는 점도 살펴야 합니다.
+      어떤 사람은 자신의 경험을 기록하고 말할 수 있지만,
+      어떤 사람은 같은 일을 겪고도 말할 통로나 안전을 갖지 못할 수 있습니다.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rte-section">
+    <h2>6. 데이터가 많으면 현실을 더 정확히 알 수 있는가</h2>
+
+    <div class="rte-one-line">
+      👉 데이터는 수많은 경험을 비교할 수 있게 하지만, 무엇을 측정하고 기록했는지에 따라 현실의 일부만 보여 줄 수 있습니다.
+    </div>
+
+    <p>
+      현대사회에서 경험은 자주 데이터로 바뀝니다.
+      걸음 수,
+      수면 시간,
+      구매 기록,
+      이동 경로,
+      클릭과 시청 시간까지 수치로 남습니다.
+    </p>
+
+    <p>
+      데이터는 개인의 기억보다 넓은 범위를 보여 줄 수 있습니다.
+      많은 사람의 행동을 비교하고,
+      반복되는 경향을 발견하며,
+      눈에 잘 보이지 않던 문제를 드러낼 수도 있습니다.
+    </p>
+
+    <p>
+      그러나 데이터는 현실 그 자체가 아닙니다.
+      먼저 무엇을 기록할지 결정해야 하고,
+      측정되지 않은 경험은 자료에 들어오지 않습니다.
+    </p>
+
+    <p>
+      예를 들어 노동시간은 기록할 수 있지만
+      그 시간 동안 느낀 압박과 모욕,
+      관계의 긴장까지 같은 방식으로 측정하기는 어렵습니다.
+    </p>
+
+    <div class="rte-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rte-grid-item">
+        <strong>데이터가 보여 주는 것</strong>
+        <span>반복되는 경향, 규모, 변화의 속도, 사람들 사이의 차이를 비교하게 합니다.</span>
+      </div>
+
+      <div class="rte-grid-item">
+        <strong>데이터가 놓칠 수 있는 것</strong>
+        <span>맥락, 감정, 의미, 기록되지 않은 경험과 말할 수 없었던 현실이 남습니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      경험주의는 데이터를 무조건 믿으라는 태도가 아닙니다.
+      오히려 데이터가 어떤 경험을 기록했고,
+      어떤 현실을 측정 밖에 남겼는지 다시 묻게 합니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rte-section">
+    <h2>7. 작품으로 읽는 경험주의</h2>
+
+    <div class="rte-one-line">
+      👉 작품 속 경험주의는 직접 보고 겪은 사실이 얼마나 중요한지, 그리고 같은 경험도 해석에 따라 어떻게 달라지는지를 보여 줍니다.
+    </div>
+
+    <h3>7-1) 《컨택트》 — 새로운 경험은 세계를 보는 방식을 바꿀 수 있는가</h3>
+
+    <p>
+      영화 《컨택트》에서 인물들은 낯선 존재의 언어를 이해하려 합니다.
+      기존의 지식만으로는 그 존재의 의도와 사고방식을 곧바로 판단하기 어렵습니다.
+    </p>
+
+    <p>
+      인물들은 반복해서 관찰하고,
+      기호를 비교하며,
+      작은 반응을 확인합니다.
+      경험과 학습이 쌓일수록 처음에는 위협처럼 보이던 장면이 다른 의미로 읽히기 시작합니다.
+    </p>
+
+    <p>
+      경험주의의 관점에서 이 작품은
+      새로운 경험이 단순히 정보를 더하는 데 그치지 않고
+      세계를 이해하는 틀 자체를 바꿀 수 있음을 보여 줍니다.
+    </p>
+
+    <p>
+      하지만 경험은 혼자 의미를 말해 주지 않습니다.
+      같은 장면을 두고도 사람들은 위험,
+      협력,
+      침략이라는 서로 다른 해석을 내놓습니다.
+    </p>
+
+    <h3>7-2) 《12인의 성난 사람들》 — 직접 본 증언은 언제까지 믿을 수 있는가</h3>
+
+    <p>
+      《12인의 성난 사람들》은 하나의 사건을 둘러싼 증언과 판단을 다룹니다.
+      목격자의 말과 제시된 증거는 처음에는 분명한 사실처럼 보입니다.
+    </p>
+
+    <p>
+      그러나 인물들은 증언이 이루어진 거리와 시간,
+      사람의 기억과 선입견,
+      관찰 조건을 하나씩 다시 살펴봅니다.
+    </p>
+
+    <p>
+      누군가 직접 보았다는 사실은 중요하지만,
+      무엇을 어느 조건에서 보았는지까지 확인하지 않으면
+      경험은 쉽게 확신으로 굳어질 수 있습니다.
+    </p>
+
+    <div class="rte-table-wrap">
+      <table class="rte-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>경험주의의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《컨택트》</strong></td>
+            <td>낯선 언어와 존재를 반복해서 관찰하고 이해함</td>
+            <td>새로운 경험은 기존의 세계관까지 바꿀 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《12인의 성난 사람들》</strong></td>
+            <td>목격과 증언의 조건을 하나씩 다시 검토함</td>
+            <td>직접 본 경험은 어떤 검토를 거쳐야 믿을 만한 지식이 되는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 경험을 무시하지 않습니다.
+      오히려 경험을 더 자세히 살피고,
+      그 경험을 둘러싼 조건과 해석까지 함께 보아야 한다는 점을 보여 줍니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rte-section">
+    <h2>8. 경험주의는 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rte-one-line">
+      👉 경험주의는 지식이 현실과 만나야 한다는 점을 보여 주지만, 경험만으로 모든 의미와 구조를 설명할 수는 없습니다.
+    </div>
+
+    <p>
+      경험주의는 우리가 무엇을 안다고 말할 때
+      실제 근거를 요구하게 합니다.
+      권위 있는 사람이 말했다는 이유,
+      오래 믿어 왔다는 이유,
+      논리적으로 그럴듯하다는 이유만으로는 충분하지 않다고 말합니다.
+    </p>
+
+    <p>
+      이런 태도는 지식을 현실에 열어 둡니다.
+      새로운 경험과 증거가 나타나면
+      기존의 믿음을 수정할 수 있게 합니다.
+    </p>
+
+    <p>
+      그러나 경험만으로 현실 전체를 설명하기도 어렵습니다.
+      개인이 직접 경험하기 어려운 사회 구조,
+      긴 시간에 걸쳐 나타나는 변화,
+      눈에 보이지 않는 권력과 규범은 한 사람의 경험만으로 잘 드러나지 않을 수 있습니다.
+    </p>
+
+    <div class="rte-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rte-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>경험주의는 지식이 실제 관찰과 경험을 통해 확인되어야 하며, 새로운 증거에 따라 수정될 수 있음을 보여 줍니다.</span>
+      </div>
+
+      <div class="rte-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>개인의 경험만으로는 구조, 역사, 규범, 다른 사람의 위치와 기록되지 않은 현실을 충분히 설명하기 어렵습니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 경험주의는 “내가 직접 겪은 것만 믿겠다”는 태도로 끝나지 않습니다.
+      오히려 더 많은 경험을 듣고,
+      관찰의 조건을 살피며,
+      내가 보지 못한 현실까지 지식의 범위 안에 넣으려는 태도로 이어져야 합니다.
+    </p>
+
+    <p>
+      경험은 지식의 시작일 수 있습니다.
+      하지만 그 시작이 현실의 끝은 아닙니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rte-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      경험은 우리에게 강한 확신을 줍니다.
+      직접 보고 겪었다는 사실은
+      추상적인 설명보다 더 선명하게 남습니다.
+    </p>
+
+    <p>
+      그러나 내가 경험하지 못했다는 이유로
+      다른 사람의 현실까지 존재하지 않는다고 말할 수는 없습니다.
+      내가 본 것은 현실의 한 장면이지,
+      현실 전체가 아닐 수 있기 때문입니다.
+    </p>
+
+    <p>
+      나는 지금 무엇을 경험했기 때문에 안다고 말하는가.
+      그 경험은 어떤 조건에서 만들어졌으며,
+      그 경험 바깥에 놓인 현실은 무엇인가.
+    </p>
+
+    <p>
+      그리고 직접 겪지 않은 삶을 이해하기 위해
+      나는 누구의 경험을 더 들어야 하는가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rte-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rte-read-intro">
+      경험주의를 단순히 직접 겪은 사실을 믿는 태도로 닫지 않고, 진리와 지식, 객관성과 해석의 흐름 속에서 확장해 읽을 수 있습니다.
+    </p>
+
+    <div class="rte-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <strong>Re:Think 현대 철학지도</strong>
+        <span>
+          경험주의를 인식과 언어, 인간의 조건, 권력과 규범의 전체 흐름 속에서 넓게 살펴볼 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/249" target="_blank" rel="noopener">
+        <strong>인식과 언어 안내지도</strong>
+        <span>
+          경험주의가 객관성, 믿음, 지식, 진리, 합리주의의 문제와 어떻게 이어지는지 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <strong>6 Re:Lenz</strong>
+        <span>
+          직접 경험한 사실만으로 현실을 단정하지 않고 사회·관계·언어·이미지의 여러 렌즈로 다시 읽을 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rte-tags">
+    Re:Think, 경험주의 뜻, Empiricism, 경험주의, 지식의 근거, 감각과 경험, 관찰과 실험, 과학철학, 데이터와 경험, 객관성, 합리주의, 컨택트, 12인의 성난 사람들, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rte-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

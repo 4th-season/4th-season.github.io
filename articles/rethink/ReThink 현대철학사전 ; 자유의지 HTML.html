@@ -1,0 +1,1077 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자유의지 | Re:Think</title>
+  <meta name="description" content="자유의지 는 내가 정말 다르게 선택할 수 있었는지 묻는 철학 개념입니다. 이 글은 일상의 후회와 선택 장면에서 출발해 자유의지가 책임, 조건, 습관, 사회적 구조와 어떻게 얽혀 있는지 살펴봅니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtw-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #2f3138;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtw-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtw-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #6d4c8d;
+    background: #f7f3fb;
+    border-radius: 10px;
+    color: #4b3763;
+    font-size: 0.98rem;
+  }
+
+  .rtw-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eef3fb 0%, #f7f3fb 100%);
+    border: 1px solid #d9d2e8;
+    border-radius: 18px;
+  }
+
+  .rtw-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #2f3f5f;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rtw-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #2f3f5f;
+    letter-spacing: -0.045em;
+  }
+
+  .rtw-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #6d4c8d;
+  }
+
+  .rtw-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtw-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f3f5fb;
+    border: 1px solid #d7ddea;
+    border-radius: 16px;
+  }
+
+  .rtw-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #2f3f5f;
+  }
+
+  .rtw-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtw-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #ded7ea;
+    border-radius: 13px;
+  }
+
+  .rtw-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #6d4c8d;
+    font-size: 1.02rem;
+  }
+
+  .rtw-grid-item span {
+    display: block;
+    color: #525866;
+    font-size: 0.94rem;
+  }
+
+  .rtw-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eef3fb;
+    border: 1px solid #cfd8e8;
+    border-radius: 16px;
+  }
+
+  .rtw-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #2f3f5f;
+  }
+
+  .rtw-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #d9e0ec;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtw-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #2f3f5f;
+    list-style: none;
+  }
+
+  .rtw-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtw-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #6d4c8d;
+  }
+
+  .rtw-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtw-toc-desc {
+    padding: 0 16px 15px;
+    color: #56616f;
+    font-size: 0.95rem;
+    border-top: 1px solid #e3e9f3;
+  }
+
+  .rtw-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #d9e0ec;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(47, 63, 95, 0.06);
+  }
+
+  .rtw-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #6d4c8d;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #2f3f5f;
+    letter-spacing: -0.035em;
+  }
+
+  .rtw-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #6d4c8d;
+  }
+
+  .rtw-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #f7f3fb;
+    border-radius: 12px;
+    color: #4b3763;
+    font-weight: 600;
+  }
+
+  .rtw-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtw-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #eef3fb;
+    border-left: 5px solid #6d4c8d;
+    border-radius: 10px;
+    color: #2f3f5f;
+    font-weight: 700;
+  }
+
+  .rtw-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtw-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtw-table th {
+    background: #2f3f5f;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #cfd8e8;
+    text-align: left;
+  }
+
+  .rtw-table td {
+    padding: 12px 10px;
+    border: 1px solid #cfd8e8;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtw-table tr:nth-child(even) td {
+    background: #f7f3fb;
+  }
+
+  .rtw-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #d9e0ec;
+    border-radius: 14px;
+  }
+
+  .rtw-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #2f3f5f;
+    font-weight: 800;
+  }
+
+  .rtw-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #4d5563;
+  }
+
+  .rtw-flow-boxes div {
+    padding: 11px 13px;
+    background: #eef3fb;
+    border-radius: 9px;
+  }
+
+  .rtw-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #2f3f5f 0%, #6d4c8d 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rtw-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtw-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtw-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rtw-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rtw-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rtw-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rtw-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rtw-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rtw-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eef3fb;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtw-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rtw-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtw-section {
+      padding: 24px 18px;
+    }
+
+    .rtw-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtw-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtw-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 자유의지 뜻 - 나는 정말 다르게 선택할 수 있었는가</h1>
+<div class="rtw-meta">
+    <strong>자유의지</strong>는 내가 정말 다르게 선택할 수 있었는지 묻는 철학 개념입니다. 이 글은 일상의 후회와 선택 장면에서 출발해 자유의지가 책임, 조건, 습관, 사회적 구조와 어떻게 얽혀 있는지 살펴봅니다.
+  </div>
+
+  <!-- 안내 영역: H1 대신 제목형 표시 -->
+  <section class="rtw-hero">
+    <div class="rtw-kicker">Re:Think 현대철학사전</div>
+    <div class="rtw-title-like">자유의지 뜻</div>
+    <div class="rtw-subtitle-like">
+      나는 정말 다르게 선택할 수 있었는가
+    </div>
+
+    <p>
+      누군가에게 보낸 말을 다시 떠올리며 후회할 때가 있습니다.
+      그때 조금만 다르게 말했더라면, 답장을 조금 늦췄더라면, 화를 참았더라면 관계가 달라졌을지도 모릅니다.
+    </p>
+
+    <p>
+      그런데 시간이 지나고 보면 이상한 질문이 남습니다.
+      정말 그 순간 나는 다르게 말할 수 있었을까요.
+      아니면 이미 쌓여 있던 피로, 오래된 상처, 익숙한 방어 방식이 나를 그 말로 밀어 넣은 것일까요.
+    </p>
+
+    <p>
+      우리는 흔히 “내가 선택했다”고 말합니다.
+      그러나 선택의 순간에는 언제나 그 전의 시간들이 함께 들어와 있습니다.
+      성격, 습관, 환경, 두려움, 타인의 기대, 사회적 조건이 이미 선택의 길을 좁혀 놓기도 합니다.
+    </p>
+
+    <p>
+      <strong>자유의지</strong>는 바로 이 지점에서 시작됩니다.
+      나는 정말 다르게 선택할 수 있었는가.
+      그리고 다르게 선택할 수 있었다면, 그 책임은 어디까지 나에게 있는가.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtw-map">
+    <div class="rtw-map-title">자유의지 핵심 지도</div>
+
+    <div class="rtw-grid">
+      <div class="rtw-grid-item">
+        <strong>선택</strong>
+        <span>나는 여러 가능성 중 하나를 실제 행동으로 옮깁니다.</span>
+      </div>
+
+      <div class="rtw-grid-item">
+        <strong>조건</strong>
+        <span>그 선택은 성격, 습관, 기억, 제도, 환경의 영향을 받습니다.</span>
+      </div>
+
+      <div class="rtw-grid-item">
+        <strong>책임</strong>
+        <span>선택이 조건 속에서 만들어졌다면 책임도 더 정교하게 물어야 합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtw-toc">
+    <div class="rtw-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 후회는 왜 자유의지를 묻게 하는가</summary>
+      <div class="rtw-toc-desc">
+        “다르게 했더라면”이라는 후회의 감각에서 자유의지의 질문이 어떻게 시작되는지 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 자유의지는 마음대로 한다는 뜻일까</summary>
+      <div class="rtw-toc-desc">
+        자유의지를 충동적 선택이 아니라 다르게 선택할 수 있는 능력과 연결해 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 선택은 정말 나에게서만 나오는가</summary>
+      <div class="rtw-toc-desc">
+        성격, 습관, 환경, 관계, 제도가 선택을 어떻게 형성하는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 결정론 앞에서 자유의지는 왜 흔들리는가</summary>
+      <div class="rtw-toc-desc">
+        원인과 조건의 흐름이 자유의지의 감각을 어떻게 불편하게 만드는지 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 자유의지는 왜 책임과 함께 따라오는가</summary>
+      <div class="rtw-toc-desc">
+        자유롭게 선택했다는 말이 왜 곧 책임의 질문으로 이어지는지 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 현대사회는 왜 모든 선택을 개인의 의지로 돌리는가</summary>
+      <div class="rtw-toc-desc">
+        자기계발, 성과, 개인 책임의 언어가 자유의지를 어떻게 압박으로 바꾸는지 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 자유의지</summary>
+      <div class="rtw-toc-desc">
+        《이터널 선샤인》과 《굿 플레이스》를 통해 기억, 습관, 도덕적 선택의 문제를 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 자유의지는 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rtw-toc-desc">
+        자유의지가 설명하는 지점과 설명하지 못하는 조건의 문제를 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtw-section">
+    <h2>1. 후회는 왜 자유의지를 묻게 하는가</h2>
+
+    <div class="rtw-one-line">
+      👉 후회는 내가 다르게 선택할 수 있었다는 감각이 남아 있을 때 생깁니다.
+    </div>
+
+    <p>
+      후회는 단순히 결과가 나빠서 생기지 않습니다.
+      결과가 나빴더라도 그것이 정말 피할 수 없는 일이었다고 느껴지면,
+      우리는 아파할 수는 있어도 같은 방식으로 후회하지는 않습니다.
+    </p>
+
+    <p>
+      후회가 깊어지는 순간은 따로 있습니다.
+      “그때 내가 다르게 했더라면”이라는 생각이 계속 남을 때입니다.
+      조금만 더 참았더라면, 조금만 더 용기를 냈더라면, 조금만 더 솔직했더라면 달라졌을지도 모른다는 감각입니다.
+    </p>
+
+    <p>
+      이 감각이 바로 자유의지의 질문을 불러옵니다.
+      나는 그때 정말 다르게 선택할 수 있었는가.
+      아니면 그 순간의 나는 이미 그렇게 반응할 수밖에 없는 사람으로 만들어져 있었는가.
+    </p>
+
+    <div class="rtw-quote">
+      자유의지는 추상적인 철학 문제가 아니라, “그때 나는 정말 다르게 할 수 있었나”라는 후회의 자리에서 먼저 찾아옵니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtw-section">
+    <h2>2. 자유의지는 마음대로 한다는 뜻일까</h2>
+
+    <div class="rtw-one-line">
+      👉 자유의지는 아무 제약 없이 원하는 대로 행동한다는 뜻이 아니라, 조건 속에서도 다르게 선택할 수 있는가를 묻는 개념입니다.
+    </div>
+
+    <p>
+      자유의지를 쉽게 생각하면 “내 마음대로 하는 것”처럼 보입니다.
+      하고 싶은 대로 말하고, 원하는 것을 고르고, 누가 시키지 않아도 스스로 결정하는 상태처럼 느껴집니다.
+    </p>
+
+    <p>
+      그러나 자유의지는 단순한 충동과 다릅니다.
+      순간적으로 화가 나서 내뱉은 말이 정말 자유로운 선택일까요.
+      습관처럼 반복한 행동이 정말 나의 의지에서 나온 것일까요.
+    </p>
+
+    <p>
+      자유의지는 오히려 더 어려운 질문입니다.
+      나는 조건과 감정과 습관에 휩쓸리지 않고,
+      다른 가능성을 알아보고,
+      그중 하나를 선택할 수 있는가.
+    </p>
+
+    <div class="rtw-table-wrap">
+      <table class="rtw-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>충동</th>
+            <th>선택</th>
+            <th>자유의지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>작동 방식</strong></td>
+            <td>즉각적인 반응</td>
+            <td>여러 가능성 중 하나를 고름</td>
+            <td>조건을 의식하며 다르게 응답할 수 있음</td>
+          </tr>
+          <tr>
+            <td><strong>묻는 말</strong></td>
+            <td>지금 무엇이 끌리는가</td>
+            <td>무엇을 고를 것인가</td>
+            <td>나는 정말 다르게 할 수 있었는가</td>
+          </tr>
+          <tr>
+            <td><strong>위험</strong></td>
+            <td>욕구를 자유로 착각함</td>
+            <td>선택지를 자유로 착각함</td>
+            <td>조건을 무시하면 개인 책임만 남음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 자유의지는 단순히 선택지가 많다는 말과 같지 않습니다.
+      자유의지는 선택지 앞에서 내가 어떻게 나를 다룰 수 있는지,
+      그리고 그 선택의 조건을 어디까지 의식할 수 있는지를 묻습니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtw-section">
+    <h2>3. 선택은 정말 나에게서만 나오는가</h2>
+
+    <div class="rtw-one-line">
+      👉 내가 한 선택처럼 보이는 일도 성격, 습관, 기억, 관계, 사회적 조건 속에서 만들어질 때가 많습니다.
+    </div>
+
+    <p>
+      우리는 선택을 개인의 마음속에서 일어나는 일로 생각하기 쉽습니다.
+      내가 결심했고, 내가 마음먹었고, 내가 행동했다고 말합니다.
+    </p>
+
+    <p>
+      하지만 선택의 순간에는 이미 많은 것들이 들어와 있습니다.
+      어린 시절부터 배운 반응 방식,
+      실패했던 경험,
+      인정받고 싶은 마음,
+      거절당하기 싫은 두려움,
+      지금의 경제적 조건과 관계의 압박이 선택의 방향을 만듭니다.
+    </p>
+
+    <p>
+      어떤 사람에게 거절은 비교적 쉬운 선택일 수 있습니다.
+      그러나 어떤 사람에게 거절은 관계를 잃을지도 모른다는 공포와 연결됩니다.
+      같은 말도 누군가에게는 자유로운 표현이고, 누군가에게는 오래 망설여야 하는 선택입니다.
+    </p>
+
+    <div class="rtw-flow">
+      <strong class="rtw-flow-title">선택이 만들어지는 흐름</strong>
+      <div class="rtw-flow-boxes">
+        <div>과거의 경험 — 나는 무엇을 두려워하고 무엇을 익숙하게 여기는가</div>
+        <div>현재의 조건 — 지금 내 앞에 실제로 어떤 선택지가 열려 있는가</div>
+        <div>관계의 압력 — 이 선택이 누구와의 관계를 흔들 수 있는가</div>
+        <div>사회적 기준 — 무엇이 정상적이고 바람직한 선택처럼 보이는가</div>
+      </div>
+    </div>
+
+    <p>
+      자유의지는 이 조건들을 지워 버리는 말이 아닙니다.
+      오히려 이 조건들 속에서도 인간에게 어떤 응답의 여지가 남아 있는지를 묻는 말입니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtw-section">
+    <h2>4. 결정론 앞에서 자유의지는 왜 흔들리는가</h2>
+
+    <div class="rtw-one-line">
+      👉 결정론은 우리의 선택이 아무 원인 없이 생기는 것이 아니라는 점을 보여 주며, 자유의지의 감각을 불편하게 만듭니다.
+    </div>
+
+    <p>
+      자유의지를 묻다 보면 결정론의 질문을 피하기 어렵습니다.
+      결정론은 사건과 선택이 이전의 원인과 조건 속에서 이어진다고 보는 관점입니다.
+    </p>
+
+    <p>
+      내가 화를 낸 것, 어떤 사람을 피한 것, 같은 실패를 반복한 것,
+      특정한 선택 앞에서 늘 망설이는 것은 아무 이유 없이 생기지 않았을 수 있습니다.
+    </p>
+
+    <p>
+      그렇다면 질문은 더 어려워집니다.
+      내가 선택했다고 믿는 것은 정말 나의 자유였을까요.
+      아니면 내가 살아온 조건들이 만든 결과였을까요.
+    </p>
+
+    <div class="rtw-table-wrap">
+      <table class="rtw-table">
+        <thead>
+          <tr>
+            <th>관점</th>
+            <th>중심 생각</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>자유의지</strong></td>
+            <td>나는 다르게 선택할 수 있다</td>
+            <td>그 다름은 어디까지 가능한가</td>
+          </tr>
+          <tr>
+            <td><strong>결정론</strong></td>
+            <td>선택은 원인과 조건 속에서 생긴다</td>
+            <td>조건이 강하면 책임은 어떻게 달라지는가</td>
+          </tr>
+          <tr>
+            <td><strong>함께 읽기</strong></td>
+            <td>인간은 조건 속에서 선택한다</td>
+            <td>그 조건을 알게 된 뒤 나는 무엇을 바꿀 수 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 자유의지와 결정론은 단순히 둘 중 하나를 고르는 문제가 아닙니다.
+      인간은 조건 없이 자유로운 존재도 아니고,
+      조건에 의해 완전히 닫힌 존재만도 아닙니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtw-section">
+    <h2>5. 자유의지는 왜 책임과 함께 따라오는가</h2>
+
+    <div class="rtw-one-line">
+      👉 자유롭게 선택했다는 말은 곧 그 선택에 대해 응답해야 한다는 책임의 질문을 남깁니다.
+    </div>
+
+    <p>
+      자유의지가 중요한 이유는 단지 “내가 선택했다”는 자부심 때문만은 아닙니다.
+      자유롭게 선택했다는 말에는 언제나 책임이 따라옵니다.
+    </p>
+
+    <p>
+      내가 다르게 말할 수 있었다면, 내가 다르게 행동할 수 있었다면,
+      내가 그 순간 다른 길을 볼 수 있었다면,
+      나는 그 선택에 대해 어떤 방식으로든 응답해야 합니다.
+    </p>
+
+    <p>
+      그러나 책임은 단순히 잘못한 사람을 찾아 벌주는 문제만은 아닙니다.
+      자유의지를 조건과 함께 읽는다면,
+      책임도 더 넓게 물어야 합니다.
+    </p>
+
+    <div class="rtw-flow">
+      <strong class="rtw-flow-title">자유의지 이후의 책임 질문</strong>
+      <div class="rtw-flow-boxes">
+        <div>나는 정말 다른 가능성을 볼 수 있었는가</div>
+        <div>그 가능성을 막은 조건은 무엇이었는가</div>
+        <div>그럼에도 내가 응답해야 할 부분은 어디인가</div>
+        <div>같은 선택이 반복되지 않으려면 무엇이 바뀌어야 하는가</div>
+      </div>
+    </div>
+
+    <p>
+      이때 책임은 개인을 몰아세우는 말이 아니라,
+      선택을 둘러싼 조건과 응답 가능성을 함께 보는 말이 됩니다.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtw-section">
+    <h2>6. 현대사회는 왜 모든 선택을 개인의 의지로 돌리는가</h2>
+
+    <div class="rtw-one-line">
+      👉 현대사회는 자유롭게 선택하라고 말하지만, 그 선택을 가능하게 하거나 막는 조건은 자주 보이지 않게 만듭니다.
+    </div>
+
+    <p>
+      오늘의 사회는 의지를 강조합니다.
+      마음먹으면 바뀔 수 있다, 노력하면 달라질 수 있다,
+      네가 선택한 삶이니 네가 책임져야 한다는 말이 자주 따라붙습니다.
+    </p>
+
+    <p>
+      이런 말은 때로 사람을 움직이게 합니다.
+      내가 아무것도 할 수 없다고 느낄 때,
+      아직 선택할 수 있다는 말은 분명 힘이 됩니다.
+    </p>
+
+    <p>
+      그러나 의지의 언어는 쉽게 폭력적이 됩니다.
+      경제적 조건, 건강 문제, 돌봄 부담, 차별, 실패했을 때의 안전망 차이를 보지 않은 채
+      모든 것을 개인의 의지 문제로 돌리면 현실은 좁아집니다.
+    </p>
+
+    <div class="rtw-table-wrap">
+      <table class="rtw-table">
+        <thead>
+          <tr>
+            <th>현대사회의 말</th>
+            <th>겉으로 보이는 의미</th>
+            <th>가려지는 조건</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>마음먹으면 된다</strong></td>
+            <td>의지와 변화를 강조함</td>
+            <td>몸과 환경과 안전망의 차이</td>
+          </tr>
+          <tr>
+            <td><strong>네가 선택한 삶이다</strong></td>
+            <td>자율성과 책임을 말함</td>
+            <td>실제로 열린 선택지의 차이</td>
+          </tr>
+          <tr>
+            <td><strong>노력은 배신하지 않는다</strong></td>
+            <td>성실함의 가치를 강조함</td>
+            <td>노력이 결과로 이어지는 조건의 차이</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      자유의지는 인간에게 남은 선택의 가능성을 보게 하지만,
+      그 가능성을 모두 개인의 책임으로만 돌리면 사회적 조건은 지워집니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtw-section">
+    <h2>7. 작품으로 읽는 자유의지</h2>
+
+    <div class="rtw-one-line">
+      👉 작품 속 자유의지는 인물이 정말 다르게 선택할 수 있는지, 그리고 반복되는 삶의 방식에서 벗어날 수 있는지를 보여 줄 때 선명해집니다.
+    </div>
+
+    <h3>7-1) 《이터널 선샤인》 — 기억을 지우면 선택도 달라질까</h3>
+
+    <p>
+      《이터널 선샤인》은 사랑의 기억을 지우려는 인물들을 통해 선택과 기억의 관계를 묻습니다.
+      어떤 사람을 사랑했다는 기억, 상처받았다는 경험, 반복된 감정이 지워진다면 인간은 정말 다른 선택을 할 수 있을까요.
+    </p>
+
+    <p>
+      이 작품을 자유의지의 관점에서 읽으면 중요한 질문은 단순히 “사랑은 운명인가”가 아닙니다.
+      우리는 기억과 상처에 영향을 받으면서도,
+      다시 어떤 관계를 선택할 수 있는 존재인가.
+    </p>
+
+    <p>
+      기억은 인간을 제한하지만, 동시에 인간이 누구인지 만들어 줍니다.
+      따라서 자유의지는 기억을 완전히 지우는 데서 생기기보다,
+      기억을 안고도 어떤 방식으로 다시 응답할 수 있는가의 문제로 남습니다.
+    </p>
+
+    <h3>7-2) 《굿 플레이스》 — 좋은 사람이 되는 일은 선택 가능한가</h3>
+
+    <p>
+      《굿 플레이스》는 인간이 좋은 사람이 될 수 있는지를 유쾌하지만 깊게 묻는 작품입니다.
+      인물들은 자신이 어떤 사람이었는지를 마주하고,
+      반복되는 실수 속에서도 조금씩 다른 선택을 배워 갑니다.
+    </p>
+
+    <p>
+      이 작품에서 자유의지는 완성된 성격에서 나오지 않습니다.
+      오히려 인간은 관계와 배움과 반복 속에서 자신이 어떤 선택을 하고 있는지 알아차립니다.
+    </p>
+
+    <p>
+      그래서 《굿 플레이스》는 자유의지를 단순히 “처음부터 선한 마음”으로 보지 않게 합니다.
+      인간은 완벽하게 자유로운 존재라서가 아니라,
+      자신이 무엇을 해 왔는지 돌아보고 조금 다르게 응답할 수 있기 때문에 변화할 수 있습니다.
+    </p>
+
+    <div class="rtw-table-wrap">
+      <table class="rtw-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>자유의지의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《이터널 선샤인》</strong></td>
+            <td>기억과 상처가 선택에 영향을 미치는 장면</td>
+            <td>기억이 나를 만들었다면, 나는 어디까지 다르게 선택할 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《굿 플레이스》</strong></td>
+            <td>실수와 반복 속에서 조금씩 다른 선택을 배우는 장면</td>
+            <td>좋은 사람이 되는 일은 타고나는가, 선택과 연습 속에서 가능한가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 자유의지를 단순히 마음대로 하는 능력으로 그리지 않습니다.
+      기억, 습관, 관계, 반복 속에서도 인간이 조금 다르게 응답할 수 있는지를 묻습니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtw-section">
+    <h2>8. 자유의지는 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rtw-one-line">
+      👉 자유의지는 인간이 단순히 조건의 산물만은 아니라는 감각을 보여 주지만, 모든 선택을 개인의 의지만으로 설명할 수는 없습니다.
+    </div>
+
+    <p>
+      자유의지는 인간에게 중요한 감각을 남깁니다.
+      나는 완전히 정해진 존재만은 아니며,
+      어떤 순간에는 다르게 말하고,
+      다르게 행동하고,
+      다르게 응답할 수 있습니다.
+    </p>
+
+    <p>
+      이 감각이 없다면 책임도, 후회도, 변화도 의미를 잃기 쉽습니다.
+      인간이 전혀 다르게 할 수 없다면,
+      우리는 왜 사과하고,
+      왜 반성하고,
+      왜 다시 시작하려 할까요.
+    </p>
+
+    <p>
+      그러나 자유의지 하나로 현실 전체를 설명할 수도 없습니다.
+      누군가의 선택은 정말 선택처럼 보이지만,
+      실제로는 매우 좁은 조건 안에서 겨우 고른 것일 수 있습니다.
+    </p>
+
+    <div class="rtw-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtw-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>자유의지는 인간이 조건 속에서도 다르게 응답할 수 있는 존재라는 감각을 보여 줍니다.</span>
+      </div>
+
+      <div class="rtw-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>선택을 가능하게 하거나 막는 사회적 조건을 보지 않으면 모든 책임이 개인에게만 돌아갑니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 자유의지는 두 방향으로 읽어야 합니다.
+      하나는 내가 정말 다르게 선택할 수 있었는가입니다.
+    </p>
+
+    <p>
+      다른 하나는 그 선택을 가능하게 하거나 막은 조건은 무엇이었는가입니다.
+      자유의지는 인간의 가능성을 보여 주지만,
+      그 가능성이 놓인 현실의 조건까지 함께 물을 때 더 조심스럽게 읽힙니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rtw-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      자유의지는 우리에게 희망과 부담을 동시에 남깁니다.
+      나는 완전히 정해진 존재만은 아니며,
+      어떤 순간에는 다르게 응답할 수 있습니다.
+    </p>
+
+    <p>
+      그러나 그 선택은 아무 조건 없이 생기지 않습니다.
+      내가 살아온 시간, 몸에 밴 습관, 관계의 압력, 사회의 기준이 선택의 장면에 함께 들어옵니다.
+    </p>
+
+    <p>
+      나는 정말 다르게 선택할 수 있었는가.
+      그리고 다르게 선택하지 못했다면,
+      그것은 나의 의지 부족 때문인가,
+      아니면 내가 보지 못한 조건들이 이미 선택의 길을 좁히고 있었기 때문인가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtw-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rtw-read-intro">
+      이 글을 읽은 뒤에는 자유의지를 현대철학의 큰 흐름 안에서 다시 보고, 자유와 책임의 계열과 여러 해석 렌즈로 확장해 볼 수 있습니다.
+    </p>
+
+    <div class="rtw-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <span>
+          자유의지를 하나의 선택 문제로만 닫지 않고 현대 철학이 삶과 사회를 어떤 질문으로 다시 여는지 함께 볼 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+        <span>
+          자유의지가 실존, 가능성, 선택, 책임의 흐름 안에서 어떻게 이어지는지 넓게 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <span>
+          하나의 철학 개념만으로 현실을 정리하지 않고 여러 렌즈로 삶과 사회를 다시 읽는 관점을 확인할 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtw-tags">
+    Re:Think, 자유의지 뜻, Free Will, 자유의지, 결정론, 자유와 책임, 선택의 조건, 후회, 책임 윤리, 이터널 선샤인, 굿 플레이스, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtw-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

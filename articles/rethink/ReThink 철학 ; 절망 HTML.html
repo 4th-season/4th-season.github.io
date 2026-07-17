@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>절망 | Re:Think</title>
+  <meta name="description" content="절망 은 단순한 슬픔이나 우울과 다릅니다. 자기 삶과 다시 연결될 수 없을 것 같은 감각, 가능성이 닫힌 듯한 느낌, 그리고 “나는 이 나로 살아갈 수 있는가”라는 깊은 자기 물음과 이어집니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rt-despair-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #252936;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .rt-despair-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rt-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #7c3aed;
+    background: #f5f3ff;
+    border-radius: 10px;
+    color: #3b2764;
+    font-size: 0.98rem;
+  }
+
+  .rt-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eef2ff 0%, #fff7ed 100%);
+    border: 1px solid #ddd6fe;
+    border-radius: 18px;
+  }
+
+  .rt-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #312e81;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rt-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #312e81;
+    letter-spacing: -0.045em;
+  }
+
+  .rt-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #7c2d12;
+  }
+
+  .rt-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rt-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #d8b4fe;
+    border-radius: 16px;
+  }
+
+  .rt-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #312e81;
+  }
+
+  .rt-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rt-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e9d5ff;
+    border-radius: 13px;
+  }
+
+  .rt-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #7c3aed;
+    font-size: 1.02rem;
+  }
+
+  .rt-grid-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.94rem;
+  }
+
+  .rt-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 16px;
+  }
+
+  .rt-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #312e81;
+  }
+
+  .rt-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #ddd6fe;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rt-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #312e81;
+    list-style: none;
+  }
+
+  .rt-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rt-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #7c3aed;
+  }
+
+  .rt-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rt-toc-desc {
+    padding: 0 16px 15px;
+    color: #475569;
+    font-size: 0.95rem;
+    border-top: 1px solid #ede9fe;
+  }
+
+  .rt-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #ddd6fe;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(49, 46, 129, 0.06);
+  }
+
+  .rt-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #7c3aed;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #312e81;
+    letter-spacing: -0.035em;
+  }
+
+  .rt-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #7c2d12;
+  }
+
+  .rt-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fff7ed;
+    border-radius: 12px;
+    color: #7c2d12;
+    font-weight: 600;
+  }
+
+  .rt-section p {
+    margin: 0 0 14px;
+  }
+
+  .rt-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #f5f3ff;
+    border-left: 5px solid #7c3aed;
+    border-radius: 10px;
+    color: #312e81;
+    font-weight: 700;
+  }
+
+  .rt-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #ddd6fe;
+    border-radius: 14px;
+  }
+
+  .rt-flow-title {
+    display: block;
+    margin-bottom: 10px;
+    color: #312e81;
+    font-weight: 800;
+  }
+
+  .rt-flow-step {
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #ede9fe;
+    border-radius: 9px;
+    color: #475569;
+  }
+
+  .rt-flow-arrow {
+    text-align: center;
+    color: #7c3aed;
+    font-weight: 800;
+  }
+
+  .rt-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rt-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rt-table th {
+    background: #312e81;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #c7d2fe;
+    text-align: left;
+  }
+
+  .rt-table td {
+    padding: 12px 10px;
+    border: 1px solid #ddd6fe;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rt-table tr:nth-child(even) td {
+    background: #faf5ff;
+  }
+
+  .rt-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #312e81 0%, #7c2d12 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rt-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+    border: none;
+    padding: 0;
+  }
+
+  .rt-final p {
+    margin: 0 0 12px;
+  }
+
+  .rt-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #ddd6fe;
+    border-radius: 16px;
+  }
+
+  .rt-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #312e81;
+  }
+
+  .rt-read p {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rt-read a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #ddd6fe;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rt-read a + a {
+    margin-top: 14px;
+  }
+
+  .rt-read strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #312e81;
+  }
+
+  .rt-read span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rt-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eef2ff;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rt-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rt-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-section {
+      padding: 24px 18px;
+    }
+
+    .rt-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rt-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rt-despair-wrap">
+
+  <h1 class="seo-h1">[Re:Think] 절망 뜻 - 절망은 왜 단순한 슬픔보다 깊은 자기 물음이 되는가</h1>
+<div class="rt-meta">
+    <strong>절망</strong>은 단순한 슬픔이나 우울과 다릅니다. 자기 삶과 다시 연결될 수 없을 것 같은 감각, 가능성이 닫힌 듯한 느낌, 그리고 “나는 이 나로 살아갈 수 있는가”라는 깊은 자기 물음과 이어집니다.
+  </div>
+
+  <section class="rt-hero">
+    <div class="rt-kicker">Re:Think 철학</div>
+    <div class="rt-title-like">절망 뜻</div>
+    <div class="rt-subtitle-like">
+      단순한 슬픔보다 깊은 자기 물음이 되는 감정
+    </div>
+
+    <p>
+      아침에 눈을 떴는데 아무것도 달라질 것 같지 않은 날이 있습니다. 해야 할 일은 그대로 있고, 해결되지 않은 문제도 그대로 있습니다.
+    </p>
+
+    <p>
+      몸은 일어나지만 마음은 따라오지 않습니다. 오늘도 어제와 비슷할 것이고, 내일도 크게 다르지 않을 것 같은 느낌이 듭니다.
+    </p>
+
+    <p>
+      이 감각은 단순한 슬픔과 다릅니다. 슬프다기보다, <strong>내가 나의 삶과 다시 연결될 수 있을지 알 수 없는 상태</strong>에 가깝습니다.
+    </p>
+
+    <p>
+      철학에서 말하는 <strong>절망</strong>은 바로 이 자리에서 시작됩니다. 절망은 힘든 감정 하나가 아니라, 인간이 자기 자신과 맺는 관계가 흔들리는 순간입니다.
+    </p>
+  </section>
+
+  <section class="rt-map">
+    <div class="rt-map-title">절망 핵심 지도</div>
+
+    <div class="rt-grid">
+      <div class="rt-grid-item">
+        <strong>기본 감각</strong>
+        <span>아무것도 달라지지 않을 것 같고, 다시 시작할 가능성이 흐려지는 상태입니다.</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>철학적 핵심</strong>
+        <span>절망은 자기 자신과의 관계가 어긋나는 감정입니다.</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>주요 사상가</strong>
+        <span>키르케고르는 절망을 자기 자신이 되지 못하거나 자기 자신이기를 거부하는 상태로 보았습니다.</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>현대적 질문</strong>
+        <span>절망은 개인의 마음 문제인가, 아니면 삶의 조건이 남긴 흔적인가를 묻게 합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rt-toc">
+    <div class="rt-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 절망은 언제 일상의 감각으로 찾아오는가</summary>
+      <div class="rt-toc-desc">
+        아무것도 달라질 것 같지 않은 하루에서 절망의 감각이 어떻게 시작되는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 절망은 슬픔, 우울, 무의미와 어떻게 다른가</summary>
+      <div class="rt-toc-desc">
+        비슷해 보이는 감정들을 구분하며 절망의 철학적 위치를 확인합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 키르케고르는 왜 절망을 자기 자신과의 관계로 보았는가</summary>
+      <div class="rt-toc-desc">
+        절망을 단순한 기분이 아니라 자기 자신과 어긋나는 상태로 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 왜 절망은 가능성이 사라진 느낌으로 다가오는가</summary>
+      <div class="rt-toc-desc">
+        절망이 고통보다 더 깊게 미래의 문이 닫힌 감각과 연결되는 이유를 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 현대사회는 절망을 어떻게 개인의 실패처럼 보이게 하는가</summary>
+      <div class="rt-toc-desc">
+        성과, 비교, 고립, 개인 책임화가 절망을 어떻게 깊게 만드는지 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 작품 속 절망은 어떤 장면에서 드러나는가</summary>
+      <div class="rt-toc-desc">
+        《변신》과 《맨체스터 바이 더 씨》를 통해 자기 삶과 끊어진 감각을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 절망은 무엇을 설명하고 무엇을 설명하지 못하는가</summary>
+      <div class="rt-toc-desc">
+        절망이 보여 주는 자기 물음과, 절망만으로 설명할 수 없는 사회적 조건을 함께 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 절망의 철학이 남기는 질문</summary>
+      <div class="rt-toc-desc">
+        절망을 해결책으로 닫지 않고, 삶과 세계를 다시 묻게 하는 질문으로 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <section class="rt-section">
+    <h2>1. 절망은 언제 일상의 감각으로 찾아오는가</h2>
+
+    <div class="rt-one-line">
+      👉 절망은 큰 사건 뒤에만 오지 않습니다. 때로는 아무것도 달라지지 않을 것 같은 반복의 감각 속에서 조용히 시작됩니다.
+    </div>
+
+    <p>
+      절망은 반드시 극적인 장면으로만 찾아오지 않습니다. 실패, 상실, 이별처럼 분명한 사건 뒤에 올 수도 있지만, 때로는 아주 평범한 하루 속에서 천천히 자랍니다.
+    </p>
+
+    <p>
+      출근길이 어제와 같고, 대화는 겉돌고, 해야 할 일은 쌓여 있는데 내가 왜 이 일을 하고 있는지 흐려질 때가 있습니다.
+    </p>
+
+    <p>
+      그때 사람은 슬프다기보다 비어 있다고 느낍니다. 괴롭다기보다 멀어졌다고 느낍니다.
+    </p>
+
+    <p>
+      자기 삶 안에 있는데도 자기 삶과 연결되어 있지 않은 듯합니다.
+    </p>
+
+    <div class="rt-quote">
+      절망은 “기분이 왜 이렇게 나쁜가”보다 더 깊게,<br>
+      “나는 내 삶과 다시 연결될 수 있는가”를 묻게 합니다.
+    </div>
+
+    <p>
+      그래서 절망을 이해하려면 먼저 비슷해 보이는 감정들과 구분할 필요가 있습니다. 슬픔, 우울, 무의미와 닮았지만 절망은 자기 자신과의 관계를 더 깊게 흔듭니다.
+    </p>
+  </section>
+
+  <section class="rt-section">
+    <h2>2. 절망은 슬픔, 우울, 무의미와 어떻게 다른가</h2>
+
+    <div class="rt-one-line">
+      👉 절망은 슬픔처럼 어떤 상실을 향하기도 하지만, 더 깊게는 자기 자신을 받아들이기 어려운 상태와 연결됩니다.
+    </div>
+
+    <p>
+      우리는 절망을 자주 슬픔과 비슷하게 씁니다. 그러나 철학적으로 보면 절망은 단순한 슬픔보다 더 깊은 자기 물음과 맞닿아 있습니다.
+    </p>
+
+    <p>
+      슬픔은 무엇을 잃었는지 비교적 말할 수 있습니다. 우울은 삶의 에너지와 감각이 가라앉는 상태로 나타날 수 있습니다.
+    </p>
+
+    <p>
+      무의미는 삶의 이유가 약해지는 감각입니다. 절망은 이 감각들과 겹치지만, 한 가지 질문을 더 남깁니다.
+    </p>
+
+    <div class="rt-quote">
+      나는 지금의 나로 존재할 수 있는가.
+    </div>
+
+    <div class="rt-table-wrap">
+      <table class="rt-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>중심 감각</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>슬픔</strong></td>
+            <td>잃어버린 것에 대한 아픔</td>
+            <td>나는 무엇을 잃었는가</td>
+          </tr>
+          <tr>
+            <td><strong>우울</strong></td>
+            <td>삶의 활력과 감각이 가라앉음</td>
+            <td>나는 왜 움직일 힘을 잃었는가</td>
+          </tr>
+          <tr>
+            <td><strong>무의미</strong></td>
+            <td>삶의 이유가 약해짐</td>
+            <td>이 삶은 무엇을 향하고 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>절망</strong></td>
+            <td>자기 자신과 다시 연결되기 어려움</td>
+            <td>나는 이 나로 살아갈 수 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      이 구분은 감정을 잘라내기 위한 것이 아닙니다. 실제 삶에서는 슬픔, 우울, 무의미, 절망이 서로 겹칩니다.
+    </p>
+
+    <p>
+      다만 절망의 철학은 감정의 이름을 붙이는 데서 멈추지 않습니다. 그 감정이 나와 나 자신 사이의 관계를 어떻게 흔드는지 묻습니다.
+    </p>
+  </section>
+
+  <section class="rt-section">
+    <h2>3. 키르케고르는 왜 절망을 자기 자신과의 관계로 보았는가</h2>
+
+    <div class="rt-one-line">
+      👉 키르케고르에게 절망은 단순히 힘든 상태가 아니라, 자기 자신이 되지 못하거나 자기 자신이기를 거부하는 상태입니다.
+    </div>
+
+    <p>
+      키르케고르는 절망을 인간 내면의 깊은 병으로 보았습니다. 여기서 병이라는 말은 단순한 의학적 진단이 아닙니다.
+    </p>
+
+    <p>
+      그것은 인간이 자기 자신과 맺는 관계가 어긋났다는 뜻에 가깝습니다.
+    </p>
+
+    <p>
+      사람은 현재의 모습으로만 이루어지지 않습니다. 가능성도 있고 한계도 있습니다. 되고 싶은 나도 있고, 받아들여야 하는 나도 있습니다.
+    </p>
+
+    <p>
+      절망은 이 둘 사이에서 생깁니다. 나는 다른 사람이 되고 싶지만 그럴 수 없고, 지금의 나를 받아들이고 싶지 않지만 완전히 벗어날 수도 없습니다.
+    </p>
+
+    <div class="rt-grid" style="margin-top: 20px;">
+      <div class="rt-grid-item">
+        <strong>가능성</strong>
+        <span>다르게 살 수 있다는 열림</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>한계</strong>
+        <span>마음대로 벗어날 수 없는 조건</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>자기 관계</strong>
+        <span>내가 나를 받아들이고 이해하는 방식</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>절망</strong>
+        <span>가능성과 한계 사이에서 자기 자신과 어긋나는 상태</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 20px;">
+      이 관점에서 절망은 “상황이 나쁘다”는 말보다 깊습니다. 상황이 나빠도 자기 자신과 연결되어 있으면 사람은 버틸 수 있습니다.
+    </p>
+
+    <p>
+      그러나 자기 자신을 받아들일 수도, 새롭게 될 수도 없다고 느끼는 순간 절망은 더 깊어집니다.
+    </p>
+  </section>
+
+  <section class="rt-section">
+    <h2>4. 왜 절망은 가능성이 사라진 느낌으로 다가오는가</h2>
+
+    <div class="rt-one-line">
+      👉 절망은 고통 자체보다, 앞으로도 달라질 수 없을 것 같다는 감각 속에서 더 깊어집니다.
+    </div>
+
+    <p>
+      사람이 힘든 일을 겪는다고 해서 모두 절망하는 것은 아닙니다. 고통이 있어도 아직 다른 길이 보이면 버틸 수 있습니다.
+    </p>
+
+    <p>
+      그러나 아무리 해도 달라지지 않을 것 같고, 어떤 선택을 해도 같은 자리로 돌아올 것 같다면 절망은 깊어집니다.
+    </p>
+
+    <p>
+      절망은 미래의 문이 닫힌 듯한 감각과 가깝습니다. 가능성이 완전히 사라진 것은 아닐 수 있지만, 당사자에게는 더 이상 보이지 않습니다.
+    </p>
+
+    <div class="rt-flow">
+      <strong class="rt-flow-title">절망이 깊어지는 흐름</strong>
+      <div class="rt-flow-step">힘든 일이 반복됨</div>
+      <div class="rt-flow-arrow">↓</div>
+      <div class="rt-flow-step">무엇을 해도 바뀌지 않을 것 같음</div>
+      <div class="rt-flow-arrow">↓</div>
+      <div class="rt-flow-step">나 자신과 다시 연결될 가능성까지 흐려짐</div>
+    </div>
+
+    <p>
+      그래서 절망은 단순한 비관과도 다릅니다. 비관은 세계가 나쁘게 흘러갈 것이라는 판단일 수 있습니다.
+    </p>
+
+    <p>
+      절망은 더 깊게, 내가 그 세계 안에서 다시 나로 설 수 있을지 모르겠다는 감각입니다.
+    </p>
+  </section>
+
+  <section class="rt-section">
+    <h2>5. 현대사회는 절망을 어떻게 개인의 실패처럼 보이게 하는가</h2>
+
+    <div class="rt-one-line">
+      👉 현대사회는 절망을 개인의 마음 문제로만 돌리기 쉽지만, 절망은 사회가 요구하는 기준 속에서 더 깊어질 수 있습니다.
+    </div>
+
+    <p>
+      오늘의 사회는 자주 말합니다. 더 노력하면 된다, 마음가짐을 바꾸면 된다, 다시 시작하면 된다.
+    </p>
+
+    <p>
+      물론 다시 시작할 힘은 중요합니다. 그러나 모든 사람에게 같은 출발선과 같은 가능성이 주어지는 것은 아닙니다.
+    </p>
+
+    <p>
+      실패가 반복되고, 관계에서 밀려나고, 노동 속에서 자기 삶의 의미를 잃고, 아무리 애써도 제자리라는 감각이 쌓이면 절망은 개인의 성격 문제로만 설명되지 않습니다.
+    </p>
+
+    <div class="rt-grid" style="margin: 20px 0;">
+      <div class="rt-grid-item">
+        <strong>성과 기준</strong>
+        <span>존재보다 증명이 앞서면 자기 가치가 흔들립니다.</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>비교의 일상화</strong>
+        <span>타인의 속도가 나의 부족함처럼 느껴집니다.</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>관계의 고립</strong>
+        <span>말할 곳이 사라지면 자기 물음도 닫힙니다.</span>
+      </div>
+
+      <div class="rt-grid-item">
+        <strong>개인 책임화</strong>
+        <span>구조의 문제까지 노력 부족으로 돌아옵니다.</span>
+      </div>
+    </div>
+
+    <p>
+      절망을 “네가 약해서 그렇다”는 말로만 다루면, 절망을 만든 조건은 보이지 않습니다.
+    </p>
+
+    <div class="rt-quote">
+      어떤 삶의 조건이 사람에게<br>
+      “나는 더 이상 달라질 수 없다”는 감각을 만들고 있는가.
+    </div>
+  </section>
+
+  <section class="rt-section">
+    <h2>6. 작품 속 절망은 어떤 장면에서 드러나는가</h2>
+
+    <div class="rt-one-line">
+      👉 작품 속 절망은 단순히 슬픈 장면이 아니라, 인물이 자기 삶과 다시 연결될 가능성을 잃어버리는 순간에 드러납니다.
+    </div>
+
+    <p>
+      절망을 작품과 연결할 때 중요한 것은 고통을 감동으로 소비하지 않는 일입니다. 중요한 것은 인물이 왜 자기 자신에게 돌아가기 어려워졌는지 읽는 일입니다.
+    </p>
+
+    <h3>6-1) 《변신》 — 자기 삶에서 밀려난 존재의 절망</h3>
+
+    <p>
+      카프카의 《변신》에서 그레고르는 어느 날 벌레가 된 자신을 발견합니다. 이 설정은 비현실적이지만, 작품이 보여 주는 감각은 매우 현실적입니다.
+    </p>
+
+    <p>
+      그는 더 이상 가족과 사회가 기대하던 역할을 수행하지 못합니다. 그의 존재는 점점 부담으로 여겨지고, 그는 자기 삶의 자리에서 밀려납니다.
+    </p>
+
+    <p>
+      여기서 절망은 슬픔보다 깊습니다. 문제는 고통을 느끼는 것이 아니라, 자신이 더 이상 누구에게도 이해될 수 없는 존재가 되어 간다는 감각입니다.
+    </p>
+
+    <h3>6-2) 《맨체스터 바이 더 씨》 — 돌아갈 수 없는 자기 앞의 절망</h3>
+
+    <p>
+      영화 《맨체스터 바이 더 씨》는 상실과 죄책감 이후의 삶을 보여 줍니다. 인물은 단순히 슬픈 사람이 아닙니다.
+    </p>
+
+    <p>
+      그는 이전의 자기로 돌아갈 수 없고, 새로운 자기로도 쉽게 나아가지 못합니다. 시간은 흐르지만 삶은 앞으로 움직이지 못하는 것처럼 보입니다.
+    </p>
+
+    <p>
+      이 작품에서 절망은 극적인 울음보다 조용한 정지에 가깝습니다. 살아 있지만 자기 삶과 다시 연결되지 못하는 상태가 절망의 장면으로 남습니다.
+    </p>
+
+    <div class="rt-table-wrap">
+      <table class="rt-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>절망이 드러나는 방식</th>
+            <th>철학적 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《변신》</strong></td>
+            <td>자기 삶의 자리에서 밀려남</td>
+            <td>나는 역할을 잃어도 여전히 나로 인정될 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《맨체스터 바이 더 씨》</strong></td>
+            <td>돌아갈 수도 새로 시작할 수도 없는 정지</td>
+            <td>회복할 수 없다고 느끼는 삶은 어떻게 계속되는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 절망을 단순한 비극으로만 다루지 않습니다. 절망이란 자기 삶과의 연결이 끊어졌다고 느끼는 자리에서 생기는 깊은 물음임을 보여 줍니다.
+    </p>
+  </section>
+
+  <section class="rt-section">
+    <h2>7. 절망은 무엇을 설명하고 무엇을 설명하지 못하는가</h2>
+
+    <div class="rt-one-line">
+      👉 절망은 인간이 자기 자신과 다시 연결되기 어려운 상태를 보여 주지만, 모든 고통을 존재의 문제로만 설명할 수는 없습니다.
+    </div>
+
+    <p>
+      절망의 철학은 왜 사람이 단순히 슬픈 것을 넘어 자기 삶 전체를 묻게 되는지 설명하는 힘이 있습니다.
+    </p>
+
+    <p>
+      절망은 가능성이 사라진 듯한 감각, 자기 자신을 받아들이기 어려운 감각, 삶과 나 사이의 연결이 끊어진 듯한 감각을 보여 줍니다.
+    </p>
+
+    <p>
+      그러나 절망이라는 개념 하나로 모든 현실을 설명하려 하면 부족합니다. 어떤 절망은 개인의 존재 물음이지만, 어떤 절망은 분명히 사회적 조건 속에서 깊어집니다.
+    </p>
+
+    <div class="rt-table-wrap">
+      <table class="rt-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>설명 가능한 지점</strong></td>
+            <td>절망은 인간이 자기 자신과 어긋나고, 가능성의 감각을 잃을 때 삶 전체가 질문이 되는 이유를 보여 줍니다.</td>
+          </tr>
+          <tr>
+            <td><strong>설명이 부족한 지점</strong></td>
+            <td>경제적 불안정, 고립, 차별, 과로, 관계 폭력에서 생긴 절망을 개인의 내면 문제로만 돌리면 현실의 책임이 흐려집니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 절망은 두 방향으로 읽어야 합니다. 하나는 이 절망이 나에게 어떤 자기 물음을 던지는가입니다.
+    </p>
+
+    <p>
+      다른 하나는 이 절망이 정말 나 혼자 감당해야 할 문제인가입니다.
+    </p>
+  </section>
+
+  <section class="rt-section">
+    <h2>8. 절망의 철학이 남기는 질문</h2>
+
+    <div class="rt-one-line">
+      👉 절망의 철학은 절망을 곧바로 극복하라고 말하기보다, 절망이 나와 나의 삶 사이에서 무엇을 드러내는지 묻게 합니다.
+    </div>
+
+    <p>
+      절망은 어두운 감정입니다. 그러나 절망을 단순히 없애야 할 감정으로만 보면, 그 절망이 드러내는 질문도 함께 사라질 수 있습니다.
+    </p>
+
+    <p>
+      나는 왜 지금의 나를 받아들이기 어려운가. 나는 어떤 가능성이 닫혔다고 믿고 있는가. 내가 다시 연결되고 싶은 삶은 어떤 삶인가.
+    </p>
+
+    <p>
+      물론 절망을 낭만화해서는 안 됩니다. 깊은 고통은 혼자 견디라는 말로 다룰 수 없습니다. 철학은 고통을 대신 치료하지 못합니다.
+    </p>
+
+    <p>
+      다만 철학은 절망을 통해 우리가 무엇을 잃어버렸다고 느끼는지, 또 어떤 세계가 사람을 자기 삶에서 멀어지게 만드는지 묻게 합니다.
+    </p>
+  </section>
+
+  <section class="rt-final">
+    <h2>마지막 질문</h2>
+
+    <p>
+      절망은 단순히 슬픈 감정이 아니라, 내가 나의 삶과 다시 연결될 수 있는지 묻게 하는 감정입니다.
+    </p>
+
+    <p>
+      그래서 절망 앞에서 필요한 질문은 “빨리 괜찮아지는 법”만은 아닙니다.
+    </p>
+
+    <p>
+      <strong>나는 지금 무엇과 끊어져 있다고 느끼는가.</strong>
+      <strong>내가 더 이상 달라질 수 없다고 믿게 된 기준은 어디에서 온 것인가.</strong>
+    </p>
+
+    <p>
+      그리고 절망이라는 이름으로 읽히는 것은 무엇이고, 아직 그 이름만으로는 읽히지 않는 것은 무엇인가.
+    </p>
+  </section>
+
+  <section class="rt-read">
+    <h2>함께 읽기</h2>
+
+    <p>
+      이 글을 읽은 뒤에는 절망을 현대철학의 큰 흐름과 인간의 조건 안에서 다시 보고, 부조리와 소외의 문제로 이어 읽을 수 있습니다.
+    </p>
+
+    <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+      <strong>Re:Think 현대 철학지도</strong>
+      <span>절망을 하나의 감정 문제가 아니라 존재, 자유, 언어, 권력, 타자의 질문 속에서 다시 볼 때 연결됩니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+      <strong>Re:Think 인간의 조건 영역</strong>
+      <span>절망이 실존, 불안, 삶의 의미, 유한성, 죽음, 정체성의 문제와 어떻게 이어지는지 큰 흐름 속에서 확인할 때 연결됩니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/292" target="_blank" rel="noopener">
+      <strong>부조리</strong>
+      <span>절망이 개인 내면의 어둠을 넘어, 의미를 원하는 인간과 침묵하는 세계 사이의 충돌로 깊어질 때 함께 읽을 수 있습니다.</span>
+    </a>
+
+    
+      <strong>소외</strong>
+      <span>절망이 자기 삶과 다시 연결되지 못하는 감각으로 나타날 때, 나와 내 삶 사이의 거리를 함께 읽기 좋습니다.</span>
+    
+  </section>
+
+  <div class="rt-tags">
+    Re:Think, 절망 뜻, 절망의 철학, 키르케고르, 실존, 무의미, 부조리, 소외, 자기상실, 변신, 맨체스터 바이 더 씨, 현대철학
+  </div>
+
+  <div class="rt-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

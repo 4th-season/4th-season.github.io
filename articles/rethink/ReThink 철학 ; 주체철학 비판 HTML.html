@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>주체철학 비판 | Re:Think</title>
+  <meta name="description" content="주체철학 비판 은 인간을 생각하고 판단하는 중심으로 세운 철학의 힘을 인정하면서도, 그 중심이 타자&#183;몸&#183;언어&#183;권력&#183;관계를 충분히 보지 못할 때 생기는 한계를 묻는 철학적 문제입니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rt-critique-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #2f343b;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .rt-critique-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rt-critique-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #ca8a04;
+    background: #fefce8;
+    border-radius: 10px;
+    color: #713f12;
+    font-size: 0.98rem;
+  }
+
+  .rt-critique-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #f8fafc 0%, #fefce8 100%);
+    border: 1px solid #fde68a;
+    border-radius: 18px;
+  }
+
+  .rt-critique-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #1e293b;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rt-critique-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: -0.045em;
+  }
+
+  .rt-critique-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #ca8a04;
+  }
+
+  .rt-critique-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rt-critique-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-critique-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #1e293b;
+  }
+
+  .rt-critique-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rt-critique-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #fde68a;
+    border-radius: 13px;
+  }
+
+  .rt-critique-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #ca8a04;
+    font-size: 1.02rem;
+  }
+
+  .rt-critique-grid-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.94rem;
+  }
+
+  .rt-critique-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-critique-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #1e293b;
+  }
+
+  .rt-critique-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rt-critique-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #1e293b;
+    list-style: none;
+  }
+
+  .rt-critique-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rt-critique-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #ca8a04;
+  }
+
+  .rt-critique-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rt-critique-toc-desc {
+    padding: 0 16px 15px;
+    color: #475569;
+    font-size: 0.95rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .rt-critique-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(30, 41, 59, 0.06);
+  }
+
+  .rt-critique-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #ca8a04;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #1e293b;
+    letter-spacing: -0.035em;
+  }
+
+  .rt-critique-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #ca8a04;
+  }
+
+  .rt-critique-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fefce8;
+    border-radius: 12px;
+    color: #713f12;
+    font-weight: 600;
+  }
+
+  .rt-critique-section p {
+    margin: 0 0 14px;
+  }
+
+  .rt-critique-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border-left: 5px solid #ca8a04;
+    border-radius: 10px;
+    color: #1e293b;
+    font-weight: 700;
+  }
+
+  .rt-critique-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #fde68a;
+    border-radius: 14px;
+  }
+
+  .rt-critique-flow-title {
+    display: block;
+    margin-bottom: 10px;
+    color: #ca8a04;
+    font-weight: 800;
+  }
+
+  .rt-critique-flow-step {
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #fef3c7;
+    border-radius: 9px;
+    color: #475569;
+  }
+
+  .rt-critique-flow-arrow {
+    text-align: center;
+    color: #ca8a04;
+    font-weight: 800;
+  }
+
+  .rt-critique-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rt-critique-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rt-critique-table th {
+    background: #1e293b;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+  }
+
+  .rt-critique-table td {
+    padding: 12px 10px;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rt-critique-table tr:nth-child(even) td {
+    background: #fefce8;
+  }
+
+  .rt-critique-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #1e293b 0%, #ca8a04 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rt-critique-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+    border: none;
+    padding: 0;
+  }
+
+  .rt-critique-final p {
+    margin: 0 0 12px;
+  }
+
+  .rt-critique-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-critique-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #1e293b;
+  }
+
+  .rt-critique-read p {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rt-critique-read a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rt-critique-read a + a {
+    margin-top: 14px;
+  }
+
+  .rt-critique-read strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #ca8a04;
+  }
+
+  .rt-critique-read span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rt-critique-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #f1f5f9;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rt-critique-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rt-critique-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-critique-section {
+      padding: 24px 18px;
+    }
+
+    .rt-critique-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rt-critique-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rt-critique-wrap">
+
+  <h1 class="seo-h1">[Re:Think] 주체철학 비판 - 주체를 중심에 둔 이성은 왜 타자와 관계 앞에서 흔들리는가</h1>
+<div class="rt-critique-meta">
+    <strong>주체철학 비판</strong>은 인간을 생각하고 판단하는 중심으로 세운 철학의 힘을 인정하면서도, 그 중심이 타자·몸·언어·권력·관계를 충분히 보지 못할 때 생기는 한계를 묻는 철학적 문제입니다.
+  </div>
+
+  <section class="rt-critique-hero">
+    <div class="rt-critique-kicker">Re:Think 철학</div>
+    <div class="rt-critique-title-like">주체철학 비판</div>
+    <div class="rt-critique-subtitle-like">
+      주체를 중심에 둔 이성은 왜 타자와 관계 앞에서 흔들리는가
+    </div>
+
+    <p>
+      회의실에서 누군가 말합니다. “객관적으로 보면 답은 분명합니다.” 다른 사람의 경험과 감정은 잠시 옆으로 밀립니다.
+    </p>
+
+    <p>
+      집에서도 비슷한 장면이 있습니다. “내가 보기엔 이게 맞아.” “상식적으로 생각해 봐.” “네가 감정적으로 받아들이는 거야.”
+    </p>
+
+    <p>
+      말하는 사람은 자신이 이성적이라고 믿습니다. 상황을 정확히 보고 있고, 감정에 흔들리지 않으며, 합리적으로 판단한다고 생각합니다.
+    </p>
+
+    <p>
+      그런데 그 판단 안에서 타인의 경험은 어디에 있을까요. 내 말이 객관적이라고 믿는 순간, 다른 사람의 목소리는 너무 쉽게 비합리적이거나 감정적인 것으로 밀려날 수 있습니다.
+    </p>
+
+    <p>
+      <strong>주체철학 비판</strong>은 바로 이 지점에서 시작됩니다. 인간을 세계의 중심에 놓은 이성의 힘을 부정하는 것이 아니라, 그 중심이 타자와 관계와 조건을 충분히 보지 못할 때 무엇이 가려지는지 묻습니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-map">
+    <div class="rt-critique-map-title">주체철학 비판 핵심 지도</div>
+
+    <div class="rt-critique-grid">
+      <div class="rt-critique-grid-item">
+        <strong>기본 뜻</strong>
+        <span>주체를 세계 인식과 판단의 중심으로 세운 철학이 가진 한계를 비판적으로 살피는 관점입니다.</span>
+      </div>
+
+      <div class="rt-critique-grid-item">
+        <strong>핵심 긴장</strong>
+        <span>이성적 주체는 자유와 책임을 설명하지만, 타자·몸·관계·권력의 조건을 가릴 수 있습니다.</span>
+      </div>
+
+      <div class="rt-critique-grid-item">
+        <strong>철학적 질문</strong>
+        <span>나는 정말 세계를 중립적으로 보는가, 아니면 나의 위치와 언어 속에서 세계를 보는가를 묻게 합니다.</span>
+      </div>
+
+      <div class="rt-critique-grid-item">
+        <strong>현대적 배경</strong>
+        <span>합리성, 효율, 객관성, 전문가 언어, 플랫폼 판단이 사람의 경험을 밀어낼 때 다시 중요해지는 질문입니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rt-critique-toc">
+    <div class="rt-critique-toc-title">목차</div>
+
+    <details open>
+      <summary>1. “객관적으로 보면”이라는 말은 무엇을 가리는가</summary>
+      <div class="rt-critique-toc-desc">
+        일상 속 합리적 판단의 언어가 타인의 경험을 어떻게 밀어낼 수 있는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 주체철학은 무엇을 중심에 놓았는가</summary>
+      <div class="rt-critique-toc-desc">
+        생각하고 판단하는 주체가 근대철학에서 어떤 힘을 가졌는지 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 주체 중심의 이성은 왜 흔들렸는가</summary>
+      <div class="rt-critique-toc-desc">
+        주체의 자율성과 이성이 언어, 몸, 타자, 권력 앞에서 어떻게 다시 질문이 되었는지 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 타자는 왜 주체의 바깥이 아니라 주체를 흔드는가</summary>
+      <div class="rt-critique-toc-desc">
+        타자를 내 판단의 대상이 아니라 나의 중심을 흔드는 존재로 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 현대사회는 어떻게 주체 중심의 사고를 반복하는가</summary>
+      <div class="rt-critique-toc-desc">
+        효율, 성과, 데이터, 자기계발의 언어가 주체 중심 사고를 어떻게 강화하는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 작품 속 주체철학 비판은 어떤 장면에서 드러나는가</summary>
+      <div class="rt-critique-toc-desc">
+        《그녀》와 《컨택트》를 통해 인간 중심의 판단이 타자와 언어 앞에서 흔들리는 장면을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 주체철학 비판은 무엇을 설명하고 무엇을 설명하지 못하는가</summary>
+      <div class="rt-critique-toc-desc">
+        주체 중심 사고의 한계를 설명하는 힘과, 주체의 책임까지 약화할 수 있는 위험을 함께 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 주체철학 비판이 남기는 질문</summary>
+      <div class="rt-critique-toc-desc">
+        내가 중심이라고 믿는 자리에서 무엇이 보이지 않게 되는지 묻습니다.
+      </div>
+    </details>
+  </nav>
+
+  <section class="rt-critique-section">
+    <h2>1. “객관적으로 보면”이라는 말은 무엇을 가리는가</h2>
+
+    <div class="rt-critique-one-line">
+      👉 객관성의 말은 필요하지만, 때로는 말하는 사람의 위치와 타인의 경험을 지워 버리는 방식으로 작동할 수 있습니다.
+    </div>
+
+    <p>
+      “객관적으로 보면”이라는 말은 대개 설득력 있게 들립니다. 감정에 휘둘리지 않고, 사실에 근거해, 누구에게나 타당한 판단을 하겠다는 뜻처럼 보입니다.
+    </p>
+
+    <p>
+      그러나 이 말이 언제나 중립적인 것은 아닙니다. 누가 객관을 말하는지, 어떤 경험이 객관의 기준에서 빠지는지, 어떤 목소리가 감정적이라는 이름으로 밀려나는지 살펴야 합니다.
+    </p>
+
+    <p>
+      어떤 사람에게는 합리적 결정이지만, 다른 사람에게는 삶의 조건을 무시한 결정일 수 있습니다. 어떤 조직에게는 효율적인 처리지만, 당사자에게는 자기 이야기를 들려줄 기회조차 사라지는 일일 수 있습니다.
+    </p>
+
+    <p>
+      주체철학 비판은 바로 이 장면을 묻습니다. 내가 중심이 되어 판단할 때, 나는 무엇을 보지 못하고 있는가.
+    </p>
+
+    <div class="rt-critique-quote">
+      문제는 이성을 버리자는 것이 아닙니다.<br>
+      내가 이성적이라고 믿는 순간, 어떤 타자의 목소리를 듣지 않게 되는지 묻는 것입니다.
+    </div>
+
+    <p>
+      그래서 주체철학 비판은 이성을 공격하는 단순한 반이성주의가 아닙니다. 오히려 이성이 자기 위치를 모를 때 어떻게 지배의 언어가 될 수 있는지 살피는 질문입니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-section">
+    <h2>2. 주체철학은 무엇을 중심에 놓았는가</h2>
+
+    <div class="rt-critique-one-line">
+      👉 주체철학은 인간을 생각하고 판단하고 세계를 이해하는 중심으로 세운 철학의 흐름입니다.
+    </div>
+
+    <p>
+      주체철학은 인간을 단순히 세계 안에 놓인 존재로만 보지 않았습니다. 인간은 생각하고, 판단하고, 세계를 인식하며, 자기 삶에 책임지는 존재로 이해되었습니다.
+    </p>
+
+    <p>
+      이 관점은 중요했습니다. 인간이 외부 권위에만 의존하지 않고, 스스로 생각하고 판단할 수 있다는 믿음은 자유와 존엄의 근거가 되었습니다.
+    </p>
+
+    <p>
+      그러나 바로 그 힘 때문에 주체철학은 비판의 대상이 되기도 했습니다. 주체가 너무 강한 중심이 될 때, 세계는 주체가 파악하고 정리하고 지배할 수 있는 대상으로 바뀔 수 있기 때문입니다.
+    </p>
+
+    <div class="rt-critique-table-wrap">
+      <table class="rt-critique-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>주체철학이 세운 힘</th>
+            <th>비판이 묻는 지점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>이성</strong></td>
+            <td>인간은 스스로 생각하고 판단할 수 있음</td>
+            <td>그 이성은 정말 중립적인가</td>
+          </tr>
+          <tr>
+            <td><strong>자유</strong></td>
+            <td>인간은 자기 삶을 선택할 수 있음</td>
+            <td>그 선택의 조건은 누구에게나 같은가</td>
+          </tr>
+          <tr>
+            <td><strong>인식</strong></td>
+            <td>인간은 세계를 이해하고 설명할 수 있음</td>
+            <td>설명되지 않는 타자와 경험은 어디로 가는가</td>
+          </tr>
+          <tr>
+            <td><strong>책임</strong></td>
+            <td>인간은 자기 행위에 책임질 수 있음</td>
+            <td>모든 책임을 개인에게 돌릴 위험은 없는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      주체철학 비판은 이 힘을 모두 버리자는 것이 아닙니다. 오히려 인간을 중심에 세운 철학이 무엇을 가능하게 했고, 동시에 무엇을 보지 못하게 했는지를 함께 묻습니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-section">
+    <h2>3. 주체 중심의 이성은 왜 흔들렸는가</h2>
+
+    <div class="rt-critique-one-line">
+      👉 현대철학은 주체가 혼자 완성된 중심이 아니라, 언어·몸·무의식·권력·관계 속에서 형성된다는 점을 드러냈습니다.
+    </div>
+
+    <p>
+      주체가 세계를 판단하는 중심이라는 생각은 강력했습니다. 하지만 현대철학은 그 중심이 그렇게 투명하지 않다고 보았습니다.
+    </p>
+
+    <p>
+      내가 쓰는 언어는 이미 사회가 만든 것입니다. 내가 자연스럽다고 느끼는 욕망도 사회적 이미지와 규범 속에서 자랐을 수 있습니다.
+    </p>
+
+    <p>
+      내가 합리적이라고 믿는 판단도 내 몸의 조건, 계급, 성별, 관계, 교육, 권력의 영향을 완전히 벗어나 있지 않습니다.
+    </p>
+
+    <div class="rt-critique-grid" style="margin: 20px 0;">
+      <div class="rt-critique-grid-item">
+        <strong>언어</strong>
+        <span>생각은 이미 주어진 말과 개념 속에서 이루어집니다.</span>
+      </div>
+
+      <div class="rt-critique-grid-item">
+        <strong>몸</strong>
+        <span>인간은 순수한 이성이 아니라 몸의 조건 속에서 판단합니다.</span>
+      </div>
+
+      <div class="rt-critique-grid-item">
+        <strong>권력</strong>
+        <span>제도와 규범은 어떤 주체가 정상인지 정합니다.</span>
+      </div>
+
+      <div class="rt-critique-grid-item">
+        <strong>타자</strong>
+        <span>타인의 존재는 내가 세계의 중심이라는 믿음을 흔듭니다.</span>
+      </div>
+    </div>
+
+    <p>
+      이 비판은 주체가 없다는 말이 아닙니다. 다만 주체는 혼자 닫힌 중심이 아니라는 말입니다.
+    </p>
+
+    <p>
+      나는 생각하지만, 내 생각은 언제나 이미 세계 속에 있습니다. 나는 판단하지만, 그 판단은 나의 위치와 관계에서 완전히 자유롭지 않습니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-section">
+    <h2>4. 타자는 왜 주체의 바깥이 아니라 주체를 흔드는가</h2>
+
+    <div class="rt-critique-one-line">
+      👉 타자는 내가 이해하고 정리할 대상만이 아니라, 나의 중심성과 확신을 흔드는 존재입니다.
+    </div>
+
+    <p>
+      주체 중심의 사고는 자주 세계를 내가 이해할 수 있는 대상으로 만듭니다. 나는 보고, 해석하고, 판단합니다.
+    </p>
+
+    <p>
+      그러나 타자는 내가 완전히 이해하고 정리할 수 있는 대상이 아닙니다. 타자는 내 기준 바깥에서 나에게 말을 걸고, 나의 확신을 흔들며, 내가 보지 못한 것을 드러냅니다.
+    </p>
+
+    <p>
+      내가 옳다고 믿는 순간에도 타자는 묻습니다. 그 옳음은 누구의 경험을 기준으로 한 것인가. 그 판단 안에 나는 있지만, 상대의 고통은 있는가.
+    </p>
+
+    <div class="rt-critique-flow">
+      <strong class="rt-critique-flow-title">타자가 주체를 흔드는 흐름</strong>
+      <div class="rt-critique-flow-step">나는 내 판단이 합리적이라고 믿음</div>
+      <div class="rt-critique-flow-arrow">↓</div>
+      <div class="rt-critique-flow-step">타인의 경험이 그 판단 안에 들어오지 않음</div>
+      <div class="rt-critique-flow-arrow">↓</div>
+      <div class="rt-critique-flow-step">타자의 목소리가 나의 중심성을 흔듦</div>
+      <div class="rt-critique-flow-arrow">↓</div>
+      <div class="rt-critique-flow-step">판단은 다시 관계와 책임의 문제로 바뀜</div>
+    </div>
+
+    <p>
+      주체철학 비판은 여기서 중요한 전환을 만듭니다. 나는 단순히 세계를 판단하는 중심이 아니라, 타자의 부름 앞에서 책임을 묻게 되는 존재이기도 합니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-section">
+    <h2>5. 현대사회는 어떻게 주체 중심의 사고를 반복하는가</h2>
+
+    <div class="rt-critique-one-line">
+      👉 현대사회는 개인을 선택과 책임의 중심으로 세우면서도, 그 개인이 놓인 조건과 관계를 자주 지워 버립니다.
+    </div>
+
+    <p>
+      오늘의 사회는 개인에게 많은 것을 맡깁니다. 네 삶을 선택하라, 네 능력을 증명하라, 네 감정을 관리하라, 네 실패를 책임지라.
+    </p>
+
+    <p>
+      이 말들은 주체를 강하게 세우는 것처럼 보입니다. 사람은 자기 삶의 주인이라는 말이기 때문입니다.
+    </p>
+
+    <p>
+      그러나 이 언어는 때로 위험합니다. 사회적 조건과 관계의 문제까지 개인의 선택과 책임으로 돌릴 수 있기 때문입니다.
+    </p>
+
+    <div class="rt-critique-table-wrap">
+      <table class="rt-critique-table">
+        <thead>
+          <tr>
+            <th>현대의 언어</th>
+            <th>겉으로 보이는 의미</th>
+            <th>가려질 수 있는 것</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>자기관리</strong></td>
+            <td>스스로를 돌보고 조절하는 능력</td>
+            <td>소진을 만든 노동과 경쟁의 구조</td>
+          </tr>
+          <tr>
+            <td><strong>자기계발</strong></td>
+            <td>더 나은 사람이 되려는 노력</td>
+            <td>늘 부족한 주체로 자신을 느끼게 하는 압박</td>
+          </tr>
+          <tr>
+            <td><strong>합리적 선택</strong></td>
+            <td>개인이 계산해 결정하는 자유</td>
+            <td>선택지를 만든 시장과 제도의 조건</td>
+          </tr>
+          <tr>
+            <td><strong>객관적 평가</strong></td>
+            <td>공정하고 중립적인 판단</td>
+            <td>평가 기준을 만든 권력과 배제의 문제</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      주체철학 비판은 여기서 다시 필요해집니다. 개인의 자유와 책임을 말하되, 그 개인을 만든 조건과 관계를 함께 보아야 하기 때문입니다.
+    </p>
+
+    <div class="rt-critique-quote">
+      모든 것을 개인의 선택으로 설명하는 사회는<br>
+      개인을 존중하는 것처럼 보이면서도 개인을 홀로 책임지게 만들 수 있습니다.
+    </div>
+  </section>
+
+  <section class="rt-critique-section">
+    <h2>6. 작품 속 주체철학 비판은 어떤 장면에서 드러나는가</h2>
+
+    <div class="rt-critique-one-line">
+      👉 작품 속 주체철학 비판은 인간이 세계를 이해하고 통제한다고 믿는 순간, 타자와 언어가 그 중심을 흔들 때 드러납니다.
+    </div>
+
+    <p>
+      주체철학 비판을 작품으로 읽을 때 중요한 것은 단순히 주인공이 흔들리는 장면을 찾는 일이 아닙니다.
+    </p>
+
+    <p>
+      중요한 것은 인간이 자신을 중심으로 세계를 이해하려 할 때, 그 이해 바깥에서 타자와 언어가 어떤 질문을 던지는지 보는 일입니다.
+    </p>
+
+    <h3>6-1) 《그녀》 — 인간 중심의 사랑은 어디까지 가능한가</h3>
+
+    <p>
+      영화 《그녀》는 인간과 인공지능 운영체제의 관계를 통해 사랑과 주체의 문제를 묻습니다.
+    </p>
+
+    <p>
+      주인공은 사만다를 자신의 감정과 관계 안에서 이해하려 합니다. 그러나 사만다는 인간 주체가 익숙하게 이해해 온 사랑과 존재의 범주를 넘어섭니다.
+    </p>
+
+    <p>
+      이 작품에서 주체철학 비판은 인간이 세계의 중심이라는 믿음이 흔들리는 장면에서 드러납니다. 인간은 모든 관계를 자신의 경험 방식 안에 가둘 수 있는가.
+    </p>
+
+    <h3>6-2) 《컨택트》 — 언어가 바뀌면 주체도 바뀌는가</h3>
+
+    <p>
+      《컨택트》는 낯선 언어와 마주한 인간이 세계를 이해하는 방식 자체를 다시 묻게 하는 작품입니다.
+    </p>
+
+    <p>
+      인간은 언어를 통해 세계를 이해합니다. 그런데 전혀 다른 언어와 사고방식을 만나는 순간, 인간 주체가 세계를 파악하는 방식도 흔들립니다.
+    </p>
+
+    <p>
+      이 작품에서 주체는 이미 완성된 중심이 아닙니다. 언어와 타자와 만나는 과정 속에서 바뀌고 확장되는 자리입니다.
+    </p>
+
+    <div class="rt-critique-table-wrap">
+      <table class="rt-critique-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>주체철학 비판이 드러나는 방식</th>
+            <th>철학적 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《그녀》</strong></td>
+            <td>인간 중심의 사랑과 관계 이해가 흔들림</td>
+            <td>인간의 경험 방식만으로 타자의 존재를 이해할 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《컨택트》</strong></td>
+            <td>낯선 언어가 세계 이해의 방식을 바꿈</td>
+            <td>주체는 언어를 사용하는가, 언어 속에서 다시 만들어지는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 인간 주체의 중심성을 단순히 부정하지 않습니다. 다만 인간이 자신을 중심으로 세계를 이해하려 할 때, 그 바깥에서 다가오는 타자와 언어가 무엇을 바꾸는지 보여 줍니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-section">
+    <h2>7. 주체철학 비판은 무엇을 설명하고 무엇을 설명하지 못하는가</h2>
+
+    <div class="rt-critique-one-line">
+      👉 주체철학 비판은 인간 중심의 이성이 가리는 것을 보여 주지만, 주체의 책임과 판단까지 지워서는 안 됩니다.
+    </div>
+
+    <p>
+      주체철학 비판은 인간을 세계의 중심으로만 보는 관점의 한계를 보여 줍니다.
+    </p>
+
+    <p>
+      인간의 이성은 중요하지만, 그 이성이 언제나 중립적이고 투명한 것은 아닙니다. 판단은 언어와 관계와 권력의 영향을 받습니다.
+    </p>
+
+    <p>
+      그러나 주체철학 비판이 주체 자체를 완전히 지워 버리는 방식으로 가면 또 다른 문제가 생깁니다.
+    </p>
+
+    <p>
+      인간이 어떤 조건 속에서 만들어진다는 사실은 중요하지만, 그렇다고 해서 인간의 판단과 책임이 모두 사라지는 것은 아닙니다.
+    </p>
+
+    <div class="rt-critique-table-wrap">
+      <table class="rt-critique-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>설명 가능한 지점</strong></td>
+            <td>주체철학 비판은 이성적 주체가 타자, 몸, 언어, 권력, 사회적 조건을 충분히 보지 못할 때 생기는 한계를 드러냅니다.</td>
+          </tr>
+          <tr>
+            <td><strong>설명이 부족한 지점</strong></td>
+            <td>주체를 지나치게 해체하면 인간의 판단, 실천, 책임, 변화 가능성까지 약화될 수 있습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 주체철학 비판은 두 방향을 함께 가져야 합니다. 하나는 내가 중심이라고 믿는 자리에서 무엇이 가려지는가입니다.
+    </p>
+
+    <p>
+      다른 하나는 조건 속에서 만들어지는 존재인 내가 그래도 어디에서 판단하고 책임질 수 있는가입니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-section">
+    <h2>8. 주체철학 비판이 남기는 질문</h2>
+
+    <div class="rt-critique-one-line">
+      👉 주체철학 비판은 주체를 없애자는 말이 아니라, 주체가 자기 중심성을 의심하며 타자와 관계 앞에 다시 서야 한다는 질문입니다.
+    </div>
+
+    <p>
+      인간은 생각하고 판단하는 존재입니다. 이 사실은 여전히 중요합니다.
+    </p>
+
+    <p>
+      그러나 내가 생각한다는 사실만으로 충분하지 않습니다. 내가 어떤 언어로 생각하는지, 어떤 위치에서 판단하는지, 누구의 경험을 듣지 못하고 있는지 함께 물어야 합니다.
+    </p>
+
+    <p>
+      주체철학 비판은 나를 약하게 만드는 말이 아닙니다. 오히려 나의 판단이 더 책임 있는 판단이 되기 위해, 나의 중심성을 의심하게 만드는 말입니다.
+    </p>
+
+    <p>
+      나의 이성이 타자를 지우지 않도록, 나의 객관성이 관계의 고통을 덮지 않도록, 나의 자유가 다른 사람의 조건을 무시하지 않도록 묻는 철학입니다.
+    </p>
+  </section>
+
+  <section class="rt-critique-final">
+    <h2>마지막 질문</h2>
+
+    <p>
+      나는 지금 누구의 자리에서 세계를 보고 있는가.
+    </p>
+
+    <p>
+      내가 합리적이라고 믿는 판단은 누구의 목소리를 포함하고, 누구의 경험을 밖으로 밀어내고 있는가.
+    </p>
+
+    <p>
+      <strong>주체철학 비판은 주체를 버리자는 말이 아니라, 주체가 자기 중심성을 의심하는 데서 더 책임 있는 사유가 시작된다는 말입니다.</strong>
+    </p>
+
+    <p>
+      그렇다면 나는 세계의 중심에 선 이성인가, 아니면 타자와 관계 앞에서 계속 다시 배워야 하는 존재인가.
+    </p>
+  </section>
+
+  <section class="rt-critique-read">
+    <h2>함께 읽기</h2>
+
+    <p>
+      이 글을 읽은 뒤에는 주체철학 비판을 현대철학의 큰 흐름과 인간의 조건 안에서 다시 보고, 자아와 타자의 문제로 이어 읽을 수 있습니다.
+    </p>
+
+    <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+      <strong>Re:Think 현대 철학지도</strong>
+      <span>주체철학 비판을 자아의 문제에만 가두지 않고, 인식·언어·권력·타자·기술의 질문 속에서 다시 볼 때 연결됩니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">
+      <strong>Re:Think 인간의 조건 영역</strong>
+      <span>주체철학 비판이 자아, 주체, 책임, 자유, 정체성의 문제와 어떻게 이어지는지 큰 흐름 속에서 확인할 때 연결됩니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/305" target="_blank" rel="noopener">
+      <strong>자아</strong>
+      <span>주체 중심의 사고가 ‘나’를 어떻게 이해하는지, 그리고 자아가 왜 관계 속에서 다시 질문이 되는지 함께 읽기 좋습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/77" target="_blank" rel="noopener">
+      <strong>타자</strong>
+      <span>주체철학 비판이 결국 나의 중심성을 흔드는 타자의 문제와 만날 때 이어 읽을 수 있습니다.</span>
+    </a>
+  </section>
+
+  <div class="rt-critique-tags">
+    Re:Think, 주체철학 비판, 주체철학 비판 뜻, 주체, 주체철학, 이성 비판, 타자, 관계, 현대철학, 하버마스, 레비나스, 푸코, 언어와 주체, 권력과 주체, 그녀, 컨택트
+  </div>
+
+  <div class="rt-critique-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

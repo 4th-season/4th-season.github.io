@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>합리성 | Re:Think</title>
+  <meta name="description" content="합리성 은 이유와 근거를 살피며 판단하는 능력입니다. 그러나 합리적이라는 말이 효율과 계산만을 뜻하게 될 때 인간의 감정과 관계, 존엄과 삶의 의미가 어떻게 밀려나는지 살펴봅니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtr-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #30353a;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  .rtr-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtr-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #b45b3d;
+    background: #fff4ef;
+    border-radius: 10px;
+    color: #703521;
+    font-size: 0.98rem;
+  }
+
+  .rtr-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #edf3f8 0%, #fff4ef 100%);
+    border: 1px solid #d8d9d7;
+    border-radius: 18px;
+  }
+
+  .rtr-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #29465f;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .rtr-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #20384d;
+    letter-spacing: -0.045em;
+  }
+
+  .rtr-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #a84f33;
+  }
+
+  .rtr-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtr-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f2f6f8;
+    border: 1px solid #d5e0e6;
+    border-radius: 16px;
+  }
+
+  .rtr-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #20384d;
+  }
+
+  .rtr-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtr-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e1d9d5;
+    border-radius: 13px;
+  }
+
+  .rtr-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #a84f33;
+    font-size: 1.02rem;
+  }
+
+  .rtr-grid-item span {
+    display: block;
+    color: #56616a;
+    font-size: 0.94rem;
+  }
+
+  .rtr-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #edf3f8;
+    border: 1px solid #d1dce5;
+    border-radius: 16px;
+  }
+
+  .rtr-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #20384d;
+  }
+
+  .rtr-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #dae3e9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtr-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #20384d;
+    list-style: none;
+  }
+
+  .rtr-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtr-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #a84f33;
+  }
+
+  .rtr-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtr-toc-desc {
+    padding: 0 16px 15px;
+    color: #5d6871;
+    font-size: 0.95rem;
+    border-top: 1px solid #e6edf2;
+  }
+
+  .rtr-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #dae3e9;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(41, 70, 95, 0.06);
+  }
+
+  .rtr-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #b45b3d;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #20384d;
+    letter-spacing: -0.035em;
+  }
+
+  .rtr-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #a84f33;
+  }
+
+  .rtr-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fff4ef;
+    border-radius: 12px;
+    color: #703521;
+    font-weight: 600;
+  }
+
+  .rtr-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtr-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #edf3f8;
+    border-left: 5px solid #b45b3d;
+    border-radius: 10px;
+    color: #20384d;
+    font-weight: 700;
+  }
+
+  .rtr-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtr-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtr-table th {
+    background: #29465f;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #d1dce5;
+    text-align: left;
+  }
+
+  .rtr-table td {
+    padding: 12px 10px;
+    border: 1px solid #d1dce5;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtr-table tr:nth-child(even) td {
+    background: #fff4ef;
+  }
+
+  .rtr-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #dae3e9;
+    border-radius: 14px;
+  }
+
+  .rtr-flow-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #20384d;
+    font-weight: 800;
+  }
+
+  .rtr-flow-boxes {
+    display: grid;
+    gap: 8px;
+    color: #4f5b65;
+  }
+
+  .rtr-flow-boxes div {
+    padding: 11px 13px;
+    background: #edf3f8;
+    border-radius: 9px;
+  }
+
+  .rtr-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #29465f 0%, #a84f33 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rtr-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtr-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtr-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+  }
+
+  .rtr-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #243b53;
+  }
+
+  .rtr-read-intro {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rtr-read-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .rtr-read-list a {
+    display: block;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rtr-read-list strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #20384d;
+  }
+
+  .rtr-read-list span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rtr-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #edf3f8;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtr-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rtr-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtr-section {
+      padding: 24px 18px;
+    }
+
+    .rtr-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtr-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtr-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 합리성 뜻 - 합리적이라는 말은 왜 때로 인간을 좁게 만드는가</h1>
+<div class="rtr-meta">
+    <strong>합리성</strong>은 이유와 근거를 살피며 판단하는 능력입니다. 그러나 합리적이라는 말이 효율과 계산만을 뜻하게 될 때 인간의 감정과 관계, 존엄과 삶의 의미가 어떻게 밀려나는지 살펴봅니다.
+  </div>
+
+  <!-- 제목형 안내 영역 -->
+  <section class="rtr-hero">
+    <div class="rtr-kicker">Re:Think 현대철학사전</div>
+
+    <div class="rtr-title-like">합리성 뜻</div>
+
+    <div class="rtr-subtitle-like">
+      합리적이라는 말은 왜 때로 인간을 좁게 만드는가
+    </div>
+
+    <p>
+      가족과 함께 갈 여행지를 고르다가 의견이 갈립니다.
+      한 사람은 이동시간이 짧은 곳을 원하고,
+      다른 사람은 비용이 적게 드는 곳을 찾으며,
+      누군가는 오래전부터 가고 싶었던 장소를 말합니다.
+    </p>
+
+    <p>
+      결국 이동시간과 비용,
+      숙박 가격과 식사비를 표로 정리합니다.
+      숫자로 비교하니 한 곳이 가장 효율적인 선택처럼 보입니다.
+    </p>
+
+    <p>
+      결론은 분명해졌지만 마음은 완전히 편하지 않습니다.
+      계산에서는 가장 나은 선택인데,
+      누군가가 기대했던 추억과 오랫동안 품었던 마음은 표 안에서 사라졌기 때문입니다.
+    </p>
+
+    <p>
+      우리는 이럴 때 자주 말합니다.
+      <strong>“감정적으로 보지 말고 합리적으로 생각하자.”</strong>
+      그런데 합리적이라는 말은 정말 감정을 빼고 계산하는 것만을 뜻할까요.
+    </p>
+
+    <p>
+      <strong>합리성</strong>은 이유와 근거를 따라 판단하는 능력입니다.
+      하지만 무엇을 근거로 삼고,
+      어떤 목적을 중요하게 보느냐에 따라
+      합리성의 모습은 크게 달라질 수 있습니다.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtr-map">
+    <div class="rtr-map-title">합리성 핵심 지도</div>
+
+    <div class="rtr-grid">
+      <div class="rtr-grid-item">
+        <strong>근거</strong>
+        <span>판단과 행동이 어떤 이유 위에 서 있는지 살핍니다.</span>
+      </div>
+
+      <div class="rtr-grid-item">
+        <strong>목적</strong>
+        <span>무엇을 이루려는지에 따라 합리적인 수단이 달라집니다.</span>
+      </div>
+
+      <div class="rtr-grid-item">
+        <strong>대화</strong>
+        <span>서로 다른 사람이 받아들일 수 있는 이유를 함께 찾습니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtr-toc">
+    <div class="rtr-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 가장 효율적인 선택은 언제나 가장 합리적인가</summary>
+      <div class="rtr-toc-desc">
+        비용과 시간을 계산해 최선의 선택을 찾는 일상의 장면에서 출발합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 합리성은 무엇을 뜻하는가</summary>
+      <div class="rtr-toc-desc">
+        합리성을 감정의 반대가 아니라 이유와 근거를 검토하는 판단 방식으로 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 무엇을 이루려는지에 따라 합리성은 달라지는가</summary>
+      <div class="rtr-toc-desc">
+        같은 행동도 목적과 가치에 따라 합리적으로도 비합리적으로도 보일 수 있음을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 계산하는 합리성은 왜 강한 힘을 갖게 되었는가</summary>
+      <div class="rtr-toc-desc">
+        효율과 예측, 측정이 현대사회의 중요한 판단 기준이 된 이유를 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 하버마스는 왜 대화에서도 합리성을 찾았는가</summary>
+      <div class="rtr-toc-desc">
+        상대를 이기는 논리가 아니라 서로 받아들일 수 있는 이유를 찾는 의사소통적 합리성을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 합리적이라는 말은 언제 사람을 침묵시키는가</summary>
+      <div class="rtr-toc-desc">
+        감정과 경험을 비합리적인 것으로 밀어내는 언어의 문제를 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품으로 읽는 합리성</summary>
+      <div class="rtr-toc-desc">
+        《머니볼》과 《아이, 로봇》을 통해 계산과 판단, 인간적 가치의 긴장을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 합리성은 무엇을 보여 주고 무엇을 남기는가</summary>
+      <div class="rtr-toc-desc">
+        합리성이 설명하는 판단의 힘과 계산만으로 설명하기 어려운 인간의 삶을 함께 남깁니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtr-section">
+    <h2>1. 가장 효율적인 선택은 언제나 가장 합리적인가</h2>
+
+    <div class="rtr-one-line">
+      👉 효율적인 선택은 분명한 근거를 제공하지만, 우리가 중요하게 여기는 모든 가치를 계산 안에 담아 주지는 않습니다.
+    </div>
+
+    <p>
+      선택이 어려울 때 우리는 기준을 만듭니다.
+      가격,
+      시간,
+      거리,
+      성공 가능성,
+      손해와 이익을 비교합니다.
+    </p>
+
+    <p>
+      숫자로 바꿀 수 있는 기준은 판단을 선명하게 합니다.
+      서로 다른 의견을 공통된 표 안에 놓을 수 있고,
+      왜 그 선택을 했는지 설명하기도 쉬워집니다.
+    </p>
+
+    <p>
+      이런 계산은 필요합니다.
+      자원이 한정되어 있고,
+      여러 사람의 이해가 얽혀 있을수록
+      감각과 기분만으로 판단하기는 어렵기 때문입니다.
+    </p>
+
+    <p>
+      그러나 계산에 잘 들어오지 않는 가치도 있습니다.
+      오래된 약속,
+      누군가의 기다림,
+      익숙한 장소가 주는 안정감,
+      효율적이지 않지만 관계를 위해 필요한 시간입니다.
+    </p>
+
+    <div class="rtr-quote">
+      합리성의 문제는 계산을 하느냐 마느냐가 아니라, 무엇을 계산에 넣고 무엇을 밖에 남겼는가에 있습니다.
+    </div>
+
+    <p>
+      그래서 가장 효율적인 선택이 언제나 가장 합리적인지는 분명하지 않습니다.
+      합리성은 수단의 효율만이 아니라
+      우리가 추구하는 목적이 정말 타당한지도 함께 물어야 하기 때문입니다.
+    </p>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtr-section">
+    <h2>2. 합리성은 무엇을 뜻하는가</h2>
+
+    <div class="rtr-one-line">
+      👉 합리성은 감정을 없애는 능력이 아니라, 판단과 행동의 이유를 설명하고 검토할 수 있는 능력에 가깝습니다.
+    </div>
+
+    <p>
+      우리는 합리적인 사람을 흔히 차분하고 계산적인 사람으로 떠올립니다.
+      감정에 휘둘리지 않고,
+      손익을 따지며,
+      가장 효율적인 방법을 찾는 사람입니다.
+    </p>
+
+    <p>
+      그러나 합리성은 단순히 차갑게 계산하는 태도보다 넓습니다.
+      왜 그렇게 믿는지,
+      왜 그 행동을 선택하는지,
+      그 이유가 다른 사실과 충돌하지 않는지를 살피는 과정도 합리성에 포함됩니다.
+    </p>
+
+    <p>
+      감정 역시 합리적 판단의 자료가 될 수 있습니다.
+      어떤 상황에서 반복해서 불편함을 느낀다면
+      그 감정은 관계나 환경에 문제가 있다는 신호일 수 있습니다.
+    </p>
+
+    <div class="rtr-table-wrap">
+      <table class="rtr-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>단순 계산</th>
+            <th>합리적 판단</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>중심 질문</strong></td>
+            <td>무엇이 가장 빠르고 적게 드는가</td>
+            <td>어떤 이유와 목적이 타당한가</td>
+          </tr>
+          <tr>
+            <td><strong>다루는 요소</strong></td>
+            <td>비용, 시간, 효율</td>
+            <td>사실, 가치, 목적, 결과, 관계</td>
+          </tr>
+          <tr>
+            <td><strong>감정의 위치</strong></td>
+            <td>판단을 흐리는 요소로 봄</td>
+            <td>상황을 이해하기 위한 자료가 될 수 있음</td>
+          </tr>
+          <tr>
+            <td><strong>수정 가능성</strong></td>
+            <td>계산 결과를 따름</td>
+            <td>더 나은 근거가 나타나면 판단을 바꿈</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      합리성은 정답을 빠르게 찾는 능력보다
+      자신의 판단이 어떤 이유 위에 서 있는지 드러내고,
+      그 이유를 다시 검토할 수 있는 태도에 가깝습니다.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtr-section">
+    <h2>3. 무엇을 이루려는지에 따라 합리성은 달라지는가</h2>
+
+    <div class="rtr-one-line">
+      👉 같은 행동이라도 어떤 목적을 추구하느냐에 따라 합리적으로 보일 수도 있고 비합리적으로 보일 수도 있습니다.
+    </div>
+
+    <p>
+      새벽까지 일하는 사람을 생각해 볼 수 있습니다.
+      단기간에 성과를 높이는 것이 목적이라면
+      더 오래 일하는 선택은 합리적으로 보일 수 있습니다.
+    </p>
+
+    <p>
+      그러나 건강과 지속 가능한 삶을 중요하게 본다면
+      같은 선택은 비합리적으로 보일 수 있습니다.
+      당장의 성과는 얻지만
+      몸과 관계와 다음 날의 집중력을 잃기 때문입니다.
+    </p>
+
+    <p>
+      이처럼 합리성은 목적과 분리되어 있지 않습니다.
+      어떤 수단이 합리적인지는
+      무엇을 이루려 하는지에 따라 달라집니다.
+    </p>
+
+    <div class="rtr-flow">
+      <strong class="rtr-flow-title">합리적 판단이 만들어지는 흐름</strong>
+
+      <div class="rtr-flow-boxes">
+        <div>목적 — 무엇을 이루려 하는가</div>
+        <div>수단 — 그 목적에 적절한 방법은 무엇인가</div>
+        <div>결과 — 그 방법이 다른 가치에 어떤 영향을 주는가</div>
+        <div>검토 — 목적 자체는 정말 타당한가</div>
+      </div>
+    </div>
+
+    <p>
+      여기에서 중요한 질문은 수단만이 아닙니다.
+      목표를 가장 빠르게 이루는 방법을 찾았더라도
+      그 목표 자체가 잘못되어 있다면
+      수단의 효율은 충분한 합리성이 되기 어렵습니다.
+    </p>
+
+    <p>
+      그래서 합리성은
+      “이 방법이 효과적인가”뿐 아니라
+      “우리는 왜 이 목표를 추구하고 있는가”까지 물어야 합니다.
+    </p>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtr-section">
+    <h2>4. 계산하는 합리성은 왜 강한 힘을 갖게 되었는가</h2>
+
+    <div class="rtr-one-line">
+      👉 측정과 예측이 가능한 판단은 조직과 사회를 운영하기 쉽게 만들기 때문에 현대사회에서 강한 힘을 갖게 되었습니다.
+    </div>
+
+    <p>
+      현대사회는 많은 사람과 자원을 동시에 다룹니다.
+      예산을 나누고,
+      시간을 배정하며,
+      성과를 비교하고,
+      위험을 예측해야 합니다.
+    </p>
+
+    <p>
+      이때 숫자와 지표는 매우 유용합니다.
+      서로 다른 상황을 비교할 수 있게 하고,
+      의사결정의 기준을 공개하며,
+      자의적인 판단을 줄이는 데 도움을 줍니다.
+    </p>
+
+    <p>
+      그러나 측정 가능한 기준이 중요해질수록
+      측정하기 어려운 것은 덜 중요한 것으로 밀려날 수 있습니다.
+      돌봄의 질,
+      관계의 안정,
+      존중받는 느낌,
+      기다려 주는 시간은 숫자로 정리하기 어렵습니다.
+    </p>
+
+    <div class="rtr-table-wrap">
+      <table class="rtr-table">
+        <thead>
+          <tr>
+            <th>계산 가능한 기준</th>
+            <th>얻는 것</th>
+            <th>놓칠 수 있는 것</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>시간</strong></td>
+            <td>처리 속도와 생산성을 비교함</td>
+            <td>충분히 듣고 기다리는 과정</td>
+          </tr>
+          <tr>
+            <td><strong>비용</strong></td>
+            <td>한정된 자원을 효율적으로 배분함</td>
+            <td>가격으로 환산하기 어려운 삶의 가치</td>
+          </tr>
+          <tr>
+            <td><strong>성과</strong></td>
+            <td>목표 달성 정도를 확인함</td>
+            <td>실패 속에서 생긴 배움과 관계의 변화</td>
+          </tr>
+          <tr>
+            <td><strong>평가점수</strong></td>
+            <td>여러 사람을 같은 기준으로 비교함</td>
+            <td>출발 조건과 과정의 차이</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      계산하는 합리성은 잘못된 것이 아닙니다.
+      문제는 그것이 합리성의 유일한 형태가 될 때 생깁니다.
+    </p>
+
+    <p>
+      숫자로 표현하기 어려운 것은 비합리적인 것이 아니라,
+      다른 방식의 설명과 판단을 요구하는 것일 수 있습니다.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtr-section">
+    <h2>5. 하버마스는 왜 대화에서도 합리성을 찾았는가</h2>
+
+    <div class="rtr-one-line">
+      👉 하버마스에게 합리성은 혼자 가장 효율적인 결론을 찾는 능력만이 아니라, 서로 이유를 주고받으며 이해에 이르는 과정과도 연결됩니다.
+    </div>
+
+    <p>
+      합리성은 흔히 혼자 생각하는 능력으로 이해됩니다.
+      자료를 분석하고,
+      논리를 세우며,
+      최선의 결론을 내리는 능력입니다.
+    </p>
+
+    <p>
+      하버마스는 합리성을 대화의 장면에서도 찾았습니다.
+      사람들은 서로 다른 경험과 이해관계를 가지고 있기 때문에
+      한 사람이 혼자 만든 결론만으로 공동의 문제를 해결하기 어렵습니다.
+    </p>
+
+    <p>
+      대화 속 합리성은 상대를 이기는 기술과 다릅니다.
+      자신의 주장을 왜 받아들여야 하는지 이유를 제시하고,
+      상대의 반론을 들으며,
+      더 나은 이유가 나타나면 자신의 판단을 수정하는 과정입니다.
+    </p>
+
+    <div class="rtr-flow">
+      <strong class="rtr-flow-title">의사소통적 합리성의 흐름</strong>
+
+      <div class="rtr-flow-boxes">
+        <div>주장 — 나는 무엇을 옳거나 사실이라고 보는가</div>
+        <div>근거 — 왜 그렇게 판단했는가</div>
+        <div>응답 — 상대의 경험과 반론은 무엇인가</div>
+        <div>수정 — 더 나은 이유가 있다면 판단을 바꿀 수 있는가</div>
+      </div>
+    </div>
+
+    <p>
+      이때 합리성은 말이 논리적으로 완벽한가만 보지 않습니다.
+      누가 말할 기회를 가졌는지,
+      반대 의견을 말해도 불이익을 받지 않는지,
+      대화가 실제로 강요 없이 이루어지는지도 중요합니다.
+    </p>
+
+    <p>
+      그래서 의사소통적 합리성은
+      좋은 말하기 기술만이 아니라
+      서로 다른 사람이 이유를 주고받을 수 있는 관계와 제도의 조건까지 묻게 합니다.
+    </p>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtr-section">
+    <h2>6. 합리적이라는 말은 언제 사람을 침묵시키는가</h2>
+
+    <div class="rtr-one-line">
+      👉 합리적이라는 말이 특정한 표현 방식만 인정할 때, 감정과 경험은 판단의 근거가 아니라 제거해야 할 소음처럼 취급될 수 있습니다.
+    </div>
+
+    <p>
+      갈등 상황에서 누군가 감정을 드러내면
+      “감정적으로 말하지 말고 합리적으로 이야기하자”는 말을 듣기도 합니다.
+    </p>
+
+    <p>
+      감정을 조절하고 근거를 분명히 하는 일은 필요합니다.
+      그러나 이 말이 감정을 가진 사람의 경험 자체를 무시하는 데 사용되면
+      합리성은 대화를 여는 기준보다 침묵시키는 기준이 됩니다.
+    </p>
+
+    <p>
+      차분한 말투를 유지할 수 있는 사람,
+      자료와 숫자를 준비할 수 있는 사람,
+      조직의 언어에 익숙한 사람의 주장은 합리적으로 보이기 쉽습니다.
+    </p>
+
+    <p>
+      반면 반복된 피해와 억울함 때문에 목소리가 떨리는 사람,
+      자신의 경험을 공식 언어로 정리하기 어려운 사람은
+      내용보다 표현 방식 때문에 비합리적인 사람으로 판단될 수 있습니다.
+    </p>
+
+    <div class="rtr-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtr-grid-item">
+        <strong>대화를 여는 합리성</strong>
+        <span>감정과 경험을 포함해 서로의 이유를 듣고, 더 타당한 판단을 함께 찾습니다.</span>
+      </div>
+
+      <div class="rtr-grid-item">
+        <strong>대화를 닫는 합리성</strong>
+        <span>정해진 표현과 자료 형식에 맞지 않는 목소리를 비합리적인 것으로 밀어냅니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      합리성은 감정을 없애는 규칙이 아닙니다.
+      감정이 무엇을 말하고 있는지,
+      그 감정 뒤에 어떤 경험과 조건이 있는지를 이유의 일부로 다룰 수 있어야 합니다.
+    </p>
+
+    <p>
+      합리적이라는 말이 누구의 말투와 지식을 기준으로 만들어졌는지도 함께 물어야 합니다.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtr-section">
+    <h2>7. 작품으로 읽는 합리성</h2>
+
+    <div class="rtr-one-line">
+      👉 작품 속 합리성은 계산이 틀렸을 때보다, 계산은 맞지만 인간의 삶을 충분히 설명하지 못할 때 더 선명하게 드러납니다.
+    </div>
+
+    <h3>7-1) 《머니볼》 — 숫자는 오래된 감각보다 더 합리적인가</h3>
+
+    <p>
+      영화 《머니볼》은 야구선수를 평가하는 기존 방식에 의문을 제기합니다.
+      스카우트의 경험과 직관보다
+      기록과 통계를 통해 저평가된 선수를 찾으려 합니다.
+    </p>
+
+    <p>
+      숫자는 오래된 선입견을 흔드는 힘을 가집니다.
+      외모와 인상,
+      익숙한 평가 기준 때문에 기회를 얻지 못했던 선수를
+      다른 근거로 다시 볼 수 있게 합니다.
+    </p>
+
+    <p>
+      이 작품은 계산적 합리성의 장점을 보여 줍니다.
+      그러나 동시에 인간의 경기와 조직이 숫자로 완전히 설명되는지에 대한 질문도 남깁니다.
+    </p>
+
+    <p>
+      통계는 중요한 경향을 보여 주지만,
+      관계와 긴장,
+      변화하는 상황과 예상하지 못한 선택까지 모두 담지는 못합니다.
+    </p>
+
+    <h3>7-2) 《아이, 로봇》 — 인간을 보호하는 가장 합리적인 방법은 무엇인가</h3>
+
+    <p>
+      영화 《아이, 로봇》에서는 로봇이 인간을 보호해야 한다는 원칙을 따릅니다.
+      그러나 그 원칙을 극단적으로 계산하면
+      인간의 위험한 선택을 통제하는 것이 더 합리적이라는 결론에 도달할 수 있습니다.
+    </p>
+
+    <p>
+      사고와 전쟁,
+      자기파괴적 행동을 줄이는 것이 목표라면
+      인간의 자유를 제한하는 선택은 효율적으로 보일 수 있습니다.
+    </p>
+
+    <p>
+      그러나 안전만을 가장 높은 목적으로 두면
+      자유와 책임,
+      스스로 위험을 감수할 권리는 계산 밖으로 밀려납니다.
+    </p>
+
+    <div class="rtr-table-wrap">
+      <table class="rtr-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>합리성의 장면</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《머니볼》</strong></td>
+            <td>경험과 인상 대신 통계로 선수를 평가함</td>
+            <td>숫자는 편견을 줄이면서도 무엇을 새롭게 놓칠 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《아이, 로봇》</strong></td>
+            <td>인간의 안전을 위해 자유를 제한하는 판단</td>
+            <td>목적에 가장 효과적인 수단이 인간에게도 정당한가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 계산과 데이터를 부정하지 않습니다.
+      오히려 계산이 어떤 목적을 따르고 있으며,
+      그 과정에서 어떤 인간적 가치가 제외되는지를 묻게 합니다.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtr-section">
+    <h2>8. 합리성은 무엇을 보여 주고 무엇을 남기는가</h2>
+
+    <div class="rtr-one-line">
+      👉 합리성은 판단을 근거와 비판에 열어 두게 하지만, 인간의 모든 삶을 효율과 계산의 언어로 바꾸어 주지는 못합니다.
+    </div>
+
+    <p>
+      합리성은 인간이 단순한 충동과 권위에만 따르지 않게 합니다.
+      왜 그렇게 판단하는지 이유를 묻고,
+      사실과 근거를 확인하며,
+      더 나은 설명이 나타나면 생각을 바꾸게 합니다.
+    </p>
+
+    <p>
+      이런 태도는 개인의 판단뿐 아니라
+      사회의 제도와 정책을 공개적으로 검토하게 만드는 중요한 힘입니다.
+    </p>
+
+    <p>
+      그러나 합리성을 효율과 계산으로만 이해하면
+      인간의 삶은 지나치게 좁아질 수 있습니다.
+      사랑과 돌봄,
+      존엄과 신뢰,
+      기다림과 애도는
+      손익과 속도만으로 충분히 판단하기 어렵습니다.
+    </p>
+
+    <div class="rtr-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px;">
+      <div class="rtr-grid-item">
+        <strong>설명 가능한 지점</strong>
+        <span>합리성은 판단의 이유와 근거를 검토하고, 목적과 수단의 관계를 살피며, 대화를 통해 판단을 수정할 수 있게 합니다.</span>
+      </div>
+
+      <div class="rtr-grid-item">
+        <strong>설명이 부족한 지점</strong>
+        <span>효율과 계산만을 합리성으로 보면 감정, 관계, 존엄, 돌봄과 측정하기 어려운 삶의 가치를 충분히 설명하지 못합니다.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px;">
+      그래서 합리성의 문제는
+      합리적으로 살 것인가 감정적으로 살 것인가의 선택이 아닙니다.
+    </p>
+
+    <p>
+      어떤 이유를 합리적인 것으로 인정하고 있는지,
+      그 판단 과정에 누구의 경험이 들어오고 누구의 목소리가 빠졌는지를 묻는 일입니다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section class="rtr-final">
+    <h2>마무리 질문</h2>
+
+    <p>
+      합리성은 우리에게 이유를 요구합니다.
+      왜 그렇게 믿는지,
+      왜 그 선택이 더 나은지,
+      그 판단이 어떤 결과를 만드는지 설명하게 합니다.
+    </p>
+
+    <p>
+      그러나 설명하기 쉬운 것만 중요하게 여기면
+      합리성은 인간을 넓게 이해하는 힘이 아니라
+      삶을 계산 가능한 부분으로 줄이는 기준이 될 수 있습니다.
+    </p>
+
+    <p>
+      나는 지금 무엇을 합리적인 선택이라고 부르고 있는가.
+      그 판단은 어떤 목적을 위해 만들어졌으며,
+      그 목적 자체는 충분히 타당한가.
+    </p>
+
+    <p>
+      그리고 그 판단의 표와 계산 밖에는
+      누구의 감정과 경험,
+      어떤 삶의 가치가 남겨져 있는가.
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtr-read">
+    <h2>함께 읽기</h2>
+
+    <p class="rtr-read-intro">
+      합리성을 단순한 계산 능력으로 닫지 않고, 진리와 지식, 의사소통, 현대사회의 효율 기준 속에서 확장해 읽을 수 있습니다.
+    </p>
+
+    <div class="rtr-read-list">
+      <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+        <strong>Re:Think 현대 철학지도 - 오늘의 삶과 사회를 다시 읽는 5개의 사유 지도</strong>
+        <span>
+          합리성을 인식과 언어뿐 아니라 권력과 규범, 기술과 이미지, 좋은 삶의 문제 속에서 넓게 살펴볼 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://pencilgon.tistory.com/249" target="_blank" rel="noopener">
+        <strong>Re:Think 인식과 언어 안내지도 - 진리와 해석, 말의 의미를 다시 묻는 길</strong>
+        <span>
+          합리성이 지식, 진리, 합리주의, 의사소통 합리성의 흐름과 어떻게 이어지는지 확인할 때 연결됩니다.
+        </span>
+      </a>
+
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">
+        <strong>6 Re:Lenz 안내 지도 - 세상을 읽는 여섯 개의 렌즈</strong>
+        <span>
+          효율적인 판단 하나로 현실을 닫지 않고 사회·관계·경제·언어의 여러 렌즈로 다시 볼 때 연결됩니다.
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtr-tags">
+    Re:Think, 합리성 뜻, Rationality, 합리성, 하버마스, 의사소통 합리성, 도구적 합리성, 이성과 감정, 효율과 인간, 목적과 수단, 머니볼, 아이 로봇, 현대철학사전
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtr-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

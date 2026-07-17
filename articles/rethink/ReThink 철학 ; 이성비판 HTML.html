@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이성비판 | Re:Think</title>
+  <meta name="description" content="이성비판 은 이성을 부정하거나 감정을 앞세우자는 말이 아닙니다. 인간의 이성이 무엇을 알 수 있고, 어디에서 한계를 드러내며, 언제 지배와 배제의 기준으로 바뀌는지를 이성 스스로 묻는 철학적 작업입니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rt-reason-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #2f343b;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .rt-reason-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rt-reason-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #b45309;
+    background: #fff7ed;
+    border-radius: 10px;
+    color: #78350f;
+    font-size: 0.98rem;
+  }
+
+  .rt-reason-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 100%);
+    border: 1px solid #cbd5e1;
+    border-radius: 18px;
+  }
+
+  .rt-reason-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #334155;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .rt-reason-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: -0.045em;
+  }
+
+  .rt-reason-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #b45309;
+  }
+
+  .rt-reason-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rt-reason-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-reason-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #1e293b;
+  }
+
+  .rt-reason-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rt-reason-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #fed7aa;
+    border-radius: 13px;
+  }
+
+  .rt-reason-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #b45309;
+    font-size: 1.02rem;
+  }
+
+  .rt-reason-grid-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.94rem;
+  }
+
+  .rt-reason-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-reason-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #1e293b;
+  }
+
+  .rt-reason-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rt-reason-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #1e293b;
+    list-style: none;
+  }
+
+  .rt-reason-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rt-reason-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #b45309;
+  }
+
+  .rt-reason-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rt-reason-toc-desc {
+    padding: 0 16px 15px;
+    color: #475569;
+    font-size: 0.95rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .rt-reason-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(30, 41, 59, 0.06);
+  }
+
+  .rt-reason-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #b45309;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #1e293b;
+    letter-spacing: -0.035em;
+  }
+
+  .rt-reason-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #b45309;
+  }
+
+  .rt-reason-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fff7ed;
+    border-radius: 12px;
+    color: #78350f;
+    font-weight: 600;
+  }
+
+  .rt-reason-section p {
+    margin: 0 0 14px;
+  }
+
+  .rt-reason-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border-left: 5px solid #b45309;
+    border-radius: 10px;
+    color: #1e293b;
+    font-weight: 700;
+  }
+
+  .rt-reason-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #fed7aa;
+    border-radius: 14px;
+  }
+
+  .rt-reason-flow-title {
+    display: block;
+    margin-bottom: 10px;
+    color: #b45309;
+    font-weight: 800;
+  }
+
+  .rt-reason-flow-step {
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #ffedd5;
+    border-radius: 9px;
+    color: #475569;
+  }
+
+  .rt-reason-flow-arrow {
+    text-align: center;
+    color: #b45309;
+    font-weight: 800;
+  }
+
+  .rt-reason-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rt-reason-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rt-reason-table th {
+    background: #334155;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+  }
+
+  .rt-reason-table td {
+    padding: 12px 10px;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rt-reason-table tr:nth-child(even) td {
+    background: #fff7ed;
+  }
+
+  .rt-reason-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #1e293b 0%, #b45309 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rt-reason-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rt-reason-final p {
+    margin: 0 0 12px;
+  }
+
+  .rt-reason-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+  }
+
+  .rt-reason-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #1e293b;
+  }
+
+  .rt-reason-read p {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rt-reason-read a {
+    display: block;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rt-reason-read a + a {
+    margin-top: 14px;
+  }
+
+  .rt-reason-read strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #b45309;
+  }
+
+  .rt-reason-read span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rt-reason-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #f1f5f9;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rt-reason-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rt-reason-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-reason-section {
+      padding: 24px 18px;
+    }
+
+    .rt-reason-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rt-reason-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rt-reason-wrap">
+
+  <h1 class="seo-h1">[Re:Think] 이성비판 뜻 - 이성은 왜 스스로의 한계를 의심하게 되었는가</h1>
+<div class="rt-reason-meta">
+    <strong>이성비판</strong>은 이성을 부정하거나 감정을 앞세우자는 말이 아닙니다. 인간의 이성이 무엇을 알 수 있고, 어디에서 한계를 드러내며, 언제 지배와 배제의 기준으로 바뀌는지를 이성 스스로 묻는 철학적 작업입니다.
+  </div>
+
+  <section class="rt-reason-hero">
+    <div class="rt-reason-kicker">Re:Think 철학</div>
+    <div class="rt-reason-title-like">이성비판 뜻</div>
+    <div class="rt-reason-subtitle-like">
+      이성은 왜 스스로의 한계를 의심하게 되었는가
+    </div>
+
+    <p>
+      회의가 길어지자 누군가 말합니다. “감정은 빼고 합리적으로 판단합시다.”
+    </p>
+
+    <p>
+      숫자와 자료를 정리하면 답이 더 분명해질 것 같습니다. 개인의 경험이나 불편함은 주관적인 요소로 밀리고, 계산 가능한 기준이 결정의 중심에 놓입니다.
+    </p>
+
+    <p>
+      그런데 그 결정으로 영향을 받는 사람은 말합니다. “그 숫자 안에는 내 삶이 들어 있지 않습니다.”
+    </p>
+
+    <p>
+      계산은 정확할 수 있습니다. 논리도 틀리지 않을 수 있습니다. 하지만 그 판단이 현실 전체를 충분히 담고 있다고 말할 수 있을까요.
+    </p>
+
+    <p>
+      철학에서 말하는 <strong>이성비판</strong>은 바로 이 지점에서 시작됩니다. 이성을 없애려는 것이 아니라, 이성이 어디까지 갈 수 있으며 무엇을 놓치고 있는지 스스로 확인하는 작업입니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-map">
+    <div class="rt-reason-map-title">이성비판 핵심 지도</div>
+
+    <div class="rt-reason-grid">
+      <div class="rt-reason-grid-item">
+        <strong>기본 뜻</strong>
+        <span>이성의 능력과 한계를 이성 스스로 검토하는 철학적 작업입니다.</span>
+      </div>
+
+      <div class="rt-reason-grid-item">
+        <strong>핵심 긴장</strong>
+        <span>이성은 편견을 줄이고 공통 기준을 만들지만, 자신의 기준을 절대화하면 다른 경험을 배제할 수 있습니다.</span>
+      </div>
+
+      <div class="rt-reason-grid-item">
+        <strong>주요 질문</strong>
+        <span>인간은 무엇을 알 수 있으며, 합리적 판단은 어디에서 한계를 갖는가를 묻습니다.</span>
+      </div>
+
+      <div class="rt-reason-grid-item">
+        <strong>현대적 쟁점</strong>
+        <span>데이터, 효율, 기술, 전문가 판단이 인간의 삶을 충분히 설명하는지 다시 묻게 합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rt-reason-toc">
+    <div class="rt-reason-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 합리적인 판단은 왜 언제나 충분하지 않은가</summary>
+      <div class="rt-reason-toc-desc">
+        숫자와 논리가 정확해도 현실을 충분히 설명하지 못하는 일상의 장면에서 질문을 시작합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 이성비판은 이성을 부정하는 철학인가</summary>
+      <div class="rt-reason-toc-desc">
+        이성비판이 반이성주의가 아니라 이성의 능력과 경계를 검토하는 작업임을 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 칸트는 왜 이성을 법정에 세웠는가</summary>
+      <div class="rt-reason-toc-desc">
+        인간 이성이 무엇을 알 수 있고 무엇을 넘어서면 오류에 빠지는지 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 이성은 언제 해방의 힘이 되는가</summary>
+      <div class="rt-reason-toc-desc">
+        권위와 미신을 비판하고 공통의 근거를 만드는 이성의 힘을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 이성은 언제 지배의 방식이 되는가</summary>
+      <div class="rt-reason-toc-desc">
+        계산과 효율이 인간과 자연을 관리하는 기준으로 바뀌는 문제를 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 현대사회는 어떤 이성을 합리적이라고 부르는가</summary>
+      <div class="rt-reason-toc-desc">
+        데이터, 성과, 최적화, 알고리즘의 언어가 합리성을 대표하는 현실을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품 속 이성비판은 어떤 장면에서 드러나는가</summary>
+      <div class="rt-reason-toc-desc">
+        《닥터 스트레인지러브》와 《오펜하이머》를 통해 이성·기술·책임의 긴장을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 이성비판은 무엇을 설명하고 무엇을 설명하지 못하는가</summary>
+      <div class="rt-reason-toc-desc">
+        이성의 한계를 드러내는 힘과, 사실과 공통 기준까지 약화할 위험을 함께 봅니다.
+      </div>
+    </details>
+  </nav>
+
+  <section class="rt-reason-section">
+    <h2>1. 합리적인 판단은 왜 언제나 충분하지 않은가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 논리적으로 맞고 계산상 효율적인 판단이라도, 삶의 조건과 가치의 문제까지 모두 설명하지는 못합니다.
+    </div>
+
+    <p>
+      우리는 중요한 결정을 내릴 때 자료를 찾고 숫자를 비교합니다. 비용이 얼마나 드는지, 효과는 어느 정도인지, 가장 효율적인 방법은 무엇인지 계산합니다.
+    </p>
+
+    <p>
+      이런 판단은 필요합니다. 막연한 인상이나 편견보다 공개된 근거를 통해 결정할 수 있기 때문입니다.
+    </p>
+
+    <p>
+      그러나 계산은 계산할 항목이 먼저 정해져 있어야 가능합니다. 무엇을 이익으로 보고, 무엇을 손실로 볼지 이미 기준이 들어가 있습니다.
+    </p>
+
+    <p>
+      비용은 계산하면서 사람의 불안은 제외할 수 있고, 생산성은 측정하면서 돌봄과 관계의 시간은 보이지 않게 만들 수도 있습니다.
+    </p>
+
+    <div class="rt-reason-quote">
+      이성비판은 계산이 틀렸다고 말하지 않습니다.<br>
+      무엇을 계산하고 무엇을 계산 밖에 두었는지 묻습니다.
+    </div>
+
+    <p>
+      그래서 이성비판은 합리성의 반대편에 서는 것이 아닙니다. 합리적이라고 불리는 판단이 어떤 전제와 기준 위에 서 있는지 더 깊게 살펴보려는 태도입니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-section">
+    <h2>2. 이성비판은 이성을 부정하는 철학인가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 이성비판은 이성을 포기하자는 말이 아니라, 이성이 자기 능력을 과신하지 않도록 경계를 확인하는 일입니다.
+    </div>
+
+    <p>
+      비판이라는 말은 흔히 반대하거나 공격한다는 뜻으로 들립니다. 그래서 이성비판도 이성이 쓸모없다고 주장하는 철학처럼 오해되기 쉽습니다.
+    </p>
+
+    <p>
+      그러나 철학에서 비판은 무엇이 가능한지와 어디까지 가능한지를 구분하는 작업에 가깝습니다.
+    </p>
+
+    <p>
+      인간의 이성이 무엇을 알 수 있는지, 어떤 근거로 판단할 수 있는지, 어떤 질문에서는 결론을 내리기 어려운지 살펴봅니다.
+    </p>
+
+    <div class="rt-reason-table-wrap">
+      <table class="rt-reason-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>이성의 부정</th>
+            <th>이성비판</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>기본 태도</strong></td>
+            <td>이성은 믿을 수 없다고 봄</td>
+            <td>이성이 가능한 범위와 한계를 구분함</td>
+          </tr>
+          <tr>
+            <td><strong>목적</strong></td>
+            <td>이성 대신 감정이나 직관을 앞세움</td>
+            <td>이성이 더 책임 있게 작동하도록 함</td>
+          </tr>
+          <tr>
+            <td><strong>주요 질문</strong></td>
+            <td>왜 이성을 믿지 말아야 하는가</td>
+            <td>이성은 무엇을 근거로 어디까지 판단할 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>남는 과제</strong></td>
+            <td>공동 판단의 기준이 약해질 수 있음</td>
+            <td>한계를 알면서도 판단과 책임을 이어 가야 함</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      이성비판은 이성을 약하게 만드는 작업이 아닙니다. 오히려 이성이 자기 확신을 진리처럼 밀어붙이지 않도록 스스로를 점검하게 만듭니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-section">
+    <h2>3. 칸트는 왜 이성을 법정에 세웠는가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 칸트의 비판철학은 이성을 심판받는 피고인으로만 세운 것이 아니라, 이성이 자기 권한과 경계를 판단하게 한 작업이었습니다.
+    </div>
+
+    <p>
+      인간의 이성은 세계를 설명하려 합니다. 경험한 사건의 원인을 찾고, 보편적인 원리를 세우며, 세계 전체가 어떻게 이루어져 있는지 묻습니다.
+    </p>
+
+    <p>
+      그러나 인간이 경험할 수 없는 문제까지 같은 방식으로 판단하려 할 때 어려움이 생깁니다.
+    </p>
+
+    <p>
+      세계에 시작이 있는지, 영혼이 어떤 방식으로 존재하는지, 경험을 넘어선 실재가 무엇인지 이성은 답하려 하지만 서로 반대되는 설명을 만들기도 합니다.
+    </p>
+
+    <p>
+      칸트는 이 혼란을 이성이 부족해서 생긴 문제로만 보지 않았습니다. 이성이 자기 능력이 미치는 범위를 넘어갔기 때문에 생기는 문제라고 보았습니다.
+    </p>
+
+    <div class="rt-reason-flow">
+      <strong class="rt-reason-flow-title">칸트의 이성비판이 묻는 흐름</strong>
+      <div class="rt-reason-flow-step">인간은 감각 경험을 통해 세계와 만남</div>
+      <div class="rt-reason-flow-arrow">↓</div>
+      <div class="rt-reason-flow-step">이성은 경험을 정리하고 보편적 원리를 찾음</div>
+      <div class="rt-reason-flow-arrow">↓</div>
+      <div class="rt-reason-flow-step">경험할 수 없는 영역까지 판단하려 함</div>
+      <div class="rt-reason-flow-arrow">↓</div>
+      <div class="rt-reason-flow-step">이성의 권한과 한계를 스스로 검토함</div>
+    </div>
+
+    <p>
+      이때 비판은 이성을 멈추게 하는 벽이 아닙니다. 무엇을 알 수 있는지 분명히 함으로써 근거 없는 확신을 줄이는 기준이 됩니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-section">
+    <h2>4. 이성은 언제 해방의 힘이 되는가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 이성은 권위와 관습을 그대로 따르지 않고, 누구나 검토할 수 있는 근거를 요구할 때 해방의 힘이 됩니다.
+    </div>
+
+    <p>
+      이성을 비판한다고 해서 이성이 이룬 변화를 가볍게 볼 수는 없습니다.
+    </p>
+
+    <p>
+      이성은 전통과 권위가 옳다는 이유만으로 복종하지 않게 했습니다. 왜 그래야 하는지 묻고, 누구에게나 설명 가능한 근거를 요구하게 했습니다.
+    </p>
+
+    <p>
+      법과 제도도 신분이나 특권보다 보편적인 기준을 가져야 한다는 생각이 힘을 얻었습니다.
+    </p>
+
+    <div class="rt-reason-grid" style="margin: 20px 0;">
+      <div class="rt-reason-grid-item">
+        <strong>권위 비판</strong>
+        <span>오래되었다거나 높은 사람이 말했다는 이유만으로 받아들이지 않습니다.</span>
+      </div>
+
+      <div class="rt-reason-grid-item">
+        <strong>근거 공개</strong>
+        <span>왜 그런 판단을 내렸는지 다른 사람에게 설명하게 합니다.</span>
+      </div>
+
+      <div class="rt-reason-grid-item">
+        <strong>보편적 기준</strong>
+        <span>개인의 지위와 관계없이 적용될 수 있는 원칙을 찾습니다.</span>
+      </div>
+
+      <div class="rt-reason-grid-item">
+        <strong>자기 판단</strong>
+        <span>다른 사람의 명령보다 스스로 생각하고 판단하는 능력을 중시합니다.</span>
+      </div>
+    </div>
+
+    <p>
+      이런 힘 때문에 이성은 자유와 민주주의, 과학적 탐구, 공적 토론의 중요한 조건이 되었습니다.
+    </p>
+
+    <p>
+      문제는 이성이 있다는 사실이 아니라, 하나의 이성만을 절대적인 기준으로 만들 때 생깁니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-section">
+    <h2>5. 이성은 언제 지배의 방식이 되는가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 이성이 무엇이 옳은지를 묻기보다 가장 효율적인 수단만 계산할 때, 인간과 자연은 관리할 대상으로 바뀔 수 있습니다.
+    </div>
+
+    <p>
+      이성은 세계를 이해하게 하지만, 세계를 분류하고 계산하고 통제하게도 합니다.
+    </p>
+
+    <p>
+      자연은 함께 살아가는 환경이 아니라 이용 가능한 자원이 되고, 인간은 고유한 삶을 가진 존재보다 측정 가능한 노동력이나 데이터로 보일 수 있습니다.
+    </p>
+
+    <p>
+      이때 이성은 목적을 질문하지 않습니다. 이미 주어진 목적을 가장 빠르고 효율적으로 달성하는 방법에 집중합니다.
+    </p>
+
+    <div class="rt-reason-table-wrap">
+      <table class="rt-reason-table">
+        <thead>
+          <tr>
+            <th>이성의 작동</th>
+            <th>주는 힘</th>
+            <th>지배로 바뀌는 순간</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>분류</strong></td>
+            <td>복잡한 현실을 이해하게 함</td>
+            <td>분류 밖의 존재를 비정상이나 예외로 밀어냄</td>
+          </tr>
+          <tr>
+            <td><strong>계산</strong></td>
+            <td>비용과 효과를 비교하게 함</td>
+            <td>계산하기 어려운 존엄과 고통을 제외함</td>
+          </tr>
+          <tr>
+            <td><strong>예측</strong></td>
+            <td>위험을 줄이고 준비하게 함</td>
+            <td>사람을 과거 데이터에 따라 미리 판단함</td>
+          </tr>
+          <tr>
+            <td><strong>효율화</strong></td>
+            <td>낭비를 줄이고 절차를 단순하게 함</td>
+            <td>느린 대화와 돌봄을 불필요한 비용으로 봄</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rt-reason-quote">
+      이성은 지배와 반대되는 힘일 수 있지만,<br>
+      모든 것을 계산과 통제의 대상으로 만들 때 스스로 지배의 도구가 될 수도 있습니다.
+    </div>
+
+    <p>
+      이성비판은 이 모순을 봅니다. 인간을 해방한 이성이 어떻게 다시 인간을 관리하는 힘이 될 수 있는지 묻습니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-section">
+    <h2>6. 현대사회는 어떤 이성을 합리적이라고 부르는가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 현대사회에서는 설명하기 쉽고 측정하기 쉬운 것이 합리적인 것으로 인정되지만, 삶의 중요한 부분은 숫자로 완전히 표현되지 않습니다.
+    </div>
+
+    <p>
+      오늘날 합리적인 판단은 자주 데이터와 연결됩니다. 통계가 있고, 수치로 비교할 수 있으며, 결과를 예측할 수 있으면 객관적인 결정처럼 보입니다.
+    </p>
+
+    <p>
+      알고리즘은 수많은 자료를 분석해 사람보다 빠르게 판단합니다. 조직은 성과지표를 만들고, 학교는 점수로 평가하며, 플랫폼은 행동 기록으로 취향을 예측합니다.
+    </p>
+
+    <p>
+      이런 방식은 개인의 편견을 줄일 수 있습니다. 그러나 데이터에 들어간 기준과 누락된 삶까지 자동으로 공정해지는 것은 아닙니다.
+    </p>
+
+    <div class="rt-reason-table-wrap">
+      <table class="rt-reason-table">
+        <thead>
+          <tr>
+            <th>현대의 합리성</th>
+            <th>보이는 장점</th>
+            <th>이성비판이 묻는 것</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>성과지표</strong></td>
+            <td>결과를 비교하고 평가하기 쉬움</td>
+            <td>측정되지 않는 과정과 협력은 어디에 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>알고리즘</strong></td>
+            <td>많은 자료를 빠르게 분석함</td>
+            <td>판단 기준은 누가 정했고 오류는 누가 책임지는가</td>
+          </tr>
+          <tr>
+            <td><strong>최적화</strong></td>
+            <td>가장 효율적인 선택을 찾음</td>
+            <td>효율의 목적은 누구에게 유리한가</td>
+          </tr>
+          <tr>
+            <td><strong>위험 예측</strong></td>
+            <td>문제가 생기기 전에 대비함</td>
+            <td>사람을 가능성이 아니라 확률로 고정하지 않는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      현대의 이성비판은 기술을 거부하는 태도가 아닙니다. 기술적 판단이 어떤 가치와 인간관을 이미 포함하고 있는지 묻는 일입니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-section">
+    <h2>7. 작품 속 이성비판은 어떤 장면에서 드러나는가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 작품 속 이성비판은 뛰어난 지식과 기술이 인간을 구원하기보다 더 큰 위험을 만들 수 있는 순간에 드러납니다.
+    </div>
+
+    <p>
+      이성비판을 작품으로 읽을 때 중요한 것은 이성적인 인물을 차가운 사람으로 판단하는 일이 아닙니다.
+    </p>
+
+    <p>
+      인간이 무엇을 할 수 있게 되었는지와, 그것을 해야 하는지를 구분하지 못하는 장면을 보는 일입니다.
+    </p>
+
+    <h3>7-1) 《닥터 스트레인지러브》 — 합리적인 시스템은 왜 파국으로 향하는가</h3>
+
+    <p>
+      《닥터 스트레인지러브》는 군사 체계와 핵전쟁의 논리가 얼마나 기계적으로 작동할 수 있는지를 풍자합니다.
+    </p>
+
+    <p>
+      시스템 안의 인물들은 전략과 억지력, 절차를 말합니다. 각 판단은 일정한 논리를 가지고 있지만, 그 논리들이 모인 끝에는 인간이 통제하기 어려운 파국이 기다립니다.
+    </p>
+
+    <p>
+      이 작품은 비합리적인 감정만이 위험한 것이 아니라, 목적을 묻지 않는 합리적 절차도 위험할 수 있음을 보여 줍니다.
+    </p>
+
+    <h3>7-2) 《오펜하이머》 — 알 수 있다는 것과 만들어도 된다는 것은 같은가</h3>
+
+    <p>
+      《오펜하이머》는 과학적 지식과 기술적 가능성이 정치적 권력과 만날 때 생기는 책임의 문제를 보여 줍니다.
+    </p>
+
+    <p>
+      자연의 원리를 이해하고 기술로 구현하는 능력은 인간 이성의 성취입니다. 그러나 그 성취가 실제 사용과 결과까지 정당화하지는 않습니다.
+    </p>
+
+    <p>
+      작품은 과학자가 지식을 만들었다는 사실과, 그 지식이 사용된 결과에 대해 어디까지 책임져야 하는지를 묻게 합니다.
+    </p>
+
+    <div class="rt-reason-table-wrap">
+      <table class="rt-reason-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>이성비판이 드러나는 방식</th>
+            <th>철학적 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《닥터 스트레인지러브》</strong></td>
+            <td>논리적인 군사 체계가 인간이 통제하기 어려운 파국으로 향함</td>
+            <td>합리적인 절차들이 모이면 반드시 합리적인 결과가 나오는가</td>
+          </tr>
+          <tr>
+            <td><strong>《오펜하이머》</strong></td>
+            <td>과학적 발견과 정치적 사용 사이에서 책임이 흔들림</td>
+            <td>할 수 있다는 사실은 그것을 해도 된다는 근거가 되는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 이성과 과학을 부정하지 않습니다. 오히려 인간의 지식과 능력이 커질수록 목적과 책임을 더 깊게 물어야 한다는 점을 보여 줍니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-section">
+    <h2>8. 이성비판은 무엇을 설명하고 무엇을 설명하지 못하는가</h2>
+
+    <div class="rt-reason-one-line">
+      👉 이성비판은 합리성의 맹점을 보여 주지만, 모든 사실과 공통 기준을 권력의 산물로만 돌려서는 안 됩니다.
+    </div>
+
+    <p>
+      이성비판은 이성이 언제나 중립적이지 않다는 점을 보여 줍니다.
+    </p>
+
+    <p>
+      무엇을 중요한 문제로 정하고, 어떤 자료를 모으며, 어떤 기준으로 평가할지에는 이미 가치와 사회적 위치가 들어갈 수 있습니다.
+    </p>
+
+    <p>
+      그러나 이성비판이 지나치게 확장되면 또 다른 문제가 생깁니다. 모든 지식과 사실을 하나의 관점이나 권력의 결과로만 설명할 수 있기 때문입니다.
+    </p>
+
+    <p>
+      그렇게 되면 거짓과 사실, 검증된 지식과 근거 없는 주장까지 구분하기 어려워질 수 있습니다.
+    </p>
+
+    <div class="rt-reason-table-wrap">
+      <table class="rt-reason-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>설명 가능한 지점</strong></td>
+            <td>이성비판은 이성이 자신의 한계를 넘거나 계산과 통제의 기준을 절대화할 때 생기는 배제와 지배를 보여 줍니다.</td>
+          </tr>
+          <tr>
+            <td><strong>설명이 부족한 지점</strong></td>
+            <td>모든 이성과 지식을 의심의 대상으로만 만들면 사실 검증과 공적 토론, 공동 판단의 기준까지 약해질 수 있습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 이성비판은 이성을 버리는 일과 이성을 숭배하는 일 사이에 놓입니다.
+    </p>
+
+    <p>
+      근거와 사실을 요구하면서도, 그 근거가 놓친 경험과 그 사실을 구성한 조건을 함께 살피는 일입니다.
+    </p>
+  </section>
+
+  <section class="rt-reason-final">
+    <h2>마지막 질문</h2>
+
+    <p>
+      나는 지금 무엇을 합리적이라고 부르고 있는가.
+    </p>
+
+    <p>
+      그 판단은 정말 현실 전체를 설명하는가, 아니면 내가 중요하다고 정한 일부만 정확하게 계산하고 있는가.
+    </p>
+
+    <p>
+      <strong>이성비판은 이성을 포기하는 일이 아니라, 이성이 자기 확신을 넘어 더 책임 있게 판단하도록 만드는 일입니다.</strong>
+    </p>
+
+    <p>
+      그렇다면 내가 옳다고 믿는 이성의 기준은 누구의 삶을 포함하고 있으며, 누구의 경험을 아직 판단 밖에 남겨 두고 있는가.
+    </p>
+  </section>
+
+  <section class="rt-reason-read">
+    <h2>함께 읽기</h2>
+
+    <p>
+      이성비판은 합리주의·의심·현대성의 문제와 이어집니다. 아래 글은 이성의 힘과 한계가 앎과 현대사회 안에서 어떻게 다시 질문되는지 확장해 읽게 합니다.
+    </p>
+
+    <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+      <strong>Re:Think 현대 철학지도</strong>
+      <span>이성비판을 인식의 문제에만 가두지 않고 권력·규범·기술·타자의 문제와 함께 읽을 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/249" target="_blank" rel="noopener">
+      <strong>Re:Think 인식과 언어 안내지도</strong>
+      <span>이성비판이 합리주의·의심·진리·지식의 문제와 어떻게 이어지는지 전체 흐름 속에서 확인할 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/324" target="_blank" rel="noopener">
+      <strong>의심</strong>
+      <span>이성비판이 모든 것을 부정하기 위한 의심이 아니라 더 정당한 판단의 근거를 찾는 과정임을 함께 읽을 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/334" target="_blank" rel="noopener">
+      <strong>현대성</strong>
+      <span>이성과 진보가 현대사회를 만든 힘이면서 동시에 피로와 지배의 방식이 된 이유를 이어 읽을 수 있습니다.</span>
+    </a>
+  </section>
+
+  <div class="rt-reason-tags">
+    Re:Think, 이성비판 뜻, 이성비판, Critique of Reason, 이성, 합리성, 칸트, 비판철학, 계몽, 도구적 이성, 합리주의, 의심, 현대성, 닥터 스트레인지러브, 오펜하이머, 현대철학
+  </div>
+
+  <div class="rt-reason-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

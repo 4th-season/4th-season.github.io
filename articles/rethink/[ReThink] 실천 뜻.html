@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>실천 뜻 | Re:Think</title>
+  <meta name="description" content="실천 은 생각을 행동으로 옮기는 단순한 실행이 아닙니다. 철학에서 실천은 내가 옳다고 믿는 것을 현실의 관계와 조건 속에서 감당하는 방식입니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rtprac-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 42px;
+    font-family: inherit;
+    color: #28323c;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .rtprac-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rtprac-meta {
+    margin: 0 0 24px;
+    padding: 18px 20px;
+    border-left: 5px solid #6f6548;
+    background: #f8f5ec;
+    border-radius: 12px;
+    color: #4a3f2a;
+    font-size: 0.98rem;
+  }
+
+  .rtprac-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eef3f7 0%, #fff8ec 100%);
+    border: 1px solid #e3d8c6;
+    border-radius: 20px;
+  }
+
+  .rtprac-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #213547;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rtprac-title-like {
+    margin: 0 0 10px;
+    font-size: 1.72rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #213547;
+    letter-spacing: -0.045em;
+  }
+
+  .rtprac-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #6f6548;
+  }
+
+  .rtprac-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rtprac-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #fbf7ec;
+    border: 1px solid #e3dcc8;
+    border-radius: 18px;
+  }
+
+  .rtprac-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #213547;
+  }
+
+  .rtprac-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rtprac-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e0d8c4;
+    border-radius: 14px;
+  }
+
+  .rtprac-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #6f6548;
+    font-size: 1.02rem;
+  }
+
+  .rtprac-grid-item span {
+    display: block;
+    color: #52616b;
+    font-size: 0.94rem;
+  }
+
+  .rtprac-check {
+    margin: 30px 0 34px;
+    padding: 22px;
+    background: #fbfaf6;
+    border: 1px solid #e4dfcf;
+    border-radius: 18px;
+  }
+
+  .rtprac-check-title {
+    margin: 0 0 12px;
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: #213547;
+  }
+
+  .rtprac-check p {
+    margin: 0 0 14px;
+    color: #52616b;
+  }
+
+  .rtprac-check ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .rtprac-check li {
+    margin-bottom: 8px;
+  }
+
+  .rtprac-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eef3f7;
+    border: 1px solid #d4dee7;
+    border-radius: 18px;
+  }
+
+  .rtprac-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #213547;
+  }
+
+  .rtprac-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #d9e3ea;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rtprac-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #213547;
+    list-style: none;
+  }
+
+  .rtprac-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rtprac-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #6f6548;
+  }
+
+  .rtprac-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rtprac-toc-desc {
+    padding: 0 16px 15px;
+    color: #52616b;
+    font-size: 0.95rem;
+    border-top: 1px solid #e3ecef;
+  }
+
+  .rtprac-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #dce5df;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(33, 53, 71, 0.06);
+  }
+
+  .rtprac-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #6f6548;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #213547;
+    letter-spacing: -0.035em;
+  }
+
+  .rtprac-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #6f6548;
+  }
+
+  .rtprac-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #f8f5ec;
+    border-radius: 12px;
+    color: #4a3f2a;
+    font-weight: 700;
+  }
+
+  .rtprac-section p {
+    margin: 0 0 14px;
+  }
+
+  .rtprac-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #eef3f7;
+    border-left: 5px solid #6f6548;
+    border-radius: 12px;
+    color: #213547;
+    font-weight: 700;
+  }
+
+  .rtprac-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rtprac-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rtprac-table th {
+    background: #213547;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #d4dee7;
+    text-align: left;
+  }
+
+  .rtprac-table td {
+    padding: 12px 10px;
+    border: 1px solid #d4dee7;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rtprac-table tr:nth-child(even) td {
+    background: #fbf7ec;
+  }
+
+  .rtprac-final {
+    margin: 42px 0 0;
+    padding: 28px 24px;
+    background: linear-gradient(135deg, #213547 0%, #6f6548 100%);
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  .rtprac-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rtprac-final p {
+    margin: 0 0 12px;
+  }
+
+  .rtprac-related {
+    margin: 40px 0 0;
+    padding: 24px;
+    background: #fbfaf6;
+    border: 1px solid #e4dfcf;
+    border-radius: 20px;
+  }
+
+  .rtprac-related-title {
+    margin: 0 0 16px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #213547;
+  }
+
+  .rtprac-related-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #e4dfcf;
+  }
+
+  .rtprac-related-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .rtprac-related-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #213547;
+    font-size: 1.02rem;
+  }
+
+  .rtprac-related-item p {
+    margin: 0 0 10px;
+    color: #52616b;
+  }
+
+  .rtprac-related-item a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 9px;
+    background: #6f6548;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+
+  .rtprac-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eef3f7;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rtprac-title-like {
+      font-size: 1.44rem;
+    }
+
+    .rtprac-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rtprac-section {
+      padding: 24px 18px;
+    }
+
+    .rtprac-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rtprac-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rtprac-wrap">
+
+  <!-- 메타글 -->
+  <h1 class="seo-h1">[Re:Think] 실천 뜻 - 생각은 언제 현실을 바꾸는 실천이 되는가</h1>
+<div class="rtprac-meta">
+    <strong>실천</strong>은 생각을 행동으로 옮기는 단순한 실행이 아닙니다. 철학에서 실천은 내가 옳다고 믿는 것을 현실의 관계와 조건 속에서 감당하는 방식입니다.
+  </div>
+
+  <!-- 안내 영역 / H1 태그 없음 -->
+  <section class="rtprac-hero">
+    <div class="rtprac-kicker">Re:Think 현대철학사전</div>
+    <div class="rtprac-title-like">실천 뜻</div>
+    <div class="rtprac-subtitle-like">
+      생각은 언제 현실을 바꾸는 실천이 되는가
+    </div>
+
+    <p>
+      우리는 많은 것을 압니다.
+      무엇이 옳은지, 무엇이 문제인지, 어떤 말이 사람을 다치게 하는지,
+      어떤 구조가 누군가를 밀어내는지 알고 있습니다.
+      그런데 아는 것과 실제로 움직이는 것은 다릅니다.
+    </p>
+
+    <p>
+      불편한 장면을 보고도 지나칠 수 있고,
+      옳지 않다고 생각하면서도 침묵할 수 있으며,
+      바꾸어야 한다고 말하면서도 익숙한 방식 안에 머물 수 있습니다.
+      그래서 실천은 단순히 “행동하라”는 말로 끝나지 않습니다.
+    </p>
+
+    <p>
+      <strong>실천</strong>은 생각이 현실과 만나는 자리입니다.
+      내가 믿는 가치가 관계, 시간, 몸, 책임, 두려움, 제도와 부딪힐 때,
+      그 생각은 비로소 삶의 문제로 바뀝니다.
+    </p>
+  </section>
+
+  <!-- 핵심 지도 -->
+  <section class="rtprac-map">
+    <div class="rtprac-map-title">실천 핵심 지도</div>
+
+    <div class="rtprac-grid">
+      <div class="rtprac-grid-item">
+        <strong>기본 뜻</strong>
+        <span>실천은 생각이나 가치를 실제 삶의 행동과 관계 속에서 구현하려는 행위입니다.</span>
+      </div>
+
+      <div class="rtprac-grid-item">
+        <strong>핵심 긴장</strong>
+        <span>아는 것과 하는 것 사이에는 늘 두려움, 조건, 책임, 실패 가능성이 놓여 있습니다.</span>
+      </div>
+
+      <div class="rtprac-grid-item">
+        <strong>철학적 질문</strong>
+        <span>나는 무엇을 옳다고 믿는가, 그리고 그 믿음은 내 삶의 방식까지 바꾸고 있는가를 묻게 합니다.</span>
+      </div>
+
+      <div class="rtprac-grid-item">
+        <strong>주의할 점</strong>
+        <span>실천을 무조건 행동으로만 보면 성급한 강행이 되고, 생각에만 머물면 현실과 분리된 관념이 됩니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 자기점검 -->
+  <section class="rtprac-check">
+    <div class="rtprac-check-title">✅ 실천 감각 자기점검</div>
+    <p data-ke-size="size16">
+      아래 항목은 내가 얼마나 행동적인 사람인지 평가하기 위한 문항이 아닙니다.
+      내가 아는 것과 실제로 사는 방식 사이에 어떤 간격이 있는지 돌아보기 위한 질문입니다.
+    </p>
+    <ul data-ke-list-type="disc">
+      <li>옳지 않다고 생각하면서도 분위기 때문에 침묵한 적이 있다.</li>
+      <li>중요하다고 말하는 가치가 있지만, 실제 생활에서는 자주 뒤로 밀린다고 느낀 적이 있다.</li>
+      <li>무언가를 바꾸고 싶지만, 내가 움직여도 달라질 것이 없다고 느낀 적이 있다.</li>
+      <li>생각은 많아졌지만 정작 작은 행동 하나를 시작하기 어려웠던 적이 있다.</li>
+      <li>실천한다는 말이 때로는 나를 압박하는 또 하나의 기준처럼 느껴진 적이 있다.</li>
+    </ul>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="rtprac-toc">
+    <div class="rtprac-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 실천은 무엇을 뜻하는가</summary>
+      <div class="rtprac-toc-desc">
+        실천을 단순한 실행이 아니라, 생각과 삶이 만나는 철학적 행위로 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 아는 것과 실천하는 것은 왜 다른가</summary>
+      <div class="rtprac-toc-desc">
+        앎이 곧 행동으로 이어지지 않는 이유를 두려움, 관계, 조건의 문제로 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 실천은 왜 개인 의지만으로 설명되지 않는가</summary>
+      <div class="rtprac-toc-desc">
+        실천을 가능하게 하거나 막는 사회적 조건과 관계의 압력을 함께 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 작은 실천은 정말 현실을 바꿀 수 있는가</summary>
+      <div class="rtprac-toc-desc">
+        작은 행동을 과장하지 않으면서도, 그것이 삶의 방향을 어떻게 바꾸는지 묻습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 실천은 언제 폭력적 확신으로 바뀌는가</summary>
+      <div class="rtprac-toc-desc">
+        실천이 신념의 이름으로 타인을 몰아붙일 때 생기는 위험을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 작품으로 읽는 실천</summary>
+      <div class="rtprac-toc-desc">
+        《레 미제라블》과 《택시운전사》를 통해 생각이 삶의 방향과 책임으로 바뀌는 장면을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 실천은 왜 결과만으로 평가하기 어려운가</summary>
+      <div class="rtprac-toc-desc">
+        실천의 의미를 성공과 실패가 아니라 응답과 변화의 과정으로 다시 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 마무리: 나는 무엇을 안다고 말하면서도 아직 살지 못하는가</summary>
+      <div class="rtprac-toc-desc">
+        실천이 남기는 질문을 다시 삶의 자리로 돌려놓습니다.
+      </div>
+    </details>
+  </nav>
+
+  <!-- 1 -->
+  <section class="rtprac-section">
+    <h2>1. 실천은 무엇을 뜻하는가</h2>
+
+    <div class="rtprac-one-line">
+      🙂 <strong>실천</strong>은 생각을 단순히 행동으로 옮기는 일이 아니라, 내가 믿는 가치가 현실의 조건 속에서 몸을 얻는 과정입니다.
+    </div>
+
+    <p data-ke-size="size16">
+      실천은 흔히 “직접 해 보는 것”, “행동으로 옮기는 것”을 뜻합니다.
+      하지만 철학에서 실천은 그보다 더 넓은 문제입니다.
+      실천은 생각이 현실과 만나는 방식입니다.
+      내가 옳다고 믿는 것, 중요하다고 여기는 것, 바꾸어야 한다고 느끼는 것이 실제 삶의 태도와 관계 속에서 드러나는 순간입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그래서 실천은 단순히 움직임이 아닙니다.
+      어떤 행동은 매우 바쁘지만 실천이 아닐 수 있습니다.
+      반대로 어떤 침묵이나 거절, 멈춤은 작은 실천일 수 있습니다.
+      중요한 것은 행동의 크기가 아니라, 그 행동이 어떤 생각과 책임을 담고 있는가입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      실천은 앎과도 연결됩니다.
+      우리는 많은 것을 압니다.
+      차별이 문제라는 것도 알고, 말의 폭력이 사람을 다치게 한다는 것도 알고,
+      소비와 기술과 제도가 우리의 삶을 바꾼다는 것도 압니다.
+      그러나 안다는 사실만으로 현실은 바뀌지 않습니다.
+      앎은 실천을 요구하지만, 실천은 앎보다 어렵습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      실천이 어려운 이유는 그것이 언제나 현실의 저항을 만나기 때문입니다.
+      생각 속에서는 분명해 보이던 가치가 실제 관계 안에서는 복잡해집니다.
+      말하면 갈등이 생길 수 있고, 움직이면 손해를 볼 수 있으며,
+      바꾸려고 하면 누군가의 반발을 마주할 수 있습니다.
+    </p>
+
+    <div class="rtprac-quote">
+      실천은 “나는 이렇게 생각한다”에서 멈추지 않습니다.<br>
+      그것은 “그 생각은 내 삶의 방식 안에서 어떤 흔적을 남기고 있는가”를 묻습니다.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="rtprac-section">
+    <h2>2. 아는 것과 실천하는 것은 왜 다른가</h2>
+
+    <div class="rtprac-one-line">
+      🙂 우리는 몰라서만 움직이지 못하는 것이 아닙니다. 알면서도 움직이기 어려운 조건 속에서 살아갑니다.
+    </div>
+
+    <p data-ke-size="size16">
+      어떤 문제는 몰라서 생깁니다.
+      사실을 모르고, 구조를 모르고, 말의 의미를 몰라서 잘못 판단할 수 있습니다.
+      그러나 많은 경우 우리는 알고도 움직이지 못합니다.
+      문제를 알지만 말하지 못하고,
+      옳지 않다는 것을 알지만 관계를 깨기 두려워하며,
+      바꾸어야 한다는 것을 알지만 내가 감당할 몫이 두려워집니다.
+    </p>
+
+    <p data-ke-size="size16">
+      여기서 실천의 어려움이 드러납니다.
+      앎은 머릿속에 있을 수 있지만, 실천은 몸과 관계와 시간 속에서 일어납니다.
+      생각은 혼자 할 수 있지만, 실천은 대개 다른 사람과의 관계를 흔듭니다.
+      내가 움직이면 누군가는 불편해지고, 익숙한 질서가 흔들리며, 나의 위치도 달라질 수 있습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그래서 “알면 행동해야 한다”는 말은 절반만 맞습니다.
+      앎은 실천의 출발점일 수 있지만, 앎 자체가 곧 실천은 아닙니다.
+      실천에는 용기, 시간, 조건, 언어, 관계, 실패를 감당하는 힘이 필요합니다.
+      때로는 혼자 움직이는 것보다 함께 움직일 수 있는 구조가 필요합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      아는 것과 하는 것 사이의 간격을 너무 쉽게 비난하면,
+      우리는 실천의 현실성을 놓치게 됩니다.
+      왜 말하지 못했는가.
+      무엇이 움직임을 막았는가.
+      어떤 관계가 침묵을 만들었는가.
+      어떤 조건이 작은 행동조차 어렵게 만들었는가.
+      이런 질문도 함께 필요합니다.
+    </p>
+
+    <div class="rtprac-table-wrap">
+      <table class="rtprac-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>앎</th>
+            <th>실천</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>중심</strong></td>
+            <td>무엇이 문제인지 이해함</td>
+            <td>그 이해를 삶의 방식 안에서 감당함</td>
+          </tr>
+          <tr>
+            <td><strong>위치</strong></td>
+            <td>생각과 판단의 영역</td>
+            <td>몸, 관계, 제도, 시간의 영역</td>
+          </tr>
+          <tr>
+            <td><strong>어려움</strong></td>
+            <td>모호함과 무지</td>
+            <td>두려움, 손해, 책임, 갈등</td>
+          </tr>
+          <tr>
+            <td><strong>질문</strong></td>
+            <td>나는 무엇을 알고 있는가</td>
+            <td>그 앎은 내 삶을 어떻게 바꾸고 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="rtprac-section">
+    <h2>3. 실천은 왜 개인 의지만으로 설명되지 않는가</h2>
+
+    <div class="rtprac-one-line">
+      🙂 실천은 개인의 의지에서 시작될 수 있지만, 그 의지를 가능하게 하거나 막는 조건은 늘 함께 작동합니다.
+    </div>
+
+    <p data-ke-size="size16">
+      실천을 말할 때 가장 쉬운 방식은 개인에게만 요구하는 것입니다.
+      용기를 내라.
+      행동하라.
+      말만 하지 말고 움직여라.
+      이런 말은 때로 필요합니다.
+      그러나 실천을 개인 의지만으로 설명하면, 실천을 어렵게 만드는 조건들이 보이지 않게 됩니다.
+    </p>
+
+    <p data-ke-size="size16">
+      사람은 같은 문제를 보더라도 같은 위치에 있지 않습니다.
+      누군가는 말해도 안전하지만, 누군가는 말하는 순간 관계와 생계가 흔들릴 수 있습니다.
+      누군가는 작은 거절을 할 수 있지만, 누군가는 그 거절 때문에 돌봄과 생활의 기반을 잃을 수 있습니다.
+      겉으로 같은 침묵처럼 보여도 그 침묵의 조건은 다릅니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그래서 실천은 개인의 도덕성만으로 평가하기 어렵습니다.
+      실천에는 권한의 차이, 정보의 차이, 위험의 차이, 관계의 차이가 들어 있습니다.
+      어떤 사람에게는 작은 행동이지만, 다른 사람에게는 큰 위험일 수 있습니다.
+      실천을 말할 때 이 차이를 지우면 실천은 성찰이 아니라 압박이 됩니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그렇다고 조건만 말하면 실천의 가능성도 사라집니다.
+      조건이 어렵다는 말은 중요하지만, 그것이 모든 침묵과 회피를 자동으로 정당화하지는 않습니다.
+      Re:Think의 관점에서 실천은 이 둘 사이에서 읽어야 합니다.
+      개인에게 책임을 묻되, 그 책임이 놓인 조건도 함께 보아야 합니다.
+    </p>
+
+    <div class="rtprac-quote">
+      실천을 묻는다는 것은 “왜 너는 하지 않았는가”만 묻는 일이 아닙니다.<br>
+      그것은 “무엇이 그 실천을 가능하게 하거나 불가능하게 만들었는가”를 함께 묻는 일입니다.
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="rtprac-section">
+    <h2>4. 작은 실천은 정말 현실을 바꿀 수 있는가</h2>
+
+    <div class="rtprac-one-line">
+      🙂 작은 실천 하나가 세계 전체를 바꾸지는 못할 수 있습니다. 그러나 그것은 내가 세계와 관계 맺는 방식을 바꿀 수 있습니다.
+    </div>
+
+    <p data-ke-size="size16">
+      실천을 말할 때 자주 생기는 회의가 있습니다.
+      내가 한다고 뭐가 달라질까.
+      한 사람이 움직인다고 구조가 바뀔까.
+      이런 질문은 가볍게 넘길 수 없습니다.
+      실제로 작은 실천 하나가 거대한 현실을 곧바로 바꾸지는 못합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그러나 실천의 의미를 결과의 크기로만 판단하면 놓치는 것이 있습니다.
+      작은 실천은 세계 전체를 한 번에 바꾸지 못해도,
+      내가 그 세계 안에서 어떤 사람으로 서 있는지를 바꿉니다.
+      침묵하던 사람이 말하기 시작하고,
+      당연하게 받아들이던 기준을 의심하며,
+      관계 안에서 다른 방식을 시도하는 순간 삶의 방향은 조금 달라집니다.
+    </p>
+
+    <p data-ke-size="size16">
+      작은 실천은 또한 다른 사람에게 보이지 않는 가능성을 열 수 있습니다.
+      누군가의 한마디, 작은 거절, 다른 방식의 돌봄, 반복되는 습관의 변화는
+      대단한 선언이 아니어도 주변의 감각을 바꿀 수 있습니다.
+      실천은 늘 거대한 운동의 형태로만 나타나지 않습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      다만 작은 실천을 과장해서도 안 됩니다.
+      작은 행동만으로 모든 구조가 바뀐다고 말하면, 실천은 자기위안이 될 수 있습니다.
+      중요한 것은 작은 실천을 절대화하지 않으면서도,
+      그것이 삶의 방향을 바꾸는 출발점이 될 수 있음을 놓치지 않는 것입니다.
+    </p>
+
+    <div class="rtprac-table-wrap">
+      <table class="rtprac-table">
+        <thead>
+          <tr>
+            <th>작은 실천</th>
+            <th>바로 바꾸기 어려운 것</th>
+            <th>그래도 남기는 변화</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>불편한 말에 질문하기</strong></td>
+            <td>관계 전체의 권력 구조</td>
+            <td>침묵이 당연하지 않다는 신호</td>
+          </tr>
+          <tr>
+            <td><strong>익숙한 소비를 멈춰 보기</strong></td>
+            <td>시장 전체의 구조</td>
+            <td>내 욕망의 방향을 다시 보는 계기</td>
+          </tr>
+          <tr>
+            <td><strong>역할을 거절하기</strong></td>
+            <td>오래된 기대와 관습</td>
+            <td>내가 무엇을 감당하지 않을지 정하는 감각</td>
+          </tr>
+          <tr>
+            <td><strong>다른 방식으로 돌보기</strong></td>
+            <td>제도의 빈자리</td>
+            <td>관계 안에서 책임을 다시 나누는 경험</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="rtprac-section">
+    <h2>5. 실천은 언제 폭력적 확신으로 바뀌는가</h2>
+
+    <div class="rtprac-one-line">
+      🙂 실천은 필요하지만, 내가 옳다는 확신만으로 타인을 몰아붙일 때 실천은 또 다른 폭력이 될 수 있습니다.
+    </div>
+
+    <p data-ke-size="size16">
+      실천은 좋은 말처럼 들립니다.
+      생각만 하지 말고 움직여야 한다는 말은 설득력이 있습니다.
+      그러나 실천을 무조건 긍정할 수만은 없습니다.
+      어떤 실천은 다른 사람의 조건을 보지 못한 채 밀어붙이는 강요가 될 수 있습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      실천이 위험해지는 첫 번째 순간은 복잡한 현실을 단순한 정답으로 만들 때입니다.
+      “이렇게 해야 한다”는 말이 너무 빨리 나오면,
+      그 안에서 다른 사람의 망설임과 두려움, 조건의 차이는 사라집니다.
+      실천이 생각을 현실로 옮기는 일이라면, 그 현실의 복잡성도 함께 보아야 합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      두 번째 위험은 실천을 도덕적 우월감으로 사용할 때입니다.
+      나는 행동하고 너는 침묵한다.
+      나는 깨어 있고 너는 무지하다.
+      이런 구도가 생기면 실천은 현실을 바꾸는 힘이 아니라 사람을 나누는 기준이 됩니다.
+      실천의 이름으로 타인을 쉽게 판단하는 순간, 실천은 성찰을 잃습니다.
+    </p>
+
+    <p data-ke-size="size16">
+      세 번째 위험은 결과에 대한 책임 없이 행동만 강조할 때입니다.
+      실천은 움직임만이 아니라 응답입니다.
+      내가 한 행동이 어떤 영향을 만들었는지,
+      의도하지 않은 피해는 없었는지,
+      이후에 어떤 책임을 져야 하는지 묻지 않는 행동은 실천이라기보다 자기확신의 분출일 수 있습니다.
+    </p>
+
+    <div class="rtprac-quote">
+      실천은 확신의 속도가 아니라 응답의 깊이에서 판단되어야 합니다.<br>
+      무엇을 했는가만큼, 그 행동 이후 무엇을 보고 들었는가도 중요합니다.
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="rtprac-section">
+    <h2>6. 작품으로 읽는 실천</h2>
+
+    <div class="rtprac-one-line">
+      🙂 작품 속 실천은 인물이 거창한 구호를 외치는 순간보다, 자신이 본 현실을 더 이상 못 본 척하지 못하는 순간에 드러납니다.
+    </div>
+
+    <h3>6-1) 《레 미제라블》 — 한 사람의 변화가 삶의 방식이 될 때</h3>
+
+    <p data-ke-size="size16">
+      《레 미제라블》에서 실천은 단순한 선행의 문제가 아닙니다.
+      한 인물이 받은 용서와 신뢰는 그의 삶 전체를 바꾸는 기준이 됩니다.
+      중요한 것은 그가 좋은 생각을 갖게 되었다는 사실만이 아닙니다.
+      그 생각이 이후의 선택, 관계, 책임의 방식으로 이어진다는 점입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 작품에서 실천은 마음속 결심으로 끝나지 않습니다.
+      누군가를 살리고, 책임지고, 자신의 안전을 내려놓고,
+      과거의 삶과 다른 방식으로 살아가려는 반복된 선택 속에서 실천이 드러납니다.
+      실천은 한 번의 감동이 아니라 삶의 방향을 바꾸는 지속적인 응답입니다.
+    </p>
+
+    <h3>6-2) 《택시운전사》 — 본 것을 외면하지 않는다는 것</h3>
+
+    <p data-ke-size="size16">
+      《택시운전사》에서 실천은 처음부터 거대한 신념으로 시작되지 않습니다.
+      인물은 처음에는 자신의 생계와 눈앞의 일을 먼저 생각합니다.
+      그러나 어떤 현실을 직접 보고, 그 현실을 더 이상 외면하기 어려워질 때,
+      그의 행동은 조금씩 달라집니다.
+    </p>
+
+    <p data-ke-size="size16">
+      이 작품이 실천을 보여 주는 방식은 중요합니다.
+      실천은 항상 완벽한 사람의 용기에서만 나오지 않습니다.
+      때로는 우연히 본 장면,
+      마음에 남은 얼굴,
+      설명하기 어려운 부끄러움과 책임감에서 시작됩니다.
+      사람은 처음부터 준비된 주체가 아니라, 현실과 마주치면서 조금씩 움직이는 존재일 수 있습니다.
+    </p>
+
+    <div class="rtprac-table-wrap">
+      <table class="rtprac-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>실천이 드러나는 지점</th>
+            <th>남는 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《레 미제라블》</strong></td>
+            <td>받은 신뢰와 용서를 삶의 방식으로 이어 가는 과정</td>
+            <td>좋은 생각은 언제 반복된 삶의 태도가 되는가</td>
+          </tr>
+          <tr>
+            <td><strong>《택시운전사》</strong></td>
+            <td>본 것을 더 이상 못 본 척하지 못하고 움직이는 순간</td>
+            <td>나는 무엇을 보고도 아직 모른 척하고 있는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="rtprac-section">
+    <h2>7. 실천은 왜 결과만으로 평가하기 어려운가</h2>
+
+    <div class="rtprac-one-line">
+      🙂 실천은 결과를 향하지만, 결과만으로 그 의미가 완전히 결정되지는 않습니다.
+    </div>
+
+    <p data-ke-size="size16">
+      실천은 현실을 향합니다.
+      그래서 결과를 묻지 않을 수 없습니다.
+      아무 결과도 만들지 못하는 행동을 무조건 의미 있다고 말하기는 어렵습니다.
+      실천은 세계와 관계 맺는 행위이기 때문에, 그것이 실제로 어떤 변화를 만들었는지 살펴야 합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그러나 실천을 결과만으로 평가하면 또 다른 문제가 생깁니다.
+      모든 실천이 즉각적인 성과로 나타나지는 않습니다.
+      어떤 실천은 실패처럼 보이지만 이후의 질문을 남기고,
+      어떤 실천은 작은 균열을 만들며,
+      어떤 실천은 결과보다 과정 속에서 사람의 감각을 바꿉니다.
+    </p>
+
+    <p data-ke-size="size16">
+      결과만을 기준으로 삼으면 사람은 쉽게 냉소하게 됩니다.
+      해 봐도 소용없다.
+      바뀌는 것은 없다.
+      결국 구조는 그대로다.
+      이런 말에는 현실감이 있습니다.
+      그러나 그 말이 너무 강해지면, 우리는 아무것도 하지 않는 이유를 너무 쉽게 얻게 됩니다.
+    </p>
+
+    <p data-ke-size="size16">
+      반대로 결과를 전혀 보지 않는 실천도 위험합니다.
+      나는 좋은 의도로 했다는 말만으로 충분하지 않습니다.
+      좋은 의도가 누군가에게 어떤 영향을 주었는지,
+      내가 바꾸려던 현실을 더 단순하게 만들지는 않았는지,
+      실천 이후에도 계속 응답하고 있는지 물어야 합니다.
+    </p>
+
+    <div class="rtprac-quote">
+      실천은 성공과 실패 사이에만 놓이지 않습니다.<br>
+      그것은 내가 어떤 현실 앞에서 응답하려 했는지, 그리고 그 응답이 나와 세계를 어떻게 바꾸었는지를 묻는 과정입니다.
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="rtprac-final">
+    <h2>마무리: 나는 무엇을 안다고 말하면서도 아직 살지 못하는가</h2>
+
+    <p data-ke-size="size16">
+      실천은 생각의 반대말이 아닙니다.
+      오히려 실천은 생각이 현실 속에서 자기 무게를 얻는 과정입니다.
+      말로는 분명해 보이던 가치가 관계와 제도와 두려움 앞에서 흔들릴 때,
+      우리는 내가 정말 무엇을 믿고 있었는지 알게 됩니다.
+    </p>
+
+    <p data-ke-size="size16">
+      실천은 단순히 더 많이 행동하라는 명령이 아닙니다.
+      때로 실천은 말하는 일이고,
+      때로는 멈추는 일이며,
+      때로는 거절하는 일이고,
+      때로는 책임을 피하지 않고 남아 있는 일입니다.
+      중요한 것은 행동의 크기가 아니라 그 행동이 어떤 질문과 책임에서 나왔는가입니다.
+    </p>
+
+    <p data-ke-size="size16">
+      그렇다고 실천을 쉽게 낭만화할 수도 없습니다.
+      작은 실천이 모든 것을 바꾸지는 못합니다.
+      실천은 실패할 수 있고, 오해받을 수 있으며, 의도하지 않은 결과를 만들 수도 있습니다.
+      그래서 실천은 확신보다 성찰을 필요로 합니다.
+    </p>
+
+    <p data-ke-size="size16">
+      <strong>
+        나는 무엇을 안다고 말하면서도 아직 살지 못하고 있는가.
+        내가 옳다고 믿는 것은 내 말 속에만 있는가,
+        아니면 내 관계와 선택과 반복되는 생활 속에서도 조금씩 모습을 얻고 있는가.
+        그리고 내가 실천하지 못한다고 느끼는 그 자리에는
+        나의 두려움만 있는가, 아니면 내가 함께 읽어야 할 현실의 조건도 놓여 있는가.
+      </strong>
+    </p>
+  </section>
+
+  <!-- 함께 읽기 -->
+  <section class="rtprac-related">
+    <div class="rtprac-related-title">📚 함께 읽기</div>
+
+    <div class="rtprac-related-item">
+      <strong>6 Re:Lenz 안내 지도 - 세상을 읽는 여섯 개의 렌즈</strong>
+      <p data-ke-size="size16">
+        실천을 개인의 의지로만 보지 않고, 철학·사회·언어·경제·상징의 여러 렌즈로 함께 읽어 보고 싶을 때 연결됩니다.
+      </p>
+      <a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener">읽으러 가기</a>
+    </div>
+
+    <div class="rtprac-related-item">
+      <strong>[Re:Think] 인간의 조건 안내지도 - 존재·자유·정체성으로 읽는 현대 철학사전</strong>
+      <p data-ke-size="size16">
+        실천을 자유와 책임의 흐름 안에서 어디에 놓을 수 있는지 전체 구조로 확인할 수 있습니다.
+      </p>
+      <a href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener">읽으러 가기</a>
+    </div>
+
+    <div class="rtprac-related-item">
+      <strong>[Re:Think] 실존주의 뜻 - 인간은 왜 정해진 답보다 자기 선택 앞에서 흔들리는가</strong>
+      <p data-ke-size="size16">
+        실천이 왜 정답을 아는 문제가 아니라 자기 삶을 직접 살아 내는 문제와 연결되는지 함께 읽을 수 있습니다.
+      </p>
+      <a href="https://pencilgon.tistory.com/266" target="_blank" rel="noopener">읽으러 가기</a>
+    </div>
+
+    <div class="rtprac-related-item">
+      <strong>[Re:Think] 책임 뜻 - 나는 정말 내 선택의 주인인가</strong>
+      <p data-ke-size="size16">
+        실천 이후에 남는 응답과 감당의 문제를 책임이라는 개념으로 더 깊게 이어 읽을 수 있습니다.
+      </p>
+      <a href="https://pencilgon.tistory.com/307" target="_blank" rel="noopener">읽으러 가기</a>
+    </div>
+  </section>
+
+  <!-- 태그 -->
+  <div class="rtprac-tags">
+    ReThink, 현대철학사전, 실천, 실천뜻, Practice, Praxis, 책임, 실존주의, 자유와책임, 행동과사유, 철학개념, 삶의실천, 현대철학
+  </div>
+
+  <!-- 하단 고정 문구 -->
+  <div class="rtprac-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>

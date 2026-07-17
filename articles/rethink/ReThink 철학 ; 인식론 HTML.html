@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>인식론 | Re:Think</title>
+  <meta name="description" content="인식론 은 인간이 무엇을 알고, 어떤 근거로 그것을 안다고 말하며, 지식과 믿음&#183;착각&#183;의견을 어떻게 구분할 수 있는지를 묻는 철학의 영역입니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="rethink-hero.css">
+  <script src="rethink-hero.js" defer></script>
+</head>
+<body>
+<style>
+  .rt-epist-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #29323d;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .rt-epist-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rt-epist-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #d97706;
+    background: #fffbeb;
+    border-radius: 10px;
+    color: #78350f;
+    font-size: 0.98rem;
+  }
+
+  .rt-epist-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #eff6ff 0%, #fffbeb 100%);
+    border: 1px solid #bfdbfe;
+    border-radius: 18px;
+  }
+
+  .rt-epist-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #1e3a8a;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rt-epist-title-like {
+    margin: 0 0 8px;
+    font-size: 1.78rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: -0.045em;
+  }
+
+  .rt-epist-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #d97706;
+  }
+
+  .rt-epist-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rt-epist-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+  }
+
+  .rt-epist-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #1e3a8a;
+  }
+
+  .rt-epist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rt-epist-grid-item {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #fde68a;
+    border-radius: 13px;
+  }
+
+  .rt-epist-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #d97706;
+    font-size: 1.02rem;
+  }
+
+  .rt-epist-grid-item span {
+    display: block;
+    color: #475569;
+    font-size: 0.94rem;
+  }
+
+  .rt-epist-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+  }
+
+  .rt-epist-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #1e3a8a;
+  }
+
+  .rt-epist-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rt-epist-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #1e3a8a;
+    list-style: none;
+  }
+
+  .rt-epist-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rt-epist-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #d97706;
+  }
+
+  .rt-epist-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rt-epist-toc-desc {
+    padding: 0 16px 15px;
+    color: #475569;
+    font-size: 0.95rem;
+    border-top: 1px solid #e0edff;
+  }
+
+  .rt-epist-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.06);
+  }
+
+  .rt-epist-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d97706;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #1e3a8a;
+    letter-spacing: -0.035em;
+  }
+
+  .rt-epist-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #d97706;
+  }
+
+  .rt-epist-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #fffbeb;
+    border-radius: 12px;
+    color: #78350f;
+    font-weight: 600;
+  }
+
+  .rt-epist-section p {
+    margin: 0 0 14px;
+  }
+
+  .rt-epist-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #eff6ff;
+    border-left: 5px solid #d97706;
+    border-radius: 10px;
+    color: #1e3a8a;
+    font-weight: 700;
+  }
+
+  .rt-epist-flow {
+    margin: 22px 0;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+  }
+
+  .rt-epist-flow-title {
+    display: block;
+    margin-bottom: 10px;
+    color: #d97706;
+    font-weight: 800;
+  }
+
+  .rt-epist-flow-step {
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
+    color: #475569;
+  }
+
+  .rt-epist-flow-arrow {
+    text-align: center;
+    color: #d97706;
+    font-weight: 800;
+  }
+
+  .rt-epist-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rt-epist-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rt-epist-table th {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #bfdbfe;
+    text-align: left;
+  }
+
+  .rt-epist-table td {
+    padding: 12px 10px;
+    border: 1px solid #bfdbfe;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rt-epist-table tr:nth-child(even) td {
+    background: #fffbeb;
+  }
+
+  .rt-epist-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #d97706 100%);
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rt-epist-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rt-epist-final p {
+    margin: 0 0 12px;
+  }
+
+  .rt-epist-read {
+    margin: 38px 0 30px;
+    padding: 24px 22px;
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+  }
+
+  .rt-epist-read h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    color: #1e3a8a;
+  }
+
+  .rt-epist-read p {
+    margin: 0 0 20px;
+    color: #52616b;
+  }
+
+  .rt-epist-read a {
+    display: block;
+    padding: 17px 18px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #1f2937;
+  }
+
+  .rt-epist-read a + a {
+    margin-top: 14px;
+  }
+
+  .rt-epist-read strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e3a8a;
+  }
+
+  .rt-epist-read span {
+    display: block;
+    color: #4b5563;
+  }
+
+  .rt-epist-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #eff6ff;
+    border-radius: 14px;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rt-epist-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rt-epist-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-epist-section {
+      padding: 24px 18px;
+    }
+
+    .rt-epist-section h2 {
+      font-size: 1.28rem;
+    }
+
+    .rt-epist-table {
+      min-width: 560px;
+    }
+  }
+
+  .seo-h1 {
+    margin: 0 0 18px;
+    color: #234744;
+    font-size: clamp(1.85rem, 4vw, 2.35rem);
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+  }</style>
+
+<div class="rt-epist-wrap">
+
+  <h1 class="seo-h1">[Re:Think] 인식론 뜻 - 우리는 어떻게 안다고 말할 수 있는가</h1>
+<div class="rt-epist-meta">
+    <strong>인식론</strong>은 인간이 무엇을 알고, 어떤 근거로 그것을 안다고 말하며, 지식과 믿음·착각·의견을 어떻게 구분할 수 있는지를 묻는 철학의 영역입니다.
+  </div>
+
+  <section class="rt-epist-hero">
+    <div class="rt-epist-kicker">Re:Think 철학</div>
+    <div class="rt-epist-title-like">인식론 뜻</div>
+    <div class="rt-epist-subtitle-like">
+      우리는 어떻게 안다고 말할 수 있는가
+    </div>
+
+    <p>
+      단체 채팅방에 놀라운 소식이 올라옵니다. 누군가는 곧바로 다른 사람에게 전달하고, 누군가는 출처부터 묻습니다.
+    </p>
+
+    <p>
+      “그게 사실이야?” “어디서 봤어?” “직접 확인한 거야?” “뉴스에 나왔대.”
+    </p>
+
+    <p>
+      우리는 매일 수많은 정보를 접하지만, 모든 정보를 같은 방식으로 믿지는 않습니다. 직접 보았다는 말, 전문가의 설명, 여러 사람이 반복하는 이야기, 숫자로 표시된 자료에 서로 다른 무게를 둡니다.
+    </p>
+
+    <p>
+      그런데 직접 본 것은 언제나 사실일까요. 전문가의 말은 항상 믿을 수 있을까요. 많은 사람이 믿는다고 해서 진실이 되는 걸까요.
+    </p>
+
+    <p>
+      철학에서 말하는 <strong>인식론</strong>은 바로 이 질문에서 시작됩니다. 인식론은 무엇이 참인가만 묻는 것이 아니라, 인간이 어떤 근거로 그것을 참이라고 판단하는지 묻습니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-map">
+    <div class="rt-epist-map-title">인식론 핵심 지도</div>
+
+    <div class="rt-epist-grid">
+      <div class="rt-epist-grid-item">
+        <strong>기본 뜻</strong>
+        <span>무엇을 안다는 것이며, 지식은 어떤 근거를 가져야 하는지를 묻는 철학입니다.</span>
+      </div>
+
+      <div class="rt-epist-grid-item">
+        <strong>핵심 구분</strong>
+        <span>지식과 믿음, 사실과 의견, 근거와 확신이 어떻게 다른지 살펴봅니다.</span>
+      </div>
+
+      <div class="rt-epist-grid-item">
+        <strong>주요 질문</strong>
+        <span>경험, 이성, 기억, 증언 가운데 무엇을 얼마나 믿을 수 있는가를 묻습니다.</span>
+      </div>
+
+      <div class="rt-epist-grid-item">
+        <strong>현대적 배경</strong>
+        <span>정보 과잉, 가짜뉴스, 알고리즘 추천, 전문가 불신의 시대에 더 중요해진 질문입니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rt-epist-toc">
+    <div class="rt-epist-toc-title">목차</div>
+
+    <details open>
+      <summary>1. 우리는 언제 “안다”고 말하는가</summary>
+      <div class="rt-epist-toc-desc">
+        출처와 근거를 확인하는 일상의 대화에서 인식론의 질문을 시작합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>2. 인식론은 무엇을 묻는 철학인가</summary>
+      <div class="rt-epist-toc-desc">
+        지식·믿음·진리·근거의 관계를 중심으로 인식론의 기본 뜻을 정리합니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>3. 지식과 믿음은 어떻게 다른가</summary>
+      <div class="rt-epist-toc-desc">
+        강한 확신이 곧 지식이 될 수 없는 이유와 근거의 문제를 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>4. 경험과 이성은 무엇을 알려 주는가</summary>
+      <div class="rt-epist-toc-desc">
+        직접 경험과 논리적 사고가 지식을 만드는 서로 다른 방식을 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>5. 타인의 말을 믿는 것도 지식이 될 수 있는가</summary>
+      <div class="rt-epist-toc-desc">
+        뉴스, 전문가, 교사, 가족의 말을 통해 얻는 증언적 지식의 조건을 살펴봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>6. 현대사회는 어떻게 앎의 기준을 흔드는가</summary>
+      <div class="rt-epist-toc-desc">
+        정보 과잉과 알고리즘이 우리가 사실을 판단하는 방식을 어떻게 바꾸는지 봅니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>7. 작품 속 인식론은 어떤 장면에서 드러나는가</summary>
+      <div class="rt-epist-toc-desc">
+        《라쇼몽》과 《메멘토》를 통해 기억, 관점, 증언의 한계를 읽습니다.
+      </div>
+    </details>
+
+    <details>
+      <summary>8. 인식론은 무엇을 설명하고 무엇을 설명하지 못하는가</summary>
+      <div class="rt-epist-toc-desc">
+        근거 있는 앎의 조건과, 앎을 둘러싼 권력과 사회적 조건을 함께 묻습니다.
+      </div>
+    </details>
+  </nav>
+
+  <section class="rt-epist-section">
+    <h2>1. 우리는 언제 “안다”고 말하는가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 우리는 보았거나 들었거나 확인했다고 느낄 때 “안다”고 말하지만, 그 근거는 언제나 같은 무게를 갖지 않습니다.
+    </div>
+
+    <p>
+      우리는 하루에도 여러 번 “알아”라는 말을 사용합니다. 길을 알고, 사람을 알고, 사건의 원인을 알고, 누군가의 마음도 안다고 말합니다.
+    </p>
+
+    <p>
+      그러나 이 말들은 서로 다른 종류의 앎을 가리킵니다. 길을 아는 것은 익숙한 경험과 관련되고, 사건의 원인을 아는 것은 자료와 설명을 필요로 합니다.
+    </p>
+
+    <p>
+      누군가의 마음을 안다는 말은 더 조심스럽습니다. 표정과 말투를 보았더라도 그 사람의 마음 전체를 확인한 것은 아니기 때문입니다.
+    </p>
+
+    <p>
+      우리는 자주 작은 단서를 전체 사실처럼 받아들입니다. 한 장면을 보고 사람을 판단하고, 짧은 문장을 읽고 사건 전체를 안다고 느낍니다.
+    </p>
+
+    <div class="rt-epist-quote">
+      인식론의 첫 질문은 “무엇이 진실인가”에 앞서,<br>
+      “나는 무엇을 근거로 안다고 말하고 있는가”입니다.
+    </div>
+
+    <p>
+      이 질문은 지나친 의심을 만들기 위한 것이 아닙니다. 내가 가진 확신이 무엇 위에 서 있는지 확인하게 만드는 질문입니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-section">
+    <h2>2. 인식론은 무엇을 묻는 철학인가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 인식론은 인간의 지식이 어디에서 오며, 어떤 조건을 갖출 때 정당한 앎이 되는지를 묻습니다.
+    </div>
+
+    <p>
+      인식론(Epistemology)은 지식과 앎의 가능성, 범위, 근거를 다루는 철학의 영역입니다.
+    </p>
+
+    <p>
+      인간은 세계를 있는 그대로 알 수 있는지, 감각은 얼마나 믿을 수 있는지, 이성만으로 진리에 도달할 수 있는지 묻습니다.
+    </p>
+
+    <p>
+      또한 틀릴 가능성이 있는데도 어떻게 지식을 말할 수 있는지, 어느 정도의 근거가 있어야 믿음이 지식이 되는지도 살펴봅니다.
+    </p>
+
+    <div class="rt-epist-table-wrap">
+      <table class="rt-epist-table">
+        <thead>
+          <tr>
+            <th>인식론의 질문</th>
+            <th>살펴보는 문제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>무엇을 알 수 있는가</strong></td>
+            <td>인간이 알 수 있는 범위와 한계</td>
+          </tr>
+          <tr>
+            <td><strong>어떻게 알 수 있는가</strong></td>
+            <td>경험, 이성, 기억, 증언의 역할</td>
+          </tr>
+          <tr>
+            <td><strong>왜 믿어도 되는가</strong></td>
+            <td>믿음을 정당화하는 근거와 절차</td>
+          </tr>
+          <tr>
+            <td><strong>틀릴 수 있는데도 지식인가</strong></td>
+            <td>오류 가능성과 지식의 관계</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      인식론은 정답을 많이 가진 사람이 되는 법을 가르치는 철학이 아닙니다.
+    </p>
+
+    <p>
+      오히려 내가 안다고 믿는 순간, 그 앎의 근거와 한계를 함께 살피게 하는 철학입니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-section">
+    <h2>3. 지식과 믿음은 어떻게 다른가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 어떤 말을 강하게 믿는다는 사실만으로 그 믿음이 지식이 되지는 않습니다.
+    </div>
+
+    <p>
+      믿음은 인간의 삶을 움직입니다. 우리는 미래가 나아질 것이라고 믿고, 어떤 사람이 나를 돕거나 해칠 것이라고 믿으며 행동합니다.
+    </p>
+
+    <p>
+      그러나 확신의 강도와 믿음의 진실성은 같은 것이 아닙니다. 틀린 내용을 매우 강하게 믿을 수도 있기 때문입니다.
+    </p>
+
+    <p>
+      전통적으로 지식은 참인 믿음이며, 그 믿음을 뒷받침할 정당한 근거가 있어야 한다고 설명되어 왔습니다.
+    </p>
+
+    <p>
+      하지만 근거가 있는 참된 믿음이라도 우연히 맞아떨어진 것이라면 정말 지식이라고 할 수 있는지 다시 질문이 생깁니다.
+    </p>
+
+    <div class="rt-epist-flow">
+      <strong class="rt-epist-flow-title">믿음이 지식으로 인정되기 위해 묻게 되는 것</strong>
+      <div class="rt-epist-flow-step">나는 어떤 내용을 믿고 있음</div>
+      <div class="rt-epist-flow-arrow">↓</div>
+      <div class="rt-epist-flow-step">그 내용은 실제로 참인가</div>
+      <div class="rt-epist-flow-arrow">↓</div>
+      <div class="rt-epist-flow-step">그 믿음을 뒷받침하는 근거가 있는가</div>
+      <div class="rt-epist-flow-arrow">↓</div>
+      <div class="rt-epist-flow-step">그 결론은 단순히 우연히 맞은 것은 아닌가</div>
+    </div>
+
+    <p>
+      지식은 단순한 확신보다 까다롭습니다. 무엇을 믿는지뿐 아니라, 왜 믿는지와 그 믿음이 어떻게 사실과 연결되는지를 함께 견뎌야 합니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-section">
+    <h2>4. 경험과 이성은 무엇을 알려 주는가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 경험은 세계와 접촉하게 하고, 이성은 그 경험을 연결하고 판단하게 하지만 둘 모두 오류에서 완전히 자유롭지는 않습니다.
+    </div>
+
+    <p>
+      우리는 직접 본 것을 강하게 믿습니다. 눈앞에서 일어난 장면은 다른 사람에게 들은 이야기보다 확실하게 느껴집니다.
+    </p>
+
+    <p>
+      그러나 감각은 때때로 우리를 속입니다. 멀리 있는 물체를 작게 보고, 같은 색도 주변 환경에 따라 다르게 느끼며, 기대한 장면을 실제보다 더 쉽게 발견합니다.
+    </p>
+
+    <p>
+      이성은 감각의 한계를 보완합니다. 여러 경험을 비교하고, 원인과 결과를 연결하며, 모순이 없는지 살펴봅니다.
+    </p>
+
+    <p>
+      하지만 이성도 언제나 중립적으로 작동하지는 않습니다. 잘못된 전제에서 논리적인 결론을 만들 수 있고, 보고 싶은 자료만 골라 합리적인 설명을 만들 수도 있습니다.
+    </p>
+
+    <div class="rt-epist-table-wrap">
+      <table class="rt-epist-table">
+        <thead>
+          <tr>
+            <th>앎의 경로</th>
+            <th>보여 주는 것</th>
+            <th>남는 한계</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>경험</strong></td>
+            <td>구체적인 세계와 직접 접촉하게 함</td>
+            <td>착각, 제한된 관점, 기억의 변형</td>
+          </tr>
+          <tr>
+            <td><strong>이성</strong></td>
+            <td>경험을 연결하고 논리적으로 판단하게 함</td>
+            <td>잘못된 전제와 편향된 기준</td>
+          </tr>
+          <tr>
+            <td><strong>기억</strong></td>
+            <td>과거의 경험을 현재 판단에 연결함</td>
+            <td>선택, 생략, 재해석 가능성</td>
+          </tr>
+          <tr>
+            <td><strong>직관</strong></td>
+            <td>복잡한 상황에서 빠른 판단을 가능하게 함</td>
+            <td>익숙한 편견을 확신처럼 느낄 위험</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 경험과 이성 중 하나만을 완전한 기준으로 세우기는 어렵습니다. 앎은 여러 근거를 교차해 확인하는 과정에 가깝습니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-section">
+    <h2>5. 타인의 말을 믿는 것도 지식이 될 수 있는가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 우리가 아는 대부분의 것은 직접 확인한 사실이 아니라 다른 사람의 증언과 기록을 통해 얻은 지식입니다.
+    </div>
+
+    <p>
+      우리는 지구의 모양을 직접 우주에서 확인하지 않았고, 오래전의 역사적 사건을 직접 경험하지도 않았습니다.
+    </p>
+
+    <p>
+      질병의 원리, 다른 나라의 상황, 먼 지역의 날씨처럼 일상에서 사용하는 수많은 지식도 타인의 연구와 증언에 의존합니다.
+    </p>
+
+    <p>
+      그렇다면 타인의 말을 믿는 것은 지식이 될 수 없을까요. 그렇지 않습니다. 인간의 지식은 원래 다른 사람과 제도, 기록에 크게 의존합니다.
+    </p>
+
+    <p>
+      다만 모든 증언을 똑같이 믿을 수는 없습니다. 말하는 사람이 어떤 근거를 갖고 있는지, 다른 자료와 일치하는지, 오류를 검토하고 수정할 절차가 있는지 살펴야 합니다.
+    </p>
+
+    <div class="rt-epist-grid" style="margin: 20px 0;">
+      <div class="rt-epist-grid-item">
+        <strong>전문성</strong>
+        <span>말하는 사람이 해당 내용을 판단할 지식과 경험을 갖추었는가</span>
+      </div>
+
+      <div class="rt-epist-grid-item">
+        <strong>검증 가능성</strong>
+        <span>주장의 근거와 자료를 다른 사람도 확인할 수 있는가</span>
+      </div>
+
+      <div class="rt-epist-grid-item">
+        <strong>독립성</strong>
+        <span>같은 출처를 반복한 것이 아니라 서로 독립된 근거가 있는가</span>
+      </div>
+
+      <div class="rt-epist-grid-item">
+        <strong>수정 가능성</strong>
+        <span>새로운 증거가 나왔을 때 기존 판단을 고칠 수 있는가</span>
+      </div>
+    </div>
+
+    <p>
+      지식은 혼자 만든 확신이 아닙니다. 많은 경우 지식은 서로의 말을 확인하고 비판하며 수정하는 공동의 과정입니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-section">
+    <h2>6. 현대사회는 어떻게 앎의 기준을 흔드는가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 정보가 많아질수록 인간이 더 많이 알게 되는 것처럼 보이지만, 사실과 근거를 판단하는 일은 오히려 더 어려워질 수 있습니다.
+    </div>
+
+    <p>
+      과거보다 우리는 훨씬 많은 정보에 접근할 수 있습니다. 검색 몇 번으로 뉴스와 통계, 전문가의 설명, 개인의 경험담을 함께 볼 수 있습니다.
+    </p>
+
+    <p>
+      그러나 정보의 양이 늘어났다고 해서 앎의 질도 자동으로 높아지는 것은 아닙니다.
+    </p>
+
+    <p>
+      플랫폼은 정확한 정보보다 관심을 끄는 정보를 먼저 보여 줄 수 있습니다. 반복해서 본 주장은 근거가 약해도 익숙하고 사실처럼 느껴질 수 있습니다.
+    </p>
+
+    <p>
+      내가 이미 믿는 생각과 비슷한 정보만 계속 접하면, 확인했다고 느끼지만 실제로는 자신의 믿음을 반복한 것일 수도 있습니다.
+    </p>
+
+    <div class="rt-epist-table-wrap">
+      <table class="rt-epist-table">
+        <thead>
+          <tr>
+            <th>현대의 조건</th>
+            <th>앎을 돕는 지점</th>
+            <th>판단을 흔드는 지점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>검색</strong></td>
+            <td>다양한 자료에 빠르게 접근함</td>
+            <td>검색 순위를 사실의 순위로 오해할 수 있음</td>
+          </tr>
+          <tr>
+            <td><strong>알고리즘 추천</strong></td>
+            <td>관심 있는 정보를 쉽게 찾게 함</td>
+            <td>비슷한 관점만 반복해 보여 줄 수 있음</td>
+          </tr>
+          <tr>
+            <td><strong>짧은 콘텐츠</strong></td>
+            <td>복잡한 내용을 쉽게 접하게 함</td>
+            <td>맥락과 근거가 생략될 수 있음</td>
+          </tr>
+          <tr>
+            <td><strong>개인 경험담</strong></td>
+            <td>숫자에 담기지 않는 현실을 보여 줌</td>
+            <td>하나의 경험을 전체 현실로 확대할 수 있음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rt-epist-quote">
+      정보가 넘치는 시대에 필요한 것은 더 많은 확신보다,<br>
+      내가 무엇을 근거로 믿고 있는지 확인하는 태도일 수 있습니다.
+    </div>
+  </section>
+
+  <section class="rt-epist-section">
+    <h2>7. 작품 속 인식론은 어떤 장면에서 드러나는가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 작품 속 인식론은 같은 사건이 서로 다르게 기억되고 증언될 때, 무엇을 사실이라고 판단할 수 있는지를 묻는 장면에서 드러납니다.
+    </div>
+
+    <p>
+      인식론을 작품으로 읽을 때 중요한 것은 작품 안에 철학자가 등장하는지를 확인하는 일이 아닙니다.
+    </p>
+
+    <p>
+      인물이 무엇을 근거로 사실을 믿는지, 기억과 증언이 어떻게 흔들리는지, 관객이 무엇을 진실이라고 받아들이게 되는지를 보는 일입니다.
+    </p>
+
+    <h3>7-1) 《라쇼몽》 — 같은 사건은 왜 여러 진실로 말해지는가</h3>
+
+    <p>
+      구로사와 아키라의 《라쇼몽》에서는 하나의 사건을 여러 인물이 서로 다르게 증언합니다.
+    </p>
+
+    <p>
+      각자의 이야기는 그럴듯하지만 서로 일치하지 않습니다. 기억은 자기 보호와 욕망, 수치심에 따라 다른 모양으로 구성됩니다.
+    </p>
+
+    <p>
+      이 작품은 단순히 진실이 없다고 말하지 않습니다. 오히려 인간의 증언을 통해 진실에 다가갈 때 어떤 한계가 생기는지를 보여 줍니다.
+    </p>
+
+    <h3>7-2) 《메멘토》 — 기억할 수 없다면 무엇을 믿을 수 있는가</h3>
+
+    <p>
+      《메멘토》의 주인공은 새로운 기억을 오래 유지하지 못합니다. 그는 사진과 메모, 몸에 새긴 기록에 의지해 자신의 행동을 결정합니다.
+    </p>
+
+    <p>
+      하지만 기록은 누가 어떤 의도로 남겼는지에 따라 달라질 수 있습니다. 주인공 자신이 기록을 선택하고 조작할 가능성도 남습니다.
+    </p>
+
+    <p>
+      이 작품은 기억을 신뢰할 수 없을 때 기록이 진실을 보장하는지, 인간은 자신이 믿고 싶은 이야기를 지식처럼 만들 수 있는지를 묻습니다.
+    </p>
+
+    <div class="rt-epist-table-wrap">
+      <table class="rt-epist-table">
+        <thead>
+          <tr>
+            <th>작품</th>
+            <th>앎이 흔들리는 방식</th>
+            <th>철학적 질문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>《라쇼몽》</strong></td>
+            <td>같은 사건이 서로 다른 기억과 증언으로 제시됨</td>
+            <td>관점이 다를 때 사실은 어떻게 확인할 수 있는가</td>
+          </tr>
+          <tr>
+            <td><strong>《메멘토》</strong></td>
+            <td>기억의 결핍을 기록으로 보완하지만 기록도 흔들림</td>
+            <td>기억과 기록 가운데 무엇이 나의 앎을 보장하는가</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      두 작품은 인간이 진실에 접근할 수 없다고 단정하지 않습니다. 다만 진실을 안다고 말하기 위해 기억과 증언, 기록을 얼마나 조심스럽게 검토해야 하는지 보여 줍니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-section">
+    <h2>8. 인식론은 무엇을 설명하고 무엇을 설명하지 못하는가</h2>
+
+    <div class="rt-epist-one-line">
+      👉 인식론은 근거 있는 앎의 조건을 설명하지만, 누가 지식을 만들고 말할 권한을 갖는지까지 함께 보아야 합니다.
+    </div>
+
+    <p>
+      인식론은 믿음과 지식을 구분하고, 인간이 어떤 근거를 통해 세계를 이해하는지 설명하는 힘이 있습니다.
+    </p>
+
+    <p>
+      내가 직접 경험했다는 사실만으로 충분한지, 전문가의 말은 왜 믿을 만한지, 의심은 어디까지 필요한지를 검토하게 합니다.
+    </p>
+
+    <p>
+      그러나 앎의 문제를 개인의 판단 능력으로만 설명하면 부족합니다. 사회에서 모든 사람의 경험과 증언이 같은 무게로 받아들여지는 것은 아니기 때문입니다.
+    </p>
+
+    <p>
+      어떤 지식은 권위 있는 기관의 이름으로 쉽게 인정되고, 어떤 경험은 개인적인 감정이나 예외적 사례로 밀려날 수 있습니다.
+    </p>
+
+    <div class="rt-epist-table-wrap">
+      <table class="rt-epist-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>설명 가능한 지점</strong></td>
+            <td>인식론은 경험, 이성, 기억, 증언이 어떻게 지식의 근거가 되며 어떤 한계를 갖는지 보여 줍니다.</td>
+          </tr>
+          <tr>
+            <td><strong>설명이 부족한 지점</strong></td>
+            <td>누구의 말이 지식으로 인정되고 누구의 경험이 배제되는지는 권력과 제도, 사회적 위치의 문제까지 함께 살펴야 합니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      그래서 인식론은 두 방향으로 읽어야 합니다. 하나는 나는 무엇을 근거로 안다고 말하는가입니다.
+    </p>
+
+    <p>
+      다른 하나는 우리 사회가 누구의 앎을 믿을 만한 지식으로 인정하고 있는가입니다.
+    </p>
+  </section>
+
+  <section class="rt-epist-final">
+    <h2>마지막 질문</h2>
+
+    <p>
+      나는 지금 무엇을 사실이라고 믿고 있는가.
+    </p>
+
+    <p>
+      그 믿음은 직접 경험, 반복된 정보, 전문가의 권위, 가까운 사람의 증언 가운데 무엇에 기대고 있는가.
+    </p>
+
+    <p>
+      <strong>인식론은 모든 것을 의심하라는 철학이 아니라, 확신이 근거를 대신하지 않도록 묻는 철학입니다.</strong>
+    </p>
+
+    <p>
+      그렇다면 내가 안다고 말하는 순간, 나는 그 앎이 틀릴 가능성과 다른 사람의 관점을 어디까지 함께 받아들이고 있는가.
+    </p>
+  </section>
+
+  <section class="rt-epist-read">
+    <h2>함께 읽기</h2>
+
+    <p>
+      인식론은 객관성·지식·의심의 문제와 이어집니다. 아래 글은 무엇을 안다고 말할 수 있는지, 그 판단이 어떤 근거와 한계를 가져야 하는지 확장해 읽게 합니다.
+    </p>
+
+    <a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">
+      <strong>Re:Think 현대 철학지도</strong>
+      <span>인식론을 인간의 지식 문제에만 가두지 않고 언어, 권력, 타자, 기술의 문제와 함께 읽을 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/249" target="_blank" rel="noopener">
+      <strong>Re:Think 인식과 언어 안내지도</strong>
+      <span>진리·지식·의심·해석·언어의 관계 속에서 인식론이 놓인 전체 흐름을 확인할 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/335" target="_blank" rel="noopener">
+      <strong>지식</strong>
+      <span>정보가 많다는 사실과 제대로 안다는 일이 왜 다른지, 지식의 근거와 책임을 이어 읽을 수 있습니다.</span>
+    </a>
+
+    <a href="https://pencilgon.tistory.com/324" target="_blank" rel="noopener">
+      <strong>의심</strong>
+      <span>의심이 단순한 불신이 아니라 믿음의 근거와 한계를 확인하는 과정이 될 수 있는지 함께 살펴볼 수 있습니다.</span>
+    </a>
+  </section>
+
+  <div class="rt-epist-tags">
+    Re:Think, 인식론 뜻, 인식론, Epistemology, 지식, 믿음, 진리, 객관성, 경험주의, 합리주의, 의심, 증언, 기억, 정보 과잉, 라쇼몽, 메멘토, 현대철학
+  </div>
+
+  <div class="rt-epist-tags">
+    Written &amp; reviewed by @Pencilgon | AI-assisted with ChatGPT &amp; Google Gemini | Images created with Canva &amp; Google Gemini
+  </div>
+
+</div>
+
+<style id="readability-overrides">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #18212b;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .seo-h1 {
+    margin: 0 0 20px !important;
+    padding: 18px 22px !important;
+    border-left: 7px solid #f2b134 !important;
+    border-radius: 10px !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.045em !important;
+    box-shadow: 0 5px 14px rgba(11, 79, 108, 0.18) !important;
+  }
+  h2 {
+    color: #0b4f6c !important;
+    font-weight: 800 !important;
+  }
+  h3 { color: #155e75 !important; }
+  a {
+    color: #075985 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  div[class$="-meta"] {
+    border-left-color: #0b4f6c !important;
+    background: #eaf5fa !important;
+    color: #123447 !important;
+  }
+  table {
+    width: 100% !important;
+    margin: 22px 0 !important;
+    border: 1px solid #78a9c2 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(11, 79, 108, 0.10) !important;
+  }
+  th {
+    padding: 13px 14px !important;
+    border-right: 1px solid rgba(255,255,255,.3) !important;
+    background: #0b4f6c !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+  }
+  td {
+    padding: 12px 14px !important;
+    border-right: 1px solid #c7dfe9 !important;
+    border-bottom: 1px solid #b7d3df !important;
+    background: #ffffff !important;
+    color: #17212b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #eaf5fa !important; }
+  tr:hover td { background: #d5edf6 !important; }
+  th:last-child, td:last-child { border-right: 0 !important; }
+  tr:last-child td { border-bottom: 0 !important; }
+  [class*="table-wrap"], [class*="table-box"], [class*="tablebox"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  blockquote {
+    border-left-color: #e39b20 !important;
+    background: #fff8e8 !important;
+    color: #3f3420 !important;
+  }
+</style>
+</body>
+</html>
