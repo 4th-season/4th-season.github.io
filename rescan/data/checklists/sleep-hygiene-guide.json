@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "sleep-hygiene",
+  "series": "[나 체크리스트]",
+  "section": "Re:Scan",
+  "grade": "D",
+  "mode": "help",
+  "status": "sample",
+  "title": "수면위생 안내",
+  "subtitle": "잠의 질과 생활 리듬을 돌보는 안내형 자가점검",
+  "description": "잠이 잘 오지 않거나 아침이 무거운 날을 겪는 경우에 참고할 안내형 자가점검입니다.",
+  "period": "최근 1주",
+  "categories": [
+    {"id": "routine", "label": "리듬"}
+  ],
+  "scale": [
+    {"value": 0, "label": "아니요"},
+    {"value": 1, "label": "그렇다"}
+  ],
+  "questions": [
+    {"id": "s01", "category": "routine", "text": "잠들기 전 휴대폰이나 화면을 자주 본다.", "reverse": false},
+    {"id": "s02", "category": "routine", "text": "수면 시간을 일정하게 유지하려고 노력한다.", "reverse": true}
+  ],
+  "helpMessage": "이 주제는 점수보다 일상에 적용할 수 있는 안내를 우선 제공합니다.",
+  "guideSteps": [
+    "잠들기 전 30분간은 화면과 자극을 줄여 보세요.",
+    "매일 비슷한 시간에 잠들고 일어나는 리듬을 만들어 보세요.",
+    "피곤해도 과도하게 눕는 시간을 늘리기보다, 조금씩 일상을 정리해 보세요."
+  ],
+  "disclaimer": "이 결과는 자가점검용 참고 자료입니다.",
+  "relatedLinks": [
+    {"title": "Re:Scan 이용 안내", "url": "/rescan/about.html", "type": "internal"}
+  ]
+}

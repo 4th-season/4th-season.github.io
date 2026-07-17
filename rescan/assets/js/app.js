@@ -12,6 +12,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
 
+  const isValidIndexEntry = (item) => Boolean(item && typeof item.id === 'string' && item.id.trim() && typeof item.title === 'string' && item.title.trim() && typeof item.subtitle === 'string' && item.subtitle.trim() && typeof item.grade === 'string' && item.grade.trim() && typeof item.mode === 'string' && item.mode.trim() && typeof item.category === 'string' && item.category.trim() && typeof item.status === 'string' && ['planned', 'sample', 'published', 'hidden'].includes(item.status));
+
+  const validateChecklistData = (checklist, item) => {
+    if (!checklist || typeof checklist !== 'object') return { ok: false, message: '체크리스트 데이터를 읽을 수 없습니다.' };
+    const errors = [];
+    ['id', 'title', 'subtitle', 'description', 'period'].forEach((field) => {
+      if (typeof checklist[field] !== 'string' || !checklist[field].trim()) errors.push(`${field} 값이 비어 있습니다.`);
+    });
+    if (!Array.isArray(checklist.questions) || !checklist.questions.length) errors.push('문항이 비어 있습니다.');
+    if (!Array.isArray(checklist.scale) || !checklist.scale.length) errors.push('척도가 비어 있습니다.');
+    if (!['help', 'guide'].includes(checklist.mode) && (!Array.isArray(checklist.results) || !checklist.results.length)) errors.push('결과 구간이 비어 있습니다.');
+    if (checklist.mode === 'pattern' && !Array.isArray(checklist.patternResults) && !Array.isArray(checklist.results)) errors.push('패턴형 결과 구간이 비어 있습니다.');
+    if (checklist.mode === 'reflection' && !Array.isArray(checklist.reflectionResults) && !Array.isArray(checklist.results)) errors.push('성찰형 결과 구간이 비어 있습니다.');
+    if (checklist.id !== item.id) errors.push('체크리스트 식별자가 일치하지 않습니다.');
+    return { ok: !errors.length, message: errors[0] || '' };
+  };
+
   const shuffle = (items) => {
     const copy = [...items];
     for (let i = copy.length - 1; i > 0; i -= 1) {
@@ -68,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (list) {
     try {
       const data = await loadJson(INDEX_PATH);
-      const items = Array.isArray(data.items) ? data.items : [];
+      const items = Array.isArray(data.items) ? data.items.filter(isValidIndexEntry) : [];
       list.innerHTML = items.map((item) => {
         const ready = Boolean(item.dataPath) && ['sample', 'testing', 'published'].includes(item.status);
         const href = ready ? `/rescan/checklist.html?id=${encodeURIComponent(item.id)}` : `/rescan/checklist.html?id=${encodeURIComponent(item.id)}&status=planned`;
@@ -113,7 +130,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const item = Array.isArray(indexData.items) ? indexData.items.find((entry) => entry.id === id) : null;
     if (!item || !item.dataPath) throw new Error('아직 데이터가 연결되지 않은 주제입니다.');
     const checklist = await loadJson(item.dataPath);
-    if (checklist.id !== id || !Array.isArray(checklist.questions) || !checklist.questions.length || !Array.isArray(checklist.scale) || !checklist.scale.length) throw new Error('체크리스트 데이터 형식이 올바르지 않습니다.');
+    const validation = validateChecklistData(checklist, item);
+    if (!validation.ok) throw new Error(validation.message || '체크리스트 데이터 형식이 올바르지 않습니다.');
 
     const orderedQuestions = getBalancedQuestions(checklist);
     if (title) title.textContent = checklist.title || item.title;
@@ -167,14 +185,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       const leading = categoryRows.filter((row) => row.score === highest).map((row) => row.label);
       const leadingText = leading.length > 1 ? `${leading.join(' · ')} 영역이 함께 두드러집니다.` : `${leading[0] || '현재 신호'} 영역이 가장 두드러집니다.`;
       const categoryHtml = categoryRows.map((row) => `<div class="result-category"><div><b>${escapeHtml(row.label)}</b><span>${row.count}문항</span></div><strong>${row.score}점</strong></div>`).join('');
-      const questions = Array.isArray(calculation.result?.questions) ? calculation.result.questions : ['최근 생활에서 이 신호가 두드러진 상황은 언제였나요?', '쉬거나 거리를 두었을 때 달라지는 부분이 있었나요?'];
+      const questions = Array.isArray(calculation.result?.questions) ? calculation.result.questions : (calculation.mode === 'pattern' ? ['반복되는 상황과 영향이 가장 두드러진 순간은 언제였나요?', '어떤 환경에서 패턴이 완화되었나요?'] : (calculation.mode === 'reflection' ? ['지금 가장 고민되는 생각이나 감정은 무엇인가요?', '이 생각을 나누거나 멈추는 데 도움이 되는 방법은 무엇인가요?'] : ['최근 생활에서 이 신호가 두드러진 상황은 언제였나요?', '쉬거나 거리를 두었을 때 달라지는 부분이 있었나요?']));
       const links = Array.isArray(checklist.relatedLinks) ? checklist.relatedLinks : [];
       const linksHtml = links.length ? `<div class="related-grid">${links.map((link) => `<a class="related-card" href="${escapeHtml(link.url)}"><b>${escapeHtml(link.title)}</b><span>함께 읽기 →</span></a>`).join('')}</div>` : '<p class="result-empty">연결 글은 이후 단계에서 추가됩니다.</p>';
+      const guideSteps = Array.isArray(checklist.guideSteps) ? checklist.guideSteps : [];
+      const guideHtml = guideSteps.length ? `<ul class="reflection-list">${guideSteps.map((step) => `<li>${escapeHtml(step)}</li>`).join('')}</ul>` : '<p class="result-empty">생활 리듬을 회복하는 작은 단계를 다음 업데이트에서 더 채워 넣겠습니다.</p>';
+      const modeTitle = calculation.blocked ? '안내형 결과' : (calculation.mode === 'pattern' ? '반복 패턴 확인' : (calculation.mode === 'reflection' ? '성찰형 결과' : '현재 점검 결과'));
+      const summaryTitle = calculation.blocked ? '안내를 먼저 확인해 보세요' : (calculation.result?.level || '결과 확인');
+      const scoreMarkup = calculation.blocked ? '—' : `${calculation.total}<small>점</small>`;
 
-      app.innerHTML = `<section class="result-view" tabindex="-1"><p class="result-kicker">현재 점검 결과</p>
-        <div class="result-summary"><div><span>전체 신호 수준</span><h2>${escapeHtml(calculation.result?.level || '결과 확인')}</h2><p>${escapeHtml(calculation.message)}</p></div><strong>${calculation.total}<small>점</small></strong></div>
-        <div class="result-block"><h3>영역별 신호</h3><p class="result-leading">${escapeHtml(leadingText)}</p>${categoryHtml}</div>
-        <div class="result-block"><h3>생활에서 다시 살펴볼 질문</h3><ul class="reflection-list">${questions.map((question) => `<li>${escapeHtml(question)}</li>`).join('')}</ul></div>
+      app.innerHTML = `<section class="result-view" tabindex="-1"><p class="result-kicker">${escapeHtml(modeTitle)}</p>
+        <div class="result-summary"><div><span>전체 신호 수준</span><h2>${escapeHtml(summaryTitle)}</h2><p>${escapeHtml(calculation.message)}</p></div><strong>${scoreMarkup}</strong></div>
+        <div class="result-block"><h3>영역별 신호</h3><p class="result-leading">${escapeHtml(leadingText)}</p>${categoryHtml || '<p class="result-empty">영역별 결과를 정리하는 중입니다.</p>'}</div>
+        <div class="result-block"><h3>${calculation.blocked ? '먼저 시도할 안내' : '생활에서 다시 살펴볼 질문'}</h3>${calculation.blocked ? guideHtml : `<ul class="reflection-list">${questions.map((question) => `<li>${escapeHtml(question)}</li>`).join('')}</ul>`}</div>
         <div class="result-block"><h3>함께 읽기</h3>${linksHtml}</div><div class="notice">${escapeHtml(checklist.disclaimer || '이 결과는 진단이 아닌 자가점검용 참고 자료입니다.')}</div>
         <div class="form-actions no-print"><button class="button primary" id="restart-checklist" type="button">다시 점검하기</button><button class="button" id="print-result" type="button">결과 인쇄·PDF 저장</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div></section>`;
       const resultView = app.querySelector('.result-view');
