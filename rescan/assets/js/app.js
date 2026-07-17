@@ -74,6 +74,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!Array.isArray(checklist.questions) || !checklist.questions.length || !Array.isArray(checklist.scale) || !checklist.scale.length) {
       throw new Error('체크리스트 데이터 형식이 올바르지 않습니다.');
     }
+    if (!window.ReScanScoring) throw new Error('점수 계산 엔진을 불러오지 못했습니다.');
+    window.ReScanScoring.validateRanges(checklist.results || []);
 
     if (title) title.textContent = checklist.title || item.title;
     if (description) description.textContent = checklist.description || item.subtitle;
@@ -118,7 +120,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         form.querySelector(`[data-question="${CSS.escape(unanswered.id)}"]`).scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
-      message.textContent = '응답이 완료되었습니다. 점수 계산과 결과 화면은 다음 단계에서 연결됩니다.';
+
+      const answers = Object.fromEntries(checklist.questions.map((question) => {
+        const selected = form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`);
+        return [question.id, Number(selected.value)];
+      }));
+      const calculation = window.ReScanScoring.calculate(checklist, answers);
+      app.dataset.total = calculation.total === null ? '' : String(calculation.total);
+      app.dataset.resultLevel = calculation.result?.level || '';
+      message.textContent = calculation.blocked
+        ? calculation.message
+        : `계산이 완료되었습니다. 총점 ${calculation.total}점이며 결과 화면은 다음 단계에서 표시됩니다.`;
     });
   } catch (error) {
     if (title) title.textContent = '체크리스트를 불러오지 못했습니다';
