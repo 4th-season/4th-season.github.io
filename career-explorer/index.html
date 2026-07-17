@@ -291,7 +291,7 @@
       "software":{name:"시스템엔지니어",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=440"},
       "web-mobile":{name:"웹마스터",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=444"},
       "cloud-platform":{name:"시스템엔지니어",sourceLabel:"커리어넷 관련 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=440"},
-      "security":{name:"컴퓨터 보안 전문가",sourceLabel:"커리어넷 사물인터넷 전문가 관련직업 정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10035"},
+      "security":{name:"정보보호전문가",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=435"},
       "game-content":{name:"컴퓨터그래픽디자이너",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=458"},
       "embedded-iot":{name:"네트워크엔지니어",sourceLabel:"커리어넷 직업정보",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=430"}
     };
@@ -314,6 +314,16 @@
       "디지털포렌식전문가":{summary:"저장 매체와 인터넷에 남은 디지털 정보를 수집·분석하고, 법적 증거로 활용할 수 있도록 복구·보관합니다.",employers:["경찰·검찰·관세·국방 등 국가기관","기업 법무팀·회계법인·법무법인과 국가연구소"],skills:["디지털 자료 수집·복구와 분석 절차 이해","증거의 신뢰성과 보관 절차를 지키는 꼼꼼함","분석 내용을 논리적으로 기록·설명하는 언어 능력"]},
       "게임기획자":{summary:"게임 장르·이용 연령·난이도·캐릭터·스토리 흐름을 설정하고 개발 인력과 함께 게임 제작을 이끕니다.",employers:["대기업·중소 게임 전문 업체와 모바일 게임 업체","개인·소규모 팀의 모바일 게임 제작 활동"],skills:["게임 규칙과 사용자 경험을 기획하는 창의력","그래픽·프로그래밍 인력과 협업하는 의사소통","기획 내용을 문서화하고 일정·우선순위를 조정하는 능력"]},
       "사물 인터넷 표준 전문가":{summary:"사물인터넷 기기와 서비스가 연결될 때 필요한 통신 방식과 호환성 기준을 검토하고, 표준 기반의 연결 구조를 설계합니다.",employers:["사물인터넷 서비스·정보통신 관련 기업의 IoT 부서","소프트웨어 개발업체 연구소와 정보통신 관련 연구기관"],skills:["센서·통신·네트워크의 연결 구조 이해","기기·서비스 간 호환성과 보안 요구 확인","기술 기준을 문서로 정리하고 관계자와 조율하는 능력"]}
+    });
+    // W06-D3: 세 번째 대표 직업의 실제 업무·취업기관 유형은 커리어넷 직업정보의 '하는 일'과 '입직 및 취업방법'을 기준으로 확인해 결과 화면에 반영합니다.
+    Object.assign(aiJobDetails,{
+      "지능형 로봇개발자":{summary:"로봇이 사고하고 의사결정을 하도록 인공지능 알고리즘을 개발하고, 대화·시각·이동·학습 지능을 구현·유지보수합니다.",employers:["산업용 로봇·공장자동화·스마트팩토리 기업","자율주행·모빌리티·드론 개발업체와 의료·재활 로봇 개발업체","IT·로봇 관련 기업과 연구소"],skills:["인공지능 알고리즘과 로봇 시스템 설계 이해","수리·논리력과 공간지각력","로봇 기능을 테스트하고 개선하는 문제 해결"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10113",sourceLabel:"커리어넷 지능형 로봇개발자 직업정보"},
+      "지리정보시스템기사":{summary:"GIS 데이터베이스를 설계·유지·수정하고, 공간 데이터를 구축·모델링·분석해 지도 제작과 사용자 기술지원을 수행합니다.",employers:["지리정보업체와 지도 제작업체","공공기관과 연구소"],skills:["공간 데이터와 GIS 소프트웨어 활용","수리·논리력과 공간지각력","여러 분야 관계자와 분석 결과를 조율하는 의사소통"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10050",sourceLabel:"커리어넷 지리정보시스템기사 직업정보"},
+      "시스템엔지니어":{summary:"사용 목적과 업무 절차를 분석해 정보시스템의 성능·기능·사양을 정하고, 안정적인 시스템을 설계·구축·운영합니다.",employers:["정보시스템 구축·운영 기업","기업·공공기관의 정보시스템 운영 부서"],skills:["정보기술 요구사항 분석과 시스템 설계","하드웨어·소프트웨어·네트워크 기초","운영 문제를 진단하고 관계자와 조율하는 능력"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=440",sourceLabel:"커리어넷 시스템엔지니어 직업정보"},
+      "웹마스터":{summary:"웹사이트 게시판과 콘텐츠를 관리하고 서비스 기능을 점검·유지하며, 이용자 오류를 정리해 기획자·개발자와 개선합니다.",employers:["정보시스템 개발업체와 시스템통합·운영업체","인터넷 쇼핑몰","일반기업·공공기관의 정보화 부서"],skills:["웹 서비스 운영과 오류 분석","정보 분석과 수리·논리력","개발·기획·고객지원 인력과 협업하는 소통"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=444",sourceLabel:"커리어넷 웹마스터 직업정보"},
+      "정보보호전문가":{...aiJobDetails["정보보호전문가"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=435",sourceLabel:"커리어넷 정보보호전문가 직업정보"},
+      "컴퓨터그래픽디자이너":{summary:"광고·영화·드라마·애니메이션 등에 쓰이는 3D 영상·도형·공간·자막·그림을 디자인하고, 웹페이지 이미지를 제작합니다.",employers:["영화제작사·방송국·광고대행사","컴퓨터그래픽·애니메이션 제작업체와 게임 개발업체","인쇄·디자인·건축 관련 업체"],skills:["컴퓨터그래픽 도구와 이미지 표현","예술시각능력과 창의력","제작 의도를 이해하고 결과물을 조정하는 협업"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=458",sourceLabel:"커리어넷 컴퓨터그래픽디자이너 직업정보"},
+      "네트워크엔지니어":{summary:"사용 목적에 맞는 네트워크 시스템을 기획·분석·설계·구축하고, 설치·성능시험·장애 원인 분석과 복구를 수행합니다.",employers:["정보통신망 구축업체와 네트워크 관련 업체","전자기기·통신기기 제조업체의 연구개발 부서","네트워크 유지보수 관련 업체"],skills:["네트워크 하드웨어·소프트웨어 이해","기능성·안정성·확장성을 고려한 설계","장애 원인을 분석하고 신속히 복구하는 문제 해결"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=430",sourceLabel:"커리어넷 네트워크엔지니어 직업정보"}
     });
     // W05-D4: 직업별 관련 학과는 직업정보의 관련학과 항목과 대학 공식 학과소개, 대학알리미·대학어디가에서 교차 확인하도록 안내합니다.
     Object.assign(aiJobDetails,{
@@ -338,10 +348,20 @@
       "게임기획자":{...aiCredentialGuide["게임기획자"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 게임 기획서·포트폴리오·협업 경험 등 기업별 요건을 확인하세요."],helpfulCredentials:["정보처리기사는 개발자와 협업하는 게임 기획 직무에서 정보처리 기초를 보완할 수 있으므로, 포트폴리오 요구와 함께 확인"],credentialSourceUrl:"https://q-net.or.kr/crf005.do?id=crf00503&jmCd=1320",credentialSourceLabel:"Q-Net 정보처리기사 공식 정보"},
       "사물 인터넷 표준 전문가":{...aiCredentialGuide["사물 인터넷 표준 전문가"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 통신·네트워크·표준 관련 전공과 실무경험 요건을 확인하세요."],helpfulCredentials:["정보처리기사·정보통신기사 등은 소프트웨어·통신 기반을 보완할 수 있으므로 실제 담당 업무와 채용요건을 확인한 뒤 준비"],credentialSourceUrl:"https://q-net.or.kr/crf005.do?id=crf00503&jmCd=1320",credentialSourceLabel:"Q-Net 정보처리기사 공식 정보"}
     });
+    // W06-D4: 관련자격은 법정 필수 면허와 구분합니다. 커리어넷의 직업별 관련자격은 준비에 도움이 될 수 있는 범위이며, 자격만으로 채용이나 직무 수행 자격이 보장되지는 않습니다.
+    Object.assign(aiCredentialGuide,{
+      "지능형 로봇개발자":{...aiCredentialGuide["지능형 로봇개발자"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 기업·연구소별 전공, 프로젝트 경험과 채용요건을 확인하세요."],helpfulCredentials:["로봇기구개발기사·로봇소프트웨어개발기사·로봇하드웨어개발기사는 커리어넷 관련자격으로 안내되며, 담당 업무와 응시요건을 확인한 뒤 준비"],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10113",credentialSourceLabel:"커리어넷 지능형 로봇개발자 관련자격 정보"},
+      "지리정보시스템기사":{...aiCredentialGuide["지리정보시스템기사"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 공간정보 분석·측량 등 담당 업무와 채용요건을 확인하세요."],helpfulCredentials:["지적기능사·지적산업기사·지적기사·지적기술사는 커리어넷 관련자격으로 안내되며, GIS 직무와의 관련성을 확인한 뒤 준비"],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10050",credentialSourceLabel:"커리어넷 지리정보시스템기사 관련자격 정보"},
+      "시스템엔지니어":{...aiCredentialGuide["시스템엔지니어"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 시스템 설계·운영 기술과 기업별 경력 요건을 확인하세요."],helpfulCredentials:["정보처리기사·정보처리산업기사·리눅스마스터·SQL 등은 커리어넷 관련자격으로 안내되며, 실제 담당 시스템과 채용요건을 확인한 뒤 준비"],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=440",credentialSourceLabel:"커리어넷 시스템엔지니어 관련자격 정보"},
+      "웹마스터":{...aiCredentialGuide["웹마스터"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 웹 운영 범위, 서비스 관리 경험과 채용요건을 확인하세요."],helpfulCredentials:["웹디자인기능사·정보처리기사·리눅스마스터·SQL 등은 커리어넷 관련자격으로 안내되며, 운영·개발 역할과의 관련성을 확인한 뒤 준비"],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=444",credentialSourceLabel:"커리어넷 웹마스터 관련자격 정보"},
+      "정보보호전문가":{...aiCredentialGuide["정보보호전문가"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 보안 담당 범위와 채용기관별 전공·경력 요건을 확인하세요."],helpfulCredentials:["정보보안기사·정보처리기사·정보시스템감리사 등은 커리어넷 관련자격으로 안내되며, 보안 직무의 실제 요구사항을 확인한 뒤 준비"],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=435",credentialSourceLabel:"커리어넷 정보보호전문가 관련자격 정보"},
+      "컴퓨터그래픽디자이너":{...aiCredentialGuide["컴퓨터그래픽디자이너"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 포트폴리오, 사용 도구와 제작 경험 등 채용요건을 확인하세요."],helpfulCredentials:["컴퓨터그래픽스운용기능사·GTQ(그래픽기술자격)는 커리어넷 관련자격으로 안내되며, 지원 분야의 포트폴리오 요구와 함께 확인"],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=458",credentialSourceLabel:"커리어넷 컴퓨터그래픽디자이너 관련자격 정보"},
+      "네트워크엔지니어":{...aiCredentialGuide["네트워크엔지니어"],requiredCredentials:["직업 전체에 공통된 법정 필수 면허는 확인되지 않았습니다. 구축·운영·연구개발 역할별 전공과 실무 요건을 확인하세요."],helpfulCredentials:["정보처리기사·정보통신기사·정보통신산업기사 등은 커리어넷 관련자격으로 안내되며, 네트워크 역할과 채용요건을 확인한 뒤 준비"],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=430",credentialSourceLabel:"커리어넷 네트워크엔지니어 관련자격 정보"}
+    });
     Object.entries(aiJobScope).forEach(([fieldId,jobScope])=>{const jobs=jobScope.jobs.map(job=>({...job,...aiJobDetails[job.name],...aiCredentialGuide[job.name]}));aiSoftware[fieldId].jobScope={...jobScope,jobs};aiSoftware[fieldId].jobs=jobs;});
     Object.entries(aiJobExpansionScope).forEach(([fieldId,scope])=>{const expansionJobs=scope.jobs.map(job=>({...job,...aiJobDetails[job.name],...aiCredentialGuide[job.name]}));aiSoftware[fieldId].jobs=aiSoftware[fieldId].jobs.concat(expansionJobs);});
     Object.entries(aiJobCoverage).forEach(([fieldId,coverage])=>{aiSoftware[fieldId].dataCoverage=coverage;});
-    Object.entries(aiThirdJobScope).forEach(([fieldId,scope])=>{aiSoftware[fieldId].thirdJobScope=scope;});
+    Object.entries(aiThirdJobScope).forEach(([fieldId,scope])=>{const thirdJob={...scope,...aiJobDetails[scope.name],...aiCredentialGuide[scope.name]};aiSoftware[fieldId].jobs=aiSoftware[fieldId].jobs.concat(thirdJob);});
 
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
@@ -691,7 +711,7 @@
       setPath("job-path",["청소년",careerCatalog[currentInterestId].label,field.label,major]);document.getElementById("job-title").textContent=major+" 연결 직업 선택";
       renderUniversities(major,majorData.universities);
       const jobs=(majorData.jobs?.length?majorData.jobs:majorJobs[major]||field.jobs||[]);const target=document.getElementById("job-list");target.innerHTML="";jobs.forEach(entry=>{const job=typeof entry==="string"?entry:entry.name;const jobData=typeof entry==="string"?{}:entry;const credentialLabel=jobData.credentialType||(jobData.requiredCredentials?"면허·국가자격 필수":"진입조건 확인");const b=document.createElement("button");b.type="button";b.className="item-button";b.innerHTML="<strong>"+job+"</strong><br><small>"+credentialLabel+"</small>";b.addEventListener("click",()=>showResult(job,field,major,b,jobData));target.appendChild(b);});
-      if(!jobs.length){renderJobScope(target,field.jobScope);}else{renderDataCoverage(target,field.dataCoverage,jobs,field.thirdJobScope);}
+      if(!jobs.length){renderJobScope(target,field.jobScope);}else{renderDataCoverage(target,field.dataCoverage,jobs);}
       refreshPromptEditor(true);
       showStep("job-step");document.getElementById("result-step").classList.remove("show");document.getElementById("job-step").scrollIntoView({behavior:"smooth",block:"start"});
     }
@@ -703,12 +723,11 @@
       const list=document.createElement("ul");list.className="job-scope-list";scope.jobs.forEach(job=>{const item=document.createElement("li");const link=document.createElement("a");link.href=job.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent=job.name+" · "+job.sourceLabel+" ↗";item.appendChild(link);list.appendChild(item);});box.appendChild(list);target.appendChild(box);
     }
 
-    function renderDataCoverage(target,coverage,jobs,thirdScope){
+    function renderDataCoverage(target,coverage,jobs){
       if(!coverage||jobs.length<2)return;
       const box=document.createElement("div");box.className="empty";
       const names=jobs.map(job=>typeof job==="string"?job:job.name).join(" · ");
-      box.innerHTML="<strong>W06-D1 데이터 보완 현황</strong><br>현재 검증 대표 직업 2개: "+names+"<br>다음 확장 범위: "+coverage.nextFocus+". 세 번째 후보는 커리어넷 등 공식 직업정보, 실제 업무·취업기관, 자격, 관련 학과·대학 출처를 모두 확인한 뒤 추가합니다.";
-      if(thirdScope){const candidate=document.createElement("p");candidate.className="career-note";const link=document.createElement("a");link.href=thirdScope.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";link.textContent="W06-D2 후보 · "+thirdScope.name+" · "+thirdScope.sourceLabel+" 보기";candidate.appendChild(link);box.appendChild(candidate);}
+      box.innerHTML="<strong>W06-D4 데이터 보완 현황</strong><br>현재 검증 대표 직업 "+jobs.length+"개: "+names+"<br>세 번째 대표 직업의 실제 업무·취업기관 유형과 관련자격 출처를 확인해 결과 화면에 반영했습니다. 법정 필수 면허 여부와 도움이 되는 자격은 구분해 확인하세요.";
       target.appendChild(box);
     }
 
