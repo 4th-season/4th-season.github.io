@@ -1,34 +1,52 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "id": "sleep-hygiene",
   "series": "[나 체크리스트]",
   "section": "Re:Scan",
-  "grade": "D",
-  "mode": "help",
-  "status": "sample",
-  "title": "수면위생 안내",
-  "subtitle": "잠의 질과 생활 리듬을 돌보는 안내형 자가점검",
-  "description": "잠이 잘 오지 않거나 아침이 무거운 날을 겪는 경우에 참고할 안내형 자가점검입니다.",
-  "period": "최근 1주",
+  "grade": "B",
+  "mode": "pattern",
+  "status": "published",
+  "title": "수면위생 패턴",
+  "subtitle": "잠의 질과 생활 리듬 자가점검",
+  "description": "최근 2주 동안 취침 습관, 수면 지속, 기상 상태와 낮 시간의 영향을 살펴보는 생활 자가점검입니다.",
+  "period": "최근 2주",
+  "orderPolicy": {"strategy": "balanced", "maxSameCategoryRun": 2, "sessionStable": true, "useReserveQuestions": false},
   "categories": [
-    {"id": "routine", "label": "리듬"}
+    {"id": "bedtime", "label": "취침 습관"},
+    {"id": "continuity", "label": "수면 지속"},
+    {"id": "morning", "label": "기상 상태"},
+    {"id": "daytime", "label": "낮 시간 영향"}
   ],
   "scale": [
-    {"value": 0, "label": "아니요"},
-    {"value": 1, "label": "그렇다"}
+    {"value": 0, "label": "거의 아니다"},
+    {"value": 1, "label": "가끔 그렇다"},
+    {"value": 2, "label": "자주 그렇다"},
+    {"value": 3, "label": "거의 늘 그렇다"}
   ],
   "questions": [
-    {"id": "s01", "category": "routine", "text": "잠들기 전 휴대폰이나 화면을 자주 본다.", "reverse": false},
-    {"id": "s02", "category": "routine", "text": "수면 시간을 일정하게 유지하려고 노력한다.", "reverse": true}
+    {"id": "s01", "category": "bedtime", "text": "잠드는 시각이 날마다 크게 달라진다.", "reverse": false, "tone": "light"},
+    {"id": "s02", "category": "continuity", "text": "밤중에 자주 깨거나 다시 잠들기 어렵다.", "reverse": false, "tone": "medium"},
+    {"id": "s03", "category": "morning", "text": "아침에 일어났을 때 개운하다는 느낌이 든다.", "reverse": true, "tone": "light"},
+    {"id": "s04", "category": "daytime", "text": "낮 동안 졸림 때문에 집중이 흐트러진다.", "reverse": false, "tone": "medium"},
+    {"id": "s05", "category": "bedtime", "text": "잠들기 직전까지 휴대폰·영상·업무를 이어 간다.", "reverse": false, "tone": "light"},
+    {"id": "s06", "category": "continuity", "text": "잠자는 동안 비교적 편안하게 수면을 이어 간다.", "reverse": true, "tone": "medium"},
+    {"id": "s07", "category": "morning", "text": "알람을 여러 번 미루거나 일어난 뒤에도 한동안 움직이기 어렵다.", "reverse": false, "tone": "medium"},
+    {"id": "s08", "category": "daytime", "text": "피곤함 때문에 일·학습·운동·대인활동을 줄이게 된다.", "reverse": false, "tone": "medium"},
+    {"id": "s09", "category": "bedtime", "text": "잠들기 전 몸과 마음을 가라앉히는 일정한 순서가 있다.", "reverse": true, "tone": "light"},
+    {"id": "s10", "category": "continuity", "text": "잠자리에 누운 뒤 오래 깨어 있는 날이 반복된다.", "reverse": false, "tone": "medium"},
+    {"id": "s11", "category": "morning", "text": "평소 필요한 시간에 맞춰 비교적 안정적으로 일어난다.", "reverse": true, "tone": "light"},
+    {"id": "s12", "category": "daytime", "text": "늦은 낮잠이나 카페인 때문에 밤잠이 흔들리는 날이 있다.", "reverse": false, "tone": "medium"}
   ],
-  "helpMessage": "이 주제는 점수보다 일상에 적용할 수 있는 안내를 우선 제공합니다.",
-  "guideSteps": [
-    "잠들기 전 30분간은 화면과 자극을 줄여 보세요.",
-    "매일 비슷한 시간에 잠들고 일어나는 리듬을 만들어 보세요.",
-    "피곤해도 과도하게 눕는 시간을 늘리기보다, 조금씩 일상을 정리해 보세요."
+  "patternResults": [
+    {"min": 0, "max": 8, "level": "비교적 안정된 수면 리듬", "summary": "현재는 수면 습관과 낮 시간 기능이 비교적 안정적으로 유지되고 있습니다.", "questions": ["지금의 수면 리듬을 지켜 주는 습관은 무엇인가요?", "일정이 바빠질 때에도 유지하고 싶은 취침 조건은 무엇인가요?"]},
+    {"min": 9, "max": 17, "level": "수면 습관 관찰", "summary": "일부 취침 습관이나 낮 시간 영향이 반복되고 있습니다. 특정 시간대와 행동을 함께 살펴보세요.", "questions": ["잠들기 전 반복되는 행동 가운데 줄일 수 있는 것은 무엇인가요?", "아침 상태가 나은 날에는 전날 무엇이 달랐나요?"]},
+    {"min": 18, "max": 26, "level": "수면 리듬 흔들림", "summary": "수면 지속과 기상 상태, 낮 시간 기능이 함께 흔들리고 있을 수 있습니다.", "questions": ["취침·기상 시각을 흔드는 가장 큰 요인은 무엇인가요?", "카페인·낮잠·화면 사용 중 먼저 조정할 수 있는 한 가지는 무엇인가요?"]},
+    {"min": 27, "max": 36, "level": "회복과 확인 우선", "summary": "수면 관련 불편이 여러 생활 영역에 이어지고 있습니다. 문제가 지속되거나 심한 코골이·호흡 중단·극심한 주간 졸림이 있으면 의료진과 상의하는 것을 고려해 보세요.", "questions": ["지금의 수면 문제로 가장 크게 영향을 받는 생활 영역은 무엇인가요?", "전문적인 확인이 필요하다고 느끼는 신호가 있나요?"]}
   ],
-  "disclaimer": "이 결과는 자가점검용 참고 자료입니다.",
+  "methodNote": "이 점검은 수면시간 한 가지로 상태를 판단하지 않으며, 생활 습관과 수면의 연속성·기상 상태·낮 시간 영향을 함께 살펴봅니다.",
+  "disclaimer": "이 결과는 불면증이나 수면질환을 진단하지 않는 생활 자가점검용 참고 자료입니다.",
   "relatedLinks": [
+    {"title": "건강한 수면 습관 안내 · 미국 NHLBI", "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits", "type": "official"},
     {"title": "Re:Scan 이용 안내", "url": "/rescan/about.html", "type": "internal"}
   ]
 }
