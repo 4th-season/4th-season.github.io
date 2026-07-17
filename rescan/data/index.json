@@ -1,18 +1,19 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "series": "[나 체크리스트]",
   "section": "Re:Scan",
   "updatedAt": "2026-07-17",
   "items": [
     {
       "id": "stress",
-      "title": "스트레스",
-      "subtitle": "긴장과 피로 누적 상태 자가점검",
+      "title": "지각된 스트레스",
+      "subtitle": "긴장과 회복 저하 신호 자가점검",
       "grade": "A",
       "mode": "scored",
       "category": "정서·기분 조절",
-      "status": "sample",
-      "dataPath": "/rescan/data/checklists/stress-placeholder.json"
+      "status": "published",
+      "dataPath": "/rescan/data/checklists/stress-placeholder.json",
+      "articlePath": "/rescan/tistory/stress.html"
     },
     {
       "id": "burnout",
