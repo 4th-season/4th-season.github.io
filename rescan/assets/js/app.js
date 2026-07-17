@@ -74,13 +74,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     }).join('');
 
     app.classList.add('checklist-panel');
-    app.innerHTML = `<div class="checklist-meta"><span>${escapeHtml(checklist.period || '현재 생활')}</span><span>${checklist.questions.length}개 문항</span></div>
+    app.innerHTML = `<div class="checklist-meta"><span>${escapeHtml(checklist.period || '현재 생활')}</span><span>${checklist.questions.length}개 문항</span><span>응답은 저장되지 않음</span></div>
+      <div class="progress-wrap" aria-live="polite"><div class="progress-copy"><b id="progress-text">0 / ${checklist.questions.length} 응답</b><span id="progress-percent">0%</span></div><div class="progress-track"><span id="progress-bar"></span></div></div>
       <div class="scale-guide" aria-label="응답 기준">${scaleHtml}</div>
       <form id="rescan-form" novalidate><div class="question-list">${questionHtml}</div>
-      <div class="form-actions"><button class="button primary" type="submit">결과 확인</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div>
+      <div class="form-actions"><button class="button primary" type="submit">결과 확인</button><button class="button" type="reset">응답 지우기</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div>
       <p class="form-message" id="form-message" role="alert" aria-live="polite"></p></form>`;
 
     const form = document.querySelector('#rescan-form');
+    const updateProgress = () => {
+      const answered = checklist.questions.filter((question) => form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`)).length;
+      const percent = Math.round((answered / checklist.questions.length) * 100);
+      document.querySelector('#progress-text').textContent = `${answered} / ${checklist.questions.length} 응답`;
+      document.querySelector('#progress-percent').textContent = `${percent}%`;
+      document.querySelector('#progress-bar').style.width = `${percent}%`;
+    };
+    form.addEventListener('change', updateProgress);
+    form.addEventListener('reset', () => setTimeout(() => {
+      updateProgress();
+      document.querySelector('#form-message').textContent = '';
+      window.scrollTo({ top: app.offsetTop - 90, behavior: 'smooth' });
+    }, 0));
+
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       const unanswered = checklist.questions.find((question) => !form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`));
@@ -112,12 +127,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="result-block"><h3>생활에서 다시 살펴볼 질문</h3><ul class="reflection-list">${questions.map((question) => `<li>${escapeHtml(question)}</li>`).join('')}</ul></div>
         <div class="result-block"><h3>함께 읽기</h3>${linksHtml}</div>
         <div class="notice">${escapeHtml(checklist.disclaimer || '이 결과는 진단이 아닌 자가점검용 참고 자료입니다.')}</div>
-        <div class="form-actions"><button class="button primary" id="restart-checklist" type="button">다시 점검하기</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div>
+        <div class="form-actions no-print"><button class="button primary" id="restart-checklist" type="button">다시 점검하기</button><button class="button" id="print-result" type="button">결과 인쇄·PDF 저장</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div>
       </section>`;
       const resultView = app.querySelector('.result-view');
       resultView.focus();
       resultView.scrollIntoView({ behavior: 'smooth', block: 'start' });
       app.querySelector('#restart-checklist').addEventListener('click', () => location.reload());
+      app.querySelector('#print-result').addEventListener('click', () => window.print());
     });
   } catch (error) {
     if (title) title.textContent = '체크리스트를 불러오지 못했습니다';
