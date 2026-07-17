@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "self-esteem",
+  "series": "[나 체크리스트]",
+  "section": "Re:Scan",
+  "grade": "A",
+  "mode": "scored",
+  "status": "published",
+  "title": "자기존중감",
+  "subtitle": "나를 바라보는 기준과 자기평가 습관 자가점검",
+  "description": "최근 생활에서 자신을 평가하고 실수를 받아들이며 비교와 돌봄에 반응하는 방식을 살펴보는 자가점검입니다.",
+  "period": "최근 2주",
+  "orderPolicy": {"strategy":"balanced","maxSameCategoryRun":2,"sessionStable":true,"useReserveQuestions":false},
+  "categories": [
+    {"id":"self-evaluation","label":"자기평가"},
+    {"id":"mistake-acceptance","label":"실수 수용"},
+    {"id":"comparison","label":"비교 반응"},
+    {"id":"self-care","label":"자기 돌봄"}
+  ],
+  "scale": [
+    {"value":0,"label":"전혀 아니다"},
+    {"value":1,"label":"가끔 그렇다"},
+    {"value":2,"label":"자주 그렇다"},
+    {"value":3,"label":"거의 그렇다"}
+  ],
+  "questions": [
+    {"id":"se01","category":"self-evaluation","text":"잘한 일이 있어도 부족한 점부터 떠올린다.","reverse":false},
+    {"id":"se02","category":"mistake-acceptance","text":"실수한 뒤에도 그 일을 오래 되짚으며 나를 탓한다.","reverse":false},
+    {"id":"se03","category":"comparison","text":"다른 사람의 성과를 보면 내 가치가 줄어든 듯 느낀다.","reverse":false},
+    {"id":"se04","category":"self-care","text":"힘든 날에는 내 상태를 살피고 쉬어도 된다고 생각한다.","reverse":true},
+    {"id":"se05","category":"self-evaluation","text":"결과가 기대에 못 미치면 나 전체가 부족한 사람처럼 느껴진다.","reverse":false},
+    {"id":"se06","category":"mistake-acceptance","text":"실수를 배움의 과정으로 받아들이는 편이다.","reverse":true},
+    {"id":"se07","category":"comparison","text":"다른 사람과 비교하지 않아도 내 기준을 유지할 수 있다.","reverse":true},
+    {"id":"se08","category":"self-care","text":"내 필요보다 다른 사람의 기대를 먼저 맞추려는 편이다.","reverse":false},
+    {"id":"se09","category":"self-evaluation","text":"칭찬을 받아도 그대로 받아들이기 어렵다.","reverse":false},
+    {"id":"se10","category":"mistake-acceptance","text":"잘못한 일이 있어도 그 행동과 나 자신을 구분할 수 있다.","reverse":true},
+    {"id":"se11","category":"comparison","text":"주변의 평가가 달라져도 나에 대한 기본 판단은 크게 흔들리지 않는다.","reverse":true},
+    {"id":"se12","category":"self-care","text":"지쳤을 때도 쉬기보다 더 노력해야 한다고 몰아붙인다.","reverse":false}
+  ],
+  "results": [
+    {"min":0,"max":8,"level":"비교적 안정","summary":"최근 자기평가와 자기 돌봄의 균형이 비교적 유지되고 있습니다.","questions":["지금 나를 지탱하는 기준은 무엇인가요?","힘든 날에도 유지하고 싶은 자기 돌봄은 무엇인가요?"]},
+    {"min":9,"max":17,"level":"살펴볼 필요","summary":"자기비판이나 비교 반응이 일부 반복되고 있을 수 있습니다.","questions":["최근 나를 가장 자주 평가한 기준은 무엇이었나요?","그 기준이 언제부터 중요해졌는지 떠올려 보세요."]},
+    {"min":18,"max":26,"level":"자기비판 누적","summary":"실수와 비교 상황에서 자기비판이 자주 이어지고 있을 수 있습니다.","questions":["행동의 부족함과 나 전체를 구분할 수 있는 장면은 무엇인가요?","지금 줄일 수 있는 비교 환경은 무엇인가요?"]},
+    {"min":27,"max":36,"level":"자기 돌봄 우선","summary":"자기평가와 비교가 일상에 큰 부담으로 작용할 수 있습니다. 불편이 오래 지속되면 신뢰할 수 있는 사람이나 전문가와 상의하는 것도 고려해 보세요.","questions":["지금 나를 가장 거칠게 다루는 말은 무엇인가요?","오늘 나에게 허용할 수 있는 가장 작은 돌봄은 무엇인가요?"]}
+  ],
+  "methodNote":"총점은 12문항을 합산하며 긍정형 문항은 역채점합니다. 점수는 사람의 가치를 판정하는 기준이 아닙니다.",
+  "disclaimer":"이 체크리스트는 자기존중감을 높고 낮음으로 단정하거나 심리 상태를 진단하지 않는 자가점검용 참고 자료입니다.",
+  "relatedLinks":[{"title":"Re:Scan 이용 안내","url":"/rescan/about.html","type":"internal"}]
+}
