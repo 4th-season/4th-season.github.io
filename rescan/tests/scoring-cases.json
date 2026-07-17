@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "cases": [
+    {
+      "name": "A등급 일반 합산",
+      "mode": "scored",
+      "answers": {"q01": 2, "q02": 3},
+      "expectedTotal": 5,
+      "expectedCategoryScores": {"tension": 2, "recovery": 3}
+    },
+    {
+      "name": "B등급 패턴형 합산",
+      "mode": "pattern",
+      "answers": {"q01": 1, "q02": 2},
+      "expectedTotal": 3
+    },
+    {
+      "name": "C등급 성찰형 합산",
+      "mode": "reflection",
+      "answers": {"q01": 0, "q02": 1},
+      "expectedTotal": 1
+    },
+    {
+      "name": "역채점",
+      "mode": "scored",
+      "scale": [0,1,2,3],
+      "answer": 3,
+      "expectedScore": 0
+    },
+    {
+      "name": "D등급 도움 안내형",
+      "mode": "help",
+      "expectedBlocked": true,
+      "expectedTotal": null
+    }
+  ]
+}
