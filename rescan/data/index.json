@@ -18,22 +18,24 @@
     {
       "id": "burnout",
       "title": "번아웃",
-      "subtitle": "몸과 마음의 소진 신호 자가점검",
+      "subtitle": "소진이 반복되는 생활 패턴 자가점검",
       "grade": "B",
       "mode": "pattern",
       "category": "일·학습·성과",
-      "status": "sample",
-      "dataPath": "/rescan/data/checklists/burnout-pattern.json"
+      "status": "published",
+      "dataPath": "/rescan/data/checklists/burnout-pattern.json",
+      "articlePath": "/rescan/tistory/burnout.html"
     },
     {
       "id": "sleep-hygiene",
       "title": "수면위생",
       "subtitle": "잠의 질과 생활 리듬 자가점검",
-      "grade": "D",
-      "mode": "help",
+      "grade": "B",
+      "mode": "pattern",
       "category": "생활리듬·디지털 습관",
-      "status": "sample",
-      "dataPath": "/rescan/data/checklists/sleep-hygiene-guide.json"
+      "status": "published",
+      "dataPath": "/rescan/data/checklists/sleep-hygiene-guide.json",
+      "articlePath": "/rescan/tistory/sleep-hygiene.html"
     },
     {
       "id": "self-esteem",
