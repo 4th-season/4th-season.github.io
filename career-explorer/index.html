@@ -252,25 +252,33 @@
     // W07-D1: 공학은 물리적 시스템의 설계·제작·운영을 중심으로 구분합니다. 관련 학과와 대표 직업 데이터는 후속 작업에서 공식 출처로 검증해 추가합니다.
     // W07-D2: 기계·로봇, 전기·전자·반도체 관련 학과를 대학 공식 교육·학과 페이지와 연결합니다.
     // W07-D3: 에너지·산업공학·시스템 관련 학과를 대학 공식 교육·학과 페이지와 연결합니다.
+    // W07-D4: 커리어넷 공식 직업정보에서 공학 대표 직업의 실제 업무와 취업기관 유형을 확인합니다.
+    const engineeringRepresentativeJobs = {
+      robotics:{name:"로봇연구원",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=66",sourceLabel:"커리어넷 로봇연구원 직업정보",relatedMajors:["기계공학과","로봇공학과","전자공학과"]},
+      electrical:{name:"전기공학기술자",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=114",sourceLabel:"커리어넷 전기공학기술자 직업정보",relatedMajors:["전기공학과","전자공학과"]},
+      semiconductor:{name:"반도체공학기술자",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=157",sourceLabel:"커리어넷 반도체공학기술자 직업정보",relatedMajors:["반도체공학과","전자공학과","전기공학과"]},
+      energy:{name:"에너지공학기술자",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=995",sourceLabel:"커리어넷 에너지공학기술자 직업정보",relatedMajors:["에너지자원공학과","에너지공학과"]},
+      industrial:{name:"산업공학기술자",sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=83",sourceLabel:"커리어넷 산업공학기술자 직업정보",relatedMajors:["산업공학과","시스템공학과","스마트팩토리 관련 학과"]}
+    };
     const engineering = {
       "mechanical-robotics":{label:"기계·로봇공학",desc:"기계 장치·로봇의 구조, 운동, 제어와 제작을 다루는 분야",majors:[
-        {name:"기계공학과",description:"기계요소·열유체·동역학·설계와 제작을 배웁니다. 로봇·모빌리티·스마트제조 트랙 포함 여부를 대학별로 확인하세요.",jobs:[]},
-        {name:"로봇공학과",description:"로봇 구조·센서·제어·소프트웨어를 통합해 로봇 시스템을 설계·제작합니다. 기계·전자·컴퓨터 과목의 비중을 비교하세요.",jobs:[]}
-      ]},
+        {name:"기계공학과",description:"기계요소·열유체·동역학·설계와 제작을 배웁니다. 로봇·모빌리티·스마트제조 트랙 포함 여부를 대학별로 확인하세요.",jobs:[engineeringRepresentativeJobs.robotics]},
+        {name:"로봇공학과",description:"로봇 구조·센서·제어·소프트웨어를 통합해 로봇 시스템을 설계·제작합니다. 기계·전자·컴퓨터 과목의 비중을 비교하세요.",jobs:[engineeringRepresentativeJobs.robotics]}
+      ],jobs:[engineeringRepresentativeJobs.robotics]},
       "electrical-electronics":{label:"전기·전자·반도체",desc:"전력·회로·전자소자·통신 하드웨어를 설계·개발하는 분야",majors:[
-        {name:"전기공학과",description:"전력·전기기기·전력전자·제어와 전기 시스템을 배웁니다. 발전·송배전·전기설비 중심인지 확인하세요.",jobs:[]},
-        {name:"전자공학과",description:"전자회로·신호·통신·반도체 소자와 시스템을 배웁니다. 하드웨어 설계와 임베디드 소프트웨어 과목 비중을 비교하세요.",jobs:[]},
-        {name:"반도체공학과",description:"반도체 소자·공정·회로·설계와 시스템 응용을 배웁니다. 소자·공정 트랙과 시스템·설계 트랙을 구분해 확인하세요.",jobs:[]}
-      ]},
+        {name:"전기공학과",description:"전력·전기기기·전력전자·제어와 전기 시스템을 배웁니다. 발전·송배전·전기설비 중심인지 확인하세요.",jobs:[engineeringRepresentativeJobs.electrical]},
+        {name:"전자공학과",description:"전자회로·신호·통신·반도체 소자와 시스템을 배웁니다. 하드웨어 설계와 임베디드 소프트웨어 과목 비중을 비교하세요.",jobs:[engineeringRepresentativeJobs.semiconductor]},
+        {name:"반도체공학과",description:"반도체 소자·공정·회로·설계와 시스템 응용을 배웁니다. 소자·공정 트랙과 시스템·설계 트랙을 구분해 확인하세요.",jobs:[engineeringRepresentativeJobs.semiconductor]}
+      ],jobs:[engineeringRepresentativeJobs.electrical,engineeringRepresentativeJobs.semiconductor]},
       "energy":{label:"에너지공학",desc:"에너지의 생산·변환·저장·효율과 에너지 시스템을 다루는 분야",majors:[
-        {name:"에너지자원공학과",description:"에너지 자원 탐사·개발과 에너지 변환·저장·효율을 공학적으로 배웁니다. 자원개발과 신재생·시스템 과목의 비중을 비교하세요.",jobs:[]},
-        {name:"에너지공학과",description:"태양광·수소·연료전지·배터리 등 에너지 생산·변환·저장 기술을 다룹니다. 실험·설비·환경정책 과목의 연계를 확인하세요.",jobs:[]}
-      ]},
+        {name:"에너지자원공학과",description:"에너지 자원 탐사·개발과 에너지 변환·저장·효율을 공학적으로 배웁니다. 자원개발과 신재생·시스템 과목의 비중을 비교하세요.",jobs:[engineeringRepresentativeJobs.energy]},
+        {name:"에너지공학과",description:"태양광·수소·연료전지·배터리 등 에너지 생산·변환·저장 기술을 다룹니다. 실험·설비·환경정책 과목의 연계를 확인하세요.",jobs:[engineeringRepresentativeJobs.energy]}
+      ],jobs:[engineeringRepresentativeJobs.energy]},
       "industrial":{label:"산업공학·시스템",desc:"사람·설비·정보·공정을 분석해 생산성과 안전을 개선하는 분야",majors:[
-        {name:"산업공학과",description:"수학·통계·경영과학·컴퓨터공학을 바탕으로 생산·물류·서비스 시스템을 설계·개선하고 의사결정을 지원합니다.",jobs:[]},
-        {name:"시스템공학과",description:"복잡한 시스템의 요구사항·구조·운영을 분석하고 시스템 간 상호작용과 성능을 개선합니다.",jobs:[]},
-        {name:"스마트팩토리 관련 학과",description:"생산공정·설비·센서·데이터를 연결해 제조를 자동화·최적화하는 학과군입니다. 기계·전자·소프트웨어와의 경계를 교육과정으로 확인하세요.",jobs:[]}
-      ]}
+        {name:"산업공학과",description:"수학·통계·경영과학·컴퓨터공학을 바탕으로 생산·물류·서비스 시스템을 설계·개선하고 의사결정을 지원합니다.",jobs:[engineeringRepresentativeJobs.industrial]},
+        {name:"시스템공학과",description:"복잡한 시스템의 요구사항·구조·운영을 분석하고 시스템 간 상호작용과 성능을 개선합니다.",jobs:[engineeringRepresentativeJobs.industrial]},
+        {name:"스마트팩토리 관련 학과",description:"생산공정·설비·센서·데이터를 연결해 제조를 자동화·최적화하는 학과군입니다. 기계·전자·소프트웨어와의 경계를 교육과정으로 확인하세요.",jobs:[engineeringRepresentativeJobs.industrial]}
+      ],jobs:[engineeringRepresentativeJobs.industrial]}
     };
 
     // 공통 데이터 모델: 새 직업군은 fields 안에 분야·학과·직업 데이터만 추가하면 같은 화면 흐름을 사용합니다.
@@ -399,7 +407,7 @@
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"job-scope-ready",fields:aiSoftware};
-    careerCatalog.engineering={id:"engineering",label:"공학",description:"과학 지식과 기술을 바탕으로 물리적 시스템을 설계·제작·운영하는 분야",status:"scope-ready",fields:engineering};
+    careerCatalog.engineering={id:"engineering",label:"공학",description:"과학 지식과 기술을 바탕으로 물리적 시스템을 설계·제작·운영하는 분야",status:"active",fields:engineering};
     /* 확장 데이터 형식
       careerCatalog[직업군ID].fields[분야ID] = {
         label, desc,
@@ -604,6 +612,12 @@
     };
 
     const jobGuides = {
+      // W07-D4: 커리어넷 '하는 일'·'입직 및 취업방법'을 요약하고, 직업별 공식 원문 링크를 결과에 표시합니다.
+      "로봇연구원":{summary:"산업용·의료용·서비스 로봇의 구성요소를 연구·개발하고 조립·제작·자동화 설비의 설치·운용·정비를 수행합니다.",employers:["로봇·공장자동화 기업의 연구개발·생산기술 부서","의료·국방·환경·서비스 로봇 개발업체와 공공 연구기관"],skills:["자동제어·전자회로·기계설계의 통합 이해","수리·논리력과 공간지각력","시제품을 시험하고 원인을 찾아 개선하는 문제해결"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=66",sourceLabel:"커리어넷 로봇연구원 직업정보"},
+      "전기공학기술자":{summary:"전력·자동화·제어 시스템과 전기설비의 계획·설계·시공·감리·유지보수·안전관리를 수행합니다.",employers:["전력·발전·송배전 기업과 전기설비·엔지니어링 회사","전자·전기기기 제조기업의 연구개발·설계·공장자동화 부서","정부·공공기관과 전기 관련 연구기관"],skills:["전기·전자 원리와 설비 규격 이해","자료를 분석해 설비 개선안을 제시하는 능력","안전기준을 지키며 여러 부서와 조정하는 의사소통"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=114",sourceLabel:"커리어넷 전기공학기술자 직업정보"},
+      "반도체공학기술자":{summary:"반도체의 성능을 개선하거나 새 소자를 개발하고, 제조공정 조건·설비 운용·불량 원인과 대책을 관리합니다.",employers:["반도체 설계·제조 기업의 연구개발·공정·품질 부서","전자제품·의료기기·컴퓨터·모바일 부품 기업의 반도체 기술 부서","반도체 장비·재료 기업과 대학·공공 연구기관"],skills:["반도체 소자·공정·회로에 대한 기초 이해","공정 데이터와 불량 원인을 분석하는 능력","장비·생산·품질 팀과 협업하는 기록·소통 능력"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=157",sourceLabel:"커리어넷 반도체공학기술자 직업정보"},
+      "에너지공학기술자":{summary:"에너지 사업의 기술 조건을 분석하고 에너지 시스템·장비를 설계·계획·조직화하며 자원 탐사·개발과 추출 관련 연구를 수행합니다.",employers:["에너지·자원개발·정유·천연가스 관련 기업","환경·수질·토양·폐기물 처리와 재활용 엔지니어링 회사","한국에너지기술연구원·한국에너지공단·한국원자력연구원 등 공공·연구기관"],skills:["에너지 변환·저장과 설비 시스템 이해","자원·환경 데이터를 분석해 기술조건을 판단하는 능력","안전·환경 기준을 고려해 설계와 운영을 조정하는 능력"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=995",sourceLabel:"커리어넷 에너지공학기술자 직업정보"},
+      "산업공학기술자":{summary:"기업경영의 요소를 사회과학 지식과 자연과학 원리로 분석·조정하고 생산·품질·공정·물류 시스템의 개선안을 설계합니다.",employers:["제조·물류·서비스 기업의 생산관리·품질·공정개선 부서","스마트팩토리·경영정보시스템·운영혁신 컨설팅 기업","공공기관·연구기관의 산업·안전·품질 관련 조직"],skills:["통계·경영과학·데이터로 공정을 분석하는 능력","사람·설비·정보를 함께 고려하는 시스템 사고","개선안을 문서화하고 현장 관계자와 실행하는 협업"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=83",sourceLabel:"커리어넷 산업공학기술자 직업정보"},
       "물리치료사":{summary:"신체 기능의 회복과 움직임 개선을 돕는 보건의료 직업입니다.",major:"물리치료학과의 교육과정과 진입 요건을 대학별로 비교해 보세요.",requirements:"면허·국가시험 등 법적 진입 조건은 한국보건의료인국가시험원과 관계 법령의 최신 내용을 확인해야 합니다.",subjects:["생명과학과 인체·건강 관련 교과 탐색","물리와 운동 원리를 연결한 탐구","의사소통과 대인관계 역량을 기르는 활동"],activities:["근골격계와 운동의 관계 탐구","재활 보조기술 사례 조사","의료·재활기관의 직무와 윤리 조사"],employers:["병원·의원과 재활의료기관에서 환자 기능 회복 지원","보건·복지 관련 기관에서 재활서비스 지원","스포츠·운동 관련 기관에서 기능 회복과 신체관리 지원 가능 여부 탐색"],skills:["환자의 상태와 움직임을 관찰하는 능력","치료계획을 이해하고 안전하게 수행하는 능력","환자·보호자·의료진과 의사소통하는 능력","신체활동을 지속적으로 지원할 체력과 책임감"],requiredCredentials:["물리치료사 면허: 응시자격·국가시험·면허 절차는 국시원과 관계 법령에서 확인"],helpfulCredentials:["심폐소생술·응급처치 교육: 환자 안전 대응 역량 보완(채용 필수 여부는 기관별 확인)","문서·데이터 활용 교육: 치료기록과 행정업무 적응에 도움(면허를 대체하지 않음)"],universityGuide:"개설 대학은 대학알리미·대입정보포털에서 ‘물리치료학과’를 검색해 현재 학과명과 모집 여부를 확인하세요.",admissionGuide:"중상위·중하위처럼 한 등급으로 고정하면 부정확합니다. 대학·전형·연도별 전년도 입시결과를 대학어디가에서 비교해야 합니다."},
       "작업치료사":{summary:"일상생활에 필요한 신체·인지 기능과 활동 참여의 회복을 지원하는 직업입니다.",major:"작업치료학과의 교과목과 임상실습 구조를 비교해 보세요.",requirements:"면허·국가시험 등 진입 조건은 공식기관의 최신 안내를 확인해야 합니다.",subjects:["생명과학과 인간 발달 탐색","심리·인지와 일상활동의 관계 탐구","관찰과 의사소통 역량 활동"],activities:["연령별 일상생활 활동 분석","보조도구와 환경개선 사례 조사","재활 분야 직업윤리 탐구"],employers:["병원·재활의료기관에서 일상생활·인지·삼킴·작업 활동 훈련","복지관·발달지원기관에서 아동·성인 기능평가와 참여 지원"],skills:["일상활동 수행을 세밀하게 관찰하는 능력","대상자에 맞는 활동과 보조도구를 설계하는 능력","대상자·보호자·의료진과 협력하는 능력"]},
       "의사":{summary:"환자의 증상과 검사결과를 종합해 질병을 진단하고 치료·예방과 보건지도를 수행하는 의료인입니다.",employers:["병원·의원에서 진료·검사·치료계획 수립","공공보건기관·연구기관에서 보건사업과 의학연구"],skills:["임상정보를 종합하는 판단력","환자·보호자에게 설명하는 의사소통","의료진 협업과 높은 책임감"]},
@@ -621,6 +635,12 @@
     };
 
     const credentialGuides = {
+      // W07-D5: 공학 직업은 공통 법정 면허와 직무별 국가기술자격·채용 우대요건을 구분합니다.
+      "로봇연구원":{credentialType:"법정 필수 면허 없음",requiredCredentials:["로봇연구원 전체에 공통된 법정 면허는 확인되지 않았습니다. 연구소·기업별 전공, 프로젝트·대학원 요건과 채용공고를 확인하세요."],helpfulCredentials:["로봇기구개발기사·로봇소프트웨어개발기사·로봇하드웨어개발기사는 관련 직무의 준비 항목으로 안내되지만 담당 업무와 응시요건을 확인해야 합니다."],notSubstitutes:["로봇 관련 자격증이나 단기교육만으로 기업·연구기관의 전공·프로젝트·경력 요건을 대신할 수 없습니다."],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=66",credentialSourceLabel:"커리어넷 로봇연구원 관련자격 정보"},
+      "전기공학기술자":{credentialType:"법정 필수 면허 없음",requiredCredentials:["전기공학기술자라는 직업명 자체에 공통 법정 면허가 일률적으로 요구되지는 않지만, 전기설비의 법정 선임·안전관리 업무는 별도 자격·선임요건을 확인해야 합니다."],helpfulCredentials:["전기기사·전기산업기사·전기공사기사 등은 설계·시공·안전·설비 직무의 채용요건에 따라 도움이 될 수 있습니다."],notSubstitutes:["자격증 보유만으로 모든 전기설비 업무가 허용되는 것은 아니며, 법정 선임·업무범위와 채용공고를 함께 확인해야 합니다."],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=114",credentialSourceLabel:"커리어넷 전기공학기술자 관련자격 정보"},
+      "반도체공학기술자":{credentialType:"법정 필수 면허 없음",requiredCredentials:["반도체공학기술자에 공통된 법정 면허는 확인되지 않았습니다. 소자·공정·설계·장비 직무별 전공과 채용요건을 확인하세요."],helpfulCredentials:["전자·전기·재료 분야 국가기술자격은 담당 공정·설비·품질 직무와의 관련성을 확인한 뒤 선택하세요."],notSubstitutes:["반도체 관련 자격이나 교육은 기업별 전공·실험·공정 경험과 동일하지 않으며 채용요건을 대신하지 못합니다."],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=157",credentialSourceLabel:"커리어넷 반도체공학기술자 관련자격 정보"},
+      "에너지공학기술자":{credentialType:"법정 필수 면허 없음",requiredCredentials:["에너지공학기술자 전체에 공통된 법정 면허는 확인되지 않았습니다. 원자력·전기·가스·설비 등 담당 분야별 법정 자격과 선임요건을 별도로 확인하세요."],helpfulCredentials:["에너지관리기사·에너지관리산업기사 등은 에너지 설비·효율관리 직무와 관련될 수 있으며 채용기관의 요구를 확인해야 합니다."],notSubstitutes:["에너지 관련 자격증이 모든 발전·가스·원자력·설비 업무의 법정 요건을 자동으로 충족시키지는 않습니다."],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=995",credentialSourceLabel:"커리어넷 에너지공학기술자 관련자격 정보"},
+      "산업공학기술자":{credentialType:"법정 필수 면허 없음",requiredCredentials:["산업공학기술자 전체에 공통된 법정 면허는 확인되지 않았습니다. 생산·품질·안전·공장관리 직무별 채용요건을 확인하세요."],helpfulCredentials:["품질경영기사·품질경영산업기사·산업안전기사·공장관리기술사 등은 담당 직무와 채용조건에 따라 도움이 될 수 있습니다."],notSubstitutes:["관련 자격증은 산업공학 전공·데이터·현장개선 경험과 별개이며, 기업별 채용요건을 대신하지 못합니다."],credentialSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=83",credentialSourceLabel:"커리어넷 산업공학기술자 관련자격 정보"},
       "의사":{helpfulCredentials:["기본소생술·응급대응 교육: 환자안전 대응 역량 보완","의료정보·연구윤리 교육: 기록과 근거중심 진료 이해에 도움"],notSubstitutes:["민간 의료·상담 자격이나 단기교육은 의사 면허를 대신하지 못함","전문의는 의사 면허 취득 후 별도 수련·시험을 거치는 추가 경로임"]},
       "치과의사":{helpfulCredentials:["기본소생술·응급대응 교육: 치과진료 중 응급상황 대비","디지털 치의학·감염관리 교육: 장비 활용과 환자안전 보완"],notSubstitutes:["치과 관련 민간자격·단기교육은 치과의사 면허를 대신하지 못함","치과기공사·치과위생사 면허는 서로 다른 업무범위의 면허임"]},
       "한의사":{helpfulCredentials:["기본소생술·응급대응 교육: 환자안전 대응 역량 보완","의료기록·연구윤리 교육: 진료기록과 근거 검토에 도움"],notSubstitutes:["한방 관련 민간자격이나 단기과정은 한의사 면허를 대신하지 못함"]},
