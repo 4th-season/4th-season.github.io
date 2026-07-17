@@ -1,0 +1,23 @@
+{
+  "exam_year": 2026,
+  "exam": "september",
+  "label": "2026학년도 9월 모의평가",
+  "scope": "오답률 상위 15문항",
+  "items": [
+    {"rank":1,"question":30,"points":3,"answer":"①","wrong_rate":71.9,"correct_rate":28.1,"choices":{"①":28.1,"②":19.5,"③":8.4,"④":18.6,"⑤":25.4}},
+    {"rank":2,"question":17,"points":3,"answer":"⑤","wrong_rate":66.6,"correct_rate":33.4,"choices":{"①":8.9,"②":12.5,"③":21.0,"④":24.0,"⑤":33.4}},
+    {"rank":3,"question":37,"points":2,"answer":"④","wrong_rate":66.3,"correct_rate":33.7,"choices":{"①":30.6,"②":9.8,"③":2.0,"④":33.7,"⑤":23.9}},
+    {"rank":4,"question":34,"points":3,"answer":"③","wrong_rate":57.3,"correct_rate":42.7,"choices":{"①":11.8,"②":18.0,"③":42.7,"④":11.3,"⑤":16.2}},
+    {"rank":5,"question":33,"points":2,"answer":"②","wrong_rate":55.5,"correct_rate":44.5,"choices":{"①":14.0,"②":44.5,"③":10.6,"④":17.4,"⑤":13.5}},
+    {"rank":6,"question":8,"points":3,"answer":"①","wrong_rate":52.6,"correct_rate":47.4,"choices":{"①":47.4,"②":5.7,"③":7.6,"④":26.4,"⑤":12.8}},
+    {"rank":7,"question":16,"points":2,"answer":"⑤","wrong_rate":51.3,"correct_rate":48.7,"choices":{"①":13.8,"②":8.0,"③":9.8,"④":19.7,"⑤":48.7}},
+    {"rank":8,"question":6,"points":2,"answer":"⑤","wrong_rate":51.3,"correct_rate":48.7,"choices":{"①":5.8,"②":7.5,"③":8.2,"④":29.8,"⑤":48.7}},
+    {"rank":9,"question":28,"points":2,"answer":"①","wrong_rate":51.2,"correct_rate":48.8,"choices":{"①":48.8,"②":8.4,"③":28.3,"④":11.7,"⑤":2.8}},
+    {"rank":10,"question":15,"points":2,"answer":"③","wrong_rate":49.5,"correct_rate":50.5,"choices":{"①":4.0,"②":27.4,"③":50.5,"④":11.3,"⑤":6.7}},
+    {"rank":11,"question":32,"points":2,"answer":"④","wrong_rate":47.8,"correct_rate":52.2,"choices":{"①":12.4,"②":10.2,"③":10.6,"④":52.2,"⑤":14.6}},
+    {"rank":12,"question":7,"points":2,"answer":"⑤","wrong_rate":45.5,"correct_rate":54.5,"choices":{"①":5.2,"②":21.9,"③":4.8,"④":13.5,"⑤":54.5}},
+    {"rank":13,"question":24,"points":3,"answer":"⑤","wrong_rate":39.6,"correct_rate":60.4,"choices":{"①":5.8,"②":9.3,"③":8.4,"④":16.1,"⑤":60.4}},
+    {"rank":14,"question":27,"points":2,"answer":"②","wrong_rate":38.6,"correct_rate":61.4,"choices":{"①":10.4,"②":61.4,"③":5.7,"④":6.8,"⑤":15.7}},
+    {"rank":15,"question":44,"points":2,"answer":"①","wrong_rate":38.4,"correct_rate":61.6,"choices":{"①":61.6,"②":5.1,"③":19.8,"④":7.5,"⑤":6.0}}
+  ]
+}
