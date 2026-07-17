@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "stress",
+  "series": "[나 체크리스트]",
+  "section": "Re:Scan",
+  "grade": "A",
+  "mode": "scored",
+  "status": "sample",
+  "title": "지각된 스트레스",
+  "subtitle": "긴장과 피로 누적 상태 자가점검",
+  "description": "최근 생활에서 느끼는 긴장과 피로의 반복 신호를 살펴보는 샘플 데이터입니다.",
+  "period": "최근 2주",
+  "categories": [
+    {"id": "tension", "label": "긴장"},
+    {"id": "recovery", "label": "회복"}
+  ],
+  "scale": [
+    {"value": 0, "label": "전혀 아니다"},
+    {"value": 1, "label": "가끔 그렇다"},
+    {"value": 2, "label": "자주 그렇다"},
+    {"value": 3, "label": "거의 그렇다"}
+  ],
+  "questions": [
+    {"id": "q01", "category": "tension", "text": "예상하지 못한 일이 생기면 마음을 가라앉히기 어렵다.", "reverse": false},
+    {"id": "q02", "category": "recovery", "text": "쉬는 시간을 가져도 긴장과 피로가 충분히 풀리지 않는다.", "reverse": false}
+  ],
+  "results": [
+    {"min": 0, "max": 1, "level": "안정", "summary": "현재 샘플 문항에서는 뚜렷한 반복 신호가 크지 않습니다."},
+    {"min": 2, "max": 3, "level": "주의", "summary": "최근 생활에서 반복되는 긴장이나 피로가 있는지 살펴보세요."},
+    {"min": 4, "max": 5, "level": "경계", "summary": "긴장과 회복 저하가 생활에 미치는 영향을 함께 확인해 보세요."},
+    {"min": 6, "max": 6, "level": "과부하", "summary": "불편감이 지속되거나 일상을 방해한다면 전문가 상담을 고려해 보세요."}
+  ],
+  "disclaimer": "이 체크리스트는 의학적 진단이나 공식 심리검사를 대신하지 않는 자가점검용 참고 자료입니다.",
+  "relatedLinks": [
+    {"title": "Re:Scan 이용 안내", "url": "/rescan/about.html", "type": "internal"}
+  ]
+}
