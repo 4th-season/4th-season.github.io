@@ -1,0 +1,15 @@
+.series-common-hero{box-sizing:border-box;position:relative;isolation:isolate;width:min(1100px,calc(100% - 16px));min-height:clamp(330px,48vw,500px);margin:8px auto 38px;overflow:hidden;border:1px solid rgba(51,65,85,.16);border-radius:24px;background-color:#e9e4da;background-position:center;background-size:cover;background-repeat:no-repeat;box-shadow:0 20px 48px rgba(42,48,54,.14);font-family:inherit;word-break:keep-all}
+body.series-resite .series-common-hero{background-image:url("../resite/assets/resite-hero.webp")}
+body.series-reread .series-common-hero{background-image:url("../reread/assets/reread-hero.webp")}
+body.series-rethink .series-common-hero{background-image:url("../rethink/assets/rethink-hero.webp")}
+.series-common-hero::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(252,249,242,.98) 0%,rgba(252,249,242,.92) 34%,rgba(252,249,242,.46) 58%,rgba(252,249,242,.06) 82%),linear-gradient(0deg,rgba(31,49,43,.13),transparent 45%)}
+.series-common-hero__inner{box-sizing:border-box;display:flex;min-height:inherit;width:min(640px,62%);padding:clamp(34px,6vw,72px);flex-direction:column;justify-content:center}
+.series-common-hero__series{margin:0 0 14px;color:#94652f;font-size:clamp(.78rem,1.5vw,.94rem);font-weight:800;letter-spacing:.06em}
+.series-common-hero .series-common-hero__title{margin:0;color:#173b35;font-size:clamp(2rem,4.3vw,3.55rem);font-weight:800;line-height:1.22;letter-spacing:-.055em;text-wrap:balance}
+body.series-resite .series-common-hero .series-common-hero__title{color:#123c55}
+body.series-reread .series-common-hero .series-common-hero__title{color:#4b2d1f}
+.series-common-hero__description{max-width:570px;margin:20px 0 0;color:#4f5b56;font-size:clamp(.96rem,1.7vw,1.08rem);font-weight:500;line-height:1.72;letter-spacing:-.025em;text-wrap:balance}
+.series-common-hero__line{width:54px;height:2px;margin-top:26px;background:#b98243}
+body.series-common-hero-ready .series-repeated-title,body.series-common-hero-ready .series-repeated-meta,body.series-common-hero-ready .series-repeated-block,body.series-common-hero-ready .rta-hero .rta-kicker,body.series-common-hero-ready .rta-hero .rta-title-like{display:none!important}
+@media(max-width:700px){.series-common-hero{width:calc(100% - 8px);min-height:420px;margin:4px auto 28px;border-radius:18px;background-position:63% center}.series-common-hero::before{background:linear-gradient(180deg,rgba(252,249,242,.97) 0%,rgba(252,249,242,.89) 50%,rgba(252,249,242,.25) 78%,rgba(23,42,36,.20) 100%)}.series-common-hero__inner{width:100%;min-height:420px;padding:34px 26px 145px;justify-content:flex-start}.series-common-hero .series-common-hero__title{font-size:clamp(1.85rem,8.6vw,2.7rem)}.series-common-hero__description{display:-webkit-box;overflow:hidden;font-size:.96rem;line-height:1.65;-webkit-box-orient:vertical;-webkit-line-clamp:3}}
+@media(prefers-reduced-motion:no-preference){.series-common-hero__inner{animation:series-hero-enter 520ms ease-out both}@keyframes series-hero-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
