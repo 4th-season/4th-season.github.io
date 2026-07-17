@@ -12,6 +12,59 @@ document.addEventListener('DOMContentLoaded', async () => {
     .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
 
+  const shuffle = (items) => {
+    const copy = [...items];
+    for (let i = copy.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  };
+
+  const getBalancedQuestions = (checklist) => {
+    const key = `rescan-order:${checklist.id}:${checklist.schemaVersion || '1'}`;
+    const byId = new Map(checklist.questions.map((question) => [question.id, question]));
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(key) || 'null');
+      if (Array.isArray(saved) && saved.length === checklist.questions.length && saved.every((questionId) => byId.has(questionId))) {
+        return saved.map((questionId) => byId.get(questionId));
+      }
+    } catch (error) {
+      sessionStorage.removeItem(key);
+    }
+
+    const groups = new Map();
+    checklist.questions.forEach((question) => {
+      const category = question.category || 'uncategorized';
+      if (!groups.has(category)) groups.set(category, []);
+      groups.get(category).push(question);
+    });
+
+    const queues = shuffle([...groups.entries()]).map(([category, questions]) => ({ category, questions: shuffle(questions) }));
+    const ordered = [];
+    let lastCategory = null;
+    let sameCategoryRun = 0;
+
+    while (queues.some((queue) => queue.questions.length)) {
+      const candidates = queues.filter((queue) => queue.questions.length && !(queue.category === lastCategory && sameCategoryRun >= 2));
+      const pool = candidates.length ? candidates : queues.filter((queue) => queue.questions.length);
+      const preferred = pool.filter((queue) => queue.category !== lastCategory);
+      const selectedPool = preferred.length ? preferred : pool;
+      selectedPool.sort((a, b) => b.questions.length - a.questions.length || Math.random() - 0.5);
+      const selected = selectedPool[0];
+      const question = selected.questions.shift();
+      ordered.push(question);
+      if (selected.category === lastCategory) sameCategoryRun += 1;
+      else {
+        lastCategory = selected.category;
+        sameCategoryRun = 1;
+      }
+    }
+
+    try { sessionStorage.setItem(key, JSON.stringify(ordered.map((question) => question.id))); } catch (error) {}
+    return ordered;
+  };
+
   if (list) {
     try {
       const data = await loadJson(INDEX_PATH);
@@ -62,20 +115,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const checklist = await loadJson(item.dataPath);
     if (checklist.id !== id || !Array.isArray(checklist.questions) || !checklist.questions.length || !Array.isArray(checklist.scale) || !checklist.scale.length) throw new Error('체크리스트 데이터 형식이 올바르지 않습니다.');
 
+    const orderedQuestions = getBalancedQuestions(checklist);
     if (title) title.textContent = checklist.title || item.title;
     if (description) description.textContent = checklist.description || item.subtitle;
     document.title = `${checklist.title || item.title} | Re:Scan [나 체크리스트]`;
 
     const categoryLabels = Object.fromEntries((checklist.categories || []).map((category) => [category.id, category.label]));
     const scaleHtml = checklist.scale.map((option) => `<span><b>${escapeHtml(option.value)}</b>${escapeHtml(option.label)}</span>`).join('');
-    const questionHtml = checklist.questions.map((question, index) => {
+    const questionHtml = orderedQuestions.map((question, index) => {
       const options = checklist.scale.map((option) => `<label class="answer-option"><input type="radio" name="${escapeHtml(question.id)}" value="${escapeHtml(option.value)}" required><span>${escapeHtml(option.label)}</span></label>`).join('');
       return `<fieldset class="question-card" data-question="${escapeHtml(question.id)}"><legend><span class="question-number">${String(index + 1).padStart(2, '0')}</span>${escapeHtml(question.text)}</legend><div class="answer-grid">${options}</div></fieldset>`;
     }).join('');
 
     app.classList.add('checklist-panel');
-    app.innerHTML = `<div class="checklist-meta"><span>${escapeHtml(checklist.period || '현재 생활')}</span><span>${checklist.questions.length}개 문항</span><span>응답은 저장되지 않음</span></div>
-      <div class="progress-wrap" aria-live="polite"><div class="progress-copy"><b id="progress-text">0 / ${checklist.questions.length} 응답</b><span id="progress-percent">0%</span></div><div class="progress-track"><span id="progress-bar"></span></div></div>
+    app.innerHTML = `<div class="checklist-meta"><span>${escapeHtml(checklist.period || '현재 생활')}</span><span>${orderedQuestions.length}개 문항</span><span>응답은 저장되지 않음</span><span>문항 순서는 접속별로 달라질 수 있음</span></div>
+      <div class="progress-wrap" aria-live="polite"><div class="progress-copy"><b id="progress-text">0 / ${orderedQuestions.length} 응답</b><span id="progress-percent">0%</span></div><div class="progress-track"><span id="progress-bar"></span></div></div>
       <div class="scale-guide" aria-label="응답 기준">${scaleHtml}</div>
       <form id="rescan-form" novalidate><div class="question-list">${questionHtml}</div>
       <div class="form-actions"><button class="button primary" type="submit">결과 확인</button><button class="button" type="reset">응답 지우기</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div>
@@ -83,9 +137,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const form = document.querySelector('#rescan-form');
     const updateProgress = () => {
-      const answered = checklist.questions.filter((question) => form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`)).length;
-      const percent = Math.round((answered / checklist.questions.length) * 100);
-      document.querySelector('#progress-text').textContent = `${answered} / ${checklist.questions.length} 응답`;
+      const answered = orderedQuestions.filter((question) => form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`)).length;
+      const percent = Math.round((answered / orderedQuestions.length) * 100);
+      document.querySelector('#progress-text').textContent = `${answered} / ${orderedQuestions.length} 응답`;
       document.querySelector('#progress-percent').textContent = `${percent}%`;
       document.querySelector('#progress-bar').style.width = `${percent}%`;
     };
@@ -98,7 +152,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      const unanswered = checklist.questions.find((question) => !form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`));
+      const unanswered = orderedQuestions.find((question) => !form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`));
       const message = document.querySelector('#form-message');
       if (unanswered) {
         message.textContent = '모든 문항에 응답해 주세요.';
@@ -106,29 +160,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
       }
 
-      const answers = Object.fromEntries(checklist.questions.map((question) => [question.id, Number(form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`).value)]));
+      const answers = Object.fromEntries(orderedQuestions.map((question) => [question.id, Number(form.querySelector(`input[name="${CSS.escape(question.id)}"]:checked`).value)]));
       const calculation = window.ReScanScoring.calculate(checklist, answers);
       const categoryRows = Object.entries(calculation.categories).map(([categoryId, value]) => ({ id: categoryId, label: categoryLabels[categoryId] || categoryId, ...value }));
       const highest = categoryRows.length ? Math.max(...categoryRows.map((row) => row.score)) : 0;
       const leading = categoryRows.filter((row) => row.score === highest).map((row) => row.label);
       const leadingText = leading.length > 1 ? `${leading.join(' · ')} 영역이 함께 두드러집니다.` : `${leading[0] || '현재 신호'} 영역이 가장 두드러집니다.`;
       const categoryHtml = categoryRows.map((row) => `<div class="result-category"><div><b>${escapeHtml(row.label)}</b><span>${row.count}문항</span></div><strong>${row.score}점</strong></div>`).join('');
-      const questions = Array.isArray(calculation.result?.questions) ? calculation.result.questions : [
-        '최근 생활에서 이 신호가 두드러진 상황은 언제였나요?',
-        '쉬거나 거리를 두었을 때 달라지는 부분이 있었나요?'
-      ];
+      const questions = Array.isArray(calculation.result?.questions) ? calculation.result.questions : ['최근 생활에서 이 신호가 두드러진 상황은 언제였나요?', '쉬거나 거리를 두었을 때 달라지는 부분이 있었나요?'];
       const links = Array.isArray(checklist.relatedLinks) ? checklist.relatedLinks : [];
       const linksHtml = links.length ? `<div class="related-grid">${links.map((link) => `<a class="related-card" href="${escapeHtml(link.url)}"><b>${escapeHtml(link.title)}</b><span>함께 읽기 →</span></a>`).join('')}</div>` : '<p class="result-empty">연결 글은 이후 단계에서 추가됩니다.</p>';
 
-      app.innerHTML = `<section class="result-view" tabindex="-1">
-        <p class="result-kicker">현재 점검 결과</p>
+      app.innerHTML = `<section class="result-view" tabindex="-1"><p class="result-kicker">현재 점검 결과</p>
         <div class="result-summary"><div><span>전체 신호 수준</span><h2>${escapeHtml(calculation.result?.level || '결과 확인')}</h2><p>${escapeHtml(calculation.message)}</p></div><strong>${calculation.total}<small>점</small></strong></div>
         <div class="result-block"><h3>영역별 신호</h3><p class="result-leading">${escapeHtml(leadingText)}</p>${categoryHtml}</div>
         <div class="result-block"><h3>생활에서 다시 살펴볼 질문</h3><ul class="reflection-list">${questions.map((question) => `<li>${escapeHtml(question)}</li>`).join('')}</ul></div>
-        <div class="result-block"><h3>함께 읽기</h3>${linksHtml}</div>
-        <div class="notice">${escapeHtml(checklist.disclaimer || '이 결과는 진단이 아닌 자가점검용 참고 자료입니다.')}</div>
-        <div class="form-actions no-print"><button class="button primary" id="restart-checklist" type="button">다시 점검하기</button><button class="button" id="print-result" type="button">결과 인쇄·PDF 저장</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div>
-      </section>`;
+        <div class="result-block"><h3>함께 읽기</h3>${linksHtml}</div><div class="notice">${escapeHtml(checklist.disclaimer || '이 결과는 진단이 아닌 자가점검용 참고 자료입니다.')}</div>
+        <div class="form-actions no-print"><button class="button primary" id="restart-checklist" type="button">다시 점검하기</button><button class="button" id="print-result" type="button">결과 인쇄·PDF 저장</button><a class="button" href="/rescan/#topics">다른 주제 보기</a></div></section>`;
       const resultView = app.querySelector('.result-view');
       resultView.focus();
       resultView.scrollIntoView({ behavior: 'smooth', block: 'start' });
