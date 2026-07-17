@@ -249,6 +249,13 @@
         {name:"정보통신공학과",description:"유·무선 통신, 네트워크, 신호처리와 통신 시스템을 배우며 IoT 기기의 연결과 데이터 전송을 다룹니다. 통신 하드웨어·전파 설계의 비중과 네트워크 소프트웨어·임베디드 프로그래밍의 비중을 대학별로 비교해야 합니다.",jobs:[]}
       ]}
     };
+    // W07-D1: 공학은 물리적 시스템의 설계·제작·운영을 중심으로 구분합니다. 관련 학과와 대표 직업 데이터는 후속 작업에서 공식 출처로 검증해 추가합니다.
+    const engineering = {
+      "mechanical-robotics":{label:"기계·로봇공학",desc:"기계 장치·로봇의 구조, 운동, 제어와 제작을 다루는 분야",majors:[]},
+      "electrical-electronics":{label:"전기·전자·반도체",desc:"전력·회로·전자소자·통신 하드웨어를 설계·개발하는 분야",majors:[]},
+      "energy":{label:"에너지공학",desc:"에너지의 생산·변환·저장·효율과 에너지 시스템을 다루는 분야",majors:[]},
+      "industrial":{label:"산업공학·시스템",desc:"사람·설비·정보·공정을 분석해 생산성과 안전을 개선하는 분야",majors:[]}
+    };
 
     // 공통 데이터 모델: 새 직업군은 fields 안에 분야·학과·직업 데이터만 추가하면 같은 화면 흐름을 사용합니다.
     // W04-D1: 대표 직업은 분야별 탐색의 출발점으로만 검증한다. 실제 업무·진입조건·결과 화면 데이터는 후속 작업에서 직업별로 추가한다.
@@ -325,6 +332,16 @@
       "컴퓨터그래픽디자이너":{summary:"광고·영화·드라마·애니메이션 등에 쓰이는 3D 영상·도형·공간·자막·그림을 디자인하고, 웹페이지 이미지를 제작합니다.",employers:["영화제작사·방송국·광고대행사","컴퓨터그래픽·애니메이션 제작업체와 게임 개발업체","인쇄·디자인·건축 관련 업체"],skills:["컴퓨터그래픽 도구와 이미지 표현","예술시각능력과 창의력","제작 의도를 이해하고 결과물을 조정하는 협업"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=458",sourceLabel:"커리어넷 컴퓨터그래픽디자이너 직업정보"},
       "네트워크엔지니어":{summary:"사용 목적에 맞는 네트워크 시스템을 기획·분석·설계·구축하고, 설치·성능시험·장애 원인 분석과 복구를 수행합니다.",employers:["정보통신망 구축업체와 네트워크 관련 업체","전자기기·통신기기 제조업체의 연구개발 부서","네트워크 유지보수 관련 업체"],skills:["네트워크 하드웨어·소프트웨어 이해","기능성·안정성·확장성을 고려한 설계","장애 원인을 분석하고 신속히 복구하는 문제 해결"],sourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=430",sourceLabel:"커리어넷 네트워크엔지니어 직업정보"}
     });
+    // W06-D5: 세 번째 대표 직업의 관련 학과는 커리어넷 직업정보와 기존의 대학 공식 학과소개 경로를 함께 확인하도록 결과 화면에 표시합니다.
+    Object.assign(aiJobDetails,{
+      "지능형 로봇개발자":{...aiJobDetails["지능형 로봇개발자"],relatedMajors:["기계공학과", "전자공학과", "제어계측공학과", "메카트로닉스공학과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10113",majorSourceLabel:"커리어넷 지능형 로봇개발자 관련학과 정보"},
+      "지리정보시스템기사":{...aiJobDetails["지리정보시스템기사"],relatedMajors:["지리학과", "지적학과", "측지정보과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10050",majorSourceLabel:"커리어넷 지리정보시스템기사 관련학과 정보"},
+      "시스템엔지니어":{...aiJobDetails["시스템엔지니어"],relatedMajors:["시스템공학과", "컴퓨터공학과", "시스템경영공학과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=440",majorSourceLabel:"커리어넷 시스템엔지니어 관련학과 정보"},
+      "웹마스터":{...aiJobDetails["웹마스터"],relatedMajors:["컴퓨터공학과", "전기전자공학과", "전자공학과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=444",majorSourceLabel:"커리어넷 웹마스터 관련학과 정보"},
+      "정보보호전문가":{...aiJobDetails["정보보호전문가"],relatedMajors:["정보보호학과", "정보통신공학과", "컴퓨터공학과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=435",majorSourceLabel:"커리어넷 정보보호전문가 관련학과 정보"},
+      "컴퓨터그래픽디자이너":{...aiJobDetails["컴퓨터그래픽디자이너"],relatedMajors:["디지털디자인과", "그래픽디자인과", "컴퓨터디자인학과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=458",majorSourceLabel:"커리어넷 컴퓨터그래픽디자이너 관련학과 정보"},
+      "네트워크엔지니어":{...aiJobDetails["네트워크엔지니어"],relatedMajors:["정보통신공학과", "컴퓨터공학과", "소프트웨어공학과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=430",majorSourceLabel:"커리어넷 네트워크엔지니어 관련학과 정보"}
+    });
     // W05-D4: 직업별 관련 학과는 직업정보의 관련학과 항목과 대학 공식 학과소개, 대학알리미·대학어디가에서 교차 확인하도록 안내합니다.
     Object.assign(aiJobDetails,{
       "인공지능연구원":{...aiJobDetails["인공지능연구원"],relatedMajors:["인공지능학과", "컴퓨터공학과", "데이터사이언스학과"],majorSourceUrl:"https://www.career.go.kr/cloud/m/job/view?seq=10117",majorSourceLabel:"커리어넷 인공지능 관련 직업정보"},
@@ -366,6 +383,7 @@
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"job-scope-ready",fields:aiSoftware};
+    careerCatalog.engineering={id:"engineering",label:"공학",description:"과학 지식과 기술을 바탕으로 물리적 시스템을 설계·제작·운영하는 분야",status:"scope-ready",fields:engineering};
     /* 확장 데이터 형식
       careerCatalog[직업군ID].fields[분야ID] = {
         label, desc,
@@ -689,7 +707,7 @@
       const target=document.getElementById("route-list");target.innerHTML="";selected.forEach(id=>{const catalog=careerCatalog[id];const button=document.createElement("button");button.type="button";button.className="item-button"+(id===currentInterestId?" is-active":"");button.textContent=catalog.label+(Object.keys(catalog.fields||{}).length?"":" · 준비 중");button.addEventListener("click",()=>chooseInterest(id));target.appendChild(button);});document.getElementById("route-switcher").hidden=selected.length<2;
     }
     function renderFieldChoices(catalog){
-      document.getElementById("field-title").textContent=catalog.label+" 세부 분야";document.getElementById("field-intro").textContent="선택한 "+catalog.label+" 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.";document.getElementById("field-boundary-note").textContent=catalog.id==="healthcare"?"이 구분은 청소년이 업무 목적을 이해하기 위한 탐색용 분류입니다. 법령상 면허·자격 직종 구분과 완전히 같지 않으며, 실제 진입요건은 직업별 공식 안내에서 확인합니다.":catalog.id==="ai-software"?"탐색용 경계: AI는 모델 개발, 데이터는 수집·분석, 소프트웨어는 프로그램 구현, 클라우드는 배포·운영, 보안은 기술적 보호에 초점을 둡니다. 게임에서는 엔진·클라이언트·서버·게임플레이 코드는 소프트웨어, 기획·그래픽·애니메이션·사운드는 예술·미디어에서 함께 비교합니다. 임베디드·IoT에서는 펌웨어·드라이버·기기 제어 코드는 소프트웨어, 회로·PCB·반도체·통신장비 설계는 공학에서 함께 비교합니다. 개인정보 법·제도는 법률·행정과 겹칠 수 있습니다.":"세부 분야는 탐색을 돕기 위한 구분이며 실제 학과·직업의 경계는 서로 겹칠 수 있습니다.";fieldGrid.innerHTML="";const entries=Object.entries(catalog.fields||{});
+      document.getElementById("field-title").textContent=catalog.label+" 세부 분야";document.getElementById("field-intro").textContent="선택한 "+catalog.label+" 직업흥미군에서 더 탐색하고 싶은 분야를 선택하세요.";document.getElementById("field-boundary-note").textContent=catalog.id==="healthcare"?"이 구분은 청소년이 업무 목적을 이해하기 위한 탐색용 분류입니다. 법령상 면허·자격 직종 구분과 완전히 같지 않으며, 실제 진입요건은 직업별 공식 안내에서 확인합니다.":catalog.id==="ai-software"?"탐색용 경계: AI는 모델 개발, 데이터는 수집·분석, 소프트웨어는 프로그램 구현, 클라우드는 배포·운영, 보안은 기술적 보호에 초점을 둡니다. 게임에서는 엔진·클라이언트·서버·게임플레이 코드는 소프트웨어, 기획·그래픽·애니메이션·사운드는 예술·미디어에서 함께 비교합니다. 임베디드·IoT에서는 펌웨어·드라이버·기기 제어 코드는 소프트웨어, 회로·PCB·반도체·통신장비 설계는 공학에서 함께 비교합니다. 개인정보 법·제도는 법률·행정과 겹칠 수 있습니다.":catalog.id==="engineering"?"탐색용 경계: 기계·로봇은 구조·운동·제작, 전기·전자는 회로·전력·소자·통신 하드웨어, 에너지는 생산·변환·저장·효율, 산업공학은 공정·품질·물류·안전의 최적화에 초점을 둡니다. 펌웨어·드라이버·기기 제어 코드는 AI·소프트웨어와, 에너지 환경영향·자원순환은 환경과, 생산 데이터 기반 경영은 금융·경영과 함께 비교합니다.":"세부 분야는 탐색을 돕기 위한 구분이며 실제 학과·직업의 경계는 서로 겹칠 수 있습니다.";fieldGrid.innerHTML="";const entries=Object.entries(catalog.fields||{});
       if(!entries.length){const box=document.createElement("div");box.className="empty";box.style.gridColumn="1/-1";box.innerHTML="<strong>공통 탐색 구조가 준비되었습니다.</strong><br>"+catalog.label+"의 세부 분야·학과·직업 데이터는 검증 후 이 자리에 추가됩니다. 데이터가 추가되면 별도 화면 수정 없이 다음 단계가 자동으로 열립니다.";fieldGrid.appendChild(box);return;}
       entries.forEach(([id,data])=>{const button=document.createElement("button");button.type="button";button.className="choice";button.innerHTML="<strong>"+data.label+"</strong><span>"+data.desc+"</span>";button.addEventListener("click",()=>chooseField(id,button));fieldGrid.appendChild(button);});
     }
