@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "burnout",
+  "series": "[나 체크리스트]",
+  "section": "Re:Scan",
+  "grade": "B",
+  "mode": "pattern",
+  "status": "sample",
+  "title": "번아웃 패턴",
+  "subtitle": "소진이 반복되는 생활 패턴 자가점검",
+  "description": "하루를 마친 뒤에도 몸과 마음이 쉽게 회복되지 않는 패턴을 돌아보는 자가점검입니다.",
+  "period": "최근 2주",
+  "categories": [
+    {"id": "pressure", "label": "압박"},
+    {"id": "recovery", "label": "회복"}
+  ],
+  "scale": [
+    {"value": 0, "label": "거의 아니다"},
+    {"value": 1, "label": "가끔 그렇다"},
+    {"value": 2, "label": "자주 그렇다"}
+  ],
+  "questions": [
+    {"id": "b01", "category": "pressure", "text": "업무나 공부가 끝난 뒤에도 머릿속이 멈추지 않는다.", "reverse": false},
+    {"id": "b02", "category": "recovery", "text": "쉬는 시간을 가져도 몸이 충분히 풀리지 않는다.", "reverse": false},
+    {"id": "b03", "category": "pressure", "text": "이전의 부담이 남아 다음 일을 시작하기 어렵다.", "reverse": false}
+  ],
+  "patternResults": [
+    {"min": 0, "max": 2, "level": "안정한 리듬", "summary": "최근 반복 패턴이 비교적 낮습니다.", "questions": ["최근 가장 잘 버티는 루틴은 무엇인가요?", "다음 주에 유지하고 싶은 작은 리듬은 무엇인가요?"]},
+    {"min": 3, "max": 4, "level": "반복 패턴", "summary": "규칙적으로 쌓이는 긴장과 회복 저하가 보입니다.", "questions": ["어떤 상황에서 소진 패턴이 더 강해지나요?", "잠시 멈출 수 있는 구체적 장면이 있나요?"]},
+    {"min": 5, "max": 6, "level": "회복 우선", "summary": "소진이 자주 반복되고 있습니다.", "questions": ["현재 가장 먼저 줄이거나 쉬어야 할 일은 무엇인가요?", "주변 사람에게 도움을 요청할 수 있는 지점을 생각해 보세요."]}
+  ],
+  "disclaimer": "이 결과는 자가점검용 참고 자료입니다.",
+  "relatedLinks": [
+    {"title": "Re:Scan 이용 안내", "url": "/rescan/about.html", "type": "internal"}
+  ]
+}
