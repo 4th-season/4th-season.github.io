@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.2.0",
+  "id": "relationship-boundaries",
+  "series": "[나 체크리스트]",
+  "section": "Re:Scan",
+  "grade": "B",
+  "mode": "pattern",
+  "status": "published",
+  "title": "관계경계 패턴",
+  "subtitle": "부탁과 배려 사이에서 나의 경계를 살펴보는 자가점검",
+  "description": "최근 2주 동안 거절의 어려움, 책임 떠안기, 감정 침범, 관계 후 피로가 반복되는 장면을 돌아보는 자가점검입니다.",
+  "period": "최근 2주",
+  "orderPolicy": {"strategy":"balanced","maxSameCategoryRun":2,"sessionStable":true,"useReserveQuestions":false},
+  "categories": [
+    {"id":"refusal","label":"거절 어려움"},
+    {"id":"responsibility","label":"책임 떠안기"},
+    {"id":"intrusion","label":"감정 침범"},
+    {"id":"fatigue","label":"관계 후 피로"}
+  ],
+  "scale": [
+    {"value":0,"label":"전혀 아니다"},
+    {"value":1,"label":"가끔 그렇다"},
+    {"value":2,"label":"자주 그렇다"},
+    {"value":3,"label":"거의 그렇다"}
+  ],
+  "questions": [
+    {"id":"rb01","category":"refusal","text":"부탁을 거절하면 상대가 실망할까 봐 마음이 오래 불편하다.","reverse":false},
+    {"id":"rb02","category":"responsibility","text":"상대가 해야 할 일까지 내가 맡아야 관계가 유지될 것처럼 느낀다.","reverse":false},
+    {"id":"rb03","category":"intrusion","text":"상대의 기분이 좋지 않으면 내 책임처럼 느껴진다.","reverse":false},
+    {"id":"rb04","category":"fatigue","text":"사람을 만나고 난 뒤 혼자 회복할 시간이 많이 필요하다.","reverse":false},
+    {"id":"rb05","category":"refusal","text":"내 상황을 설명하고 무리한 부탁을 거절할 수 있다.","reverse":true},
+    {"id":"rb06","category":"responsibility","text":"도움을 주더라도 내가 감당할 수 있는 범위를 먼저 생각한다.","reverse":true},
+    {"id":"rb07","category":"intrusion","text":"상대의 감정과 내 감정을 구분하기 어렵다.","reverse":false},
+    {"id":"rb08","category":"fatigue","text":"관계에서 불편했던 일을 집에 돌아와서도 계속 되새긴다.","reverse":false},
+    {"id":"rb09","category":"refusal","text":"싫거나 부담스러운 상황에서도 괜찮은 척하는 경우가 많다.","reverse":false},
+    {"id":"rb10","category":"responsibility","text":"문제가 생기면 실제 책임보다 더 많은 몫을 내가 떠안는다.","reverse":false},
+    {"id":"rb11","category":"intrusion","text":"상대가 원하는 반응을 하지 않으면 죄책감을 느낀다.","reverse":false},
+    {"id":"rb12","category":"fatigue","text":"관계를 유지하기 위해 내 휴식이나 일정을 자주 미룬다.","reverse":false}
+  ],
+  "patternResults": [
+    {"min":0,"max":8,"level":"경계가 비교적 유지됨","summary":"현재 확인되는 관계경계의 부담 신호가 비교적 크지 않습니다.","questions":["지금 잘 지키고 있는 관계의 기준은 무엇인가요?","배려하면서도 유지하고 싶은 나의 한계는 무엇인가요?"]},
+    {"min":9,"max":17,"level":"반복 장면 살펴보기","summary":"일부 관계에서 거절이나 책임의 경계가 흔들리는 장면이 반복될 수 있습니다.","questions":["특히 거절하기 어려운 부탁은 어떤 종류인가요?","도움과 책임 떠안기의 경계는 어디라고 느끼나요?"]},
+    {"min":18,"max":26,"level":"관계 부담 누적","summary":"상대의 감정과 책임을 과도하게 떠안으며 피로가 누적될 수 있습니다.","questions":["내가 실제로 책임져야 하는 몫과 그렇지 않은 몫은 무엇인가요?","불편함을 안전하게 표현할 수 있는 사람이나 방식이 있나요?"]},
+    {"min":27,"max":36,"level":"안전과 회복 우선","summary":"관계 부담이 여러 영역에서 반복되고 있습니다. 위협, 통제, 폭력이나 안전 문제가 있다면 일반적인 경계 조정보다 전문기관의 도움을 먼저 고려하세요.","questions":["지금 가장 먼저 지켜야 할 안전과 생활의 기준은 무엇인가요?","혼자 판단하지 않고 연결할 수 있는 신뢰할 만한 사람이나 기관이 있나요?"]}
+  ],
+  "methodNote":"총점은 12문항의 응답을 합산하며 긍정형 경계 문항은 역채점합니다. 이 결과는 관계의 옳고 그름이나 상대의 성격을 판정하지 않습니다.",
+  "disclaimer":"이 체크리스트는 가스라이팅, 학대, 폭력 피해 여부를 진단하지 않습니다. 위협·강압·폭력·스토킹 등 안전 문제가 있다면 일반적인 자가점검보다 지역 긴급기관이나 전문 지원기관에 도움을 요청하세요.",
+  "relatedLinks":[
+    {"title":"Re:Scan 이용 안내","url":"/rescan/about.html","type":"internal"},
+    {"title":"관계 언어 사전 지도","url":"https://pencilgon.tistory.com/246","type":"external"}
+  ]
+}
