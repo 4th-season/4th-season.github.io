@@ -43,13 +43,24 @@
   letter-spacing: 0.06em;
 }
 
-.rethink-common-hero__title {
+.rethink-common-hero .rethink-common-hero__title {
   margin: 0;
   color: #173b35;
   font-size: clamp(2rem, 4.3vw, 3.55rem);
   font-weight: 800;
   line-height: 1.22;
   letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.rethink-common-hero__description {
+  max-width: 560px;
+  margin: 20px 0 0;
+  color: #4f5b56;
+  font-size: clamp(0.96rem, 1.7vw, 1.08rem);
+  font-weight: 500;
+  line-height: 1.72;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -60,9 +71,10 @@
   background: #b98243;
 }
 
-body.rethink-common-hero-ready > h1:first-of-type,
-body.rethink-common-hero-ready .seo-h1,
-body.rethink-common-hero-ready .rta-wrap > .rta-hero:first-child {
+body.rethink-common-hero-ready .rethink-repeated-title,
+body.rethink-common-hero-ready .rethink-repeated-meta,
+body.rethink-common-hero-ready .rta-hero .rta-kicker,
+body.rethink-common-hero-ready .rta-hero .rta-title-like {
   display: none !important;
 }
 
@@ -89,6 +101,15 @@ body.rethink-common-hero-ready .rta-wrap > .rta-hero:first-child {
 
   .rethink-common-hero__title {
     font-size: clamp(1.85rem, 8.6vw, 2.7rem);
+  }
+
+  .rethink-common-hero__description {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }
 
