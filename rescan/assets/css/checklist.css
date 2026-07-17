@@ -1,0 +1,15 @@
+.checklist-page .checklist-section{padding:48px 0 72px}
+.checklist-page .checklist-container{width:min(820px,calc(100% - 40px))}
+.checklist-page .checklist-intro{margin-bottom:28px;padding:34px 36px;border:1px solid var(--rs-line);border-radius:24px;background:linear-gradient(135deg,#fff 0%,#faf6fd 100%);box-shadow:0 12px 32px rgba(49,39,57,.07)}
+.checklist-page .checklist-intro .eyebrow{margin-bottom:12px}
+.checklist-page .checklist-intro h1{max-width:none;font-size:clamp(2rem,5vw,3.35rem);line-height:1.14;letter-spacing:-.055em}
+.checklist-page .checklist-intro .lead{max-width:680px;margin:14px 0 0;color:var(--rs-muted);font-size:1rem;line-height:1.75}
+.checklist-page #checklist-app{margin-top:0}
+.checklist-page .checklist-meta{margin-bottom:16px}
+.checklist-page .progress-wrap{position:sticky;top:86px;z-index:20;box-shadow:0 8px 22px rgba(49,39,57,.08)}
+.checklist-page .scale-guide{grid-template-columns:repeat(4,minmax(0,1fr))}
+.checklist-page .question-card{padding:24px 26px}
+.checklist-page .question-card legend{font-size:1.03rem}
+.checklist-page .answer-option span{min-height:48px}
+@media(max-width:768px){.checklist-page .checklist-section{padding:30px 0 54px}.checklist-page .checklist-container{width:min(100% - 28px,820px)}.checklist-page .checklist-intro{padding:26px 24px;border-radius:18px}.checklist-page .checklist-intro h1{font-size:2.15rem}.checklist-page .progress-wrap{top:76px}.checklist-page .scale-guide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.checklist-page .checklist-intro{padding:22px 20px}.checklist-page .checklist-intro h1{font-size:1.85rem}.checklist-page .question-card{padding:20px}.checklist-page .scale-guide{grid-template-columns:1fr}.checklist-page .progress-wrap{position:static}}
