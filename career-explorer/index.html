@@ -250,11 +250,27 @@
       ]}
     };
     // W07-D1: 공학은 물리적 시스템의 설계·제작·운영을 중심으로 구분합니다. 관련 학과와 대표 직업 데이터는 후속 작업에서 공식 출처로 검증해 추가합니다.
+    // W07-D2: 기계·로봇, 전기·전자·반도체 관련 학과를 대학 공식 교육·학과 페이지와 연결합니다.
+    // W07-D3: 에너지·산업공학·시스템 관련 학과를 대학 공식 교육·학과 페이지와 연결합니다.
     const engineering = {
-      "mechanical-robotics":{label:"기계·로봇공학",desc:"기계 장치·로봇의 구조, 운동, 제어와 제작을 다루는 분야",majors:[]},
-      "electrical-electronics":{label:"전기·전자·반도체",desc:"전력·회로·전자소자·통신 하드웨어를 설계·개발하는 분야",majors:[]},
-      "energy":{label:"에너지공학",desc:"에너지의 생산·변환·저장·효율과 에너지 시스템을 다루는 분야",majors:[]},
-      "industrial":{label:"산업공학·시스템",desc:"사람·설비·정보·공정을 분석해 생산성과 안전을 개선하는 분야",majors:[]}
+      "mechanical-robotics":{label:"기계·로봇공학",desc:"기계 장치·로봇의 구조, 운동, 제어와 제작을 다루는 분야",majors:[
+        {name:"기계공학과",description:"기계요소·열유체·동역학·설계와 제작을 배웁니다. 로봇·모빌리티·스마트제조 트랙 포함 여부를 대학별로 확인하세요.",jobs:[]},
+        {name:"로봇공학과",description:"로봇 구조·센서·제어·소프트웨어를 통합해 로봇 시스템을 설계·제작합니다. 기계·전자·컴퓨터 과목의 비중을 비교하세요.",jobs:[]}
+      ]},
+      "electrical-electronics":{label:"전기·전자·반도체",desc:"전력·회로·전자소자·통신 하드웨어를 설계·개발하는 분야",majors:[
+        {name:"전기공학과",description:"전력·전기기기·전력전자·제어와 전기 시스템을 배웁니다. 발전·송배전·전기설비 중심인지 확인하세요.",jobs:[]},
+        {name:"전자공학과",description:"전자회로·신호·통신·반도체 소자와 시스템을 배웁니다. 하드웨어 설계와 임베디드 소프트웨어 과목 비중을 비교하세요.",jobs:[]},
+        {name:"반도체공학과",description:"반도체 소자·공정·회로·설계와 시스템 응용을 배웁니다. 소자·공정 트랙과 시스템·설계 트랙을 구분해 확인하세요.",jobs:[]}
+      ]},
+      "energy":{label:"에너지공학",desc:"에너지의 생산·변환·저장·효율과 에너지 시스템을 다루는 분야",majors:[
+        {name:"에너지자원공학과",description:"에너지 자원 탐사·개발과 에너지 변환·저장·효율을 공학적으로 배웁니다. 자원개발과 신재생·시스템 과목의 비중을 비교하세요.",jobs:[]},
+        {name:"에너지공학과",description:"태양광·수소·연료전지·배터리 등 에너지 생산·변환·저장 기술을 다룹니다. 실험·설비·환경정책 과목의 연계를 확인하세요.",jobs:[]}
+      ]},
+      "industrial":{label:"산업공학·시스템",desc:"사람·설비·정보·공정을 분석해 생산성과 안전을 개선하는 분야",majors:[
+        {name:"산업공학과",description:"수학·통계·경영과학·컴퓨터공학을 바탕으로 생산·물류·서비스 시스템을 설계·개선하고 의사결정을 지원합니다.",jobs:[]},
+        {name:"시스템공학과",description:"복잡한 시스템의 요구사항·구조·운영을 분석하고 시스템 간 상호작용과 성능을 개선합니다.",jobs:[]},
+        {name:"스마트팩토리 관련 학과",description:"생산공정·설비·센서·데이터를 연결해 제조를 자동화·최적화하는 학과군입니다. 기계·전자·소프트웨어와의 경계를 교육과정으로 확인하세요.",jobs:[]}
+      ]}
     };
 
     // 공통 데이터 모델: 새 직업군은 fields 안에 분야·학과·직업 데이터만 추가하면 같은 화면 흐름을 사용합니다.
@@ -454,6 +470,41 @@
       "정보통신공학과":[
         {university:"인하대학교",department:"정보통신공학과",url:"https://ice.inha.ac.kr/",verifiedAt:"2026-07-16"}
       ],
+      // W07-D2·D3: 대학 공식 학과·교육과정 페이지를 우선 연결하고, 대학알리미·대학어디가에서 개설·모집 여부를 재확인합니다.
+      "기계공학과":[
+        {university:"서울대학교",department:"기계공학부",url:"https://me.snu.ac.kr/en/education/",verifiedAt:"2026-07-17",linkType:"대학 공식 교육과정"},
+        {university:"KAIST",department:"기계공학과",url:"https://koasas.kaist.ac.kr/handle/10203/13",verifiedAt:"2026-07-17",linkType:"대학 공식 연구·학과 정보"}
+      ],
+      "로봇공학과":[
+        {university:"서울대학교",department:"기계공학부 로보틱스 트랙",url:"https://me.snu.ac.kr/en/education/",verifiedAt:"2026-07-17",linkType:"대학 공식 교육과정"},
+        {university:"KAIST",department:"기계공학과",url:"https://koasas.kaist.ac.kr/handle/10203/13",verifiedAt:"2026-07-17",linkType:"대학 공식 학과 정보"}
+      ],
+      "전기공학과":[
+        {university:"서울대학교",department:"전기·정보공학부",url:"https://ece.snu.ac.kr/",verifiedAt:"2026-07-17",linkType:"대학 공식 학과소개"},
+        {university:"고려대학교",department:"전기전자공학부",url:"https://ee.korea.ac.kr/",verifiedAt:"2026-07-17",linkType:"대학 공식 학과소개"}
+      ],
+      "반도체공학과":[
+        {university:"성균관대학교",department:"반도체시스템공학과",url:"https://ics.skku.edu/ice/dept_semi_intro.do",verifiedAt:"2026-07-17",linkType:"대학 공식 학과소개"},
+        {university:"서울대학교",department:"전기·정보공학부",url:"https://ece.snu.ac.kr/ece/news?bbsidx=57729&md=v",verifiedAt:"2026-07-17",linkType:"대학 공식 연구·교육 정보"}
+      ],
+      "에너지자원공학과":[
+        {university:"서울대학교",department:"에너지자원공학과",url:"https://energy.snu.ac.kr/",verifiedAt:"2026-07-17",linkType:"대학 공식 학과소개"}
+      ],
+      "에너지공학과":[
+        {university:"서울대학교",department:"에너지자원공학과",url:"https://energy.snu.ac.kr/",verifiedAt:"2026-07-17",linkType:"대학 공식 학과소개"},
+        {university:"서울대학교",department:"기계공학부 에너지·환경 시스템 트랙",url:"https://me.snu.ac.kr/en/education/",verifiedAt:"2026-07-17",linkType:"대학 공식 교육과정"}
+      ],
+      "산업공학과":[
+        {university:"서울대학교",department:"산업공학과",url:"https://ie.snu.ac.kr/intro/",verifiedAt:"2026-07-17",linkType:"대학 공식 학과소개"},
+        {university:"서울대학교",department:"산업공학과 학부과정",url:"https://ie.snu.ac.kr/undergrad_course/",verifiedAt:"2026-07-17",linkType:"대학 공식 교육과정"}
+      ],
+      "시스템공학과":[
+        {university:"서울대학교",department:"산업공학과",url:"https://ie.snu.ac.kr/intro/",verifiedAt:"2026-07-17",linkType:"대학 공식 시스템 분석·개선 정보"}
+      ],
+      "스마트팩토리 관련 학과":[
+        {university:"서울대학교",department:"산업공학과",url:"https://ie.snu.ac.kr/undergrad_course/",verifiedAt:"2026-07-17",linkType:"대학 공식 생산·운영 시스템 교육"},
+        {university:"서울대학교",department:"기계공학부 스마트제조 트랙",url:"https://me.snu.ac.kr/en/education/",verifiedAt:"2026-07-17",linkType:"대학 공식 교육과정"}
+      ],
       "의예과·의학과":[{university:"연세대학교",department:"의과대학",url:"https://medicine.yonsei.ac.kr/medicine/index.do",verifiedAt:"2026-07-15"}],
       "치의예과·치의학과":[{university:"서울대학교",department:"치의학대학원 학·석사통합과정",url:"https://dentistry.snu.ac.kr/",verifiedAt:"2026-07-15"}],
       "한의예과·한의학과":[{university:"경희대학교",department:"한의과대학",url:"https://kmc.khu.ac.kr/kmc_kor/user/main/view.do",verifiedAt:"2026-07-15"}],
@@ -494,6 +545,15 @@
       "임베디드·IoT 융합 관련 학과":[["건양대학교","융합IT학과","https://www.konyang.ac.kr/"],["인제대학교","드론IoT시뮬레이션학부","https://www.inje.ac.kr/"],["대구대학교","전자전기공학부 정보통신공학전공","https://www.daegu.ac.kr/"],["국민대학교","전자공학부","https://www.kookmin.ac.kr/"]],
       "전자공학과":[["한양대학교","융합전자공학부","https://www.hanyang.ac.kr/"],["국민대학교","전자공학부","https://www.kookmin.ac.kr/"],["건양대학교","전자·정보통신공학 관련 전공","https://www.konyang.ac.kr/"],["인제대학교","전자IT기계자동차공학부","https://www.inje.ac.kr/"]],
       "정보통신공학과":[["대구대학교","전자전기공학부 정보통신공학전공","https://www.daegu.ac.kr/"],["국민대학교","전자공학부","https://www.kookmin.ac.kr/"],["건양대학교","전자·정보통신공학 관련 전공","https://www.konyang.ac.kr/"],["인제대학교","전자IT기계자동차공학부","https://www.inje.ac.kr/"]],
+      "기계공학과":[["서울대학교","기계공학부","https://me.snu.ac.kr/en/education/"],["KAIST","기계공학과","https://koasas.kaist.ac.kr/handle/10203/13"]],
+      "로봇공학과":[["서울대학교","기계공학부 로보틱스 트랙","https://me.snu.ac.kr/en/education/"]],
+      "전기공학과":[["서울대학교","전기·정보공학부","https://ece.snu.ac.kr/"],["고려대학교","전기전자공학부","https://ee.korea.ac.kr/"]],
+      "반도체공학과":[["성균관대학교","반도체시스템공학과","https://ics.skku.edu/ice/dept_semi_intro.do"]],
+      "에너지자원공학과":[["서울대학교","에너지자원공학과","https://energy.snu.ac.kr/"]],
+      "에너지공학과":[["서울대학교","에너지자원공학과","https://energy.snu.ac.kr/"],["서울대학교","기계공학부 에너지·환경 시스템 트랙","https://me.snu.ac.kr/en/education/"]],
+      "산업공학과":[["서울대학교","산업공학과","https://ie.snu.ac.kr/intro/"]],
+      "시스템공학과":[["서울대학교","산업공학과","https://ie.snu.ac.kr/undergrad_course/"]],
+      "스마트팩토리 관련 학과":[["서울대학교","산업공학과","https://ie.snu.ac.kr/undergrad_course/"],["서울대학교","기계공학부 스마트제조 트랙","https://me.snu.ac.kr/en/education/"]],
       "웹·모바일융합 관련 학과":[["성공회대학교","소프트웨어공학과","https://www.skhu.ac.kr/"],["광운대학교","소프트웨어학부","https://www.kw.ac.kr/"],["가천대학교","소프트웨어학과","https://www.gachon.ac.kr/"],["한성대학교","모바일소프트웨어트랙","https://www.hansung.ac.kr/"],["한국공학대학교","컴퓨터공학부","https://www.tukorea.ac.kr/"]],
       "IT융합학부":[["숙명여자대학교","IT공학전공","https://www.sookmyung.ac.kr/"],["서울여자대학교","소프트웨어융합학과","https://www.swu.ac.kr/"],["한국외국어대학교","AI융합대학","https://www.hufs.ac.kr/"],["숭실대학교","IT융합전공","https://www.ssu.ac.kr/"],["동국대학교","AI소프트웨어융합학부","https://www.dongguk.edu/"]],
       "클라우드컴퓨팅 관련 학과":[["광주대학교","AI소프트웨어학과 클라우드 교육과정","https://www.gwangju.ac.kr/"],["순천향대학교","컴퓨터소프트웨어공학과 클라우드 교육과정","https://www.sch.ac.kr/"],["한남대학교","AI융합학과 클라우드 교육과정","https://www.hannam.ac.kr/"],["한국공학대학교","컴퓨터공학부 클라우드 교육과정","https://www.tukorea.ac.kr/"],["제주대학교","컴퓨터공학전공 클라우드 교육과정","https://www.jejunu.ac.kr/"]],
