@@ -1,0 +1,12 @@
+{
+  "series": "[나 체크리스트]",
+  "section": "Re:Scan",
+  "items": [
+    {"id":"stress","title":"스트레스","subtitle":"긴장과 피로 누적 상태 자가점검","status":"planned"},
+    {"id":"burnout","title":"번아웃","subtitle":"몸과 마음의 소진 신호 자가점검","status":"planned"},
+    {"id":"sleep-hygiene","title":"수면위생","subtitle":"잠의 질과 생활 리듬 자가점검","status":"planned"},
+    {"id":"self-esteem","title":"자기존중감","subtitle":"나를 바라보는 마음의 기준 자가점검","status":"planned"},
+    {"id":"rumination","title":"반추사고","subtitle":"같은 생각이 반복되는 마음 자가점검","status":"planned"},
+    {"id":"relationship-boundaries","title":"관계경계","subtitle":"부탁과 침범 사이의 거리감 자가점검","status":"planned"}
+  ]
+}
