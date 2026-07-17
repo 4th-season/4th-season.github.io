@@ -1,15 +1,21 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "id": "stress",
   "series": "[나 체크리스트]",
   "section": "Re:Scan",
   "grade": "A",
   "mode": "scored",
-  "status": "sample",
+  "status": "testing",
   "title": "지각된 스트레스",
-  "subtitle": "긴장과 피로 누적 상태 자가점검",
-  "description": "최근 생활에서 느끼는 긴장과 피로의 반복 신호를 살펴보는 샘플 데이터입니다.",
+  "subtitle": "긴장과 회복 저하 상태 자가점검",
+  "description": "최근 생활에서 반복되는 긴장과 회복 저하 신호를 돌아보는 자가점검입니다.",
   "period": "최근 2주",
+  "orderPolicy": {
+    "strategy": "balanced",
+    "maxSameCategoryRun": 2,
+    "sessionStable": true,
+    "useReserveQuestions": false
+  },
   "categories": [
     {"id": "tension", "label": "긴장"},
     {"id": "recovery", "label": "회복"}
@@ -21,14 +27,24 @@
     {"value": 3, "label": "거의 그렇다"}
   ],
   "questions": [
-    {"id": "q01", "category": "tension", "text": "예상하지 못한 일이 생기면 마음을 가라앉히기 어렵다.", "reverse": false},
-    {"id": "q02", "category": "recovery", "text": "쉬는 시간을 가져도 긴장과 피로가 충분히 풀리지 않는다.", "reverse": false}
+    {"id": "q01", "category": "tension", "text": "예상하지 못한 일이 생기면 마음을 가라앉히기 어렵다.", "reverse": false, "tone": "light"},
+    {"id": "q02", "category": "recovery", "text": "쉬는 시간을 가져도 긴장과 피로가 충분히 풀리지 않는다.", "reverse": false, "tone": "light"},
+    {"id": "q03", "category": "tension", "text": "해야 할 일을 떠올리면 몸이나 마음이 먼저 긴장한다.", "reverse": false, "tone": "light"},
+    {"id": "q04", "category": "recovery", "text": "하루를 마친 뒤에도 머릿속이 쉽게 멈추지 않는다.", "reverse": false, "tone": "medium"},
+    {"id": "q05", "category": "tension", "text": "사소한 변화나 지연에도 평소보다 예민하게 반응한다.", "reverse": false, "tone": "medium"},
+    {"id": "q06", "category": "recovery", "text": "잠을 자거나 쉬어도 다음 날 개운함을 느끼기 어렵다.", "reverse": false, "tone": "medium"},
+    {"id": "q07", "category": "tension", "text": "여러 일을 동시에 처리해야 할 때 압박감이 크게 느껴진다.", "reverse": false, "tone": "medium"},
+    {"id": "q08", "category": "recovery", "text": "좋아하던 활동을 해도 기분 전환이 충분히 되지 않는다.", "reverse": false, "tone": "medium"},
+    {"id": "q09", "category": "tension", "text": "시간에 쫓긴다는 느낌이 자주 든다.", "reverse": false, "tone": "light"},
+    {"id": "q10", "category": "recovery", "text": "잠시 쉬는 동안에도 해야 할 일을 계속 걱정한다.", "reverse": false, "tone": "medium"},
+    {"id": "q11", "category": "tension", "text": "피곤할수록 작은 일에도 감정이 크게 흔들린다.", "reverse": false, "tone": "medium"},
+    {"id": "q12", "category": "recovery", "text": "최근에는 내 속도에 맞춰 생활하고 있다는 느낌이 적다.", "reverse": false, "tone": "light"}
   ],
   "results": [
-    {"min": 0, "max": 1, "level": "안정", "summary": "현재 샘플 문항에서는 뚜렷한 반복 신호가 크지 않습니다."},
-    {"min": 2, "max": 3, "level": "주의", "summary": "최근 생활에서 반복되는 긴장이나 피로가 있는지 살펴보세요."},
-    {"min": 4, "max": 5, "level": "경계", "summary": "긴장과 회복 저하가 생활에 미치는 영향을 함께 확인해 보세요."},
-    {"min": 6, "max": 6, "level": "과부하", "summary": "불편감이 지속되거나 일상을 방해한다면 전문가 상담을 고려해 보세요."}
+    {"min": 0, "max": 9, "level": "비교적 안정", "summary": "현재 확인되는 긴장과 회복 저하 신호가 많지 않습니다.", "questions": ["지금의 생활 리듬에서 도움이 되는 회복 습관은 무엇인가요?", "바쁠 때에도 지키고 싶은 최소한의 휴식은 무엇인가요?"]},
+    {"min": 10, "max": 18, "level": "살펴볼 필요", "summary": "긴장이나 회복 저하가 일부 반복되고 있을 수 있습니다.", "questions": ["최근 부담이 커진 시간대나 상황은 언제였나요?", "쉬었을 때 실제로 회복되는 활동과 그렇지 않은 활동은 무엇인가요?"]},
+    {"min": 19, "max": 27, "level": "부담 누적", "summary": "긴장과 회복 저하가 함께 누적되어 생활에 영향을 줄 수 있습니다.", "questions": ["현재 줄이거나 미룰 수 있는 부담은 무엇인가요?", "혼자 감당하지 않고 도움을 요청할 수 있는 사람은 누구인가요?"]},
+    {"min": 28, "max": 36, "level": "회복 우선", "summary": "여러 스트레스 신호가 지속적으로 나타나고 있습니다. 일상 기능이 떨어지거나 불편이 계속되면 전문가와 상의하는 것도 고려해 보세요.", "questions": ["지금 가장 먼저 안전하게 줄여야 할 부담은 무엇인가요?", "오늘 안에 연결할 수 있는 신뢰할 만한 사람이나 기관이 있나요?"]}
   ],
   "disclaimer": "이 체크리스트는 의학적 진단이나 공식 심리검사를 대신하지 않는 자가점검용 참고 자료입니다.",
   "relatedLinks": [
