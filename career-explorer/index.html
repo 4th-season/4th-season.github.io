@@ -496,6 +496,52 @@
 
     Object.values(marketing).forEach(field=>{const details=new Map();field.majors.forEach(major=>(major.jobs||[]).forEach(job=>{if(typeof job==="object")details.set(job.name,job);}));field.majors.forEach(major=>{major.jobs=(major.jobs||[]).map(job=>typeof job==="string"?(details.get(job)||job):job);});field.jobs=[...details.values()];});
 
+
+    const bizJob=(name,summary,employers,skills,required,helpful,extra={})=>({name,summary,employers,skills,requiredCredentials:required,helpfulCredentials:helpful,...extra});
+    const financeManagement={
+      "accounting-tax":{label:"회계·세무",desc:"거래와 재무상태를 기록·검증하고 세금 신고와 의사결정을 지원하는 분야",majors:[
+        {name:"회계학과",description:"재무·관리·원가회계, 회계감사, 세법과 회계정보시스템을 배웁니다.",universities:[{university:"부산외국어대학교",department:"경영학부 회계전공",url:"https://accounting.bufs.ac.kr/",linkType:"대학 공식 전공",verifiedAt:"2026-07-18"},{university:"동명대학교",department:"금융·회계학과",url:"https://www.tu.ac.kr/money/sub01_01.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-18"}],jobs:[
+          bizJob("공인회계사","기업 재무제표를 감사하고 회계·세무·경영 자문을 수행합니다.",["회계법인에서 외부감사·자문","기업·공공기관에서 회계·내부통제"],["회계기준·감사절차 이해","수치 검증과 직업윤리"],["공인회계사 시험 합격과 법정 등록·실무수습 등 최신 절차 확인"],["데이터분석·회계정보시스템 교육"],{credentialType:"국가전문자격",credentialSourceUrl:"https://www.kicpa.or.kr/",credentialSourceLabel:"한국공인회계사회",relatedMajors:["회계학과","경영학과"]}),
+          bizJob("기업 회계담당자","회사의 거래를 기록하고 결산·원가·세무자료와 재무보고를 관리합니다.",["기업 재무·회계팀","공공기관 회계·예산 부서"],["회계처리와 스프레드시트","정확성·마감관리"],["법정 공통 면허는 없으며 기업별 학위·회계지식·경력 조건 확인"],["전산회계·재경관리·ERP 교육"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["회계학과","세무회계학과"]}),
+          bizJob("세무사","납세자의 세금 신고·조정·불복과 조세 상담을 대리합니다.",["세무법인·세무사사무소","기업 세무팀"],["세법 해석과 계산","고객상담·기한관리"],["세무사 시험 합격과 법정 등록·실무교육 등 최신 절차 확인"],["회계·세법 심화학습"],{credentialType:"국가전문자격",credentialSourceUrl:"https://www.q-net.or.kr/site/semu",credentialSourceLabel:"Q-Net 세무사",relatedMajors:["세무회계학과","회계학과"]})
+        ]},
+        {name:"세무회계학과",description:"회계원리·원가·재무회계와 소득세·법인세·부가가치세 등 세법 및 신고 실무를 배웁니다.",universities:[{university:"가톨릭대학교",department:"세무회계금융학과",url:"https://gbs.catholic.ac.kr/gbs/course/roadmap02.do",linkType:"대학 공식 전공로드맵",verifiedAt:"2026-07-18"}],jobs:["공인회계사","기업 회계담당자","세무사"]}
+      ]},
+      "finance-investment":{label:"재무·금융·투자",desc:"자금조달·투자·위험을 분석하고 개인과 조직의 금융 의사결정을 지원하는 분야",majors:[
+        {name:"금융학과",description:"기업재무, 투자론, 금융시장·기관, 파생상품, 위험관리와 보험·연금을 배웁니다.",universities:[{university:"중앙대학교",department:"경영학부 글로벌금융전공",url:"https://biz.cau.ac.kr/2016/sub03/sub03_01.php",linkType:"대학 공식 전공",verifiedAt:"2026-07-18"},{university:"경희대학교",department:"경영학과 재무금융 분야",url:"https://com.khu.ac.kr/biz_kor/user/contents/view.do?menuNo=14500127",linkType:"대학 공식 분야소개",verifiedAt:"2026-07-18"}],jobs:[
+          bizJob("재무분석가","기업 실적·현금흐름·산업자료를 분석해 투자와 경영 판단을 지원합니다.",["증권·자산운용·신용평가 기관","기업 재무·IR팀"],["재무제표·가치평가","산업조사와 보고서"],["법정 공통 면허는 없으며 직무·기관별 등록자격과 채용조건 확인"],["투자자산운용·재무분석 교육은 직무별 도움 여부 확인"],{credentialType:"직무별 자격 확인",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["금융학과","경제학과","회계학과"]}),
+          bizJob("은행원·금융사무원","예금·대출·외환·기업금융 등 고객과 기업의 금융업무를 처리합니다.",["은행·저축은행·협동조합","금융 공공기관·핀테크 기업"],["금융상품·규정 이해","고객설명과 서류검증"],["법정 공통 면허는 없으며 기관별 채용·직무교육·금융상품 판매자격 확인"],["신용·외환·데이터 관련 교육"],{credentialType:"채용·업무별 조건",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["금융학과","경제학과","경영학과"]}),
+          bizJob("자산운용 실무자","고객·펀드의 목표와 위험수준에 따라 자산을 조사·배분하고 성과를 관리합니다.",["자산운용사·증권사","연기금·보험사 투자부서"],["투자분석과 위험관리","법규·윤리와 성과보고"],["담당업무에 따라 금융투자전문인력 등록·자격·경력 요건 확인"],["투자자산운용사 등은 해당 직무 등록요건과 채용 활용도를 별도 확인"],{credentialType:"업무별 등록요건 확인",sourceUrl:"https://license.kofia.or.kr/",sourceLabel:"금융투자협회 자격시험센터",relatedMajors:["금융학과","경제학과"]})
+        ]},
+        {name:"경제학과",description:"미시·거시경제, 계량경제, 금융·노동·산업경제를 통해 시장과 정책·기업의 선택을 분석합니다.",universities:[{university:"서울대학교",department:"경제학부",url:"https://econ.snu.ac.kr/",linkType:"대학 공식 학부",verifiedAt:"2026-07-18"}],jobs:["재무분석가","은행원·금융사무원","자산운용 실무자"]}
+      ]},
+      "people-organization":{label:"인사·조직",desc:"채용·평가·보상·교육과 노사관계를 운영해 조직과 구성원의 성장을 지원하는 분야",majors:[
+        {name:"경영학과",description:"인사조직·재무·회계·마케팅·생산운영·전략을 폭넓게 배우며 조직 운영을 이해합니다.",universities:[{university:"서울대학교",department:"경영대학",url:"https://cba.snu.ac.kr/",linkType:"대학 공식 단과대학",verifiedAt:"2026-07-18"},{university:"삼육대학교",department:"경영학과",url:"https://www.syu.ac.kr/doba/department-introduction/department-introduction/",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-18"}],jobs:[
+          bizJob("인사담당자","인력계획, 채용, 평가, 보상, 교육과 조직문화를 운영합니다.",["기업 인사·조직문화팀","공공기관 인사·교육부서"],["노동법·인사제도 이해","자료관리와 상담·조정"],["법정 필수 면허는 없으며 조직별 채용·경력 조건 확인"],["노무·HR데이터·교육기획 학습"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["경영학과","심리학과","교육학과"]}),
+          bizJob("교육훈련·HRD 담당자","직무역량을 분석하고 사내교육·리더십·경력개발 프로그램을 설계합니다.",["기업 인재개발팀","교육컨설팅·연수기관"],["요구분석과 교육설계","운영·성과평가"],["법정 필수 면허는 없으며 교육기획 프로젝트와 채용조건 확인"],["평생교육·교육공학·데이터분석 교육"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["경영학과","교육공학과"]}),
+          bizJob("공인노무사","노동관계 법령에 따른 인사노무 상담, 사건 대리와 노사관계 자문을 수행합니다.",["노무법인·사무소","기업 인사노무·노사관계 부서"],["노동법 해석","상담·협상·문서작성"],["공인노무사 시험 합격과 법정 등록·수습 등 최신 절차 확인"],["인사관리·노사관계 심화학습"],{credentialType:"국가전문자격",credentialSourceUrl:"https://www.q-net.or.kr/",credentialSourceLabel:"Q-Net 공인노무사",relatedMajors:["경영학과","법학과"]})
+        ]},
+        {name:"산업심리·조직심리 관련 학과",description:"개인차·동기·리더십·조직행동과 심리측정·연구방법을 조직 문제에 적용합니다.",universities:[{university:"성균관대학교",department:"심리학과",url:"https://psych.skku.edu/",linkType:"대학 공식 학과",verifiedAt:"2026-07-18"}],jobs:["인사담당자","교육훈련·HRD 담당자","공인노무사"]}
+      ]},
+      "strategy-operations":{label:"경영전략·운영",desc:"조직의 목표·사업모델·프로세스·성과를 분석하고 실행을 조정하는 분야",majors:[
+        {name:"경영학과·경영전략 전공",description:"전략, 생산운영, 조직, 재무·마케팅을 연결해 기업의 경쟁과 실행을 분석합니다.",universities:[{university:"한양대학교",department:"경영학부",url:"https://biz.hanyang.ac.kr/",linkType:"대학 공식 단과대학",verifiedAt:"2026-07-18"}],jobs:[
+          bizJob("경영기획자","회사 목표·예산·성과를 관리하고 경영진의 의사결정을 지원합니다.",["기업 경영기획·전략팀","공공기관 기획·평가부서"],["사업·재무자료 분석","계획·보고·조정"],["법정 필수 면허는 없으며 산업경험·분석·기획서 역량 확인"],["회계·데이터·프로젝트관리 교육"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["경영학과","경제학과"]}),
+          bizJob("경영컨설턴트","조직의 전략·운영·조직·재무 문제를 분석하고 개선안을 제안합니다.",["컨설팅회사","기업 내부혁신·전략조직"],["문제구조화·자료분석","인터뷰·제안서·발표"],["법정 공통 면허는 없으며 프로젝트·산업 전문성과 채용조건 확인"],["경영지도사는 활동영역에 따라 도움 여부 확인"],{credentialType:"법정 필수 면허 없음",credentialSourceUrl:"https://www.q-net.or.kr/",credentialSourceLabel:"Q-Net 경영지도사",relatedMajors:["경영학과","산업공학과"]}),
+          bizJob("운영관리자","인력·설비·재고·서비스 프로세스를 계획하고 품질·비용·납기를 개선합니다.",["제조·유통·서비스기업 운영부서","플랫폼·물류기업 사업운영팀"],["프로세스·지표 관리","현장 문제해결과 협업"],["법정 필수 면허는 없으며 산업별 안전·품질 자격 요구 확인"],["품질·데이터·프로젝트관리 교육"],{credentialType:"산업별 조건 확인",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["경영학과","산업공학과"]})
+        ]},
+        {name:"산업공학과",description:"확률·통계·최적화·품질·생산·물류·정보시스템으로 조직의 시스템과 프로세스를 개선합니다.",universities:[{university:"서울대학교",department:"산업공학과",url:"https://ie.snu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-18"}],jobs:["경영기획자","경영컨설턴트","운영관리자"]}
+      ]},
+      "entrepreneurship":{label:"창업·사업운영",desc:"고객 문제를 찾아 사업모델을 만들고 자금·사람·제품·판매를 통합 운영하는 분야",majors:[
+        {name:"창업·벤처경영 관련 학과",description:"기업가정신, 사업모델, 고객검증, 회계·재무, 마케팅과 창업 프로젝트를 배웁니다.",universities:[{university:"국민대학교",department:"글로벌창업벤처대학원",url:"https://entrepreneurship.kookmin.ac.kr/",linkType:"대학 공식 대학원",verifiedAt:"2026-07-18"}],jobs:[
+          bizJob("창업가","고객 문제와 사업기회를 검증하고 제품·팀·자금·판매를 구축합니다.",["스타트업 창업·공동창업","소상공인·사회적기업 운영"],["고객검증과 실행력","재무·영업·팀 리더십"],["일률적 국가면허는 없으나 업종별 인허가·신고·전문면허 확인"],["회계·세무·계약·지식재산 교육"],{credentialType:"업종별 인허가 확인",sourceUrl:"https://www.k-startup.go.kr/",sourceLabel:"K-Startup",relatedMajors:["창업·벤처경영 관련 학과","경영학과"]}),
+          bizJob("사업개발 담당자","시장·파트너를 탐색해 제휴, 신규사업, 수익모델과 시장진입을 추진합니다.",["기업 신사업·사업개발팀","스타트업 제휴·전략팀"],["시장·수익모델 분석","협상과 제안서 작성"],["법정 필수 면허는 없으며 산업경험·프로젝트·외국어 조건 확인"],["재무모델·계약·데이터분석 교육"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.work24.go.kr/",sourceLabel:"고용24",relatedMajors:["경영학과","경제학과"]}),
+          bizJob("소상공인·매장 운영자","상품·서비스, 매출·원가, 인력, 고객과 현장 운영을 직접 관리합니다.",["외식·소매·생활서비스 사업체","프랜차이즈 가맹점·독립매장"],["현금흐름·원가관리","고객응대와 현장문제 해결"],["업종별 사업자등록·영업신고·위생·안전·전문면허 요건 확인"],["세무·노무·온라인판매 교육"],{credentialType:"업종별 인허가 확인",sourceUrl:"https://www.sbiz24.kr/",sourceLabel:"소상공인24",relatedMajors:["창업·벤처경영 관련 학과","경영학과"]})
+        ]},
+        {name:"경영정보학과",description:"경영과 데이터·정보시스템·디지털 비즈니스를 결합해 사업모델과 운영 의사결정을 배웁니다.",universities:[{university:"국민대학교",department:"경영정보학부",url:"https://mis.kookmin.ac.kr/",linkType:"대학 공식 학부",verifiedAt:"2026-07-18"}],jobs:["창업가","사업개발 담당자","소상공인·매장 운영자"]}
+      ]}
+    };
+    Object.values(financeManagement).forEach(field=>{const d=new Map();field.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));field.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));field.jobs=[...d.values()];});
+
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -933,6 +979,7 @@
     careerCatalog["art-media"]={id:"art-media",label:"예술·미디어",description:"이미지·소리·영상·공연으로 생각과 감정을 창작하고 전달하는 분야",status:"active",fields:artMedia};
     careerCatalog.sports={id:"sports",label:"스포츠",description:"경기 수행부터 지도·과학·산업·운동건강까지 스포츠 활동과 서비스를 담당하는 분야",status:"active",fields:sports};
     careerCatalog.marketing={id:"marketing",label:"마케팅",description:"시장과 고객을 이해하고 브랜드·상품·소통·판매·고객경험을 설계하는 분야",status:"active",fields:marketing};
+    careerCatalog["finance-management"]={id:"finance-management",label:"금융·경영",description:"조직과 자산을 관리하고 회계·금융·인사·전략·사업운영을 담당하는 분야",status:"active",fields:financeManagement};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
