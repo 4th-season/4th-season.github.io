@@ -406,7 +406,7 @@
 
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
-    careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"job-scope-ready",fields:aiSoftware};
+    careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
     careerCatalog.engineering={id:"engineering",label:"공학",description:"과학 지식과 기술을 바탕으로 물리적 시스템을 설계·제작·운영하는 분야",status:"active",fields:engineering};
     /* 확장 데이터 형식
       careerCatalog[직업군ID].fields[분야ID] = {
@@ -428,15 +428,15 @@
     };
 
     const universityData = {
-      "시각디자인학과":[{name:"홍익대학교 디자인학부",url:"https://design.hongik.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
-      "산업디자인학과":[{name:"서울과학기술대학교 디자인학과",url:"https://design.seoultech.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
-      "콘텐츠기획학과":[{name:"한국외국어대학교 문화콘텐츠학전공",url:"https://hufsculture.hufs.ac.kr/",linkType:"대학 공식 전공",verifiedAt:"2026-07-17"}],
-      "방송영상학과":[{name:"동국대학교 영상대학원",url:"https://film.dongguk.edu/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
-      "디지털미디어학과":[{name:"이화여자대학교 융합콘텐츠학과",url:"https://cms.ewha.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
-      "애니메이션학과":[{name:"청강문화산업대학교 애니메이션스쿨",url:"https://www.ck.ac.kr/school/animation",linkType:"대학 공식 스쿨",verifiedAt:"2026-07-17"}],
-      "음악학과":[{name:"서울대학교 음악대학",url:"https://music.snu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
-      "공연예술학과":[{name:"한국예술종합학교 연극원",url:"https://www.karts.ac.kr/",linkType:"대학 공식 원",verifiedAt:"2026-07-17"}],
-      "사진영상학과":[{name:"중앙대학교 공연영상창작학부",url:"https://www.cau.ac.kr/",linkType:"대학 공식 학부",verifiedAt:"2026-07-17"}],
+      "시각디자인학과":[{university:"홍익대학교",department:"디자인학부",url:"https://design.hongik.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
+      "산업디자인학과":[{university:"서울과학기술대학교",department:"디자인학과",url:"https://design.seoultech.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
+      "콘텐츠기획학과":[{university:"한국외국어대학교",department:"문화콘텐츠학전공",url:"https://hufsculture.hufs.ac.kr/",linkType:"대학 공식 전공",verifiedAt:"2026-07-17"}],
+      "방송영상학과":[{university:"동국대학교",department:"영상대학원",url:"https://film.dongguk.edu/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
+      "디지털미디어학과":[{university:"이화여자대학교",department:"융합콘텐츠학과",url:"https://cms.ewha.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
+      "애니메이션학과":[{university:"청강문화산업대학교",department:"애니메이션스쿨",url:"https://www.ck.ac.kr/school/animation",linkType:"대학 공식 스쿨",verifiedAt:"2026-07-17"}],
+      "음악학과":[{university:"서울대학교",department:"음악대학",url:"https://music.snu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-17"}],
+      "공연예술학과":[{university:"한국예술종합학교",department:"연극원",url:"https://www.karts.ac.kr/",linkType:"대학 공식 원",verifiedAt:"2026-07-17"}],
+      "사진영상학과":[{university:"중앙대학교",department:"공연영상창작학부",url:"https://www.cau.ac.kr/",linkType:"대학 공식 학부",verifiedAt:"2026-07-17"}],
       "인공지능학과":[
         {university:"중앙대학교",department:"AI학과",url:"https://ai.cau.ac.kr/",verifiedAt:"2026-07-16"},
         {university:"연세대학교",department:"첨단컴퓨팅학부",url:"https://cs.yonsei.ac.kr/csai/index.do",verifiedAt:"2026-07-16"},
@@ -997,7 +997,7 @@
       document.getElementById("adiga-guide").innerHTML="<strong>대학 공식 학과소개·입시 출처 교차 확인</strong><br>학과소개는 위 대학 공식 페이지에서, 개설·공시 정보는 대학알리미에서, 모집단위·전형·전년도 입시결과는 대학어디가에서 <strong>‘"+major+"’</strong>로 다시 확인하세요.<br><a class=\"reset\" href=\"https://www.academyinfo.go.kr/\" target=\"_blank\" rel=\"noopener noreferrer\">대학알리미 공식 사이트 ↗</a> <a class=\"reset\" href=\"https://www.adiga.kr/\" target=\"_blank\" rel=\"noopener noreferrer\">대학어디가 공식 사이트 ↗</a>";
       const universities=getUniversities(major,inlineUniversities);target.innerHTML="";
       if(universities.length){
-        note.textContent="대표 대학 약 5곳의 공식 학과소개를 표시합니다. 링크 유형과 기준일을 확인한 뒤, 전체 개설·모집·전형 정보는 대학알리미와 대학어디가에서 교차 확인하세요.";
+        note.textContent="현재 확인된 대표 대학 "+universities.length+"곳의 공식 학과소개를 표시합니다. 전체 개설 대학 목록이 아니며, 링크 유형과 기준일을 확인한 뒤 대학알리미와 대학어디가에서 교차 확인하세요.";
         universities.forEach(item=>{const a=document.createElement("a");a.className="item-button";a.href=item.url;a.target="_blank";a.rel="noopener";a.style.textDecoration="none";const linkType=item.linkType||"학과소개 직접 연결";a.innerHTML="<strong>"+item.university+"</strong><br><span>"+item.department+" · "+linkType+" ↗</span><br><small>정보 정리 기준일 "+(item.verifiedAt||"2026-07-16")+"</small>";target.appendChild(a);});
       }else{
         note.textContent="이 학과의 대학별 공식 페이지는 검증 후 순차적으로 추가합니다. 현재는 공신력 있는 대학정보 서비스에서 학과명을 검색하세요.";
