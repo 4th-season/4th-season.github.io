@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "result": "PASS",
+  "site_html": 28,
+  "required_pages": 28,
+  "internal_links_checked": 217,
+  "external_links_syntax_checked": 28,
+  "issues": [],
+  "warnings": [],
+  "publication_status": "한국어 번역 작업판 v1.0. 이탈리아어·영어 1:1 병기는 후속판에서 추가."
+}
