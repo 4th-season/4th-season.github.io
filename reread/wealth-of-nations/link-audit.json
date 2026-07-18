@@ -1,4 +1,19 @@
 {
-  "internal_links": 35,
-  "missing": []
+  "version": "6.2",
+  "result": "PASS",
+  "stats": {
+    "html_files": 36,
+    "site_pages": 35,
+    "tistory_templates": 1,
+    "internal_links_checked": 423,
+    "external_links_checked_syntax_only": 70
+  },
+  "issues": [],
+  "notes": [
+    "장별 내비게이션을 실제 flat HTML 경로로 수정했습니다.",
+    "티스토리 통합입구 링크를 .html 실주소로 수정했습니다.",
+    "사이트 페이지에 canonical 및 meta description을 추가했습니다.",
+    "배포 스크립트가 extensionless 주소와 기존 /reread/chapter-XX/ 주소용 리디렉션을 자동 생성합니다.",
+    "티스토리 파일은 게시글 편집기에 붙여넣는 본문 조각이므로 title/charset/viewport 검사 대상에서 제외했습니다."
+  ]
 }
