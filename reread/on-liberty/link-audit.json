@@ -1,0 +1,40 @@
+{
+  "version": "0.9",
+  "result": "PASS",
+  "site_html": 6,
+  "internal_links_checked": 41,
+  "chapters": [
+    {
+      "file": "chapter-01.html",
+      "ko_title": "제1장 서론",
+      "en_title": "Chapter I. Introductory",
+      "sections": 50
+    },
+    {
+      "file": "chapter-02.html",
+      "ko_title": "제2장 사상과 토론의 자유",
+      "en_title": "Chapter II. Of the Liberty of Thought and Discussion",
+      "sections": 24
+    },
+    {
+      "file": "chapter-03.html",
+      "ko_title": "제3장 행복을 이루는 한 요소로서의 개성",
+      "en_title": "Chapter III. Of Individuality, as One of the Elements of Well-Being",
+      "sections": 25
+    },
+    {
+      "file": "chapter-04.html",
+      "ko_title": "제4장 개인에 대한 사회 권위의 한계",
+      "en_title": "Chapter IV. Of the Limits to the Authority of Society over the Individual",
+      "sections": 20
+    },
+    {
+      "file": "chapter-05.html",
+      "ko_title": "제5장 적용",
+      "en_title": "Chapter V. Applications",
+      "sections": 25
+    }
+  ],
+  "issues": [],
+  "important_status": "한국어 번역 작업본 HTML 조립 완료. 영어 원문 1:1 병기는 아직 미완료."
+}
