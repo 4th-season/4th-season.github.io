@@ -812,6 +812,52 @@
       ]}
     };
     Object.values(builtEnvironmentCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
+    const educationJob=(name,summary,required,extra={})=>({name,summary,employers:extra.employers||["학교·교육청·공공교육기관","대학·평생교육기관·교육기업·에듀테크 기업"],skills:extra.skills||["학습자 이해와 의사소통","수업·프로그램 설계와 운영","관찰·평가·기록과 협업"],requiredCredentials:required,helpfulCredentials:extra.helpfulCredentials||["교육현장 실습·멘토링·수업설계 포트폴리오","디지털 학습도구·데이터 활용 경험"],...extra});
+    const educationCareer={
+      "school-teaching":{label:"학교교직",desc:"초·중등학교에서 교과와 생활을 지도하거나 교육과정·교재를 연구하고 개발하는 분야",majors:[
+        {name:"초등교육과",description:"초등학생의 발달과 전 교과 지도법, 학급운영·생활지도·교육실습을 배우는 교원양성 과정입니다. 대학·전형별 교원자격 취득 가능 여부를 반드시 확인해야 합니다.",licenseType:"초등학교 정교사 자격 경로",licensePath:"교육대학교·초등교육과 등 법정 교원양성 과정 이수 → 졸업 및 무시험검정 요건 충족 → 초등학교 정교사 자격 취득 → 공립학교는 별도 교원임용시험",licenseSource:"https://www.moe.go.kr/",universities:[{university:"서울교육대학교",department:"초등교육 학부과정",url:"https://www.snue.ac.kr/",linkType:"대학 공식 홈페이지",verifiedAt:"2026-07-19"},{university:"이화여자대학교",department:"초등교육과",url:"https://teachers.ewha.ac.kr/teachers/major/elementary-education.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          educationJob("초등학교 교사","초등학생의 여러 교과와 생활을 지도하고 학급·학생·학부모 소통과 평가를 담당합니다.",["초등학교 정교사 자격 취득. 공립학교 교사는 별도 교원임용시험 합격과 임용 필요"],{credentialType:"교원자격 필요",credentialSourceUrl:"https://www.moe.go.kr/",credentialSourceLabel:"교육부"}),
+          educationJob("중등학교 교사","중·고등학교에서 표시과목을 가르치고 수업·평가·생활지도와 학생·보호자 소통을 담당합니다.",["해당 표시과목의 중등학교 정교사 자격 취득. 공립학교 교사는 별도 교원임용시험 합격과 임용 필요"],{credentialType:"교원자격 필요",credentialSourceUrl:"https://www.moe.go.kr/",credentialSourceLabel:"교육부"}),
+          educationJob("교과교육 연구·개발자","교육과정과 교과내용을 분석해 교재·수업자료·평가도구를 연구하고 학교 적용을 지원합니다.",["법정 공통 면허 없음. 교과·교육과정 전문성, 연구방법과 콘텐츠 개발 포트폴리오, 기관별 학위조건 확인"],{credentialType:"기관별 학위·연구요건 확인",skills:["교과·교육과정 분석","연구·평가와 보고서 작성","교재·수업자료 개발"]})
+        ]},
+        {name:"교과교육과(국어·영어·수학 등)",description:"특정 교과의 전공지식과 교육론·교재연구·수업실습을 함께 배우는 중등 교원양성 계열입니다.",licenseType:"중등학교 정교사 자격 경로",licensePath:"사범대학 교과교육과 등 승인된 교원양성 과정 이수 → 표시과목별 무시험검정 요건 충족 → 중등학교 정교사 자격 취득 → 공립학교는 별도 교원임용시험",licenseSource:"https://www.moe.go.kr/",universities:[{university:"한국교원대학교",department:"학부 교원양성 전공",url:"https://www.knue.ac.kr/",linkType:"대학 공식 홈페이지",verifiedAt:"2026-07-19"},{university:"이화여자대학교",department:"사범대학 교과교육과",url:"https://teachers.ewha.ac.kr/teachers/index.do",linkType:"대학 공식 사범대학",verifiedAt:"2026-07-19"}],jobs:["초등학교 교사","중등학교 교사","교과교육 연구·개발자"]}
+      ]},
+      "early-special":{label:"유아·특수교육",desc:"유아의 발달과 놀이를 지원하고 장애학생의 교육적 요구에 맞춘 개별화교육을 제공하는 분야",majors:[
+        {name:"유아교육과",description:"영유아 발달, 놀이·교육과정, 관찰·평가, 가족·기관 협력과 교육실습을 배우는 교원양성 과정입니다.",licenseType:"유치원 정교사 자격 경로",licensePath:"유아교육 교원양성 과정 이수 → 졸업 및 무시험검정 요건 충족 → 유치원 정교사 자격 취득 → 공립유치원은 별도 교원임용시험",licenseSource:"https://www.moe.go.kr/",universities:[{university:"이화여자대학교",department:"유아교육과",url:"https://teachers.ewha.ac.kr/teachers/major/early-childhood-education.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"한국교원대학교",department:"유아교육과",url:"https://www.knue.ac.kr/",linkType:"대학 공식 홈페이지",verifiedAt:"2026-07-19"}],jobs:[
+          educationJob("유치원 교사","유아의 발달과 흥미를 관찰해 놀이·생활·교육활동을 계획하고 안전과 보호자 소통을 담당합니다.",["유치원 정교사 자격 취득. 공립유치원 교사는 별도 교원임용시험 합격과 임용 필요"],{credentialType:"교원자격 필요",credentialSourceUrl:"https://www.moe.go.kr/",credentialSourceLabel:"교육부"}),
+          educationJob("특수학교 교사","장애학생의 교육적 요구를 파악해 개별화교육계획을 세우고 교과·생활·의사소통과 진로를 지원합니다.",["학교급·표시과목에 맞는 특수학교 정교사 자격 취득. 공립학교 교사는 별도 교원임용시험 합격과 임용 필요"],{credentialType:"교원자격 필요",credentialSourceUrl:"https://www.moe.go.kr/",credentialSourceLabel:"교육부"}),
+          educationJob("특수교육 지원·교재개발자","장애학생의 접근성과 개별 요구에 맞는 보조자료·교재·프로그램을 개발하고 교육현장 적용을 지원합니다.",["법정 공통 면허 없음. 특수교육·접근성 이해와 콘텐츠 개발·현장협업 경험, 기관별 조건 확인"],{credentialType:"법정 필수 면허 없음",skills:["개별화교육과 장애 특성 이해","접근 가능한 교재·콘텐츠 설계","교사·가족·전문가 협업"]})
+        ]},
+        {name:"특수교육과",description:"장애학생의 특성과 교육적 요구를 평가하고 개별화교육, 교과지도, 행동·의사소통 지원과 교육실습을 배웁니다.",licenseType:"특수학교 정교사 자격 경로",licensePath:"학교급·표시과목에 맞는 특수교육 교원양성 과정 이수 → 무시험검정 요건 충족 → 특수학교 정교사 자격 취득 → 공립학교는 별도 교원임용시험",licenseSource:"https://www.moe.go.kr/",universities:[{university:"이화여자대학교",department:"특수교육과",url:"https://teachers.ewha.ac.kr/teachers/major/special-education.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"건양대학교",department:"초등특수교육과",url:"https://www.konyang.ac.kr/kor/sub03_18_02_01.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["유치원 교사","특수학교 교사","특수교육 지원·교재개발자"]}
+      ]},
+      "counseling-career":{label:"상담·진로교육",desc:"학생의 학습·정서·관계·진로 탐색을 지원하고 학교와 지역의 상담·진로 프로그램을 운영하는 분야",majors:[
+        {name:"교육학과",description:"교육철학·사회·과정·평가·행정·상담·평생교육과 연구방법을 폭넓게 배우며 대학별 교직과정과 자격 연계는 다릅니다.",universities:[{university:"한양대학교",department:"교육학과",url:"https://education.hanyang.ac.kr/front/undergraduate/education/dean",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"세종대학교",department:"교육학과",url:"https://www.sejong.ac.kr/kor/college/education.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"서원대학교",department:"교육학과",url:"https://www.seowon.ac.kr/swedu/index.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          educationJob("전문상담교사","학교에서 학생의 정서·행동·관계·학업 문제를 상담하고 위기학생 지원체계와 예방교육을 운영합니다.",["전문상담교사 자격 취득. 공립학교 교사는 별도 교원임용시험 합격과 임용 필요"],{credentialType:"교원자격 필요",credentialSourceUrl:"https://www.moe.go.kr/",credentialSourceLabel:"교육부",skills:["상담이론과 면담","위기 선별·의뢰와 사례관리","학생·보호자·교직원 협업"]}),
+          educationJob("진로교육 프로그램 기획자","학생의 자기이해·학과·직업 탐색과 진로체험 프로그램을 설계하고 기관·학교 협력을 운영합니다.",["법정 공통 면허 없음. 교육·상담·진로정보 이해와 프로그램 기획·운영 경험 확인"],{credentialType:"법정 필수 면허 없음"}),
+          educationJob("학습상담원","학습자의 목표·습관·동기·학습곤란을 파악하고 계획 수립과 실행 점검을 지원합니다.",["법정 공통 면허 없음. 기관별 상담·교육 전공, 상담경험과 윤리·개인정보 기준 확인"],{credentialType:"법정 필수 면허 없음"})
+        ]},
+        {name:"상담교육·교육심리 관련 학과",description:"상담이론, 발달·학습심리, 심리측정, 면담과 사례개입을 배우며 전문상담교사 자격은 승인된 양성과정과 개인별 요건 확인이 필요합니다.",licenseType:"전문상담교사 경로는 과정별 확인",licensePath:"교육대학원·교원양성과정의 승인 여부와 입학 전공·교직 요건 확인 → 정해진 교과·실습과 무시험검정 요건 충족 → 전문상담교사 자격 → 공립학교는 별도 임용시험",licenseSource:"https://www.moe.go.kr/",universities:[{university:"이화여자대학교",department:"교육학과 교육상담·심리 영역",url:"https://teachers.ewha.ac.kr/teachers/major/education.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["전문상담교사","진로교육 프로그램 기획자","학습상담원"]}
+      ]},
+      "lifelong-service":{label:"평생교육·교육서비스",desc:"성인·지역주민·재직자의 학습 요구를 분석해 평생학습·직무교육 프로그램을 기획하고 운영하는 분야",majors:[
+        {name:"평생교육학과",description:"성인학습, 평생교육 프로그램 개발·평가, 기관경영, 상담과 현장실습을 배우며 평생교육사 자격과 연계될 수 있습니다.",licenseType:"평생교육사 자격 연계",licensePath:"평생교육법령상 관련 과목·학점과 현장실습 등 등급별 요건 충족 → 국가평생교육진흥원 자격발급 절차 확인",licenseSource:"https://lledu.nile.or.kr/",universities:[{university:"숭실대학교",department:"평생교육학과",url:"https://edu.ssu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"한국방송통신대학교",department:"교육학과",url:"https://learn.knou.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          educationJob("평생교육사","지역·대학·공공·민간 평생교육기관에서 학습 요구를 조사하고 프로그램을 기획·운영·평가합니다.",["기관·직무별 배치요건 확인. 평생교육사 자격은 법령상 과목·학점·실습 등 등급별 요건을 충족해 발급"],{credentialType:"국가자격 연계",credentialSourceUrl:"https://lledu.nile.or.kr/",credentialSourceLabel:"국가평생교육진흥원 평생교육사 자격관리"}),
+          educationJob("교육프로그램 운영자","학습자 모집·상담, 강사·일정·예산·시설·성과를 관리하며 교육과정을 안정적으로 운영합니다.",["법정 공통 면허 없음. 기관 성격에 따라 평생교육사·행정·교육운영 경력 우대 여부 확인"],{credentialType:"법정 필수 면허 없음"}),
+          educationJob("기업교육 담당자","조직의 직무·리더십·온보딩 요구를 분석해 사내교육을 설계·운영하고 성과를 평가합니다.",["법정 공통 면허 없음. HRD·교육공학·조직개발과 프로젝트 운영 경험, 회사별 조건 확인"],{credentialType:"법정 필수 면허 없음"})
+        ]},
+        {name:"교육행정·교육서비스 관련 학과",description:"교육조직·정책·행정, 프로그램 운영, 예산·성과관리와 학습자 서비스를 배웁니다.",universities:[{university:"한양대학교",department:"교육학과",url:"https://education.hanyang.ac.kr/front/undergraduate/education/dean",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["평생교육사","교육프로그램 운영자","기업교육 담당자"]}
+      ]},
+      "edtech-content":{label:"에듀테크·교육콘텐츠",desc:"학습과 기술을 결합해 온라인 과정·교육콘텐츠·학습플랫폼과 데이터 기반 학습경험을 설계하는 분야",majors:[
+        {name:"교육공학과",description:"학습이론과 정보기술을 결합해 교수설계, 교육미디어·온라인학습, 프로그램 개발·운영·평가를 배웁니다.",universities:[{university:"이화여자대학교",department:"교육공학과",url:"https://teachers.ewha.ac.kr/teachers/major/educational-engineering.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"한양사이버대학교",department:"교육공학과",url:"https://www.hycu.ac.kr/user/maSnEx/goMain/30176/index.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          educationJob("교수설계자","학습목표와 학습자·과제를 분석해 수업전략, 활동, 자료, 평가와 온라인 학습경험을 설계합니다.",["법정 공통 면허 없음. 교수설계 산출물·프로젝트 포트폴리오와 도구 활용, 기관별 조건 확인"],{credentialType:"법정 필수 면허 없음",skills:["요구·과제·학습자 분석","수업전략·평가 설계","프로젝트·이해관계자 협업"]}),
+          educationJob("교육콘텐츠 개발자","교재·영상·상호작용 자료와 온라인 강좌를 기획하고 집필·제작·검수·개선합니다.",["법정 공통 면허 없음. 교과·대상 이해, 스토리보드·저작권·접근성 지식과 포트폴리오 확인"],{credentialType:"법정 필수 면허 없음"}),
+          educationJob("학습데이터 분석가","학습 로그·평가·참여 데이터를 분석해 학습문제와 개선기회를 찾고 대시보드·실험을 지원합니다.",["법정 공통 면허 없음. 통계·데이터 처리·시각화와 교육측정 이해, 프로젝트 포트폴리오 확인"],{credentialType:"법정 필수 면허 없음",skills:["통계·데이터 전처리","교육측정·평가 이해","시각화와 결과 설명"]})
+        ]},
+        {name:"에듀테크·교육콘텐츠 관련 학과",description:"디지털 콘텐츠 제작, 학습플랫폼, UX, 데이터와 교육서비스 기획을 융합해 배웁니다.",universities:[{university:"한양사이버대학교",department:"교육공학과",url:"https://www.hycu.ac.kr/user/maSnEx/goMain/30176/index.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["교수설계자","교육콘텐츠 개발자","학습데이터 분석가"]}
+      ]}
+    };
+    Object.values(educationCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -1256,6 +1302,7 @@
     careerCatalog.manufacturing={id:"manufacturing",label:"제조",description:"제품과 부품의 생산·공정·품질·설비·스마트제조를 운영하고 개선하는 분야",status:"active",fields:manufacturingCareer};
     careerCatalog.logistics={id:"logistics",label:"물류·운송·유통",description:"사람과 상품의 운행·관제·보관·유통·국제이동을 계획하고 운영하는 분야",status:"active",fields:logisticsCareer};
     careerCatalog["architecture-civil"]={id:"architecture-civil",label:"설계·건축·토목",description:"건축·도시·기반시설·공간정보를 설계하고 시공·안전을 관리하는 분야",status:"active",fields:builtEnvironmentCareer};
+    careerCatalog.education={id:"education",label:"교육",description:"학교·유아·특수·상담·평생교육과 에듀테크로 학습과 성장을 지원하는 분야",status:"active",fields:educationCareer};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
