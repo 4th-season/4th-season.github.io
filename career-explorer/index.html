@@ -587,6 +587,51 @@
       ]}
     };
     Object.values(leisureTourism).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
+    const agriJob=(name,summary,required,extra={})=>({name,summary,employers:extra.employers||["농림수산·생명 관련 기업과 공공기관에서 생산·연구·관리","농장·양식장·산림·동물 관련 현장에서 기술·서비스 지원"],skills:extra.skills||["생물과 생태에 대한 관찰력","현장 안전·기록·품질관리","데이터와 장비 활용"],requiredCredentials:required,helpfulCredentials:extra.helpfulCredentials||["관련 국가기술자격과 현장실습","생물·화학·환경·데이터 기초"],...extra});
+    const agriLife={
+      "crop-smartfarm":{label:"작물·원예·스마트농업",desc:"식량·원예작물을 재배하고 품종·생육환경·스마트팜 시스템을 연구·관리하는 분야",majors:[
+        {name:"식물자원학과",description:"작물의 유전·육종·재배·생리와 토양·병해충을 배우며 식량과 식물자원의 생산·활용을 연구합니다.",universities:[{university:"서울대학교",department:"식물생산과학부 작물생명과학전공",url:"https://cals.snu.ac.kr/academics/undergraduate?deptidx=26",linkType:"대학 공식 전공소개",verifiedAt:"2026-07-19"},{university:"강원대학교",department:"생물자원과학부 식물자원응용과학전공",url:"https://cms.kangwon.ac.kr/knucals/index.do",linkType:"대학 공식 단과대학·학과목록",verifiedAt:"2026-07-19"}],jobs:[
+          agriJob("작물재배 기술자","작물의 품종·파종·생육·수확과 토양·병해충 상태를 관리하고 재배기술을 개선합니다.",["법정 공통 면허는 없으며 농장·기업별 전공·현장경험 확인"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.rda.go.kr/",sourceLabel:"농촌진흥청"}),
+          agriJob("종자·육종 연구원","우수한 형질의 품종을 개발하고 종자의 생산·검정·품질 자료를 연구합니다.",["연구직은 분야별 학위·실험경력 조건 확인"],{credentialType:"직무별 학위·경력",credentialSourceUrl:"https://www.seed.go.kr/seed/index.do",credentialSourceLabel:"국립종자원"}),
+          agriJob("스마트팜 운영·기술자","센서·환경제어·생육데이터를 활용해 시설작물의 생산성과 품질을 관리합니다.",["법정 필수 면허는 없으며 설비·ICT·재배 역량과 채용조건 확인"],{credentialType:"법정 필수 면허 없음",skills:["작물 생육과 환경제어 이해","센서·제어장비 운용","생육데이터 기록·분석"]})
+        ]},
+        {name:"원예·스마트팜 관련 학과",description:"채소·과수·화훼의 생산과 품질관리, 시설환경 제어와 스마트농업 기술을 배웁니다.",universities:[{university:"강원대학교",department:"원예학과·스마트팜농산업학과",url:"https://cms.kangwon.ac.kr/knucals/index.do",linkType:"대학 공식 단과대학·학과목록",verifiedAt:"2026-07-19"}],jobs:["작물재배 기술자","종자·육종 연구원","스마트팜 운영·기술자"]}
+      ]},
+      "animal-livestock":{label:"축산·동물생명",desc:"가축의 사양·번식·영양·복지와 축산물 생산·품질을 연구하고 관리하는 분야",majors:[
+        {name:"동물자원학과",description:"가축의 영양·사양·육종·번식·복지와 축산물 생산 및 산업경영을 배웁니다.",universities:[{university:"경상국립대학교",department:"축산과학부·동물생명 관련 전공",url:"https://www.gnu.ac.kr/cals/main.do",linkType:"대학 공식 농업생명과학대학",verifiedAt:"2026-07-19"}],jobs:[
+          agriJob("축산사양 관리사","가축의 사료·환경·건강·번식과 생산기록을 관리합니다.",["농장·기업별 전공·현장경험과 방역·안전교육 조건 확인"],{credentialType:"채용·현장조건 확인",sourceUrl:"https://www.mafra.go.kr/",sourceLabel:"농림축산식품부"}),
+          agriJob("동물영양·사료 연구원","가축의 영양 요구와 사료원료·배합·효능을 시험하고 제품과 급여기준을 개발합니다.",["연구직은 생명·축산 관련 학위와 실험·분석경력 조건 확인"],{credentialType:"직무별 학위·경력"}),
+          agriJob("축산물 품질관리원","축산물 생산·가공 과정의 위생·등급·품질 기준과 기록을 관리합니다.",["업무 범위별 법정 위생교육·검사 자격 또는 기관 채용요건 확인"],{credentialType:"업무별 자격·교육 확인"})
+        ]},
+        {name:"동물생명공학과",description:"동물의 유전·세포·번식·영양을 생명공학과 연결해 연구하고 산업에 적용합니다.",universities:[{university:"건국대학교",department:"동물자원·동물생명 관련 학과",url:"https://www.konkuk.ac.kr/",linkType:"대학 공식 홈페이지 · 학과명 검색",verifiedAt:"2026-07-19"}],jobs:["축산사양 관리사","동물영양·사료 연구원","축산물 품질관리원"]}
+      ]},
+      "fisheries-aquaculture":{label:"수산·양식·질병관리",desc:"수산생물을 양식·관리하고 해양생명자원과 수산생물 질병을 연구하는 분야",majors:[
+        {name:"수산생명의학과",description:"수산생물의 질병 원인·진단·치료·예방과 안전한 양식생산을 배우며 법정 관련 학과 경로를 확인해야 합니다.",licenseType:"면허 직결 가능 경로",licensePath:"법령상 인정되는 수산생명의학 관련 학과 이수·졸업(또는 졸업예정 요건 확인) → 수산질병관리사 국가시험 합격 → 해양수산부장관 면허",licenseSource:"https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=206602",universities:[{university:"전남대학교",department:"수산생명의학과",url:"https://sea.jnu.ac.kr/sea/3451/subview.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"국립군산대학교",department:"수산생명의학과",url:"https://www.kunsan.ac.kr/index.kunsan?menuCd=DOM_000009201000000000",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"국립부경대학교",department:"수산생명의학과",url:"https://aquamed.pknu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          agriJob("수산질병관리사","수산생물의 질병을 진단·치료·예방하고 양식장의 건강관리를 지원합니다.",["법정 관련 학과 응시요건 충족, 국가시험 합격 및 해양수산부장관 면허"],{credentialType:"국가면허 필요",credentialSourceUrl:"https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=206602",credentialSourceLabel:"국가법령정보센터 수산생물질병 관리법"}),
+          agriJob("양식생산 관리원","어류·패류·해조류 등의 먹이·수질·생육·출하와 시설을 관리합니다.",["법정 공통 면허는 없으며 품종·시설별 안전·방역·채용조건 확인"],{credentialType:"법정 필수 면허 없음"}),
+          agriJob("수산생명 연구원","수산생물의 생리·유전·질병·양식기술과 해양생명자원을 연구합니다.",["연구분야별 학위·실험·현장경력 조건 확인"],{credentialType:"직무별 학위·경력"})
+        ]},
+        {name:"양식·해양생명과학 관련 학과",description:"수산생물의 생태·생산·양식시스템과 해양생명자원의 이용을 배웁니다. 수산질병관리사 목표라면 학과명만이 아니라 법정 응시자격을 별도로 확인해야 합니다.",universities:[{university:"국립부경대학교",department:"수산과학대학 관련 학과",url:"https://www.pknu.ac.kr/",linkType:"대학 공식 홈페이지 · 모집단위 확인",verifiedAt:"2026-07-19"}],jobs:["수산질병관리사","양식생산 관리원","수산생명 연구원"]}
+      ]},
+      "forest-resources":{label:"산림·임업·수목관리",desc:"숲과 산림자원을 조성·보전·경영하고 수목 건강과 산림재해를 관리하는 분야",majors:[
+        {name:"산림자원학과",description:"산림생태·조림·육종·경영·보호·산림공학과 자원의 지속가능한 이용을 배웁니다.",universities:[{university:"서울대학교",department:"산림과학부 산림환경학전공",url:"https://cals.snu.ac.kr/academics/undergraduate?deptidx=27",linkType:"대학 공식 전공소개",verifiedAt:"2026-07-19"},{university:"강원대학교",department:"산림자원학과",url:"https://cms.kangwon.ac.kr/forest/index.do",linkType:"대학 공식 단과대학·학과목록",verifiedAt:"2026-07-19"}],jobs:[
+          agriJob("산림자원 관리원","산림조사·조림·숲가꾸기·경영계획과 산림자원 이용 업무를 수행합니다.",["직무·사업별 산림 관련 국가기술자격·안전교육·채용조건 확인"],{credentialType:"직무별 자격 확인",sourceUrl:"https://www.forest.go.kr/",sourceLabel:"산림청"}),
+          agriJob("나무의사","수목의 피해 원인을 진단하고 처방하는 법정 수목진료 전문인력입니다.",["법정 응시자격 충족 → 양성기관 교육 이수 → 나무의사 자격시험 합격"],{credentialType:"국가전문자격",credentialSourceUrl:"https://namudr.kofpi.or.kr/",credentialSourceLabel:"한국임업진흥원 나무의사 자격시험"}),
+          agriJob("산림보호·재해관리원","산불·산사태·병해충 등 산림재해를 예방·점검하고 현장 대응을 지원합니다.",["기관·직무별 체력·안전교육·관련 자격과 채용조건 확인"],{credentialType:"채용·안전조건 확인"})
+        ]},
+        {name:"산림환경·식물의학 관련 학과",description:"산림생태와 보호, 병해충·수목병리·환경보전을 배우며 수목진료와 산림보호 분야로 연결됩니다.",universities:[{university:"공주대학교",department:"산림과학과",url:"https://forest.kongju.ac.kr/ZE0860/726/subview.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"강원대학교",department:"식물의학전공",url:"https://cms.kangwon.ac.kr/knucals/department/resource02.do",linkType:"대학 공식 전공소개",verifiedAt:"2026-07-19"}],jobs:["산림자원 관리원","나무의사","산림보호·재해관리원"]}
+      ]},
+      "companion-animal":{label:"반려동물·동물보건",desc:"반려동물의 건강·행동·복지·보호와 관련 서비스를 지원하는 분야",majors:[
+        {name:"동물보건학과",description:"동물의 해부·생리·질병·임상간호와 동물병원 실무를 배우며 동물보건사 양성기관 평가인증 여부를 반드시 확인해야 합니다.",licenseType:"국가자격 조건부 연결",licensePath:"농림축산식품부 평가인증 양성기관의 법정 교육과정 이수·졸업 등 응시요건 충족 → 동물보건사 자격시험 합격 → 농림축산식품부장관 자격인정",licenseSource:"https://www.mafra.go.kr/",universities:[{university:"대구대학교",department:"반려동물산업학과·동물보건 관련 교육과정",url:"https://www.daegu.ac.kr/",linkType:"대학 공식 홈페이지 · 평가인증 여부 별도 확인",verifiedAt:"2026-07-19"}],jobs:[
+          agriJob("동물보건사","동물병원에서 수의사의 지도 아래 동물 간호와 진료 보조 업무를 수행합니다.",["평가인증 양성기관 등 법정 응시요건 충족, 자격시험 합격 및 농림축산식품부장관 자격인정"],{credentialType:"국가자격 필요",credentialSourceUrl:"https://www.vt-exam.or.kr/",credentialSourceLabel:"동물보건사 자격시험"}),
+          agriJob("반려동물행동지도사","반려동물의 행동을 평가하고 보호자 교육과 기본·전문 지도 프로그램을 수행합니다.",["급수별 필기·실기 등 국가자격시험 요건 확인"],{credentialType:"국가자격",credentialSourceUrl:"https://www.mafra.go.kr/home/5108/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGaG9tZSUyRjc5MSUyRjU3ODA0NyUyRmFydGNsVmlldy5kbyUzRnNyY2hDb2x1bW4lM0QlMjZwYXNzd29yZCUzRCUyNmlzVmlld01pbmUlM0RmYWxzZSUyNnJvdyUzRDEwJTI2YmJzT3BlbldyZFNlcSUzRCUyNnNyY2hXcmQlM0QlMjZyZ3NFbmRkZVN0ciUzRCUyNnJnc0JnbmRlU3RyJTNEJTI2YmJzQ2xTZXElM0QlMjZwYWdlJTNEMSUyNg%3D%3D",credentialSourceLabel:"농림축산식품부 시험공고"}),
+          agriJob("동물보호·복지 실무자","보호동물의 입소·건강·행동·입양 기록과 보호시설 운영을 지원합니다.",["시설·기관별 채용조건, 동물취급 안전·복지교육과 관련 법령 확인"],{credentialType:"채용·시설조건 확인",sourceUrl:"https://www.animal.go.kr/",sourceLabel:"국가동물보호정보시스템"})
+        ]},
+        {name:"반려동물학과",description:"반려동물의 행동·훈련·영양·미용·복지와 산업서비스를 폭넓게 배웁니다. 일반 반려동물학과 졸업만으로 동물보건사 응시자격이 자동 부여되지는 않으므로 평가인증 과정을 확인해야 합니다.",universities:[{university:"원광대학교",department:"반려동물산업학과",url:"https://www.wku.ac.kr/",linkType:"대학 공식 홈페이지 · 학과명 검색",verifiedAt:"2026-07-19"}],jobs:["동물보건사","반려동물행동지도사","동물보호·복지 실무자"]}
+      ]}
+    };
+    Object.values(agriLife).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -1026,6 +1071,7 @@
     careerCatalog.marketing={id:"marketing",label:"마케팅",description:"시장과 고객을 이해하고 브랜드·상품·소통·판매·고객경험을 설계하는 분야",status:"active",fields:marketing};
     careerCatalog["finance-management"]={id:"finance-management",label:"금융·경영",description:"조직과 자산을 관리하고 회계·금융·인사·전략·사업운영을 담당하는 분야",status:"active",fields:financeManagement};
     careerCatalog["leisure-tourism"]={id:"leisure-tourism",label:"여가·관광",description:"여행·숙박·여객·행사·레저와 지역관광 서비스를 기획하고 운영하는 분야",status:"active",fields:leisureTourism};
+    careerCatalog["agri-life"]={id:"agri-life",label:"농생명",description:"작물·축산·수산·산림·반려동물 자원을 생산·연구·관리하는 분야",status:"active",fields:agriLife};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
