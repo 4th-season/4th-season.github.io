@@ -677,6 +677,51 @@
       ]}
     };
     Object.values(environmentCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
+    const mfgJob=(name,summary,required,extra={})=>({name,summary,employers:extra.employers||["제조기업의 생산·공정·품질·설비 부서","부품·소재·자동차·전자·기계·식품 등 제조현장"],skills:extra.skills||["도면·공정·작업표준 이해","현장 안전과 정확한 기록","설비·데이터를 활용한 문제해결"],requiredCredentials:required,helpfulCredentials:extra.helpfulCredentials||["직무 관련 국가기술자격","CAD·통계·PLC·MES 등 현장 도구 경험"],...extra});
+    const manufacturingCareer={
+      "production-operation":{label:"생산·조립·가공",desc:"도면과 작업표준에 따라 소재·부품을 가공·조립하고 생산설비를 운전하는 분야",majors:[
+        {name:"기계공학과",description:"역학·재료·열유체·기계설계와 가공·제작을 배워 기계제품과 생산기술의 기초를 익힙니다.",universities:[{university:"서울과학기술대학교",department:"기계시스템디자인공학과 등 기계계열",url:"https://www.seoultech.ac.kr/",linkType:"대학 공식 홈페이지 · 모집단위 확인",verifiedAt:"2026-07-19"},{university:"한국기술교육대학교",department:"기계공학부",url:"https://www.koreatech.ac.kr/",linkType:"대학 공식 홈페이지 · 학부 확인",verifiedAt:"2026-07-19"}],jobs:[
+          mfgJob("기계가공원","도면과 공정조건에 따라 선반·밀링·머시닝센터 등으로 금속 부품을 가공하고 치수를 검사합니다.",["법정 공통 면허는 없으며 장비별 안전교육과 회사별 기능·경력 조건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s01&jmCd=2011&jmInfoDivCcd=A0",credentialSourceLabel:"Q-Net 기계조립산업기사 변천·직무정보"}),
+          mfgJob("제품조립원","부품·모듈을 작업표준에 따라 조립하고 체결·배선·검사 결과를 기록합니다.",["법정 공통 면허는 없으며 제품·공정별 안전·기능교육과 채용조건 확인"],{credentialType:"법정 필수 면허 없음"}),
+          mfgJob("생산설비 운전원","생산장비의 조건을 설정하고 원료·공정상태·생산량·이상 여부를 점검합니다.",["설비·업종별 법정 안전교육과 교대근무·기능 조건 확인"],{credentialType:"설비별 교육·채용조건"})
+        ]},
+        {name:"정밀기계·기계가공 관련 학과",description:"기계도면, CAD/CAM, 절삭·측정·조립과 CNC 공작기계 운용을 실습 중심으로 배웁니다.",universities:[{university:"한국폴리텍대학",department:"기계·컴퓨터응용기계 계열",url:"https://www.kopo.ac.kr/",linkType:"대학 공식 홈페이지 · 캠퍼스별 학과 확인",verifiedAt:"2026-07-19"}],jobs:["기계가공원","제품조립원","생산설비 운전원"]}
+      ]},
+      "process-production":{label:"생산관리·공정개선",desc:"수요·인력·설비·자재를 조정해 생산계획을 운영하고 공정의 시간·원가·효율을 개선하는 분야",majors:[
+        {name:"산업공학과",description:"생산·품질·물류·인간공학·데이터와 최적화 기법으로 산업시스템의 효율을 설계하고 개선합니다.",universities:[{university:"공주대학교",department:"산업공학과",url:"https://ie.kongju.ac.kr/ZD1330/3011/subview.do",linkType:"대학 공식 전공소개",verifiedAt:"2026-07-19"},{university:"전주대학교",department:"산업공학과",url:"https://www.jj.ac.kr/ie/career/roadmap.do",linkType:"대학 공식 커리어로드맵",verifiedAt:"2026-07-19"}],jobs:[
+          mfgJob("생산관리원","주문·재고·설비능력을 바탕으로 생산계획과 작업일정을 세우고 납기·실적을 관리합니다.",["법정 필수 면허는 없으며 업종별 ERP·MES·생산경험과 채용조건 확인"],{credentialType:"법정 필수 면허 없음"}),
+          mfgJob("공정개선 기술자","공정 흐름·작업시간·병목·불량 데이터를 분석해 배치와 작업방법을 개선합니다.",["법정 공통 면허는 없으며 산업공학·통계·Lean·현장개선 경험 확인"],{credentialType:"직무역량·경력 중심",sourceUrl:"https://www.kitech.re.kr/",sourceLabel:"한국생산기술연구원"}),
+          mfgJob("자재·생산계획 담당자","자재소요량과 입고·재고·생산일정을 연결해 자재 부족과 과잉을 줄입니다.",["법정 필수 면허는 없으며 ERP·MRP·재고관리와 협업 역량 확인"],{credentialType:"법정 필수 면허 없음"})
+        ]},
+        {name:"산업경영공학과",description:"산업공학의 최적화·통계·생산관리와 경영·정보시스템을 결합해 운영 의사결정을 배웁니다.",universities:[{university:"경성대학교",department:"산업경영공학과",url:"https://kscms.ks.ac.kr/inme/CMS/Contents/Contents.do?mCode=MN026",linkType:"대학 공식 교과목소개",verifiedAt:"2026-07-19"}],jobs:["생산관리원","공정개선 기술자","자재·생산계획 담당자"]}
+      ]},
+      "quality-reliability":{label:"품질·검사·신뢰성",desc:"원재료·공정·완제품이 규격과 고객 요구를 충족하는지 검사하고 품질시스템을 개선하는 분야",majors:[
+        {name:"품질경영·산업시스템 관련 학과",description:"통계적 품질관리, 실험계획, 품질보증·경영시스템과 생산데이터 분석을 배웁니다.",universities:[{university:"선문대학교",department:"산업경영공학과",url:"https://ie.sunmoon.ac.kr/ie/cm/cntnts/cntntsView.do?cntntsId=239054&mi=40379",linkType:"대학 공식 학과·직무소개",verifiedAt:"2026-07-19"}],jobs:[
+          mfgJob("품질관리원","검사·공정 데이터를 분석해 품질기준을 관리하고 불량 원인과 개선조치를 추적합니다.",["모든 품질직무의 공통 면허는 아니며 채용·법정 기술인력 직무에서 품질경영기사 등 활용"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/",credentialSourceLabel:"Q-Net 품질경영기사 검색",sourceUrl:"https://ksa.or.kr/ksa_kr/16160/subview.do",sourceLabel:"한국표준협회 품질경영 개요"}),
+          mfgJob("품질보증 담당자","제품개발부터 출하까지 품질절차·문서·고객요구·변경사항과 시정조치를 관리합니다.",["법정 필수 면허는 없으며 업종별 품질시스템·규격·심사경험 확인"],{credentialType:"업종별 규격·채용조건"}),
+          mfgJob("신뢰성 시험원","제품·부품의 수명·환경·진동·온도·내구 시험을 수행하고 결과와 고장모드를 분석합니다.",["시험분야별 안전교육·장비경험과 기관별 전공·자격 조건 확인"],{credentialType:"시험분야별 조건 확인",sourceUrl:"https://www.kimm.re.kr/",sourceLabel:"한국기계연구원"})
+        ]},
+        {name:"신소재공학과",description:"금속·세라믹·고분자·복합재료의 구조·물성·제조·평가를 배워 소재 품질과 공정·신뢰성 분야로 연결됩니다.",universities:[{university:"서울과학기술대학교",department:"신소재공학과",url:"https://mse.seoultech.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"고려대학교",department:"신소재공학부",url:"https://mse.korea.ac.kr/kor/index.php",linkType:"대학 공식 학부",verifiedAt:"2026-07-19"}],jobs:["품질관리원","품질보증 담당자","신뢰성 시험원"]}
+      ]},
+      "maintenance":{label:"설비보전·정비",desc:"생산설비의 고장을 예방·진단하고 기계·전기·유공압 장치를 정비해 가동상태를 유지하는 분야",majors:[
+        {name:"메카트로닉스공학과",description:"기계·전자·제어·센서·유공압을 통합해 자동화 장비의 설치·운전·진단·정비를 배웁니다.",universities:[{university:"한국기술교육대학교",department:"메카트로닉스공학부",url:"https://www.koreatech.ac.kr/",linkType:"대학 공식 홈페이지 · 학부 확인",verifiedAt:"2026-07-19"}],jobs:[
+          mfgJob("설비보전 기술자","설비의 상태를 점검하고 예방정비·고장진단·부품교체·보수 기록을 관리합니다.",["모든 정비직무의 공통 면허는 아니며 설비보전기사 등은 채용·기술인력 요건에 활용"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1837",credentialSourceLabel:"Q-Net 설비보전기사"}),
+          mfgJob("자동화설비 정비원","센서·모터·PLC·로봇·제어반의 이상을 진단하고 자동화라인을 유지·보수합니다.",["전기작업 범위는 법정 자격·안전규정 확인, 회사별 PLC·제어 경력 조건 확인"],{credentialType:"업무범위별 자격·안전요건"}),
+          mfgJob("예지보전 데이터 담당자","진동·온도·전류 등 설비데이터로 이상 징후와 고장 가능성을 분석해 정비시점을 제안합니다.",["법정 필수 면허는 없으며 설비지식·신호분석·데이터도구 경험 확인"],{credentialType:"법정 필수 면허 없음",skills:["설비 구조와 고장모드 이해","센서·시계열 데이터 분석","정비부서와 결과 소통"]})
+        ]},
+        {name:"기계설비·자동화 관련 학과",description:"기계요소·전기제어·PLC·유공압·설비진단과 유지보수를 현장실습으로 배웁니다.",universities:[{university:"한국폴리텍대학",department:"산업설비자동화·메카트로닉스 계열",url:"https://www.kopo.ac.kr/",linkType:"대학 공식 홈페이지 · 캠퍼스별 학과 확인",verifiedAt:"2026-07-19"}],jobs:["설비보전 기술자","자동화설비 정비원","예지보전 데이터 담당자"]}
+      ]},
+      "smart-manufacturing":{label:"스마트제조·자동화",desc:"로봇·센서·IoT·MES·AI를 생산현장에 연결해 공장을 자동화·지능화하는 분야",majors:[
+        {name:"스마트제조공학과",description:"제조공정·자동화·로봇·IoT·데이터·CPS와 스마트공장 운영·최적화를 융합해 배웁니다.",universities:[{university:"계명대학교",department:"스마트제조공학과",url:"https://cms.kmu.ac.kr/smartfactory/5736/subview.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"울산과학대학교",department:"스마트제조공학과",url:"https://www.uc.ac.kr/industry/Main.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          mfgJob("스마트공장 구축기술자","현장 요구를 분석해 센서·자동화장비·네트워크·MES를 연결하고 구축 프로젝트를 수행합니다.",["법정 필수 면허는 없으며 자동화·IT·제조공정 프로젝트 경험과 업무범위별 전기안전 요건 확인"],{credentialType:"프로젝트·업무범위별 조건"}),
+          mfgJob("MES 운영담당자","생산지시·실적·품질·설비·추적 데이터를 관리하고 현장과 시스템 사이의 오류를 해결합니다.",["법정 필수 면허는 없으며 제조프로세스·데이터베이스·MES 경험 확인"],{credentialType:"법정 필수 면허 없음"}),
+          mfgJob("생산자동화 기술자","PLC·로봇·센서·구동장치로 자동화 공정을 설계·프로그램·시운전합니다.",["자동화설비산업기사 등 국가기술자격은 채용에 활용되며 전기작업 범위별 법정요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/crf021.do?id=crf02101&scheType=03",credentialSourceLabel:"Q-Net 자동화설비산업기사 종목"})
+        ]},
+        {name:"스마트팩토리·자동화 관련 학과",description:"기계·전기전자·제어를 결합해 디지털제조시스템과 스마트팩토리 설계·운용을 실습합니다.",universities:[{university:"영남이공대학교",department:"스마트팩토리과",url:"https://nur.ync.ac.kr/smartfactory/CMS/Contents/Contents.do?mCode=MN020",linkType:"대학 공식 전공소개",verifiedAt:"2026-07-19"},{university:"국립창원대학교",department:"스마트제조융합공학과",url:"https://www.changwon.ac.kr/gast_me/cm/cntnts/cntntsView.do?cntntsId=7008&mi=19050",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["스마트공장 구축기술자","MES 운영담당자","생산자동화 기술자"]}
+      ]}
+    };
+    Object.values(manufacturingCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -1118,6 +1163,7 @@
     careerCatalog["leisure-tourism"]={id:"leisure-tourism",label:"여가·관광",description:"여행·숙박·여객·행사·레저와 지역관광 서비스를 기획하고 운영하는 분야",status:"active",fields:leisureTourism};
     careerCatalog["agri-life"]={id:"agri-life",label:"농생명",description:"작물·축산·수산·산림·반려동물 자원을 생산·연구·관리하는 분야",status:"active",fields:agriLife};
     careerCatalog.environment={id:"environment",label:"환경",description:"환경을 측정·분석하고 오염을 줄이며 생태·기후·자원순환을 관리하는 분야",status:"active",fields:environmentCareer};
+    careerCatalog.manufacturing={id:"manufacturing",label:"제조",description:"제품과 부품의 생산·공정·품질·설비·스마트제조를 운영하고 개선하는 분야",status:"active",fields:manufacturingCareer};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
