@@ -858,6 +858,52 @@
     };
     Object.values(educationCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
 
+
+    const welfareJob=(name,summary,required,extra={})=>({name,summary,employers:extra.employers||["사회복지관·복지시설·상담기관·사회서비스 제공기관","지자체·공공기관·비영리단체·의료·교육기관의 복지 부서"],skills:extra.skills||["이용자 욕구 파악과 의사소통","사례·서비스 계획과 기록","기관·가족·지역자원 협업"],requiredCredentials:required,helpfulCredentials:extra.helpfulCredentials||["사회복지·상담·돌봄 현장실습과 자원봉사","문서작성·사례회의·프로그램 기획 경험"],...extra});
+    const welfareCareer={
+      "social-child-family":{label:"사회복지·아동가족",desc:"아동·가족과 다양한 주민의 생활문제를 파악하고 상담·사례관리·복지서비스를 연결하는 분야",majors:[
+        {name:"사회복지학과",description:"사회복지정책·행정·실천·조사, 인간행동과 사회환경, 사례관리와 현장실습을 배우며 사회복지사 자격과 연계됩니다.",licenseType:"사회복지사 자격 연계",licensePath:"법령상 사회복지 관련 교과목·학점과 현장실습 등 요건 충족 → 사회복지사 자격증 발급 신청 → 1급은 응시자격 확인 후 국가시험 합격",licenseSource:"https://www.welfare.net/lic/main.do",universities:[{university:"서울대학교",department:"사회복지학과",url:"https://socialwelfare.snu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"숭실대학교",department:"사회복지학부",url:"https://ssu.ac.kr/%EA%B5%90%EC%9C%A1-%C2%B7-%EC%97%B0%EA%B5%AC/%EB%8C%80%ED%95%99%EC%86%8C%EA%B0%9C/%EC%82%AC%ED%9A%8C%EA%B3%BC%ED%95%99%EB%8C%80%ED%95%99/%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80%ED%95%99%EB%B6%80/",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          welfareJob("사회복지사","이용자의 생활·경제·관계·돌봄 문제를 파악해 상담하고 서비스 계획·사례관리·자원연계를 수행합니다.",["사회복지시설·직무별 배치기준 확인. 사회복지사 자격은 법령상 교과목·실습·학력 등 등급별 요건 충족 후 발급"],{credentialType:"국가자격 연계",credentialSourceUrl:"https://www.welfare.net/lic/main.do",credentialSourceLabel:"한국사회복지사협회 자격관리센터"}),
+          welfareJob("아동복지 실무자","아동의 안전·발달·생활환경을 살피고 상담·보호·교육·가족지원과 지역서비스 연계를 수행합니다.",["법정 공통 면허는 없으나 시설·사업별 사회복지사·보육교사 등 배치자격과 경력요건 확인"],{credentialType:"시설·사업별 자격조건 확인"}),
+          welfareJob("가족지원 프로그램 담당자","가족의 생애주기와 관계·돌봄 요구를 조사해 상담·교육·문화·지역연계 프로그램을 운영합니다.",["법정 공통 면허 없음. 기관·사업별 사회복지사·건강가정사 관련 교과목·경력 조건 확인"],{credentialType:"사업별 자격조건 확인",sourceUrl:"https://www.familynet.or.kr/",sourceLabel:"가족센터"})
+        ]},
+        {name:"아동·가족학과",description:"아동발달, 가족관계·상담, 보육·교육, 가족정책과 프로그램 기획을 배우며 대학별 자격 연계 과목을 확인해야 합니다.",universities:[{university:"연세대학교",department:"아동·가족학과",url:"https://che.yonsei.ac.kr/child/index.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"숙명여자대학교",department:"아동복지학부",url:"https://childwelfare.sookmyung.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:["사회복지사","아동복지 실무자","가족지원 프로그램 담당자"]}
+      ]},
+      "counseling-mental":{label:"상담·정신건강복지",desc:"청소년·성인과 가족의 정서·행동·중독 문제를 상담하고 치료기관·지역자원과 회복을 지원하는 분야",majors:[
+        {name:"상담심리학과",description:"발달·성격·이상심리, 상담이론과 면담, 심리검사·집단상담·사례실습을 배우며 자격별 응시·수련요건은 서로 다릅니다.",universities:[{university:"서울사이버대학교",department:"상담심리학과",url:"https://www.iscu.ac.kr/03_aboutschool/03_01_overview.asp",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"한양사이버대학교",department:"상담심리학과",url:"https://www.hycu.ac.kr/user/maSnEx/goMain/20049/index.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          welfareJob("청소년상담사","청소년과 보호자를 대상으로 개인·집단상담, 심리검사, 위기개입과 학교·기관 연계를 수행합니다.",["청소년상담사 등급별 응시자격 확인 → 국가시험·면접 합격 → 자격연수 등 발급요건 충족"],{credentialType:"국가전문자격 필요",credentialSourceUrl:"https://www.q-net.or.kr/site/sangdamsa",credentialSourceLabel:"Q-Net 청소년상담사",skills:["청소년 발달과 상담","위기평가·의뢰와 사례관리","상담윤리·기록·보호자 협업"]}),
+          welfareJob("정신건강사회복지사","정신건강 문제를 가진 사람과 가족의 상담·사례관리·재활·지역복귀와 의료·복지서비스 연계를 지원합니다.",["사회복지사 1급 등 법정 기초자격과 보건복지부 지정 수련기관 수련·평가 등 정신건강전문요원 자격요건 충족"],{credentialType:"정신건강전문요원 자격 필요",credentialSourceUrl:"https://www.ncmh.go.kr/",credentialSourceLabel:"국립정신건강센터"}),
+          welfareJob("중독재활상담원","알코올·약물·도박·디지털 사용 문제의 회복 목표를 상담하고 가족·의료·지역 재활서비스를 연결합니다.",["법정 공통 면허 없음. 기관별 상담·사회복지·정신건강 관련 자격, 교육·수련·경력 조건 확인"],{credentialType:"기관별 자격·수련조건 확인"})
+        ]},
+        {name:"정신건강·중독재활 관련 학과",description:"정신건강, 중독의 원인과 회복, 상담·사례관리, 지역사회 재활과 예방 프로그램을 배웁니다.",universities:[{university:"을지대학교",department:"중독재활복지학과",url:"https://major.eulji.ac.kr/addiction/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:["청소년상담사","정신건강사회복지사","중독재활상담원"]}
+      ]},
+      "care-aging":{label:"돌봄·요양",desc:"노인과 일상생활 지원이 필요한 사람의 신체·가사·정서 지원과 장기요양 서비스를 제공·조정하는 분야",majors:[
+        {name:"노인복지학과",description:"노화와 노인문제, 노인복지정책·사례관리·상담, 장기요양과 프로그램 운영을 배웁니다.",universities:[{university:"대구한의대학교",department:"시니어웰니스학부 노인복지학전공",url:"https://www.dhu.ac.kr/",linkType:"대학 공식 홈페이지",verifiedAt:"2026-07-19"},{university:"한서대학교",department:"노인복지학과",url:"https://www.hanseo.ac.kr/",linkType:"대학 공식 홈페이지",verifiedAt:"2026-07-19"}],jobs:[
+          welfareJob("요양보호사","장기요양기관이나 가정에서 이용자의 신체활동·일상생활·정서 지원과 상태 관찰·기록을 수행합니다.",["지정 교육기관 교육과정 이수 등 응시요건 충족 → 요양보호사 자격시험 합격 → 시·도 자격증 발급 절차 확인"],{credentialType:"국가자격 필요",credentialSourceUrl:"https://www.kuksiwon.or.kr/",credentialSourceLabel:"한국보건의료인국가시험원",skills:["안전한 신체·일상생활 지원","상태 관찰·기록과 보고","이용자 존중·가족·기관 협업"]}),
+          welfareJob("노인복지 사례관리자","노인의 건강·경제·주거·관계·돌봄 욕구를 평가해 서비스 계획을 세우고 기관과 자원을 조정합니다.",["법정 공통 면허는 없으나 사회복지시설·장기요양기관별 사회복지사 등 배치기준과 경력요건 확인"],{credentialType:"시설별 배치자격 확인"}),
+          welfareJob("돌봄서비스 코디네이터","이용자 요구와 돌봄인력·일정·서비스를 연결하고 상담·모니터링·기록과 품질관리를 담당합니다.",["법정 공통 면허 없음. 사업·기관별 사회복지사·요양보호사·관리책임자 요건과 경력조건 확인"],{credentialType:"사업·기관별 자격조건 확인"})
+        ]},
+        {name:"보건복지·케어복지 관련 학과",description:"건강·돌봄·복지의 기초, 사례관리, 장기요양제도와 현장실무를 융합해 배웁니다.",universities:[{university:"원광디지털대학교",department:"사회복지학과",url:"https://welfare.wdu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:["요양보호사","노인복지 사례관리자","돌봄서비스 코디네이터"]}
+      ]},
+      "disability-rehab":{label:"장애인·재활복지",desc:"장애인의 자립생활·학습·직업·사회참여 요구를 파악하고 재활상담과 서비스·환경을 연결하는 분야",majors:[
+        {name:"재활상담학과",description:"장애와 재활, 상담·평가, 직업재활·사례관리·재활정책과 현장실습을 배우며 장애인재활상담사 자격과 연계됩니다.",licenseType:"장애인재활상담사 자격 연계",licensePath:"등급별 관련 학과·교과목·실습 등 응시자격 확인 → 국가시험 합격 → 자격증 발급",licenseSource:"https://www.kuksiwon.or.kr/",universities:[{university:"대구대학교",department:"재활상담학과",url:"https://rehab.daegu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"나사렛대학교",department:"재활자립학부",url:"https://cms.kornu.ac.kr/rehab/",linkType:"대학 공식 학부",verifiedAt:"2026-07-19"}],jobs:[
+          welfareJob("장애인재활상담사","장애인의 강점·환경·직업 욕구를 평가하고 재활계획, 상담, 직업개발과 취업·적응을 지원합니다.",["등급별 응시자격 충족 → 장애인재활상담사 국가시험 합격 → 자격증 발급"],{credentialType:"국가자격 필요",credentialSourceUrl:"https://www.kuksiwon.or.kr/",credentialSourceLabel:"한국보건의료인국가시험원"}),
+          welfareJob("직업재활 실무자","장애인의 직업능력·작업환경을 평가하고 직업훈련·취업처 개발·현장적응과 고용유지를 지원합니다.",["법정 공통 면허는 없으나 기관·사업별 장애인재활상담사·사회복지사 등 채용·배치조건 확인"],{credentialType:"기관별 자격조건 확인"}),
+          welfareJob("자립생활 지원인력","장애인의 자기결정에 따라 주거·이동·권익·지역활동과 개인별 자립생활 계획 실행을 지원합니다.",["법정 공통 면허 없음. 서비스 유형별 교육·결격사유·기관 채용조건과 활동지원 인력 요건 확인"],{credentialType:"서비스별 교육·자격조건 확인",sourceUrl:"https://www.bokjiro.go.kr/",sourceLabel:"복지로"})
+        ]},
+        {name:"장애인복지·재활복지 관련 학과",description:"장애인복지정책·권리, 사례관리, 자립생활, 지역사회 서비스와 기관운영을 배웁니다.",universities:[{university:"한경국립대학교",department:"장애상담심리학전공 등 장애복지 계열",url:"https://www.hknu.ac.kr/",linkType:"대학 공식 홈페이지",verifiedAt:"2026-07-19"}],jobs:["장애인재활상담사","직업재활 실무자","자립생활 지원인력"]}
+      ]},
+      "community-public":{label:"지역사회·공공복지",desc:"지역의 복지문제와 자원을 조사해 정책·사업을 기획하고 공공·민간 서비스의 전달과 품질을 관리하는 분야",majors:[
+        {name:"사회복지행정·정책 관련 학과",description:"사회복지정책·법제·행정·재정·조사분석과 복지기관·공공서비스 운영을 배웁니다.",universities:[{university:"중앙대학교",department:"사회복지학부",url:"https://society.cau.ac.kr/",linkType:"대학 공식 단과대학",verifiedAt:"2026-07-19"},{university:"서울시립대학교",department:"사회복지학과",url:"https://socialwelfare.uos.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          welfareJob("사회복지직 공무원","지자체 등에서 복지상담·조사·급여·사례관리와 복지사업 행정·서비스 연계를 담당합니다.",["공무원 채용시험의 직급·지역별 응시요건, 사회복지사 자격 요구 여부와 임용절차를 공고에서 확인"],{credentialType:"공무원 채용·임용요건 필요",credentialSourceUrl:"https://www.gosi.kr/",credentialSourceLabel:"사이버국가고시센터",sourceUrl:"https://local.gosi.go.kr/",sourceLabel:"지방자치단체 인터넷원서접수센터"}),
+          welfareJob("지역복지 기획자","지역 주민의 욕구와 자원을 조사해 복지계획·공모사업·네트워크·주민참여 프로그램을 기획합니다.",["법정 공통 면허 없음. 지자체·기관별 사회복지사, 조사·기획·협력 경험과 채용조건 확인"],{credentialType:"법정 필수 면허 없음"}),
+          welfareJob("사회서비스 품질관리 담당자","사회서비스의 제공기준·기록·이용자 의견·성과를 점검하고 교육·개선과 기관운영을 지원합니다.",["법정 공통 면허 없음. 사업별 평가·품질 기준, 사회복지·행정·데이터 역량과 기관별 조건 확인"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.kcpass.or.kr/",sourceLabel:"중앙사회서비스원",skills:["사회서비스 제도·평가기준 이해","자료 점검·성과분석과 보고","기관 컨설팅·교육·협업"]})
+        ]},
+        {name:"지역사회개발·복지융합 관련 학과",description:"지역문제 조사, 주민참여, 공공정책, 사회적경제와 복지서비스 기획·운영을 융합해 배웁니다.",universities:[{university:"성공회대학교",department:"사회융합자율학부 사회복지 관련 전공",url:"https://www.skhu.ac.kr/",linkType:"대학 공식 홈페이지",verifiedAt:"2026-07-19"}],jobs:["사회복지직 공무원","지역복지 기획자","사회서비스 품질관리 담당자"]}
+      ]}
+    };
+    Object.values(welfareCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -1303,6 +1349,7 @@
     careerCatalog.logistics={id:"logistics",label:"물류·운송·유통",description:"사람과 상품의 운행·관제·보관·유통·국제이동을 계획하고 운영하는 분야",status:"active",fields:logisticsCareer};
     careerCatalog["architecture-civil"]={id:"architecture-civil",label:"설계·건축·토목",description:"건축·도시·기반시설·공간정보를 설계하고 시공·안전을 관리하는 분야",status:"active",fields:builtEnvironmentCareer};
     careerCatalog.education={id:"education",label:"교육",description:"학교·유아·특수·상담·평생교육과 에듀테크로 학습과 성장을 지원하는 분야",status:"active",fields:educationCareer};
+    careerCatalog.welfare={id:"welfare",label:"복지",description:"상담·돌봄·사례관리와 지역사회 서비스를 통해 삶의 어려움과 자립을 지원하는 분야",status:"active",fields:welfareCareer};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
