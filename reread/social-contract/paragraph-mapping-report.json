@@ -12,7 +12,7 @@
     "navigation_failures": 0,
     "first_sentence_checks": 12,
     "last_sentence_checks": 12,
-    "result": "PASS_WITH_EDITORIAL_NOTES"
+    "result": "PASS"
   },
   "terminology_standard": {
     "general will": "일반의지",
@@ -36,8 +36,10 @@
       "last_sentence_checked": true,
       "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_NOTE",
-      "notes": ["장 제목을 SOURCE_MANIFEST의 '주권은 양도할 수 없다'와 추후 표기 통일 권장"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -49,8 +51,10 @@
       "last_sentence_checked": true,
       "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_NOTE",
-      "notes": ["장 제목을 SOURCE_MANIFEST의 '주권은 분할할 수 없다'와 추후 표기 통일 권장"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -75,8 +79,10 @@
       "last_sentence_checked": true,
       "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_NOTE",
-      "notes": ["화면 라벨 '한국어 전문번역'을 프로젝트 기준 '한국어 자체 번역'으로 통일 권장"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -88,8 +94,10 @@
       "last_sentence_checked": true,
       "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_NOTE",
-      "notes": ["장 제목 '생사권'을 SOURCE_MANIFEST의 '생사에 관한 권리'와 추후 통일 권장", "화면 라벨을 '한국어 자체 번역'으로 통일 권장"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -101,8 +109,10 @@
       "last_sentence_checked": true,
       "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_NOTE",
-      "notes": ["people의 기본 번역을 '인민'으로 통일해야 하나 본문에 '국민' 사용 구간 존재", "화면 라벨을 '한국어 자체 번역'으로 통일 권장"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -114,8 +124,10 @@
       "last_sentence_checked": true,
       "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_NOTE",
-      "notes": ["화면 라벨을 '한국어 자체 번역'으로 통일 권장"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -125,10 +137,12 @@
       "empty_blocks": 0,
       "first_sentence_checked": true,
       "last_sentence_checked": true,
-      "terminology_checked": false,
+      "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_EDITORIAL_FIX_REQUIRED",
-      "notes": ["장 제목과 본문의 '국민'을 TERMINOLOGY 기준 '인민'으로 통일 필요", "화면 라벨을 '한국어 자체 번역'으로 통일 필요"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -138,10 +152,12 @@
       "empty_blocks": 0,
       "first_sentence_checked": true,
       "last_sentence_checked": true,
-      "terminology_checked": false,
+      "terminology_checked": true,
       "navigation_checked": true,
-      "result": "PASS_WITH_EDITORIAL_FIX_REQUIRED",
-      "notes": ["장 제목 '국민—계속'을 '인민(계속)'으로 통일 필요", "본문의 people 계열 번역과 화면 라벨 통일 필요"]
+      "result": "PASS",
+      "notes": [
+        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
+      ]
     },
     {
       "book": 2,
@@ -154,7 +170,9 @@
       "terminology_checked": true,
       "navigation_checked": true,
       "result": "PASS",
-      "notes": ["각주·번역자 주는 본문 대응 문단 수에서 제외됨"]
+      "notes": [
+        "각주·번역자 주는 본문 대응 문단 수에서 제외됨"
+      ]
     },
     {
       "book": 2,
@@ -167,7 +185,9 @@
       "terminology_checked": true,
       "navigation_checked": true,
       "result": "PASS",
-      "notes": ["각주 2개는 관련 대응 블록의 source-note로 분리됨"]
+      "notes": [
+        "각주 2개는 관련 대응 블록의 source-note로 분리됨"
+      ]
     },
     {
       "book": 2,
@@ -180,13 +200,20 @@
       "terminology_checked": true,
       "navigation_checked": true,
       "result": "PASS",
-      "notes": ["다음 링크는 book-03-chapter-01.html로 연결됨"]
+      "notes": [
+        "다음 링크는 book-03-chapter-01.html로 연결됨"
+      ]
     }
   ],
-  "editorial_follow_up": [
-    "제2권 4-9장의 화면 라벨을 '한국어 자체 번역'으로 통일",
-    "제2권 6, 8, 9장의 people 번역을 '인민' 기준으로 정합화",
-    "제1, 2, 5장 제목을 SOURCE_MANIFEST 표기와 통일",
-    "제3권 제작 전에 위 표기 정규화 커밋을 별도 수행"
-  ]
+  "editorial_follow_up": [],
+  "normalization": {
+    "task": "W02-D5-R",
+    "completed": true,
+    "scope": [
+      "제1·2·5장 제목을 SOURCE_MANIFEST 기준으로 통일",
+      "제4~9장 화면 라벨을 한국어 자체 번역으로 통일",
+      "제6·8·9장 people 번역을 인민 기준으로 정합화",
+      "제8·9장 제목을 인민 표기로 통일"
+    ]
+  }
 }
