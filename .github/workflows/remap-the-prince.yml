@@ -1,13 +1,16 @@
 name: Remap The Prince paragraphs
 
 on:
-  push:
+  pull_request:
     branches:
-      - fix/the-prince-paragraph-mapping
+      - main
     paths:
       - 'scripts/remap_the_prince.py'
       - 'reread/the-prince/**'
       - '.github/workflows/remap-the-prince.yml'
+  push:
+    branches:
+      - fix/the-prince-paragraph-mapping
   workflow_dispatch:
 
 permissions:
@@ -27,6 +30,7 @@ jobs:
       - name: Rebuild and validate paragraph pairs
         run: python scripts/remap_the_prince.py
       - name: Commit regenerated chapters
+        if: github.event_name != 'pull_request'
         run: |
           if git diff --quiet; then
             echo 'No changes generated.'
