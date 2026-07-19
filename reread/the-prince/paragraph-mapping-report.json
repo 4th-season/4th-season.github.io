@@ -1,222 +1,597 @@
 [
   {
     "file": "reread/the-prince/dedication.html",
-    "ko": 7,
-    "en": 5,
-    "difference": 2,
+    "ko_source_paragraphs": 7,
+    "en_source_paragraphs": 5,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 5,
+    "ko_group_sizes": [
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    "alignment_cost": 0.0128,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-01.html",
-    "ko": 4,
-    "en": 4,
-    "difference": 0,
-    "removed_heading_artifacts": [
-      "ACQUIRED"
-    ],
+    "ko_source_paragraphs": 4,
+    "en_source_paragraphs": 4,
+    "removed_heading_artifacts": [],
     "status": "rewritten",
-    "pairs": 4
+    "pairs": 4,
+    "ko_group_sizes": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "alignment_cost": 0.0295,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-02.html",
-    "ko": 3,
-    "en": 3,
-    "difference": 0,
+    "ko_source_paragraphs": 3,
+    "en_source_paragraphs": 3,
     "removed_heading_artifacts": [],
     "status": "rewritten",
-    "pairs": 3
+    "pairs": 3,
+    "ko_group_sizes": [
+      1,
+      1,
+      1
+    ],
+    "alignment_cost": 0.0004,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-03.html",
-    "ko": 33,
-    "en": 24,
-    "difference": 9,
+    "ko_source_paragraphs": 33,
+    "en_source_paragraphs": 24,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 24,
+    "ko_group_sizes": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      2,
+      2,
+      2,
+      1,
+      2,
+      5,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "alignment_cost": 3.9184,
+    "review_priority": "high"
   },
   {
     "file": "reread/the-prince/chapter-04.html",
-    "ko": 15,
-    "en": 8,
-    "difference": 7,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 15,
+    "en_source_paragraphs": 7,
+    "removed_heading_artifacts": [
+      "AGAINST THE SUCCESSORS OF ALEXANDER AT HIS DEATH"
+    ],
+    "status": "rewritten",
+    "pairs": 7,
+    "ko_group_sizes": [
+      1,
+      2,
+      5,
+      2,
+      2,
+      2,
+      1
+    ],
+    "alignment_cost": 0.0145,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-05.html",
-    "ko": 8,
-    "en": 4,
-    "difference": 4,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 8,
+    "en_source_paragraphs": 3,
+    "removed_heading_artifacts": [
+      "THEIR OWN LAWS BEFORE THEY WERE ANNEXED"
+    ],
+    "status": "rewritten",
+    "pairs": 3,
+    "ko_group_sizes": [
+      2,
+      4,
+      2
+    ],
+    "alignment_cost": 0.0102,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-06.html",
-    "ko": 34,
-    "en": 10,
-    "difference": 24,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 34,
+    "en_source_paragraphs": 9,
+    "removed_heading_artifacts": [
+      "ABILITY"
+    ],
+    "status": "rewritten",
+    "pairs": 9,
+    "ko_group_sizes": [
+      3,
+      2,
+      4,
+      5,
+      6,
+      5,
+      4,
+      4,
+      1
+    ],
+    "alignment_cost": 1.1953,
+    "review_priority": "high"
   },
   {
     "file": "reread/the-prince/chapter-07.html",
-    "ko": 107,
-    "en": 20,
-    "difference": 87,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 107,
+    "en_source_paragraphs": 19,
+    "removed_heading_artifacts": [
+      "OTHERS OR BY GOOD FORTUNE"
+    ],
+    "status": "rewritten",
+    "pairs": 19,
+    "ko_group_sizes": [
+      8,
+      3,
+      1,
+      4,
+      5,
+      4,
+      19,
+      15,
+      1,
+      7,
+      1,
+      6,
+      10,
+      6,
+      1,
+      1,
+      5,
+      9,
+      1
+    ],
+    "alignment_cost": 0.1183,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-08.html",
-    "ko": 60,
-    "en": 10,
-    "difference": 50,
+    "ko_source_paragraphs": 60,
+    "en_source_paragraphs": 10,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 10,
+    "ko_group_sizes": [
+      5,
+      14,
+      1,
+      7,
+      8,
+      11,
+      4,
+      1,
+      6,
+      3
+    ],
+    "alignment_cost": 0.0738,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-09.html",
-    "ko": 65,
-    "en": 9,
-    "difference": 56,
+    "ko_source_paragraphs": 65,
+    "en_source_paragraphs": 9,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 9,
+    "ko_group_sizes": [
+      8,
+      6,
+      9,
+      8,
+      10,
+      9,
+      1,
+      1,
+      13
+    ],
+    "alignment_cost": 0.0495,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-10.html",
-    "ko": 26,
-    "en": 5,
-    "difference": 21,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 26,
+    "en_source_paragraphs": 4,
+    "removed_heading_artifacts": [
+      "BE MEASURED"
+    ],
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      10,
+      6,
+      4,
+      6
+    ],
+    "alignment_cost": 0.037,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-11.html",
-    "ko": 42,
-    "en": 7,
-    "difference": 35,
+    "ko_source_paragraphs": 42,
+    "en_source_paragraphs": 7,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 7,
+    "ko_group_sizes": [
+      8,
+      2,
+      12,
+      1,
+      5,
+      13,
+      1
+    ],
+    "alignment_cost": 2.0136,
+    "review_priority": "high"
   },
   {
     "file": "reread/the-prince/chapter-12.html",
-    "ko": 92,
-    "en": 17,
-    "difference": 75,
+    "ko_source_paragraphs": 92,
+    "en_source_paragraphs": 17,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 17,
+    "ko_group_sizes": [
+      2,
+      4,
+      14,
+      8,
+      3,
+      8,
+      2,
+      33,
+      1,
+      1,
+      5,
+      1,
+      1,
+      1,
+      5,
+      2,
+      1
+    ],
+    "alignment_cost": 0.1712,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-13.html",
-    "ko": 67,
-    "en": 16,
-    "difference": 51,
+    "ko_source_paragraphs": 67,
+    "en_source_paragraphs": 16,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 16,
+    "ko_group_sizes": [
+      4,
+      1,
+      6,
+      1,
+      2,
+      1,
+      8,
+      8,
+      3,
+      4,
+      9,
+      1,
+      1,
+      5,
+      6,
+      7
+    ],
+    "alignment_cost": 0.0867,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-14.html",
-    "ko": 40,
-    "en": 5,
-    "difference": 35,
+    "ko_source_paragraphs": 40,
+    "en_source_paragraphs": 5,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 5,
+    "ko_group_sizes": [
+      14,
+      12,
+      5,
+      1,
+      8
+    ],
+    "alignment_cost": 0.0752,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-15.html",
-    "ko": 11,
-    "en": 3,
-    "difference": 8,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 11,
+    "en_source_paragraphs": 2,
+    "removed_heading_artifacts": [
+      "BLAMED"
+    ],
+    "status": "rewritten",
+    "pairs": 2,
+    "ko_group_sizes": [
+      4,
+      7
+    ],
+    "alignment_cost": 0.0385,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-16.html",
-    "ko": 29,
-    "en": 5,
-    "difference": 24,
+    "ko_source_paragraphs": 29,
+    "en_source_paragraphs": 5,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 5,
+    "ko_group_sizes": [
+      7,
+      3,
+      6,
+      10,
+      3
+    ],
+    "alignment_cost": 0.0331,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-17.html",
-    "ko": 52,
-    "en": 12,
-    "difference": 40,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 52,
+    "en_source_paragraphs": 11,
+    "removed_heading_artifacts": [
+      "THAN FEARED"
+    ],
+    "status": "rewritten",
+    "pairs": 11,
+    "ko_group_sizes": [
+      10,
+      1,
+      2,
+      1,
+      2,
+      2,
+      1,
+      11,
+      8,
+      11,
+      3
+    ],
+    "alignment_cost": 0.3089,
+    "review_priority": "medium"
   },
   {
     "file": "reread/the-prince/chapter-18.html",
-    "ko": 50,
-    "en": 15,
-    "difference": 35,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 50,
+    "en_source_paragraphs": 14,
+    "removed_heading_artifacts": [
+      "CONCERNING THE WAY IN WHICH PRINCES SHOULD KEEP FAITH"
+    ],
+    "status": "rewritten",
+    "pairs": 14,
+    "ko_group_sizes": [
+      1,
+      1,
+      3,
+      3,
+      1,
+      1,
+      1,
+      4,
+      4,
+      13,
+      9,
+      4,
+      3,
+      2
+    ],
+    "alignment_cost": 0.9574,
+    "review_priority": "high"
   },
   {
     "file": "reread/the-prince/chapter-19.html",
-    "ko": 173,
-    "en": 24,
-    "difference": 149,
+    "ko_source_paragraphs": 173,
+    "en_source_paragraphs": 24,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 24,
+    "ko_group_sizes": [
+      3,
+      4,
+      4,
+      10,
+      13,
+      6,
+      9,
+      2,
+      5,
+      10,
+      5,
+      3,
+      12,
+      4,
+      7,
+      4,
+      6,
+      17,
+      13,
+      6,
+      9,
+      6,
+      9,
+      6
+    ],
+    "alignment_cost": 0.041,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-20.html",
-    "ko": 75,
-    "en": 8,
-    "difference": 67,
-    "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "ko_source_paragraphs": 75,
+    "en_source_paragraphs": 7,
+    "removed_heading_artifacts": [
+      "ADVANTAGEOUS OR HURTFUL?"
+    ],
+    "status": "rewritten",
+    "pairs": 7,
+    "ko_group_sizes": [
+      5,
+      14,
+      12,
+      6,
+      13,
+      20,
+      5
+    ],
+    "alignment_cost": 0.0593,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-21.html",
-    "ko": 63,
-    "en": 9,
-    "difference": 54,
+    "ko_source_paragraphs": 63,
+    "en_source_paragraphs": 9,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 9,
+    "ko_group_sizes": [
+      14,
+      4,
+      8,
+      12,
+      6,
+      2,
+      5,
+      4,
+      8
+    ],
+    "alignment_cost": 0.0402,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-22.html",
-    "ko": 22,
-    "en": 4,
-    "difference": 18,
+    "ko_source_paragraphs": 22,
+    "en_source_paragraphs": 4,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      7,
+      6,
+      4,
+      5
+    ],
+    "alignment_cost": 0.0299,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-23.html",
-    "ko": 36,
-    "en": 7,
-    "difference": 29,
+    "ko_source_paragraphs": 36,
+    "en_source_paragraphs": 7,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 7,
+    "ko_group_sizes": [
+      7,
+      7,
+      6,
+      2,
+      4,
+      6,
+      4
+    ],
+    "alignment_cost": 0.0338,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-24.html",
-    "ko": 28,
-    "en": 4,
-    "difference": 24,
+    "ko_source_paragraphs": 28,
+    "en_source_paragraphs": 4,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      7,
+      4,
+      4,
+      13
+    ],
+    "alignment_cost": 0.0406,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-25.html",
-    "ko": 57,
-    "en": 9,
-    "difference": 48,
+    "ko_source_paragraphs": 57,
+    "en_source_paragraphs": 9,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 9,
+    "ko_group_sizes": [
+      5,
+      2,
+      6,
+      3,
+      12,
+      7,
+      12,
+      4,
+      6
+    ],
+    "alignment_cost": 0.0403,
+    "review_priority": "low"
   },
   {
     "file": "reread/the-prince/chapter-26.html",
-    "ko": 67,
-    "en": 15,
-    "difference": 52,
+    "ko_source_paragraphs": 67,
+    "en_source_paragraphs": 15,
     "removed_heading_artifacts": [],
-    "status": "mismatch"
+    "status": "rewritten",
+    "pairs": 15,
+    "ko_group_sizes": [
+      2,
+      4,
+      4,
+      5,
+      2,
+      8,
+      6,
+      8,
+      1,
+      4,
+      10,
+      10,
+      1,
+      1,
+      1
+    ],
+    "alignment_cost": 2.1547,
+    "review_priority": "high"
   }
 ]
