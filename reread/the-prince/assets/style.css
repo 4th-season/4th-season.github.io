@@ -10,3 +10,12 @@
 .english-text p{margin:1.05em 0}
 .english-text .english-note{padding-left:16px;border-left:3px solid #d4c3ae;color:#675d54;font-size:.9rem}
 @media(max-width:760px){.english-original{padding:17px}.english-text{padding:5px 16px 18px;font-size:.98rem}}
+
+.parallel-pair{margin:0 0 24px;border:1px solid #d7c9b8;background:#fff;box-shadow:0 4px 14px rgba(60,43,28,.04)}
+.parallel-head{display:flex;justify-content:space-between;gap:12px;padding:10px 15px;background:#e8ded1;border-bottom:1px solid #d7c9b8}
+.parallel-head span,.language-label{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:#70472c}
+.parallel-en,.parallel-ko{padding:18px 21px}
+.parallel-en{font-family:Georgia,"Times New Roman",serif;background:#f8f3ec;border-bottom:1px dashed #d7c9b8}
+.parallel-en p,.parallel-ko p{margin:.75em 0}
+.parallel-ko{font-size:1.02rem;line-height:1.78}
+@media(max-width:760px){.parallel-en,.parallel-ko{padding:15px}.parallel-head{font-size:.88rem}}
