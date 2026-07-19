@@ -14,6 +14,10 @@ EN_RE = re.compile(r'<div class="parallel-en original-body">\s*<span class="lang
 P_RE = re.compile(r'<p(?:\s[^>]*)?>.*?</p>', re.S)
 TAG_RE = re.compile(r'<[^>]+>')
 NOTE_RE = re.compile(r'^\s*\[\d+\]')
+ATTRIBUTION_RE = re.compile(
+    r'^(?:Christopher Pitt|Edward Dacre|Italian Proverb|Marriott|W\. K\. Marriott)\.?$',
+    re.I,
+)
 
 
 def text_of(html: str) -> str:
@@ -24,22 +28,65 @@ def visible_len(html: str) -> int:
     return max(1, len(re.sub(r'\s+', '', text_of(html))))
 
 
+def first_sentence(html_group: list[str]) -> str:
+    text = ' '.join(text_of(p) for p in html_group).strip()
+    if not text:
+        return ''
+    parts = re.split(r'(?<=[.!?。])\s+', text, maxsplit=1)
+    return parts[0][:240]
+
+
+def last_sentence(html_group: list[str]) -> str:
+    text = ' '.join(text_of(p) for p in html_group).strip()
+    if not text:
+        return ''
+    parts = [p for p in re.split(r'(?<=[.!?。])\s+', text) if p]
+    return parts[-1][-240:]
+
+
 def is_heading_artifact(p: str) -> bool:
     t = text_of(p)
     letters = ''.join(ch for ch in t if ch.isalpha())
     return bool(t) and len(t.split()) <= 14 and letters and letters.upper() == letters
 
 
+def is_note_or_attribution(p: str) -> bool:
+    t = text_of(p)
+    return bool(NOTE_RE.match(t) or ATTRIBUTION_RE.fullmatch(t))
+
+
+def as_source_note(p: str) -> str:
+    # Remove any duplicated class attributes left by earlier rebuilds.
+    body = re.sub(r'^<p(?:\s[^>]*)?>', '<p class="source-note">', p, count=1)
+    return body
+
+
 def fold_notes(paragraphs: list[str]) -> tuple[list[str], int]:
+    """Fold footnotes and attribution-only lines into neighbouring body paragraphs.
+
+    A leading note is held until the first body paragraph and appended to it.
+    Later notes are appended to the immediately preceding body paragraph.
+    """
     folded: list[str] = []
+    pending_leading: list[str] = []
     count = 0
     for p in paragraphs:
-        if NOTE_RE.match(text_of(p)) and folded:
-            note = re.sub(r'^<p', '<p class="source-note"', p, count=1)
-            folded[-1] += note
+        if is_note_or_attribution(p):
+            note = as_source_note(p)
+            if folded:
+                folded[-1] += note
+            else:
+                pending_leading.append(note)
             count += 1
-        else:
-            folded.append(p)
+            continue
+
+        if pending_leading:
+            p += ''.join(pending_leading)
+            pending_leading.clear()
+        folded.append(p)
+
+    if pending_leading and folded:
+        folded[-1] += ''.join(pending_leading)
     return folded, count
 
 
@@ -149,15 +196,30 @@ def process(path: Path) -> dict:
     start = html.find(pairs[0])
     end = html.rfind(pairs[-1]) + len(pairs[-1])
     new_html = html[:start] + rebuilt + html[end:]
-    new_html = new_html.replace('전문번역 대응판 v1.3.1', '전문번역 문단 대응판 v1.4.0')
+    new_html = re.sub(
+        r'영문 원문·한국어 전문번역(?: 문단 대응판| 대응판)? v1\.[0-9.]+',
+        '영문 원문·한국어 전문번역 문단 대응 교정판 v1.4.1',
+        new_html,
+    )
     path.write_text(new_html, encoding="utf-8")
 
+    anchors = [
+        {
+            "pair": i + 1,
+            "ko_first": first_sentence(group),
+            "en_first": first_sentence([en]),
+            "ko_last": last_sentence(group),
+            "en_last": last_sentence([en]),
+        }
+        for i, (group, en) in enumerate(zip(groups, en_ps))
+    ]
     result.update(
         status="rewritten",
         pairs=len(en_ps),
         ko_group_sizes=[len(group) for group in groups],
         alignment_cost=round(cost, 4),
         review_priority="high" if cost > 0.35 else "medium" if cost > 0.18 else "low",
+        anchors=anchors,
     )
     return result
 
