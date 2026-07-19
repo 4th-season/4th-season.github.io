@@ -25,8 +25,7 @@
       "navigation_failures": 0,
       "first_sentence_checks": 12,
       "last_sentence_checks": 12,
-      "result": "PASS",
-      "notes": ["W02-D5-R 제목·용어·화면 라벨 정규화 완료"]
+      "result": "PASS"
     },
     "3": {
       "scope": "chapters 1-18",
@@ -37,29 +36,40 @@
       "navigation_failures": 0,
       "first_sentence_checks": 18,
       "last_sentence_checks": 18,
+      "result": "PASS"
+    },
+    "4": {
+      "scope": "chapters 1-9",
+      "chapters_checked": 9,
+      "mapping_blocks": 48,
+      "empty_english_blocks": 0,
+      "empty_korean_blocks": 0,
+      "navigation_failures": 0,
+      "first_sentence_checks": 9,
+      "last_sentence_checks": 9,
       "result": "PASS",
       "chapters": [
-        {"chapter":1,"file":"book-03-chapter-01.html","mapping_blocks":5,"result":"PASS"},
-        {"chapter":2,"file":"book-03-chapter-02.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":3,"file":"book-03-chapter-03.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":4,"file":"book-03-chapter-04.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":5,"file":"book-03-chapter-05.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":6,"file":"book-03-chapter-06.html","mapping_blocks":5,"result":"PASS"},
-        {"chapter":7,"file":"book-03-chapter-07.html","mapping_blocks":3,"result":"PASS"},
-        {"chapter":8,"file":"book-03-chapter-08.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":9,"file":"book-03-chapter-09.html","mapping_blocks":3,"result":"PASS"},
-        {"chapter":10,"file":"book-03-chapter-10.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":11,"file":"book-03-chapter-11.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":12,"file":"book-03-chapter-12.html","mapping_blocks":3,"result":"PASS"},
-        {"chapter":13,"file":"book-03-chapter-13.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":14,"file":"book-03-chapter-14.html","mapping_blocks":3,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
-        {"chapter":15,"file":"book-03-chapter-15.html","mapping_blocks":7,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
-        {"chapter":16,"file":"book-03-chapter-16.html","mapping_blocks":3,"result":"PASS"},
-        {"chapter":17,"file":"book-03-chapter-17.html","mapping_blocks":4,"result":"PASS"},
-        {"chapter":18,"file":"book-03-chapter-18.html","mapping_blocks":5,"result":"PASS","notes":["다음 링크는 book-04-chapter-01.html","원문 각주는 source-note로 분리"]}
+        {"chapter":1,"file":"book-04-chapter-01.html","mapping_blocks":5,"result":"PASS"},
+        {"chapter":2,"file":"book-04-chapter-02.html","mapping_blocks":6,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":3,"file":"book-04-chapter-03.html","mapping_blocks":5,"result":"PASS"},
+        {"chapter":4,"file":"book-04-chapter-04.html","mapping_blocks":8,"result":"PASS","notes":["W04-D2-R 장문 파일 통합 완료"]},
+        {"chapter":5,"file":"book-04-chapter-05.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":6,"file":"book-04-chapter-06.html","mapping_blocks":6,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":7,"file":"book-04-chapter-07.html","mapping_blocks":5,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":8,"file":"book-04-chapter-08.html","mapping_blocks":8,"result":"PASS","notes":["장문 논증과 원문 각주를 의미 단위로 분리"]},
+        {"chapter":9,"file":"book-04-chapter-09.html","mapping_blocks":1,"result":"PASS","notes":["마지막 링크는 전체 목차로 연결"]}
       ]
     }
   },
+  "project_completion": {
+    "foreword": true,
+    "book_1": "9/9",
+    "book_2": "12/12",
+    "book_3": "18/18",
+    "book_4": "9/9",
+    "chapters": "48/48",
+    "result": "COMPLETE"
+  },
   "editorial_follow_up": [],
-  "next_task": "W04-D1: Book IV chapters 1-3"
+  "next_task": "FINAL-QA: full 48-chapter index, metadata, navigation and publication audit"
 }
