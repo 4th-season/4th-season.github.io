@@ -12,84 +12,28 @@
     .route-guide{margin:0 0 18px;padding:12px 16px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.07)}
     .route-guide strong{display:block;margin-bottom:3px;color:#fff;font-weight:800}.route-guide span{color:#eef4fb}.route-guide code{display:inline-block;margin-top:5px;padding:3px 7px;border-radius:6px;background:rgba(0,0,0,.32);color:#e6f0ff;font-size:12px}
     .progress-note{margin:0 0 16px;padding:10px 14px;border-left:4px solid #8cb9e8;background:rgba(112,165,222,.1);border-radius:9px;color:#eef5ff}.progress-note strong{display:block;margin-bottom:2px;color:#fff;font-weight:800}
-    .year-list>details>summary{min-height:0!important;padding:12px 22px!important}
-    .year-list>details>summary>strong{font-size:25px!important;line-height:1!important}
-    .year-list>details>summary>span,.year-list>details>summary>em{line-height:1.1!important}
-    .year-list>details>.subgrid{display:block!important;width:100%!important;max-width:none!important;min-height:0!important;padding:7px 12px 9px!important;grid-template-columns:none!important}
-    .exam-group{display:block!important;width:100%!important;max-width:none!important;min-height:0!important;padding:0!important;border-top:1px solid rgba(255,255,255,.14)}.exam-group:first-child{border-top:0}
+    .year-list>details>summary{min-height:0!important;padding:12px 22px!important}.year-list>details>summary>strong{font-size:25px!important;line-height:1!important}.year-list>details>summary>span,.year-list>details>summary>em{line-height:1.1!important}
+    .year-list>details>.subgrid{display:block!important;width:100%!important;max-width:none!important;min-height:0!important;padding:7px 12px 9px!important;grid-template-columns:none!important}.exam-group{display:block!important;width:100%!important;max-width:none!important;min-height:0!important;padding:0!important;border-top:1px solid rgba(255,255,255,.14)}.exam-group:first-child{border-top:0}
     .exam-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px;min-height:0!important;margin:0 0 5px!important;padding:0!important}.exam-head h3{margin:0;color:#fff;font-size:17px;font-weight:800;line-height:1.15}.exam-head span{color:#dbe7f5;font-size:11px;font-weight:700;line-height:1.15}
-    .sequence{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
-    .sequence>.item{position:relative;display:grid!important;grid-template-columns:1fr auto;grid-template-areas:"range status" "title title" "meta meta";align-content:center!important;gap:0 8px!important;width:100%!important;min-width:0!important;height:64px!important;min-height:64px!important;max-height:64px!important;padding:5px 13px!important;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:rgba(255,255,255,.075);color:#fff;text-decoration:none;transition:.18s;overflow:hidden}
-    .sequence>.item[href]:hover{transform:translateY(-1px);border-color:rgba(169,209,255,.72);background:rgba(255,255,255,.13);box-shadow:0 5px 12px rgba(0,0,0,.16)}
-    .range{grid-area:range;display:block;color:#b9dcff;font-size:12px;font-weight:800;line-height:1.05;letter-spacing:-.02em}
-    .item>span:nth-child(2){grid-area:title;min-width:0}.item strong{display:block;overflow:hidden;color:#fff;font-size:14px;font-weight:800;line-height:1.1;text-overflow:ellipsis;white-space:nowrap}.item small{grid-area:meta;display:block;margin:0;color:#d5e1ee;font-size:9px;font-weight:700;line-height:1.05}
-    .status{grid-area:status;align-self:start;padding:2px 6px;border-radius:999px;font-size:9px;font-weight:800;line-height:1.05;white-space:nowrap}.done{background:rgba(38,174,105,.24);color:#d7ffe8}.next{background:rgba(231,166,46,.24);color:#ffebb8}.waiting{background:rgba(255,255,255,.1);color:#d4deea}
-    .empty-year{padding:8px 12px;border:1px dashed rgba(255,255,255,.2);border-radius:10px;color:#d8e2ee;text-align:center;font-size:12px}.year-count{color:#d9e6f4;font-size:11px;font-weight:700}
-    @media(max-width:980px){.sequence{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-    @media(max-width:560px){.year-list>details>summary{padding:10px 15px!important}.year-list>details>.subgrid{padding:6px 8px 8px!important}.sequence{grid-template-columns:1fr!important}.sequence>.item{height:60px!important;min-height:60px!important;max-height:60px!important}.exam-head{align-items:flex-start}}
+    .sequence{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}.sequence>.item{position:relative;display:grid!important;grid-template-columns:1fr auto;grid-template-areas:"range status" "title title" "meta meta";align-content:center!important;gap:0 8px!important;width:100%!important;min-width:0!important;height:64px!important;min-height:64px!important;max-height:64px!important;padding:5px 13px!important;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:rgba(255,255,255,.075);color:#fff;text-decoration:none;transition:.18s;overflow:hidden}.sequence>.item[href]:hover{transform:translateY(-1px);border-color:rgba(169,209,255,.72);background:rgba(255,255,255,.13);box-shadow:0 5px 12px rgba(0,0,0,.16)}
+    .range{grid-area:range;display:block;color:#b9dcff;font-size:12px;font-weight:800;line-height:1.05;letter-spacing:-.02em}.item>span:nth-child(2){grid-area:title;min-width:0}.item strong{display:block;overflow:hidden;color:#fff;font-size:14px;font-weight:800;line-height:1.1;text-overflow:ellipsis;white-space:nowrap}.item small{grid-area:meta;display:block;margin:0;color:#d5e1ee;font-size:9px;font-weight:700;line-height:1.05}.status{grid-area:status;align-self:start;padding:2px 6px;border-radius:999px;font-size:9px;font-weight:800;line-height:1.05;white-space:nowrap}.done{background:rgba(38,174,105,.24);color:#d7ffe8}.next{background:rgba(231,166,46,.24);color:#ffebb8}.waiting{background:rgba(255,255,255,.1);color:#d4deea}.empty-year{padding:8px 12px;border:1px dashed rgba(255,255,255,.2);border-radius:10px;color:#d8e2ee;text-align:center;font-size:12px}.year-count{color:#d9e6f4;font-size:11px;font-weight:700}
+    @media(max-width:980px){.sequence{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media(max-width:560px){.year-list>details>summary{padding:10px 15px!important}.year-list>details>.subgrid{padding:6px 8px 8px!important}.sequence{grid-template-columns:1fr!important}.sequence>.item{height:60px!important;min-height:60px!important;max-height:60px!important}.exam-head{align-items:flex-start}}
   </style>
 </head>
 <body>
   <a class="skip" href="#archive">연도별 독서 자료로 바로가기</a>
   <header class="topbar"><a class="brand" href="/"><b>4S</b><span>4th Season</span></a><nav><a href="/csat/area/">영역별 홈</a><a href="/csat/year/">연도별 찾기</a></nav></header>
-  <main>
-    <section class="hero"><img src="/assets/map-note.png" alt="연필과 노트가 놓인 공부 책상"><div class="shade"></div><div class="hero-inner">
-      <p class="eyebrow"><i></i> CSAT READING SEQUENCE</p><h1>연도와 시험을 고르고,<br><em>문항 순서대로</em> 학습합니다.</h1>
-      <p class="lead">독서 지문은 주제별로 흩어 놓지 않습니다. 한 시험지를 1번부터 마지막 독서 문항까지 실제 출제 순서대로 이어서 정리합니다.</p>
-      <a class="jump" href="#archive">학습 순서 확인 <span>↘</span></a>
-    </div></section>
-    <section class="archive wrap" id="archive">
-      <div class="section-head"><div><p class="kicker">2010—2027</p><h2>연도별 시험지 진행표</h2></div><p>완성된 지문은 바로 열리고, 다음 작업 대상은 ‘다음 작업’으로 표시됩니다.</p></div>
-      <div class="route-guide"><strong>저장 및 표시 기준</strong><span>학년도 → 시험 → 시작 문항 순서로 저장하고, 화면에서도 같은 순서로 표시합니다.</span><br><code>/csat/reading/{학년도}/{시험}/{시작문항}/</code></div>
-      <div class="progress-note"><strong>현재 작업 방식</strong><span>한 시험지의 독서 영역을 문항 순서대로 한 지문씩 완성한 뒤 다음 지문으로 이동합니다.</span></div>
-      <div class="year-list" id="yearList"></div>
-      <noscript><p class="noscript">연도별 학습 순서를 표시하려면 브라우저에서 자바스크립트를 허용해 주세요.</p></noscript>
-    </section>
-  </main>
+  <main><section class="hero"><img src="/assets/map-note.png" alt="연필과 노트가 놓인 공부 책상"><div class="shade"></div><div class="hero-inner"><p class="eyebrow"><i></i> CSAT READING SEQUENCE</p><h1>연도와 시험을 고르고,<br><em>문항 순서대로</em> 학습합니다.</h1><p class="lead">독서 지문은 주제별로 흩어 놓지 않습니다. 한 시험지를 1번부터 마지막 독서 문항까지 실제 출제 순서대로 이어서 정리합니다.</p><a class="jump" href="#archive">학습 순서 확인 <span>↘</span></a></div></section>
+    <section class="archive wrap" id="archive"><div class="section-head"><div><p class="kicker">2010—2027</p><h2>연도별 시험지 진행표</h2></div><p>완성된 지문은 바로 열리고, 다음 작업 대상은 ‘다음 작업’으로 표시됩니다.</p></div><div class="route-guide"><strong>저장 및 표시 기준</strong><span>학년도 → 시험 → 시작 문항 순서로 저장하고, 화면에서도 같은 순서로 표시합니다.</span><br><code>/csat/reading/{학년도}/{시험}/{시작문항}/</code></div><div class="progress-note"><strong>현재 작업 방식</strong><span>한 시험지의 독서 영역을 문항 순서대로 한 지문씩 완성한 뒤 다음 지문으로 이동합니다.</span></div><div class="year-list" id="yearList"></div><noscript><p class="noscript">연도별 학습 순서를 표시하려면 브라우저에서 자바스크립트를 허용해 주세요.</p></noscript></section></main>
   <footer><a class="brand" href="/"><b>4S</b><span>4th Season</span></a><p>수능 국어 독서 기출 아카이브</p><a href="/csat/area/">영역별 홈 →</a></footer>
   <script>
-    const EXAMS = [
-      {year:2027,exam:'6월 모의평가',items:[
-        {range:'1～3번',start:'01',title:'SQ3R 읽기 전략',state:'done',href:'/csat/reading/2027/june/01/'},
-        {range:'4～9번',start:'04',title:'노비 인식과 민권 운동',state:'done',href:'/csat/reading/2027/june/04/'},
-        {range:'10～13번',start:'10',title:'정보 비대칭과 정부 개입',state:'done',href:'/csat/reading/2027/june/10/'},
-        {range:'14～17번',start:'14',title:'라플라스 식과 잉크젯 인쇄',state:'done',href:'/csat/reading/2027/june/14/'}
-      ]},
-      {year:2026,exam:'수능',items:[
-        {range:'1～3번',start:'01',title:'독해 능력의 단순 관점',state:'done',href:'/csat/reading/2026/suneung/01/'},
-        {range:'4～9번',start:'04',title:'법 해석과 보증 계약',state:'done',href:'/csat/reading/2026/suneung/04/'},
-        {range:'10～13번',start:'10',title:'열팽창 띠와 액추에이터',state:'done',href:'/csat/reading/2026/suneung/10/'},
-        {range:'14～17번',start:'14',title:'인격의 통시적 동일성',state:'done',href:'/csat/reading/2026/suneung/14/'}
-      ]},
-      {year:2025,exam:'수능',items:[
-        {range:'1～3번',start:'01',title:'독서 전략으로서의 밑줄 긋기',state:'done',href:'/csat/reading/2025/suneung/01/'},
-        {range:'4～9번',start:'04',title:'개화와 과학·기술 수용',state:'done',href:'/csat/reading/2025/suneung/04/'},
-        {range:'10～13번',start:'10',title:'기계 학습과 확산 모델',state:'done',href:'/csat/reading/2025/suneung/10/'},
-        {range:'14～17번',start:'14',title:'인터넷 ID와 명예훼손',state:'done',href:'/csat/reading/2025/suneung/14/'}
-      ]},
-      {year:2024,exam:'수능',items:[
-        {range:'1～3번',start:'01',title:'읽기 과정에서 초인지의 역할',state:'done',href:'/csat/reading/2024/suneung/01/'},
-        {range:'4～7번',start:'04',title:'경마식 보도와 선거 방송',state:'next'},
-        {range:'8～11번',start:'08',title:'데이터와 결측치 처리',state:'waiting'},
-        {range:'12～17번',start:'12',title:'동양 사상과 이상 정치',state:'waiting'}
-      ]},
-      {year:2022,exam:'9월 모의평가',items:[
-        {range:'1～3번',start:'01',title:'『서양 미술사』 독서 일지',state:'done',href:'/csat/reading/2022/september/01/'},
-        {range:'4～9번',start:'04',title:'광고와 독점적 경쟁 시장',state:'done',href:'/csat/reading/2022/september/04/'},
-        {range:'10～13번',start:'10',title:'반자유의지 논증',state:'done',href:'/csat/reading/2022/september/10/'},
-        {range:'14～17번',start:'14',title:'메타버스 몰입 기술',state:'done',href:'/csat/reading/2022/september/14/'}
-      ]}
+    const EXAMS=[
+      {year:2027,exam:'6월 모의평가',items:[{range:'1～3번',start:'01',title:'SQ3R 읽기 전략',state:'done',href:'/csat/reading/2027/june/01/'},{range:'4～9번',start:'04',title:'노비 인식과 민권 운동',state:'done',href:'/csat/reading/2027/june/04/'},{range:'10～13번',start:'10',title:'정보 비대칭과 정부 개입',state:'done',href:'/csat/reading/2027/june/10/'},{range:'14～17번',start:'14',title:'라플라스 식과 잉크젯 인쇄',state:'done',href:'/csat/reading/2027/june/14/'}]},
+      {year:2026,exam:'수능',items:[{range:'1～3번',start:'01',title:'독해 능력의 단순 관점',state:'done',href:'/csat/reading/2026/suneung/01/'},{range:'4～9번',start:'04',title:'법 해석과 보증 계약',state:'done',href:'/csat/reading/2026/suneung/04/'},{range:'10～13번',start:'10',title:'열팽창 띠와 액추에이터',state:'done',href:'/csat/reading/2026/suneung/10/'},{range:'14～17번',start:'14',title:'인격의 통시적 동일성',state:'done',href:'/csat/reading/2026/suneung/14/'}]},
+      {year:2025,exam:'수능',items:[{range:'1～3번',start:'01',title:'독서 전략으로서의 밑줄 긋기',state:'done',href:'/csat/reading/2025/suneung/01/'},{range:'4～9번',start:'04',title:'개화와 과학·기술 수용',state:'done',href:'/csat/reading/2025/suneung/04/'},{range:'10～13번',start:'10',title:'기계 학습과 확산 모델',state:'done',href:'/csat/reading/2025/suneung/10/'},{range:'14～17번',start:'14',title:'인터넷 ID와 명예훼손',state:'done',href:'/csat/reading/2025/suneung/14/'}]},
+      {year:2024,exam:'수능',items:[{range:'1～3번',start:'01',title:'읽기 과정에서 초인지의 역할',state:'done',href:'/csat/reading/2024/suneung/01/'},{range:'4～7번',start:'04',title:'경마식 보도와 선거 방송',state:'done',href:'/csat/reading/2024/suneung/04/'},{range:'8～11번',start:'08',title:'데이터와 결측치 처리',state:'next'},{range:'12～17번',start:'12',title:'동양 사상과 이상 정치',state:'waiting'}]},
+      {year:2022,exam:'9월 모의평가',items:[{range:'1～3번',start:'01',title:'『서양 미술사』 독서 일지',state:'done',href:'/csat/reading/2022/september/01/'},{range:'4～9번',start:'04',title:'광고와 독점적 경쟁 시장',state:'done',href:'/csat/reading/2022/september/04/'},{range:'10～13번',start:'10',title:'반자유의지 논증',state:'done',href:'/csat/reading/2022/september/10/'},{range:'14～17번',start:'14',title:'메타버스 몰입 기술',state:'done',href:'/csat/reading/2022/september/14/'}]}
     ];
-    const stateLabel={done:'완료',next:'다음 작업',waiting:'준비'};
-    const list=document.getElementById('yearList');
-    for(let year=2027;year>=2010;year--){
-      const yearExams=EXAMS.filter(v=>v.year===year);
-      const completed=yearExams.reduce((n,e)=>n+e.items.filter(i=>i.state==='done').length,0);
-      const details=document.createElement('details');if(yearExams.length) details.open=true;
-      const summary=document.createElement('summary');summary.innerHTML=`<strong>${year}</strong><span>학년도</span><em>${yearExams.length?'<span class="year-count">완료 '+completed+'개</span>':'연결 준비'}</em><i></i>`;details.appendChild(summary);
-      const body=document.createElement('div');body.className='subgrid';
-      if(!yearExams.length){body.innerHTML='<div class="empty-year">아직 작업을 시작하지 않은 학년도입니다.</div>'}else{yearExams.forEach(exam=>{const group=document.createElement('section');group.className='exam-group';group.innerHTML=`<div class="exam-head"><h3>${exam.exam}</h3><span>문항 순서대로 진행</span></div>`;const seq=document.createElement('div');seq.className='sequence';exam.items.sort((a,b)=>Number(a.start)-Number(b.start)).forEach(item=>{const el=document.createElement(item.href?'a':'div');el.className='item';if(item.href)el.href=item.href;el.innerHTML=`<span class="range">${item.range}</span><span><strong>${item.title}</strong><small>시작 문항 ${item.start} · 시험지 순서 기준</small></span><span class="status ${item.state}">${stateLabel[item.state]}</span>`;seq.appendChild(el)});group.appendChild(seq);body.appendChild(group)})}
-      details.appendChild(body);list.appendChild(details);
-    }
+    const stateLabel={done:'완료',next:'다음 작업',waiting:'준비'};const list=document.getElementById('yearList');for(let year=2027;year>=2010;year--){const yearExams=EXAMS.filter(v=>v.year===year);const completed=yearExams.reduce((n,e)=>n+e.items.filter(i=>i.state==='done').length,0);const details=document.createElement('details');if(yearExams.length)details.open=true;const summary=document.createElement('summary');summary.innerHTML=`<strong>${year}</strong><span>학년도</span><em>${yearExams.length?'<span class="year-count">완료 '+completed+'개</span>':'연결 준비'}</em><i></i>`;details.appendChild(summary);const body=document.createElement('div');body.className='subgrid';if(!yearExams.length){body.innerHTML='<div class="empty-year">아직 작업을 시작하지 않은 학년도입니다.</div>'}else{yearExams.forEach(exam=>{const group=document.createElement('section');group.className='exam-group';group.innerHTML=`<div class="exam-head"><h3>${exam.exam}</h3><span>문항 순서대로 진행</span></div>`;const seq=document.createElement('div');seq.className='sequence';exam.items.sort((a,b)=>Number(a.start)-Number(b.start)).forEach(item=>{const el=document.createElement(item.href?'a':'div');el.className='item';if(item.href)el.href=item.href;el.innerHTML=`<span class="range">${item.range}</span><span><strong>${item.title}</strong><small>시작 문항 ${item.start} · 시험지 순서 기준</small></span><span class="status ${item.state}">${stateLabel[item.state]}</span>`;seq.appendChild(el)});group.appendChild(seq);body.appendChild(group)})}details.appendChild(body);list.appendChild(details)}
   </script>
 </body></html>
