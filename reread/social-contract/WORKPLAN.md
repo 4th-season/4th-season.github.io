@@ -4,9 +4,9 @@
 
 장 자크 루소, 『사회계약론』(Du contrat social, 1762)
 
-- 영문 기준본: G. D. H. Cole 번역본(1913), Project Gutenberg·Wikisource 공개본
+- 영문 기준본: G. D. H. Cole 번역본, Project Gutenberg 전자텍스트 + Wikisource 1913 스캔 대조
 - 한국어: Re:Read 자체 번역
-- 구성: 서문 + 제1권~제4권
+- 구성: FOREWORD 1개 + 제1권~제4권 48장
 
 ## 편집 기준
 
@@ -20,23 +20,49 @@
 
 ## 파일 구조
 
-- `index.html`: 전체 목차
-- `preface.html`: 서문
+- `index.html`: 4권 48장 전체 목차
+- `preface.html`: FOREWORD
 - `book-01-chapter-01.html` 형식으로 장별 저장
-- `assets/style.css`: 군주론 Re:Read와 동일한 대응판 UI
+- `assets/style.css`: 한국어 우선·접이식 영문 원문 대응판 UI
+- `SOURCE_MANIFEST.md`: 원문 기준과 48장 구조
+- `TERMINOLOGY.md`: 핵심 정치철학 번역 용어표
+- `CHAPTER_TEMPLATE.html`: 장별 공통 HTML 템플릿
 - `paragraph-mapping-report.json`: 문단 수·첫 문장·마지막 문장 검증 기록
 - `scripts/remap_social_contract.py`: 재생성 및 검증 도구
 
 ## 작업 순서
 
 1. 영문 공개본 수집 및 장 구조 확정
-2. 장별 영문 HTML 분리
-3. 한국어 초벌 번역 작성
-4. 첫 문장·마지막 문장 기준 문단 대응
-5. 각주와 편집자 삽입문 분리
-6. 전 장 검증 보고서 생성
-7. 대표 장 수동 검수 후 전체 재검수
-8. 목차·내비게이션·메타데이터 연결
+2. 공통 목차·UI·장 템플릿 구축
+3. 장별 영문 HTML 분리
+4. 한국어 초벌 번역 작성
+5. 첫 문장·마지막 문장 기준 문단 대응
+6. 각주와 편집자 삽입문 분리
+7. 전 장 검증 보고서 생성
+8. 대표 장 수동 검수 후 전체 재검수
+9. 목차·내비게이션·메타데이터 연결
+
+## 일정 진행 상태
+
+### W01-D1 — 완료
+
+- Project Gutenberg 전자텍스트를 작업용 기준본으로 확정
+- Wikisource 1913 Everyman's Library 스캔을 판면 대조본으로 확정
+- FOREWORD + 4권 48장 구조 확정
+- 장별 영문·한국어 제목과 파일명 규칙 확정
+- 핵심 번역 용어표 v1.0 작성
+
+### W01-D2 — 완료
+
+- `index.html` 48장 목차와 링크 구조 생성
+- `assets/style.css` 공통 반응형 디자인 생성
+- 한국어 우선·접이식 영문 원문 UI 확정
+- `CHAPTER_TEMPLATE.html` 생성
+- 제목·설명·canonical·이전·목차·다음 내비게이션 자리표시자 확정
+
+### 다음 작업
+
+- W01-D3: FOREWORD와 제1권 1~3장 영문 분리, 한국어 자체 번역, 문단 대응 HTML 제작
 
 ## 완료 조건
 
