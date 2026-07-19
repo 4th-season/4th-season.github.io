@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import json
-import math
 import re
 from pathlib import Path
 
@@ -14,6 +13,7 @@ KO_RE = re.compile(r'<div class="parallel-ko translation-visible">\s*<span class
 EN_RE = re.compile(r'<div class="parallel-en original-body">\s*<span class="language-label">ENGLISH</span>(.*?)</div>', re.S)
 P_RE = re.compile(r'<p(?:\s[^>]*)?>.*?</p>', re.S)
 TAG_RE = re.compile(r'<[^>]+>')
+NOTE_RE = re.compile(r'^\s*\[\d+\]')
 
 
 def text_of(html: str) -> str:
@@ -30,8 +30,20 @@ def is_heading_artifact(p: str) -> bool:
     return bool(t) and len(t.split()) <= 14 and letters and letters.upper() == letters
 
 
+def fold_notes(paragraphs: list[str]) -> tuple[list[str], int]:
+    folded: list[str] = []
+    count = 0
+    for p in paragraphs:
+        if NOTE_RE.match(text_of(p)) and folded:
+            note = re.sub(r'^<p', '<p class="source-note"', p, count=1)
+            folded[-1] += note
+            count += 1
+        else:
+            folded.append(p)
+    return folded, count
+
+
 def partition_ko(ko_ps: list[str], en_ps: list[str]) -> tuple[list[list[str]], float]:
-    """Order-preserving DP partition: every EN paragraph receives >=1 KO paragraph."""
     k, m = len(ko_ps), len(en_ps)
     if k < m or m == 0:
         raise ValueError("not enough Korean paragraphs")
@@ -53,9 +65,7 @@ def partition_ko(ko_ps: list[str], en_ps: list[str]) -> tuple[list[list[str]], f
         max_used = k - (m - i)
         expected = max(1.0, en_len[i - 1] * ratio)
         for used in range(min_used, max_used + 1):
-            start_min = i - 1
-            start_max = used - 1
-            for start in range(start_min, start_max + 1):
+            for start in range(i - 1, used):
                 if dp[i - 1][start] == inf:
                     continue
                 actual = prefix[used] - prefix[start]
@@ -77,17 +87,14 @@ def partition_ko(ko_ps: list[str], en_ps: list[str]) -> tuple[list[list[str]], f
         cuts.append((start, used))
         used = start
     cuts.reverse()
-    groups = [ko_ps[a:b] for a, b in cuts]
-    normalized_cost = dp[m][k] / m
-    return groups, normalized_cost
+    return [ko_ps[a:b] for a, b in cuts], dp[m][k] / m
 
 
 def make_pair(n: int, ko_group: list[str], en: str) -> str:
-    ko = ''.join(ko_group)
     return f'''<section class="parallel-pair" id="pair-{n:03d}">
   <header class="parallel-head"><strong>대응 문단 {n:03d}</strong><span>EN · KO</span></header>
   <div class="parallel-ko translation-visible">
-<span class="language-label">한국어 전문번역</span>{ko}
+<span class="language-label">한국어 전문번역</span>{''.join(ko_group)}
   </div>
   <details class="original-fold">
     <summary>
@@ -120,10 +127,15 @@ def process(path: Path) -> dict:
     while en_ps and is_heading_artifact(en_ps[0]):
         removed.append(text_of(en_ps.pop(0)))
 
+    en_ps, en_notes = fold_notes(en_ps)
+    ko_ps, ko_notes = fold_notes(ko_ps)
+
     result = {
         "file": str(path.relative_to(ROOT)),
         "ko_source_paragraphs": len(ko_ps),
         "en_source_paragraphs": len(en_ps),
+        "folded_en_notes": en_notes,
+        "folded_ko_notes": ko_notes,
         "removed_heading_artifacts": removed,
     }
 
@@ -152,8 +164,9 @@ def process(path: Path) -> dict:
 
 def main() -> int:
     report = [process(path) for path in FILES if path.exists()]
-    out = BOOK / "paragraph-mapping-report.json"
-    out.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    (BOOK / "paragraph-mapping-report.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0 if all(r["status"] == "rewritten" for r in report) else 1
 
