@@ -70,6 +70,26 @@
     "chapters": "48/48",
     "result": "COMPLETE"
   },
+  "final_qa": {
+    "task": "FINAL-QA",
+    "completed": true,
+    "index_links": 49,
+    "chapter_links": 48,
+    "foreword_link": 1,
+    "index_completion_notice": "COMPLETE",
+    "metadata_and_canonical_pattern": "PASS",
+    "navigation_chain": "PASS",
+    "mobile_ui_structure": "PASS",
+    "title_normalization": "PASS",
+    "corrections": [
+      "목차의 순차 제작 중 문구를 전권 완성 안내로 교체",
+      "FOREWORD 카드의 준비 중 표시 제거",
+      "제3권 제13·14장 제목을 실제 장 제목과 통일",
+      "제4권 제2·4~8장 목차 제목을 실제 파일 제목과 통일",
+      "메타 설명을 4권 48장 완성판으로 갱신"
+    ],
+    "result": "PASS"
+  },
   "editorial_follow_up": [],
-  "next_task": "FINAL-QA: full 48-chapter index, metadata, navigation and publication audit"
+  "next_task": "DEPLOY-READY: review branch diff, merge and verify production URLs"
 }
