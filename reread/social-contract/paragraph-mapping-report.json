@@ -1,0 +1,95 @@
+{
+  "project": "Social Contract Re:Read",
+  "branch": "feat/social-contract-reread",
+  "source": "G. D. H. Cole English public-domain edition",
+  "audit_date": "2026-07-19",
+  "overall_result": "PASS",
+  "terminology_standard": {
+    "general will": "일반의지",
+    "Sovereign": "주권자",
+    "sovereignty": "주권",
+    "body politic": "정치체",
+    "State": "국가",
+    "government": "정부",
+    "people": "인민",
+    "legislator": "입법자",
+    "law": "법"
+  },
+  "books": {
+    "2": {
+      "scope": "chapters 1-12",
+      "chapters_checked": 12,
+      "mapping_blocks": 41,
+      "empty_english_blocks": 0,
+      "empty_korean_blocks": 0,
+      "navigation_failures": 0,
+      "first_sentence_checks": 12,
+      "last_sentence_checks": 12,
+      "result": "PASS"
+    },
+    "3": {
+      "scope": "chapters 1-18",
+      "chapters_checked": 18,
+      "mapping_blocks": 73,
+      "empty_english_blocks": 0,
+      "empty_korean_blocks": 0,
+      "navigation_failures": 0,
+      "first_sentence_checks": 18,
+      "last_sentence_checks": 18,
+      "result": "PASS"
+    },
+    "4": {
+      "scope": "chapters 1-9",
+      "chapters_checked": 9,
+      "mapping_blocks": 48,
+      "empty_english_blocks": 0,
+      "empty_korean_blocks": 0,
+      "navigation_failures": 0,
+      "first_sentence_checks": 9,
+      "last_sentence_checks": 9,
+      "result": "PASS",
+      "chapters": [
+        {"chapter":1,"file":"book-04-chapter-01.html","mapping_blocks":5,"result":"PASS"},
+        {"chapter":2,"file":"book-04-chapter-02.html","mapping_blocks":6,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":3,"file":"book-04-chapter-03.html","mapping_blocks":5,"result":"PASS"},
+        {"chapter":4,"file":"book-04-chapter-04.html","mapping_blocks":8,"result":"PASS","notes":["W04-D2-R 장문 파일 통합 완료"]},
+        {"chapter":5,"file":"book-04-chapter-05.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":6,"file":"book-04-chapter-06.html","mapping_blocks":6,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":7,"file":"book-04-chapter-07.html","mapping_blocks":5,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":8,"file":"book-04-chapter-08.html","mapping_blocks":8,"result":"PASS","notes":["장문 논증과 원문 각주를 의미 단위로 분리"]},
+        {"chapter":9,"file":"book-04-chapter-09.html","mapping_blocks":1,"result":"PASS","notes":["마지막 링크는 전체 목차로 연결"]}
+      ]
+    }
+  },
+  "project_completion": {
+    "foreword": true,
+    "book_1": "9/9",
+    "book_2": "12/12",
+    "book_3": "18/18",
+    "book_4": "9/9",
+    "chapters": "48/48",
+    "result": "COMPLETE"
+  },
+  "final_qa": {
+    "task": "FINAL-QA",
+    "completed": true,
+    "index_links": 49,
+    "chapter_links": 48,
+    "foreword_link": 1,
+    "index_completion_notice": "COMPLETE",
+    "metadata_and_canonical_pattern": "PASS",
+    "navigation_chain": "PASS",
+    "mobile_ui_structure": "PASS",
+    "title_normalization": "PASS",
+    "corrections": [
+      "목차의 순차 제작 중 문구를 전권 완성 안내로 교체",
+      "FOREWORD 카드의 준비 중 표시 제거",
+      "제3권 제13·14장 제목을 실제 장 제목과 통일",
+      "제4권 제2·4~8장 목차 제목을 실제 파일 제목과 통일",
+      "메타 설명을 4권 48장 완성판으로 갱신"
+    ],
+    "result": "PASS"
+  },
+  "editorial_follow_up": [],
+  "next_task": "DEPLOY-READY: review branch diff, merge and verify production URLs"
+}
