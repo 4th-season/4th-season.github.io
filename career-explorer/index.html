@@ -632,6 +632,51 @@
       ]}
     };
     Object.values(agriLife).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
+    const envJob=(name,summary,required,extra={})=>({name,summary,employers:extra.employers||["환경 관련 기업·연구소·공공기관에서 조사·분석·설계·관리","사업장·처리시설·현장에서 측정·운영·규정준수 업무 지원"],skills:extra.skills||["환경자료 측정·분석","법령·기준과 안전절차 이해","보고서 작성과 이해관계자 협업"],requiredCredentials:required,helpfulCredentials:extra.helpfulCredentials||["직무 관련 국가기술자격","GIS·통계·데이터 분석과 현장실습"],...extra});
+    const environmentCareer={
+      "measurement-analysis":{label:"환경측정·분석",desc:"대기·수질·토양·소음 등 환경 상태를 현장에서 측정하고 시료와 데이터를 분석하는 분야",majors:[
+        {name:"환경과학과",description:"대기·물·토양·생태계의 상호작용과 오염물질의 이동·영향을 과학적으로 조사하고 분석합니다.",universities:[{university:"고려대학교",department:"지구환경과학과",url:"https://ees.korea.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"강원대학교",department:"생명·환경융합학부 바이오환경화학전공",url:"https://cms.kangwon.ac.kr/dbe/index.do",linkType:"대학 공식 전공소개",verifiedAt:"2026-07-19"}],jobs:[
+          envJob("환경측정 분석원","대기·수질·토양 등의 시료를 채취하고 분석기기로 오염물질 농도와 환경 상태를 측정합니다.",["직무·측정대행업 등록기준별 기술인력 자격과 기관 채용조건 확인"],{credentialType:"업무별 법정 기술인력 요건 확인",sourceUrl:"https://www.nier.go.kr/",sourceLabel:"국립환경과학원"}),
+          envJob("대기환경 기술자","대기오염 배출과 방지시설 자료를 측정·분석하고 개선·관리 업무를 지원합니다.",["모든 직무의 공통 면허는 아니며 법정 선임·기술인력 직무는 대기환경기사 등 자격요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://q-net.or.kr/crf005.do?id=crf00503&jmCd=1661",credentialSourceLabel:"Q-Net 대기환경기사"}),
+          envJob("환경데이터 분석가","환경측정·공간·통계자료를 정제하고 시각화해 변화와 위험요인을 해석합니다.",["법정 공통 면허 없음. 기관별 전공·통계·GIS·프로그래밍 조건 확인"],{credentialType:"법정 필수 면허 없음",skills:["통계·GIS·프로그래밍","환경지표 해석","자료 품질검사와 시각화"]})
+        ]},
+        {name:"환경측정·분석 관련 학과",description:"환경시료 채취, 기기분석, 정도관리와 대기·수질·토양 오염평가를 실험 중심으로 배웁니다.",universities:[{university:"충남도립대학교",department:"환경에너지학과",url:"https://www.cnsu.ac.kr/dept/environment/intro-major.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["환경측정 분석원","대기환경 기술자","환경데이터 분석가"]}
+      ]},
+      "water-air-treatment":{label:"수질·대기오염 방지",desc:"상하수도·폐수·대기오염 방지시설을 설계·운영하고 배출기준 충족을 관리하는 분야",majors:[
+        {name:"환경공학과",description:"수질·대기·폐기물·토양오염의 원리와 처리공정, 시설설계·운영 및 환경관리 기술을 배웁니다.",universities:[{university:"서울과학기술대학교",department:"환경공학과",url:"https://enviro.seoultech.ac.kr/about/intro",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"전북대학교",department:"환경공학과",url:"https://envi.jbnu.ac.kr/envi/7715/subview.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          envJob("수질환경 기술자","상하수도·폐수의 수질을 분석하고 처리공정과 방지시설의 설계·운영·개선을 지원합니다.",["모든 직무의 공통 면허는 아니며 법정 선임·기술인력 직무는 수질환경기사 등 요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/crf021.do?id=crf02101&scheType=03",credentialSourceLabel:"Q-Net 기사·산업기사 종목"}),
+          envJob("환경시설 운영원","정수·하수·폐수·대기 방지시설의 설비상태와 공정지표를 점검하고 운전기록을 관리합니다.",["시설·업종별 법정 교육·기술인력·교대근무와 안전조건 확인"],{credentialType:"시설별 자격·교육 확인",sourceUrl:"https://www.keco.or.kr/",sourceLabel:"한국환경공단"}),
+          envJob("환경설비 설계기술자","오염물질 처리목표와 현장조건에 맞춰 수처리·대기방지 설비와 공정을 설계합니다.",["법정 공통 면허는 없으며 설계범위별 기사·기술사·엔지니어링 기술인력 요건 확인"],{credentialType:"업무범위별 기술자격 확인"})
+        ]},
+        {name:"환경시스템·환경에너지공학과",description:"오염방지 공정과 환경설비, 에너지·자원 흐름을 시스템 관점에서 설계하고 운영하는 방법을 배웁니다.",universities:[{university:"세종대학교",department:"환경융합공학과",url:"https://www.sejong.ac.kr/kor/college/department-of-environment-energy-geoinformatics.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["수질환경 기술자","환경시설 운영원","환경설비 설계기술자"]}
+      ]},
+      "ecology-conservation":{label:"생태·자연환경 보전",desc:"생물다양성과 서식지·습지·하천·해양생태계를 조사하고 보전·복원하는 분야",majors:[
+        {name:"생태환경·생물환경 관련 학과",description:"생태계 구조와 기능, 생물다양성, 환경오염의 생물 영향과 자연환경 조사·보전을 배웁니다.",universities:[{university:"경북대학교",department:"생태환경 관련 학과",url:"https://knu.ac.kr/wbbs/wbbs/contents/index.action?menu_idx=38&menu_url=edu%2Fschool01",linkType:"대학 공식 단과대학·학과목록",verifiedAt:"2026-07-19"}],jobs:[
+          envJob("생태조사원","식생·동물·서식지와 생물다양성을 현장 조사하고 공간·관찰자료를 기록·분석합니다.",["조사사업·발주조건별 생물분류·자연생태복원 등 자격·경력 요건 확인"],{credentialType:"사업별 기술인력 요건 확인",sourceUrl:"https://www.nie.re.kr/",sourceLabel:"국립생태원"}),
+          envJob("생태복원 기술자","훼손된 하천·습지·산림·도시생태계의 복원계획을 만들고 시공·모니터링을 지원합니다.",["법정 공통 면허는 없으며 사업별 자연생태복원기사·조경·토목 기술인력 요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/crf021.do?id=crf02101&scheType=03",credentialSourceLabel:"Q-Net 자연생태복원기사 종목"}),
+          envJob("환경영향평가 실무자","개발사업이 대기·수질·생태·생활환경에 미칠 영향을 조사·예측하고 저감방안을 문서화합니다.",["평가대행·분야별 기술인력 기준과 회사별 학위·기사·경력 조건 확인"],{credentialType:"법정 기술인력 기준 확인",sourceUrl:"https://www.eiass.go.kr/",sourceLabel:"환경영향평가정보지원시스템"})
+        ]},
+        {name:"해양환경공학과",description:"해양의 물리·화학·생물·지질 환경과 오염 조사, 해양생태계 보전 및 자료 분석·예측을 배웁니다.",universities:[{university:"경상국립대학교",department:"해양환경공학과",url:"https://www.gnu.ac.kr/marenv/cm/cntnts/cntntsView.do?cntntsId=2661&mi=4539",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["생태조사원","생태복원 기술자","환경영향평가 실무자"]}
+      ]},
+      "climate-carbon":{label:"기후·탄소중립",desc:"기후자료와 온실가스 배출을 분석하고 감축·적응·에너지전환 계획을 수립하는 분야",majors:[
+        {name:"대기과학과",description:"대기의 물리·화학과 기상·기후시스템, 관측자료와 수치모델을 통해 날씨와 기후변화를 연구합니다.",universities:[{university:"연세대학교",department:"대기과학과",url:"https://atmos.yonsei.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          envJob("기후변화 연구원","관측·모델·통계자료로 기후변화 원인과 전망, 지역·산업별 영향을 연구합니다.",["연구직은 대기·지구·환경·통계 관련 석·박사 학위와 모델링 경험을 요구할 수 있음"],{credentialType:"직무별 학위·연구경력",sourceUrl:"https://www.climate.go.kr/",sourceLabel:"기후정보포털"}),
+          envJob("온실가스 관리 실무자","조직·사업장의 배출량을 산정·검증자료로 정리하고 감축목표와 이행실적을 관리합니다.",["법정 공통 면허 없음. 검증·법정 선임 등 특정 역할은 온실가스관리기사와 별도 요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/crf021.do?id=crf02101&scheType=03",credentialSourceLabel:"Q-Net 온실가스관리기사 종목"}),
+          envJob("기후적응·탄소중립 정책기획자","기후위험과 배출자료를 바탕으로 공공·기업의 적응·감축 사업과 정책을 기획·평가합니다.",["법정 필수 면허는 없으며 정책·통계·환경법과 프로젝트 경험 확인"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.gihoo.or.kr/",sourceLabel:"국가기후위기적응정보포털"})
+        ]},
+        {name:"기후·에너지 관련 학과",description:"기후변화, 탄소배출, 에너지시스템과 재생에너지·전환정책을 과학·공학·정책 관점에서 배웁니다.",universities:[{university:"충남도립대학교",department:"환경에너지학과",url:"https://www.cnsu.ac.kr/dept/environment/intro-major.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["기후변화 연구원","온실가스 관리 실무자","기후적응·탄소중립 정책기획자"]}
+      ]},
+      "resource-circulation":{label:"자원순환·폐기물",desc:"폐기물 발생을 줄이고 수거·선별·처리·재활용과 순환경제 체계를 설계·운영하는 분야",majors:[
+        {name:"자원순환·폐기물 관련 학과",description:"폐기물의 물리·화학·생물학적 처리, 재활용·자원화 공정과 순환경제·환경안전을 배웁니다.",universities:[{university:"전북대학교",department:"환경에너지융합학과·자원순환 교과",url:"https://grcc.jbnu.ac.kr/grcc/23446/subview.do",linkType:"대학 공식 교육과정",verifiedAt:"2026-07-19"}],jobs:[
+          envJob("폐기물처리 기술자","폐기물의 성상과 발생량을 분석하고 수집·처리·재활용 공정과 시설 운영을 관리합니다.",["모든 직무의 공통 면허는 아니며 법정 기술인력·선임 직무는 폐기물처리기사 등 요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1950",credentialSourceLabel:"Q-Net 폐기물처리기사"}),
+          envJob("재활용 공정관리원","폐자원의 선별·세척·가공·품질과 설비·안전·생산기록을 관리합니다.",["업종·시설별 허가·기술인력·안전교육 및 회사 채용조건 확인"],{credentialType:"시설별 조건 확인",sourceUrl:"https://www.recycling-info.or.kr/",sourceLabel:"자원순환정보시스템"}),
+          envJob("순환경제 기획자","제품과 사업의 자원사용·폐기 흐름을 분석하고 재사용·재제조·재활용 사업과 제도를 기획합니다.",["법정 필수 면허 없음. 환경정책·산업분석·LCA·사업기획 역량과 채용조건 확인"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.keco.or.kr/",sourceLabel:"한국환경공단"})
+        ]},
+        {name:"환경정책·지속가능경영 관련 학과",description:"환경법·정책·경제, 지속가능성·ESG와 자원순환 제도를 분석하고 공공·기업의 전환전략을 배웁니다.",universities:[{university:"세종대학교",department:"기후환경·환경융합 관련 교육과정",url:"https://dept.sejong.ac.kr/earthdpt/intro/department-introduction.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["폐기물처리 기술자","재활용 공정관리원","순환경제 기획자"]}
+      ]}
+    };
+    Object.values(environmentCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -1072,6 +1117,7 @@
     careerCatalog["finance-management"]={id:"finance-management",label:"금융·경영",description:"조직과 자산을 관리하고 회계·금융·인사·전략·사업운영을 담당하는 분야",status:"active",fields:financeManagement};
     careerCatalog["leisure-tourism"]={id:"leisure-tourism",label:"여가·관광",description:"여행·숙박·여객·행사·레저와 지역관광 서비스를 기획하고 운영하는 분야",status:"active",fields:leisureTourism};
     careerCatalog["agri-life"]={id:"agri-life",label:"농생명",description:"작물·축산·수산·산림·반려동물 자원을 생산·연구·관리하는 분야",status:"active",fields:agriLife};
+    careerCatalog.environment={id:"environment",label:"환경",description:"환경을 측정·분석하고 오염을 줄이며 생태·기후·자원순환을 관리하는 분야",status:"active",fields:environmentCareer};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
