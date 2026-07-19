@@ -2,18 +2,8 @@
   "project": "Social Contract Re:Read",
   "branch": "feat/social-contract-reread",
   "source": "G. D. H. Cole English public-domain edition",
-  "scope": "Book II, chapters 1-12",
   "audit_date": "2026-07-19",
-  "summary": {
-    "chapters_checked": 12,
-    "mapping_blocks": 41,
-    "empty_english_blocks": 0,
-    "empty_korean_blocks": 0,
-    "navigation_failures": 0,
-    "first_sentence_checks": 12,
-    "last_sentence_checks": 12,
-    "result": "PASS"
-  },
+  "overall_result": "PASS",
   "terminology_standard": {
     "general will": "일반의지",
     "Sovereign": "주권자",
@@ -25,195 +15,51 @@
     "legislator": "입법자",
     "law": "법"
   },
-  "chapters": [
-    {
-      "book": 2,
-      "chapter": 1,
-      "file": "book-02-chapter-01.html",
-      "mapping_blocks": 4,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
+  "books": {
+    "2": {
+      "scope": "chapters 1-12",
+      "chapters_checked": 12,
+      "mapping_blocks": 41,
+      "empty_english_blocks": 0,
+      "empty_korean_blocks": 0,
+      "navigation_failures": 0,
+      "first_sentence_checks": 12,
+      "last_sentence_checks": 12,
       "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
+      "notes": ["W02-D5-R 제목·용어·화면 라벨 정규화 완료"]
     },
-    {
-      "book": 2,
-      "chapter": 2,
-      "file": "book-02-chapter-02.html",
-      "mapping_blocks": 4,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
+    "3": {
+      "scope": "chapters 1-18",
+      "chapters_checked": 18,
+      "mapping_blocks": 73,
+      "empty_english_blocks": 0,
+      "empty_korean_blocks": 0,
+      "navigation_failures": 0,
+      "first_sentence_checks": 18,
+      "last_sentence_checks": 18,
       "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 3,
-      "file": "book-02-chapter-03.html",
-      "mapping_blocks": 4,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": []
-    },
-    {
-      "book": 2,
-      "chapter": 4,
-      "file": "book-02-chapter-04.html",
-      "mapping_blocks": 3,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 5,
-      "file": "book-02-chapter-05.html",
-      "mapping_blocks": 2,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 6,
-      "file": "book-02-chapter-06.html",
-      "mapping_blocks": 3,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 7,
-      "file": "book-02-chapter-07.html",
-      "mapping_blocks": 2,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 8,
-      "file": "book-02-chapter-08.html",
-      "mapping_blocks": 3,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 9,
-      "file": "book-02-chapter-09.html",
-      "mapping_blocks": 3,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "W02-D5-R 제목·용어·화면 라벨 정규화 완료"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 10,
-      "file": "book-02-chapter-10.html",
-      "mapping_blocks": 4,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "각주·번역자 주는 본문 대응 문단 수에서 제외됨"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 11,
-      "file": "book-02-chapter-11.html",
-      "mapping_blocks": 4,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "각주 2개는 관련 대응 블록의 source-note로 분리됨"
-      ]
-    },
-    {
-      "book": 2,
-      "chapter": 12,
-      "file": "book-02-chapter-12.html",
-      "mapping_blocks": 5,
-      "empty_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "terminology_checked": true,
-      "navigation_checked": true,
-      "result": "PASS",
-      "notes": [
-        "다음 링크는 book-03-chapter-01.html로 연결됨"
+      "chapters": [
+        {"chapter":1,"file":"book-03-chapter-01.html","mapping_blocks":5,"result":"PASS"},
+        {"chapter":2,"file":"book-03-chapter-02.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":3,"file":"book-03-chapter-03.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":4,"file":"book-03-chapter-04.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":5,"file":"book-03-chapter-05.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":6,"file":"book-03-chapter-06.html","mapping_blocks":5,"result":"PASS"},
+        {"chapter":7,"file":"book-03-chapter-07.html","mapping_blocks":3,"result":"PASS"},
+        {"chapter":8,"file":"book-03-chapter-08.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":9,"file":"book-03-chapter-09.html","mapping_blocks":3,"result":"PASS"},
+        {"chapter":10,"file":"book-03-chapter-10.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":11,"file":"book-03-chapter-11.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":12,"file":"book-03-chapter-12.html","mapping_blocks":3,"result":"PASS"},
+        {"chapter":13,"file":"book-03-chapter-13.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":14,"file":"book-03-chapter-14.html","mapping_blocks":3,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":15,"file":"book-03-chapter-15.html","mapping_blocks":7,"result":"PASS","notes":["원문 각주는 source-note로 분리"]},
+        {"chapter":16,"file":"book-03-chapter-16.html","mapping_blocks":3,"result":"PASS"},
+        {"chapter":17,"file":"book-03-chapter-17.html","mapping_blocks":4,"result":"PASS"},
+        {"chapter":18,"file":"book-03-chapter-18.html","mapping_blocks":5,"result":"PASS","notes":["다음 링크는 book-04-chapter-01.html","원문 각주는 source-note로 분리"]}
       ]
     }
-  ],
+  },
   "editorial_follow_up": [],
-  "normalization": {
-    "task": "W02-D5-R",
-    "completed": true,
-    "scope": [
-      "제1·2·5장 제목을 SOURCE_MANIFEST 기준으로 통일",
-      "제4~9장 화면 라벨을 한국어 자체 번역으로 통일",
-      "제6·8·9장 people 번역을 인민 기준으로 정합화",
-      "제8·9장 제목을 인민 표기로 통일"
-    ]
-  }
+  "next_task": "W04-D1: Book IV chapters 1-3"
 }
