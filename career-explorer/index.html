@@ -722,6 +722,51 @@
       ]}
     };
     Object.values(manufacturingCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
+    const logisticsJob=(name,summary,required,extra={})=>({name,summary,employers:extra.employers||["운송·물류·유통기업과 공공기관","항공·철도·항만·창고·유통·무역 현장과 운영부서"],skills:extra.skills||["안전·시간·화물정보 관리","운송·재고·주문 데이터 처리","고객·기사·협력사와의 정확한 소통"],requiredCredentials:required,helpfulCredentials:extra.helpfulCredentials||["물류·유통·무역 관련 자격과 현장실습","외국어·ERP·WMS·TMS·데이터 활용"],...extra});
+    const logisticsCareer={
+      "vehicle-operation":{label:"운송수단 운행",desc:"자동차·철도·선박 등 운송수단을 안전하게 운행해 사람과 화물을 이동시키는 분야",majors:[
+        {name:"철도운전·철도시스템 관련 학과",description:"철도법규·차량·신호·운전취급과 안전을 배우지만 학과 졸업만으로 철도차량 운전면허가 자동 부여되지는 않습니다.",licenseType:"면허 별도 취득",licensePath:"신체·적성검사와 지정 교육훈련 등 면허별 요건 충족 → 필기·기능시험 합격 → 철도차량 운전면허 취득 → 운영기관 채용·실무수습 및 구간인증 확인",licenseSource:"https://main.kotsa.or.kr/portal/contents.do?menuCode=02030201",universities:[{university:"우송대학교",department:"철도운전시스템학부 등 철도계열",url:"https://www.wsu.ac.kr/",linkType:"대학 공식 홈페이지 · 모집단위 확인",verifiedAt:"2026-07-19"},{university:"경일대학교",department:"철도학부",url:"https://www.kiu.ac.kr/HOME/railway/",linkType:"대학 공식 학부",verifiedAt:"2026-07-19"}],jobs:[
+          logisticsJob("철도차량 운전원","열차의 운행계획과 신호·속도·안전규정을 지키며 철도차량을 운전하고 이상상황에 대응합니다.",["운전할 차량 종류에 맞는 철도차량 운전면허, 신체·적성 기준, 운영기관 채용·실무수습 등 충족"],{credentialType:"법정 면허 필요",credentialSourceUrl:"https://main.kotsa.or.kr/portal/contents.do?menuCode=02030202",credentialSourceLabel:"한국교통안전공단 철도면허 법적근거"}),
+          logisticsJob("화물자동차 운전원","화물의 상차·고정·운송·인도와 운행·안전 기록을 관리하며 지정 장소로 배송합니다.",["차종에 맞는 자동차운전면허 필수. 사업용 화물운송은 화물운송종사 자격 등 법정요건 별도 확인"],{credentialType:"운전면허·사업용 자격 필요",credentialSourceUrl:"https://lic.kotsa.or.kr/",credentialSourceLabel:"한국교통안전공단 운수종사자 자격"}),
+          logisticsJob("항해사","선박의 항로·위치·기상·당직과 화물·승객의 안전운항 업무를 담당합니다.",["선박·직급·항행구역에 맞는 해기사 면허와 승무·교육·건강 요건 충족"],{credentialType:"법정 해기사 면허 필요",credentialSourceUrl:"https://lems.seaman.or.kr/",credentialSourceLabel:"한국해기사협회·해기사시험 안내"})
+        ]},
+        {name:"해양운송·항해학과",description:"항해학·선박운용·해사법규·해상안전과 승선실습을 배우며 해기사 면허 경로의 교육·승무요건을 확인해야 합니다.",universities:[{university:"한국해양대학교",department:"항해융합학부 등 해사계열",url:"https://www.kmou.ac.kr/",linkType:"대학 공식 홈페이지 · 모집단위 확인",verifiedAt:"2026-07-19"}],jobs:["철도차량 운전원","화물자동차 운전원","항해사"]}
+      ]},
+      "traffic-control":{label:"교통·운항 관제",desc:"항공기·철도·선박의 이동을 실시간으로 감시하고 안전한 순서·경로·간격을 조정하는 분야",majors:[
+        {name:"항공교통학과",description:"항공법규·관제·항행안전시설·항공기상과 공역 운영을 배우며 항공교통관제사 자격증명은 별도 시험·요건이 필요합니다.",licenseType:"자격증명 별도 취득",licensePath:"항공안전법상 응시·교육·경력 요건 확인 → 학과·실기시험 등 자격증명 절차 충족 → 항공교통관제사 자격증명 및 업무한정·채용조건 확인",licenseSource:"https://main.kotsa.or.kr/portal/contents.do?menuCode=02010200",universities:[{university:"한국항공대학교",department:"항공교통물류학부",url:"https://www.kau.ac.kr/",linkType:"대학 공식 홈페이지 · 학부 확인",verifiedAt:"2026-07-19"},{university:"한서대학교",department:"항공교통물류학과 등 항공계열",url:"https://www.hanseo.ac.kr/",linkType:"대학 공식 홈페이지 · 학과 확인",verifiedAt:"2026-07-19"}],jobs:[
+          logisticsJob("항공교통관제사","항공기의 위치와 비행정보를 파악해 이륙·착륙·항로의 순서와 간격을 안전하게 지시합니다.",["항공교통관제사 자격증명, 업무범위별 한정·신체기준과 채용기관 요건 충족"],{credentialType:"법정 자격증명 필요",credentialSourceUrl:"https://main.kotsa.or.kr/portal/contents.do?menuCode=02010200",credentialSourceLabel:"한국교통안전공단 항공종사자 시험"}),
+          logisticsJob("철도교통관제사","열차 운행상태와 선로·신호를 감시하고 운행순서 조정과 사고·장애 대응을 지휘합니다.",["철도 또는 도시철도 관제자격증명과 신체·적성·교육훈련 및 운영기관 채용요건 충족"],{credentialType:"법정 관제자격증명 필요",credentialSourceUrl:"https://main.kotsa.or.kr/portal/contents.do?menuCode=02030202",credentialSourceLabel:"한국교통안전공단 철도 관제자격"}),
+          logisticsJob("운항관리사","비행계획·기상·연료·항로·항공기 상태를 검토하고 운항의 안전성과 정시성을 지원합니다.",["항공안전법상 운항관리사 자격증명과 응시·교육·경력·채용 요건 확인"],{credentialType:"법정 자격증명 필요",credentialSourceUrl:"https://www.molit.go.kr/USR/policyData/m_34681/dtl.jsp?id=302",credentialSourceLabel:"국토교통부 항공종사자 자격정책"})
+        ]},
+        {name:"철도교통·관제 관련 학과",description:"철도운영·신호·관제·안전·운전취급을 배우지만 관제업무에는 별도의 철도·도시철도 관제자격증명이 필요합니다.",universities:[{university:"우송대학교",department:"철도경영·교통시스템 관련 학과",url:"https://www.wsu.ac.kr/",linkType:"대학 공식 홈페이지 · 학과 확인",verifiedAt:"2026-07-19"}],jobs:["항공교통관제사","철도교통관제사","운항관리사"]}
+      ]},
+      "warehouse-logistics":{label:"물류·창고·공급망",desc:"화물의 입고·보관·피킹·출고·배송과 재고·운송망을 계획하고 운영하는 분야",majors:[
+        {name:"물류학과",description:"운송·보관·하역·포장·재고·SCM과 물류정보시스템, 물류법규·의사결정을 배웁니다.",universities:[{university:"평택대학교",department:"국제물류학과",url:"https://www.ptu.ac.kr/www/603/subview.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"성결대학교",department:"글로벌물류학과",url:"https://ea.sungkyul.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          logisticsJob("물류관리원","운송·보관·하역·포장과 물류비·납기·협력사를 관리하고 물류 흐름을 개선합니다.",["법정 필수 면허는 없음. 물류관리사 국가전문자격은 채용·업무에 활용 가능"],{credentialType:"국가전문자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/site/CPL",credentialSourceLabel:"Q-Net 물류관리사"}),
+          logisticsJob("창고운영 관리자","입고·적치·피킹·포장·출고·반품과 인력·공간·장비·재고정확도를 관리합니다.",["법정 공통 면허 없음. 지게차 운전 등 장비작업은 해당 자격·교육과 안전요건 확인"],{credentialType:"업무·장비별 자격 확인"}),
+          logisticsJob("공급망 분석가","수요·재고·조달·생산·운송 데이터를 분석해 공급망 계획과 위험대응을 지원합니다.",["법정 필수 면허는 없으며 통계·SCM·ERP·데이터 도구와 업종 경험 확인"],{credentialType:"법정 필수 면허 없음",skills:["수요·재고 데이터 분석","SCM·ERP 프로세스 이해","시나리오·위험 분석"]})
+        ]},
+        {name:"스마트물류·물류정보 관련 학과",description:"물류관리와 WMS·TMS·IoT·자동화·데이터 분석을 결합해 디지털 물류센터와 배송망 운영을 배웁니다.",universities:[{university:"경상국립대학교",department:"스마트유통물류학과",url:"https://smart.gnu.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:["물류관리원","창고운영 관리자","공급망 분석가"]}
+      ]},
+      "distribution-retail":{label:"유통·상품운영",desc:"상품의 매입·가격·재고·진열·판매채널과 점포·온라인몰 운영을 관리하는 분야",majors:[
+        {name:"유통물류학과",description:"유통구조·소매경영·상품기획·물류·전자상거래와 점포·채널 운영을 통합적으로 배웁니다.",universities:[{university:"동의대학교",department:"유통물류학과",url:"https://collabo.deu.ac.kr/dm/main.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"세종사이버대학교",department:"유통물류학과",url:"https://home.sjcu.ac.kr/ko/dept/distribution-logistics-intro.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          logisticsJob("상품기획자·MD","시장·판매데이터를 바탕으로 상품구성·매입·가격·프로모션·재고와 협력사를 관리합니다.",["법정 필수 면허 없음. 상품군·채널별 분석·협상·매입 경험과 채용조건 확인"],{credentialType:"법정 필수 면허 없음"}),
+          logisticsJob("유통매장 관리자","매장의 매출·재고·진열·인력·고객서비스와 안전·위생 기준을 관리합니다.",["업종·상품별 영업·위생·안전 요건 확인. 유통관리사 자격은 채용에 활용 가능"],{credentialType:"국가자격 활용",credentialSourceUrl:"https://license.korcham.net/",credentialSourceLabel:"대한상공회의소 유통관리사"}),
+          logisticsJob("이커머스 운영자","온라인몰의 상품등록·가격·주문·결제·배송·반품·프로모션과 판매지표를 관리합니다.",["법정 필수 면허 없음. 전자상거래·개인정보·표시광고 규정과 플랫폼 운영역량 확인"],{credentialType:"법정 필수 면허 없음"})
+        ]},
+        {name:"디지털유통·전자상거래 관련 학과",description:"온라인 플랫폼, 디지털마케팅, 상품·고객·주문데이터와 유통서비스 운영을 배웁니다.",universities:[{university:"세종사이버대학교",department:"유통물류학과 디지털유통서비스 과정",url:"https://home.sjcu.ac.kr/retail/index.do",linkType:"대학 공식 학과·과정",verifiedAt:"2026-07-19"}],jobs:["상품기획자·MD","유통매장 관리자","이커머스 운영자"]}
+      ]},
+      "trade-global":{label:"무역·국제물류",desc:"수출입 계약·통관·결제와 해상·항공·복합운송을 연결해 국제화물의 흐름을 관리하는 분야",majors:[
+        {name:"국제통상·무역학과",description:"국제경제·무역계약·결제·통관·무역법규와 해외시장·비즈니스 커뮤니케이션을 배웁니다.",universities:[{university:"동명대학교",department:"국제통상물류학과",url:"https://www.tu.ac.kr/gb/index.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"서울사이버대학교",department:"글로벌무역물류학과",url:"https://www.iscu.ac.kr/03_aboutschool/12_01_overview.asp",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          logisticsJob("무역사무원","수출입 계약·서류·결제·보험·선적일정과 해외 거래처 업무를 처리합니다.",["법정 필수 면허는 없으며 외국어·무역서류·결제·통관 실무와 회사별 조건 확인"],{credentialType:"법정 필수 면허 없음"}),
+          logisticsJob("국제물류 주선원","화주의 요청에 맞춰 선박·항공·육상운송과 창고·통관을 조합하고 운임·일정을 관리합니다.",["법정 공통 면허는 없으며 국제운송·무역영어·포워딩 시스템 경험과 회사별 조건 확인"],{credentialType:"법정 필수 면허 없음",sourceUrl:"https://www.molit.go.kr/",sourceLabel:"국토교통부"}),
+          logisticsJob("관세사","화주를 대리해 수출입 신고·관세·통관 자문과 불복·환급 관련 전문업무를 수행합니다.",["관세사 국가자격시험 합격 및 등록·교육 등 법정 개업·업무 요건 충족"],{credentialType:"국가전문자격 필요",credentialSourceUrl:"https://www.q-net.or.kr/site/customs",credentialSourceLabel:"Q-Net 관세사"})
+        ]},
+        {name:"국제물류학과",description:"해운·항공·복합운송, 항만·보관하역, 물류ICT와 무역실무·국제물류전략을 배웁니다.",universities:[{university:"평택대학교",department:"국제물류학과",url:"https://www.ptu.ac.kr/www/603/subview.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["무역사무원","국제물류 주선원","관세사"]}
+      ]}
+    };
+    Object.values(logisticsCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -1164,6 +1209,7 @@
     careerCatalog["agri-life"]={id:"agri-life",label:"농생명",description:"작물·축산·수산·산림·반려동물 자원을 생산·연구·관리하는 분야",status:"active",fields:agriLife};
     careerCatalog.environment={id:"environment",label:"환경",description:"환경을 측정·분석하고 오염을 줄이며 생태·기후·자원순환을 관리하는 분야",status:"active",fields:environmentCareer};
     careerCatalog.manufacturing={id:"manufacturing",label:"제조",description:"제품과 부품의 생산·공정·품질·설비·스마트제조를 운영하고 개선하는 분야",status:"active",fields:manufacturingCareer};
+    careerCatalog.logistics={id:"logistics",label:"물류·운송·유통",description:"사람과 상품의 운행·관제·보관·유통·국제이동을 계획하고 운영하는 분야",status:"active",fields:logisticsCareer};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
