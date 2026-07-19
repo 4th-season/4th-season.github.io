@@ -18,6 +18,14 @@ ATTRIBUTION_RE = re.compile(
     r'^(?:Christopher Pitt|Edward Dacre|Italian Proverb|Marriott|W\. K\. Marriott)\.?$',
     re.I,
 )
+DROP_EN_BODY_RE = re.compile(
+    r'^Alexander never did what he said, Cesare never said what he did\.?$',
+    re.I,
+)
+MANUAL_GROUP_SIZES = {
+    "chapter-17.html": [7, 2, 1, 2, 13, 10, 14, 3],
+    "chapter-18.html": [21, 6, 5, 4, 8, 4, 2],
+}
 
 
 def text_of(html: str) -> str:
@@ -56,17 +64,10 @@ def is_note_or_attribution(p: str) -> bool:
 
 
 def as_source_note(p: str) -> str:
-    # Remove any duplicated class attributes left by earlier rebuilds.
-    body = re.sub(r'^<p(?:\s[^>]*)?>', '<p class="source-note">', p, count=1)
-    return body
+    return re.sub(r'^<p(?:\s[^>]*)?>', '<p class="source-note">', p, count=1)
 
 
 def fold_notes(paragraphs: list[str]) -> tuple[list[str], int]:
-    """Fold footnotes and attribution-only lines into neighbouring body paragraphs.
-
-    A leading note is held until the first body paragraph and appended to it.
-    Later notes are appended to the immediately preceding body paragraph.
-    """
     folded: list[str] = []
     pending_leading: list[str] = []
     count = 0
@@ -79,34 +80,53 @@ def fold_notes(paragraphs: list[str]) -> tuple[list[str], int]:
                 pending_leading.append(note)
             count += 1
             continue
-
         if pending_leading:
             p += ''.join(pending_leading)
             pending_leading.clear()
         folded.append(p)
-
     if pending_leading and folded:
         folded[-1] += ''.join(pending_leading)
     return folded, count
+
+
+def drop_editorial_body(paragraphs: list[str]) -> tuple[list[str], list[str]]:
+    kept: list[str] = []
+    removed: list[str] = []
+    for p in paragraphs:
+        if DROP_EN_BODY_RE.fullmatch(text_of(p)):
+            removed.append(text_of(p))
+            continue
+        kept.append(p)
+    return kept, removed
+
+
+def manual_partition(ko_ps: list[str], sizes: list[int], en_count: int) -> list[list[str]]:
+    if len(sizes) != en_count:
+        raise ValueError(f"manual size count {len(sizes)} != English paragraph count {en_count}")
+    if sum(sizes) != len(ko_ps):
+        raise ValueError(f"manual size total {sum(sizes)} != Korean paragraph count {len(ko_ps)}")
+    groups: list[list[str]] = []
+    start = 0
+    for size in sizes:
+        groups.append(ko_ps[start:start + size])
+        start += size
+    return groups
 
 
 def partition_ko(ko_ps: list[str], en_ps: list[str]) -> tuple[list[list[str]], float]:
     k, m = len(ko_ps), len(en_ps)
     if k < m or m == 0:
         raise ValueError("not enough Korean paragraphs")
-
     ko_len = [visible_len(p) for p in ko_ps]
     en_len = [visible_len(p) for p in en_ps]
     prefix = [0]
     for n in ko_len:
         prefix.append(prefix[-1] + n)
     ratio = prefix[-1] / max(1, sum(en_len))
-
     inf = float('inf')
     dp = [[inf] * (k + 1) for _ in range(m + 1)]
     prev = [[-1] * (k + 1) for _ in range(m + 1)]
     dp[0][0] = 0.0
-
     for i in range(1, m + 1):
         min_used = i
         max_used = k - (m - i)
@@ -123,10 +143,8 @@ def partition_ko(ko_ps: list[str], en_ps: list[str]) -> tuple[list[list[str]], f
                 if candidate < dp[i][used]:
                     dp[i][used] = candidate
                     prev[i][used] = start
-
     if dp[m][k] == inf:
         raise ValueError("partition failed")
-
     cuts = []
     used = k
     for i in range(m, 0, -1):
@@ -160,7 +178,6 @@ def process(path: Path) -> dict:
     pairs = PAIR_RE.findall(html)
     if not pairs:
         return {"file": str(path.relative_to(ROOT)), "status": "no-pairs"}
-
     ko_ps, en_ps = [], []
     for pair in pairs:
         km = KO_RE.search(pair)
@@ -169,14 +186,12 @@ def process(path: Path) -> dict:
             ko_ps.extend(P_RE.findall(km.group(1)))
         if em:
             en_ps.extend(P_RE.findall(em.group(1)))
-
     removed = []
     while en_ps and is_heading_artifact(en_ps[0]):
         removed.append(text_of(en_ps.pop(0)))
-
     en_ps, en_notes = fold_notes(en_ps)
     ko_ps, ko_notes = fold_notes(ko_ps)
-
+    en_ps, removed_editorial = drop_editorial_body(en_ps)
     result = {
         "file": str(path.relative_to(ROOT)),
         "ko_source_paragraphs": len(ko_ps),
@@ -184,25 +199,29 @@ def process(path: Path) -> dict:
         "folded_en_notes": en_notes,
         "folded_ko_notes": ko_notes,
         "removed_heading_artifacts": removed,
+        "removed_editorial_body": removed_editorial,
     }
-
     try:
-        groups, cost = partition_ko(ko_ps, en_ps)
+        if path.name in MANUAL_GROUP_SIZES:
+            groups = manual_partition(ko_ps, MANUAL_GROUP_SIZES[path.name], len(en_ps))
+            cost = 0.0
+            mapping_method = "manual-semantic-boundaries"
+        else:
+            groups, cost = partition_ko(ko_ps, en_ps)
+            mapping_method = "length-partition"
     except ValueError as exc:
         result.update(status="failed", error=str(exc))
         return result
-
     rebuilt = '\n'.join(make_pair(i + 1, group, en) for i, (group, en) in enumerate(zip(groups, en_ps)))
     start = html.find(pairs[0])
     end = html.rfind(pairs[-1]) + len(pairs[-1])
     new_html = html[:start] + rebuilt + html[end:]
     new_html = re.sub(
-        r'영문 원문·한국어 전문번역(?: 문단 대응판| 대응판)? v1\.[0-9.]+',
-        '영문 원문·한국어 전문번역 문단 대응 교정판 v1.4.1',
+        r'영문 원문·한국어 전문번역(?: 문단 대응판| 대응판| 문단 대응 교정판)? v1\.[0-9.]+',
+        '영문 원문·한국어 전문번역 문단 대응 교정판 v1.4.2',
         new_html,
     )
     path.write_text(new_html, encoding="utf-8")
-
     anchors = [
         {
             "pair": i + 1,
@@ -218,7 +237,8 @@ def process(path: Path) -> dict:
         pairs=len(en_ps),
         ko_group_sizes=[len(group) for group in groups],
         alignment_cost=round(cost, 4),
-        review_priority="high" if cost > 0.35 else "medium" if cost > 0.18 else "low",
+        review_priority="manual" if mapping_method.startswith("manual") else "high" if cost > 0.35 else "medium" if cost > 0.18 else "low",
+        mapping_method=mapping_method,
         anchors=anchors,
     )
     return result
