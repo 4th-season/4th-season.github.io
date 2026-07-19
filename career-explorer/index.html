@@ -767,6 +767,51 @@
       ]}
     };
     Object.values(logisticsCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
+
+    const builtJob=(name,summary,required,extra={})=>({name,summary,employers:extra.employers||["건축·도시·토목 설계사무소와 건설·엔지니어링기업","공공기관·지자체·공기업의 시설·도시·공간정보 부서"],skills:extra.skills||["도면·법규·기술기준 해석","CAD·BIM·GIS·공정 데이터 활용","현장·발주처·전문분야 간 협업"],requiredCredentials:required,helpfulCredentials:extra.helpfulCredentials||["관련 기사·산업기사 국가기술자격","설계 프로젝트·현장실습·디지털 도구 포트폴리오"],...extra});
+    const builtEnvironmentCareer={
+      "architecture-design":{label:"건축설계·BIM",desc:"건축물의 공간·형태·기능·법규·구조·설비를 통합해 계획하고 설계하는 분야",majors:[
+        {name:"건축학과(5년제)",description:"건축설계 스튜디오, 역사·이론, 기술·법규와 실무를 배우는 전문학위 과정입니다. 건축사를 목표로 한다면 한국건축학교육인증원 인증 여부와 실무수련 경로를 확인해야 합니다.",licenseType:"건축사 경로 연결",licensePath:"인증 건축학 전문학위 등 법정 학력요건 확인 → 건축사사무소 등에서 실무수련 완료 → 건축사 자격시험 합격 → 자격등록 후 법정 건축사업무 수행",licenseSource:"https://exam.kira.or.kr/",universities:[{university:"세종대학교",department:"건축학과",url:"https://www.sejong.ac.kr/kor/college/architecture.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"한국교통대학교",department:"건축학과(5년제)",url:"https://www.ut.ac.kr/archi.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"},{university:"국민대학교",department:"건축대학",url:"https://archi.kookmin.ac.kr/",linkType:"대학 공식 단과대학",verifiedAt:"2026-07-19"}],jobs:[
+          builtJob("건축사","건축주의 요구와 법규·대지조건을 종합해 건축물을 설계하고 법정 설계·감리 업무를 수행합니다.",["건축사 자격시험 합격, 자격등록과 실무교육 등 건축사법상 요건 충족"],{credentialType:"국가전문자격·등록 필요",credentialSourceUrl:"https://exam.kira.or.kr/",credentialSourceLabel:"대한건축사협회 자격시험시스템"}),
+          builtJob("건축설계 실무자","건축사사무소에서 대지·법규 조사, 평면·입면·상세도와 설계문서 작성, 협의 업무를 지원합니다.",["건축사 명칭·법정 업무는 자격자에게 한정. 일반 실무자는 회사별 학위·설계도구·포트폴리오 조건 확인"],{credentialType:"건축사 법정업무와 구분"}),
+          builtJob("BIM 모델러·코디네이터","건축·구조·설비의 3차원 모델과 속성정보를 작성하고 분야 간 간섭·변경·도면을 조정합니다.",["법정 공통 면허 없음. 회사별 BIM 도구·도면·협업 프로젝트 역량 확인"],{credentialType:"법정 필수 면허 없음",skills:["BIM 모델 작성과 정보관리","도면·구조·설비 기초 이해","간섭검토와 협업"]})
+        ]},
+        {name:"건축공학과",description:"건축구조·재료·시공·설비·환경과 공사관리를 공학적으로 배웁니다. 일반 건축공학 학위는 건축학 인증 전문학위와 동일하지 않으므로 건축사 응시경로를 별도로 확인해야 합니다.",universities:[{university:"한국기술교육대학교",department:"건축공학전공",url:"https://www.koreatech.ac.kr/menu.es?mid=b30104000000",linkType:"대학 공식 전공안내",verifiedAt:"2026-07-19"}],jobs:["건축사","건축설계 실무자","BIM 모델러·코디네이터"]}
+      ]},
+      "urban-landscape":{label:"도시·조경·교통계획",desc:"토지이용·주거·교통·공원·녹지와 도시공간의 장기 계획 및 설계를 다루는 분야",majors:[
+        {name:"도시공학과",description:"도시계획·토지이용·교통·주택·도시재생과 공간자료 분석을 통해 도시문제를 진단하고 계획합니다.",universities:[{university:"서울시립대학교",department:"도시공학과",url:"https://www.uos.ac.kr/urbansciences/urban/main.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:[
+          builtJob("도시계획가","인구·토지·주거·산업·환경 자료를 분석해 도시기본계획·개발·재생 계획을 수립하고 주민·기관과 협의합니다.",["법정 공통 면허 없음. 엔지니어링 기술인력·공공채용 등 업무별 도시계획기사·학위·경력 요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/",credentialSourceLabel:"Q-Net 도시계획기사 검색"}),
+          builtJob("조경설계가","공원·정원·광장·주거단지의 지형·식재·시설·동선을 계획하고 도면과 시방서를 작성합니다.",["법정 공통 면허 없음. 사업·기술인력 기준에서 조경기사·기술사 등 요건 확인"],{credentialType:"국가기술자격 활용"}),
+          builtJob("교통계획 기술자","교통량·통행·도로·대중교통 데이터를 분석해 교통체계·시설·신호·이동정책 개선안을 설계합니다.",["법정 공통 면허 없음. 교통기사 등은 채용·엔지니어링 기술인력 요건에 활용"],{credentialType:"국가기술자격 활용"})
+        ]},
+        {name:"조경학과",description:"조경계획·설계, 식재·생태, 공원·녹지와 경관·시공관리를 배웁니다.",universities:[{university:"서울시립대학교",department:"조경학과",url:"https://www.uos.ac.kr/urbansciences/landscape/main.do",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:["도시계획가","조경설계가","교통계획 기술자"]}
+      ]},
+      "civil-infrastructure":{label:"토목·기반시설 설계",desc:"도로·교량·터널·철도·항만·하천·상하수도 등 사회기반시설을 해석하고 설계하는 분야",majors:[
+        {name:"토목공학과",description:"구조·지반·수공·도로·측량·재료·시공을 바탕으로 사회기반시설의 설계·건설·유지관리를 배웁니다.",universities:[{university:"청주대학교",department:"토목공학과",url:"https://www.cju.ac.kr/skyd/contents.do?key=1609",linkType:"대학 공식 교과목소개",verifiedAt:"2026-07-19"},{university:"명지전문대학",department:"토목공학과",url:"https://civil.mjc.ac.kr/ibuilder.do?menu_idx=1041",linkType:"대학 공식 교육과정",verifiedAt:"2026-07-19"}],jobs:[
+          builtJob("토목설계 기술자","도로·교량·터널·철도·항만 등 시설의 하중·선형·재료·기준을 검토해 설계도서와 계산서를 작성합니다.",["법정 공통 면허 없음. 토목기사·기술사 등은 채용·엔지니어링 기술인력·책임업무 요건에 활용"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://www.q-net.or.kr/anc005.do?id=anc0050301&implPlanId=PL2013258004&seqNo=1",credentialSourceLabel:"Q-Net 토목기사 종목"}),
+          builtJob("구조공학 기술자","구조물의 하중·응력·변형·내진성능을 해석하고 안전한 구조형식과 부재를 설계합니다.",["업무 책임범위별 토목구조·건축구조 기술사와 엔지니어링 기술인력 요건 확인"],{credentialType:"업무범위별 기술자격 확인"}),
+          builtJob("수자원·하천 기술자","강우·유량·홍수·하천·댐·상하수도 자료를 분석해 물관리와 수공시설을 계획·설계합니다.",["법정 공통 면허 없음. 토목기사·수자원개발기술사 등은 업무·입찰·채용조건에 활용"],{credentialType:"국가기술자격 활용"})
+        ]},
+        {name:"건설환경·사회기반시스템공학과",description:"토목 기반시설과 환경·플랜트·스마트건설을 융합해 구조·지반·수자원·교통·시공 분야를 배웁니다.",universities:[{university:"중앙대학교",department:"사회기반시스템공학부 건설환경플랜트공학",url:"https://abeek.cau.ac.kr/cm/program01-2.jsp",linkType:"대학 공식 프로그램 안내",verifiedAt:"2026-07-19"}],jobs:["토목설계 기술자","구조공학 기술자","수자원·하천 기술자"]}
+      ]},
+      "survey-geospatial":{label:"측량·공간정보",desc:"지표·시설물의 위치와 형상을 측정하고 지도·GIS·원격탐사·공간빅데이터를 구축·분석하는 분야",majors:[
+        {name:"공간정보공학과",description:"측량·GPS·사진측량·원격탐사·GIS·공간데이터베이스와 공간분석·GeoAI를 배웁니다.",universities:[{university:"서울시립대학교",department:"공간정보공학과",url:"https://www.uos.ac.kr/urbansciences/geoinfo/introduct.do?identified=anonymous",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"},{university:"인하대학교",department:"공간정보공학과",url:"https://geoinfo.inha.ac.kr/geoinfo/2684/subview.do",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:[
+          builtJob("측량기술자","GNSS·토털스테이션·레벨·드론 등으로 위치·높이·경계를 측정하고 성과를 계산·도면화합니다.",["측량업·사업 기술인력 기준과 업무책임에 따라 측량및지형공간정보기사·산업기사 등 요건 확인"],{credentialType:"국가기술자격 활용",credentialSourceUrl:"https://c.q-net.or.kr/cbq/introduce/jmQualDetail.do?schJmCd=C330",credentialSourceLabel:"Q-Net 측량및지형공간정보산업기사"}),
+          builtJob("GIS 분석가","공간·행정·환경·교통 데이터를 결합해 분포·접근성·입지·변화를 분석하고 지도와 서비스를 만듭니다.",["법정 필수 면허 없음. GIS·데이터베이스·프로그래밍·공간분석 포트폴리오 확인"],{credentialType:"법정 필수 면허 없음"}),
+          builtJob("원격탐사·드론매핑 기술자","위성·항공·드론 영상을 처리해 지형·시설·환경 변화를 판독하고 2D·3D 공간정보를 구축합니다.",["드론 비행은 기체·업무에 따른 조종자증명·비행승인 등 항공법 요건, 측량업무는 별도 기술인력 기준 확인"],{credentialType:"비행·측량 업무별 자격 확인"})
+        ]},
+        {name:"드론공간정보 관련 학과",description:"드론 운용·항공측량·사진측량·GIS·매핑·3차원 모델링과 공간정보 응용을 배웁니다.",universities:[{university:"영산대학교",department:"드론공간정보공학과",url:"https://drone.ysu.ac.kr/drone/CMS/Contents/Contents.do?mCode=MN019",linkType:"대학 공식 학과소개",verifiedAt:"2026-07-19"}],jobs:["측량기술자","GIS 분석가","원격탐사·드론매핑 기술자"]}
+      ]},
+      "construction-management":{label:"시공·공정·안전관리",desc:"건설현장의 공정·원가·품질·자재·인력·안전을 종합 관리하고 설계대로 시공되도록 조정하는 분야",majors:[
+        {name:"건설관리·건축공학 관련 학과",description:"건축·토목 시공, 공정·원가·품질·계약·BIM과 건설사업관리 및 현장안전을 배웁니다.",universities:[{university:"한국기술교육대학교",department:"건축공학전공",url:"https://www.koreatech.ac.kr/menu.es?mid=b30104000000",linkType:"대학 공식 전공안내",verifiedAt:"2026-07-19"}],jobs:[
+          builtJob("건축·토목 시공관리자","설계도서와 공정계획에 따라 인력·자재·장비·협력업체·품질·공정을 조정하고 시공기록을 관리합니다.",["건설기술인 배치·현장 책임범위별 학력·경력·건축기사·토목기사 등 법정 기술등급 요건 확인"],{credentialType:"현장별 법정 기술인력 요건",credentialSourceUrl:"https://www.csi.go.kr/",credentialSourceLabel:"건설공사 안전관리 종합정보망"}),
+          builtJob("건설안전관리자","현장 위험성평가·안전교육·점검·사고예방과 법정 안전서류를 관리합니다.",["사업장 규모·공사종류에 따른 산업안전보건법상 안전관리자 선임자격 충족. 건설안전기사 등 인정자격 확인"],{credentialType:"법정 선임요건 적용 가능",credentialSourceUrl:"https://www.q-net.or.kr/",credentialSourceLabel:"Q-Net 건설안전기사 검색"}),
+          builtJob("건설원가·견적 담당자","도면·물량·단가·공법을 검토해 공사비를 산출하고 예산·입찰·변경원가를 관리합니다.",["법정 공통 면허 없음. 회사별 건축·토목 지식, 물량산출·원가·계약 경험 확인"],{credentialType:"법정 필수 면허 없음"})
+        ]},
+        {name:"안전공학·건설안전 관련 학과",description:"산업안전·건설재해·위험성평가·안전법규와 구조·시공 기초를 배워 현장 안전관리 분야로 연결됩니다.",universities:[{university:"서울과학기술대학교",department:"안전공학과",url:"https://safety.seoultech.ac.kr/",linkType:"대학 공식 학과",verifiedAt:"2026-07-19"}],jobs:["건축·토목 시공관리자","건설안전관리자","건설원가·견적 담당자"]}
+      ]}
+    };
+    Object.values(builtEnvironmentCareer).forEach(f=>{const d=new Map();f.majors.forEach(m=>(m.jobs||[]).forEach(j=>{if(typeof j==="object")d.set(j.name,j);}));f.majors.forEach(m=>m.jobs=(m.jobs||[]).map(j=>typeof j==="string"?(d.get(j)||j):j));f.jobs=[...d.values()];});
     const careerCatalog = Object.fromEntries(interests.map(([id,label,description])=>[id,{id,label,description,status:"planned",fields:{}}]));
     careerCatalog.healthcare={id:"healthcare",label:"보건의료",description:"건강 보호와 치료·간호·의료지원을 담당하는 분야",status:"active",fields:healthcare};
     careerCatalog["ai-software"]={id:"ai-software",label:"AI·소프트웨어",description:"컴퓨터 시스템과 데이터를 활용해 프로그램·지능형 서비스를 개발하고 운영하는 분야",status:"active",fields:aiSoftware};
@@ -1210,6 +1255,7 @@
     careerCatalog.environment={id:"environment",label:"환경",description:"환경을 측정·분석하고 오염을 줄이며 생태·기후·자원순환을 관리하는 분야",status:"active",fields:environmentCareer};
     careerCatalog.manufacturing={id:"manufacturing",label:"제조",description:"제품과 부품의 생산·공정·품질·설비·스마트제조를 운영하고 개선하는 분야",status:"active",fields:manufacturingCareer};
     careerCatalog.logistics={id:"logistics",label:"물류·운송·유통",description:"사람과 상품의 운행·관제·보관·유통·국제이동을 계획하고 운영하는 분야",status:"active",fields:logisticsCareer};
+    careerCatalog["architecture-civil"]={id:"architecture-civil",label:"설계·건축·토목",description:"건축·도시·기반시설·공간정보를 설계하고 시공·안전을 관리하는 분야",status:"active",fields:builtEnvironmentCareer};
     const conditionOptions=[{value:"interest",label:"관심 있음"},{value:"unknown",label:"잘 모르겠음"},{value:"concern",label:"부담스러움"}];
 
     const params = new URLSearchParams(location.search);
