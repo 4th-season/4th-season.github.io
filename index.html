@@ -3,161 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="4번째 계절은 더 깊고 성숙한 삶을 향해 문해력과 지식을 쌓고, 세상을 읽고, 삶의 다음을 준비하는 공간입니다.">
+  <meta name="description" content="4번째 계절은 읽고 이해하고 다음을 준비하는 여섯 개의 입구입니다.">
   <link rel="canonical" href="https://4th-season.com/">
-  <title>4th Season | 4번째 계절</title>
+  <title>4번째 계절 | 4th Season</title>
   <style>
-    :root{
-      --ink:#18202a;--paper:#f5f1ea;--paper-deep:#ece5dc;--night:#111923;
-      --purple:#81689f;--purple-light:#d8c6e9;--line:#d5ccc2;--white:#fff;
-      --shadow:0 18px 40px rgba(17,25,35,.13)
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif KR","Malgun Gothic",serif;word-break:keep-all}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1200px,calc(100% - 44px));margin:auto}
-    .skip{position:absolute;left:-9999px}.skip:focus{left:14px;top:14px;z-index:99;padding:10px 14px;background:#fff;color:#111}
-
-    .hero{min-height:800px;position:relative;display:flex;align-items:center;overflow:hidden;color:#fff;background:#17212c}
-    .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,12,18,.78) 0%,rgba(7,12,18,.51) 52%,rgba(7,12,18,.37) 100%)}
-    .brandbar{position:absolute;z-index:3;top:0;left:0;right:0}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;font-family:Arial,sans-serif}
-    .brand{font-size:.98rem;font-weight:800;letter-spacing:.05em}
-    .nav-link{font-size:.72rem;font-weight:800;letter-spacing:.12em;border-bottom:1px solid rgba(255,255,255,.72);padding-bottom:7px}
-    .hero-inner{position:relative;z-index:2;width:100%;padding:108px 0 52px}
-    .welcome{font-size:.92rem;font-weight:700;color:#eee5f5;letter-spacing:-.02em}
-    .hero h1{max-width:720px;margin:10px 0 12px;font-size:clamp(2.8rem,5.4vw,4.8rem);line-height:1.08;letter-spacing:-.075em}
-    .season-meaning{max-width:790px;margin:0;color:#f4eee8;font-size:clamp(1rem,1.7vw,1.16rem);line-height:1.78}
-    .hero-intro{max-width:720px;margin:12px 0 0;color:#ddd8d3;font-size:.93rem;line-height:1.68}
-    .choice-label{margin:27px 0 11px;font:800 .72rem Arial,sans-serif;letter-spacing:.15em;color:#e4d6f0}
-    .hero-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1000px}
-    .hero-choice{position:relative;min-height:132px;padding:21px 54px 19px 21px;border:1px solid rgba(255,255,255,.34);background:rgba(15,22,31,.62);backdrop-filter:blur(8px);transition:.22s ease}
-    .hero-choice:hover,.hero-choice:focus-visible{transform:translateY(-4px);background:rgba(255,255,255,.94);color:#17212b;box-shadow:0 16px 34px rgba(0,0,0,.2);outline:none}
-    .hero-choice small{display:block;margin-bottom:8px;font:800 .66rem Arial,sans-serif;letter-spacing:.13em;color:#d9c4ed}
-    .hero-choice:hover small,.hero-choice:focus-visible small{color:var(--purple)}
-    .hero-choice strong{display:block;font-size:clamp(1.22rem,2vw,1.55rem);letter-spacing:-.045em}
-    .hero-choice span{display:block;margin-top:7px;color:#e6e2de;font-size:.83rem;line-height:1.5}
-    .hero-choice:hover span,.hero-choice:focus-visible span{color:#59616a}
-    .hero-choice b{position:absolute;right:20px;bottom:20px;font:800 1.1rem Arial,sans-serif}
-
-    .intro{padding:72px 0;background:var(--night);color:#f7f2eb}
-    .intro-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:50px;align-items:end}
-    .eyebrow{font:800 .7rem Arial,sans-serif;letter-spacing:.17em;color:#cdb4e3}
-    .intro h2,.section-head h2{margin:12px 0 0;font-size:clamp(2rem,4vw,3.2rem);line-height:1.22;letter-spacing:-.065em}
-    .intro p{margin:0;color:#d6d5d2;line-height:1.85}
-
-    .route{padding:92px 0;border-bottom:1px solid var(--line);scroll-margin-top:20px}
-    .route:nth-of-type(even){background:#f0ebe4}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:34px}
-    .section-head p{max-width:430px;margin:0;color:#62676c;line-height:1.75}
-    .section-head .number{display:block;margin-bottom:8px;font:800 .68rem Arial,sans-serif;letter-spacing:.15em;color:var(--purple)}
-    .cards{display:grid;gap:18px}
-    .cards.three{grid-template-columns:repeat(3,1fr)}
-    .cards.six{grid-template-columns:repeat(3,1fr)}
-    .cards.two{grid-template-columns:repeat(2,1fr)}
-    .card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid var(--line);transition:transform .22s,box-shadow .22s}
-    .card:hover,.card:focus-visible{transform:translateY(-5px);box-shadow:var(--shadow);outline:none}
-    .card img{display:block;width:100%;aspect-ratio:1.65/1;object-fit:cover}
-    .card-body{display:flex;flex:1;flex-direction:column;padding:21px 20px 20px}
-    .tag{font:800 .66rem Arial,sans-serif;letter-spacing:.14em;color:var(--purple)}
-    .card h3{margin:8px 0 9px;font-size:1.28rem;line-height:1.3;letter-spacing:-.05em}
-    .card p{margin:0;color:#565d63;font-size:.9rem;line-height:1.65}
-    .go{margin-top:auto;padding-top:17px;font:800 .72rem Arial,sans-serif;letter-spacing:.07em;color:#26323d}
-
-    .guide{padding:72px 0;background:var(--paper-deep)}
-    .guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .guide-card{padding:31px;background:#fff;border-top:3px solid var(--purple)}
-    .guide-card h3{margin:0 0 9px;font-size:1.4rem;letter-spacing:-.05em}
-    .guide-card p{margin:0;color:#5c6268;line-height:1.7}
-    .guide-card a{display:inline-block;margin-top:19px;border-bottom:1px solid #26313b;padding-bottom:5px;font:800 .73rem Arial,sans-serif;letter-spacing:.08em}
-    footer{padding:36px 0;background:#101720;color:#aeb4b8;text-align:center;font:400 .72rem Arial,sans-serif;letter-spacing:.05em}
-
-    @media(max-width:900px){
-      .hero{min-height:900px}.hero-choices{grid-template-columns:1fr}.hero-choice{min-height:96px;padding:17px 48px 16px 18px}
-      .choice-label{margin-top:24px}.intro-grid{grid-template-columns:1fr;gap:20px}.section-head{display:block}.section-head p{margin-top:14px}
-      .cards.three,.cards.six{grid-template-columns:repeat(2,1fr)}
-    }
-    @media(max-width:620px){
-      .wrap{width:min(100% - 28px,1200px)}.nav{height:62px}.nav-link{display:none}
-      .hero{min-height:auto;align-items:flex-start}.hero-inner{padding:88px 0 34px}.welcome{font-size:.82rem}.hero h1{font-size:clamp(2.35rem,12vw,3.25rem);margin:8px 0 9px}.season-meaning{font-size:.92rem;line-height:1.62}.hero-intro{font-size:.82rem;line-height:1.55}
-      .choice-label{margin:18px 0 8px}.hero-choices{gap:8px}.hero-choice{min-height:84px;padding:14px 43px 13px 16px}.hero-choice small{margin-bottom:4px}.hero-choice strong{font-size:1.1rem}.hero-choice span{margin-top:4px;font-size:.74rem}.hero-choice b{right:15px;bottom:15px}
-      .intro,.route{padding:60px 0}.cards.three,.cards.six,.cards.two,.guide-grid{grid-template-columns:1fr}.card img{aspect-ratio:1.9/1}.guide{padding:55px 0}
-    }
+    :root{--ink:#17212b;--paper:#f5f1ea;--night:#111923;--purple:#84669f;--line:#d8d0c7;--white:#fff}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif KR","Malgun Gothic",serif;word-break:keep-all}a{color:inherit;text-decoration:none}.wrap{width:min(1200px,calc(100% - 44px));margin:auto}.hero{min-height:390px;padding:28px 0 72px;color:#fff;background:linear-gradient(115deg,rgba(10,17,25,.87),rgba(18,29,41,.57)),url("https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-have.png") center/cover}.nav{display:flex;justify-content:space-between;align-items:center;font:800 .8rem Arial,sans-serif;letter-spacing:.1em}.brand{font-size:.98rem}.nav a:last-child{border-bottom:1px solid rgba(255,255,255,.7);padding-bottom:6px}.hero-copy{margin-top:87px;max-width:770px}.eyebrow{font:800 .68rem Arial,sans-serif;letter-spacing:.17em;color:#e0c9f1}.hero h1{margin:10px 0;font-size:clamp(2.5rem,5.2vw,4.7rem);line-height:1.08;letter-spacing:-.075em}.hero p{max-width:620px;margin:0;color:#ece7e1;font-size:1.02rem;line-height:1.75}.hub{padding:70px 0 88px}.head{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:30px}.head h2{margin:9px 0 0;font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.2;letter-spacing:-.065em}.head p{max-width:380px;margin:0;color:#61666b;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{min-height:370px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:25px;color:#fff;background:#293342;isolation:isolate}.card:before{content:"";position:absolute;inset:0;background:var(--image) center/cover;z-index:-2;transition:transform .35s}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,14,20,.08),rgba(9,14,20,.84));z-index:-1}.card:hover:before{transform:scale(1.06)}.card small{font:800 .66rem Arial,sans-serif;letter-spacing:.16em;color:#e4caef}.card h3{margin:9px 0 7px;font-size:1.64rem;letter-spacing:-.06em}.card p{margin:0;min-height:48px;color:#ece8e3;font-size:.88rem;line-height:1.6}.go{margin-top:18px;font:800 .72rem Arial,sans-serif;letter-spacing:.1em}.notice{padding:44px 0 48px;background:#eae3db}.notice p{margin:0;color:#4e565d;line-height:1.75}.notice strong{color:#1c2630}footer{padding:28px 0;background:#111923;color:#b9bec2;text-align:center;font:400 .7rem Arial,sans-serif;letter-spacing:.06em}@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.head{display:block}.head p{margin-top:15px}}@media(max-width:560px){.wrap{width:min(100% - 28px,1200px)}.hero{min-height:360px;padding-bottom:50px}.hero-copy{margin-top:74px}.nav a:last-child{display:none}.hub{padding:52px 0 62px}.grid{grid-template-columns:1fr}.card{min-height:300px}.head h2{font-size:2rem}}
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">본문으로 바로가기</a>
-
-  <section class="hero" id="top">
-    <img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-have.png" alt="계절의 경계에 놓인 산책길과 창가의 책">
-    <div class="brandbar"><div class="wrap nav"><a class="brand" href="#top">4th Season</a><a class="nav-link" href="#main">EXPLORE</a></div></div>
-    <div class="wrap hero-inner">
-      <div class="welcome">네 번째 계절에 오신 것을 환영합니다.</div>
-      <h1>4번째 계절</h1>
-      <p class="season-meaning">삶의 성숙 이후 소멸을 기다리는 계절이 아니라, 배움과 성찰을 통해 더 깊고 성숙한 삶을 향해 가는 계절을 뜻합니다.</p>
-      <p class="hero-intro">문해력과 지식을 쌓고, 세상을 읽고, 삶의 다음을 준비할 방향을 선택해 보세요.</p>
-      <div class="choice-label">바로 시작하기</div>
-      <div class="hero-choices" aria-label="관심 영역 선택">
-        <a class="hero-choice" href="#learn"><small>NOTE</small><strong>문해력·지식 쌓기</strong><span>문해력, 수능 국어, 고전과 배움의 자료</span><b>↓</b></a>
-        <a class="hero-choice" href="#world"><small>6 RE:LENZ</small><strong>세상 읽기</strong><span>사회와 철학, 관계와 경제를 여러 관점으로</span><b>↓</b></a>
-        <a class="hero-choice" href="#life"><small>HAVE+</small><strong>삶을 계획하기</strong><span>진로, 평생학습과 삶의 다음 단계를 위한 자료</span><b>↓</b></a>
-      </div>
-    </div>
-  </section>
-
-  <main id="main">
-    <section class="intro">
-      <div class="wrap intro-grid">
-        <div><div class="eyebrow">EXPLORE &amp; DISCOVER</div><h2>필요한 자료를 찾고,<br>관심의 범위를 넓혀 보세요.</h2></div>
-        <p>한 가지 주제를 읽다가도 관련된 개념과 다른 관점, 다음에 필요한 자료로 자연스럽게 이어질 수 있도록 구성했습니다.</p>
-      </div>
-    </section>
-
-    <section class="route" id="learn">
-      <div class="wrap">
-        <div class="section-head"><div><span class="number">01 · LEARN</span><h2>문해력·지식 쌓기</h2></div><p>읽고 이해하는 힘을 기르고, 시험과 공부에 활용할 자료부터 오래 읽을 고전까지 찾아봅니다.</p></div>
-        <div class="cards three">
-          <a class="card" href="https://gugeoro.tistory.com/265" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-note.png" alt="연필과 노트가 놓인 도서관 책상"><div class="card-body"><span class="tag">NOTE</span><h3>디지털 국어도서관</h3><p>문해력과 어휘, 문법, 읽기와 쓰기의 기초를 차근차근 살핍니다.</p><span class="go">자료 둘러보기 →</span></div></a>
-          <a class="card" href="/csat/"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-note.png" alt="수능 국어 문제를 살펴보는 책상"><div class="card-body"><span class="tag">CSAT ARCHIVE</span><h3>수능 국어 기출</h3><p>기출문제를 연도별·영역별로 찾고 문제와 정답, 문항별 해설을 확인합니다.</p><span class="go">기출 아카이브 열기 →</span></div></a>
-          <a class="card" href="https://pencilgon.tistory.com/231" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-read.png" alt="창가의 열린 책"><div class="card-body"><span class="tag">RE:READ</span><h3>고전 새로 읽기</h3><p>오래된 책과 문장을 원문과 해설을 통해 오늘의 삶에서 다시 읽습니다.</p><span class="go">고전 읽기 →</span></div></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="route" id="world">
-      <div class="wrap">
-        <div class="section-head"><div><span class="number">02 · READ THE WORLD</span><h2>세상 읽기</h2></div><p>하나의 답으로 정리하기보다 사회·고전·관계·철학·경제·상징의 서로 다른 관점으로 현재를 읽습니다.</p></div>
-        <div class="cards six">
-          <a class="card" href="https://pencilgon.tistory.com/221" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-site.png" alt="도시의 교차로"><div class="card-body"><span class="tag">RE:SITE</span><h3>현대사회 개념</h3><p>사건과 현상, 관계와 권력의 언어로 지금의 사회를 읽습니다.</p><span class="go">둘러보기 →</span></div></a>
-          <a class="card" href="https://pencilgon.tistory.com/231" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-read.png" alt="창가의 열린 책"><div class="card-body"><span class="tag">RE:READ</span><h3>고전 새로 읽기</h3><p>오래된 생각과 문장을 오늘의 질문으로 다시 불러옵니다.</p><span class="go">둘러보기 →</span></div></a>
-          <a class="card" href="https://pencilgon.tistory.com/246" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-word.png" alt="마주 놓인 두 개의 의자"><div class="card-body"><span class="tag">RE:WORD</span><h3>관계 언어</h3><p>같은 말도 관계와 상황에 따라 어떻게 달라지는지 살핍니다.</p><span class="go">둘러보기 →</span></div></a>
-          <a class="card" href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-think.png" alt="빈 의자가 있는 조용한 복도"><div class="card-body"><span class="tag">RE:THINK</span><h3>현대 철학</h3><p>철학 개념을 통해 익숙한 삶과 사회의 기준을 다시 묻습니다.</p><span class="go">둘러보기 →</span></div></a>
-          <a class="card" href="https://pencilgon.tistory.com/223" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-mark.png" alt="시장에 놓인 채소와 바구니"><div class="card-body"><span class="tag">RE:MARK</span><h3>쉬운 경제</h3><p>가격과 교환, 시장과 선택이 움직이는 방식을 생활 속에서 읽습니다.</p><span class="go">둘러보기 →</span></div></a>
-          <a class="card" href="https://pencilgon.tistory.com/222" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-sign.png" alt="나침반과 리본, 깃털"><div class="card-body"><span class="tag">RE:SIGN</span><h3>현대 상징</h3><p>색과 숫자, 사물과 장면에 오랫동안 쌓인 의미를 발견합니다.</p><span class="go">둘러보기 →</span></div></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="route" id="life">
-      <div class="wrap">
-        <div class="section-head"><div><span class="number">03 · PLAN YOUR LIFE</span><h2>삶을 계획하기</h2></div><p>몸과 마음, 관계와 시간부터 진로와 평생학습까지 삶의 다음 단계를 천천히 준비합니다.</p></div>
-        <div class="cards two">
-          <a class="card" href="https://old-newbie.tistory.com/92" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-have.png" alt="저녁 빛이 켜진 집과 산책길"><div class="card-body"><span class="tag">HAVE+</span><h3>삶을 다시 갖추기</h3><p>몸과 마음, 관계와 시간, 평생학습을 생활의 흐름 속에서 돌아봅니다.</p><span class="go">HAVE+ 둘러보기 →</span></div></a>
-          <a class="card" href="/career-explorer/"><img src="https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-site.png" alt="여러 길이 이어지는 도시의 교차로"><div class="card-body"><span class="tag">CAREER EXPLORER</span><h3>진로·학과 탐색</h3><p>관심 영역을 학과와 직업으로 연결하고 직접 확인할 다음 질문을 찾아봅니다.</p><span class="go">진로 탐색 시작 →</span></div></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide">
-      <div class="wrap guide-grid">
-        <article class="guide-card"><h3>전체 구성 안내</h3><p>각 영역이 무엇을 다루고 어떻게 이어지는지 먼저 살펴볼 수 있습니다.</p><a href="https://4th-season.tistory.com/1" target="_blank" rel="noopener">안내 읽기 →</a></article>
-        <article class="guide-card"><h3>전체 자료 바로가기</h3><p>찾고 싶은 주제와 시리즈가 정해져 있다면 전체 목록에서 바로 이동합니다.</p><a href="https://4th-season.tistory.com/21" target="_blank" rel="noopener">전체 지도 열기 →</a></article>
-      </div>
-    </section>
-  </main>
-
-  <footer>© 2026 4th Season · 읽고 이해하고 다음을 준비하는 곳</footer>
-</body>
-</html>
+  <header class="hero"><div class="wrap"><nav class="nav"><a class="brand" href="/">4th Season</a><a href="#entrance">EXPLORE</a></nav><div class="hero-copy"><span class="eyebrow">READ · UNDERSTAND · PREPARE</span><h1>4번째 계절</h1><p>더 깊고 성숙한 삶을 향해, 읽고 이해하고 다음을 준비하는 여섯 개의 입구입니다.</p></div></div></header>
+  <main id="entrance" class="hub"><div class="wrap"><div class="head"><div><span class="eyebrow">SIX ENTRANCES</span><h2>지금 필요한 곳에서<br>시작해 보세요.</h2></div><p>각 입구는 독립적으로 운영됩니다. 새로운 주제가 생기면 이곳에 카드 하나를 더해 자연스럽게 확장합니다.</p></div><div class="grid">
+    <a class="card" href="/learn/" style="--image:url('https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-note.png')"><small>01 · LEARN</small><h3>문해력·지식 쌓기</h3><p>문해력, 국어 공부, 읽기와 쓰기, 배움의 자료를 만납니다.</p><span class="go">영역 열기 →</span></a>
+    <a class="card" href="/world/" style="--image:url('https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-site.png')"><small>02 · 6 RE:LENZ</small><h3>세상 읽기</h3><p>사회·고전·관계·철학·경제·상징의 렌즈로 현재를 읽습니다.</p><span class="go">영역 열기 →</span></a>
+    <a class="card" href="/life/" style="--image:url('https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-have.png')"><small>03 · HAVE+</small><h3>삶을 계획하기</h3><p>몸과 마음, 관계와 시간, 평생학습의 다음 단계를 살핍니다.</p><span class="go">영역 열기 →</span></a>
+    <a class="card" href="/rescan/" style="--image:url('https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-think.png')"><small>04 · RE:SCAN</small><h3>나 체크리스트</h3><p>스트레스와 번아웃, 수면과 관계의 현재 상태를 돌아봅니다.</p><span class="go">자가점검 시작 →</span></a>
+    <a class="card" href="/career-explorer/" style="--image:url('https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-word.png')"><small>05 · CAREER EXPLORER</small><h3>직업적성 찾기</h3><p>관심 영역을 학과와 직업으로 연결해 다음 질문을 찾습니다.</p><span class="go">진로 탐색 시작 →</span></a>
+    <a class="card" href="/reread/" style="--image:url('https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/assets/map-read.png')"><small>06 · ORIGINAL TEXTS</small><h3>고전 원문 읽기</h3><p>오래 읽히는 텍스트를 원문·번역·해설과 함께 차분히 읽습니다.</p><span class="go">원문 아카이브 열기 →</span></a>
+  </div></div></main>
+  <section class="notice"><div class="wrap"><p><strong>4번째 계절은 하나의 블로그가 아니라 지도와 도구, 아카이브를 연결하는 통합 현관입니다.</strong> 각 영역에서 더 깊은 글과 자료로 이어집니다.</p></div></section><footer>© 2026 4th Season · 읽고 이해하고 다음을 준비하는 곳</footer>
+</body></html>
