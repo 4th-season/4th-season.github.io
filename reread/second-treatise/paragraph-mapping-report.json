@@ -13,14 +13,26 @@
       "first_sentence_checked": true,
       "last_sentence_checked": true,
       "status": "first-pass-complete"
+    },
+    "chapter-02": {
+      "sections": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "parallel_pairs": 12,
+      "source_notes": 3,
+      "empty_korean_blocks": 0,
+      "empty_english_blocks": 0,
+      "first_sentence_checked": true,
+      "last_sentence_checked": true,
+      "embedded_quotations_preserved": ["Hooker, Ecclesiastical Polity I", "Genesis 9:6 and 4:14", "Hooker, Ecclesiastical Polity I.10"],
+      "status": "first-pass-complete"
     }
   },
-  "total_parallel_pairs": 3,
-  "total_source_notes": 1,
+  "total_parallel_pairs": 15,
+  "total_source_notes": 4,
   "validation": {
     "chapter_order_confirmed": true,
     "chapter_count": 19,
     "navigation_checked_for_existing_pages": true,
-    "remaining_placeholder_pages": 18
+    "existing_chapter_pages": 2,
+    "remaining_chapter_pages": 17
   }
 }
