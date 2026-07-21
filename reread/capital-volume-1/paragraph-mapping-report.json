@@ -1,0 +1,29 @@
+{
+  "work": "Das Kapital, Band I",
+  "project_title": "[Re:Read] 자본론 제1권 ― 자본은 어떻게 노동을 가치로 바꾸는가",
+  "base_edition": "German fourth edition, 1890",
+  "comparison_editions": [
+    "German first edition, 1867",
+    "German second edition, 1872-1873",
+    "French edition, 1872-1875",
+    "First English edition, 1887"
+  ],
+  "primary_language": "de",
+  "records": [],
+  "totals": {
+    "source_paragraphs": 0,
+    "korean_blocks": 0,
+    "german_blocks": 0,
+    "english_reference_blocks": 0,
+    "author_notes": 0,
+    "editor_notes": 0,
+    "translator_notes": 0,
+    "block_quotes": 0,
+    "tables": 0,
+    "empty_korean_blocks": 0,
+    "empty_german_blocks": 0
+  },
+  "mapping_status": "scaffold-created",
+  "review_status": "not-started",
+  "updated_at": "2026-07-22"
+}
