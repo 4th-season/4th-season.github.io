@@ -12,11 +12,14 @@
 - [x] SOURCE_MANIFEST.md
 - [x] STRUCTURE_MANIFEST.md
 - [x] TERMINOLOGY.md 초안
-- [ ] 공통 HTML·CSS
-- [ ] index.html
-- [ ] 제2권·제3권 안내글
-- [ ] 작품 독서 가이드
-- [ ] 제1장 제1절 원문 문단 경계 확정
+- [x] 공통 HTML·CSS
+- [x] index.html
+- [x] 제2권·제3권 안내글
+- [x] 작품 독서 가이드
+- [x] 서문·후기 판본별 파일 구조 확정
+- [x] 제1장 제1절 첫 문단 경계 확정
+- [x] 첫 한국어·독일어·영문 대응 블록 제작
+- [x] paragraph-mapping-report.json 첫 실데이터 반영
 
 ## W02 — 제1부 상품과 화폐
 
@@ -76,17 +79,10 @@ reread/capital-volume-1/
 ├── index.html
 ├── introduction-volumes-2-and-3.html
 ├── reading-guide.html
-├── prefatory/
+├── prefaces/
+│   └── index.html
 ├── part-01/
-│   ├── index.html
-│   ├── chapter-01/
-│   │   ├── index.html
-│   │   ├── section-01.html
-│   │   ├── section-02.html
-│   │   ├── section-03.html
-│   │   └── section-04.html
-│   ├── chapter-02.html
-│   └── chapter-03/
+│   └── chapter-01-section-01.html
 ├── part-02/ ... part-08/
 ├── appendix/
 ├── assets/style.css
@@ -110,4 +106,4 @@ reread/capital-volume-1/
 
 ## 다음 작업 단위
 
-W01-2: 공통 템플릿, CSS, index.html, paragraph-mapping-report.json 생성.
+W02-1: 제1장 제1절의 다음 원문 문단을 순차 번역하고, 사용가치·교환가치·가치 논증이 끊기지 않는 첫 묶음까지 대응 블록을 확장한다.
