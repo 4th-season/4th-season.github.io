@@ -9,6 +9,8 @@
 | property | 재산 / 소유 / 생명·자유·재산 | 문맥에 따라 구분, 기계적 통일 금지 |
 | consent | 동의 | 명시적 동의와 묵시적 동의를 구분 |
 | political power | 정치권력 | paternal/despotical power와 구분 |
+| paternal power | 부권 | 아버지에게 독점된 권력이라는 기존 명칭과 필머의 논리를 가리킬 때 사용 |
+| parental power | 부모권 | 로크가 어머니와 아버지의 공동 권한을 드러내기 위해 제안한 표현 |
 | civil society | 시민사회 | political society와 문맥상 같은 범위인지 매 절 확인 |
 | commonwealth | 정치공동체 | 국가 일반보다 공동의 정치체 강조 |
 | legislative power | 입법권 | legislative 단독 사용도 문맥상 권력일 때 입법권 |
@@ -32,7 +34,8 @@
 - `power`는 문맥에 따라 권력·권한·힘으로 구분한다.
 - `magistrate`는 문맥에 따라 통치자 또는 공권력 담당자로 번역한다.
 - `despotical power`는 **전제적 권력**을 우선 사용한다.
-- `paternal power`는 **부권**을 우선 사용한다.
+- `paternal power`는 장 제목과 기존 가부장적 명칭에서는 **부권**, 로크가 대안으로 제시한 `parental power`는 **부모권**으로 구분한다.
+- 자녀 양육에서 나오는 권한은 영구적 주권이 아니라 미성년기의 보호·교육 의무에 결부된 일시적 권한으로 번역한다.
 
 ## 문체 원칙
 1. 원문의 논증 순서를 유지한다.
