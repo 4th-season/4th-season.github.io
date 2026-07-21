@@ -35,15 +35,26 @@
       "last_sentence_checked": true,
       "embedded_quotations_preserved": ["Judges 11:27"],
       "status": "first-pass-complete"
+    },
+    "chapter-04": {
+      "sections": [22, 23, 24],
+      "parallel_pairs": 3,
+      "source_notes": 2,
+      "empty_korean_blocks": 0,
+      "empty_english_blocks": 0,
+      "first_sentence_checked": true,
+      "last_sentence_checked": true,
+      "embedded_quotations_preserved": ["Filmer, Observations A.55", "Exodus 21"],
+      "status": "first-pass-complete"
     }
   },
-  "total_parallel_pairs": 21,
-  "total_source_notes": 5,
+  "total_parallel_pairs": 24,
+  "total_source_notes": 7,
   "validation": {
     "chapter_order_confirmed": true,
     "chapter_count": 19,
     "navigation_checked_for_existing_pages": true,
-    "existing_chapter_pages": 3,
-    "remaining_chapter_pages": 16
+    "existing_chapter_pages": 4,
+    "remaining_chapter_pages": 15
   }
 }
