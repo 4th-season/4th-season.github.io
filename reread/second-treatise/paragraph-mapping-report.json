@@ -4,57 +4,13 @@
   "comparison_text": "Wikisource Two Treatises of Government (1764)",
   "branch": "feat/second-treatise-reread",
   "chapters": {
-    "chapter-01": {
-      "sections": [1, 2, 3],
-      "parallel_pairs": 3,
-      "source_notes": 1,
-      "empty_korean_blocks": 0,
-      "empty_english_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "status": "first-pass-complete"
-    },
-    "chapter-02": {
-      "sections": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-      "parallel_pairs": 12,
-      "source_notes": 3,
-      "empty_korean_blocks": 0,
-      "empty_english_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "embedded_quotations_preserved": ["Hooker, Ecclesiastical Polity I", "Genesis 9:6 and 4:14", "Hooker, Ecclesiastical Polity I.10"],
-      "status": "first-pass-complete"
-    },
-    "chapter-03": {
-      "sections": [16, 17, 18, 19, 20, 21],
-      "parallel_pairs": 6,
-      "source_notes": 1,
-      "empty_korean_blocks": 0,
-      "empty_english_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "embedded_quotations_preserved": ["Judges 11:27"],
-      "status": "first-pass-complete"
-    },
-    "chapter-04": {
-      "sections": [22, 23, 24],
-      "parallel_pairs": 3,
-      "source_notes": 2,
-      "empty_korean_blocks": 0,
-      "empty_english_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "embedded_quotations_preserved": ["Filmer, Observations A.55", "Exodus 21"],
-      "status": "first-pass-complete"
-    }
+    "chapter-01": {"sections": [1,2,3], "parallel_pairs": 3, "source_notes": 1, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "status": "first-pass-complete"},
+    "chapter-02": {"sections": [4,5,6,7,8,9,10,11,12,13,14,15], "parallel_pairs": 12, "source_notes": 3, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "embedded_quotations_preserved": ["Hooker, Ecclesiastical Polity I", "Genesis 9:6 and 4:14", "Hooker, Ecclesiastical Polity I.10"], "status": "first-pass-complete"},
+    "chapter-03": {"sections": [16,17,18,19,20,21], "parallel_pairs": 6, "source_notes": 1, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "embedded_quotations_preserved": ["Judges 11:27"], "status": "first-pass-complete"},
+    "chapter-04": {"sections": [22,23,24], "parallel_pairs": 3, "source_notes": 2, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "embedded_quotations_preserved": ["Filmer, Observations A.55", "Exodus 21"], "status": "first-pass-complete"},
+    "chapter-05": {"sections": [25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51], "parallel_pairs": 27, "source_notes": 6, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "embedded_quotations_preserved": ["Psalm 115:16", "1 Timothy reference in base text", "Genesis 13 and 36"], "historical_language_notes": ["colonial-era descriptions of America", "labour and improvement comparisons"], "status": "first-pass-complete"}
   },
-  "total_parallel_pairs": 24,
-  "total_source_notes": 7,
-  "validation": {
-    "chapter_order_confirmed": true,
-    "chapter_count": 19,
-    "navigation_checked_for_existing_pages": true,
-    "existing_chapter_pages": 4,
-    "remaining_chapter_pages": 15
-  }
+  "total_parallel_pairs": 51,
+  "total_source_notes": 13,
+  "validation": {"chapter_order_confirmed": true, "chapter_count": 19, "navigation_checked_for_existing_pages": true, "existing_chapter_pages": 5, "remaining_chapter_pages": 14}
 }
