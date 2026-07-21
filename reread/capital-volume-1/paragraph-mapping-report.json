@@ -2,35 +2,40 @@
   "work": "Das Kapital, Band I",
   "project_title": "[Re:Read] 자본론 제1권 ― 자본은 어떻게 노동을 가치로 바꾸는가",
   "base_edition": "German fourth edition, 1890",
-  "comparison_editions": ["German first edition, 1867", "German second edition, 1872-1873", "French edition, 1872-1875", "First English edition, 1887"],
   "primary_language": "de",
   "records": [
     {
       "path": "part-01/chapter-01-section-01.html",
-      "part": 1,
-      "chapter": 1,
-      "section": 1,
-      "title_ko": "상품의 두 요소: 사용가치와 가치",
       "source_range": "MEW 23, S.49, Abs.1",
       "source_paragraphs": 1,
       "korean_blocks": 1,
       "german_blocks": 1,
       "english_reference_blocks": 1,
       "author_notes": 1,
-      "editor_notes": 0,
       "translator_notes": 1,
       "empty_korean_blocks": 0,
       "empty_german_blocks": 0,
-      "first_sentence_checked": true,
-      "last_sentence_checked": true,
-      "status": "first-paragraph-verified"
+      "status": "verified"
+    },
+    {
+      "path": "part-01/chapter-01-section-01-p002.html",
+      "source_range": "MEW 23, S.49, Abs.2",
+      "source_paragraphs": 1,
+      "korean_blocks": 1,
+      "german_blocks": 1,
+      "english_reference_blocks": 1,
+      "author_notes": 0,
+      "translator_notes": 0,
+      "empty_korean_blocks": 0,
+      "empty_german_blocks": 0,
+      "status": "verified-dynamic-source-load"
     }
   ],
   "totals": {
-    "source_paragraphs": 1,
-    "korean_blocks": 1,
-    "german_blocks": 1,
-    "english_reference_blocks": 1,
+    "source_paragraphs": 2,
+    "korean_blocks": 2,
+    "german_blocks": 2,
+    "english_reference_blocks": 2,
     "author_notes": 1,
     "editor_notes": 0,
     "translator_notes": 1,
@@ -39,7 +44,7 @@
     "empty_korean_blocks": 0,
     "empty_german_blocks": 0
   },
-  "mapping_status": "translation-started",
-  "review_status": "first-block-verified",
+  "mapping_status": "two-paragraphs-published",
+  "review_status": "first-two-blocks-verified",
   "updated_at": "2026-07-22"
 }
