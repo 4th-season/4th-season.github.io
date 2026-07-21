@@ -11,7 +11,10 @@
 | political power | 정치권력 | paternal/despotical power와 구분 |
 | paternal power | 부권 | 아버지에게 독점된 권력이라는 기존 명칭과 필머의 논리를 가리킬 때 사용 |
 | parental power | 부모권 | 로크가 어머니와 아버지의 공동 권한을 드러내기 위해 제안한 표현 |
-| civil society | 시민사회 | political society와 문맥상 같은 범위인지 매 절 확인 |
+| conjugal society | 부부사회 | 혼인 관계의 목적·계약·상호 부양을 가리키며 정치사회와 구분 |
+| family | 가족 | 부부·부모자녀·주인종 관계가 결합한 가사적 사회 |
+| political society | 정치사회 | 자연법 집행권을 공동체에 넘기고 공통 법·재판관을 둔 사회 |
+| civil society | 시민사회 | 제7장에서는 political society와 같은 범위로 사용하되 문맥별 확인 |
 | commonwealth | 정치공동체 | 국가 일반보다 공동의 정치체 강조 |
 | legislative power | 입법권 | legislative 단독 사용도 문맥상 권력일 때 입법권 |
 | executive power | 집행권 | 법 집행 권력 |
@@ -29,6 +32,8 @@
 - `people`은 집합적 정치 주체인 **인민**으로 번역한다.
 - `community`는 결합된 전체로서의 **공동체**로 번역한다.
 - `society`는 결합 관계 일반인 **사회**로 번역하되, `political society`는 **정치사회**로 번역한다.
+- 제7장 제목의 `political or civil society`는 **정치사회 또는 시민사회**로 옮기고, 본문에서는 두 표현이 같은 공적 결합을 가리키는지 확인한다.
+- `conjugal society`는 **부부사회**, 부모·자녀 관계는 **부모와 자녀 사이의 사회**, 가사적 결합 전체는 **가족**으로 구분한다.
 - `commonwealth`는 정부 형태와 무관한 정치적 결합체를 뜻하므로 **정치공동체**로 번역한다.
 - `property`가 넓은 의미로 생명·자유·재산을 포괄할 때는 본문 안에서 그 범위를 드러낸다.
 - `power`는 문맥에 따라 권력·권한·힘으로 구분한다.
