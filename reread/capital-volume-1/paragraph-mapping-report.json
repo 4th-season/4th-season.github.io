@@ -29,13 +29,26 @@
       "empty_korean_blocks": 0,
       "empty_german_blocks": 0,
       "status": "verified-dynamic-source-load"
+    },
+    {
+      "path": "part-01/chapter-01-section-01-p003.html",
+      "source_range": "MEW 23, S.49-50, Abs.3",
+      "source_paragraphs": 1,
+      "korean_blocks": 1,
+      "german_blocks": 1,
+      "english_reference_blocks": 1,
+      "author_notes": 0,
+      "translator_notes": 0,
+      "empty_korean_blocks": 0,
+      "empty_german_blocks": 0,
+      "status": "verified-dynamic-source-load"
     }
   ],
   "totals": {
-    "source_paragraphs": 2,
-    "korean_blocks": 2,
-    "german_blocks": 2,
-    "english_reference_blocks": 2,
+    "source_paragraphs": 3,
+    "korean_blocks": 3,
+    "german_blocks": 3,
+    "english_reference_blocks": 3,
     "author_notes": 1,
     "editor_notes": 0,
     "translator_notes": 1,
@@ -44,7 +57,7 @@
     "empty_korean_blocks": 0,
     "empty_german_blocks": 0
   },
-  "mapping_status": "two-paragraphs-published",
-  "review_status": "first-two-blocks-verified",
+  "mapping_status": "three-paragraphs-published",
+  "review_status": "first-three-blocks-verified",
   "updated_at": "2026-07-22"
 }
