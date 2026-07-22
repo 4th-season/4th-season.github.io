@@ -14,9 +14,10 @@
     "chapter-08": {"sections": [95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122], "parallel_pairs": 28, "source_notes": 7, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "delivery": "chapter shell plus fragments", "status": "first-pass-complete"},
     "chapter-09": {"sections": [123,124,125,126,127,128,129,130,131], "parallel_pairs": 9, "source_notes": 1, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "status": "first-pass-complete"},
     "chapter-10": {"sections": [132,133], "parallel_pairs": 2, "source_notes": 0, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "delivery": "chapter shell plus three ordered fragments", "status": "first-pass-complete"},
-    "chapter-11": {"sections": [134,135,136,137,138,139,140,141,142], "parallel_pairs": 9, "source_notes": 1, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "terminology_checked": ["supreme power=최고권력", "legislative power=입법권", "promulgated standing laws=공포된 항구적 법", "taxation without consent=동의 없는 과세", "delegated power=위임된 권력"], "embedded_quotations_preserved": ["Hooker, Ecclesiastical Polity I.10 and III.9"], "delivery": "chapter shell plus five ordered fragments", "status": "first-pass-complete"}
+    "chapter-11": {"sections": [134,135,136,137,138,139,140,141,142], "parallel_pairs": 9, "source_notes": 1, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "status": "first-pass-complete"},
+    "chapter-12": {"sections": [143,144,145,146,147,148], "parallel_pairs": 6, "source_notes": 0, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "terminology_checked": ["legislative power=입법권", "executive power=집행권", "federative power=연합권", "always in being=항상 존속"], "delivery": "chapter shell plus three ordered fragments", "status": "first-pass-complete"}
   },
-  "total_parallel_pairs": 142,
+  "total_parallel_pairs": 148,
   "total_source_notes": 32,
-  "validation": {"chapter_order_confirmed": true, "chapter_count": 19, "navigation_checked_for_existing_pages": true, "existing_chapter_pages": 11, "remaining_chapter_pages": 8, "chapter_11_fragment_load_order_checked": true}
+  "validation": {"chapter_order_confirmed": true, "chapter_count": 19, "navigation_checked_for_existing_pages": true, "existing_chapter_pages": 12, "remaining_chapter_pages": 7, "chapter_12_fragment_load_order_checked": true}
 }
