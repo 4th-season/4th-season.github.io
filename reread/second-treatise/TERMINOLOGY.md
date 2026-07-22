@@ -20,6 +20,11 @@
 | elective monarchy | 선거군주정 | 군주의 사망 뒤 후계자 지명권이 공동체로 돌아오는 형태 |
 | mixed forms of government | 혼합정부 | 여러 정부 형태를 결합한 형태 |
 | civitas | 정치공동체 | 특정 정부 형태가 아니라 독립된 공동체 전체를 가리키는 라틴어 |
+| supreme power | 최고권력 | 제11장에서는 입법권을 가리키되 인민의 원초적 권력과 구분 |
+| legislative power | 입법권 | 인민이 맡긴 법 제정 권력이며 공공선과 신탁의 한계 안에서 행사 |
+| promulgated standing laws | 공포된 항구적 법 | 임시적·자의적 명령과 구분 |
+| taxation without consent | 동의 없는 과세 | 인민 또는 대표자의 다수 동의 없는 과세는 재산의 근본법 침해 |
+| delegated power | 위임된 권력 | 입법권은 인민에게서 받은 권력이므로 재위임 불가 |
 | political power | 정치권력 | paternal/despotical power와 구분 |
 | paternal power | 부권 | 기존 명칭과 필머의 논리를 가리킬 때 사용 |
 | parental power | 부모권 | 어머니와 아버지의 공동 권한을 드러내는 표현 |
@@ -28,7 +33,6 @@
 | political society | 정치사회 | 자연법 집행권을 공동체에 넘기고 공통 법·재판관을 둔 사회 |
 | civil society | 시민사회 | 제7장에서는 political society와 같은 범위로 사용하되 문맥별 확인 |
 | commonwealth | 정치공동체 | 특정 정부 형태가 아니라 독립된 정치적 공동체 전체 |
-| legislative power | 입법권 | legislative 단독 사용도 문맥상 권력일 때 입법권 |
 | executive power | 집행권 | 법 집행 권력 |
 | federative power | 연합권 | 대외 관계·전쟁·평화·동맹의 권력 |
 | trust | 신탁 | 정부 권력의 위임·수탁 성격 유지 |
@@ -43,9 +47,10 @@
 ## 구분 원칙
 - `commonwealth`는 민주정 같은 정부 형태가 아니라 모든 독립된 **정치공동체**를 뜻한다.
 - 제10장의 정부 형태는 입법권이 어디에 놓이는가에 따라 구분한다.
-- `civitas`는 라틴어 원문을 병기하고 본문에서는 **정치공동체**로 설명한다.
-- `community`는 하위 공동체도 포함할 수 있으므로 `commonwealth`와 구별한다.
-- `body politic`은 다수결로 하나의 몸처럼 행동하는 결합을 강조할 때 **정치체**로 번역한다.
+- `supreme power`는 제11장에서 제도상 최고인 입법권을 가리키지만, 그 권력도 인민의 동의·자연법·공공선·신탁의 한계를 넘지 못한다.
+- `promulgated standing laws`는 **공포된 항구적 법**으로 옮겨 임시적·자의적 명령과 구분한다.
+- 과세의 동의는 개인별 만장일치가 아니라 인민이 직접 또는 대표자를 통해 표시한 **다수의 동의**로 번역한다.
+- 입법권은 법을 만들 권력이지 새로운 입법자를 만들 권력이 아니므로 다른 손에 양도할 수 없다.
 - `property`가 넓은 의미로 생명·자유·재산을 포괄할 때는 본문 안에서 범위를 드러낸다.
 - `power`는 문맥에 따라 권력·권한·힘으로 구분한다.
 - `magistrate`는 문맥에 따라 통치자 또는 공권력 담당자로 번역한다.
