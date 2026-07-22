@@ -4,60 +4,13 @@
   "base_edition": "German fourth edition, 1890",
   "primary_language": "de",
   "records": [
-    {
-      "path": "part-01/chapter-01-section-01.html",
-      "source_range": "MEW 23, S.49, Abs.1",
-      "source_paragraphs": 1,
-      "korean_blocks": 1,
-      "german_blocks": 1,
-      "english_reference_blocks": 1,
-      "author_notes": 1,
-      "translator_notes": 1,
-      "empty_korean_blocks": 0,
-      "empty_german_blocks": 0,
-      "status": "verified"
-    },
-    {
-      "path": "part-01/chapter-01-section-01-p002.html",
-      "source_range": "MEW 23, S.49, Abs.2",
-      "source_paragraphs": 1,
-      "korean_blocks": 1,
-      "german_blocks": 1,
-      "english_reference_blocks": 1,
-      "author_notes": 0,
-      "translator_notes": 0,
-      "empty_korean_blocks": 0,
-      "empty_german_blocks": 0,
-      "status": "verified-dynamic-source-load"
-    },
-    {
-      "path": "part-01/chapter-01-section-01-p003.html",
-      "source_range": "MEW 23, S.49-50, Abs.3",
-      "source_paragraphs": 1,
-      "korean_blocks": 1,
-      "german_blocks": 1,
-      "english_reference_blocks": 1,
-      "author_notes": 0,
-      "translator_notes": 0,
-      "empty_korean_blocks": 0,
-      "empty_german_blocks": 0,
-      "status": "verified-dynamic-source-load"
-    }
+    {"path":"part-01/chapter-01-section-01.html","source_range":"MEW 23, S.49, Abs.1","source_paragraphs":1,"korean_blocks":1,"german_blocks":1,"english_reference_blocks":1,"author_notes":1,"translator_notes":1,"empty_korean_blocks":0,"empty_german_blocks":0,"status":"verified"},
+    {"path":"part-01/chapter-01-section-01-p002.html","source_range":"MEW 23, S.49, Abs.2","source_paragraphs":1,"korean_blocks":1,"german_blocks":1,"english_reference_blocks":1,"author_notes":0,"translator_notes":0,"empty_korean_blocks":0,"empty_german_blocks":0,"status":"verified-dynamic-source-load"},
+    {"path":"part-01/chapter-01-section-01-p003.html","source_range":"MEW 23, S.49-50, Abs.3","source_paragraphs":1,"korean_blocks":1,"german_blocks":1,"english_reference_blocks":1,"author_notes":0,"translator_notes":0,"empty_korean_blocks":0,"empty_german_blocks":0,"status":"verified-dynamic-source-load"},
+    {"path":"part-01/chapter-01-section-01-p004.html","source_range":"MEW 23, S.50, Abs.4","source_paragraphs":1,"korean_blocks":1,"german_blocks":1,"english_reference_blocks":1,"author_notes":0,"translator_notes":1,"empty_korean_blocks":0,"empty_german_blocks":0,"status":"verified-dynamic-source-load"}
   ],
-  "totals": {
-    "source_paragraphs": 3,
-    "korean_blocks": 3,
-    "german_blocks": 3,
-    "english_reference_blocks": 3,
-    "author_notes": 1,
-    "editor_notes": 0,
-    "translator_notes": 1,
-    "block_quotes": 0,
-    "tables": 0,
-    "empty_korean_blocks": 0,
-    "empty_german_blocks": 0
-  },
-  "mapping_status": "three-paragraphs-published",
-  "review_status": "first-three-blocks-verified",
+  "totals": {"source_paragraphs":4,"korean_blocks":4,"german_blocks":4,"english_reference_blocks":4,"author_notes":1,"editor_notes":0,"translator_notes":2,"block_quotes":0,"tables":0,"empty_korean_blocks":0,"empty_german_blocks":0},
+  "mapping_status": "four-paragraphs-published",
+  "review_status": "first-four-blocks-verified",
   "updated_at": "2026-07-22"
 }
