@@ -17,9 +17,10 @@
     "chapter-11": {"sections": [134,135,136,137,138,139,140,141,142], "parallel_pairs": 9, "source_notes": 1, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "status": "first-pass-complete"},
     "chapter-12": {"sections": [143,144,145,146,147,148], "parallel_pairs": 6, "source_notes": 0, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "delivery": "chapter shell plus three ordered fragments", "status": "first-pass-complete"},
     "chapter-13": {"sections": [149,150,151,152,153,154,155,156,157,158], "parallel_pairs": 10, "source_notes": 0, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "delivery": "chapter shell plus five ordered fragments", "status": "first-pass-complete"},
-    "chapter-14": {"sections": [159,160,161,162,163,164,165,166,167,168], "parallel_pairs": 10, "source_notes": 0, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "terminology_checked": ["prerogative=대권", "discretion=재량", "public good=공공선", "appeal to heaven=하늘에 호소"], "delivery": "chapter shell plus five ordered fragments", "status": "first-pass-complete"}
+    "chapter-14": {"sections": [159,160,161,162,163,164,165,166,167,168], "parallel_pairs": 10, "source_notes": 0, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "terminology_checked": ["prerogative=대권", "discretion=재량", "public good=공공선", "appeal to heaven=하늘에 호소"], "delivery": "chapter shell plus five ordered fragments", "status": "first-pass-complete"},
+    "chapter-15": {"sections": [169,170,171,172,173,174], "parallel_pairs": 6, "source_notes": 0, "empty_korean_blocks": 0, "empty_english_blocks": 0, "first_sentence_checked": true, "last_sentence_checked": true, "terminology_checked": ["paternal power=부권", "parental power=부모권", "political power=정치권력", "despotical power=전제적 권력", "forfeiture=권리의 상실"], "delivery": "chapter shell plus three ordered fragments", "status": "first-pass-complete"}
   },
-  "total_parallel_pairs": 168,
+  "total_parallel_pairs": 174,
   "total_source_notes": 32,
-  "validation": {"chapter_order_confirmed": true, "chapter_count": 19, "navigation_checked_for_existing_pages": true, "existing_chapter_pages": 14, "remaining_chapter_pages": 5, "chapter_14_fragment_load_order_checked": true}
+  "validation": {"chapter_order_confirmed": true, "chapter_count": 19, "navigation_checked_for_existing_pages": true, "existing_chapter_pages": 15, "remaining_chapter_pages": 4, "chapter_15_fragment_load_order_checked": true}
 }
