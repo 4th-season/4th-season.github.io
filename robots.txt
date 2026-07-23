@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://4th-season.com/sitemap.xml
+Sitemap: https://4th-season.com/reread/second-treatise/sitemap.xml
