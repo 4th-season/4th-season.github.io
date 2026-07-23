@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1.0",
+  "domain": "change_response",
+  "status": "draft",
+  "questions": [
+    {"id":"tc_cr_01","text":"익숙한 방법이 있어도 새로운 방법을 시험해 보는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_cr_02","text":"계획에 없던 흥미로운 제안이 생기면 해보고 싶은 마음이 든다.","direction":"forward","context":"daily"},
+    {"id":"tc_cr_03","text":"새로운 장소나 활동을 접하면 호기심이 먼저 생기는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_cr_04","text":"일상에 작은 변화를 주는 일을 즐기는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_cr_05","text":"선택지가 여러 개라면 전에 해보지 않은 쪽에 눈이 간다.","direction":"forward","context":"daily"},
+    {"id":"tc_cr_06","text":"새로운 가능성을 떠올리면 생각보다 행동이 빨라지는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_cr_07","text":"반복되는 방식이 오래 이어지면 답답함을 느끼는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_cr_08","text":"예상하지 못한 변화가 생겨도 흥미로운 부분을 찾으려 한다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_cr_09","text":"사람들과 함께할 때 새로운 활동을 먼저 제안하는 편이다.","direction":"forward","context":"relationship"},
+    {"id":"tc_cr_10","text":"익숙하지 않은 사람이나 모임에도 비교적 열린 마음으로 참여한다.","direction":"forward","context":"relationship"},
+    {"id":"tc_cr_11","text":"업무나 공부에서 새로운 도구나 방식을 배우는 데 관심이 간다.","direction":"forward","context":"work"},
+    {"id":"tc_cr_12","text":"정해진 방식보다 개선할 수 있는 다른 방법을 찾아보는 편이다.","direction":"forward","context":"work"},
+    {"id":"tc_cr_13","text":"검증된 방법이 있으면 굳이 다른 방식을 시도하지 않는 편이다.","direction":"reverse","context":"counter"},
+    {"id":"tc_cr_14","text":"낯선 선택보다는 결과를 잘 아는 선택을 주로 고른다.","direction":"reverse","context":"counter"}
+  ]
+}
