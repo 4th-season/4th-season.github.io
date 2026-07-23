@@ -1,0 +1,53 @@
+{
+  "work": "Das Kapital, Band I",
+  "chapter": 1,
+  "section": 3,
+  "title_ko": "가치형태 또는 교환가치",
+  "base_edition": "German fourth edition, 1890 / MEW 23",
+  "english_reference": "1887 Samuel Moore and Edward Aveling, edited by Frederick Engels",
+  "published_paragraphs": 4,
+  "published_through": "chapter-01-section-03-p004.html",
+  "structure": [
+    {
+      "id": "A",
+      "title_ko": "단순한·개별적·우연적 가치형태",
+      "subsections": [
+        "가치표현의 두 극: 상대적 가치형태와 등가형태",
+        "상대적 가치형태",
+        "상대적 가치의 양적 규정",
+        "등가형태",
+        "단순한 가치형태 전체"
+      ],
+      "status": "in-progress"
+    },
+    {
+      "id": "B",
+      "title_ko": "전체적 또는 전개된 가치형태",
+      "subsections": [
+        "전개된 상대적 가치형태",
+        "특수한 등가형태",
+        "전체적 가치형태의 결함"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "C",
+      "title_ko": "일반적 가치형태",
+      "subsections": [
+        "가치형태의 변화된 성격",
+        "상대적 가치형태와 등가형태의 상호의존적 발전",
+        "일반적 가치형태에서 화폐형태로의 이행"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "D",
+      "title_ko": "화폐형태",
+      "subsections": [],
+      "status": "pending"
+    }
+  ],
+  "production_rule": "한국어 번역 우선, 독일어 원문 접이식, 영문 대조문 선택형, 문단별 완전 대응, 빈 블록 금지",
+  "next_required_work": "제5문단부터 A-D 전체를 원문 문단 경계에 맞춰 순차 제작",
+  "updated_at": "2026-07-23"
+}
