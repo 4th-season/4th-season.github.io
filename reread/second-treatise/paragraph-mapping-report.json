@@ -1,0 +1,26 @@
+{
+  "work": "Second Treatise of Government",
+  "base_text": "Project Gutenberg #7370",
+  "comparison_text": "Wikisource Two Treatises of Government (1764)",
+  "branch": "feat/second-treatise-reread",
+  "chapter_count": 19,
+  "section_range": "1-243",
+  "total_parallel_pairs": 243,
+  "total_source_notes": 32,
+  "empty_korean_blocks": 0,
+  "empty_english_blocks": 0,
+  "status": "first-pass-complete",
+  "validation": {
+    "chapter_order_confirmed": true,
+    "section_sequence_confirmed": true,
+    "navigation_checked": true,
+    "fragment_load_order_checked": true,
+    "dedicated_sitemap_created": true,
+    "sitemap_url_count": 21,
+    "robots_sitemap_registered": true,
+    "index_sitemap_discovery_link": true,
+    "pre_deployment_static_qa": "complete",
+    "live_render_qa": "pending-after-merge",
+    "second_pass_source_collation": "pending"
+  }
+}
