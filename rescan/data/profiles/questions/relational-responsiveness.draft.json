@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1.0",
+  "domain": "relational_responsiveness",
+  "status": "draft",
+  "questions": [
+    {"id":"tc_rr_01","text":"가까운 사람의 말투나 표정이 달라지면 금방 알아차리는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_rr_02","text":"누군가 나를 반갑게 대해 주면 기분이 오래 좋아지는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_rr_03","text":"관계가 서먹해졌다고 느끼면 그 이유가 마음에 남는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_rr_04","text":"사람들과 정서적으로 가까워졌다고 느낄 때 힘을 얻는다.","direction":"forward","context":"daily"},
+    {"id":"tc_rr_05","text":"주변의 인정이나 격려가 행동을 이어가는 데 영향을 준다.","direction":"forward","context":"daily"},
+    {"id":"tc_rr_06","text":"상대가 나를 어떻게 받아들이는지 자주 생각하는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_rr_07","text":"친밀한 관계의 변화는 다른 일보다 마음에 크게 영향을 준다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_rr_08","text":"사람 사이의 분위기와 감정 변화를 세심하게 느끼는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_rr_09","text":"가까운 사람이 힘들어 보이면 내 마음도 쉽게 무거워진다.","direction":"forward","context":"relationship"},
+    {"id":"tc_rr_10","text":"관계에서 서로의 마음을 확인하는 대화를 중요하게 여긴다.","direction":"forward","context":"relationship"},
+    {"id":"tc_rr_11","text":"함께 일하는 사람의 반응에 따라 의욕이 달라지기도 한다.","direction":"forward","context":"work"},
+    {"id":"tc_rr_12","text":"혼자 하는 일보다 정서적으로 연결된 사람과 하는 일이 더 힘이 난다.","direction":"forward","context":"work"},
+    {"id":"tc_rr_13","text":"주변의 인정이 없어도 내 기분이나 의욕은 거의 달라지지 않는다.","direction":"reverse","context":"counter"},
+    {"id":"tc_rr_14","text":"사람 사이의 미묘한 분위기 변화는 대체로 신경 쓰지 않는 편이다.","direction":"reverse","context":"counter"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1.0",
+  "domain": "uncertainty_sensitivity",
+  "status": "draft",
+  "questions": [
+    {"id":"tc_us_01","text":"결정을 내리기 전에 생길 수 있는 문제를 미리 생각해 보는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_us_02","text":"처음 가는 곳에서는 동선이나 필요한 정보를 미리 확인한다.","direction":"forward","context":"daily"},
+    {"id":"tc_us_03","text":"중요한 일을 시작하기 전에 빠뜨린 것이 없는지 다시 살핀다.","direction":"forward","context":"daily"},
+    {"id":"tc_us_04","text":"상황이 불분명하면 바로 움직이기보다 조금 더 알아보려 한다.","direction":"forward","context":"daily"},
+    {"id":"tc_us_05","text":"변수가 많은 계획에는 여유 시간을 두는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_us_06","text":"결과를 예측하기 어려우면 마음이 쉽게 긴장되는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_us_07","text":"작은 위험 신호도 그냥 넘기지 않고 의미를 생각해 보는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_us_08","text":"가능성이 낮더라도 좋지 않은 결과를 한 번쯤 대비한다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_us_09","text":"상대의 반응이 애매하면 내가 놓친 것이 있는지 살펴본다.","direction":"forward","context":"relationship"},
+    {"id":"tc_us_10","text":"함께 결정할 때 문제가 될 수 있는 부분을 먼저 짚는 편이다.","direction":"forward","context":"relationship"},
+    {"id":"tc_us_11","text":"업무나 공부에서 기준이 모호하면 확인한 뒤 진행하려 한다.","direction":"forward","context":"work"},
+    {"id":"tc_us_12","text":"제출이나 마감 전에는 오류가 없는지 다시 확인하는 편이다.","direction":"forward","context":"work"},
+    {"id":"tc_us_13","text":"준비가 충분하지 않아도 일단 시작하면서 맞추는 편이다.","direction":"reverse","context":"counter"},
+    {"id":"tc_us_14","text":"불확실한 상황에서도 별다른 걱정 없이 결정을 내리는 편이다.","direction":"reverse","context":"counter"}
+  ]
+}

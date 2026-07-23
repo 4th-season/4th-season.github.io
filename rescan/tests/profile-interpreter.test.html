@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profile Interpreter Test</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;line-height:1.6}.pass{color:#176b3a}.fail{color:#b42318}pre{white-space:pre-wrap;background:#f4f4f4;padding:16px}</style></head>
+<body><h1>Profile Interpreter Test</h1><div id="results"></div><pre id="sample"></pre>
+<script src="/rescan/assets/js/profile-scoring.js"></script>
+<script src="/rescan/assets/js/profile-interpreter.js"></script>
+<script>
+(async () => {
+  const root = document.querySelector('#results');
+  const tests = [];
+  const check = (name, condition, detail = '') => tests.push({ name, ok: Boolean(condition), detail });
+  try {
+    const [profile, modules] = await Promise.all([
+      fetch('/rescan/data/profiles/temperament-character-candidate.json').then(r => r.json()),
+      fetch('/rescan/data/profiles/interpretation-modules.v01.json').then(r => r.json())
+    ]);
+    const allThree = Object.fromEntries(profile.questions.map(q => [q.id, 3]));
+    const calculation = ReScanProfileScoring.calculate(profile, allThree);
+    const report = ReScanProfileInterpreter.interpret(calculation, modules);
+    check('7개 영역 해석 생성', report.domains.length === 7, report.domains.length);
+    check('균형도 해석 생성', report.balance.key === 'very_balanced', report.balance.key);
+    check('응답 참고도 생성', ['good','moderate','limited'].includes(report.confidence.key), report.confidence.key);
+    check('전체 요약 생성', Boolean(report.overview.title && report.overview.text));
+    check('고지문 포함', report.notice.includes('표준화 심리검사'));
+    check('영역 상태 매핑', report.domains.every(item => item.state === 'similar'));
+    check('조합 최대 2개', report.pairs.length <= 2, report.pairs.length);
+    check('섹션 중복 없음', new Set(report.sections.map(item => `${item.type}:${item.id || item.domainId || item.key || item.title}`)).size === report.sections.length);
+
+    const patterned = {};
+    profile.questions.forEach((q) => {
+      if (q.domain === 'change_response' || q.domain === 'persistence') patterned[q.id] = q.direction === 'reverse' ? 1 : 5;
+      else patterned[q.id] = 3;
+    });
+    const patternedCalculation = ReScanProfileScoring.calculate(profile, patterned);
+    const patternedReport = ReScanProfileInterpreter.interpret(patternedCalculation, modules);
+    check('높은 변화·지속성 조합 선택', patternedReport.pairs.some(item => item.id === 'change-high_persistence-high'));
+    check('모든 해석 문장 존재', patternedReport.sections.every(item => Boolean(item.text || item.summary)));
+    document.querySelector('#sample').textContent = JSON.stringify(patternedReport, null, 2);
+  } catch (error) {
+    tests.push({ name: '테스트 실행', ok: false, detail: error.message });
+  }
+  root.innerHTML = tests.map(t => `<p class="${t.ok ? 'pass' : 'fail'}">${t.ok ? 'PASS' : 'FAIL'} · ${t.name}${t.detail !== '' ? ` — ${t.detail}` : ''}</p>`).join('');
+})();
+</script></body></html>

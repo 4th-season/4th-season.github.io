@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1.0",
+  "domain": "cooperation",
+  "status": "draft",
+  "questions": [
+    {"id":"tc_co_01","text":"의견이 달라도 상대가 중요하게 여기는 이유를 들으려 한다.","direction":"forward","context":"daily"},
+    {"id":"tc_co_02","text":"함께 정한 규칙은 내게 조금 불편해도 가능한 한 지키려 한다.","direction":"forward","context":"daily"},
+    {"id":"tc_co_03","text":"갈등이 생기면 누가 이겼는지보다 해결 방법을 찾으려 한다.","direction":"forward","context":"daily"},
+    {"id":"tc_co_04","text":"내 몫이 끝났더라도 공동의 일이 막히면 도울 방법을 살핀다.","direction":"forward","context":"daily"},
+    {"id":"tc_co_05","text":"다른 사람의 실수를 바로 판단하기보다 상황을 먼저 이해하려 한다.","direction":"forward","context":"daily"},
+    {"id":"tc_co_06","text":"내 입장과 다른 관점에도 일리가 있을 수 있다고 생각한다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_co_07","text":"공동의 목표를 위해 내 방식을 일부 조정할 수 있다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_co_08","text":"서로의 필요가 다를 때 가능한 절충점을 생각하는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_co_09","text":"상대가 말할 기회를 충분히 갖도록 기다리려 한다.","direction":"forward","context":"relationship"},
+    {"id":"tc_co_10","text":"관계에서 잘못한 부분을 알게 되면 인정하고 조정하려 한다.","direction":"forward","context":"relationship"},
+    {"id":"tc_co_11","text":"함께 일할 때 역할과 정보를 공유하는 것을 중요하게 여긴다.","direction":"forward","context":"work"},
+    {"id":"tc_co_12","text":"팀의 결과가 좋아지면 개인적인 공로가 덜 드러나도 괜찮은 편이다.","direction":"forward","context":"work"},
+    {"id":"tc_co_13","text":"의견이 맞지 않으면 상대를 이해하기보다 내 주장을 유지하는 편이다.","direction":"reverse","context":"counter"},
+    {"id":"tc_co_14","text":"공동의 문제라도 내 역할이 아니면 관여하지 않는 편이다.","direction":"reverse","context":"counter"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "0.1.0",
+  "profileId": "temperament-character-self-check",
+  "status": "draft",
+  "audience": "adult-18-plus",
+  "scale": [
+    {"value":1,"label":"전혀 그렇지 않다"},
+    {"value":2,"label":"그렇지 않은 편이다"},
+    {"value":3,"label":"보통이다"},
+    {"value":4,"label":"그런 편이다"},
+    {"value":5,"label":"매우 그렇다"}
+  ],
+  "totalQuestions": 98,
+  "domains": [
+    {"id":"change_response","label":"변화와 새로움에 반응하는 방식","count":14,"path":"/rescan/data/profiles/questions/change-response.draft.json"},
+    {"id":"uncertainty_sensitivity","label":"위험과 불확실성을 살피는 방식","count":14,"path":"/rescan/data/profiles/questions/uncertainty-sensitivity.draft.json"},
+    {"id":"relational_responsiveness","label":"관계와 인정에 반응하는 방식","count":14,"path":"/rescan/data/profiles/questions/relational-responsiveness.draft.json"},
+    {"id":"persistence","label":"어려움을 견디고 지속하는 방식","count":14,"path":"/rescan/data/profiles/questions/persistence.draft.json"},
+    {"id":"self_direction","label":"자신을 조절하고 책임지는 방식","count":14,"path":"/rescan/data/profiles/questions/self-direction.draft.json"},
+    {"id":"cooperation","label":"타인과 협력하고 조율하는 방식","count":14,"path":"/rescan/data/profiles/questions/cooperation.draft.json"},
+    {"id":"meaning_orientation","label":"의미와 더 큰 가치를 바라보는 방식","count":14,"path":"/rescan/data/profiles/questions/meaning-orientation.draft.json"}
+  ],
+  "notice": "이 문항은 공개 베타 준비용 예비문항이며 정식 TCI 문항이나 표준화 심리검사가 아니다."
+}
