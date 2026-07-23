@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Re:Scan 프로필 시나리오 QA</title>
+  <link rel="stylesheet" href="/rescan/assets/css/common.css">
+  <style>
+    body{padding:32px}.qa-wrap{width:min(1180px,100%);margin:0 auto}.qa-grid{display:grid;gap:18px}.qa-card{padding:22px;border:1px solid var(--rs-line);border-radius:18px;background:#fff}.qa-card.pass{border-left:6px solid #4b8b62}.qa-card.fail{border-left:6px solid #b54c4c}.qa-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}.qa-head h2{margin:0 0 4px;font-size:1.15rem}.qa-badge{padding:5px 9px;border-radius:999px;font-size:.78rem;font-weight:900}.pass .qa-badge{background:#e8f4ec;color:#2d6a43}.fail .qa-badge{background:#f9e8e8;color:#8c2f2f}.qa-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}.qa-meta div{padding:12px;border-radius:12px;background:var(--rs-paper)}.qa-meta b{display:block;color:var(--rs-purple-deep)}.qa-list{margin:12px 0 0;padding-left:1.2rem}.qa-list li+li{margin-top:6px}.qa-error{white-space:pre-wrap;color:#8c2f2f}.summary{margin:22px 0;padding:20px;border-radius:18px;background:var(--rs-purple-soft)}@media(max-width:760px){body{padding:18px}.qa-meta{grid-template-columns:1fr 1fr}.qa-head{display:block}.qa-badge{display:inline-block;margin-top:8px}}
+  </style>
+</head>
+<body>
+  <main class="qa-wrap">
+    <p class="eyebrow">INTERNAL QA</p>
+    <h1>기질·성격 프로필 대표 시나리오</h1>
+    <p>가상 응답으로 채점·해석 모듈·조합 우선순위·출력 제한을 함께 확인합니다.</p>
+    <div id="summary" class="summary">검사 중입니다.</div>
+    <div id="results" class="qa-grid"></div>
+  </main>
+  <script src="/rescan/assets/js/profile-scoring.js"></script>
+  <script src="/rescan/assets/js/profile-interpreter.js"></script>
+  <script src="/rescan/tests/profile-scenarios.js"></script>
+  <script>
+    (async function () {
+      const summary = document.getElementById('summary');
+      const results = document.getElementById('results');
+      const [profile, modules] = await Promise.all([
+        fetch('/rescan/data/profiles/temperament-character-candidate.json').then((r) => { if (!r.ok) throw new Error('후보 문항 데이터를 불러오지 못했습니다.'); return r.json(); }),
+        fetch('/rescan/data/profiles/interpretation-modules.v01.json').then((r) => { if (!r.ok) throw new Error('해석 모듈을 불러오지 못했습니다.'); return r.json(); })
+      ]);
+
+      const includesPair = (pairs, ids) => pairs.some((pair) => [pair.a, pair.b].sort().join(':') === [...ids].sort().join(':'));
+      let passed = 0;
+
+      window.ReScanProfileScenarios.scenarios.forEach((scenario) => {
+        const checks = [];
+        let calculation;
+        let interpretation;
+        let error = null;
+        try {
+          const answers = window.ReScanProfileScenarios.buildAnswers(profile, scenario.targets);
+          calculation = window.ReScanProfileScoring.calculate(profile, answers);
+          interpretation = window.ReScanProfileInterpreter.interpret(calculation, modules, { maxPairs: 2, maxDomains: 7 });
+
+          checks.push(['문항 70개 채점', calculation.questionCount === 70]);
+          checks.push(['영역 7개 생성', Object.keys(calculation.domains).length === 7]);
+          checks.push(['영역 해석 7개 생성', interpretation.domains.length === 7]);
+          checks.push(['조합 최대 2개', interpretation.pairs.length <= 2]);
+          checks.push(['빈 결과문 없음', interpretation.sections.every((item) => item.title && (item.text || item.summary || item.body))]);
+          checks.push(['비진단 고지 포함', Boolean(interpretation.notice)]);
+
+          if (scenario.expect.balance) checks.push(['예상 균형도', scenario.expect.balance.includes(calculation.profile.balance)]);
+          if (scenario.expect.quality) checks.push(['예상 참고도', scenario.expect.quality.includes(calculation.responseQuality.level)]);
+          if (scenario.expect.maxPairs !== undefined) checks.push(['예상 조합 수 이내', interpretation.pairs.length <= scenario.expect.maxPairs]);
+          if (scenario.expect.topIncludes) {
+            const topIds = calculation.ranking.slice(0, 3).map((item) => item.id);
+            checks.push(['예상 상위 영역', scenario.expect.topIncludes.every((id) => topIds.includes(id))]);
+          }
+          if (scenario.expect.pairContains) checks.push(['예상 조합 선택', includesPair(interpretation.pairs, scenario.expect.pairContains)]);
+        } catch (caught) {
+          error = caught;
+        }
+
+        const ok = !error && checks.every(([, result]) => result);
+        if (ok) passed += 1;
+        const card = document.createElement('article');
+        card.className = `qa-card ${ok ? 'pass' : 'fail'}`;
+        card.innerHTML = `
+          <div class="qa-head">
+            <div><h2>${scenario.label}</h2><p>${scenario.description}</p></div>
+            <span class="qa-badge">${ok ? 'PASS' : 'FAIL'}</span>
+          </div>
+          ${calculation ? `<div class="qa-meta">
+            <div><span>균형도</span><b>${calculation.profile.balance}</b></div>
+            <div><span>최고·최저 차이</span><b>${calculation.profile.totalRange}</b></div>
+            <div><span>응답 참고도</span><b>${calculation.responseQuality.level}</b></div>
+            <div><span>선택 조합</span><b>${interpretation.pairs.length}</b></div>
+          </div>` : ''}
+          ${error ? `<pre class="qa-error">${error.stack || error.message}</pre>` : `<ul class="qa-list">${checks.map(([label, result]) => `<li>${result ? '✓' : '✗'} ${label}</li>`).join('')}</ul>`}
+        `;
+        results.appendChild(card);
+      });
+
+      const total = window.ReScanProfileScenarios.scenarios.length;
+      summary.textContent = `${total}개 대표 시나리오 중 ${passed}개 통과 · ${total - passed}개 확인 필요`;
+      summary.setAttribute('data-status', passed === total ? 'pass' : 'fail');
+    }()).catch((error) => {
+      document.getElementById('summary').textContent = `QA 실행 오류: ${error.message}`;
+    });
+  </script>
+</body>
+</html>
