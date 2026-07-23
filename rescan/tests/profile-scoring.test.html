@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Re:Scan Profile Scoring QA</title>
+  <style>body{font-family:system-ui,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;line-height:1.6}pre{white-space:pre-wrap;background:#f4f4f4;padding:20px;border-radius:12px}.pass{color:#087830}.fail{color:#b42318}</style>
+</head>
+<body>
+  <h1>Profile Scoring QA</h1>
+  <p>개발 브랜치에서 profile 채점 엔진의 기본 계산을 확인합니다.</p>
+  <pre id="output">테스트 실행 중…</pre>
+  <script src="/rescan/assets/js/profile-scoring.js"></script>
+  <script>
+    (async () => {
+      const output = document.querySelector('#output');
+      const lines = [];
+      let failures = 0;
+      const assert = (name, condition, detail = '') => {
+        const pass = Boolean(condition);
+        if (!pass) failures += 1;
+        lines.push(`${pass ? 'PASS' : 'FAIL'} · ${name}${detail ? ` · ${detail}` : ''}`);
+      };
+
+      try {
+        const response = await fetch('/rescan/data/profiles/temperament-character-candidate.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`후보 데이터를 불러오지 못했습니다. (${response.status})`);
+        const profile = await response.json();
+        const makeAnswers = (value) => Object.fromEntries(profile.questions.map((question) => [question.id, value]));
+
+        const allOne = ReScanProfileScoring.calculate(profile, makeAnswers(1));
+        const allThree = ReScanProfileScoring.calculate(profile, makeAnswers(3));
+        const allFive = ReScanProfileScoring.calculate(profile, makeAnswers(5));
+
+        assert('70문항 로드', profile.questions.length === 70, `${profile.questions.length}문항`);
+        assert('7영역 계산', Object.keys(allThree.domains).length === 7);
+        assert('중간 응답은 전 영역 50점', Object.values(allThree.domains).every((domain) => domain.percent === 50));
+        assert('동일 응답 참고도 제한', allThree.responseQuality.level === 'limited');
+        assert('전체 동일 응답은 균형 프로필', allThree.profile.balance === 'very_balanced');
+        assert('역문항 반영으로 전체 1점 결과가 단일 극단이 아님', Object.values(allOne.domains).every((domain) => domain.percent > 0 && domain.percent < 100));
+        assert('역문항 반영으로 전체 5점 결과가 단일 극단이 아님', Object.values(allFive.domains).every((domain) => domain.percent > 0 && domain.percent < 100));
+
+        const missing = makeAnswers(3);
+        delete missing[profile.questions[0].id];
+        let missingBlocked = false;
+        try { ReScanProfileScoring.calculate(profile, missing); } catch (error) { missingBlocked = /미응답/.test(error.message); }
+        assert('미응답 차단', missingBlocked);
+
+        const invalid = makeAnswers(3);
+        invalid[profile.questions[0].id] = 9;
+        let invalidBlocked = false;
+        try { ReScanProfileScoring.calculate(profile, invalid); } catch (error) { invalidBlocked = /허용되지 않은/.test(error.message); }
+        assert('허용 범위 밖 응답 차단', invalidBlocked);
+
+        const mixed = {};
+        profile.questions.forEach((question, index) => { mixed[question.id] = (index % 5) + 1; });
+        const mixedResult = ReScanProfileScoring.calculate(profile, mixed);
+        assert('순위 7개 생성', mixedResult.ranking.length === 7);
+        assert('영역 쌍 21개 계산', mixedResult.pairDistances.length === 21, `${mixedResult.pairDistances.length}쌍`);
+        assert('기질·성격 묶음 생성', Boolean(mixedResult.groups.temperament && mixedResult.groups.character));
+
+        output.className = failures ? 'fail' : 'pass';
+        output.textContent = `${lines.join('\n')}\n\n${failures ? `${failures}개 실패` : '모든 기본 테스트 통과'}`;
+      } catch (error) {
+        output.className = 'fail';
+        output.textContent = `테스트 실행 오류: ${error.message}`;
+      }
+    })();
+  </script>
+</body>
+</html>
