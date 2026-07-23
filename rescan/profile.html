@@ -13,6 +13,7 @@
   <title>기질과 성격 자기이해 점검 | Re:Scan</title>
   <link rel="stylesheet" href="/rescan/assets/css/common.css">
   <link rel="stylesheet" href="/rescan/assets/css/profile.css">
+  <link rel="stylesheet" href="/rescan/assets/css/profile-lounge.css">
 </head>
 <body class="profile-page">
   <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -31,15 +32,16 @@
           <p class="lounge-invitation">잠시 앉아, 평소의 나를 천천히 살펴보는 시간</p>
           <h1 id="profile-title">기질과 성격<br>자기이해 점검</h1>
           <p class="lead">일상에서 반복되는 반응 방식과 자신을 조절하는 경향을 7개 영역으로 살펴봅니다. 결과에서는 유형 이름뿐 아니라 강점, 약점으로 바뀔 수 있는 지점, 관계와 일에서 나타나는 모습, 압박받을 때의 반응과 앞으로 참고할 방향을 함께 설명합니다.</p>
-          <div class="lounge-badges" aria-label="점검 특징">
-            <span>70문항</span><span>약 10~15분</span><span>브라우저 안에서 계산</span>
+          <div class="lounge-badges" aria-label="점검 특징"><span>70문항</span><span>약 10~15분</span><span>브라우저 안에서 계산</span></div>
+          <div class="lounge-actions">
+            <a class="lounge-scroll" href="#profile-app">아래에서 점검 시작하기 <span aria-hidden="true">↓</span></a>
+            <button class="lounge-back" type="button" data-profile-back>← 이전 페이지로 돌아가기</button>
           </div>
-          <a class="lounge-scroll" href="#profile-app">아래에서 점검 시작하기 <span aria-hidden="true">↓</span></a>
         </div>
 
         <div class="lounge-scene" aria-hidden="true">
           <div class="room-wall">
-            <div class="room-window"><span class="window-sky"></span><span class="window-tree one"></span><span class="window-tree two"></span></div>
+            <div class="room-window"><span class="window-tree one"></span><span class="window-tree two"></span></div>
             <div class="room-frame"><span></span></div>
             <div class="floor-lamp"><i class="lamp-shade"></i><i class="lamp-pole"></i><i class="lamp-base"></i></div>
             <div class="room-plant"><i class="leaf l1"></i><i class="leaf l2"></i><i class="leaf l3"></i><i class="leaf l4"></i><i class="pot"></i></div>
@@ -54,9 +56,7 @@
     <section class="content-section profile-section" aria-label="기질과 성격 점검">
       <div class="rs-container profile-container">
         <noscript><div class="notice" role="alert">이 점검은 문항 표시와 결과 계산을 위해 자바스크립트가 필요합니다.</div></noscript>
-        <div id="profile-app" aria-live="polite">
-          <div class="panel"><p>점검 데이터를 불러오는 중입니다.</p></div>
-        </div>
+        <div id="profile-app" aria-live="polite"><div class="panel"><p>점검 데이터를 불러오는 중입니다.</p></div></div>
       </div>
     </section>
   </main>
