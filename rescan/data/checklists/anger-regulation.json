@@ -1,0 +1,45 @@
+{
+  "schemaVersion":"1.0.0",
+  "id":"anger-regulation",
+  "series":"[나 체크리스트]",
+  "section":"Re:Scan",
+  "grade":"B",
+  "mode":"pattern",
+  "status":"published",
+  "title":"분노조절",
+  "subtitle":"화가 커지는 장면과 표현 방식 자가점검",
+  "description":"최근 2주 동안 분노의 촉발 요인, 표현 방식, 회복 시간과 관계 영향을 살펴봅니다.",
+  "period":"최근 2주",
+  "orderPolicy":{"strategy":"balanced","maxSameCategoryRun":2,"sessionStable":true,"useReserveQuestions":false},
+  "categories":[{"id":"trigger","label":"촉발 요인"},{"id":"expression","label":"표현 방식"},{"id":"recovery","label":"회복 시간"},{"id":"relationship","label":"관계 영향"}],
+  "scale":[{"value":0,"label":"전혀 아니다"},{"value":1,"label":"가끔 그렇다"},{"value":2,"label":"자주 그렇다"},{"value":3,"label":"거의 그렇다"}],
+  "questions":[
+    {"id":"ar01","category":"trigger","text":"작은 방해나 예상 밖의 일에도 화가 빠르게 커진다.","reverse":false},
+    {"id":"ar02","category":"expression","text":"화가 나면 말투나 목소리가 거칠어지는 편이다.","reverse":false},
+    {"id":"ar03","category":"recovery","text":"화가 난 뒤 마음이 가라앉기까지 오래 걸린다.","reverse":false},
+    {"id":"ar04","category":"relationship","text":"분노 표현 뒤 상대와의 관계가 어색해지는 일이 있다.","reverse":false},
+    {"id":"ar05","category":"trigger","text":"피로하거나 압박이 클 때 분노가 더 쉽게 올라온다.","reverse":false},
+    {"id":"ar06","category":"expression","text":"화를 느껴도 상대를 공격하지 않고 내 상태를 설명할 수 있다.","reverse":true},
+    {"id":"ar07","category":"recovery","text":"감정이 커질 때 잠시 자리를 옮기거나 멈출 수 있다.","reverse":true},
+    {"id":"ar08","category":"relationship","text":"상대가 내 뜻대로 반응하지 않으면 더 강하게 몰아붙이는 편이다.","reverse":false},
+    {"id":"ar09","category":"trigger","text":"무시당했다는 느낌이 들면 사실을 확인하기 전에 화가 난다.","reverse":false},
+    {"id":"ar10","category":"expression","text":"화를 참기만 하다가 한꺼번에 폭발하는 일이 있다.","reverse":false},
+    {"id":"ar11","category":"recovery","text":"분노가 가라앉은 뒤 상황을 다시 생각해 볼 수 있다.","reverse":true},
+    {"id":"ar12","category":"relationship","text":"화를 낸 뒤 사과하거나 관계를 회복하는 행동을 할 수 있다.","reverse":true}
+  ],
+  "patternResults":[
+    {"min":0,"max":8,"level":"비교적 안정된 조절","summary":"분노가 커져도 표현과 회복을 조절하는 힘이 비교적 유지되고 있습니다.","questions":["현재 잘 작동하는 멈춤 방법은 무엇인가요?","관계에서 유지하고 싶은 표현 기준은 무엇인가요?"]},
+    {"min":9,"max":17,"level":"촉발 장면 관찰","summary":"일부 상황에서 분노가 빠르게 커지거나 표현이 거칠어질 수 있습니다.","questions":["화를 가장 자주 촉발하는 상황은 무엇인가요?","분노가 커지기 전 몸에서 먼저 나타나는 신호는 무엇인가요?"]},
+    {"min":18,"max":26,"level":"관계 영향 누적","summary":"분노의 강도와 회복 시간이 관계나 생활에 영향을 줄 수 있습니다.","questions":["화를 표현한 뒤 반복되는 결과는 무엇인가요?","잠시 멈추기 위한 현실적인 방법은 무엇인가요?"]},
+    {"min":27,"max":36,"level":"안전과 지원 우선","summary":"분노가 반복적으로 행동과 관계를 크게 흔들 수 있습니다. 혼자 조절하기 어렵다면 전문적인 도움을 고려해 보세요.","questions":["지금 가장 먼저 줄여야 할 위험한 행동은 무엇인가요?","도움을 요청할 수 있는 사람이나 기관은 어디인가요?"]}
+  ],
+  "results":[
+    {"min":0,"max":8,"level":"비교적 안정된 조절","summary":"분노가 커져도 표현과 회복을 조절하는 힘이 비교적 유지되고 있습니다."},
+    {"min":9,"max":17,"level":"촉발 장면 관찰","summary":"일부 상황에서 분노가 빠르게 커지거나 표현이 거칠어질 수 있습니다."},
+    {"min":18,"max":26,"level":"관계 영향 누적","summary":"분노의 강도와 회복 시간이 관계나 생활에 영향을 줄 수 있습니다."},
+    {"min":27,"max":36,"level":"안전과 지원 우선","summary":"분노가 반복적으로 행동과 관계를 크게 흔들 수 있습니다."}
+  ],
+  "methodNote":"분노 자체는 자연스러운 감정이며, 이 점검은 분노의 옳고 그름이 아니라 촉발·표현·회복·관계 영향을 살펴봅니다.",
+  "disclaimer":"이 결과는 충동조절장애나 특정 질환을 진단하지 않는 자가점검용 참고 자료입니다.",
+  "relatedLinks":[{"title":"Re:Scan 감정조절 점검","url":"/rescan/checklist.html?id=emotion-regulation","type":"internal"},{"title":"Re:Scan 이용 안내","url":"/rescan/about.html","type":"internal"}]
+}
