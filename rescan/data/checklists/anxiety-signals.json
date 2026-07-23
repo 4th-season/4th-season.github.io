@@ -1,0 +1,45 @@
+{
+  "schemaVersion":"1.0.0",
+  "id":"anxiety-signals",
+  "series":"[나 체크리스트]",
+  "section":"Re:Scan",
+  "grade":"B",
+  "mode":"pattern",
+  "status":"published",
+  "title":"불안 신호",
+  "subtitle":"걱정과 긴장이 생활에 미치는 영향 자가점검",
+  "description":"최근 2주 동안 걱정의 반복, 신체 긴장, 회피와 일상 영향을 살펴봅니다.",
+  "period":"최근 2주",
+  "orderPolicy":{"strategy":"balanced","maxSameCategoryRun":2,"sessionStable":true,"useReserveQuestions":false},
+  "categories":[{"id":"worry","label":"과도한 걱정"},{"id":"tension","label":"신체 긴장"},{"id":"avoidance","label":"회피 행동"},{"id":"impact","label":"일상 영향"}],
+  "scale":[{"value":0,"label":"전혀 아니다"},{"value":1,"label":"가끔 그렇다"},{"value":2,"label":"자주 그렇다"},{"value":3,"label":"거의 그렇다"}],
+  "questions":[
+    {"id":"an01","category":"worry","text":"여러 가능성을 미리 걱정하느라 생각을 멈추기 어렵다.","reverse":false},
+    {"id":"an02","category":"tension","text":"별다른 이유 없이 몸이 긴장하거나 가슴이 답답한 느낌이 든다.","reverse":false},
+    {"id":"an03","category":"avoidance","text":"불안할 것 같은 상황을 미루거나 피하는 일이 있다.","reverse":false},
+    {"id":"an04","category":"impact","text":"걱정 때문에 해야 할 일에 집중하기 어렵다.","reverse":false},
+    {"id":"an05","category":"worry","text":"실제로 일어나지 않은 문제를 반복해서 상상한다.","reverse":false},
+    {"id":"an06","category":"tension","text":"긴장을 풀고 편안히 쉬는 데 어려움이 있다.","reverse":false},
+    {"id":"an07","category":"avoidance","text":"확신이 들 때까지 결정을 계속 미루는 편이다.","reverse":false},
+    {"id":"an08","category":"impact","text":"걱정이나 긴장 때문에 잠들거나 수면을 이어 가기 어렵다.","reverse":false},
+    {"id":"an09","category":"worry","text":"걱정이 시작되어도 현재 할 수 있는 일과 없는 일을 구분할 수 있다.","reverse":true},
+    {"id":"an10","category":"tension","text":"호흡이나 움직임으로 몸의 긴장을 어느 정도 낮출 수 있다.","reverse":true},
+    {"id":"an11","category":"avoidance","text":"불안해도 필요한 일은 작은 단계로 시작할 수 있다.","reverse":true},
+    {"id":"an12","category":"impact","text":"불안 때문에 사람·학교·직장·외출 범위가 줄어든다.","reverse":false}
+  ],
+  "patternResults":[
+    {"min":0,"max":8,"level":"비교적 안정","summary":"걱정과 긴장이 생활을 크게 제한하는 신호는 비교적 적습니다.","questions":["안정감을 지켜 주는 생활 조건은 무엇인가요?","불안이 올라올 때 먼저 사용하는 방법은 무엇인가요?"]},
+    {"min":9,"max":17,"level":"반복 장면 관찰","summary":"특정 상황에서 걱정이나 긴장이 반복될 수 있습니다.","questions":["불안이 시작되는 대표적인 상황은 무엇인가요?","실제 위험과 예상 속 위험을 어떻게 구분할 수 있나요?"]},
+    {"min":18,"max":26,"level":"생활 영향 누적","summary":"걱정·신체 긴장·회피가 일상 기능에 영향을 주고 있을 수 있습니다.","questions":["회피 때문에 더 어려워진 일은 무엇인가요?","작게 시도할 수 있는 한 단계는 무엇인가요?"]},
+    {"min":27,"max":36,"level":"지원 확인","summary":"불안 신호가 여러 생활 영역에서 지속되고 있을 수 있습니다. 불편이 오래가면 전문가와 상의하는 것을 고려해 보세요.","questions":["가장 영향을 받는 생활 영역은 무엇인가요?","연결할 수 있는 지원은 무엇인가요?"]}
+  ],
+  "results":[
+    {"min":0,"max":8,"level":"비교적 안정","summary":"걱정과 긴장이 생활을 크게 제한하는 신호는 비교적 적습니다."},
+    {"min":9,"max":17,"level":"반복 장면 관찰","summary":"특정 상황에서 걱정이나 긴장이 반복될 수 있습니다."},
+    {"min":18,"max":26,"level":"생활 영향 누적","summary":"걱정·신체 긴장·회피가 일상 기능에 영향을 주고 있을 수 있습니다."},
+    {"min":27,"max":36,"level":"지원 확인","summary":"불안 신호가 여러 생활 영역에서 지속되고 있을 수 있습니다."}
+  ],
+  "methodNote":"이 점검은 걱정의 강도와 통제 어려움, 회피와 생활 영향을 함께 살펴봅니다.",
+  "disclaimer":"이 결과는 불안장애를 진단하지 않는 자가점검용 참고 자료입니다.",
+  "relatedLinks":[{"title":"NIMH 불안장애 안내","url":"https://www.nimh.nih.gov/health/topics/anxiety-disorders","type":"official"},{"title":"Re:Scan 이용 안내","url":"/rescan/about.html","type":"internal"}]
+}
