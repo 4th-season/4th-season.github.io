@@ -38,9 +38,15 @@
 | executive power | 집행권 | 법 집행 권력 |
 | federative power | 연합권 | 대외 관계·전쟁·평화·동맹의 권력 |
 | trust | 신탁 | 정부 권력의 위임·수탁 성격 유지 |
+| breach of trust | 신탁 위반 | 정부 권력이 맡겨진 목적을 배반하는 행위 |
 | prerogative | 대권 | 법률 밖에서 공익을 위해 행사하는 재량 |
 | tyranny | 폭정 | 권한을 사익을 위해 남용하는 통치 |
+| unjust and unlawful force | 부당하고 불법적인 강제력 | 저항이 허용되는 강제력의 한계 |
+| appeal to the law | 법에 호소 | 법적 구제 가능성과 강제 저항의 경계 |
+| dissolution of society | 사회의 해체 | 공동체 결합 자체의 소멸 |
 | dissolution of government | 정부의 해체 | 사회의 해체와 구별 |
+| alteration of the legislative | 입법부의 변경 | 인민이 세운 입법 질서의 실질적 교체 |
+| revert to society | 사회로 돌아가다 | 기간 만료·권리 상실 때 최고권력이 공동체에 귀속 |
 | people | 인민 | 정치적 주체로 쓰일 때 유지 |
 | government | 정부 | government와 commonwealth를 구별 |
 | society | 사회 | family, civil society, political society의 층위 구분 |
@@ -53,6 +59,7 @@
 - `paternal power`와 `parental power`는 미성년 자녀의 이익을 위한 자연적 권력이며 정치권력과 구별한다.
 - `political power`는 자유인의 합의에서 나오며 사회 구성원의 생명·자유·소유 보존을 목적으로 한다.
 - `despotical power`는 자연이나 계약에서 나오지 않고 정당한 전쟁에서의 `forfeiture`에서만 나온다.
+- `dissolution of society`는 공동체 자체의 소멸이고, `dissolution of government`는 사회가 존속한 채 통치 신탁과 입법 질서가 무너지는 경우다.
 - `property`가 넓은 의미로 사람 자신과 물건, 또는 생명·자유·재산을 포괄할 때는 본문 안에서 범위를 드러낸다.
 - `power`는 문맥에 따라 권력·권한·힘으로 구분한다.
 - `magistrate`는 문맥에 따라 통치자 또는 공권력 담당자로 번역한다.
