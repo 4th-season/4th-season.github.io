@@ -1,6 +1,15 @@
 (function (global) {
   'use strict';
 
+  const STATE_MAP = {
+    clearly_higher: 'much_higher',
+    somewhat_higher: 'somewhat_higher',
+    near_average: 'similar',
+    balanced: 'similar',
+    somewhat_lower: 'somewhat_lower',
+    clearly_lower: 'much_lower'
+  };
+
   const byPriority = (a, b) => (b.priority || 0) - (a.priority || 0);
 
   const ensureObject = (value, message) => {
@@ -14,14 +23,17 @@
     return Object.entries(source).map(([id, value]) => ({ id, ...value }));
   };
 
-  const resolveState = (row) => row.relativeState || row.state || 'similar';
+  const resolveState = (row) => {
+    const raw = row.relativePosition || row.relativeState || row.state || 'near_average';
+    return STATE_MAP[raw] || raw;
+  };
 
   const selectDomainModules = (calculation, modules, options = {}) => {
     const maxDomains = Number.isInteger(options.maxDomains) ? options.maxDomains : 7;
     const rows = getDomainRows(calculation);
     const rankedIds = Array.isArray(calculation.ranking)
       ? calculation.ranking.map((item) => typeof item === 'string' ? item : item.id)
-      : rows.sort((a, b) => (b.percent || b.score || 0) - (a.percent || a.score || 0)).map((row) => row.id);
+      : [...rows].sort((a, b) => (b.percent || b.score || 0) - (a.percent || a.score || 0)).map((row) => row.id);
 
     return rankedIds.slice(0, maxDomains).map((id) => {
       const row = rows.find((item) => item.id === id);
@@ -42,26 +54,26 @@
     }).sort(byPriority);
 
     const selected = [];
-    const usedPairs = new Set();
+    const usedDomains = new Set();
     for (const rule of matched) {
-      const pairKey = [rule.a, rule.b].sort().join(':');
-      if (usedPairs.has(pairKey)) continue;
+      if (usedDomains.has(rule.a) && usedDomains.has(rule.b)) continue;
       selected.push({ type: 'pair', ...rule });
-      usedPairs.add(pairKey);
+      usedDomains.add(rule.a);
+      usedDomains.add(rule.b);
       if (selected.length >= maxPairs) break;
     }
     return selected;
   };
 
   const getBalanceModule = (calculation, modules) => {
-    const key = calculation.balance?.level || calculation.balanceLevel || calculation.profileBalance || 'mixed';
+    const key = calculation.profile?.balance || calculation.balance?.level || calculation.balanceLevel || calculation.profileBalance || 'mixed';
     const module = modules.balanceModules?.[key];
     if (!module) throw new Error(`균형도 해석 모듈을 찾을 수 없습니다: ${key}`);
     return { type: 'balance', key, ...module };
   };
 
   const getConfidenceModule = (calculation, modules) => {
-    const key = calculation.confidence?.level || calculation.confidenceLevel || calculation.responseConfidence || 'moderate';
+    const key = calculation.responseQuality?.level || calculation.confidence?.level || calculation.confidenceLevel || calculation.responseConfidence || 'moderate';
     const module = modules.confidenceModules?.[key];
     if (!module) throw new Error(`응답 참고도 모듈을 찾을 수 없습니다: ${key}`);
     return { type: 'confidence', key, ...module };
@@ -75,13 +87,13 @@
     const secondId = typeof second === 'string' ? second : second?.id;
     const topModule = domainModules.find((item) => item.domainId === topId) || domainModules[0];
     const secondModule = domainModules.find((item) => item.domainId === secondId) || domainModules[1];
-    const gap = Number(calculation.topGap ?? calculation.topDifference ?? 0);
+    const gap = Number(calculation.profile?.topGap ?? calculation.topGap ?? calculation.topDifference ?? 0);
 
     if (gap <= 5 && topModule && secondModule) {
       return {
         type: 'overview',
         title: '두 가지 반응 경향이 함께 두드러집니다',
-        text: `${topModule.title} 동시에 ${secondModule.title.toLowerCase()} 두 경향의 점수 차이가 작아 상황에 따라 함께 나타날 가능성이 있습니다.`
+        text: `${topModule.title} 동시에 ${secondModule.title} 두 경향의 점수 차이가 작아 상황에 따라 함께 나타날 가능성이 있습니다.`
       };
     }
     if (pairModules.length) {
@@ -129,6 +141,7 @@
   global.ReScanProfileInterpreter = {
     interpret,
     selectDomainModules,
-    selectPairModules
+    selectPairModules,
+    resolveState
   };
 }(window));
