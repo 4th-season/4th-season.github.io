@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1.0",
+  "domain": "meaning_orientation",
+  "status": "draft",
+  "questions": [
+    {"id":"tc_mo_01","text":"일상에서 겪은 일이 내 삶에 어떤 의미를 남기는지 생각해 보는 편이다.","direction":"forward","context":"daily"},
+    {"id":"tc_mo_02","text":"눈앞의 이익만으로 설명되지 않는 가치를 중요하게 여긴다.","direction":"forward","context":"daily"},
+    {"id":"tc_mo_03","text":"자연이나 예술을 접할 때 나보다 더 큰 흐름과 연결된 느낌을 받을 때가 있다.","direction":"forward","context":"daily"},
+    {"id":"tc_mo_04","text":"중요한 선택에서는 효율뿐 아니라 내가 지키고 싶은 가치도 살핀다.","direction":"forward","context":"daily"},
+    {"id":"tc_mo_05","text":"반복되는 생활 속에서도 의미 있는 순간을 찾으려 한다.","direction":"forward","context":"daily"},
+    {"id":"tc_mo_06","text":"서로 다른 경험 사이의 공통된 의미나 상징을 떠올리는 편이다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_mo_07","text":"개인의 문제를 더 넓은 사회나 시대의 맥락에서 생각해 보기도 한다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_mo_08","text":"삶의 방향을 정할 때 장기적으로 남기고 싶은 것을 생각한다.","direction":"forward","context":"cognitive"},
+    {"id":"tc_mo_09","text":"사람과의 만남이 서로의 삶에 어떤 영향을 주는지 생각하는 편이다.","direction":"forward","context":"relationship"},
+    {"id":"tc_mo_10","text":"나와 다른 배경의 사람에게서 배울 의미를 찾으려 한다.","direction":"forward","context":"relationship"},
+    {"id":"tc_mo_11","text":"일이나 공부가 어떤 가치와 연결되는지 알면 더 몰입되는 편이다.","direction":"forward","context":"work"},
+    {"id":"tc_mo_12","text":"성과뿐 아니라 그 과정이 누구에게 어떤 의미가 있는지도 생각한다.","direction":"forward","context":"work"},
+    {"id":"tc_mo_13","text":"설명하기 어려운 의미나 상징보다는 눈에 보이는 사실만 중요하다고 느낀다.","direction":"reverse","context":"counter"},
+    {"id":"tc_mo_14","text":"삶의 큰 방향보다 당장 필요한 일을 처리하는 것으로 충분하다고 느끼는 편이다.","direction":"reverse","context":"counter"}
+  ]
+}
