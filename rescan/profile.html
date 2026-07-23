@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#8b6eb0">
+  <meta name="theme-color" content="#214f3d">
   <meta name="robots" content="noindex,follow">
   <meta name="description" content="일상에서 나타나는 기질과 성격의 반응 경향을 7개 영역과 유형 해설로 살펴보는 성인용 자기이해 성향 점검입니다.">
   <meta property="og:type" content="website">
@@ -16,15 +16,43 @@
 </head>
 <body class="profile-page">
   <a class="skip-link" href="#main">본문으로 바로가기</a>
-  <header class="site-header"><div class="rs-container"><a class="brand" href="/rescan/" aria-label="Re:Scan 홈"><b>Re:</b>Scan <span>[나 체크리스트]</span></a><nav class="site-nav" aria-label="Re:Scan 주요 메뉴"><a href="/rescan/">홈</a><a href="/rescan/#topics">주제별 보기</a><a href="/rescan/about.html">이용 안내</a></nav></div></header>
+  <header class="site-header profile-header">
+    <div class="rs-container">
+      <a class="brand" href="/rescan/" aria-label="Re:Scan 홈"><b>Re:</b>Scan <span>[나 체크리스트]</span></a>
+      <nav class="site-nav" aria-label="Re:Scan 주요 메뉴"><a href="/rescan/">홈</a><a href="/rescan/#topics">주제별 보기</a><a href="/rescan/about.html">이용 안내</a></nav>
+    </div>
+  </header>
+
   <main id="main" class="page-shell" tabindex="-1">
-    <section class="content-section profile-section" aria-labelledby="profile-title">
-      <div class="rs-container profile-container">
-        <div class="profile-intro">
+    <section class="profile-lounge" aria-labelledby="profile-title">
+      <div class="rs-container lounge-grid">
+        <div class="lounge-copy">
           <p class="eyebrow">PUBLIC EDITION · ADULT 18+</p>
+          <p class="lounge-invitation">잠시 앉아, 평소의 나를 천천히 살펴보는 시간</p>
           <h1 id="profile-title">기질과 성격<br>자기이해 점검</h1>
           <p class="lead">일상에서 반복되는 반응 방식과 자신을 조절하는 경향을 7개 영역으로 살펴봅니다. 결과에서는 유형 이름뿐 아니라 강점, 약점으로 바뀔 수 있는 지점, 관계와 일에서 나타나는 모습, 압박받을 때의 반응과 앞으로 참고할 방향을 함께 설명합니다.</p>
+          <div class="lounge-badges" aria-label="점검 특징">
+            <span>70문항</span><span>약 10~15분</span><span>브라우저 안에서 계산</span>
+          </div>
+          <a class="lounge-scroll" href="#profile-app">아래에서 점검 시작하기 <span aria-hidden="true">↓</span></a>
         </div>
+
+        <div class="lounge-scene" aria-hidden="true">
+          <div class="room-wall">
+            <div class="room-window"><span class="window-sky"></span><span class="window-tree one"></span><span class="window-tree two"></span></div>
+            <div class="room-frame"><span></span></div>
+            <div class="floor-lamp"><i class="lamp-shade"></i><i class="lamp-pole"></i><i class="lamp-base"></i></div>
+            <div class="room-plant"><i class="leaf l1"></i><i class="leaf l2"></i><i class="leaf l3"></i><i class="leaf l4"></i><i class="pot"></i></div>
+            <div class="room-sofa"><i class="sofa-back"></i><i class="sofa-seat"></i><i class="sofa-arm left"></i><i class="sofa-arm right"></i><i class="cushion one"></i><i class="cushion two"></i></div>
+            <div class="room-table"><i class="table-top"></i><i class="table-leg"></i><i class="tea-cup"></i><i class="tea-book"></i></div>
+            <div class="room-rug"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section profile-section" aria-label="기질과 성격 점검">
+      <div class="rs-container profile-container">
         <noscript><div class="notice" role="alert">이 점검은 문항 표시와 결과 계산을 위해 자바스크립트가 필요합니다.</div></noscript>
         <div id="profile-app" aria-live="polite">
           <div class="panel"><p>점검 데이터를 불러오는 중입니다.</p></div>
@@ -32,7 +60,8 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="rs-container"><span>Re:Scan | 공개판 · 자기이해 성향 점검</span><a href="/rescan/">Re:Scan 홈</a></div></footer>
+
+  <footer class="site-footer profile-footer"><div class="rs-container"><span>Re:Scan | 공개판 · 자기이해 성향 점검</span><a href="/rescan/">Re:Scan 홈</a></div></footer>
   <script src="/rescan/assets/js/profile-scoring.js" defer></script>
   <script src="/rescan/assets/js/profile-interpreter.js" defer></script>
   <script src="/rescan/assets/js/profile-app.js" defer></script>
