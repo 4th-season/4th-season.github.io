@@ -9,8 +9,40 @@ permissions:
   contents: read
 
 jobs:
-  probe:
+  verify-public-site:
     runs-on: ubuntu-latest
+    timeout-minutes: 6
+
     steps:
-      - name: Confirm workflow execution
-        run: echo "career senior live probe is running"
+      - name: Checkout verification branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Verify deployed senior and youth routes
+        env:
+          LIVE_BASE_URL: https://4th-season.com
+          LIVE_RESULT_PATH: /tmp/career-senior-live-result.json
+          LIVE_SCREENSHOT_PATH: /tmp/career-senior-live.png
+          LIVE_MAX_ATTEMPTS: '12'
+          LIVE_DELAY_MS: '10000'
+        run: node career-explorer/senior/tests/live.mjs
+
+      - name: Upload public verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: career-senior-live-probe-evidence
+          path: |
+            /tmp/career-senior-live-result.json
+            /tmp/career-senior-live.png
+          if-no-files-found: warn
+          retention-days: 14
