@@ -13,7 +13,7 @@ permissions:
 jobs:
   verify-live:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 8
 
     steps:
       - name: Checkout verification branch
@@ -32,26 +32,33 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Verify public career routes
+      - name: Verify public career routes and preserve outcome
         env:
           LIVE_BASE_URL: https://4th-season.com
           LIVE_RESULT_PATH: /tmp/career-senior-live-result.json
           LIVE_SCREENSHOT_PATH: /tmp/career-senior-live.png
-          LIVE_MAX_ATTEMPTS: '36'
+          LIVE_MAX_ATTEMPTS: '18'
           LIVE_DELAY_MS: '10000'
-        run: node career-explorer/senior/tests/live.mjs
+        run: |
+          set +e
+          node career-explorer/senior/tests/live.mjs 2>&1 | tee /tmp/career-senior-live.log
+          code=${PIPESTATUS[0]}
+          echo "$code" > /tmp/career-senior-live-exit-code
+          exit 0
 
-      - name: Upload evidence
+      - name: Upload evidence and diagnostic log
         uses: actions/upload-artifact@v4
         with:
           name: career-senior-live-evidence-once
           path: |
             /tmp/career-senior-live-result.json
             /tmp/career-senior-live.png
-          if-no-files-found: error
+            /tmp/career-senior-live.log
+            /tmp/career-senior-live-exit-code
+          if-no-files-found: warn
           retention-days: 14
 
-      - name: Record verified deployment on main
+      - name: Record deployment outcome on main
         run: |
           git fetch origin main
           git checkout -B main origin/main
@@ -59,9 +66,17 @@ jobs:
           from pathlib import Path
           import json
           import subprocess
-          result = json.loads(Path('/tmp/career-senior-live-result.json').read_text(encoding='utf-8'))
+          from datetime import datetime, timezone
+
           sha = subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip()
-          content = f'''# 공개 배포 검증 완료
+          result_path = Path('/tmp/career-senior-live-result.json')
+          log_path = Path('/tmp/career-senior-live.log')
+          exit_path = Path('/tmp/career-senior-live-exit-code')
+          exit_code = exit_path.read_text(encoding='utf-8').strip() if exit_path.exists() else 'unknown'
+
+          if result_path.exists() and exit_code == '0':
+              result = json.loads(result_path.read_text(encoding='utf-8'))
+              content = f'''# 공개 배포 검증 완료
 
 - 검증 시각(UTC): `{result['verifiedAt']}`
 - 기준 커밋: `{sha}`
@@ -71,12 +86,30 @@ jobs:
 - 결과: 3개 전환 경로·9개 직업 생성 확인
 - 상태: 통과
 '''
+          else:
+              checked_at = datetime.now(timezone.utc).isoformat()
+              log = log_path.read_text(encoding='utf-8', errors='replace') if log_path.exists() else '검증 로그 없음'
+              tail = log[-6000:].replace('```', "'''")
+              content = f'''# 공개 배포 검증 미통과
+
+- 검증 시각(UTC): `{checked_at}`
+- 기준 커밋: `{sha}`
+- 종료 코드: `{exit_code}`
+- 상태: 미통과
+
+## 마지막 검증 로그
+
+```text
+{tail}
+```
+'''
+
           Path('career-explorer/senior/LIVE_DEPLOYED.md').write_text(content, encoding='utf-8')
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add career-explorer/senior/LIVE_DEPLOYED.md
           if ! git diff --cached --quiet; then
-            git commit -m 'Record verified senior career deployment'
+            git commit -m 'Record senior career live verification outcome'
             git push origin main
           fi
