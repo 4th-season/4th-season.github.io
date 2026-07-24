@@ -1,0 +1,16 @@
+name: Career Senior Live Probe
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm workflow execution
+        run: echo "career senior live probe is running"
