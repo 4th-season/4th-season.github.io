@@ -87,10 +87,10 @@ jobs:
           retention-days: 14
 
   live-deployment:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.head_ref == 'career-senior-live-verify')
     needs: senior-career-smoke
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 8
     permissions:
       contents: write
 
@@ -116,7 +116,7 @@ jobs:
           LIVE_BASE_URL: https://4th-season.com
           LIVE_RESULT_PATH: /tmp/career-senior-live-result.json
           LIVE_SCREENSHOT_PATH: /tmp/career-senior-live.png
-          LIVE_MAX_ATTEMPTS: '36'
+          LIVE_MAX_ATTEMPTS: '18'
           LIVE_DELAY_MS: '10000'
         run: node career-explorer/senior/tests/live.mjs
 
@@ -131,6 +131,7 @@ jobs:
           retention-days: 14
 
       - name: Record successful deployment
+        if: github.event_name == 'push'
         env:
           DEPLOY_SHA: ${{ github.sha }}
         run: |
