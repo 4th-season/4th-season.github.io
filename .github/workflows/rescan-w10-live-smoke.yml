@@ -33,6 +33,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Validate W10 reviewed content
+        run: node rescan/tests/w10-content-review-static.mjs
+
       - name: Install Playwright
         run: |
           npm install --no-save playwright
