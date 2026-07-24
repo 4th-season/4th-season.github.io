@@ -2,7 +2,7 @@
   "schemaVersion":"1.4.0",
   "series":"[나 체크리스트]",
   "section":"Re:Scan",
-  "updatedAt":"2026-07-23",
+  "updatedAt":"2026-07-24",
   "items":[
     {"id":"stress","title":"지각된 스트레스","subtitle":"긴장과 회복 저하 신호 자가점검","grade":"A","mode":"scored","category":"정서","status":"published","keywords":["스트레스","긴장","회복","피로"],"dataPath":"/rescan/data/checklists/stress-placeholder.json","articlePath":"/rescan/tistory/stress.html"},
     {"id":"burnout","title":"번아웃","subtitle":"소진이 반복되는 생활 패턴 자가점검","grade":"B","mode":"pattern","category":"일·학습","status":"published","keywords":["번아웃","소진","업무","공부","회복"],"dataPath":"/rescan/data/checklists/burnout-pattern.json","articlePath":"/rescan/tistory/burnout.html"},
@@ -14,6 +14,7 @@
     {"id":"anxiety-signals","title":"불안 신호","subtitle":"걱정과 긴장이 생활에 미치는 영향 자가점검","grade":"B","mode":"pattern","category":"정서","status":"published","keywords":["불안","걱정","긴장","회피","집중"],"dataPath":"/rescan/data/checklists/anxiety-signals.json","articlePath":"/rescan/tistory/anxiety-signals.html"},
     {"id":"depressive-signals","title":"우울 신호","subtitle":"의욕과 흥미, 생활 변화 자가점검","grade":"B","mode":"guide","category":"정서","status":"published","keywords":["우울","의욕","흥미","피로","생활변화"],"dataPath":"/rescan/data/checklists/depressive-signals.json","articlePath":"/rescan/tistory/depressive-signals.html"},
     {"id":"anger-regulation","title":"분노조절","subtitle":"화가 커지는 장면과 표현 방식 자가점검","grade":"B","mode":"pattern","category":"정서","status":"published","keywords":["분노","화","충동","관계","회복"],"dataPath":"/rescan/data/checklists/anger-regulation.json","articlePath":"/rescan/tistory/anger-regulation.html"},
-    {"id":"emotional-expression","title":"감정표현","subtitle":"내 감정을 알아차리고 말로 전하는 방식 자가점검","grade":"A","mode":"scored","category":"관계","status":"published","keywords":["감정표현","의사소통","도움요청","공감"],"dataPath":"/rescan/data/checklists/emotional-expression.json","articlePath":"/rescan/tistory/emotional-expression.html"}
+    {"id":"emotional-expression","title":"감정표현","subtitle":"내 감정을 알아차리고 말로 전하는 방식 자가점검","grade":"A","mode":"scored","category":"관계","status":"published","keywords":["감정표현","의사소통","도움요청","공감"],"dataPath":"/rescan/data/checklists/emotional-expression.json","articlePath":"/rescan/tistory/emotional-expression.html"},
+    {"id":"self-efficacy","title":"자기효능감","subtitle":"과제를 시작하고 해결하며 다시 시도하는 힘 자가점검","grade":"A","mode":"scored","category":"자기이해","status":"published","keywords":["자기효능감","자신감","문제해결","재시도","도움요청"],"dataPath":"/rescan/data/checklists/self-efficacy.json","articlePath":"/rescan/tistory/self-efficacy.html"}
   ]
 }
