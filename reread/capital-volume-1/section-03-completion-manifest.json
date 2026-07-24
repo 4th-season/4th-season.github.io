@@ -5,8 +5,8 @@
   "title_ko": "가치형태 또는 교환가치",
   "base_edition": "German fourth edition, 1890 / MEW 23",
   "english_reference": "1887 Samuel Moore and Edward Aveling, edited by Frederick Engels",
-  "published_paragraphs": 25,
-  "published_through": "chapter-01-section-03-p025.html",
+  "published_paragraphs": 28,
+  "published_through": "chapter-01-section-03-p028.html",
   "structure": [
     {
       "id": "A",
@@ -35,6 +35,6 @@
     {"id":"D","title_ko":"화폐형태","subsections":[],"status":"pending"}
   ],
   "production_rule": "한국어 번역 우선, 독일어 원문 접이식, 영문 대조문 선택형, 문단별 완전 대응, 빈 블록 금지",
-  "next_required_work": "제26문단부터 실제 가치크기의 변화와 상대적 가치표현이 반드시 일치하지 않는다는 결론을 순차 제작",
+  "next_required_work": "제29문단부터 외투 두 벌이 아마포의 가치량은 표현하지만 외투 자신의 가치량은 표현하지 못한다는 예시를 순차 제작",
   "updated_at": "2026-07-24"
 }
