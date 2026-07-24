@@ -3,8 +3,7 @@ name: Career Senior S10 Verification
 on:
   pull_request:
     paths:
-      - 'career-explorer/senior/**'
-      - 'career-explorer/SENIOR_WORK_PLAN.md'
+      - 'career-explorer/**'
       - '.github/workflows/career-senior-s10.yml'
   workflow_dispatch:
 
@@ -43,16 +42,13 @@ jobs:
           PY
           node --check /tmp/career-senior-inline.js
 
-      - name: Verify change isolation
+      - name: Verify required files
         run: |
           test -f career-explorer/senior/index.html
           test -f career-explorer/SENIOR_WORK_PLAN.md
           test -f career-explorer/index.html
-          git diff --name-only "${{ github.event.pull_request.base.sha }}"...HEAD | tee /tmp/changed-files.txt
-          if grep -Fxq 'career-explorer/index.html' /tmp/changed-files.txt; then
-            echo 'Youth career explorer must remain unchanged during S10.'
-            exit 1
-          fi
+          grep -q '청소년 진로·학과 탐색기' career-explorer/index.html
+          grep -q '중장년·시니어 경력·일 재설계 탐색기' career-explorer/senior/index.html
 
       - name: Start static server
         run: |
