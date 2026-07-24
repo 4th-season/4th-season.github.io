@@ -1,0 +1,59 @@
+{
+  "schemaVersion":"1.2.0",
+  "id":"assertiveness",
+  "series":"[나 체크리스트]",
+  "section":"Re:Scan",
+  "grade":"B",
+  "mode":"pattern",
+  "status":"published",
+  "title":"자기주장",
+  "subtitle":"의견·부탁·거절·반대 의견을 공격적이지 않게 표현하는 방식 자가점검",
+  "description":"최근 2주 동안 자신의 의견과 필요를 말하고, 부탁하거나 거절하며, 반대 의견을 다루는 방식을 살펴봅니다. 말의 크기나 지배성을 평가하지 않고 조용하더라도 분명하고 존중 있게 표현하는 행동에 초점을 둡니다.",
+  "period":"최근 2주",
+  "estimatedMinutes":4,
+  "orderPolicy":{"strategy":"balanced","maxSameCategoryRun":2,"sessionStable":true,"useReserveQuestions":false},
+  "contentReview":{"status":"literature-reviewed","date":"2026-07-24","scope":"자기주장과 공격성·수동성의 개념 경계를 문헌으로 검토함. 자체 생활 문항이며 전문가 패널 CVI·신뢰도·요인타당도·규준화는 미검증."},
+  "categories":[
+    {"id":"opinion-expression","label":"의견 말하기","description":"상대와 다를 수 있는 자신의 생각을 짧고 분명하게 표현하는지"},
+    {"id":"request-help","label":"부탁과 도움 요청","description":"필요한 도움의 내용과 범위를 구체적으로 말하는지"},
+    {"id":"refusal-limit","label":"거절과 한계 알리기","description":"감당하기 어려운 부탁이나 상황에서 가능한 범위를 알리는지"},
+    {"id":"disagreement","label":"반대 의견 다루기","description":"동의하지 않는 상황에서도 공격과 회피 사이에서 입장을 조율하는지"}
+  ],
+  "scale":[{"value":0,"label":"전혀 아니다"},{"value":1,"label":"가끔 그렇다"},{"value":2,"label":"자주 그렇다"},{"value":3,"label":"거의 그렇다"}],
+  "questions":[
+    {"id":"as01","category":"opinion-expression","text":"의견이 달라도 내 생각을 짧고 분명하게 말할 수 있다.","reverse":true},
+    {"id":"as02","category":"request-help","text":"필요한 도움을 구체적으로 부탁할 수 있다.","reverse":true},
+    {"id":"as03","category":"refusal-limit","text":"감당하기 어려운 부탁에는 거절 의사를 말할 수 있다.","reverse":true},
+    {"id":"as04","category":"disagreement","text":"반대 의견을 들으면 사실 확인보다 방어하거나 공격하는 말이 먼저 나온다.","reverse":false},
+    {"id":"as05","category":"opinion-expression","text":"상대가 실망할까 걱정되어 내 의견을 말하지 않는다.","reverse":false},
+    {"id":"as06","category":"request-help","text":"부탁할 때 필요한 내용보다 미안하다는 말만 길어진다.","reverse":false},
+    {"id":"as07","category":"refusal-limit","text":"거절해야 할 때 답을 미루거나 이유를 지나치게 꾸민다.","reverse":false},
+    {"id":"as08","category":"disagreement","text":"상대의 말을 확인한 뒤 내 입장을 다시 설명할 수 있다.","reverse":true},
+    {"id":"as09","category":"opinion-expression","text":"말할 기회를 놓친 뒤 속으로 불만을 오래 쌓아 둔다.","reverse":false},
+    {"id":"as10","category":"request-help","text":"상대가 선택할 수 있도록 부탁의 내용과 범위를 분명히 말한다.","reverse":true},
+    {"id":"as11","category":"refusal-limit","text":"내 한계를 알릴 때 상대를 비난하지 않고 현재 가능한 범위를 설명할 수 있다.","reverse":true},
+    {"id":"as12","category":"disagreement","text":"상대가 동의하지 않아도 내 의견을 말한 사실 자체를 후회하지 않는다.","reverse":true}
+  ],
+  "results":[
+    {"min":0,"max":8,"level":"의사표현이 비교적 분명하고 유연","summary":"최근에는 의견, 부탁, 거절, 반대 의견을 비교적 분명하게 표현하면서 상대의 선택과 입장도 함께 고려하는 편입니다.","questions":["분명하게 말할 수 있었던 최근 장면은 무엇인가요?","지금의 표현 방식을 유지하게 하는 관계 조건은 무엇인가요?"],"actions":["이번 주에 잘 전달된 요청이나 거절 한 가지를 기록하기","의견을 말할 때 사용한 짧고 분명한 문장을 남겨 두기"]},
+    {"min":9,"max":17,"level":"일부 장면에서 표현이 흔들림","summary":"평가받거나 관계가 중요한 장면에서 말을 미루거나, 반대로 방어적인 표현이 먼저 나올 수 있습니다. 어느 기능에서 흔들리는지 나누어 볼 단계입니다.","questions":["의견·부탁·거절·반대 의견 중 가장 어려운 장면은 무엇인가요?","그때 두려운 결과는 갈등, 거절, 실망 중 무엇에 가까운가요?"],"actions":["말하기 전에 사실·내 입장·요청을 한 문장씩 적기","작은 부탁이나 낮은 위험의 거절부터 한 번 연습하기"]},
+    {"min":18,"max":26,"level":"회피와 방어 반응이 반복","summary":"필요한 말을 미루거나 모호하게 표현하고, 반대 상황에서는 방어하거나 공격하는 반응이 반복될 수 있습니다. 말의 세기보다 목적과 범위를 명확히 하는 연습이 필요합니다.","questions":["최근 말하지 못해 불만이 쌓인 장면은 무엇인가요?","내가 원하는 변화나 가능한 한계를 한 문장으로 바꾸면 어떻게 되나요?"],"actions":["대화 전에 관찰 사실·내 필요·가능한 요청을 세 줄로 적기","즉시 답하기 어려운 부탁에는 답변 시점을 먼저 말하기","대화 뒤 상대의 반응과 내 표현을 구분해 기록하기"]},
+    {"min":27,"max":36,"level":"안전과 관계 조건을 먼저 확인","summary":"의견이나 거절을 말하는 일이 매우 어렵거나, 반대 상황에서 강한 방어 반응이 나타날 수 있습니다. 표현 기술만의 문제가 아니라 위계, 통제, 과거 경험, 관계 안전성이 영향을 줄 수 있습니다.","questions":["이 관계에서 의견이나 거절을 말했을 때 실제 불이익이나 위협이 있나요?","혼자 말하기보다 동행이나 중재가 필요한 장면은 무엇인가요?"],"actions":["안전한 관계에서 짧은 의견 한 문장부터 연습하기","위계가 큰 상황에서는 기록·공식 절차·중재자를 활용하기","통제·협박·폭력 위험이 있다면 직접 설득보다 거리 두기와 외부 지원을 우선하기"]}
+  ],
+  "patternResults":[
+    {"min":0,"max":8,"level":"의사표현이 비교적 분명하고 유연","summary":"최근에는 의견, 부탁, 거절, 반대 의견을 비교적 분명하게 표현하면서 상대의 선택과 입장도 함께 고려하는 편입니다.","questions":["분명하게 말할 수 있었던 최근 장면은 무엇인가요?","지금의 표현 방식을 유지하게 하는 관계 조건은 무엇인가요?"],"actions":["이번 주에 잘 전달된 요청이나 거절 한 가지를 기록하기","의견을 말할 때 사용한 짧고 분명한 문장을 남겨 두기"]},
+    {"min":9,"max":17,"level":"일부 장면에서 표현이 흔들림","summary":"평가받거나 관계가 중요한 장면에서 말을 미루거나, 반대로 방어적인 표현이 먼저 나올 수 있습니다. 어느 기능에서 흔들리는지 나누어 볼 단계입니다.","questions":["의견·부탁·거절·반대 의견 중 가장 어려운 장면은 무엇인가요?","그때 두려운 결과는 갈등, 거절, 실망 중 무엇에 가까운가요?"],"actions":["말하기 전에 사실·내 입장·요청을 한 문장씩 적기","작은 부탁이나 낮은 위험의 거절부터 한 번 연습하기"]},
+    {"min":18,"max":26,"level":"회피와 방어 반응이 반복","summary":"필요한 말을 미루거나 모호하게 표현하고, 반대 상황에서는 방어하거나 공격하는 반응이 반복될 수 있습니다. 말의 세기보다 목적과 범위를 명확히 하는 연습이 필요합니다.","questions":["최근 말하지 못해 불만이 쌓인 장면은 무엇인가요?","내가 원하는 변화나 가능한 한계를 한 문장으로 바꾸면 어떻게 되나요?"],"actions":["대화 전에 관찰 사실·내 필요·가능한 요청을 세 줄로 적기","즉시 답하기 어려운 부탁에는 답변 시점을 먼저 말하기","대화 뒤 상대의 반응과 내 표현을 구분해 기록하기"]},
+    {"min":27,"max":36,"level":"안전과 관계 조건을 먼저 확인","summary":"의견이나 거절을 말하는 일이 매우 어렵거나, 반대 상황에서 강한 방어 반응이 나타날 수 있습니다. 표현 기술만의 문제가 아니라 위계, 통제, 과거 경험, 관계 안전성이 영향을 줄 수 있습니다.","questions":["이 관계에서 의견이나 거절을 말했을 때 실제 불이익이나 위협이 있나요?","혼자 말하기보다 동행이나 중재가 필요한 장면은 무엇인가요?"],"actions":["안전한 관계에서 짧은 의견 한 문장부터 연습하기","위계가 큰 상황에서는 기록·공식 절차·중재자를 활용하기","통제·협박·폭력 위험이 있다면 직접 설득보다 거리 두기와 외부 지원을 우선하기"]}
+  ],
+  "categoryGuides":{
+    "opinion-expression":{"low":"다른 의견도 비교적 분명하게 말하는 편입니다.","mid":"실망이나 평가를 걱정해 말을 미루는지 살펴보세요.","high":"사실과 의견을 한 문장씩 분리해 낮은 위험의 장면부터 말해 보세요."},
+    "request-help":{"low":"필요한 도움을 구체적으로 요청하는 편입니다.","mid":"미안함 때문에 요청 내용이 흐려지는지 살펴보세요.","high":"대상·내용·기한·선택 가능성을 포함해 부탁을 짧게 정리해 보세요."},
+    "refusal-limit":{"low":"현재 가능한 범위와 한계를 비교적 알리는 편입니다.","mid":"거절을 미루거나 지나치게 설명하는지 살펴보세요.","high":"결론을 먼저 말하고 가능한 대안이 있을 때만 덧붙여 보세요."},
+    "disagreement":{"low":"반대 의견 속에서도 자신의 입장을 유지하는 편입니다.","mid":"반대를 공격이나 거절로 받아들이는지 살펴보세요.","high":"상대 입장 확인·내 입장·다음 선택의 순서로 대화를 나누어 보세요."}
+  },
+  "methodNote":"총점은 12문항을 합산하며 분명하고 존중 있는 의사표현을 나타내는 문항은 역채점합니다. 점수가 낮을수록 자기주장 행동이 비교적 유연하고, 점수가 높을수록 회피·모호함·방어 반응이 자주 나타났음을 뜻합니다. 결과 구간은 자체 설명 구간이며 표준화된 절단점이나 인구 규준이 아닙니다.",
+  "disclaimer":"이 체크리스트는 성격, 의사소통 능력 또는 관계 적합성을 진단하지 않습니다. 위계, 문화, 안전, 권한 차이와 과거 관계 경험에 따라 표현 방식은 달라질 수 있습니다.",
+  "references":[{"title":"The Adult Self Expression Scale: Validation by the Multitrait-Multimethod Procedure","author":"Hollandsworth, Galassi and Gay","year":1977,"type":"research"},{"title":"Your Perfect Right: Assertiveness and Equality in Your Life and Relationships","author":"Alberti and Emmons","year":2008,"type":"book"}],
+  "relatedLinks":[{"title":"관계경계 점검","url":"/rescan/checklist.html?id=relationship-boundaries","type":"internal"},{"title":"감정표현 점검","url":"/rescan/checklist.html?id=emotional-expression","type":"internal"}]
+}
