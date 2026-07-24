@@ -1,12 +1,65 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="문해력 공방과 어휘 영역, 문법관·독서관·문학관을 단계별로 연결하는 Note 문해력 계열 지도입니다."><link rel="canonical" href="https://4th-season.com/learn/note/"><link rel="stylesheet" href="/assets/remap.css"><title>Note 문해력 중심 지도 | Re:Map</title></head>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="문해력 공방의 8단계 지도와 어휘 영역, 문법관·독서관·문학관을 단계별로 연결하는 Note 문해력 계열 지도입니다.">
+  <link rel="canonical" href="https://4th-season.com/learn/note/">
+  <link rel="stylesheet" href="/assets/remap.css">
+  <title>Note 문해력 중심 지도 | Re:Map</title>
+  <style>
+    .workshop-tree{margin-top:24px}
+    .workshop-root{display:grid;grid-template-columns:58px 1fr auto;gap:16px;align-items:center;padding:19px 21px;background:var(--branch-deep);color:#fff;border-radius:9px;box-shadow:0 13px 28px rgba(34,63,84,.16)}
+    .workshop-root .root-no{display:grid;place-items:center;width:58px;height:58px;background:var(--branch-accent);color:var(--branch-deep);border-radius:8px;font-weight:950}
+    .workshop-root small{display:block;margin-bottom:3px;color:#dbe8f0;font-size:.7rem;font-weight:900;letter-spacing:.12em}
+    .workshop-root strong{display:block;font-size:1.1rem;line-height:1.45}
+    .workshop-root em{font-style:normal;color:var(--branch-accent);font-size:.78rem;font-weight:900;white-space:nowrap}
+    .workshop-flow{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:15px 0 0 31px;padding:23px 0 0 24px;border-left:2px solid #c9d7df}
+    .workshop-flow:before{content:"";position:absolute;left:0;top:0;width:calc(100% - 12px);height:2px;background:#c9d7df}
+    .workshop-card{position:relative;display:flex;flex-direction:column;min-height:174px;padding:16px;background:#fff;border:1px solid #cfdae1;border-top:6px solid var(--step-color,#527997);border-radius:8px;transition:.2s}
+    .workshop-card:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(35,70,93,.1)}
+    .workshop-card:before{content:"";position:absolute;left:50%;top:-25px;width:2px;height:19px;background:#c9d7df}
+    .workshop-card .step{font-size:.68rem;font-weight:950;letter-spacing:.11em;color:var(--step-color,#527997)}
+    .workshop-card b{display:block;margin:6px 0 5px;color:var(--branch-deep);font-size:1rem;line-height:1.4}
+    .workshop-card span{display:block;color:var(--muted);font-size:.79rem;line-height:1.55}
+    .workshop-card em{display:block;margin-top:auto;padding-top:10px;color:var(--branch-deep);font-style:normal;font-size:.73rem;font-weight:900}
+    .other-area{margin-top:25px}
+    @media(max-width:900px){.workshop-flow{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){.workshop-root{grid-template-columns:48px 1fr}.workshop-root .root-no{width:48px;height:48px}.workshop-root em{grid-column:2}.workshop-flow{grid-template-columns:1fr;margin-left:14px;padding-left:18px}.workshop-card:before{left:-20px;top:50%;width:18px;height:2px}}
+  </style>
+</head>
 <body class="map-depth-3" style="--branch-deep:#2f4f67;--branch-mid:#527997;--branch-accent:#dfbd66">
 <header class="site-header"><div class="wrap"><nav class="nav"><a class="brand" href="/learn/">← 문해력 지도</a><div class="nav-links"><a href="/sitemap/">한눈에 보기</a><a href="https://gugeoro.tistory.com/265" target="_blank" rel="noopener">현재 안내지도</a></div></nav></div></header>
-<section class="hero" data-mark="NOTE"><div class="wrap"><span class="kicker">DEPTH 3 · NOTE</span><h1>문해력 중심 지도</h1><p>읽기와 해석을 익히는 두 주영역에서 시작해 문법·독서·문학 참고자료관으로 내려가는 Note의 내부 지도입니다.</p><div class="route"><a href="/remap/">전체 지도</a><a href="/learn/">문해력 지도</a><b>Note</b><span>주영역·자료관</span></div></div></section>
-<main class="main"><div class="wrap"><nav class="trail" aria-label="현재 위치"><a href="/remap/">지도들의 지도</a><span>›</span><a href="/learn/">문해력 지도</a><span>›</span><b>Note</b></nav>
-<div class="depth"><div class="depth-item"><b>DEPTH 1</b><strong>Re:Map 전체 지도</strong></div><div class="depth-item"><b>DEPTH 2</b><strong>문해력 지도</strong></div><div class="depth-item"><b>DEPTH 3 · 현재</b><strong>Note 내부 지도</strong></div></div>
-<section class="map-panel"><h2>현재 연결된 Note 대표 지도</h2><p>전체 운영 구조와 발행 글은 디지털 국어 도서관의 안내지도에서 확인합니다.</p><a class="external" href="https://gugeoro.tistory.com/265" target="_blank" rel="noopener"><span><b>Note 문해력 안내지도</b><br>주영역과 참고자료관의 전체 흐름을 확인합니다.</span><em>대표 지도 열기 →</em></a></section>
-<section class="map-panel"><h2>1. 두 개의 주영역</h2><p>실제 문해력 학습과 어휘 읽기는 두 갈래로 구분합니다.</p><div class="subflow"><a class="subnode" href="https://gugeoro.tistory.com/270" target="_blank" rel="noopener"><span class="num">01</span><div><h3>문해력 공방</h3><p>읽기와 해석의 단계를 익히는 영역</p></div><b class="go">영역 열기 →</b></a><a class="subnode" href="https://gugeoro.tistory.com/261" target="_blank" rel="noopener"><span class="num">02</span><div><h3>문해력 어휘</h3><p>일상어·감정어·한자어의 뜻과 쓰임을 함께 읽는 영역</p></div><b class="go">영역 열기 →</b></a></div></section>
-<section class="map-panel"><h2>2. 참고자료관</h2><p>필요한 언어 지식을 별도의 자료관에서 찾아봅니다.</p><div class="subflow"><a class="subnode" href="https://gugeoro.tistory.com/264" target="_blank" rel="noopener"><span class="num">A</span><div><h3>문법관</h3><p>말과 문장의 구조를 읽는 자료관</p></div><b class="go">자료관 →</b></a><a class="subnode" href="https://gugeoro.tistory.com/263" target="_blank" rel="noopener"><span class="num">B</span><div><h3>독서관</h3><p>글의 구조와 의미 흐름을 읽는 자료관</p></div><b class="go">자료관 →</b></a><a class="subnode" href="https://gugeoro.tistory.com/262" target="_blank" rel="noopener"><span class="num">C</span><div><h3>문학관</h3><p>작품의 정서와 상징을 읽는 자료관</p></div><b class="go">자료관 →</b></a></div></section>
-<section class="map-panel"><h2>다음 확장 자리</h2><p>작문관과 화작관이 실제로 만들어질 때 아래 경로를 추가해 이 지도에 연결합니다.</p><div class="slots"><div class="slot"><strong>작문관</strong><span>쓰기의 구조와 표현을 다듬는 자료관</span><code>/learn/note/writing/</code></div><div class="slot"><strong>화작관</strong><span>말하기와 듣기의 구조를 다듬는 자료관</span><code>/learn/note/speaking/</code></div><div class="slot"><strong>통합 과정 지도</strong><span>읽기·어휘·문법·쓰기를 과정으로 묶는 지도</span><code>/learn/note/courses/</code></div></div></section>
-</div></main><footer class="footer">© 2026 4th Season · Note Literacy Map</footer></body></html>
+<section class="hero" data-mark="NOTE"><div class="wrap"><span class="kicker">DEPTH 3 · NOTE</span><h1>문해력 중심 지도</h1><p>문해력 공방의 8단계 읽기 흐름에서 시작해 어휘 영역과 문법·독서·문학 참고자료관으로 내려가는 Note의 내부 지도입니다.</p><div class="route"><a href="/remap/">전체 지도</a><a href="/learn/">문해력 지도</a><b>Note</b><span>공방·어휘·자료관</span></div></div></section>
+<main class="main"><div class="wrap">
+  <nav class="trail" aria-label="현재 위치"><a href="/remap/">지도들의 지도</a><span>›</span><a href="/learn/">문해력 지도</a><span>›</span><b>Note</b></nav>
+  <div class="depth"><div class="depth-item"><b>DEPTH 1</b><strong>Re:Map 전체 지도</strong></div><div class="depth-item"><b>DEPTH 2</b><strong>문해력 지도</strong></div><div class="depth-item"><b>DEPTH 3 · 현재</b><strong>Note 내부 지도</strong></div></div>
+
+  <section class="map-panel">
+    <h2>문해력 공방 실제 연결 구조</h2>
+    <p>상위 문해력 공방 지도 아래 읽기의 실제 흐름을 따라 여덟 공방을 순서대로 연결했습니다.</p>
+    <div class="workshop-tree">
+      <a class="workshop-root" href="https://gugeoro.tistory.com/270" target="_blank" rel="noopener"><span class="root-no">NOTE</span><span><small>LITERACY WORKSHOP · EIGHT STEPS</small><strong>문해력 공방 지도</strong></span><em>상위 지도 열기 →</em></a>
+      <div class="workshop-flow">
+        <a class="workshop-card" href="https://gugeoro.tistory.com/271" target="_blank" rel="noopener" style="--step-color:#637e52"><span class="step">01 · 준비</span><b>읽기의 뿌리</b><span>읽기 목적과 독자의 위치, 배경지식과 질문 습관을 세우는 출발점</span><em>1공방 열기 →</em></a>
+        <a class="workshop-card" href="https://gugeoro.tistory.com/272" target="_blank" rel="noopener" style="--step-color:#4f7691"><span class="step">02 · 정확도</span><b>정확히 읽기</b><span>글자와 소리, 표기와 문장 구조, 호응을 정확히 붙잡는 기초 단계</span><em>2공방 열기 →</em></a>
+        <a class="workshop-card" href="https://gugeoro.tistory.com/273" target="_blank" rel="noopener" style="--step-color:#967643"><span class="step">03 · 의미</span><b>의미 읽기</b><span>낱말과 한자어, 개념어와 문맥 뜻, 사실 정보를 이해하는 중심 단계</span><em>3공방 열기 →</em></a>
+        <a class="workshop-card" href="https://gugeoro.tistory.com/274" target="_blank" rel="noopener" style="--step-color:#6d6694"><span class="step">04 · 구조</span><b>구조 읽기</b><span>문단과 전개 방식, 주장과 근거, 이야기의 구성과 갈등을 따라가는 단계</span><em>4공방 열기 →</em></a>
+        <a class="workshop-card" href="https://gugeoro.tistory.com/275" target="_blank" rel="noopener" style="--step-color:#8b5f79"><span class="step">05 · 해석</span><b>해석 읽기</b><span>추론과 숨은 전제, 관점과 정서, 상징과 관계 속 말의 의미를 읽는 단계</span><em>5공방 열기 →</em></a>
+        <a class="workshop-card" href="https://gugeoro.tistory.com/276" target="_blank" rel="noopener" style="--step-color:#835e45"><span class="step">06 · 판단</span><b>평가 읽기</b><span>사실과 의견, 타당성과 공정성, 편향과 신뢰성을 판단하는 단계</span><em>6공방 열기 →</em></a>
+        <a class="workshop-card" href="https://gugeoro.tistory.com/277" target="_blank" rel="noopener" style="--step-color:#477a76"><span class="step">07 · 표현</span><b>표현으로 다시 세우기</b><span>요약과 설명, 주장과 발표, 고쳐쓰기로 이해를 자기 언어로 바꾸는 단계</span><em>7공방 열기 →</em></a>
+        <a class="workshop-card" href="https://gugeoro.tistory.com/278" target="_blank" rel="noopener" style="--step-color:#526580"><span class="step">08 · 축적</span><b>통합 읽기와 확장</b><span>여러 글과 삶의 영역을 연결하고 자기 언어와 학습 루틴으로 축적하는 단계</span><em>8공방 열기 →</em></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-panel other-area"><h2>다른 주영역</h2><p>문해력 공방과 함께 낱말의 뜻과 쓰임을 깊게 읽는 어휘 영역을 운영합니다.</p><div class="subflow"><a class="subnode" href="https://gugeoro.tistory.com/261" target="_blank" rel="noopener"><span class="num">A</span><div><h3>문해력 어휘</h3><p>일상어·감정어·한자어의 뜻과 쓰임을 실제 문장으로 읽는 영역</p></div><b class="go">영역 열기 →</b></a></div></section>
+
+  <section class="map-panel"><h2>참고자료관</h2><p>필요한 언어 지식은 별도의 문법·독서·문학 자료관에서 찾아봅니다.</p><div class="subflow"><a class="subnode" href="https://gugeoro.tistory.com/264" target="_blank" rel="noopener"><span class="num">B</span><div><h3>문법관</h3><p>말과 문장의 구조를 읽는 자료관</p></div><b class="go">자료관 →</b></a><a class="subnode" href="https://gugeoro.tistory.com/263" target="_blank" rel="noopener"><span class="num">C</span><div><h3>독서관</h3><p>글의 구조와 의미 흐름을 읽는 자료관</p></div><b class="go">자료관 →</b></a><a class="subnode" href="https://gugeoro.tistory.com/262" target="_blank" rel="noopener"><span class="num">D</span><div><h3>문학관</h3><p>작품의 정서와 상징을 읽는 자료관</p></div><b class="go">자료관 →</b></a></div></section>
+
+  <section class="map-panel"><h2>다음 확장 자리</h2><p>작문관과 화작관이 실제로 만들어질 때 아래 경로를 추가해 이 지도에 연결합니다.</p><div class="slots"><div class="slot"><strong>작문관</strong><span>쓰기의 구조와 표현을 다듬는 자료관</span><code>/learn/note/writing/</code></div><div class="slot"><strong>화작관</strong><span>말하기와 듣기의 구조를 다듬는 자료관</span><code>/learn/note/speaking/</code></div><div class="slot"><strong>통합 과정 지도</strong><span>읽기·어휘·문법·쓰기를 과정으로 묶는 지도</span><code>/learn/note/courses/</code></div></div></section>
+  <p class="note">외부 티스토리 주소는 사람용 Note 지도와 HTML 사이트맵에서만 연결하며, 닷컴 검색엔진용 XML 사이트맵에는 넣지 않습니다.</p>
+</div></main>
+<footer class="footer">© 2026 4th Season · Note Literacy Map</footer>
+</body>
+</html>
