@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (band === 'low') {
       return {
-        interpretation: `${row.label} 점수는 ${row.percent}%로, 최근 응답에서는 ${description}이 비교적 안정적으로 유지되는 편입니다. ${relative.label}이라는 점까지 함께 보면 다른 영역의 부담을 다룰 때 활용할 수 있는 상대적 자원에 가깝습니다.`,
+        interpretation: `${row.label} 점수는 ${row.percent}%입니다. 최근 응답에서는 이 영역과 관련된 자원이 비교적 안정적으로 유지되는 편이며, ${relative.label}이라는 점까지 함께 보면 다른 영역의 부담을 다룰 때 활용할 수 있는 상대적 자원에 가깝습니다. 이 영역은 ${description}를 살펴보는 부분입니다.`,
         strength: `이 영역에서 이미 작동하고 있는 사람, 습관, 환경 조건은 생활이 흔들릴 때 다시 기대어 볼 수 있는 장점이 됩니다. 낮은 점수는 잘하고 있다는 칭찬보다 현재 이용 가능한 자원이 남아 있다는 뜻으로 읽는 편이 정확합니다.`,
         caution: `다만 점수가 낮다고 해서 언제나 문제가 없다는 뜻은 아닙니다. 특정 관계나 일정, 건강·경제 조건이 바뀌면 지금의 안정이 빠르게 줄어들 수 있으므로 무엇이 이 상태를 지지하는지 함께 확인해야 합니다.`,
         support: guide || `새로운 과제를 더하기보다 지금 유지되고 있는 조건을 구체적으로 확인하고, 바쁜 시기에도 그 조건이 가장 먼저 사라지지 않도록 보호하는 방식이 도움이 됩니다.`
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (band === 'high') {
       return {
-        interpretation: `${row.label} 점수는 ${row.percent}%로, 최근 응답에서는 ${description}과 관련된 부담이 자주 나타난 편입니다. ${relative.label}이므로 네 영역 가운데 우선해서 살펴볼 필요가 있는 부분으로 읽을 수 있습니다.`,
+        interpretation: `${row.label} 점수는 ${row.percent}%입니다. 최근 응답에서는 이 영역과 관련된 부담이 자주 나타난 편이며, ${relative.label}이므로 여러 영역 가운데 우선해서 살펴볼 필요가 있습니다. 이 영역은 ${description}를 살펴보는 부분입니다.`,
         strength: `이 결과의 장점은 문제가 있다는 판정이 아니라 현재 생활에서 힘이 가장 많이 소모되는 지점을 비교적 선명하게 보여 준다는 데 있습니다. 불편을 알아차리고 구분한 것 자체가 조정의 출발점이 될 수 있습니다.`,
         caution: `이 부담이 이어지면 선택 폭이 좁아지거나, 작은 변화에도 피로와 회피 반응이 커질 수 있습니다. 개인의 의지 부족으로 해석하면 실제로 바꿔야 할 관계·시간·환경 조건을 놓치기 쉽습니다.`,
         support: guide || `조언이나 목표를 먼저 제시하기보다 어떤 상황에서 부담이 커지고 무엇이 조금 완화시키는지 확인한 뒤, 줄일 부담과 요청할 도움을 한 가지씩 나누어 보는 방식이 적절합니다.`
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     return {
-      interpretation: `${row.label} 점수는 ${row.percent}%로, 안정된 자원과 부담 신호가 함께 나타나는 중간 영역입니다. ${relative.label}이므로 현재 생활 전체의 흐름과 비슷하게 움직이는 부분으로 볼 수 있습니다.`,
+      interpretation: `${row.label} 점수는 ${row.percent}%로, 안정된 자원과 부담 신호가 함께 나타나는 중간 영역입니다. ${relative.label}이므로 현재 생활 전체의 흐름과 비슷하게 움직이는 부분으로 볼 수 있습니다. 이 영역은 ${description}를 살펴보는 부분입니다.`,
       strength: `어떤 장면에서는 이 영역의 기능이 비교적 유지되고 있다는 점이 장점입니다. 이미 잘되는 상황을 찾아보면 도움이 되는 사람, 시간대, 공간, 준비 방식 같은 현실적인 조건을 확인할 수 있습니다.`,
       caution: `반대로 피로가 누적되거나 상황이 복잡해지면 유지되던 기능이 쉽게 흔들릴 수 있습니다. 평균에 가깝다는 이유로 지나치기보다 괜찮았던 장면과 어려웠던 장면의 차이를 살펴보는 편이 좋습니다.`,
       support: guide || `전체를 한 번에 바꾸기보다 이 영역이 괜찮았던 때와 어려웠던 때를 하나씩 비교하고, 차이를 만든 조건 가운데 조정 가능한 한 가지부터 다루는 방식이 도움이 됩니다.`
@@ -99,15 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const block = document.createElement('div');
     block.className = 'result-block result-counselor-overview';
     block.appendChild(createText('p', 'result-counselor-label', '상담식 종합 해설'));
-    block.appendChild(createText('h3', '', '점수보다 먼저, 네 영역 사이의 흐름을 읽어보면'));
+    block.appendChild(createText('h3', '', '점수보다 먼저, 영역 사이의 흐름을 읽어보면'));
 
     let text;
     if (gap < 8) {
-      text = `네 영역의 개인 평균은 ${average}%입니다. 영역 간 차이가 ${gap}%p로 크지 않아 한 부분만의 문제라기보다 현재 생활 전반이 비슷한 수준으로 움직이는 모습에 가깝습니다. 이런 경우에는 가장 높은 점수 하나만 고르기보다 여러 영역에 공통으로 영향을 주는 피로, 시간 부족, 최근 사건을 먼저 확인하는 편이 좋습니다.`;
+      text = `${rows.length}개 영역의 개인 평균은 ${average}%입니다. 영역 간 차이가 ${gap}%p로 크지 않아 한 부분만의 문제라기보다 현재 생활 전반이 비슷한 수준으로 움직이는 모습에 가깝습니다. 이런 경우에는 가장 높은 점수 하나만 고르기보다 여러 영역에 공통으로 영향을 주는 피로, 시간 부족, 최근 사건을 먼저 확인하는 편이 좋습니다.`;
     } else {
       const focusRelative = getRelative(focus.percent, average);
       const resourceRelative = getRelative(resource.percent, average);
-      text = `네 영역의 개인 평균은 ${average}%입니다. ${focus.label}은 ${focus.percent}%로 ${focusRelative.label}이며, 현재 가장 부담이 몰린 영역입니다. 반면 ${resource.label}은 ${resource.percent}%로 ${resourceRelative.label}아 상대적으로 유지되는 자원에 가깝습니다. 따라서 가장 힘든 영역만 고치려 하기보다, 비교적 유지되는 ${resource.label}의 조건을 활용해 ${focus.label}의 부담을 덜어 주는 순서가 현실적입니다.`;
+      text = `${rows.length}개 영역의 개인 평균은 ${average}%입니다. ${focus.label}은 ${focus.percent}%로 ${focusRelative.label}이며, 현재 가장 부담이 몰린 영역입니다. 반면 ${resource.label}은 ${resource.percent}%로 ${resourceRelative.label}으로 나타나 상대적으로 유지되는 자원에 가깝습니다. 따라서 가장 힘든 영역만 고치려 하기보다, 비교적 유지되는 ${resource.label}의 조건을 활용해 ${focus.label}의 부담을 덜어 주는 순서가 현실적입니다.`;
     }
 
     block.appendChild(createText('p', 'result-counselor-copy', text));
