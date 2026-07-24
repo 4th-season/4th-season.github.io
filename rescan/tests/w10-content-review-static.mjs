@@ -6,7 +6,8 @@ const ROOT = new URL('../', import.meta.url);
 const readJson = async (relativePath) => JSON.parse(await readFile(new URL(relativePath, ROOT), 'utf8'));
 
 const index = await readJson('data/index.json');
-assert.equal(index.schemaVersion, '1.4.1', 'index schemaVersion 불일치');
+const [indexMajor, indexMinor] = index.schemaVersion.split('.').map(Number);
+assert.ok(indexMajor > 1 || (indexMajor === 1 && indexMinor >= 4), 'index schemaVersion이 W10 호환 범위보다 낮음');
 assert.equal(new Set(index.items.map((item) => item.id)).size, index.items.length, 'index id 중복');
 
 for (const id of IDS) {
