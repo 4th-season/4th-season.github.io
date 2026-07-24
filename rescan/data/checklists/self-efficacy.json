@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "self-efficacy",
+  "series": "[나 체크리스트]",
+  "section": "Re:Scan",
+  "grade": "A",
+  "mode": "scored",
+  "status": "published",
+  "title": "자기효능감",
+  "subtitle": "과제를 시작하고 해결하며 다시 시도하는 힘 자가점검",
+  "description": "최근 2주 동안 새로운 일이나 어려운 과제를 마주했을 때 시작하고, 방법을 찾고, 도움을 활용하며, 실패 뒤 다시 시도하는 방식을 살펴보는 자가점검입니다.",
+  "period": "최근 2주",
+  "estimatedMinutes": 4,
+  "orderPolicy": {"strategy":"balanced","maxSameCategoryRun":2,"sessionStable":true,"useReserveQuestions":false},
+  "categories": [
+    {"id":"starting","label":"시작하기","description":"낯선 일이나 부담스러운 과제 앞에서 첫 행동을 만드는 힘"},
+    {"id":"problem-solving","label":"문제 해결","description":"막히는 지점을 나누고 다른 방법을 찾는 힘"},
+    {"id":"persistence","label":"지속과 재시도","description":"실수나 실패 뒤에도 속도와 방법을 조절해 이어 가는 힘"},
+    {"id":"resource-use","label":"도움과 자원 활용","description":"혼자 버티기보다 필요한 정보와 도움을 구해 사용하는 힘"}
+  ],
+  "scale": [
+    {"value":0,"label":"전혀 아니다"},
+    {"value":1,"label":"가끔 그렇다"},
+    {"value":2,"label":"자주 그렇다"},
+    {"value":3,"label":"거의 그렇다"}
+  ],
+  "questions": [
+    {"id":"ef01","category":"starting","text":"해야 할 일이 어렵게 느껴져도 작은 첫 단계부터 시작할 수 있다.","reverse":true},
+    {"id":"ef02","category":"problem-solving","text":"문제가 생기면 무엇부터 풀어야 할지 정리하기 어렵다.","reverse":false},
+    {"id":"ef03","category":"persistence","text":"한 번 실패하면 다시 해도 달라지지 않을 것 같아 포기한다.","reverse":false},
+    {"id":"ef04","category":"resource-use","text":"모르는 것이 생기면 필요한 정보나 도움을 찾아볼 수 있다.","reverse":true},
+    {"id":"ef05","category":"starting","text":"완벽히 준비되지 않아도 가능한 범위에서 시작할 수 있다.","reverse":true},
+    {"id":"ef06","category":"problem-solving","text":"한 방법이 통하지 않으면 다른 방법을 시도하는 편이다.","reverse":true},
+    {"id":"ef07","category":"persistence","text":"진행이 느려지면 내 능력이 부족하다고 단정한다.","reverse":false},
+    {"id":"ef08","category":"resource-use","text":"도움을 요청하는 것은 내 능력이 부족하다는 뜻처럼 느껴진다.","reverse":false},
+    {"id":"ef09","category":"starting","text":"낯선 과제를 받으면 시작 전부터 못할 것 같다는 생각이 커진다.","reverse":false},
+    {"id":"ef10","category":"problem-solving","text":"큰 과제를 작게 나누면 해결 가능성이 높아진다고 느낀다.","reverse":true},
+    {"id":"ef11","category":"persistence","text":"실수한 뒤에도 배운 점을 찾아 다음 시도에 반영할 수 있다.","reverse":true},
+    {"id":"ef12","category":"resource-use","text":"필요할 때 주변 사람이나 도구를 활용해 일을 이어 갈 수 있다.","reverse":true}
+  ],
+  "results": [
+    {"min":0,"max":8,"level":"효능감 자원이 비교적 안정","summary":"최근에는 과제를 시작하고 방법을 찾으며 필요한 도움을 활용하는 힘이 비교적 안정적으로 작동하고 있습니다.","questions":["지금의 안정감을 만든 경험이나 환경은 무엇인가요?","이 힘을 유지하려면 어떤 조건이 계속 필요할까요?"],"actions":["최근 해낸 일을 결과보다 과정 중심으로 기록하기","다음 과제의 첫 단계를 10분 안에 할 수 있는 크기로 정하기"]},
+    {"min":9,"max":17,"level":"일부 장면에서 흔들림","summary":"상황에 따라 자신감과 실행력이 달라질 수 있습니다. 특히 시작, 실패 뒤 재시도, 도움 요청 중 어느 장면에서 흔들리는지 살펴볼 필요가 있습니다.","questions":["요즘 가장 미루게 되는 일은 무엇인가요?","그 일을 어렵게 만드는 조건은 능력, 시간, 정보 중 무엇에 가깝나요?"],"actions":["막막한 일을 시작·정보·연습의 세 단계로 나누기","혼자 해결할 부분과 도움을 구할 부분을 구분하기"]},
+    {"min":18,"max":26,"level":"실행 부담이 누적","summary":"어려운 과제 앞에서 시작을 미루거나 실패를 능력 전체의 문제로 받아들이는 경향이 반복될 수 있습니다.","questions":["최근 포기한 일에서 실제로 부족했던 것은 무엇이었나요?","내가 못한다는 판단과 아직 익숙하지 않다는 판단은 어떻게 다른가요?"],"actions":["성공 목표 대신 오늘의 시도 횟수를 정하기","완료 기준을 낮춘 연습 과제를 한 번 실행하기","신뢰할 수 있는 사람에게 구체적인 도움 한 가지 요청하기"]},
+    {"min":27,"max":36,"level":"작은 성공 경험부터 회복","summary":"과제를 시작하거나 이어 가는 과정에서 부담과 무력감이 크게 느껴질 수 있습니다. 점수로 자신을 평가하기보다 환경과 과제 난이도를 조절해 작은 성공 경험부터 다시 쌓는 것이 중요합니다.","questions":["지금 가장 부담이 큰 과제에서 잠시 내려놓을 수 있는 부분은 무엇인가요?","혼자 감당하지 않아도 되는 책임은 무엇인가요?"],"actions":["하루 한 가지 과제를 5분 단위로 축소하기","결과가 아니라 시도 여부만 표시하는 기록표 사용하기","생활 기능 저하나 무기력이 오래 지속되면 신뢰할 수 있는 사람이나 전문가와 상의하기"]}
+  ],
+  "categoryGuides": {
+    "starting":{"low":"첫 행동을 만드는 힘이 비교적 유지되고 있습니다.","mid":"준비가 충분해야 시작할 수 있다는 압박이 있는지 살펴보세요.","high":"과제를 아주 작은 행동으로 줄이고 시작 기준을 낮춰 보세요."},
+    "problem-solving":{"low":"막힌 지점을 나누고 다른 방법을 찾는 편입니다.","mid":"문제가 생겼을 때 전체를 한꺼번에 해결하려 하는지 살펴보세요.","high":"문제를 정보 부족, 기술 부족, 시간 부족으로 나누어 보세요."},
+    "persistence":{"low":"실수 뒤에도 다시 시도할 자원이 비교적 유지되고 있습니다.","mid":"진행 속도가 느릴 때 능력 전체를 부정하지 않는지 살펴보세요.","high":"재시도 목표를 결과가 아니라 횟수와 과정으로 바꿔 보세요."},
+    "resource-use":{"low":"도움과 정보를 자원으로 활용하는 편입니다.","mid":"도움 요청을 실패나 의존으로 해석하는지 살펴보세요.","high":"요청할 내용을 한 문장으로 구체화해 작은 도움부터 구해 보세요."}
+  },
+  "methodNote":"총점은 12문항을 합산하며 자기효능감이 잘 작동하는 긍정형 문항은 역채점합니다. 따라서 점수가 낮을수록 최근 자기효능감 자원이 비교적 안정적이고, 점수가 높을수록 실행 부담과 자신감 저하를 더 자주 경험했음을 뜻합니다.",
+  "disclaimer":"이 체크리스트는 능력이나 성취 가능성을 판정하거나 심리 상태를 진단하지 않습니다. 과제의 난이도, 시간, 건강, 정보, 관계 환경에 따라 결과는 달라질 수 있습니다.",
+  "references": [
+    {"title":"Self-efficacy: Toward a unifying theory of behavioral change","author":"Albert Bandura","year":1977,"type":"research"},
+    {"title":"Self-Efficacy: The Exercise of Control","author":"Albert Bandura","year":1997,"type":"book"}
+  ],
+  "relatedLinks":[
+    {"title":"Re:Scan 이용 안내","url":"/rescan/about.html","type":"internal"},
+    {"title":"자기존중감 점검","url":"/rescan/checklist.html?id=self-esteem","type":"internal"}
+  ]
+}
