@@ -7,6 +7,12 @@ on:
       - 'rescan/**'
       - 'sitemap.xml'
       - '.github/workflows/rescan-w10-live-smoke.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'rescan/**'
+      - 'sitemap.xml'
+      - '.github/workflows/rescan-w10-live-smoke.yml'
   workflow_dispatch:
 
 permissions:
