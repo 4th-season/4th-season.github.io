@@ -5,8 +5,8 @@
   "title_ko": "가치형태 또는 교환가치",
   "base_edition": "German fourth edition, 1890 / MEW 23",
   "english_reference": "1887 Samuel Moore and Edward Aveling, edited by Frederick Engels",
-  "published_paragraphs": 31,
-  "published_through": "chapter-01-section-03-p031.html",
+  "published_paragraphs": 34,
+  "published_through": "chapter-01-section-03-p034.html",
   "structure": [
     {
       "id": "A",
@@ -35,6 +35,6 @@
     {"id":"D","title_ko":"화폐형태","subsections":[],"status":"pending"}
   ],
   "production_rule": "한국어 번역 우선, 독일어 원문 접이식, 영문 대조문 선택형, 문단별 완전 대응, 빈 블록 금지",
-  "next_required_work": "제32문단부터 설탕덩이의 무게와 철 조각의 무게표현을 통해 등가형태를 설명하는 비유를 순차 제작",
+  "next_required_work": "제35문단부터 재봉노동과 직조노동이 인간노동이라는 공통 성질을 갖지만 가치표현에서는 관계가 전도되는 과정을 순차 제작",
   "updated_at": "2026-07-24"
 }
