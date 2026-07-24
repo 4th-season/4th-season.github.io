@@ -3,23 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="4번째 계절의 세상을 읽는 지도, 문해력 지도, 삶을 다시 배우는 지도를 단계별로 찾아가는 Re:Map 통합 안내지도입니다.">
+  <meta name="description" content="4번째 계절은 세상 읽기, 문해력과 지식, 생활 점검, 진로 탐색, 고전 원문 자료를 연결하는 지식·생활 플랫폼입니다.">
   <link rel="canonical" href="https://4th-season.com/">
-  <link rel="stylesheet" href="/assets/remap.css">
-  <title>Re:Map 지도들의 지도 | 4번째 계절</title>
+  <title>4번째 계절 | 읽고 이해하고 다음을 준비하는 곳</title>
+  <style>
+    :root{--ink:#17212b;--paper:#f5f1ea;--night:#111923;--purple:#84669f;--line:#d8d0c7;--white:#fff;--gold:#e0c9a3}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif KR","Malgun Gothic",serif;word-break:keep-all}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1200px,calc(100% - 44px));margin:auto}
+    .hero{min-height:430px;padding:28px 0 78px;color:#fff;background:linear-gradient(115deg,rgba(10,17,25,.89),rgba(18,29,41,.55)),url("/assets/map-have.png") center/cover}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:18px;font:800 .78rem Arial,sans-serif;letter-spacing:.1em}
+    .brand{font-size:.98rem}
+    .nav-links{display:flex;gap:20px;align-items:center}
+    .nav-links a{padding-bottom:5px;border-bottom:1px solid rgba(255,255,255,.58)}
+    .hero-copy{margin-top:84px;max-width:790px}
+    .eyebrow{font:800 .68rem Arial,sans-serif;letter-spacing:.17em;color:#e0c9f1}
+    .hero h1{margin:10px 0 14px;font-size:clamp(2.6rem,5.5vw,4.9rem);line-height:1.08;letter-spacing:-.075em}
+    .hero p{max-width:690px;margin:0;color:#ece7e1;font-size:1.03rem;line-height:1.82}
+    .guide-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:27px}
+    .guide-links a{display:inline-flex;align-items:center;min-height:42px;padding:9px 15px;border:1px solid rgba(255,255,255,.42);background:rgba(14,22,31,.32);font:800 .76rem Arial,sans-serif;letter-spacing:.08em}
+    .guide-links a:first-child{background:#fff;color:#1a2530;border-color:#fff}
+    .hub{padding:70px 0 88px}
+    .head{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:30px}
+    .head h2{margin:9px 0 0;font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.2;letter-spacing:-.065em}
+    .head p{max-width:400px;margin:0;color:#61666b;line-height:1.75}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{min-height:370px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:25px;color:#fff;background:#293342;isolation:isolate}
+    .card:before{content:"";position:absolute;inset:0;background:var(--image) center/cover;z-index:-2;transition:transform .35s}
+    .card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,14,20,.08),rgba(9,14,20,.86));z-index:-1}
+    .card:hover:before{transform:scale(1.06)}
+    .card small{font:800 .66rem Arial,sans-serif;letter-spacing:.16em;color:#e4caef}
+    .card h3{margin:9px 0 7px;font-size:1.64rem;letter-spacing:-.06em}
+    .card p{margin:0;min-height:48px;color:#ece8e3;font-size:.88rem;line-height:1.62}
+    .go{margin-top:18px;font:800 .72rem Arial,sans-serif;letter-spacing:.1em}
+    .notice{padding:44px 0 48px;background:#eae3db}
+    .notice-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center}
+    .notice h2{margin:0 0 10px;font-size:1.52rem;letter-spacing:-.05em}
+    .notice p{margin:0;color:#4e565d;line-height:1.78}
+    .notice-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+    .notice-actions a{padding:11px 15px;background:#fff;border:1px solid #cbc1b7;font-size:.82rem;font-weight:800}
+    footer{padding:28px 0;background:#111923;color:#b9bec2;text-align:center;font:400 .7rem Arial,sans-serif;letter-spacing:.06em}
+    @media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.head,.notice-grid{display:block}.head p,.notice-actions{margin-top:15px}.notice-actions{justify-content:flex-start}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1200px)}.hero{min-height:390px;padding-bottom:55px}.hero-copy{margin-top:72px}.nav-links{gap:12px;font-size:.7rem}.hub{padding:52px 0 62px}.grid{grid-template-columns:1fr}.card{min-height:300px}.head h2{font-size:2rem}}
+  </style>
 </head>
 <body>
-<header class="site-header"><div class="wrap"><nav class="nav"><a class="brand" href="/">4th Season · Re:Map</a><div class="nav-links"><a href="#map">지도 펼치기</a><a href="https://4th-season.tistory.com/1" target="_blank" rel="noopener">전체 안내</a></div></nav></div></header>
-<section class="hero" style="--hero-image:url('/assets/map-site.png')"><div class="wrap"><span class="kicker">RE:MAP · THE MAP OF MAPS</span><h1>지도들의 지도</h1><p>모든 글과 도구를 한 화면에 나열하지 않습니다. 먼저 큰 길을 고르고, 다음 지도에서 계열을 고른 뒤, 더 하부의 주제 지도와 실제 글로 이어집니다.</p><div class="route"><span>1단계 · 전체 지도</span><span>2단계 · 영역 지도</span><span>3단계 · 계열 지도</span><span>4단계 · 글·도구·아카이브</span></div></div></section>
-<main id="map" class="main"><div class="wrap">
-  <div class="intro"><div><span class="eyebrow">THREE MAP AREAS</span><h2>세 개의 큰 지도에서<br>필요한 길을 고릅니다.</h2></div><p>대문에는 최상위 지도만 둡니다. 세부 계열과 개별 자료는 각 하부 페이지에서 차례로 펼쳐집니다.</p></div>
-  <div class="flow">
-    <a class="node" href="/world/"><span class="node-index">01</span><div><span class="eyebrow">6 RE:LENZ</span><h3>세상을 읽는 지도</h3><p>현대사회·고전·상징·철학·관계 언어·경제의 여섯 렌즈를 따라갑니다.</p><div class="children"><span>Re:Site</span><span>Re:Read</span><span>Re:Sign</span><span>Re:Think</span><span>Re:Word</span><span>Re:Mark</span></div></div><b class="node-action">하부 지도 열기 →</b></a>
-    <a class="node" href="/learn/"><span class="node-index">02</span><div><span class="eyebrow">NOTE · LITERACY</span><h3>문해력 지도</h3><p>읽기와 해석, 어휘와 문법, 수능 자료와 고전 원문 아카이브로 이어집니다.</p><div class="children"><span>문해력 공방</span><span>문해력 어휘</span><span>참고자료관</span><span>수능 국어</span><span>고전 원문</span></div></div><b class="node-action">하부 지도 열기 →</b></a>
-    <a class="node" href="/life/"><span class="node-index">03</span><div><span class="eyebrow">HAVE+ · LIFE</span><h3>삶을 다시 배우는 지도</h3><p>생활 기반과 평생학습, 자기 점검과 진로 탐색을 다음 단계의 지도에서 고릅니다.</p><div class="children"><span>HAVE+</span><span>Re:Scan</span><span>직업적성 찾기</span><span>생활 기록</span></div></div><b class="node-action">하부 지도 열기 →</b></a>
-  </div>
-  <section class="section-card"><h2>Re:Map 운영 원칙</h2><p>이 페이지는 큰 길만 보여 줍니다. 각 영역 페이지는 다시 계열별 지도로 이어지고, 계열 페이지에는 앞으로 추가될 주제별 지도·번호별 목차·프로젝트 지도의 자리를 미리 마련합니다.</p></section>
-</div></main>
-<footer class="footer">© 2026 4th Season · Re:Map</footer>
+  <header class="hero">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="/">4th Season</a>
+        <div class="nav-links"><a href="/sitemap/">한눈에 보기</a><a href="/remap/">지도로 찾아가기</a></div>
+      </nav>
+      <div class="hero-copy">
+        <span class="eyebrow">READ · UNDERSTAND · PREPARE</span>
+        <h1>4번째 계절</h1>
+        <p>세상을 읽는 글과 고전, 문해력과 학습 자료, 생활 점검과 진로 탐색을 한곳에서 연결합니다. 필요한 답을 한꺼번에 제시하기보다, 지금 필요한 입구에서 다음 길을 찾도록 돕습니다.</p>
+        <div class="guide-links"><a href="/sitemap/">한눈에 보기 →</a><a href="/remap/">지도로 찾아가기 →</a></div>
+      </div>
+    </div>
+  </header>
+  <main id="entrance" class="hub"><div class="wrap">
+    <div class="head"><div><span class="eyebrow">SIX ENTRANCES</span><h2>지금 필요한 곳에서<br>시작해 보세요.</h2></div><p>각 입구는 독립적으로 운영되며, 더 세부적인 구조가 필요할 때는 사이트맵이나 Re:Map에서 전체 흐름을 확인할 수 있습니다.</p></div>
+    <div class="grid">
+      <a class="card" href="/learn/" style="--image:url('/assets/map-note.png')"><small>01 · LEARN</small><h3>문해력·지식 쌓기</h3><p>문해력, 국어 공부, 읽기와 쓰기, 배움의 자료를 만납니다.</p><span class="go">영역 열기 →</span></a>
+      <a class="card" href="/world/" style="--image:url('/assets/map-site.png')"><small>02 · 6 RE:LENZ</small><h3>세상 읽기</h3><p>사회·고전·관계·철학·경제·상징의 렌즈로 현재를 읽습니다.</p><span class="go">영역 열기 →</span></a>
+      <a class="card" href="/life/" style="--image:url('/assets/map-have.png')"><small>03 · HAVE+</small><h3>삶을 계획하기</h3><p>몸과 마음, 관계와 시간, 평생학습의 다음 단계를 살핍니다.</p><span class="go">영역 열기 →</span></a>
+      <a class="card" href="/rescan/" style="--image:url('/assets/map-think.png')"><small>04 · RE:SCAN</small><h3>나 체크리스트</h3><p>스트레스와 번아웃, 수면과 관계의 현재 상태를 돌아봅니다.</p><span class="go">자가점검 시작 →</span></a>
+      <a class="card" href="/career-explorer/" style="--image:url('/assets/map-word.png')"><small>05 · CAREER EXPLORER</small><h3>직업적성 찾기</h3><p>관심 영역을 학과와 직업으로 연결해 다음 질문을 찾습니다.</p><span class="go">진로 탐색 시작 →</span></a>
+      <a class="card" href="/reread/" style="--image:url('/assets/map-read.png')"><small>06 · ORIGINAL TEXTS</small><h3>고전 원문 읽기</h3><p>오래 읽히는 텍스트를 원문·번역·해설과 함께 차분히 읽습니다.</p><span class="go">원문 아카이브 열기 →</span></a>
+    </div>
+  </div></main>
+  <section class="notice"><div class="wrap"><div class="notice-grid"><div><h2>전체 구조가 필요할 때</h2><p><strong>한눈에 보기</strong>는 모든 주요 경로를 목록으로 보여 주고, <strong>지도로 찾아가기</strong>는 큰 영역에서 하부 지도로 단계적으로 내려갑니다.</p></div><div class="notice-actions"><a href="/sitemap/">사이트맵</a><a href="/remap/">Re:Map</a></div></div></div></section>
+  <footer>© 2026 4th Season · 읽고 이해하고 다음을 준비하는 곳</footer>
 </body>
 </html>
