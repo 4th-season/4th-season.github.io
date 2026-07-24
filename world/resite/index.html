@@ -1,11 +1,58 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Re:Site 현대사회 개념 글을 주제별 지도와 목차로 확장하기 위한 계열 안내지도입니다."><link rel="canonical" href="https://4th-season.com/world/resite/"><link rel="stylesheet" href="/assets/remap.css"><title>Re:Site 현대사회 개념 지도 | Re:Map</title></head>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Re:Site 현대사회 개념 지도 아래 사회현상, 사회심리, 권력과 제도, 관계와 공동체, 문화와 담론, 삶의 방식의 여섯 하위 지도를 연결합니다.">
+  <link rel="canonical" href="https://4th-season.com/world/resite/">
+  <link rel="stylesheet" href="/assets/remap.css">
+  <title>Re:Site 현대사회 개념 지도 | Re:Map</title>
+  <style>
+    .site-tree{position:relative;margin-top:24px;padding-left:32px}
+    .site-tree:before{content:"";position:absolute;left:9px;top:37px;bottom:38px;width:3px;background:linear-gradient(var(--branch-accent),rgba(60,115,90,.22))}
+    .site-root{position:relative;display:grid;grid-template-columns:62px 1fr auto;gap:17px;align-items:center;padding:20px 22px;background:var(--branch-deep);color:#fff;border-radius:9px;box-shadow:0 13px 28px rgba(33,70,56,.17)}
+    .site-root:before{content:"";position:absolute;left:-23px;top:50%;width:23px;height:3px;background:var(--branch-accent)}
+    .root-no{display:grid;place-items:center;width:62px;height:62px;border-radius:8px;background:var(--branch-accent);color:var(--branch-deep);font-weight:950}
+    .site-root small{display:block;color:#d9ede4;font-size:.7rem;font-weight:900;letter-spacing:.13em}
+    .site-root strong{display:block;margin-top:3px;font-size:1.12rem;line-height:1.45}
+    .root-go{color:var(--branch-accent);font-size:.8rem;font-weight:900;white-space:nowrap}
+    .site-branches{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:14px 0 0 34px;padding-left:27px}
+    .site-branches:before{content:"";position:absolute;left:0;top:0;bottom:22px;width:2px;background:#cbdacf}
+    .site-branch{position:relative;display:grid;grid-template-columns:48px 1fr;gap:13px;align-items:center;min-height:105px;padding:15px 17px;background:#fff;border:1px solid #d4e0d7;border-radius:8px;transition:.2s}
+    .site-branch:before{content:"";position:absolute;left:-28px;top:50%;width:27px;height:2px;background:#cbdacf}
+    .site-branch:hover{transform:translateY(-2px);border-color:var(--branch-mid);box-shadow:0 10px 23px rgba(33,70,56,.09)}
+    .branch-num{display:grid;place-items:center;width:48px;height:48px;border-radius:8px;background:#eaf2ed;color:var(--branch-deep);font-size:.78rem;font-weight:950}
+    .site-branch b{display:block;color:var(--branch-deep);font-size:.96rem;line-height:1.42}
+    .site-branch span{display:block;margin-top:4px;color:var(--muted);font-size:.78rem;line-height:1.55}
+    @media(max-width:760px){.site-root{grid-template-columns:50px 1fr}.root-no{width:50px;height:50px}.root-go{grid-column:2}.site-branches{grid-template-columns:1fr;margin-left:13px}.site-tree{padding-left:22px}}
+  </style>
+</head>
 <body class="map-depth-3" style="--branch-deep:#214638;--branch-mid:#3c735a;--branch-accent:#e1c55d">
-<header class="site-header"><div class="wrap"><nav class="nav"><a class="brand" href="/world/">← 세상을 읽는 지도</a><div class="nav-links"><a href="/sitemap/">한눈에 보기</a><a href="https://pencilgon.tistory.com/221" target="_blank" rel="noopener">현재 안내지도</a></div></nav></div></header>
-<section class="hero" data-mark="SITE"><div class="wrap"><span class="kicker">DEPTH 3 · RE:SITE</span><h1>현대사회 개념 지도</h1><p>현재 발행 안내지도에서 시작해 앞으로 주제별·개념별·연재별 하부 지도를 붙일 수 있도록 계열의 중간 허브를 마련했습니다.</p><div class="route"><a href="/remap/">전체 지도</a><a href="/world/">세상을 읽기</a><b>Re:Site</b><span>주제·개념 지도</span></div></div></section>
-<main class="main"><div class="wrap"><nav class="trail" aria-label="현재 위치"><a href="/remap/">지도들의 지도</a><span>›</span><a href="/world/">세상을 읽는 지도</a><span>›</span><b>Re:Site</b></nav>
-<div class="depth"><div class="depth-item"><b>DEPTH 1</b><strong>Re:Map 전체 지도</strong></div><div class="depth-item"><b>DEPTH 2</b><strong>세상을 읽는 지도</strong></div><div class="depth-item"><b>DEPTH 3 · 현재</b><strong>Re:Site 계열 지도</strong></div></div>
-<section class="map-panel"><h2>현재 연결된 대표 지도</h2><p>실제 글과 기존 목차는 티스토리 안내지도에서 운영합니다.</p><a class="external" href="https://pencilgon.tistory.com/221" target="_blank" rel="noopener"><span><b>Re:Site 현대사회 개념 안내지도</b><br>현재 발행 글과 주제 흐름을 확인합니다.</span><em>대표 지도 열기 →</em></a></section>
-<section class="map-panel"><h2>다음 하부 지도 자리</h2><p>새 지도가 필요해질 때 아래 경로에 `index.html`을 추가하고 이 슬롯을 링크로 바꾸면 됩니다.</p><div class="slots"><div class="slot"><strong>주제별 지도</strong><span>사회 현상을 큰 주제군으로 묶는 지도</span><code>/world/resite/topics/</code></div><div class="slot"><strong>개념 찾아보기</strong><span>가나다·핵심어·번호 기준 목차</span><code>/world/resite/indexes/</code></div><div class="slot"><strong>기획·연재 지도</strong><span>서로 연결되는 글을 묶는 프로젝트 지도</span><code>/world/resite/projects/</code></div></div></section>
-<p class="note">하부 페이지가 만들어지기 전에는 빈 주소로 연결하지 않습니다. 페이지가 생긴 뒤 이 슬롯에 실제 링크를 붙이는 방식으로 확장합니다.</p>
-</div></main><footer class="footer">© 2026 4th Season · Re:Site Map</footer></body></html>
+<header class="site-header"><div class="wrap"><nav class="nav"><a class="brand" href="/world/">← 세상을 읽는 지도</a><div class="nav-links"><a href="/sitemap/">한눈에 보기</a><a href="https://pencilgon.tistory.com/221" target="_blank" rel="noopener">Re:Site 원지도</a></div></nav></div></header>
+<section class="hero" data-mark="SITE"><div class="wrap"><span class="kicker">DEPTH 3 · RE:SITE</span><h1>현대사회 개념 지도</h1><p>사회현상에서 삶의 방식까지 여섯 갈래로 나누어 오늘의 사회를 읽고, 각 하위 지도에서 실제 개념 글로 내려갑니다.</p><div class="route"><a href="/remap/">전체 지도</a><a href="/world/">세상을 읽기</a><b>Re:Site</b><span>여섯 영역 지도</span></div></div></section>
+<main class="main"><div class="wrap">
+  <nav class="trail" aria-label="현재 위치"><a href="/remap/">지도들의 지도</a><span>›</span><a href="/world/">세상을 읽는 지도</a><span>›</span><b>Re:Site</b></nav>
+  <div class="depth"><div class="depth-item"><b>DEPTH 1</b><strong>Re:Map 전체 지도</strong></div><div class="depth-item"><b>DEPTH 2</b><strong>세상을 읽는 지도</strong></div><div class="depth-item"><b>DEPTH 3 · 현재</b><strong>Re:Site 계열 지도</strong></div></div>
+
+  <section class="map-panel">
+    <h2>Re:Site 실제 연결 구조</h2>
+    <p>상위 현대사회 개념 지도 아래 여섯 영역 지도를 실제 발행 주소 순서대로 연결했습니다.</p>
+    <div class="site-tree">
+      <a class="site-root" href="https://pencilgon.tistory.com/221" target="_blank" rel="noopener"><span class="root-no">SITE</span><span><small>RE:SITE · MODERN SOCIETY MAP</small><strong>현대사회 개념 지도</strong></span><em class="root-go">상위 지도 열기 →</em></a>
+      <div class="site-branches">
+        <a class="site-branch" href="https://pencilgon.tistory.com/225" target="_blank" rel="noopener"><span class="branch-num">01</span><span><b>사회현상 영역</b><span>지금 사회에서 벌어지는 변화와 반복되는 흐름을 읽는 길</span></span></a>
+        <a class="site-branch" href="https://pencilgon.tistory.com/226" target="_blank" rel="noopener"><span class="branch-num">02</span><span><b>사회심리 영역</b><span>사람들은 왜 그렇게 느끼고 반응하는가</span></span></a>
+        <a class="site-branch" href="https://pencilgon.tistory.com/227" target="_blank" rel="noopener"><span class="branch-num">03</span><span><b>권력과 제도 영역</b><span>사회를 움직이는 힘과 책임의 구조</span></span></a>
+        <a class="site-branch" href="https://pencilgon.tistory.com/228" target="_blank" rel="noopener"><span class="branch-num">04</span><span><b>관계와 공동체 영역</b><span>사람 사이의 거리와 침묵을 읽는 길</span></span></a>
+        <a class="site-branch" href="https://pencilgon.tistory.com/229" target="_blank" rel="noopener"><span class="branch-num">05</span><span><b>문화와 담론 영역</b><span>유행과 말이 현실을 만드는 방식</span></span></a>
+        <a class="site-branch" href="https://pencilgon.tistory.com/230" target="_blank" rel="noopener"><span class="branch-num">06</span><span><b>삶의 방식 영역</b><span>현대인이 일하고 쉬고 버티는 방식</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-panel"><h2>다음 닷컴 하부 지도 자리</h2><p>각 영역 안의 글이 많아지면 닷컴 내부에 주제별·개념별·기획별 목차를 만들어 한 단계 더 내려갈 수 있습니다.</p><div class="slots"><div class="slot"><strong>주제별 지도</strong><span>사회 현상을 큰 주제군으로 묶는 지도</span><code>/world/resite/topics/</code></div><div class="slot"><strong>개념 찾아보기</strong><span>가나다·핵심어·번호 기준 목차</span><code>/world/resite/indexes/</code></div><div class="slot"><strong>기획·연재 지도</strong><span>서로 연결되는 글을 묶는 프로젝트 지도</span><code>/world/resite/projects/</code></div></div></section>
+  <p class="note">외부 티스토리 주소는 사람용 Re:Site 지도와 HTML 사이트맵에서만 연결하며, 닷컴 검색엔진용 XML 사이트맵에는 넣지 않습니다.</p>
+</div></main>
+<footer class="footer">© 2026 4th Season · Re:Site Map</footer>
+</body>
+</html>
