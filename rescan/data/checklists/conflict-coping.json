@@ -1,0 +1,59 @@
+{
+  "schemaVersion":"1.2.0",
+  "id":"conflict-coping",
+  "series":"[나 체크리스트]",
+  "section":"Re:Scan",
+  "grade":"B",
+  "mode":"pattern",
+  "status":"published",
+  "title":"갈등 대처",
+  "subtitle":"회피·격화·확인·조정과 회복으로 이어지는 관계 반응 자가점검",
+  "description":"최근 2주 동안 가까운 관계에서 의견 차이와 불편한 일이 생겼을 때 대화를 미루는지, 방어적으로 격화되는지, 사실·감정·요구를 구분하는지, 조정과 회복 행동으로 이어 가는지 살펴봅니다.",
+  "period":"최근 2주",
+  "estimatedMinutes":4,
+  "orderPolicy":{"strategy":"balanced","maxSameCategoryRun":2,"sessionStable":true,"useReserveQuestions":false},
+  "contentReview":{"status":"literature-reviewed","date":"2026-07-24","scope":"갈등 대처의 회피·격화·문제 확인·조정 차원을 문헌으로 검토함. 특정 스타일을 모든 상황의 정답으로 제시하지 않으며 자체 문항의 통계적 타당도는 미검증."},
+  "categories":[
+    {"id":"avoidance-delay","label":"회피와 미루기","description":"필요한 대화를 계속 피하거나 상대가 알아주기만 기다리는지"},
+    {"id":"escalation-defense","label":"격화와 방어","description":"사실 확인보다 변명·비난·과거 문제 확대가 먼저 나타나는지"},
+    {"id":"differentiate-needs","label":"사실·감정·요구 구분","description":"관찰한 사실과 감정, 원하는 변화를 분리해 확인하는지"},
+    {"id":"adjustment-repair","label":"조정과 관계 회복","description":"합의 가능한 부분, 수정 행동, 다음 대화 기준을 정하는지"}
+  ],
+  "scale":[{"value":0,"label":"전혀 아니다"},{"value":1,"label":"가끔 그렇다"},{"value":2,"label":"자주 그렇다"},{"value":3,"label":"거의 그렇다"}],
+  "questions":[
+    {"id":"cc01","category":"avoidance-delay","text":"갈등이 생겨도 필요한 대화 시점을 정해 다시 이야기할 수 있다.","reverse":true},
+    {"id":"cc02","category":"escalation-defense","text":"지적을 받으면 사실 확인보다 변명하거나 맞받아치는 말이 먼저 나온다.","reverse":false},
+    {"id":"cc03","category":"differentiate-needs","text":"갈등 상황에서 일어난 사실과 내가 느낀 감정을 구분해 말할 수 있다.","reverse":true},
+    {"id":"cc04","category":"adjustment-repair","text":"의견 차이가 남아도 합의 가능한 부분을 찾을 수 있다.","reverse":true},
+    {"id":"cc05","category":"avoidance-delay","text":"불편한 일을 말하지 않은 채 상대가 알아주기만 기다린다.","reverse":false},
+    {"id":"cc06","category":"escalation-defense","text":"감정이 커지면 지금 문제와 관계없는 과거의 잘못까지 끌어온다.","reverse":false},
+    {"id":"cc07","category":"differentiate-needs","text":"상대의 의도를 추측하기보다 실제로 들은 말과 행동을 확인한다.","reverse":true},
+    {"id":"cc08","category":"adjustment-repair","text":"대화 뒤 필요한 사과나 수정 행동을 구체적으로 정할 수 있다.","reverse":true},
+    {"id":"cc09","category":"avoidance-delay","text":"갈등이 생기면 연락이나 대화를 계속 미루는 편이다.","reverse":false},
+    {"id":"cc10","category":"escalation-defense","text":"상대가 다른 관점을 말하면 내 입장 전체가 부정당한 것처럼 느낀다.","reverse":false},
+    {"id":"cc11","category":"differentiate-needs","text":"내가 원하는 변화나 요청을 한 문장으로 말할 수 있다.","reverse":true},
+    {"id":"cc12","category":"adjustment-repair","text":"문제가 남아도 다음 대화 시점이나 잠시 거리를 둘 기준을 정할 수 있다.","reverse":true}
+  ],
+  "results":[
+    {"min":0,"max":8,"level":"갈등을 비교적 조절하며 다룸","summary":"최근에는 의견 차이를 피하거나 확대하기보다 사실과 요구를 확인하고 조정 행동으로 이어 가는 힘이 비교적 유지되고 있습니다.","questions":["갈등을 비교적 잘 다룬 최근 장면에서 무엇이 도움이 되었나요?","대화를 이어 갈 때 지키고 싶은 기준은 무엇인가요?"],"actions":["잘 마무리된 갈등에서 효과적이었던 문장 한 가지 기록하기","대화가 뜨거워질 때 사용할 중단 신호를 미리 정하기"]},
+    {"min":9,"max":17,"level":"상황에 따라 회피나 방어가 나타남","summary":"관계의 중요도나 감정 강도에 따라 대화를 미루거나 방어적으로 반응할 수 있습니다. 어느 단계에서 흐름이 흔들리는지 살펴볼 때입니다.","questions":["회피·격화·확인·조정 중 가장 어려운 단계는 무엇인가요?","갈등이 커지기 전에 알아차릴 수 있는 몸이나 말의 신호는 무엇인가요?"],"actions":["대화 전에 현재 문제와 과거 문제를 분리해 적기","상대 의도를 추측하기 전에 확인 질문 한 가지 사용하기"]},
+    {"min":18,"max":26,"level":"갈등이 회피와 격화 사이를 반복","summary":"불편한 일을 오래 미루다가 한꺼번에 터뜨리거나, 방어와 비난이 반복되어 실제 요청과 조정이 흐려질 수 있습니다.","questions":["최근 갈등에서 말하지 못한 핵심 요청은 무엇이었나요?","대화의 목표가 이해, 사과, 행동 변화, 거리 조절 중 무엇이었나요?"],"actions":["사실·감정·요청을 각각 한 문장으로 준비하기","감정 강도가 높을 때는 대화 중단 시간과 재개 시점을 함께 정하기","대화 뒤 합의된 행동과 남은 쟁점을 따로 기록하기"]},
+    {"min":27,"max":36,"level":"안전과 외부 조정을 우선","summary":"갈등이 장기간 단절이나 강한 비난, 위협으로 이어지거나 대화를 시도할수록 상황이 악화될 수 있습니다. 관계 기술보다 안전성과 권한 차이를 먼저 확인해야 합니다.","questions":["이 갈등에는 통제·협박·보복·폭력 위험이 있나요?","직접 대화 대신 중재자·기관·기록이 필요한 부분은 무엇인가요?"],"actions":["위험이 낮은 갈등과 안전 문제가 있는 갈등을 구분하기","반복되는 위협이나 보복 가능성이 있으면 혼자 대면하지 않기","안전 문제가 있다면 지역 지원기관·상담·법률·응급 지원을 우선 연결하기"]}
+  ],
+  "patternResults":[
+    {"min":0,"max":8,"level":"갈등을 비교적 조절하며 다룸","summary":"최근에는 의견 차이를 피하거나 확대하기보다 사실과 요구를 확인하고 조정 행동으로 이어 가는 힘이 비교적 유지되고 있습니다.","questions":["갈등을 비교적 잘 다룬 최근 장면에서 무엇이 도움이 되었나요?","대화를 이어 갈 때 지키고 싶은 기준은 무엇인가요?"],"actions":["잘 마무리된 갈등에서 효과적이었던 문장 한 가지 기록하기","대화가 뜨거워질 때 사용할 중단 신호를 미리 정하기"]},
+    {"min":9,"max":17,"level":"상황에 따라 회피나 방어가 나타남","summary":"관계의 중요도나 감정 강도에 따라 대화를 미루거나 방어적으로 반응할 수 있습니다. 어느 단계에서 흐름이 흔들리는지 살펴볼 때입니다.","questions":["회피·격화·확인·조정 중 가장 어려운 단계는 무엇인가요?","갈등이 커지기 전에 알아차릴 수 있는 몸이나 말의 신호는 무엇인가요?"],"actions":["대화 전에 현재 문제와 과거 문제를 분리해 적기","상대 의도를 추측하기 전에 확인 질문 한 가지 사용하기"]},
+    {"min":18,"max":26,"level":"갈등이 회피와 격화 사이를 반복","summary":"불편한 일을 오래 미루다가 한꺼번에 터뜨리거나, 방어와 비난이 반복되어 실제 요청과 조정이 흐려질 수 있습니다.","questions":["최근 갈등에서 말하지 못한 핵심 요청은 무엇이었나요?","대화의 목표가 이해, 사과, 행동 변화, 거리 조절 중 무엇이었나요?"],"actions":["사실·감정·요청을 각각 한 문장으로 준비하기","감정 강도가 높을 때는 대화 중단 시간과 재개 시점을 함께 정하기","대화 뒤 합의된 행동과 남은 쟁점을 따로 기록하기"]},
+    {"min":27,"max":36,"level":"안전과 외부 조정을 우선","summary":"갈등이 장기간 단절이나 강한 비난, 위협으로 이어지거나 대화를 시도할수록 상황이 악화될 수 있습니다. 관계 기술보다 안전성과 권한 차이를 먼저 확인해야 합니다.","questions":["이 갈등에는 통제·협박·보복·폭력 위험이 있나요?","직접 대화 대신 중재자·기관·기록이 필요한 부분은 무엇인가요?"],"actions":["위험이 낮은 갈등과 안전 문제가 있는 갈등을 구분하기","반복되는 위협이나 보복 가능성이 있으면 혼자 대면하지 않기","안전 문제가 있다면 지역 지원기관·상담·법률·응급 지원을 우선 연결하기"]}
+  ],
+  "categoryGuides":{
+    "avoidance-delay":{"low":"필요한 대화 시점을 비교적 다시 잡는 편입니다.","mid":"말하지 않은 기대와 대화 미루기가 반복되는지 살펴보세요.","high":"즉시 해결보다 대화할 날짜와 주제 한 가지부터 정해 보세요."},
+    "escalation-defense":{"low":"방어 반응을 조절하며 현재 문제를 다루는 편입니다.","mid":"지적을 전체 부정으로 받아들이거나 과거 문제를 섞는지 살펴보세요.","high":"대화 속도를 늦추고 현재 사실 하나만 다루도록 범위를 줄여 보세요."},
+    "differentiate-needs":{"low":"사실·감정·요구를 비교적 구분하는 편입니다.","mid":"의도 추측이 사실 확인을 대신하는지 살펴보세요.","high":"본 것·느낀 것·원하는 변화를 세 칸으로 나누어 적어 보세요."},
+    "adjustment-repair":{"low":"합의와 수정 행동으로 비교적 이어 가는 편입니다.","mid":"이해만 하고 구체적 다음 행동을 정하지 않는지 살펴보세요.","high":"누가·무엇을·언제까지 할지와 다음 확인 시점을 정해 보세요."}
+  },
+  "methodNote":"총점은 12문항을 합산하며 갈등을 확인하고 조정하는 문항은 역채점합니다. 점수가 낮을수록 대처가 비교적 유연하고, 점수가 높을수록 회피·격화·조정 지연이 자주 나타났음을 뜻합니다. 결과 구간은 자체 설명 구간이며 표준화된 절단점이나 규준이 아닙니다.",
+  "disclaimer":"이 체크리스트는 관계 유형이나 갈등 능력을 진단하지 않습니다. 안전을 위협하는 관계에서는 대화 지속보다 거리 두기와 외부 지원이 우선일 수 있습니다.",
+  "references":[{"title":"The Dimensionality of the Conflict Resolution Styles Inventory Across Age and Relationships","author":"Trifan, Meeus and Branje","year":2024,"type":"research"},{"title":"A Measure of Styles of Handling Interpersonal Conflict","author":"Rahim","year":1983,"type":"research"}],
+  "relatedLinks":[{"title":"분노조절 점검","url":"/rescan/checklist.html?id=anger-regulation","type":"internal"},{"title":"자기주장 점검","url":"/rescan/checklist.html?id=assertiveness","type":"internal"}]
+}
