@@ -1,0 +1,80 @@
+name: Career Senior S10 Verification
+
+on:
+  pull_request:
+    paths:
+      - 'career-explorer/**'
+      - '.github/workflows/career-senior-s10.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  senior-career-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Check embedded JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          html = Path('career-explorer/senior/index.html').read_text(encoding='utf-8')
+          scripts = re.findall(r'<script>(.*?)</script>', html, flags=re.S)
+          if len(scripts) != 1:
+              raise SystemExit(f'inline script count must be 1, got {len(scripts)}')
+          Path('/tmp/career-senior-inline.js').write_text(scripts[0], encoding='utf-8')
+          PY
+          node --check /tmp/career-senior-inline.js
+
+      - name: Verify required files
+        run: |
+          test -f career-explorer/senior/index.html
+          test -f career-explorer/SENIOR_WORK_PLAN.md
+          test -f career-explorer/index.html
+          grep -q '청소년 진로·학과 탐색기' career-explorer/index.html
+          grep -q '중장년·시니어 경력·일 재설계 탐색기' career-explorer/senior/index.html
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/career-server.log 2>&1 &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/career-explorer/senior/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/career-server.log
+          exit 1
+
+      - name: Run six-path browser verification
+        env:
+          BASE_URL: http://127.0.0.1:4173
+          PDF_PATH: /tmp/career-senior-s09.pdf
+        run: node career-explorer/senior/tests/smoke.mjs
+
+      - name: Upload PDF evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: career-senior-s10-evidence
+          path: |
+            /tmp/career-senior-s09.pdf
+            /tmp/career-server.log
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="중장년·시니어의 경력 경험과 생활 조건을 바탕으로 전환 경로와 준비 순서를 정리하는 진로 탐색 프로그램">
+  <meta name="robots" content="index,follow">
+  <title>중장년·시니어 경력·일 재설계 탐색기</title>
+  <style>
+    :root{
+      --navy:#17324d;--blue:#2c638f;--green:#2f6b55;--gold:#a7792e;
+      --ink:#28323c;--muted:#66717c;--line:#d7e0e7;--paper:#fff;
+      --sky:#eef6fb;--mint:#edf7f2;--sand:#fbf6ea;--danger:#9b3f3f;
+      --shadow:0 18px 48px rgba(23,50,77,.10)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#f2f7fa 0,#fff 520px);color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif;line-height:1.68;word-break:keep-all}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    a{color:var(--blue)}
+    .skip{position:fixed;left:12px;top:12px;z-index:999;padding:10px 14px;background:#fff;color:var(--navy);border-radius:9px;transform:translateY(-160%);font-weight:800}
+    .skip:focus{transform:none}
+    :focus-visible{outline:3px solid rgba(44,99,143,.35);outline-offset:3px}
+    .wrap{width:min(1120px,calc(100% - 28px));margin:auto}
+    .topbar{padding:16px 0}
+    .brand{font-weight:900;text-decoration:none;color:var(--navy)}
+    .hero{padding:44px 0 34px;text-align:center}
+    .hero .eyebrow{margin:0;color:var(--green);font-size:13px;font-weight:900;letter-spacing:.1em}
+    .hero h1{margin:10px auto 14px;max-width:900px;color:var(--navy);font-size:clamp(31px,5.8vw,56px);line-height:1.15}
+    .hero p{max-width:780px;margin:0 auto;color:var(--muted)}
+    .notice{margin:0 0 22px;padding:18px 20px;border-left:5px solid var(--gold);background:var(--sand);border-radius:12px}
+    .notice strong{color:#6f4c12}
+    .panel{margin:0 0 24px;padding:clamp(20px,4vw,36px);background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+    .panel h2{margin:0 0 8px;color:var(--navy);font-size:clamp(23px,4vw,31px)}
+    .panel-intro{margin:0 0 22px;color:var(--muted)}
+    .step-label{display:inline-block;margin-bottom:8px;padding:5px 10px;border-radius:999px;background:var(--mint);color:var(--green);font-size:13px;font-weight:900}
+    .start-grid,.path-grid,.job-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .start-card{min-height:126px;padding:18px;text-align:left;border:1px solid var(--line);border-radius:17px;background:#fff;color:var(--ink)}
+    .start-card:hover{transform:translateY(-2px);border-color:#8db2cc;box-shadow:0 10px 24px rgba(44,99,143,.10)}
+    .start-card.is-active{border:2px solid var(--green);padding:17px;background:var(--mint)}
+    .start-card strong{display:block;margin-bottom:6px;color:var(--navy);font-size:18px}
+    .start-card span{display:block;color:var(--muted);font-size:13px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .field{min-width:0}
+    .field label,.group-title{display:block;margin:0 0 8px;color:var(--navy);font-weight:900}
+    .field input[type="text"],.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink)}
+    .field textarea{min-height:110px;resize:vertical}
+    .full{grid-column:1/-1}
+    .check-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+    .check{display:flex;gap:9px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .check input{margin-top:4px;flex:0 0 auto}
+    .check span{font-size:14px}
+    .condition-list{display:grid;gap:11px}
+    .condition{display:grid;grid-template-columns:minmax(180px,1.2fr) 2fr;gap:14px;align-items:center;padding:15px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}
+    .condition strong{display:block;color:var(--navy)}
+    .condition small{display:block;margin-top:3px;color:var(--muted)}
+    .condition-options{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+    .condition-options label{display:flex;justify-content:center;align-items:center;min-height:44px;padding:8px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px;text-align:center}
+    .condition-options label:has(input:checked){border-color:var(--blue);background:var(--sky);color:var(--blue);font-weight:900}
+    .condition-options input{position:absolute;opacity:0;pointer-events:none}
+    .actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .button{display:inline-flex;justify-content:center;align-items:center;min-height:46px;padding:11px 17px;border:0;border-radius:11px;background:var(--blue);color:#fff;font-weight:900;text-decoration:none}
+    .button.secondary{background:#fff;color:var(--navy);border:1px solid var(--line)}
+    .button.green{background:var(--green)}
+    .button.gold{background:var(--gold)}
+    .button.danger{background:#fff;color:var(--danger);border:1px solid #e8caca}
+    .button:disabled{opacity:.48;cursor:not-allowed}
+    .result-head{padding:24px;border-radius:18px;background:linear-gradient(135deg,var(--navy),#234e69);color:#fff}
+    .result-head h2{color:#fff}
+    .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+    .summary-card{padding:15px;border-radius:13px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+    .summary-card small{display:block;color:#cfe0ed;font-weight:800}
+    .summary-card strong{display:block;margin-top:5px;color:#fff}
+    .section-title{margin:30px 0 12px;color:var(--navy);font-size:23px}
+    .path-card{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--mint)}
+    .path-card .rank{display:inline-block;margin-bottom:8px;padding:4px 9px;border-radius:999px;background:var(--green);color:#fff;font-size:12px;font-weight:900}
+    .path-card h3{margin:0 0 7px;color:var(--navy)}
+    .path-card p{margin:0;color:var(--muted);font-size:14px}
+    .path-card ul{margin:12px 0 0;padding-left:19px;font-size:14px}
+    .job-card{display:flex;flex-direction:column;padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff}
+    .job-card .path-name{color:var(--green);font-size:12px;font-weight:900}
+    .job-card h3{margin:5px 0 7px;color:var(--navy);font-size:18px}
+    .job-card p{margin:0 0 9px;color:var(--muted);font-size:14px}
+    .job-meta{margin:0;padding:0;list-style:none;font-size:13px}
+    .job-meta li{padding:7px 0;border-top:1px dashed var(--line)}
+    .job-meta strong{color:var(--navy)}
+    .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .source-link{display:block;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--sky);text-decoration:none}
+    .source-link strong{display:block;color:var(--navy)}
+    .source-link span{display:block;margin-top:4px;color:var(--muted);font-size:13px}
+    .narrative{padding:20px;border-left:5px solid var(--green);background:var(--mint);border-radius:13px}
+    .narrative p{margin:0 0 12px}
+    .narrative p:last-child{margin-bottom:0}
+    .checklist{margin:0;padding:0;list-style:none;counter-reset:item}
+    .checklist li{position:relative;margin:9px 0;padding:13px 14px 13px 48px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .checklist li::before{counter-increment:item;content:counter(item);position:absolute;left:14px;top:12px;width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:#fff;font-weight:900;font-size:13px}
+    .privacy{margin-top:18px;color:var(--muted);font-size:13px}
+    #report-preview{margin-top:28px}
+    .report-sheet{background:#fff;color:#111;border:1px solid var(--line);box-shadow:var(--shadow);padding:28px}
+    .report-sheet h1,.report-sheet h2,.report-sheet h3{color:#17324d}
+    .report-cover{padding:28px 0 22px;border-bottom:3px solid #17324d}
+    .report-kicker{font-size:12px;font-weight:900;letter-spacing:.08em;color:#2f6b55}
+    .report-cover h1{margin:9px 0 10px;font-size:32px;line-height:1.25}
+    .report-meta{display:flex;flex-wrap:wrap;gap:12px;color:#555;font-size:12px}
+    .report-section{padding:24px 0;border-bottom:1px solid #ccc}
+    .report-section:last-child{border-bottom:0}
+    .report-section h2{margin:0 0 14px;font-size:22px}
+    .report-table{width:100%;border-collapse:collapse;font-size:13px}
+    .report-table th,.report-table td{padding:9px;border:1px solid #bbb;vertical-align:top;text-align:left}
+    .report-table th{background:#edf3f6}
+    .report-note{padding:12px 14px;background:#f7f2e8;border-left:4px solid #a7792e;font-size:13px}
+    .report-footer{margin-top:22px;color:#666;font-size:11px}
+    .footer{padding:34px 0 46px;text-align:center;color:var(--muted);font-size:13px}
+    [hidden]{display:none!important}
+    @media(max-width:820px){
+      .start-grid,.path-grid,.job-grid,.summary-grid,.link-grid,.check-grid{grid-template-columns:1fr 1fr}
+      .form-grid{grid-template-columns:1fr}
+      .full{grid-column:auto}
+      .condition{grid-template-columns:1fr}
+    }
+    @media(max-width:580px){
+      .wrap{width:min(100% - 18px,1120px)}
+      .hero{padding-top:28px}
+      .panel{border-radius:17px;padding:19px 15px}
+      .start-grid,.path-grid,.job-grid,.summary-grid,.link-grid,.check-grid{grid-template-columns:1fr}
+      .condition-options{grid-template-columns:1fr}
+      .actions{display:grid}
+      .actions .button{width:100%}
+      .report-sheet{padding:18px 12px}
+      .report-cover h1{font-size:26px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.start-card:hover{transform:none}}
+    @media print{
+      @page{size:A4 portrait;margin:12mm}
+      body{background:#fff!important}
+      body>*:not(#print-root){display:none!important}
+      #print-root{display:block!important}
+      #print-root .report-sheet{border:0;box-shadow:none;padding:0}
+      .report-cover{min-height:245mm;display:flex;flex-direction:column;justify-content:center;page-break-after:always}
+      .report-section{break-before:page;page-break-before:always;border:0;padding:0}
+      .report-section:first-of-type{break-before:auto;page-break-before:auto}
+      .report-table,.report-note{break-inside:avoid;page-break-inside:avoid}
+      .report-table tr{break-inside:avoid;page-break-inside:avoid}
+      a{color:#111;text-decoration:none}
+      a[href]::after{content:" (" attr(href) ")";font-size:9px;overflow-wrap:anywhere}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#senior-app">탐색 시작으로 이동</a>
+  <header class="topbar"><div class="wrap"><a class="brand" href="/career-explorer/">진로 탐색·직업 정보 플랫폼</a></div></header>
+
+  <main class="wrap" id="senior-app">
+    <section class="hero">
+      <p class="eyebrow">MIDDLE-AGED &amp; SENIOR CAREER EXPLORER</p>
+      <h1>지나온 경력을 다시 읽고<br>다음 일을 설계합니다</h1>
+      <p>나이로 직업을 추천하거나 배제하지 않습니다. 지금까지 해온 일, 반복해서 맡은 역할, 앞으로 지키고 싶은 생활 조건을 바탕으로 서로 성격이 다른 전환 경로를 비교합니다.</p>
+    </section>
+
+    <aside class="notice">
+      <strong>판정표가 아닙니다.</strong>
+      경험은 직무능력을 확정하는 점수가 아니라 연결 단서로만 사용합니다. 결과에 나온 직업의 근무시간·임금·지역 수요·자격 요건은 실제 채용공고와 공식 기관에서 다시 확인해야 합니다.
+    </aside>
+
+    <section class="panel" id="step-start">
+      <span class="step-label">S01 · 시작 유형</span>
+      <h2>지금 가장 가까운 출발점은 무엇인가요?</h2>
+      <p class="panel-intro">정답을 고르는 단계가 아닙니다. 현재 고민과 가장 가까운 시작점을 하나 선택하세요.</p>
+      <div class="start-grid" id="start-grid"></div>
+    </section>
+
+    <section class="panel" id="step-experience">
+      <span class="step-label">S02 · 경력과 경험</span>
+      <h2>경력에서 반복해 온 장면을 적어봅니다</h2>
+      <p class="panel-intro">직함보다 실제로 자주 맡았던 일과 주변에서 부탁받았던 역할을 중심으로 선택합니다. 모르는 항목은 비워도 됩니다.</p>
+      <div class="form-grid">
+        <div class="field">
+          <label for="industry">경험한 업종·현장</label>
+          <input id="industry" type="text" placeholder="예: 제조업, 소매업, 공공기관, 병원, 건설현장">
+        </div>
+        <div class="field">
+          <label for="career-years">경력 기간</label>
+          <select id="career-years">
+            <option value="">입력하지 않음</option>
+            <option>5년 미만</option><option>5~10년</option><option>10~20년</option><option>20년 이상</option>
+          </select>
+        </div>
+        <div class="field full">
+          <span class="group-title">익숙한 업무 장면</span>
+          <div class="check-grid" id="scene-grid"></div>
+        </div>
+        <div class="field full">
+          <span class="group-title">반복해서 맡았던 역할</span>
+          <div class="check-grid" id="role-grid"></div>
+        </div>
+        <div class="field full">
+          <span class="group-title">지금 활용할 수 있는 자원</span>
+          <div class="check-grid" id="resource-grid"></div>
+        </div>
+        <div class="field full">
+          <label for="career-note">덧붙이고 싶은 경험</label>
+          <textarea id="career-note" placeholder="예: 신규 직원 교육을 자주 맡았다. 거래처 문제를 조정하는 일이 많았다. 문서 정리와 일정 관리에 익숙하다."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="step-conditions">
+      <span class="step-label">S03 · 생활과 근무조건</span>
+      <h2>앞으로의 일에서 지킬 조건을 구분합니다</h2>
+      <p class="panel-intro">각 조건을 반드시 지킬 조건, 가능하면 원하는 조건, 아직 결정하지 않은 조건으로 나눕니다. 필수조건과 충돌할 가능성이 있어도 직업을 자동으로 제외하지 않고 확인 사항으로 남깁니다.</p>
+      <div class="condition-list" id="condition-list"></div>
+      <div class="actions">
+        <button class="button green" id="make-result" type="button">3개 경로와 9개 직업 비교하기</button>
+        <button class="button secondary" id="reset-form" type="button">입력 초기화</button>
+      </div>
+      <p class="privacy">입력 내용은 현재 브라우저 화면에서만 처리합니다. 별도 서버에 저장하거나 AI 서비스로 자동 전송하지 않습니다.</p>
+    </section>
+
+    <section class="panel" id="result-panel" hidden aria-live="polite">
+      <div class="result-head">
+        <span class="step-label">S04~S08 · 통합 결과</span>
+        <h2>경력과 생활조건을 함께 본 전환 경로</h2>
+        <p id="result-lead"></p>
+        <div class="summary-grid" id="summary-grid"></div>
+      </div>
+
+      <h2 class="section-title">성격이 다른 전환 경로 3개</h2>
+      <div class="path-grid" id="path-results"></div>
+
+      <h2 class="section-title">경로별 3개씩, 총 9개 직업</h2>
+      <p class="panel-intro">아래 직업은 취업 가능성 순위가 아닙니다. 경로의 성격을 비교할 수 있도록 서로 다른 업무 형태를 배치했습니다.</p>
+      <div class="job-grid" id="job-results"></div>
+
+      <h2 class="section-title">교육·자격·일경험을 확인할 곳</h2>
+      <div class="link-grid">
+        <a class="source-link" href="https://www.work24.go.kr/cm/main.do?mid=1" target="_blank" rel="noopener"><strong>고용24</strong><span>채용공고, 직업훈련, 국민내일배움카드 과정 검색</span></a>
+        <a class="source-link" href="https://www.q-net.or.kr/crf005.do" target="_blank" rel="noopener"><strong>Q-Net</strong><span>국가기술·국가전문자격 종목과 시험정보 확인</span></a>
+        <a class="source-link" href="https://www.work24.go.kr/wk/u/a/1000/seniorCenterSvcInfo.do" target="_blank" rel="noopener"><strong>중장년내일센터</strong><span>생애경력설계, 전직지원, 재취업 상담과 프로그램 확인</span></a>
+      </div>
+
+      <h2 class="section-title">통합 결과문</h2>
+      <div class="narrative" id="integrated-narrative"></div>
+
+      <h2 class="section-title">다음 행동 순서</h2>
+      <ol class="checklist" id="next-actions"></ol>
+
+      <div class="actions">
+        <button class="button gold" id="show-report" type="button">A4 보고서 미리보기</button>
+        <button class="button green" id="print-report" type="button">인쇄·PDF 저장</button>
+        <button class="button secondary" id="copy-summary" type="button">결과문 복사</button>
+        <button class="button danger" id="restart" type="button">처음부터 다시</button>
+      </div>
+      <p class="privacy">공식정보 확인 기준일: 2026년 7월 24일. 제도와 링크는 S11에서 최종 재검증합니다.</p>
+
+      <div id="report-preview" hidden></div>
+    </section>
+  </main>
+
+  <div id="print-root" hidden></div>
+
+  <footer class="footer"><div class="wrap">4th-season.com · 중장년·시니어 경력·일 재설계 탐색기</div></footer>
+
+  <script>
+  (() => {
+    "use strict";
+
+    const CHECK_DATE = "2026년 7월 24일";
+
+    const startTypes = [
+      {code:"continue",label:"경력 이어가기",desc:"같은 분야 안에서 역할과 일의 방식을 조정하고 싶습니다."},
+      {code:"retire",label:"퇴직 준비하기",desc:"퇴직 전부터 다음 일을 천천히 준비하고 싶습니다."},
+      {code:"reemploy",label:"다시 취업하기",desc:"경력 공백이나 퇴직 뒤 다시 일할 길을 찾고 싶습니다."},
+      {code:"lighter",label:"일의 강도 조정하기",desc:"근무시간·책임·신체 부담을 낮추며 경험을 활용하고 싶습니다."},
+      {code:"experience",label:"경험 활용하기",desc:"관리·조정·교육·문제해결 경험을 다른 방식으로 쓰고 싶습니다."},
+      {code:"newfield",label:"새로운 분야 찾기",desc:"교육과 짧은 체험을 거쳐 다른 분야를 탐색하고 싶습니다."}
+    ];
+
+    const scenes = [
+      "사무·문서·일정","고객응대·상담","영업·거래처","현장운영·작업관리",
+      "생산·품질·검사","시설·안전·정비","교육·인수인계","돌봄·생활지원",
+      "물류·재고·배송","회계·비용·정산","공공·지역서비스","문화·관광·행사"
+    ];
+    const roles = [
+      "사람과 일을 조정함","문제를 듣고 해결함","기준과 품질을 확인함",
+      "신입·후배를 가르침","일정과 문서를 정리함","고객과 관계를 유지함",
+      "현장을 안전하게 운영함","비용·재고를 관리함","돌봄과 생활을 지원함",
+      "자료를 찾고 설명함","기계·도구를 다룸","팀의 빈자리를 메움"
+    ];
+    const resources = [
+      "업종 지식","현장 판단","고객 소통","문서 작성","컴퓨터 기본 활용",
+      "교육·설명","관계망·거래처","자격·면허","운전 가능","갈등 조정",
+      "꼼꼼한 확인","꾸준한 생활 리듬"
+    ];
+
+    const conditionDefs = [
+      {id:"hours",label:"근무시간 조정",desc:"주간·단시간·정해진 시간대를 우선할지"},
+      {id:"physical",label:"신체 부담 낮추기",desc:"장시간 서기·중량물·야간근무 부담을 줄일지"},
+      {id:"income",label:"소득의 안정성",desc:"성과형보다 고정 급여와 지속성을 우선할지"},
+      {id:"commute",label:"통근 범위 줄이기",desc:"가까운 지역이나 이동이 적은 일을 우선할지"},
+      {id:"contact",label:"대면 업무 조절",desc:"고객·민원·다수 사람을 상대하는 정도를 조절할지"},
+      {id:"digital",label:"디지털 업무 배우기",desc:"문서·예약·온라인 시스템을 새로 익힐 수 있는지"},
+      {id:"responsibility",label:"관리 책임 조정",desc:"인원·매출·안전 책임의 크기를 줄이거나 유지할지"},
+      {id:"training",label:"교육 준비기간",desc:"몇 주~몇 달의 교육이나 자격 준비를 받아들일 수 있는지"}
+    ];
+
+    const pathData = {
+      "same-field":{
+        name:"같은 분야에서 역할 조정",
+        desc:"익숙한 업종과 현장을 유지하면서 책임 범위, 근무시간, 실무 비중을 다시 조정하는 경로입니다.",
+        prepare:["기존 경력기술서를 실제 업무 장면 중심으로 다시 작성","같은 업종의 단시간·지원·관리 공고를 함께 검색","임금보다 근무형태와 책임 범위를 먼저 비교"],
+        jobs:[
+          {name:"현장관리·운영 지원",summary:"작업 흐름, 일정, 인력과 현장 문제를 점검하고 운영을 돕습니다.",form:"현장·사무 혼합 / 기관별 교대 가능",required:"공통 법정 필수 없음",conditional:"업종에 따라 안전·시설·운전 관련 자격이 필요할 수 있음",posting:"현장관리, 운영지원, 공정관리, 반장·조장 보조",training:"현장관리, 산업안전 기초, 엑셀 문서",experience:"현재 업종의 소규모 현장·협력업체 운영 보조부터 확인"},
+          {name:"품질·안전 실무 지원",summary:"체크리스트, 기준서, 검사 기록을 바탕으로 품질과 안전 상태를 확인합니다.",form:"현장 중심 / 기록·점검 비중 높음",required:"담당 업무에 따라 법정 선임자격이 필요할 수 있음",conditional:"품질관리·산업안전 관련 자격 우대 가능",posting:"품질검사, 안전관리 보조, 검사원, QA·QC 보조",training:"품질관리 기초, 안전보건교육, 측정·검사",experience:"기존 현장에서 점검표 작성이나 검사 보조 경험 만들기"},
+          {name:"고객·영업 운영 지원",summary:"신규 판매보다 기존 고객, 주문, 거래처, 사후 문제를 관리하는 역할입니다.",form:"사무·전화·외근 혼합",required:"공통 법정 필수 없음",conditional:"운전·전산·업종 지식이 공고별 우대가 될 수 있음",posting:"영업지원, 거래처관리, 고객관리, 주문관리",training:"고객응대, CRM, 엑셀·문서작성",experience:"기존 거래처 관리와 주문·민원 처리 경험을 경력문장으로 정리"}
+        ]
+      },
+      "adjacent":{
+        name:"인접 직무로 옮기기",
+        desc:"기존 업종 지식은 유지하되 직접 수행하던 일에서 구매·물류·시설·지원 직무로 옮기는 경로입니다.",
+        prepare:["현재 업무와 맞닿은 후방지원 직무를 목록화","업종명과 직무명을 조합해 채용공고 검색","부족한 전산·문서·재고관리 기능을 짧게 보완"],
+        jobs:[
+          {name:"구매·자재관리 사무원",summary:"필요 자재를 확인하고 발주, 입고, 거래처, 비용 자료를 관리합니다.",form:"사무 중심 / 현장 확인 병행",required:"공통 법정 필수 없음",conditional:"ERP·엑셀·업종 자재지식 우대 가능",posting:"구매관리, 자재관리, 발주관리, 입출고 사무",training:"ERP 기초, 엑셀, 구매·재고관리",experience:"소규모 업체의 발주·재고 보조 또는 기존 업무 기록으로 연결"},
+          {name:"물류·배차 관리원",summary:"입출고와 배송 일정을 맞추고 운송기사·현장·고객 사이를 조정합니다.",form:"사무·전화 조정 / 이른 시간 근무 가능",required:"공통 법정 필수 없음",conditional:"운전면허·물류관리 관련 자격 우대 가능",posting:"배차관리, 물류사무, 출고관리, 운송운영",training:"물류기초, 배차시스템, 엑셀",experience:"배송 일정표나 입출고 기록 관리 경험부터 확인"},
+          {name:"시설·환경 관리원",summary:"건물과 설비의 상태를 점검하고 외주업체, 수리 일정, 환경 상태를 관리합니다.",form:"순회·점검 중심 / 교대 여부 확인 필요",required:"직접 담당 설비와 선임 업무에 따라 자격 필요",conditional:"전기·소방·가스·에너지 관련 자격이 공고별 요구될 수 있음",posting:"시설관리, 영선, 건물관리, 환경관리",training:"시설관리 기초, 전기·소방 안전, 점검일지",experience:"소규모 시설 점검 보조나 관리사무소 업무 관찰"}
+        ]
+      },
+      "transfer":{
+        name:"경험을 전수하고 지원하기",
+        desc:"직접 생산·판매하는 역할보다 후배 교육, 현장 멘토링, 업무 설명과 기록에 경험을 쓰는 경로입니다.",
+        prepare:["내가 반복해서 설명해 온 업무 5개 기록","초보자가 자주 틀리는 지점과 해결법 정리","짧은 교육·멘토·매뉴얼 작성 기회부터 탐색"],
+        jobs:[
+          {name:"직업훈련·사내교육 강사",summary:"실무 경험을 교육과정, 시범, 사례 설명으로 바꾸어 전달합니다.",form:"시간제·과정형·계약형 가능",required:"기관·과정에 따라 강사요건 또는 훈련교사 자격 필요",conditional:"관련 직무경력·자격·강의경험 요구 가능",posting:"직업훈련 강사, 사내강사, 실무교육 강사",training:"강의설계, 교수법, 프레젠테이션",experience:"사내 인수인계 자료나 20분 미니강의부터 제작"},
+          {name:"현장 멘토·취업지원 보조",summary:"초보 근로자나 구직자가 현장에 적응하도록 업무 순서와 생활 규칙을 안내합니다.",form:"기관·사업 단위 계약 / 상담·현장 방문",required:"공통 법정 필수 없음",conditional:"직업상담·사회복지 자격 또는 관련 경력 우대 가능",posting:"취업지원 보조, 일자리사업 매니저, 현장멘토",training:"상담기초, 기록작성, 취업지원 제도",experience:"지역기관 봉사·프로그램 보조로 역할 확인"},
+          {name:"업무 매뉴얼·기술문서 작성",summary:"숙련자의 암묵적인 작업순서를 사진, 문장, 체크리스트로 정리합니다.",form:"사무·프로젝트형 / 원격 가능성 있음",required:"공통 법정 필수 없음",conditional:"문서도구·사진편집·해당 기술경력 요구 가능",posting:"매뉴얼 작성, 기술문서, 교육자료 제작, SOP 작성",training:"문서편집, 정보구조화, 사진·영상 기초",experience:"내 업무 하나를 1쪽 체크리스트로 만들어 포트폴리오화"}
+        ]
+      },
+      "support":{
+        name:"운영·사무 지원으로 전환",
+        desc:"사람과 현장을 직접 책임지는 비중을 줄이고 문서, 일정, 정산, 예약과 고객지원으로 옮기는 경로입니다.",
+        prepare:["문서·일정·정산 경험을 구체적 사례로 정리","엑셀·한글·예약시스템 기본 기능 점검","단시간·기간제·지원직 공고도 함께 비교"],
+        jobs:[
+          {name:"총무·사무지원원",summary:"문서, 일정, 비품, 회의, 자료 입력 등 조직 운영의 기본 업무를 맡습니다.",form:"사무 중심 / 정해진 시간대가 비교적 많음",required:"공통 법정 필수 없음",conditional:"한글·엑셀·문서작성 능력 요구 가능",posting:"사무보조, 총무지원, 행정지원, 문서관리",training:"OA 기초, 문서작성, 개인정보보호",experience:"지역기관·소기업의 단기 행정보조로 업무량 확인"},
+          {name:"회계·경리 사무원",summary:"매입·매출, 증빙, 비용, 급여 보조와 회계자료 정리를 담당합니다.",form:"사무 중심 / 월말 업무 집중 가능",required:"공통 법정 필수 없음",conditional:"전산회계·세무 프로그램 경험 우대 가능",posting:"경리, 회계보조, 비용정산, 매입매출 관리",training:"전산회계 기초, 엑셀, 증빙관리",experience:"소규모 조직의 증빙 정리·비용 입력 체험"},
+          {name:"고객상담·예약관리원",summary:"전화·온라인 문의를 듣고 예약, 일정 변경, 기본 안내와 기록을 처리합니다.",form:"사무·전화 중심 / 교대 여부 공고 확인",required:"공통 법정 필수 없음",conditional:"업종 지식·전산 입력·상담 경험 우대 가능",posting:"예약상담, 고객센터, 접수, 안내데스크",training:"상담응대, 예약시스템, 민원기록",experience:"병원·교육·관광·서비스 업종의 접수 공고 비교"}
+        ]
+      },
+      "community":{
+        name:"지역·공공서비스로 확장",
+        desc:"지역기관, 복지시설, 공공일자리와 문화·관광 현장에서 안내·운영·생활지원 경험을 활용하는 경로입니다.",
+        prepare:["거주지역 기관과 공공 일자리 사업 목록 확인","계약기간·근무시간·보수 기준을 사업별로 비교","대면·이동·돌봄 부담을 실제 현장에서 확인"],
+        jobs:[
+          {name:"복지기관 행정·프로그램 지원",summary:"이용자 접수, 일정, 문서, 프로그램 준비와 운영을 보조합니다.",form:"기관 근무 / 프로그램 일정에 따라 변동",required:"보조 업무는 공통 필수 없음",conditional:"담당 업무에 따라 사회복지사 등 자격 요구 가능",posting:"복지관 행정보조, 프로그램 보조, 이용자 지원",training:"복지행정 기초, 개인정보보호, 프로그램 운영",experience:"복지관·지역센터 프로그램 자원봉사나 단기보조"},
+          {name:"공공일자리 사업 운영보조",summary:"참여자 안내, 출결, 서류, 현장 점검과 사업 일정 관리를 돕습니다.",form:"사업기간 계약 / 주간 근무가 많음",required:"사업별 자격과 거주·소득 조건이 다름",conditional:"행정경력·운전·컴퓨터 활용 요구 가능",posting:"일자리사업 전담, 사업운영 보조, 참여자 관리",training:"행정문서, 엑셀, 공공사업 이해",experience:"지자체·고용복지플러스센터 공고를 실제 조건과 함께 확인"},
+          {name:"지역문화·관광 안내원",summary:"방문객에게 장소와 프로그램을 설명하고 예약·행사·안전 안내를 지원합니다.",form:"주말·계절·행사형 근무 가능",required:"공통 법정 필수 없음",conditional:"외국어·해설·관광 관련 교육이 우대될 수 있음",posting:"문화관광 해설 보조, 안내원, 전시·행사 운영",training:"지역문화, 해설기초, 응급·안전 안내",experience:"박물관·문화원·축제의 단기 운영 경험 확인"}
+        ]
+      },
+      "reskill":{
+        name:"교육 후 새로운 분야 탐색",
+        desc:"기존 경력을 억지로 유지하지 않고 자격교육, 단기훈련, 체험을 통해 새로운 분야의 실제 일을 확인하는 경로입니다.",
+        prepare:["교육비보다 실제 업무 장면을 먼저 조사","훈련 수료 뒤 지원 가능한 공고를 미리 확인","짧은 체험이나 실습 뒤 계속할지 다시 결정"],
+        jobs:[
+          {name:"요양보호사",summary:"노인 등의 일상생활, 신체활동과 정서적 지원을 제공하는 돌봄 직무입니다.",form:"시설·재가 / 교대·이동·신체부담 차이 큼",required:"지정 교육과정 이수와 요양보호사 자격시험·자격증 필요",conditional:"운전·치매전문교육 등은 업무와 기관별로 달라짐",posting:"시설 요양보호사, 재가 요양보호사, 주간보호",training:"요양보호사 교육기관, 돌봄윤리, 감염·안전",experience:"교육 신청 전 시설·재가의 하루 업무와 신체부담 비교"},
+          {name:"직업상담·취업지원 실무",summary:"구직자의 상황을 듣고 채용정보, 프로그램, 서류 준비와 취업 과정을 지원합니다.",form:"기관·위탁사업 계약 / 상담·행정 혼합",required:"직무 전체의 법정 공통 필수는 아님",conditional:"직업상담사 자격이 채용공고에서 요구·우대될 수 있음",posting:"직업상담사, 취업상담, 일자리센터 상담원",training:"직업상담사, 상담기초, 고용서비스 이해",experience:"중장년내일센터 상담 참여 후 업무 현실과 준비기간 확인"},
+          {name:"디지털 자료·업무지원원",summary:"자료 입력, 이미지·문서 분류, 온라인 주문·콘텐츠 관리 등 정해진 디지털 업무를 수행합니다.",form:"사무·프로젝트·일부 원격 / 물량 변동 가능",required:"공통 법정 필수 없음",conditional:"컴퓨터 활용, 정확도, 보안 준수 요구",posting:"데이터 라벨링, 자료입력, 쇼핑몰 운영보조, 디지털 사무",training:"컴퓨터 기초, 스프레드시트, 데이터 보안",experience:"공공 디지털 교육이나 짧은 실습으로 화면작업 피로도 확인"}
+        ]
+      }
+    };
+
+    const baseOrder = {
+      continue:["same-field","adjacent","support","transfer","community","reskill"],
+      retire:["transfer","support","same-field","community","adjacent","reskill"],
+      reemploy:["support","adjacent","community","same-field","reskill","transfer"],
+      lighter:["support","transfer","community","same-field","adjacent","reskill"],
+      experience:["transfer","same-field","community","support","adjacent","reskill"],
+      newfield:["reskill","community","support","adjacent","transfer","same-field"]
+    };
+
+    const state = {start:"",paths:[],jobs:[],conditions:{},narrative:""};
+
+    const $ = (sel,root=document) => root.querySelector(sel);
+    const $$ = (sel,root=document) => [...root.querySelectorAll(sel)];
+    const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[ch]));
+    const selected = name => $$(`input[name="${name}"]:checked`).map(el=>el.value);
+
+    function renderStartTypes(){
+      $("#start-grid").innerHTML = startTypes.map(item=>`
+        <button class="start-card" type="button" data-code="${item.code}" aria-pressed="false">
+          <strong>${item.label}</strong><span>${item.desc}</span>
+        </button>`).join("");
+      $$(".start-card").forEach(btn=>btn.addEventListener("click",()=>{
+        state.start=btn.dataset.code;
+        $$(".start-card").forEach(other=>{
+          const active=other===btn;
+          other.classList.toggle("is-active",active);
+          other.setAttribute("aria-pressed",String(active));
+        });
+        $("#step-experience").scrollIntoView({behavior:"smooth",block:"start"});
+      }));
+    }
+
+    function renderChecks(id,name,items){
+      $(id).innerHTML=items.map(label=>`
+        <label class="check"><input type="checkbox" name="${name}" value="${escapeHTML(label)}"><span>${escapeHTML(label)}</span></label>`).join("");
+    }
+
+    function renderConditions(){
+      $("#condition-list").innerHTML=conditionDefs.map(def=>`
+        <div class="condition" data-id="${def.id}">
+          <div><strong>${def.label}</strong><small>${def.desc}</small></div>
+          <div class="condition-options">
+            <label><input type="radio" name="condition-${def.id}" value="required">반드시 지킴</label>
+            <label><input type="radio" name="condition-${def.id}" value="preferred">가능하면 원함</label>
+            <label><input type="radio" name="condition-${def.id}" value="undecided" checked>아직 결정 안 함</label>
+          </div>
+        </div>`).join("");
+    }
+
+    function startLabel(){return startTypes.find(x=>x.code===state.start)?.label || "시작 유형 미선택";}
+
+    function collectConditions(){
+      const groups={required:[],preferred:[],undecided:[]};
+      conditionDefs.forEach(def=>{
+        const value=$(`input[name="condition-${def.id}"]:checked`)?.value || "undecided";
+        groups[value].push(def.label);
+        state.conditions[def.id]=value;
+      });
+      return groups;
+    }
+
+    function moveFront(order,key){
+      const idx=order.indexOf(key);
+      if(idx>0){order.splice(idx,1);order.unshift(key);}
+    }
+
+    function choosePaths(){
+      const order=[...(baseOrder[state.start] || baseOrder.reemploy)];
+      const roleText=selected("role").join(" ");
+      const sceneText=selected("scene").join(" ");
+      const resourceText=selected("resource").join(" ");
+      if(/가르침|설명|인수인계/.test(roleText+" "+sceneText+" "+resourceText)) moveFront(order,"transfer");
+      if(/문서|일정|회계|정산|컴퓨터/.test(roleText+" "+sceneText+" "+resourceText)) moveFront(order,"support");
+      if(/현장|품질|안전|기계|도구|업종 지식/.test(roleText+" "+sceneText+" "+resourceText) && state.start!=="newfield") moveFront(order,"same-field");
+      if(/공공|돌봄|지역|문화|관광/.test(roleText+" "+sceneText)) moveFront(order,"community");
+      if(state.conditions.physical==="required" || state.conditions.hours==="required") {
+        moveFront(order,"support");
+        if(state.start==="experience" || state.start==="retire") moveFront(order,"transfer");
+      }
+      if(state.conditions.training==="required" || state.start==="newfield") moveFront(order,"reskill");
+      return [...new Set(order)].slice(0,3);
+    }
+
+    function connectionReason(pathKey){
+      const role=selected("role");
+      const scene=selected("scene");
+      const resource=selected("resource");
+      const clues=[...role,...scene,...resource].slice(0,4);
+      const clueText=clues.length?clues.join(", "):"입력하지 않은 경험은 부족으로 판단하지 않음";
+      const extra={
+        "same-field":"익숙한 업종·현장 경험을 유지하면서 역할 범위를 조정할 수 있습니다.",
+        adjacent:"기존 업무와 맞닿은 후방지원 직무로 경력 언어를 바꿔볼 수 있습니다.",
+        transfer:"숙련 과정에서 쌓인 설명·조정·문제해결 경험을 전수 역할로 바꿉니다.",
+        support:"직접 책임보다 문서·일정·정산·응대의 운영 기능을 중심에 둡니다.",
+        community:"생활권 안의 기관과 공공서비스에서 경험을 다른 맥락으로 활용합니다.",
+        reskill:"기존 경력을 능력의 한계로 보지 않고 짧은 교육과 체험으로 새 일을 확인합니다."
+      }[pathKey];
+      return `${extra} 현재 연결 단서: ${clueText}.`;
+    }
+
+    function makeResults(){
+      if(!state.start){
+        alert("먼저 시작 유형을 선택해 주세요.");
+        $("#step-start").scrollIntoView({behavior:"smooth"});
+        return;
+      }
+      const conditions=collectConditions();
+      state.paths=choosePaths();
+      state.jobs=state.paths.flatMap(key=>pathData[key].jobs.map(job=>({...job,pathKey:key,pathName:pathData[key].name})));
+
+      const industry=$("#industry").value.trim() || "업종 미입력";
+      const years=$("#career-years").value || "기간 미입력";
+      const roleValues=selected("role");
+      const resourceValues=selected("resource");
+
+      $("#result-lead").textContent=`${startLabel()}에서 출발해, 경험을 이어 쓰는 경로와 역할을 바꾸는 경로, 새 준비가 필요한 경로를 함께 배치했습니다.`;
+      $("#summary-grid").innerHTML=[
+        ["출발점",startLabel()],
+        ["경력 장면",`${industry} · ${years}`],
+        ["생활조건",`필수 ${conditions.required.length} · 선호 ${conditions.preferred.length} · 미결정 ${conditions.undecided.length}`]
+      ].map(([a,b])=>`<div class="summary-card"><small>${escapeHTML(a)}</small><strong>${escapeHTML(b)}</strong></div>`).join("");
+
+      $("#path-results").innerHTML=state.paths.map((key,index)=>{
+        const path=pathData[key];
+        return `<article class="path-card">
+          <span class="rank">${index+1}번째 비교 경로</span>
+          <h3>${escapeHTML(path.name)}</h3>
+          <p>${escapeHTML(connectionReason(key))}</p>
+          <ul>${path.prepare.map(x=>`<li>${escapeHTML(x)}</li>`).join("")}</ul>
+        </article>`;
+      }).join("");
+
+      $("#job-results").innerHTML=state.jobs.map(job=>`
+        <article class="job-card">
+          <span class="path-name">${escapeHTML(job.pathName)}</span>
+          <h3>${escapeHTML(job.name)}</h3>
+          <p>${escapeHTML(job.summary)}</p>
+          <ul class="job-meta">
+            <li><strong>일의 형태:</strong> ${escapeHTML(job.form)}</li>
+            <li><strong>법정·공통 필수:</strong> ${escapeHTML(job.required)}</li>
+            <li><strong>업무·공고별:</strong> ${escapeHTML(job.conditional)}</li>
+            <li><strong>훈련 검색어:</strong> ${escapeHTML(job.training)}</li>
+            <li><strong>작은 일경험:</strong> ${escapeHTML(job.experience)}</li>
+            <li><strong>채용 검색어:</strong> ${escapeHTML(job.posting)}</li>
+          </ul>
+        </article>`).join("");
+
+      const requiredText=conditions.required.length?conditions.required.join(", "):"아직 확정한 필수조건 없음";
+      const preferredText=conditions.preferred.length?conditions.preferred.join(", "):"별도 선호조건 없음";
+      const roleText=roleValues.length?roleValues.join(", "):"반복 역할 미입력";
+      const resourceText=resourceValues.length?resourceValues.join(", "):"보유 자원 미입력";
+      state.narrative=`
+        <p><strong>${escapeHTML(startLabel())}</strong>를 출발점으로 삼았습니다. 입력한 업종은 <strong>${escapeHTML(industry)}</strong>이며, 반복 역할은 ${escapeHTML(roleText)}로 정리됩니다.</p>
+        <p>현재 활용할 수 있는 자원은 ${escapeHTML(resourceText)}입니다. 이는 특정 직업의 능력을 확정하는 판정이 아니라, 채용공고와 교육과정을 비교할 때 사용할 경력 단서입니다.</p>
+        <p>반드시 지킬 조건은 <strong>${escapeHTML(requiredText)}</strong>, 가능하면 원하는 조건은 <strong>${escapeHTML(preferredText)}</strong>입니다. 조건과 직업이 충돌할 가능성이 있더라도 자동으로 제외하지 않고 실제 근무표·업무량·통근·임금 조건을 다시 확인하도록 남겼습니다.</p>
+        <p>우선 비교할 세 경로는 <strong>${state.paths.map(k=>escapeHTML(pathData[k].name)).join("</strong>, <strong>")}</strong>입니다. 한 경로를 바로 정답으로 정하기보다, 각 경로에서 실제 채용공고 3건씩을 읽고 준비기간과 생활조건을 대조하는 것이 다음 단계입니다.</p>`;
+      $("#integrated-narrative").innerHTML=state.narrative;
+
+      const firstPath=pathData[state.paths[0]].name;
+      $("#next-actions").innerHTML=[
+        `${firstPath} 관련 실제 채용공고 3건을 찾아 근무시간·지역·임금·계약기간을 표로 비교합니다.`,
+        `9개 직업 가운데 현실적으로 더 알아볼 3개만 남기고, 나머지는 제외 이유가 아니라 보류 이유를 적습니다.`,
+        `Q-Net과 해당 직종 공식기관에서 자격이 법정 필수인지, 담당업무별인지, 단순 우대인지 구분합니다.`,
+        `고용24에서 채용 검색어와 훈련 검색어를 각각 입력해 공고와 교육과정이 실제로 연결되는지 확인합니다.`,
+        `중장년내일센터 상담이나 짧은 일경험을 통해 화면에서 예상한 업무와 실제 하루가 같은지 확인합니다.`
+      ].map(x=>`<li>${escapeHTML(x)}</li>`).join("");
+
+      buildReport(conditions);
+      $("#result-panel").hidden=false;
+      $("#result-panel").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+
+    function row(label,value){return `<tr><th>${escapeHTML(label)}</th><td>${escapeHTML(value || "입력하지 않음")}</td></tr>`;}
+
+    function buildReport(conditions){
+      const industry=$("#industry").value.trim();
+      const years=$("#career-years").value;
+      const note=$("#career-note").value.trim();
+      const sceneValues=selected("scene");
+      const roleValues=selected("role");
+      const resourceValues=selected("resource");
+      const generated=new Intl.DateTimeFormat("ko-KR",{dateStyle:"long"}).format(new Date());
+
+      const pathRows=state.paths.map((key,index)=>{
+        const p=pathData[key];
+        return `<tr><td>${index+1}</td><td><strong>${escapeHTML(p.name)}</strong></td><td>${escapeHTML(connectionReason(key))}</td><td>${p.prepare.map(x=>`• ${escapeHTML(x)}`).join("<br>")}</td></tr>`;
+      }).join("");
+
+      const jobSections=state.paths.map(key=>{
+        const p=pathData[key];
+        return `<h3>${escapeHTML(p.name)}</h3>
+        <table class="report-table">
+          <thead><tr><th>직업</th><th>주요 업무·형태</th><th>자격 구분</th><th>준비와 확인</th></tr></thead>
+          <tbody>${p.jobs.map(job=>`<tr>
+            <td><strong>${escapeHTML(job.name)}</strong></td>
+            <td>${escapeHTML(job.summary)}<br><small>${escapeHTML(job.form)}</small></td>
+            <td><strong>공통·법정:</strong> ${escapeHTML(job.required)}<br><strong>업무·공고별:</strong> ${escapeHTML(job.conditional)}</td>
+            <td><strong>검색어:</strong> ${escapeHTML(job.training)}<br><strong>일경험:</strong> ${escapeHTML(job.experience)}</td>
+          </tr>`).join("")}</tbody>
+        </table>`;
+      }).join("");
+
+      const report=`<article class="report-sheet">
+        <section class="report-cover">
+          <div class="report-kicker">4TH-SEASON · CAREER REDESIGN REPORT</div>
+          <h1>경력·일 재설계 보고서</h1>
+          <p>${escapeHTML(startLabel())}에서 출발해 경력 자원, 생활조건, 세 가지 전환 경로와 아홉 개 직업을 비교한 개인 탐색 기록입니다.</p>
+          <div class="report-meta"><span>생성일 ${escapeHTML(generated)}</span><span>공식정보 확인 기준일 ${CHECK_DATE}</span></div>
+          <div class="report-note" style="margin-top:28px">이 보고서는 적합도·성공 확률·취업 가능성을 판정하지 않습니다. 실제 선택 전 채용공고, 교육기관, 자격 시행기관에서 최신 조건을 다시 확인해야 합니다.</div>
+        </section>
+
+        <section class="report-section">
+          <h2>1. 나의 경력 자원</h2>
+          <table class="report-table"><tbody>
+            ${row("시작 유형",startLabel())}
+            ${row("경험 업종·현장",industry)}
+            ${row("경력 기간",years)}
+            ${row("익숙한 업무 장면",sceneValues.join(", "))}
+            ${row("반복 역할",roleValues.join(", "))}
+            ${row("활용 자원",resourceValues.join(", "))}
+            ${row("추가 기록",note)}
+          </tbody></table>
+          <p class="report-note">미입력 항목은 경험 부족으로 해석하지 않고 ‘아직 기록하지 않음’으로 남깁니다.</p>
+        </section>
+
+        <section class="report-section">
+          <h2>2. 생활·근무조건</h2>
+          <table class="report-table"><thead><tr><th>구분</th><th>조건</th></tr></thead><tbody>
+            <tr><th>반드시 지킬 조건</th><td>${escapeHTML(conditions.required.join(", ") || "아직 확정하지 않음")}</td></tr>
+            <tr><th>가능하면 원하는 조건</th><td>${escapeHTML(conditions.preferred.join(", ") || "별도 선택 없음")}</td></tr>
+            <tr><th>아직 결정하지 않은 조건</th><td>${escapeHTML(conditions.undecided.join(", ") || "없음")}</td></tr>
+          </tbody></table>
+          <p class="report-note">필수조건과 충돌할 가능성은 직업 자동 탈락 사유가 아니라 실제 공고에서 다시 확인할 항목입니다.</p>
+        </section>
+
+        <section class="report-section">
+          <h2>3. 세 가지 전환 경로</h2>
+          <table class="report-table"><thead><tr><th>순서</th><th>경로</th><th>연결 근거</th><th>준비 순서</th></tr></thead><tbody>${pathRows}</tbody></table>
+        </section>
+
+        <section class="report-section">
+          <h2>4. 경로별 3직업·총 9직업</h2>
+          ${jobSections}
+        </section>
+
+        <section class="report-section">
+          <h2>5. 다음 행동 체크리스트</h2>
+          <ol>${$$("#next-actions li").map(li=>`<li>${escapeHTML(li.textContent)}</li>`).join("")}</ol>
+          <p class="report-note">채용공고의 근무시간·임금·지역·계약기간은 시점과 기관에 따라 달라지므로 보고서에 고정값으로 적지 않습니다.</p>
+        </section>
+
+        <section class="report-section">
+          <h2>6. 공식 확인 경로</h2>
+          <ul>
+            <li><a href="https://www.work24.go.kr/cm/main.do?mid=1">고용24</a> — 채용공고와 직업훈련 검색</li>
+            <li><a href="https://www.q-net.or.kr/crf005.do">Q-Net</a> — 국가자격 종목과 시험정보 확인</li>
+            <li><a href="https://www.work24.go.kr/wk/u/a/1000/seniorCenterSvcInfo.do">중장년내일센터</a> — 생애경력설계·전직·재취업 지원</li>
+            <li><a href="https://www.kuksiwon.or.kr/">한국보건의료인국가시험원</a> — 요양보호사 등 보건의료인 시험·자격 확인</li>
+          </ul>
+          <div class="report-footer">작성 도구: 4th-season.com 중장년·시니어 경력·일 재설계 탐색기 · 입력값은 별도 서버에 저장하지 않습니다.</div>
+        </section>
+      </article>`;
+
+      $("#report-preview").innerHTML=report;
+      $("#print-root").innerHTML=report;
+    }
+
+    async function copyNarrative(){
+      const text=$("#integrated-narrative").innerText+"\n\n다음 행동\n"+$$("#next-actions li").map((li,i)=>`${i+1}. ${li.textContent}`).join("\n");
+      try{
+        await navigator.clipboard.writeText(text);
+        $("#copy-summary").textContent="복사했습니다";
+        setTimeout(()=>$("#copy-summary").textContent="결과문 복사",1600);
+      }catch{
+        alert("브라우저에서 자동 복사를 허용하지 않았습니다. 결과문을 직접 선택해 복사해 주세요.");
+      }
+    }
+
+    function resetAll(){
+      state.start="";state.paths=[];state.jobs=[];state.conditions={};state.narrative="";
+      $$("input[type=checkbox]").forEach(el=>el.checked=false);
+      $$("input[type=radio][value=\"undecided\"]").forEach(el=>el.checked=true);
+      $("#industry").value="";$("#career-years").value="";$("#career-note").value="";
+      $$(".start-card").forEach(el=>{el.classList.remove("is-active");el.setAttribute("aria-pressed","false");});
+      $("#result-panel").hidden=true;$("#report-preview").hidden=true;$("#print-root").hidden=true;
+      $("#step-start").scrollIntoView({behavior:"smooth"});
+    }
+
+    renderStartTypes();
+    renderChecks("#scene-grid","scene",scenes);
+    renderChecks("#role-grid","role",roles);
+    renderChecks("#resource-grid","resource",resources);
+    renderConditions();
+
+    const params=new URLSearchParams(location.search);
+    const requestedStart=params.get("start");
+    if(requestedStart && startTypes.some(x=>x.code===requestedStart)){
+      $(`.start-card[data-code="${requestedStart}"]`)?.click();
+    }
+
+    $("#make-result").addEventListener("click",makeResults);
+    $("#reset-form").addEventListener("click",resetAll);
+    $("#restart").addEventListener("click",resetAll);
+    $("#show-report").addEventListener("click",()=>{
+      const preview=$("#report-preview");
+      preview.hidden=!preview.hidden;
+      if(!preview.hidden) preview.scrollIntoView({behavior:"smooth",block:"start"});
+    });
+    $("#print-report").addEventListener("click",()=>{
+      $("#print-root").hidden=false;
+      window.print();
+      setTimeout(()=>$("#print-root").hidden=true,500);
+    });
+    $("#copy-summary").addEventListener("click",copyNarrative);
+  })();
+  </script>
+</body>
+</html>
