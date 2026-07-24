@@ -1,11 +1,58 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Re:Think 현대 철학 글을 개념 갈래, 철학자, 현실 질문별 하부 지도로 확장하기 위한 계열 안내지도입니다."><link rel="canonical" href="https://4th-season.com/world/rethink/"><link rel="stylesheet" href="/assets/remap.css"><title>Re:Think 현대 철학 지도 | Re:Map</title></head>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Re:Think 현대 철학지도와 인간의 조건, 인식과 언어, 권력과 규범, 타자와 좋은 삶, 기술과 이미지의 다섯 하위 지도를 연결합니다.">
+  <link rel="canonical" href="https://4th-season.com/world/rethink/">
+  <link rel="stylesheet" href="/assets/remap.css">
+  <title>Re:Think 현대 철학 지도 | Re:Map</title>
+  <style>
+    .think-tree{position:relative;margin-top:24px;padding-top:76px}
+    .think-root{position:absolute;top:0;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:58px 1fr auto;gap:16px;align-items:center;width:min(760px,calc(100% - 30px));padding:18px 20px;background:var(--branch-deep);color:#fff;border-radius:9px;box-shadow:0 13px 28px rgba(37,45,74,.2);z-index:2}
+    .think-root:after{content:"";position:absolute;left:50%;bottom:-42px;width:2px;height:42px;background:var(--branch-accent)}
+    .root-no{display:grid;place-items:center;width:58px;height:58px;background:var(--branch-accent);color:var(--branch-deep);border-radius:7px;font-weight:950}
+    .think-root small{display:block;margin-bottom:3px;color:#d9e3f4;font-size:.7rem;font-weight:900;letter-spacing:.12em}
+    .think-root strong{display:block;font-size:1.08rem;line-height:1.45}
+    .root-go{white-space:nowrap;color:var(--branch-accent);font-size:.78rem;font-weight:900}
+    .think-branches{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:44px;padding-top:29px}
+    .think-branches:before{content:"";position:absolute;left:10%;right:10%;top:0;height:2px;background:#b8c4df}
+    .think-card{position:relative;display:block;min-height:188px;padding:18px 16px;background:#fff;border:1px solid #d7deed;border-top:5px solid var(--branch-mid);border-radius:8px;transition:.2s}
+    .think-card:before{content:"";position:absolute;left:50%;top:-34px;width:2px;height:29px;background:#b8c4df}
+    .think-card:hover{transform:translateY(-3px);border-color:var(--branch-mid);box-shadow:0 11px 24px rgba(37,45,74,.1)}
+    .think-num{display:inline-grid;place-items:center;width:38px;height:38px;margin-bottom:12px;background:#edf1f8;color:var(--branch-deep);border-radius:6px;font-size:.75rem;font-weight:950}
+    .think-card b{display:block;color:var(--branch-deep);font-size:1rem;line-height:1.4}
+    .think-card span{display:block;margin-top:7px;color:var(--muted);font-size:.78rem;line-height:1.55}
+    .think-card em{display:block;margin-top:11px;color:var(--branch-mid);font-style:normal;font-size:.72rem;font-weight:900}
+    @media(max-width:920px){.think-branches{grid-template-columns:repeat(2,1fr);padding-top:0;margin-top:34px}.think-branches:before,.think-card:before,.think-root:after{display:none}.think-card{min-height:150px}.think-tree{padding-top:96px}.think-root{width:100%}}
+    @media(max-width:560px){.think-root{position:relative;left:auto;top:auto;transform:none;grid-template-columns:50px 1fr;width:100%}.root-no{width:50px;height:50px}.root-go{grid-column:2}.think-tree{padding-top:0}.think-branches{grid-template-columns:1fr;margin-top:14px}}
+  </style>
+</head>
 <body class="map-depth-3" style="--branch-deep:#252d4a;--branch-mid:#40517b;--branch-accent:#9fb8e2">
-<header class="site-header"><div class="wrap"><nav class="nav"><a class="brand" href="/world/">← 세상을 읽는 지도</a><div class="nav-links"><a href="/sitemap/">한눈에 보기</a><a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">현재 안내지도</a></div></nav></div></header>
-<section class="hero" data-mark="THINK"><div class="wrap"><span class="kicker">DEPTH 3 · RE:THINK</span><h1>현대 철학 지도</h1><p>현실의 질문에서 철학 개념으로 들어가고, 개념 갈래와 철학자, 작품과 쟁점의 하부 지도로 확장하는 중간 허브입니다.</p><div class="route"><a href="/remap/">전체 지도</a><a href="/world/">세상을 읽기</a><b>Re:Think</b><span>개념·철학자 지도</span></div></div></section>
-<main class="main"><div class="wrap"><nav class="trail" aria-label="현재 위치"><a href="/remap/">지도들의 지도</a><span>›</span><a href="/world/">세상을 읽는 지도</a><span>›</span><b>Re:Think</b></nav>
-<div class="depth"><div class="depth-item"><b>DEPTH 1</b><strong>Re:Map 전체 지도</strong></div><div class="depth-item"><b>DEPTH 2</b><strong>세상을 읽는 지도</strong></div><div class="depth-item"><b>DEPTH 3 · 현재</b><strong>Re:Think 계열 지도</strong></div></div>
-<section class="map-panel"><h2>현재 연결된 대표 지도</h2><p>현재 발행 글과 철학 개념 목차는 티스토리 안내지도에서 운영합니다.</p><a class="external" href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener"><span><b>Re:Think 현대 철학 안내지도</b><br>현재 철학 글의 갈래와 발행 목록을 확인합니다.</span><em>대표 지도 열기 →</em></a></section>
-<section class="map-panel"><h2>다음 하부 지도 자리</h2><p>철학 글이 축적되면 아래 경로에 독립 지도를 추가해 이 페이지에서 연결합니다.</p><div class="slots"><div class="slot"><strong>개념 갈래 지도</strong><span>인간·언어·권력·타자·기술의 다섯 갈래</span><code>/world/rethink/concepts/</code></div><div class="slot"><strong>철학자 지도</strong><span>철학자별 핵심 개념과 연결 글</span><code>/world/rethink/philosophers/</code></div><div class="slot"><strong>현실 질문 지도</strong><span>사회적 쟁점과 생활 질문에서 시작하는 길</span><code>/world/rethink/questions/</code></div></div></section>
-<p class="note">각 하부 지도는 독립 주소를 가지며, 다시 글·작품·비교 페이지로 한 단계 더 확장할 수 있습니다.</p>
-</div></main><footer class="footer">© 2026 4th Season · Re:Think Map</footer></body></html>
+<header class="site-header"><div class="wrap"><nav class="nav"><a class="brand" href="/world/">← 세상을 읽는 지도</a><div class="nav-links"><a href="/sitemap/">한눈에 보기</a><a href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener">현대 철학지도</a></div></nav></div></header>
+<section class="hero" data-mark="THINK"><div class="wrap"><span class="kicker">DEPTH 3 · RE:THINK</span><h1>현대 철학 지도</h1><p>오늘의 삶과 사회를 인간, 언어, 권력, 타자, 기술이라는 다섯 질문으로 나누어 읽습니다. 상위 철학지도에서 각 사유 영역의 실제 안내 글로 내려갑니다.</p><div class="route"><a href="/remap/">전체 지도</a><a href="/world/">세상을 읽기</a><b>Re:Think</b><span>5개의 사유 지도</span></div></div></section>
+<main class="main"><div class="wrap">
+  <nav class="trail" aria-label="현재 위치"><a href="/remap/">지도들의 지도</a><span>›</span><a href="/world/">세상을 읽는 지도</a><span>›</span><b>Re:Think</b></nav>
+  <div class="depth"><div class="depth-item"><b>DEPTH 1</b><strong>Re:Map 전체 지도</strong></div><div class="depth-item"><b>DEPTH 2</b><strong>세상을 읽는 지도</strong></div><div class="depth-item"><b>DEPTH 3 · 현재</b><strong>Re:Think 계열 지도</strong></div></div>
+
+  <section class="map-panel">
+    <h2>Re:Think 실제 연결 구조</h2>
+    <p>상위 현대 철학지도 아래 다섯 개의 사유 지도를 실제 발행 주소 순서대로 연결했습니다.</p>
+    <div class="think-tree">
+      <a class="think-root" href="https://pencilgon.tistory.com/245" target="_blank" rel="noopener"><span class="root-no">THINK</span><span><small>RE:THINK · MODERN PHILOSOPHY MAP</small><strong>현대 철학지도</strong></span><em class="root-go">상위 지도 열기 →</em></a>
+      <div class="think-branches">
+        <a class="think-card" href="https://pencilgon.tistory.com/248" target="_blank" rel="noopener"><span class="think-num">01</span><b>인간의 조건</b><span>존재·자유·정체성을 따라 인간은 어떻게 자기 자신이 되는지 묻습니다.</span><em>존재 · 실존 · 책임 →</em></a>
+        <a class="think-card" href="https://pencilgon.tistory.com/249" target="_blank" rel="noopener"><span class="think-num">02</span><b>인식과 언어</b><span>진리·해석·말의 의미가 우리가 보는 현실을 어떻게 구성하는지 살핍니다.</span><em>진리 · 해석 · 언어 →</em></a>
+        <a class="think-card" href="https://pencilgon.tistory.com/250" target="_blank" rel="noopener"><span class="think-num">03</span><b>권력과 규범</b><span>보이지 않는 기준이 인간을 길들이고 정상과 비정상을 나누는 방식을 읽습니다.</span><em>권력 · 규범 · 배제 →</em></a>
+        <a class="think-card" href="https://pencilgon.tistory.com/251" target="_blank" rel="noopener"><span class="think-num">04</span><b>타자와 좋은 삶</b><span>인정·존엄·공존을 통해 타인과 함께 사는 삶의 조건을 묻습니다.</span><em>타자 · 인정 · 윤리 →</em></a>
+        <a class="think-card" href="https://pencilgon.tistory.com/252" target="_blank" rel="noopener"><span class="think-num">05</span><b>기술과 이미지</b><span>AI·알고리즘·미디어와 이미지가 자유와 현실감을 바꾸는 방식을 살핍니다.</span><em>AI · 미디어 · 이미지 →</em></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-panel"><h2>다음 닷컴 하부 지도 자리</h2><p>각 사유 영역 안의 글이 많아지면 닷컴 내부에 개념별·철학자별·현실 질문별 목차를 만들어 한 단계 더 내려갈 수 있습니다.</p><div class="slots"><div class="slot"><strong>개념 갈래 지도</strong><span>인간·언어·권력·타자·기술의 세부 개념</span><code>/world/rethink/concepts/</code></div><div class="slot"><strong>철학자 지도</strong><span>철학자별 핵심 개념과 연결 글</span><code>/world/rethink/philosophers/</code></div><div class="slot"><strong>현실 질문 지도</strong><span>사회적 쟁점과 생활 질문에서 시작하는 길</span><code>/world/rethink/questions/</code></div></div></section>
+  <p class="note">외부 티스토리 주소는 사람용 Re:Think 지도와 HTML 사이트맵에서만 연결하며, 닷컴 검색엔진용 XML 사이트맵에는 넣지 않습니다.</p>
+</div></main>
+<footer class="footer">© 2026 4th Season · Re:Think Map</footer>
+</body>
+</html>
