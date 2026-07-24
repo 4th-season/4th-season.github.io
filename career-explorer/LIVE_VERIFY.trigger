@@ -1,1 +1,1 @@
-Verify the deployed senior career explorer again and record either success or the precise failure on main.
+Trigger the reviewable live verification for the deployed senior career explorer and preserve its result.
