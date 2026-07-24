@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0.0",
+  "checklistId": "social-connectedness",
+  "selectionPolicy": {
+    "strategy": "none",
+    "description": "상담식 영역 해설을 우선 사용하며 별도 응답 조합 카드는 이후 추가한다.",
+    "fallback": "none"
+  },
+  "cards": []
+}
