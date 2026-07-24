@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     block.className = `result-block guidance-card guidance-${responseType}`;
     block.dataset.guidanceCard = card.id;
 
-    block.appendChild(createTextElement('p', 'guidance-label', '응답에서 확인된 한 장면'));
+    block.appendChild(createTextElement('p', 'guidance-label', '응답 조합을 상담식으로 함께 읽어보면'));
     block.appendChild(createTextElement('h3', '', card.title));
     block.appendChild(createTextElement('p', 'guidance-scene', card.scene));
 
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const card = window.ReScanGuidance.selectCard(data.guidance, calculation, latestAnswers);
-    removeGenericPrompts(resultView);
+    if (card?.replaceGeneric === true) removeGenericPrompts(resultView);
 
     if (card) {
       const guidanceBlock = createGuidanceBlock(card);
