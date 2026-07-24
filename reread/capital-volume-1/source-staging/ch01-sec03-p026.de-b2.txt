@@ -1,0 +1,1 @@
+Der relative Wert einer Ware kann wechseln, obgleich ihr Wert konstant bleibt.
