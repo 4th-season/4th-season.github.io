@@ -1,5 +1,5 @@
 {
-  "schemaVersion":"1.4.0",
+  "schemaVersion":"1.4.1",
   "series":"[나 체크리스트]",
   "section":"Re:Scan",
   "updatedAt":"2026-07-24",
@@ -15,10 +15,10 @@
     {"id":"depressive-signals","title":"우울 신호","subtitle":"의욕과 흥미, 생활 변화 자가점검","grade":"B","mode":"guide","category":"정서","status":"published","keywords":["우울","의욕","흥미","피로","생활변화"],"dataPath":"/rescan/data/checklists/depressive-signals.json","articlePath":"/rescan/tistory/depressive-signals.html"},
     {"id":"anger-regulation","title":"분노조절","subtitle":"화가 커지는 장면과 표현 방식 자가점검","grade":"B","mode":"pattern","category":"정서","status":"published","keywords":["분노","화","충동","관계","회복"],"dataPath":"/rescan/data/checklists/anger-regulation.json","articlePath":"/rescan/tistory/anger-regulation.html"},
     {"id":"emotional-expression","title":"감정표현","subtitle":"내 감정을 알아차리고 말로 전하는 방식 자가점검","grade":"A","mode":"scored","category":"관계","status":"published","keywords":["감정표현","의사소통","도움요청","공감"],"dataPath":"/rescan/data/checklists/emotional-expression.json","articlePath":"/rescan/tistory/emotional-expression.html"},
-    {"id":"self-efficacy","title":"자기효능감","subtitle":"과제를 시작하고 해결하며 다시 시도하는 힘 자가점검","grade":"A","mode":"scored","category":"자기이해","status":"published","keywords":["자기효능감","자신감","문제해결","재시도","도움요청"],"dataPath":"/rescan/data/checklists/self-efficacy.json","articlePath":"/rescan/tistory/self-efficacy.html"},
-    {"id":"perfectionism","title":"완벽주의","subtitle":"높은 기준과 실수 두려움이 생활에 미치는 패턴 자가점검","grade":"B","mode":"pattern","category":"자기이해","status":"published","keywords":["완벽주의","높은기준","실수두려움","미루기","결과불만족"],"dataPath":"/rescan/data/checklists/perfectionism.json","articlePath":"/rescan/tistory/perfectionism.html"},
-    {"id":"self-criticism","title":"자기비난","subtitle":"실수 뒤 나를 몰아붙이는 말과 회복 방식을 살펴보는 자가점검","grade":"B","mode":"pattern","category":"자기이해","status":"published","keywords":["자기비난","자책","내면의말","실수","비교","회복"],"dataPath":"/rescan/data/checklists/self-criticism.json","articlePath":"/rescan/tistory/self-criticism.html"},
-    {"id":"resilience","title":"회복탄력성","subtitle":"어려움 뒤 감정을 추스르고 다시 생활로 돌아오는 힘 자가점검","grade":"A","mode":"scored","category":"자기이해","status":"published","keywords":["회복탄력성","감정회복","유연한대응","도움요청","생활회복"],"dataPath":"/rescan/data/checklists/resilience.json","articlePath":"/rescan/tistory/resilience.html"},
-    {"id":"life-satisfaction","title":"삶의 만족도","subtitle":"현재 생활에서 유지되는 것과 조정이 필요한 부분을 살펴보는 자가점검","grade":"A","mode":"reflection","category":"자기이해","status":"published","keywords":["삶의만족도","생활안정","소속감","역할","삶의방향"],"dataPath":"/rescan/data/checklists/life-satisfaction.json","articlePath":"/rescan/tistory/life-satisfaction.html"}
+    {"id":"self-efficacy","title":"자기효능감","subtitle":"과제를 시작하고 해결하며 다시 시도할 수 있다는 믿음 자가점검","grade":"A","mode":"scored","category":"자기이해","status":"published","keywords":["자기효능감","해낼수있다는믿음","문제해결","재시도","도움요청"],"dataPath":"/rescan/data/checklists/self-efficacy.json","articlePath":"/rescan/tistory/self-efficacy.html"},
+    {"id":"perfectionism","title":"완벽주의","subtitle":"경직된 기준과 실수 두려움이 생활에 미치는 패턴 자가점검","grade":"B","mode":"pattern","category":"자기이해","status":"published","keywords":["완벽주의","경직된기준","실수두려움","미루기","결과불만족"],"dataPath":"/rescan/data/checklists/perfectionism.json","articlePath":"/rescan/tistory/perfectionism.html"},
+    {"id":"self-criticism","title":"자기비난","subtitle":"실수 뒤 자신을 공격하고 몰아붙이는 말과 회복 방식 자가점검","grade":"B","mode":"pattern","category":"자기이해","status":"published","keywords":["자기비난","자책","자기처벌","내면의말","실수","회복"],"dataPath":"/rescan/data/checklists/self-criticism.json","articlePath":"/rescan/tistory/self-criticism.html"},
+    {"id":"resilience","title":"회복탄력성","subtitle":"어려움 뒤 감정과 생활을 추스르고 다시 움직이는 과정 자가점검","grade":"A","mode":"scored","category":"자기이해","status":"published","keywords":["회복탄력성","감정회복","유연한대응","도움요청","생활복귀"],"dataPath":"/rescan/data/checklists/resilience.json","articlePath":"/rescan/tistory/resilience.html"},
+    {"id":"life-satisfaction","title":"생활 만족과 삶의 방향","subtitle":"생활의 안정·관계·활동·방향에서 유지되는 것과 조정할 부분을 살펴보는 성찰형 점검","grade":"A","mode":"reflection","category":"자기이해","status":"published","keywords":["생활만족","삶의방향","생활안정","소속감","역할","의미"],"dataPath":"/rescan/data/checklists/life-satisfaction.json","articlePath":"/rescan/tistory/life-satisfaction.html"}
   ]
 }
