@@ -1,5 +1,5 @@
 {
-  "schemaVersion":"1.4.1",
+  "schemaVersion":"1.4.2",
   "series":"[나 체크리스트]",
   "section":"Re:Scan",
   "updatedAt":"2026-07-24",
@@ -15,6 +15,7 @@
     {"id":"depressive-signals","title":"우울 신호","subtitle":"의욕과 흥미, 생활 변화 자가점검","grade":"B","mode":"guide","category":"정서","status":"published","keywords":["우울","의욕","흥미","피로","생활변화"],"dataPath":"/rescan/data/checklists/depressive-signals.json","articlePath":"/rescan/tistory/depressive-signals.html"},
     {"id":"anger-regulation","title":"분노조절","subtitle":"화가 커지는 장면과 표현 방식 자가점검","grade":"B","mode":"pattern","category":"정서","status":"published","keywords":["분노","화","충동","관계","회복"],"dataPath":"/rescan/data/checklists/anger-regulation.json","articlePath":"/rescan/tistory/anger-regulation.html"},
     {"id":"emotional-expression","title":"감정표현","subtitle":"내 감정을 알아차리고 말로 전하는 방식 자가점검","grade":"A","mode":"scored","category":"관계","status":"published","keywords":["감정표현","의사소통","도움요청","공감"],"dataPath":"/rescan/data/checklists/emotional-expression.json","articlePath":"/rescan/tistory/emotional-expression.html"},
+    {"id":"social-connectedness","title":"사회적 연결감","subtitle":"연락 가능한 관계·소속감·일상 공유·재연결 자원을 살펴보는 성찰형 점검","grade":"B","mode":"reflection","category":"관계","status":"published","keywords":["사회적연결감","외로움","사회적고립","소속감","일상공유","재연결"],"dataPath":"/rescan/data/checklists/social-connectedness.json","articlePath":"/rescan/tistory/social-connectedness.html"},
     {"id":"self-efficacy","title":"자기효능감","subtitle":"과제를 시작하고 해결하며 다시 시도할 수 있다는 믿음 자가점검","grade":"A","mode":"scored","category":"자기이해","status":"published","keywords":["자기효능감","해낼수있다는믿음","문제해결","재시도","도움요청"],"dataPath":"/rescan/data/checklists/self-efficacy.json","articlePath":"/rescan/tistory/self-efficacy.html"},
     {"id":"perfectionism","title":"완벽주의","subtitle":"경직된 기준과 실수 두려움이 생활에 미치는 패턴 자가점검","grade":"B","mode":"pattern","category":"자기이해","status":"published","keywords":["완벽주의","경직된기준","실수두려움","미루기","결과불만족"],"dataPath":"/rescan/data/checklists/perfectionism.json","articlePath":"/rescan/tistory/perfectionism.html"},
     {"id":"self-criticism","title":"자기비난","subtitle":"실수 뒤 자신을 공격하고 몰아붙이는 말과 회복 방식 자가점검","grade":"B","mode":"pattern","category":"자기이해","status":"published","keywords":["자기비난","자책","자기처벌","내면의말","실수","회복"],"dataPath":"/rescan/data/checklists/self-criticism.json","articlePath":"/rescan/tistory/self-criticism.html"},
