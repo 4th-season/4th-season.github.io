@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="https://4th-season.com/reread/capital-volume-1/{{CANONICAL_PATH}}">
+  <link rel="stylesheet" href="{{ASSET_PREFIX}}assets/style.css">
+  <title>{{PAGE_TITLE}}</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/reread/capital-volume-1/">Re:Read 자본론 제1권</a>
+    <nav aria-label="상단 이동">
+      <a href="/reread/capital-volume-1/">전체 목차</a>
+      <a href="/reread/">Re:Read 안내</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <header class="chapter-header">
+      <p class="chapter-kicker">{{PART_LABEL}} · {{CHAPTER_LABEL}}</p>
+      <h1>{{KOREAN_TITLE}}</h1>
+      <p class="original-title" lang="de">{{GERMAN_TITLE}}</p>
+      <p class="edition-note">기준 판본: 독일어 제4판(1890) 계열</p>
+      <p class="editing-status">편집 상태: {{EDITING_STATUS}}</p>
+    </header>
+
+    <nav class="page-nav" aria-label="장 이동">
+      <a href="{{PREVIOUS_URL}}">이전</a>
+      <a href="/reread/capital-volume-1/">목차</a>
+      <a href="{{NEXT_URL}}">다음</a>
+    </nav>
+
+    <article class="parallel-text">
+      <section class="parallel-pair" id="p-{{BLOCK_ID}}" data-source-range="{{SOURCE_RANGE}}">
+        <div class="parallel-ko">
+          <p>{{KOREAN_TRANSLATION}}</p>
+        </div>
+
+        <details class="original-fold">
+          <summary>독일어 원문 보기</summary>
+          <div class="parallel-de" lang="de">
+            <p>{{GERMAN_ORIGINAL}}</p>
+          </div>
+        </details>
+
+        <details class="reference-fold">
+          <summary>영문 대조문 보기</summary>
+          <div class="parallel-en" lang="en">
+            <p>{{ENGLISH_REFERENCE}}</p>
+          </div>
+        </details>
+      </section>
+
+      <aside class="source-note {{NOTE_TYPE}}">
+        <strong>{{NOTE_LABEL}}</strong>
+        <p>{{NOTE_TEXT}}</p>
+      </aside>
+    </article>
+
+    <nav class="page-nav" aria-label="하단 장 이동">
+      <a href="{{PREVIOUS_URL}}">이전</a>
+      <a href="/reread/capital-volume-1/">목차</a>
+      <a href="{{NEXT_URL}}">다음</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>Written &amp; reviewed by Old-Newbie | AI-assisted with ChatGPT &amp; Google Gemini.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+II. Der Wert der Leinwand bleibe konstant, während der Rockwert wechsle.
