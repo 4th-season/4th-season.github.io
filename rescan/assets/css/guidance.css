@@ -1,0 +1,12 @@
+.checklist-page .guidance-card{position:relative;overflow:hidden;padding:30px;border-color:#d6c9de;background:linear-gradient(145deg,#fffdf9 0%,#faf6fd 100%)}
+.checklist-page .guidance-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--rs-purple-deep),var(--rs-purple))}
+.checklist-page .guidance-label{margin:0 0 9px;color:var(--rs-purple-deep);font-size:.78rem;font-weight:900;letter-spacing:.12em}
+.checklist-page .guidance-card h3{margin:0;font-size:1.35rem;line-height:1.4;letter-spacing:-.025em}
+.checklist-page .guidance-scene{margin:16px 0 0;color:var(--rs-text);font-size:1rem;line-height:1.85}
+.checklist-page .guidance-response{margin-top:22px;padding:20px 22px;border-top:1px solid var(--rs-line);border-bottom:1px solid var(--rs-line);background:rgba(255,255,255,.7)}
+.checklist-page .guidance-response h4{margin:0 0 9px;color:var(--rs-purple-deep);font-size:.94rem;line-height:1.5}
+.checklist-page .guidance-response p{margin:0;color:var(--rs-muted);line-height:1.82}
+.checklist-page .guidance-question .guidance-response{border-left:3px solid #9f83bd}
+.checklist-page .guidance-experiment .guidance-response{border-left:3px solid #758f78}
+.checklist-page .guidance-scene .guidance-response{border-left:3px solid #b59a70}
+@media(max-width:560px){.checklist-page .guidance-card{padding:24px 21px}.checklist-page .guidance-card h3{font-size:1.2rem}.checklist-page .guidance-response{padding:17px 16px}}
