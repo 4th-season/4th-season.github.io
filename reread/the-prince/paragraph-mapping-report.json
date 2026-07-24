@@ -1,0 +1,2058 @@
+[
+  {
+    "file": "reread/the-prince/dedication.html",
+    "ko_source_paragraphs": 7,
+    "en_source_paragraphs": 5,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 5,
+    "ko_group_sizes": [
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    "alignment_cost": 0.0128,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "군주의 호의를 얻고자 하는 사람들은 대개 자신이 가진 것 가운데 가장 귀하게 여기는 것이나, 군주가 특히 기뻐할 만하다고 생각하는 것을 가지고 군주 앞에 나아가는 것이 관례입니다.",
+        "en_first": "Those who strive to obtain the good graces of a prince are accustomed to come before him with such things as they hold most precious, or in which they see him take most delight; whence one often sees horses, arms, cloth of gold, precious st",
+        "ko_last": "그래서 우리는 군주에게 말과 무기, 금으로 짠 천, 보석, 그리고 군주의 위엄에 걸맞은 여러 장식품이 바쳐지는 것을 자주 봅니다.",
+        "en_last": "e before him with such things as they hold most precious, or in which they see him take most delight; whence one often sees horses, arms, cloth of gold, precious stones, and similar ornaments presented to princes, worthy of their greatness."
+      },
+      {
+        "pair": 2,
+        "ko_first": "저 또한 전하께 제 충성을 증명할 만한 것을 바치고자 하였으나, 제 소유 가운데 오랫동안 현대의 사건들을 경험하고 고대의 일들을 끊임없이 연구함으로써 얻은 위대한 인물들의 행위에 관한 지식보다 더 소중하거나 가치 있다고 여기는 것을 찾지 못했습니다.",
+        "en_first": "Desiring therefore to present myself to your Magnificence with some testimony of my devotion towards you, I have not found among my possessions anything which I hold more dear than, or value so much as, the knowledge of the actions of great",
+        "ko_last": "저는 오랜 시간 큰 부지런함으로 이 지식을 검토하고 살핀 뒤, 이제 그것을 한 권의 작은 책으로 압축하여 전하께 바칩니다.",
+        "en_last": "ions of great men, acquired by long experience in contemporary affairs, and a continual study of antiquity; which, having reflected upon it with great and prolonged diligence, I now send, digested into a little volume, to your Magnificence."
+      },
+      {
+        "pair": 3,
+        "ko_first": "이 책이 전하께 바치기에는 보잘것없어 보일 수 있다는 것을 저도 잘 알고 있습니다.",
+        "en_first": "And although I may consider this work unworthy of your countenance, nevertheless I trust much to your benignity that it may be acceptable, seeing that it is not possible for me to make a better gift than to offer you the opportunity of unde",
+        "ko_last": "저는 이 책이 오직 그 내용의 다양성과 주제의 중대함으로 인정받고 평가받기를 바랐습니다.",
+        "en_last": " or adornments whatever, with which so many are accustomed to embellish their works; for I have wished either that no honour should be given it, or else that the truth of the matter and the weightiness of the theme shall make it acceptable."
+      },
+      {
+        "pair": 4,
+        "ko_first": "또한 낮고 비천한 지위에 있는 사람이 군주의 통치를 논하고 규칙을 제시하려 한다고 해서 그것이 주제넘은 일로 여겨지지 않기를 바랍니다.",
+        "en_first": "Nor do I hold with those who regard it as a presumption if a man of low and humble condition dare to discuss and settle the concerns of princes; because, just as those who draw landscapes place themselves below in the plain to contemplate t",
+        "ko_last": "풍경을 그리는 사람이 산과 높은 곳의 모습을 살피기 위해서는 평야 아래쪽에 서야 하고, 낮은 곳의 모습을 살피기 위해서는 높은 산 위로 올라가야 하는 것처럼, 민중의 본성을 올바로 이해하려면 군주의 위치에 있어야 하고, 군주의 본성을 올바로 이해하려면 민중의 위치에 있어야 하기 때문입니다.",
+        "en_last": "ntains and of lofty places, and in order to contemplate the plains place themselves upon high mountains, even so to understand the nature of the people it needs to be a prince, and to understand that of princes it needs to be of the people."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그러므로 전하께서는 제가 이 작은 선물을 드리는 마음을 받아 주시기 바랍니다.",
+        "en_first": "Take then, your Magnificence, this little gift in the spirit in which I send it; wherein, if it be diligently read and considered by you, you will learn my extreme desire that you should attain that greatness which fortune and your other at",
+        "ko_last": "그리고 전하께서 높은 자리에서 때때로 이 낮은 곳을 바라보신다면, 제가 얼마나 부당하고 끊임없는 운명의 악의에 시달리고 있는지도 알게 되실 것입니다.",
+        "en_last": "And if your Magnificence from the summit of your greatness will sometimes turn your eyes to these lower regions, you will see how unmeritedly I suffer a great and continued malignity of fortune."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-01.html",
+    "ko_source_paragraphs": 4,
+    "en_source_paragraphs": 4,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "alignment_cost": 0.0182,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "지금까지 인간을 지배해 왔고 지금도 지배하고 있는 모든 국가와 모든 통치 권력은 공화국이거나 군주국이었다.",
+        "en_first": "All states, all powers, that have held and hold rule over men have been and are either republics or principalities.",
+        "ko_last": "지금까지 인간을 지배해 왔고 지금도 지배하고 있는 모든 국가와 모든 통치 권력은 공화국이거나 군주국이었다.",
+        "en_last": "All states, all powers, that have held and hold rule over men have been and are either republics or principalities."
+      },
+      {
+        "pair": 2,
+        "ko_first": "군주국은 한 가문이 오랫동안 통치해 온 세습 군주국이거나 새로 세워진 군주국이다.",
+        "en_first": "Principalities are either hereditary, in which the family has been long established; or they are new.",
+        "ko_last": "군주국은 한 가문이 오랫동안 통치해 온 세습 군주국이거나 새로 세워진 군주국이다.",
+        "en_last": "Principalities are either hereditary, in which the family has been long established; or they are new."
+      },
+      {
+        "pair": 3,
+        "ko_first": "새 군주국은 프란체스코 스포르차가 차지한 밀라노처럼 완전히 새로 획득한 국가일 수도 있고, 스페인 왕의 영토에 편입된 나폴리 왕국처럼 그것을 획득한 군주의 세습 국가에 새로 병합된 일부일 수도 있다.",
+        "en_first": "The new are either entirely new, as was Milan to Francesco Sforza, or they are, as it were, members annexed to the hereditary state of the prince who has acquired them, as was the kingdom of Naples to that of the King of Spain.",
+        "ko_last": "새 군주국은 프란체스코 스포르차가 차지한 밀라노처럼 완전히 새로 획득한 국가일 수도 있고, 스페인 왕의 영토에 편입된 나폴리 왕국처럼 그것을 획득한 군주의 세습 국가에 새로 병합된 일부일 수도 있다.",
+        "en_last": "The new are either entirely new, as was Milan to Francesco Sforza, or they are, as it were, members annexed to the hereditary state of the prince who has acquired them, as was the kingdom of Naples to that of the King of Spain."
+      },
+      {
+        "pair": 4,
+        "ko_first": "이렇게 획득한 영토는 군주의 지배 아래 사는 데 익숙한 곳일 수도 있고 자유롭게 사는 데 익숙한 곳일 수도 있다.",
+        "en_first": "Such dominions thus acquired are either accustomed to live under a prince, or to live in freedom; and are acquired either by the arms of the prince himself, or of others, or else by fortune or by ability.",
+        "ko_last": "또한 군주 자신의 무력으로 획득하기도 하고 다른 사람의 무력으로 획득하기도 하며, 운이나 자신의 역량으로 획득하기도 한다.",
+        "en_last": "Such dominions thus acquired are either accustomed to live under a prince, or to live in freedom; and are acquired either by the arms of the prince himself, or of others, or else by fortune or by ability."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-02.html",
+    "ko_source_paragraphs": 3,
+    "en_source_paragraphs": 3,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 3,
+    "ko_group_sizes": [
+      1,
+      1,
+      1
+    ],
+    "alignment_cost": 0.0041,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "공화국에 관한 논의는 여기서 모두 생략하겠다.",
+        "en_first": "I will leave out all discussion on republics, inasmuch as in another place I have written of them at length, and will address myself only to principalities.",
+        "ko_last": "이제는 군주국만을 대상으로 삼아, 앞에서 제시한 순서에 따라 그러한 군주국을 어떻게 통치하고 보존해야 하는지 논하겠다.",
+        "en_last": "In doing so I will keep to the order indicated above, and discuss how such principalities are to be ruled and preserved."
+      },
+      {
+        "pair": 2,
+        "ko_first": "먼저 말하자면, 세습 국가, 특히 오랫동안 그 군주의 가문에 익숙해진 국가는 새로운 국가보다 유지하기가 덜 어렵다.",
+        "en_first": "I say at once there are fewer difficulties in holding hereditary states, and those long accustomed to the family of their prince, than new ones; for it is sufficient only not to transgress the customs of his ancestors, and to deal prudently",
+        "ko_last": "설령 빼앗기더라도 찬탈자에게 불리한 일이 생기면 그는 국가를 되찾을 수 있다.",
+        "en_last": "a prince of average powers to maintain himself in his state, unless he be deprived of it by some extraordinary and excessive force; and if he should be so deprived of it, whenever anything sinister happens to the usurper, he will regain it."
+      },
+      {
+        "pair": 3,
+        "ko_first": "이탈리아에서는 페라라 공작을 그 예로 들 수 있다.",
+        "en_first": "We have in Italy, for example, the Duke of Ferrara, who could not have withstood the attacks of the Venetians in ’84, nor those of Pope Julius in ’10, unless he had been long established in his dominions.",
+        "ko_last": "하나의 변화는 언제나 다음 변화를 맞물려 일으킬 여지를 남기기 때문이다.",
+        "en_last": "reasonable to expect that his subjects will be naturally well disposed towards him; and in the antiquity and duration of his rule the memories and motives that make for change are lost, for one change always leaves the toothing for another."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-03.html",
+    "ko_source_paragraphs": 33,
+    "en_source_paragraphs": 18,
+    "folded_en_notes": 6,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 18,
+    "ko_group_sizes": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      4,
+      1,
+      2,
+      2,
+      1,
+      2,
+      3,
+      3,
+      2
+    ],
+    "alignment_cost": 0.022,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "어려움은 새로운 군주국에서 생긴다.",
+        "en_first": "But the difficulties occur in a new principality.",
+        "ko_last": "새로운 군주는 새로 획득한 영토에 군대를 들여보내고, 그 밖에도 수많은 부담을 그곳 사람들에게 지울 수밖에 없다.",
+        "en_last": "This follows also on another natural and common necessity, which always causes a new prince to burden those who have submitted to him with his soldiery and with infinite other hardships which he must put upon his new acquisition."
+      },
+      {
+        "pair": 2,
+        "ko_first": "이 때문에 군주국을 장악하는 과정에서 피해를 입힌 사람들은 모두 적이 된다.",
+        "en_first": "In this way you have enemies in all those whom you have injured in seizing that principality, and you are not able to keep those friends who put you there because of your not being able to satisfy them in the way they expected, and you cann",
+        "ko_last": "아무리 강한 군대를 가졌더라도 새로운 지역에 들어가려면 그곳 주민의 호의가 반드시 필요하다.",
+        "en_last": "For, although one may be very strong in armed forces, yet in entering a province one has always need of the goodwill of the natives."
+      },
+      {
+        "pair": 3,
+        "ko_first": "이러한 이유로 프랑스 왕 루이 12세는 밀라노를 순식간에 차지했지만 똑같이 빠르게 잃었다.",
+        "en_first": "For these reasons Louis the Twelfth, King of France, quickly occupied Milan, and as quickly lost it; and to turn him out the first time it only needed Lodovico’s own forces; because those who had opened the gates to him, finding themselves ",
+        "ko_last": "그 이유는 앞에서 설명한 데 있다.",
+        "en_last": "He ruled over Milan from 1494 to 1500, and died in 1510."
+      },
+      {
+        "pair": 4,
+        "ko_first": "그럼에도 밀라노는 첫 번째와 두 번째 모두 프랑스에게서 빼앗겼다.",
+        "en_first": "Nevertheless Milan was taken from France both the first and the second time.",
+        "ko_last": "이제 두 번째 상실의 이유를 살펴보고, 루이 왕이 어떤 수단을 가지고 있었는지, 그리고 같은 처지에 놓인 사람이라면 프랑스 왕보다 새 영토를 더 안전하게 유지하기 위해 어떤 수단을 사용할 수 있었는지 살펴보자.",
+        "en_last": "the first have been discussed; it remains to name those for the second, and to see what resources he had, and what any one in his situation would have had for maintaining himself more securely in his acquisition than did the King of France."
+      },
+      {
+        "pair": 5,
+        "ko_first": "획득한 영토가 기존 국가에 편입될 때, 그 지역은 기존 국가와 같은 나라와 언어를 가진 곳일 수도 있고 그렇지 않은 곳일 수도 있다.",
+        "en_first": "Now I say that those dominions which, when acquired, are added to an ancient state by him who acquires them, are either of the same country and language, or they are not.",
+        "ko_last": "그러면 짧은 시간 안에 새 영토는 기존 군주국과 하나가 된다.",
+        "en_last": "nd two considerations: the one, that the family of their former lord is extinguished; the other, that neither their laws nor their taxes are altered, so that in a very short time they will become entirely one body with the old principality."
+      },
+      {
+        "pair": 6,
+        "ko_first": "그러나 언어와 관습과 법이 다른 나라의 국가를 획득하면 어려움이 생긴다.",
+        "en_first": "But when states are acquired in a country differing in language, customs, or laws, there are difficulties, and good fortune and great energy are needed to hold them, and one of the greatest and most real helps would be that he who has acqui",
+        "ko_last": "군주가 그곳에 거주하는 한, 그 나라를 빼앗는 일은 매우 어렵다.",
+        "en_last": "He who would attack that state from the outside must have the utmost caution; as long as the prince resides there it can only be wrested from him with the greatest difficulty."
+      },
+      {
+        "pair": 7,
+        "ko_first": "또 하나의 더 나은 방법은 그 국가의 열쇠가 될 만한 한두 곳에 식민지를 보내는 것이다.",
+        "en_first": "The other and better course is to send colonies to one or two places, which may be as keys to that state, for it is necessary either to do this or else to keep there a great number of cavalry and infantry.",
+        "ko_last": "따라서 어떤 사람에게 피해를 주어야 한다면, 복수를 두려워하지 않아도 될 정도로 해야 한다.",
+        "en_last": "to be well treated or crushed, because they can avenge themselves of lighter injuries, of more serious ones they cannot; therefore the injury that is to be done to a man ought to be of such a kind that one does not stand in fear of revenge."
+      },
+      {
+        "pair": 8,
+        "ko_first": "식민지 대신 군대를 주둔시키면 훨씬 많은 비용이 든다.",
+        "en_first": "But in maintaining armed men there in place of colonies one spends much more, having to consume on the garrison all the income from the state, so that the acquisition turns into a loss, and many more are exasperated, because the whole state",
+        "ko_last": "그러므로 모든 면에서 주둔군은 쓸모가 없고 식민지는 유익하다.",
+        "en_last": "For every reason, therefore, such guards are as useless as a colony is useful."
+      },
+      {
+        "pair": 9,
+        "ko_first": "언어와 관습이 다른 나라를 지배하는 군주는 주변의 약한 이웃들의 우두머리이자 보호자가 되어야 한다.",
+        "en_first": "Again, the prince who holds a country differing in the above respects ought to make himself the head and defender of his less powerful neighbours, and to weaken the more powerful amongst them, taking care that no foreigner as powerful as hi",
+        "ko_last": "이 일을 제대로 처리하지 못하는 사람은 곧 자신이 획득한 것을 잃을 것이며, 유지하는 동안에도 끝없는 어려움과 고통을 겪게 된다.",
+        "en_last": "And he who does not properly manage this business will soon lose what he has acquired, and whilst he does hold it he will have endless difficulties and troubles."
+      },
+      {
+        "pair": 10,
+        "ko_first": "로마인은 합병한 지역에서 이러한 원칙을 세심하게 지켰다.",
+        "en_first": "The Romans, in the countries which they annexed, observed closely these measures; they sent colonies and maintained friendly relations with[2] the minor powers, without increasing their strength; they kept down the greater, and did not allo",
+        "ko_last": "시간은 모든 것을 몰아가며 선과 함께 악을, 악과 함께 선을 가져올 수 있기 때문이다.",
+        "en_last": " time—but rather the benefits of their own valour and prudence, for time drives everything before it, and is able to bring with it good as well as evil, and evil as well as good.[2] See remark in the introduction on the word “intrattenere.”"
+      },
+      {
+        "pair": 11,
+        "ko_first": "이제 프랑스로 돌아가, 프랑스가 위에서 말한 일 가운데 어떤 것을 했는지 살펴보자.",
+        "en_first": "But let us turn to France and inquire whether she has done any of the things mentioned.",
+        "ko_last": "그는 서로 다른 요소로 이루어진 국가를 유지하기 위해 해야 할 일과 정반대의 일을 했다.",
+        "en_last": "s done the opposite to those things which ought to be done to retain a state composed of divers elements.[3] Louis XII, King of France, “The Father of the People,” born 1462, died 1515.[4] Charles VIII, King of France, born 1470, died 1498."
+      },
+      {
+        "pair": 12,
+        "ko_first": "루이 왕은 롬바르디아의 절반을 그의 도움으로 차지하려는 베네치아인의 야망 때문에 이탈리아로 들어왔다.",
+        "en_first": "King Louis was brought into Italy by the ambition of the Venetians, who desired to obtain half the state of Lombardy by his intervention.",
+        "ko_last": "그제야 베네치아인은 롬바르디아의 두 도시를 얻기 위해 프랑스 왕을 이탈리아의 3분의 2를 지배하는 자로 만든 자신들의 경솔함을 깨달았다.",
+        "en_last": "Then could the Venetians realize the rashness of the course taken by them, which, in order that they might secure two towns in Lombardy, had made the king master of two-thirds of Italy."
+      },
+      {
+        "pair": 13,
+        "ko_first": "왕이 위에서 말한 원칙을 지켰다면 이탈리아에서 권위를 유지하는 일은 쉬웠을 것이다.",
+        "en_first": "Let any one now consider with what little difficulty the king could have maintained his position in Italy had he observed the rules above laid down, and kept all his friends secure and protected; for although they were numerous they were bo",
+        "ko_last": "알렉산데르의 야망을 억제하고 그가 토스카나의 지배자가 되는 것을 막기 위해 결국 자신이 직접 이탈리아로 돌아와야 했다.",
+        "en_last": "And having committed this prime error, he was obliged to follow it up, so much so that, to put an end to the ambition of Alexander, and to prevent his becoming the master of Tuscany, he was himself forced to come into Italy."
+      },
+      {
+        "pair": 14,
+        "ko_first": "교회를 강하게 만들고 친구들을 잃는 것만으로도 부족했던지, 나폴리 왕국을 원한 그는 그것을 스페인 왕과 나누었다.",
+        "en_first": "And as if it were not enough to have aggrandized the Church, and deprived himself of friends, he, wishing to have the kingdom of Naples, divided it with the King of Spain, and where he was the prime arbiter in Italy he takes an associate, s",
+        "ko_last": "그는 나폴리에 자기에게 의존하는 왕을 남겨 둘 수도 있었지만 그를 몰아내고, 대신 자신을 몰아낼 수 있는 사람을 그곳에 세웠다.",
+        "en_last": "ious of that country and the malcontents of his own should have somewhere to shelter; and whereas he could have left in the kingdom his own pensioner as king, he drove him out, to put one there who was able to drive him, Louis, out in turn."
+      },
+      {
+        "pair": 15,
+        "ko_first": "국가를 획득하려는 욕망은 매우 자연스럽고 흔한 일이다.",
+        "en_first": "The wish to acquire is in truth very natural and common, and men always do so when they can, and for this they will be praised not blamed; but when they cannot do so, yet wish to do so by any means, then there is folly and blame.",
+        "ko_last": "그러나 나폴리 분할은 그런 필요가 없었으므로 비난받아 마땅하다.",
+        "en_last": "And if the partition which she made with the Venetians in Lombardy was justified by the excuse that by it she got a foothold in Italy, this other partition merited blame, for it had not the excuse of that necessity."
+      },
+      {
+        "pair": 16,
+        "ko_first": "그러므로 루이는 다섯 가지 잘못을 저질렀다.",
+        "en_first": "Therefore Louis made these five errors: he destroyed the minor powers, he increased the strength of one of the greater powers in Italy, he brought in a foreign power, he did not settle in the country, he did not send colonies.",
+        "ko_last": "프랑스와 베네치아 두 세력을 동시에 상대할 용기를 내기도 어려웠을 것이다.",
+        "en_last": " would never have consented except to become masters themselves there; also because the others would not wish to take Lombardy from France in order to give it to the Venetians, and to run counter to both they would not have had the courage."
+      },
+      {
+        "pair": 17,
+        "ko_first": "어떤 사람은 루이 왕이 전쟁을 피하기 위해 알렉산데르에게 로마냐를 주고 스페인에게 나폴리 왕국을 주었다고 말할 수 있다.",
+        "en_first": "And if any one should say: “King Louis yielded the Romagna to Alexander and the kingdom to Spain to avoid war,” I answer for the reasons given above that a blunder ought never to be perpetrated to avoid war, because it is not to be avoided,",
+        "ko_last": "이는 놀라운 일이 아니라 자연스럽고 당연한 결과다.",
+        "en_last": "Born 1460, died 1510."
+      },
+      {
+        "pair": 18,
+        "ko_first": "나는 발렌티노 공작이 로마냐를 차지하고 있을 때 낭트에서 루앙 추기경과 이 문제를 이야기한 적이 있다.",
+        "en_first": "Thus King Louis lost Lombardy by not having followed any of the conditions observed by those who have taken possession of countries and wished to retain them.",
+        "ko_last": "누군가를 강하게 만드는 일은 책략이나 힘으로 이루어지는데, 강해진 자는 이 두 가지 모두를 의심하기 때문이다.",
+        "en_last": "ich never or rarely fails: that he who is the cause of another becoming powerful is ruined; because that predominancy has been brought about either by astuteness or else by force, and both are distrusted by him who has been raised to power."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-04.html",
+    "ko_source_paragraphs": 15,
+    "en_source_paragraphs": 7,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 7,
+    "ko_group_sizes": [
+      1,
+      2,
+      5,
+      2,
+      2,
+      2,
+      1
+    ],
+    "alignment_cost": 0.0145,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "새로 획득한 국가를 유지하는 데 따르는 어려움을 생각하면, 알렉산드로스 대왕이 몇 년 만에 아시아의 지배자가 된 뒤 곧 죽었는데도 그의 후계자들이 그 제국 전체를 유지할 수 있었던 이유가 무엇인지 의아하게 여길 수 있다.",
+        "en_first": "Considering the difficulties which men have had to hold to a newly acquired state, some might wonder how, seeing that Alexander the Great became the master of Asia in a few years, and died whilst it was scarcely settled (whence it might app",
+        "ko_last": "그러나 후계자들은 자신들의 야심에서 생긴 어려움 외에는 별다른 문제 없이 지배를 유지했다.",
+        "en_last": "y settled (whence it might appear reasonable that the whole empire would have rebelled), nevertheless his successors maintained themselves, and had to meet no other difficulty than that which arose among themselves from their own ambitions."
+      },
+      {
+        "pair": 2,
+        "ko_first": "이에 답하려면 우리가 기억하는 군주국은 서로 다른 두 방식으로 통치된다는 점을 알아야 한다.",
+        "en_first": "I answer that the principalities of which one has record are found to be governed in two different ways; either by a prince, with a body of servants, who assist him to govern the kingdom as ministers by his favour and permission; or by a pr",
+        "ko_last": "다른 사람에게 복종하더라도 그것은 그들을 군주의 신하나 관리로 여기기 때문이며, 그들에게 특별한 애정을 품어서가 아니다.",
+        "en_last": "ince in more consideration, because in all the country there is no one who is recognized as superior to him, and if they yield obedience to another they do it as to a minister and official, and they do not bear him any particular affection."
+      },
+      {
+        "pair": 3,
+        "ko_first": "우리 시대에 이 두 통치 방식의 예는 터키와 프랑스다.",
+        "en_first": "The examples of these two governments in our time are the Turk and the King of France.",
+        "ko_last": "승리 전에는 그들에게 기대할 수 없었던 것처럼 승리 뒤에는 그들을 두려워할 필요도 없다.",
+        "en_last": "ear but the family of this prince, and, this being exterminated, there remains no one to fear, the others having no credit with the people; and as the conqueror did not rely on them before his victory, so he ought not to fear them after it."
+      },
+      {
+        "pair": 4,
+        "ko_first": "프랑스처럼 통치되는 국가에서는 그 반대가 일어난다.",
+        "en_first": "The contrary happens in kingdoms governed like that of France, because one can easily enter there by gaining over some baron of the kingdom, for one always finds malcontents and such as desire a change.",
+        "ko_last": "그들을 만족시키거나 제거할 수 없으므로 기회가 생기면 국가를 잃게 된다.",
+        "en_last": "rminated the family of the prince, because the lords that remain make themselves the heads of fresh movements against you, and as you are unable either to satisfy or exterminate them, that state is lost whenever time brings the opportunity."
+      },
+      {
+        "pair": 5,
+        "ko_first": "이제 다리우스의 통치 방식이 어떤 것이었는지 생각해 보면 터키와 비슷했다는 것을 알 수 있다.",
+        "en_first": "Now if you will consider what was the nature of the government of Darius, you will find it similar to the kingdom of the Turk, and therefore it was only necessary for Alexander, first to overthrow him in the field, and then to take the coun",
+        "ko_last": "그 제국에서 일어난 혼란은 오직 그들 자신의 야심에서 비롯된 것이었다.",
+        "en_last": "And if his successors had been united they would have enjoyed it securely and at their ease, for there were no tumults raised in the kingdom except those they provoked themselves."
+      },
+      {
+        "pair": 6,
+        "ko_first": "프랑스처럼 구성된 국가는 그렇게 쉽게 유지할 수 없다.",
+        "en_first": "But it is impossible to hold with such tranquillity states constituted like that of France.",
+        "ko_last": "옛 군주의 가문이 이미 사라졌으므로 주민들은 로마인 외에는 누구도 지배자로 인정하지 않았다.",
+        "en_last": "ds amongst themselves, each one was able to attach to himself his own parts of the country, according to the authority he had assumed there; and the family of the former lord being exterminated, none other than the Romans were acknowledged."
+      },
+      {
+        "pair": 7,
+        "ko_first": "이 모든 점을 살펴보면 알렉산드로스가 아시아 제국을 쉽게 유지한 일이나, 피로스와 많은 사람이 정복한 것을 유지하는 데 어려움을 겪은 일을 이상하게 여길 이유가 없다.",
+        "en_first": "When these things are remembered no one will marvel at the ease with which Alexander held the Empire of Asia, or at the difficulties which others have had to keep an acquisition, such as Pyrrhus and many more; this is not occasioned by the ",
+        "ko_last": "차이는 정복자의 역량이 많고 적음에서 생긴 것이 아니라, 정복된 국가의 서로 다른 구조에서 생긴 것이다.",
+        "en_last": " of Asia, or at the difficulties which others have had to keep an acquisition, such as Pyrrhus and many more; this is not occasioned by the little or abundance of ability in the conqueror, but by the want of uniformity in the subject state."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-05.html",
+    "ko_source_paragraphs": 8,
+    "en_source_paragraphs": 3,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 3,
+    "ko_group_sizes": [
+      2,
+      4,
+      2
+    ],
+    "alignment_cost": 0.0102,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "앞에서 말한 것처럼, 새로 획득한 국가가 합병되기 전까지 자기 법에 따라 자유롭게 살아오던 곳이라면 그것을 유지하는 방법은 세 가지다.",
+        "en_first": "Whenever those states which have been acquired as stated have been accustomed to live under their own laws and in freedom, there are three courses for those who wish to hold them: the first is to ruin them, the next is to reside there in pe",
+        "ko_last": "자유롭게 사는 데 익숙한 도시를 보존하려 한다면, 주민을 통해 통치하는 편이 다른 어떤 방법보다 쉽다.",
+        "en_last": "nows that it cannot stand without his friendship and interest, and does its utmost to support him; and therefore he who would keep a city accustomed to freedom will hold it more easily by the means of its own citizens than in any other way."
+      },
+      {
+        "pair": 2,
+        "ko_first": "스파르타인과 로마인의 사례를 들 수 있다.",
+        "en_first": "There are, for example, the Spartans and the Romans.",
+        "ko_last": "피사가 피렌체의 지배를 받은 지 백 년이 지난 뒤에도 그렇게 했다.",
+        "en_last": "or provide against, they never forget that name or their privileges unless they are disunited or dispersed, but at every chance they immediately rally to them, as Pisa after the hundred years she had been held in bondage by the Florentines."
+      },
+      {
+        "pair": 3,
+        "ko_first": "그러나 도시와 나라가 군주의 지배 아래 사는 데 익숙했고 그 군주의 가문이 제거되었다면 사정이 다르다.",
+        "en_first": "But when cities or countries are accustomed to live under a prince, and his family is exterminated, they, being on the one hand accustomed to obey and on the other hand not having the old prince, cannot agree in making one from amongst them",
+        "ko_last": "그러므로 가장 안전한 방법은 공화국을 파괴하거나 군주가 직접 그곳에 거주하는 것이다.",
+        "en_last": "But in republics there is more vitality, greater hatred, and more desire for vengeance, which will never permit them to allow the memory of their former liberty to rest; so that the safest way is to destroy them or to reside there."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-06.html",
+    "ko_source_paragraphs": 34,
+    "en_source_paragraphs": 8,
+    "folded_en_notes": 1,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 8,
+    "ko_group_sizes": [
+      3,
+      2,
+      4,
+      5,
+      6,
+      5,
+      4,
+      5
+    ],
+    "alignment_cost": 0.0219,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "내가 완전히 새로운 군주국을 논하면서 군주와 국가의 가장 뛰어난 사례를 드는 것을 이상하게 여기지 말기 바란다.",
+        "en_first": "Let no one be surprised if, in speaking of entirely new principalities as I shall do, I adduce the highest examples both of prince and of state; because men, walking almost always in paths beaten by others, and following by imitation their ",
+        "ko_last": "궁수는 맞혀야 할 표적이 너무 멀리 있고 자기 활의 힘이 미치는 한계를 알고 있을 때, 화살을 그렇게 높은 곳까지 보내려는 것이 아니라 높은 조준점을 이용해 원하는 표적을 맞히기 위해 실제 표적보다 훨씬 위를 겨눈다.",
+        "en_last": "owing the limits to which the strength of their bow attains, take aim much higher than the mark, not to reach by their strength or arrow to so great a height, but to be able with the aid of so high an aim to hit the mark they wish to reach."
+      },
+      {
+        "pair": 2,
+        "ko_first": "그러므로 완전히 새로운 군주국에서 새로운 군주가 그것을 유지하는 데 겪는 어려움은 그 국가를 획득한 사람에게 역량이 얼마나 많고 적은가에 따라 달라진다고 말할 수 있다.",
+        "en_first": "I say, therefore, that in entirely new principalities, where there is a new prince, more or less difficulty is found in keeping them, accordingly as there is more or less ability in him who has acquired the state.",
+        "ko_last": "또한 다른 국가를 가지고 있지 않은 군주는 새 국가에 직접 거주할 수밖에 없으므로 일이 더 쉬워진다.",
+        "en_last": "Further, it facilitates matters when the prince, having no other state, is compelled to reside there in person."
+      },
+      {
+        "pair": 3,
+        "ko_first": "행운이 아니라 자기 역량으로 군주가 된 사람들을 보면 모세, 키루스, 로물루스, 테세우스와 같은 인물이 가장 뛰어난 사례다.",
+        "en_first": "But to come to those who, by their own ability and not through fortune, have risen to be princes, I say that Moses, Cyrus, Romulus, Theseus, and such like are the most excellent examples.",
+        "ko_last": "그 기회가 없었다면 그들의 정신적 역량은 사라졌을 것이고, 그 역량이 없었다면 기회는 헛되이 왔다가 사라졌을 것이다.",
+        "en_last": "Without that opportunity their powers of mind would have been extinguished, and without those powers the opportunity would have come in vain."
+      },
+      {
+        "pair": 4,
+        "ko_first": "모세에게는 이스라엘 백성이 이집트에서 노예가 되어 이집트인에게 억압받고 있는 상황이 필요했다.",
+        "en_first": "It was necessary, therefore, to Moses that he should find the people of Israel in Egypt enslaved and oppressed by the Egyptians, in order that they should be disposed to follow him so as to be delivered out of bondage.",
+        "ko_last": "그 결과 그들의 조국은 고귀하고 유명해졌다.",
+        "en_last": "These opportunities, therefore, made those men fortunate, and their high ability enabled them to recognize the opportunity whereby their country was ennobled and made famous."
+      },
+      {
+        "pair": 5,
+        "ko_first": "이와 같은 방식으로 역량을 발휘해 군주가 된 사람은 군주국을 획득할 때에는 어려움을 겪지만, 일단 얻고 나면 쉽게 유지한다.",
+        "en_first": "Those who by valorous ways become princes, like these men, acquire a principality with difficulty, but they keep it with ease.",
+        "ko_last": "그 결과 군주와 그 지지자 모두 위험에 빠진다.",
+        "en_last": "Thus it happens that whenever those who are hostile have the opportunity to attack they do it like partisans, whilst the others defend lukewarmly, in such wise that the prince is endangered along with them."
+      },
+      {
+        "pair": 6,
+        "ko_first": "이 문제를 철저히 이해하려면 개혁자가 자기 힘에 의존할 수 있는지, 아니면 타인에게 의존해야 하는지를 살펴야 한다.",
+        "en_first": "It is necessary, therefore, if we desire to discuss this matter thoroughly, to inquire whether these innovators can rely on themselves or have to depend on others: that is to say, whether, to consummate their enterprise, have they to use pr",
+        "ko_last": "따라서 사람들이 더 이상 믿지 않을 때에는 힘으로 믿게 만들 수 있는 조치를 마련해야 한다.",
+        "en_last": "And thus it is necessary to take such measures that, when they believe no longer, it may be possible to make them believe by force."
+      },
+      {
+        "pair": 7,
+        "ko_first": "모세, 키루스, 테세우스, 로물루스가 무장하지 않았다면 그들의 제도를 오래 유지하지 못했을 것이다.",
+        "en_first": "If Moses, Cyrus, Theseus, and Romulus had been unarmed they could not have enforced their constitutions for long—as happened in our time to Fra Girolamo Savonarola, who was ruined with his new order of things immediately the multitude belie",
+        "ko_last": "일단 그 어려움을 극복하고 성공을 시기하던 사람들을 제거하면, 그들은 존경받기 시작하며 이후에는 강하고 안전하고 명예롭고 행복한 상태를 유지한다.",
+        "en_last": "cent, yet with ability they will overcome them; but when these are overcome, and those who envied them their success are exterminated, they will begin to be respected, and they will continue afterwards powerful, secure, honoured, and happy."
+      },
+      {
+        "pair": 8,
+        "ko_first": "이 위대한 사례에 더 작은 사례 하나를 덧붙이겠다.",
+        "en_first": "To these great examples I wish to add a lesser one; still it bears some resemblance to them, and I wish it to suffice me for all of a like kind: it is Hiero the Syracusan.[1] This man rose from a private station to be Prince of Syracuse, no",
+        "ko_last": "따라서 그는 획득할 때에는 많은 어려움을 겪었지만 유지할 때에는 어려움이 거의 없었다.",
+        "en_last": " new ones; and as he had his own soldiers and allies, on such foundations he was able to build any edifice: thus, whilst he had endured much trouble in acquiring, he had but little in keeping.[1] Hiero II, born about 307 B.C., died 216 B.C."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-07.html",
+    "ko_source_paragraphs": 107,
+    "en_source_paragraphs": 12,
+    "folded_en_notes": 7,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 12,
+    "ko_group_sizes": [
+      7,
+      4,
+      8,
+      4,
+      15,
+      14,
+      11,
+      6,
+      15,
+      10,
+      5,
+      8
+    ],
+    "alignment_cost": 0.0481,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "오직 행운에 힘입어 평범한 시민에서 군주가 된 사람은 올라갈 때에는 어려움이 거의 없지만 정상에 오른 뒤에는 큰 어려움을 겪는다.",
+        "en_first": "Those who solely by good fortune become princes from being private citizens have little trouble in rising, but much in keeping atop; they have not any difficulties on the way up, because they fly, but they have many when they reach the summ",
+        "ko_last": "특별히 뛰어난 역량을 지닌 사람이 아니라면 평생 평범한 처지에서 살아온 사람이 갑자기 명령하는 방법을 알 것이라고 기대하기 어렵다.",
+        "en_last": "f great worth and ability, it is not reasonable to expect that they should know how to command, having always lived in a private condition; besides, they cannot hold it because they have not forces which they can keep friendly and faithful."
+      },
+      {
+        "pair": 2,
+        "ko_first": "또한 충성스럽고 우호적으로 유지할 수 있는 자기 군대를 가지고 있지 않으므로 그 지위를 지킬 수도 없다.",
+        "en_first": "States that rise unexpectedly, then, like all other things in nature which are born and grow rapidly, cannot leave their foundations and correspondencies[1] fixed in such a way that the first storm will not overthrow them; unless, as is sai",
+        "ko_last": "역량과 행운이라는 두 방법으로 군주가 된 사례로 우리 시대의 프란체스코 스포르차와 체사레 보르자를 들겠다.",
+        "en_last": "foundations) and correspondencies or relations with other states—a common meaning of “correspondence” and “correspondency” in the sixteenth and seventeenth centuries."
+      },
+      {
+        "pair": 3,
+        "ko_first": "프란체스코는 적절한 수단과 뛰어난 역량으로 평범한 시민에서 밀라노 공작이 되었다.",
+        "en_first": "Concerning these two methods of rising to be a prince by ability or fortune, I wish to adduce two examples within our own recollection, and these are Francesco Sforza[2] and Cesare Borgia.",
+        "ko_last": "교황 알렉산데르 6세는 아들의 권력을 키우려 했지만 당장에도, 앞으로도 많은 어려움이 있었다.",
+        "en_last": "left an account, written ten years before _The Prince_, of the proceedings of the duke in his “Descritione del modo tenuto dal duca Valentino nello ammazzare Vitellozzo Vitelli,” etc., a translation of which is appended to the present work."
+      },
+      {
+        "pair": 4,
+        "ko_first": "우선 그는 교회 국가가 아닌 곳에서 아들을 지배자로 세울 길을 찾지 못했다.",
+        "en_first": "Because, as is stated above, he who has not first laid his foundations may be able with great ability to lay them afterwards, but they will be laid with trouble to the architect and danger to the building.",
+        "ko_last": "따라서 그는 기존 질서를 뒤엎고 여러 세력을 혼란에 빠뜨려 그들의 국가 일부를 안전하게 차지해야 했다.",
+        "en_last": "uous to discuss them, because I do not know what better precepts to give a new prince than the example of his actions; and if his dispositions were of no avail, that was not his fault, but the extraordinary and extreme malignity of fortune."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그 일은 어렵지 않았다.",
+        "en_first": "Alexander the Sixth, in wishing to aggrandize the duke, his son, had many immediate and prospective difficulties.",
+        "ko_last": "기회는 곧 왔고 그는 그것을 잘 이용했다.",
+        "en_last": "And as to the king, he learned his mind when he himself, after taking the Duchy of Urbino, attacked Tuscany, and the king made him desist from that undertaking; hence the duke decided to depend no more upon the arms and the luck of others."
+      },
+      {
+        "pair": 6,
+        "ko_first": "오르시니는 공작과 교회의 권력 확대가 자기들의 파멸이라는 사실을 깨닫고 페루자의 마조네에서 회의를 열었다.",
+        "en_first": "For the first thing he weakened the Orsini and Colonnesi parties in Rome, by gaining to himself all their adherents who were gentlemen, making them his gentlemen, giving them good pay, and, according to their rank, honouring them with offic",
+        "ko_last": "그래서 신속하고 잔혹한 인물인 레미로 데 오르코를 임명하고 전권을 주었다.",
+        "en_last": "And as this point is worthy of notice, and to be imitated by others, I am not willing to leave it out.[3] Sinigalia, 31st December 1502."
+      },
+      {
+        "pair": 7,
+        "ko_first": "레미로는 짧은 시간 안에 큰 성공을 거두어 평화와 통일을 회복했다.",
+        "en_first": "When the duke occupied the Romagna he found it under the rule of weak masters, who rather plundered their subjects than ruled them, and gave them more cause for disunion than for union, so that the country was full of robbery, quarrels, and",
+        "ko_last": "프랑스 왕은 너무 늦게 자기 잘못을 깨달았으므로 더 이상 공작을 지지하지 않을 것임을 그는 알고 있었다.",
+        "en_last": "Ramiro de Lorqua."
+      },
+      {
+        "pair": 8,
+        "ko_first": "그래서 공작은 새로운 동맹을 찾기 시작했고, 프랑스가 가에타를 포위하고 있던 스페인군을 상대로 나폴리 왕국 원정을 벌이는 동안 프랑스에 대해 시간을 끌었다.",
+        "en_first": "But let us return whence we started.",
+        "ko_last": "첫째, 빼앗긴 영주들의 가문을 제거하여 새 교황이 그들을 구실로 이용하지 못하게 하는 것.",
+        "en_last": "It was his intention to secure himself against them, and this he would have quickly accomplished had Alexander lived."
+      },
+      {
+        "pair": 9,
+        "ko_first": "둘째, 앞에서 말했듯 로마의 모든 귀족을 자기편으로 만들어 그들의 도움으로 교황을 견제하는 것.",
+        "en_first": "Such was his line of action as to present affairs.",
+        "ko_last": "그는 로마냐에서만 국가가 확고히 자리 잡은 상태였고, 나머지 지역은 공중에 떠 있는 것처럼 불안정했다.",
+        "en_last": "he was prospering the year that Alexander died, for he had acquired so much power and reputation that he would have stood by himself, and no longer have depended on the luck and the forces of others, but solely on his own power and ability."
+      },
+      {
+        "pair": 10,
+        "ko_first": "두 개의 매우 강한 적대 군대 사이에 놓였고 자신은 죽을 만큼 병들어 있었다.",
+        "en_first": "But Alexander died five years after he had first drawn the sword.",
+        "ko_last": "공작의 모든 행동을 돌아볼 때 나는 그를 비난할 수 없으며, 오히려 행운이나 타인의 무력으로 권력을 얻은 사람들에게 본보기로 제시해야 한다고 생각한다.",
+        "en_last": "ad never anticipated that, when the death did happen, he himself would be on the point to die.[5] Alexander VI died of fever, 18th August 1503.[6] Julius II was Giuliano della Rovere, Cardinal of San Pietro ad Vincula, born 1443, died 1513."
+      },
+      {
+        "pair": 11,
+        "ko_first": "그는 높은 정신과 큰 목표를 가지고 있었으므로 다른 방식으로 행동할 수 없었다.",
+        "en_first": "When all the actions of the duke are recalled, I do not know how to blame him, but rather it appears to be, as I have said, that I ought to offer him for imitation to all those who, by the fortune or the arms of others, are raised to govern",
+        "ko_last": "앞에서 말했듯 그는 원하는 교황을 만들 수는 없었지만 원하지 않는 사람이 되는 것은 막을 수 있었다.",
+        "en_last": "iberal, to destroy a disloyal soldiery and to create new, to maintain friendship with kings and princes in such a way that they must help him with zeal and offend with caution, cannot find a more lively example than the actions of this man."
+      },
+      {
+        "pair": 12,
+        "ko_first": "그는 자신이 해를 끼친 적이 있거나 교황이 되면 자신을 두려워할 이유가 있는 추기경이 선출되는 것을 결코 허용하지 말았어야 했다.",
+        "en_first": "Only can he be blamed for the election of Julius the Second, in whom he made a bad choice, because, as is said, not being able to elect a Pope to his own mind, he could have hindered any other from being elected Pope; and he ought never to ",
+        "ko_last": "따라서 공작은 이 선택에서 잘못했고, 그것이 그의 최종 파멸의 원인이 되었다.",
+        "en_last": "Ascanio is Ascanio Sforza."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-08.html",
+    "ko_source_paragraphs": 60,
+    "en_source_paragraphs": 8,
+    "folded_en_notes": 2,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 8,
+    "ko_group_sizes": [
+      4,
+      13,
+      6,
+      9,
+      13,
+      6,
+      6,
+      3
+    ],
+    "alignment_cost": 0.0416,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "평범한 사람이 전적으로 행운이나 역량에 의한 것이 아닌 두 가지 방식으로 군주가 될 수 있다.",
+        "en_first": "Although a prince may rise from a private station in two ways, neither of which can be entirely attributed to fortune or genius, yet it is manifest to me that I must not be silent on them, although one could be more copiously treated when I",
+        "ko_last": "시칠리아인 아가토클레스는 가장 낮고 비천한 신분에서 시라쿠사의 왕이 되었다.",
+        "en_last": "And speaking of the first method, it will be illustrated by two examples—one ancient, the other modern—and without entering further into the subject, I consider these two examples will suffice those who may be compelled to follow them."
+      },
+      {
+        "pair": 2,
+        "ko_first": "그는 도공의 아들로 태어나 평생 동안 모든 단계에서 사악한 생활을 했다.",
+        "en_first": "Agathocles, the Sicilian,[1] became King of Syracuse not only from a private but from a low and abject position.",
+        "ko_last": "그의 행동과 역량을 살펴보면 그가 행운에게 빚진 것이 거의 없거나 전혀 없다는 것을 알 수 있다.",
+        "en_last": "The Carthaginians, reduced to extreme necessity, were compelled to come to terms with Agathocles, and, leaving Sicily to him, had to be content with the possession of Africa.[1] Agathocles the Sicilian, born 361 B.C., died 289 B.C."
+      },
+      {
+        "pair": 3,
+        "ko_first": "앞에서 말했듯 그는 타인의 호의가 아니라 군대의 계급을 따라 수많은 어려움과 위험 속에서 올라갔으며, 이후 대담하고 위험한 조치로 국가를 유지했다.",
+        "en_first": "Therefore, he who considers the actions and the genius of this man will see nothing, or little, which can be attributed to fortune, inasmuch as he attained pre-eminence, as is shown above, not by the favour of any one, but step by step in t",
+        "ko_last": "그는 둘 어느 것 없이도 성공했기 때문이다.",
+        "en_last": "What he achieved cannot be attributed either to fortune or genius."
+      },
+      {
+        "pair": 4,
+        "ko_first": "우리 시대에는 교황 알렉산데르 6세 때의 올리베로토 다 페르모가 있다.",
+        "en_first": "In our times, during the rule of Alexander the Sixth, Oliverotto da Fermo, having been left an orphan many years before, was brought up by his maternal uncle, Giovanni Fogliani, and in the early days of his youth sent to fight under Pagolo ",
+        "ko_last": "그리고 조반니에게 페르모 시민들이 그를 명예롭게 맞이하도록 해 달라고 부탁했다.",
+        "en_last": "red horsemen, his friends and retainers; and he entreated Giovanni to arrange that he should be received honourably by the Fermians, all of which would be not only to his honour, but also to that of Giovanni himself, who had brought him up."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그것은 자기 명예일 뿐 아니라 자신을 길러 준 외삼촌의 명예이기도 하다고 했다.",
+        "en_first": "Giovanni, therefore, did not fail in any attentions due to his nephew, and he caused him to be honourably received by the Fermians, and he lodged him in his own house, where, having passed some days, and having arranged what was necessary f",
+        "ko_last": "보르자는 앞에서 말한 것처럼 시니갈리아에서 오르시니와 비텔리 가문을 붙잡았다.",
+        "en_last": "Thus one year after he had committed this parricide, he was strangled, together with Vitellozzo, whom he had made his leader in valour and wickedness."
+      },
+      {
+        "pair": 6,
+        "ko_first": "그곳에서 올리베로토도 붙잡혀, 악행과 역량의 스승이었던 비텔로초와 함께 목 졸려 죽었다.",
+        "en_first": "Some may wonder how it can happen that Agathocles, and his like, after infinite treacheries and cruelties, should live for long secure in his country, and defend himself from external enemies, and never be conspired against by his own citiz",
+        "ko_last": "첫 번째 방식을 사용하는 사람은 아가토클레스처럼 신과 인간 앞에서 어느 정도 자기 지위를 바로잡을 수 있다.",
+        "en_last": "It is impossible for those who follow the other to maintain themselves.[2] Mr Burd suggests that this word probably comes near the modern equivalent of Machiavelli’s thought when he speaks of “crudelta” than the more obvious “cruelties.”"
+      },
+      {
+        "pair": 7,
+        "ko_first": "두 번째 방식을 사용하는 사람은 국가를 유지할 수 없다.",
+        "en_first": "Hence it is to be remarked that, in seizing a state, the usurper ought to examine closely into all those injuries which it is necessary for him to inflict, and to do them all at one stroke so as not to have to repeat them daily; and thus by",
+        "ko_last": "피해는 한 번에 가해야 사람들이 그 맛을 덜 보고 덜 분노한다.",
+        "en_last": "For injuries ought to be done all at one time, so that, being tasted less, they offend less; benefits ought to be given little by little, so that the flavour of them may last longer."
+      },
+      {
+        "pair": 8,
+        "ko_first": "혜택은 조금씩 주어야 사람들이 더 잘 맛볼 수 있다.",
+        "en_first": "And above all things, a prince ought to live amongst his people in such a way that no unexpected circumstances, whether of good or evil, shall make him change; because if the necessity for this comes in troubled times, you are too late for ",
+        "ko_last": "어려운 때가 오면 악을 행할 시간이 없고, 그때 베푸는 선은 강요된 것으로 여겨져 아무런 감사를 얻지 못한다.",
+        "en_last": "hange; because if the necessity for this comes in troubled times, you are too late for harsh measures; and mild ones will not help you, for they will be considered as forced from you, and no one will be under any obligation to you for them."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-09.html",
+    "ko_source_paragraphs": 65,
+    "en_source_paragraphs": 7,
+    "folded_en_notes": 2,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 7,
+    "ko_group_sizes": [
+      8,
+      6,
+      9,
+      8,
+      10,
+      11,
+      13
+    ],
+    "alignment_cost": 0.0508,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "이제 시민 군주국을 살펴보자.",
+        "en_first": "But coming to the other point—where a leading citizen becomes the prince of his country, not by wickedness or any intolerable violence, but by the favour of his fellow citizens—this may be called a civil principality: nor is genius or fortu",
+        "ko_last": "이 두 욕구의 충돌에서 군주정, 자유정, 무질서 가운데 하나가 생긴다.",
+        "en_last": "le do not wish to be ruled nor oppressed by the nobles, and the nobles wish to rule and oppress the people; and from these two opposite desires there arises in cities one of three results, either a principality, self-government, or anarchy."
+      },
+      {
+        "pair": 2,
+        "ko_first": "군주정은 민중이나 유력자 가운데 한쪽이 기회를 얻을 때 만들어진다.",
+        "en_first": "A principality is created either by the people or by the nobles, accordingly as one or other of them has the opportunity; for the nobles, seeing they cannot withstand the people, begin to cry up the reputation of one of themselves, and they",
+        "ko_last": "민중의 호의로 군주가 된 사람은 홀로 서 있으며, 주변에 복종할 준비가 되어 있지 않은 사람은 거의 없거나 전혀 없다.",
+        "en_last": "But he who reaches sovereignty by popular favour finds himself alone, and has none around him, or few, who are not prepared to obey him."
+      },
+      {
+        "pair": 3,
+        "ko_first": "또한 다른 사람에게 해를 끼치지 않고 정당하게 유력자를 만족시키기는 어렵지만, 민중은 그렇게 할 수 있다.",
+        "en_first": "Besides this, one cannot by fair dealing, and without injury to others, satisfy the nobles, but you can satisfy the people, for their object is more righteous than that of the nobles, the latter wishing to oppress, while the former only des",
+        "ko_last": "군주는 언제나 같은 민중과 함께 살아야 하지만 같은 유력자와 함께 살 필요는 없다.",
+        "en_last": "Further, the prince is compelled to live always with the same people, but he can do well without the same nobles, being able to make and unmake them daily, and to give or take away authority when it pleases him."
+      },
+      {
+        "pair": 4,
+        "ko_first": "원하는 대로 매일 그들을 만들거나 없앨 수 있고, 권력과 명예를 주거나 빼앗을 수 있기 때문이다.",
+        "en_first": "Therefore, to make this point clearer, I say that the nobles ought to be looked at mainly in two ways: that is to say, they either shape their course in such a way as binds them entirely to your fortune, or they do not.",
+        "ko_last": "그러나 야심 때문에 일부러 군주와 결합하지 않는 사람은 군주보다 자기 자신을 더 생각한다는 신호다.",
+        "en_last": " shun binding themselves, it is a token that they are giving more thought to themselves than to you, and a prince ought to guard against such, and to fear them as if they were open enemies, because in adversity they always help to ruin him."
+      },
+      {
+        "pair": 5,
+        "ko_first": "군주는 이런 사람을 조심하고 공개적인 적처럼 두려워해야 한다.",
+        "en_first": "Therefore, one who becomes a prince through the favour of the people ought to keep them friendly, and this he can easily do seeing they only ask not to be oppressed by him.",
+        "ko_last": "그러나 상황이 다르므로 확실한 규칙을 정할 수 없으며 여기서는 생략하겠다.",
+        "en_last": "their affections in many ways, but as these vary according to the circumstances one cannot give fixed rules, so I omit them; but, I repeat, it is necessary for a prince to have the people friendly, otherwise he has no security in adversity."
+      },
+      {
+        "pair": 6,
+        "ko_first": "결론적으로 군주에게 민중과 우호 관계를 유지하는 것은 필수다.",
+        "en_first": "Nabis,[1] Prince of the Spartans, sustained the attack of all Greece, and of a victorious Roman army, and against them he defended his country and his government; and for the overcoming of this peril it was only necessary for him to make hi",
+        "ko_last": "이러한 군주국은 시민적 질서에서 절대적 통치로 넘어가려 할 때 위험해진다.",
+        "en_last": "This event is to be found in Machiavelli’s “Florentine History,” Book III."
+      },
+      {
+        "pair": 7,
+        "ko_first": "군주는 직접 명령하거나 행정관을 통해 명령한다.",
+        "en_first": "These principalities are liable to danger when they are passing from the civil to the absolute order of government, for such princes either rule personally or through magistrates.",
+        "ko_last": "그렇게 하면 시민은 언제나 군주에게 충성할 것이다.",
+        "en_last": "Therefore a wise prince ought to adopt such a course that his citizens will always in every sort and kind of circumstance have need of the state and of him, and then he will always find them faithful."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-10.html",
+    "ko_source_paragraphs": 26,
+    "en_source_paragraphs": 4,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      10,
+      6,
+      4,
+      6
+    ],
+    "alignment_cost": 0.037,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "이러한 군주국의 성격을 검토할 때에는 또 하나의 점을 고려해야 한다.",
+        "en_first": "It is necessary to consider another point in examining the character of these principalities: that is, whether a prince has such power that, in case of need, he can support himself with his own resources, or whether he has always need of th",
+        "ko_last": "독일의 도시들은 매우 자유롭다.",
+        "en_last": "ll never be attacked without great caution, for men are always adverse to enterprises where difficulties can be seen, and it will be seen not to be an easy thing to attack one who has his town well fortified, and is not hated by his people."
+      },
+      {
+        "pair": 2,
+        "ko_first": "주변 영토는 작고, 황제가 허용하는 만큼만 복종하며, 황제나 다른 주변 강국을 두려워하지 않는다.",
+        "en_first": "The cities of Germany are absolutely free, they own but little country around them, and they yield obedience to the emperor when it suits them, nor do they fear this or any other power they may have near them, because they are fortified in ",
+        "ko_last": "그러므로 강한 도시를 가지고 민중에게 미움받지 않는 군주는 공격받기 어렵다.",
+        "en_last": "f giving work to the community in those labours that are the life and strength of the city, and on the pursuit of which the people are supported; they also hold military exercises in repute, and moreover have many ordinances to uphold them."
+      },
+      {
+        "pair": 3,
+        "ko_first": "누군가 공격한다 해도 공격자는 수치스럽게 물러날 가능성이 크다.",
+        "en_first": "Therefore, a prince who has a strong city, and had not made himself odious, will not be attacked, or if any one should attack he will only be driven off with disgrace; again, because that the affairs of this world are so changeable, it is a",
+        "ko_last": "이에 대해 나는 강하고 용기 있는 군주라면 신민에게 고통이 오래가지 않을 것이라는 희망을 주고, 적의 잔혹함에 대한 두려움을 일으키며, 너무 대담하게 말한 사람을 적절히 처리함으로써 그러한 어려움을 언제나 극복할 수 있다고 답한다.",
+        "en_last": "come all such difficulties by giving at one time hope to his subjects that the evil will not be for long, at another time fear of the cruelty of the enemy, then preserving himself adroitly from those subjects who seem to him to be too bold."
+      },
+      {
+        "pair": 4,
+        "ko_first": "더구나 적이 도착하면 당연히 성 밖의 재산을 불태우고 파괴한다.",
+        "en_first": "Further, the enemy would naturally on his arrival at once burn and ruin the country at the time when the spirits of the people are still hot and ready for the defence; and, therefore, so much the less ought the prince to hesitate; because a",
+        "ko_last": "그러므로 모든 것을 잘 생각해 보면 식량과 방어 수단이 부족하지 않는 한 신중한 군주가 포위 기간 내내 민중의 정신을 굳게 유지하는 일은 어렵지 않다.",
+        "en_last": "Therefore, if everything is well considered, it will not be difficult for a wise prince to keep the minds of his citizens steadfast from first to last, when he does not fail to support and defend them."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-11.html",
+    "ko_source_paragraphs": 42,
+    "en_source_paragraphs": 5,
+    "folded_en_notes": 2,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 5,
+    "ko_group_sizes": [
+      8,
+      2,
+      12,
+      5,
+      15
+    ],
+    "alignment_cost": 0.0473,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "이제 교회 군주국만 남았다.",
+        "en_first": "It only remains now to speak of ecclesiastical principalities, touching which all difficulties are prior to getting possession, because they are acquired either by capacity or good fortune, and they can be held without either; for they are ",
+        "ko_last": "그러나 그것은 인간의 정신이 도달할 수 없는 더 높은 원인에 의해 유지되므로 여기서는 논하지 않겠다.",
+        "en_last": "But being upheld by powers, to which the human mind cannot reach, I shall speak no more of them, because, being exalted and maintained by God, it would be the act of a presumptuous and rash man to discuss them."
+      },
+      {
+        "pair": 2,
+        "ko_first": "신이 높이고 유지하는 국가를 논하는 것은 주제넘고 성급한 일이기 때문이다.",
+        "en_first": "Nevertheless, if any one should ask of me how comes it that the Church has attained such greatness in temporal power, seeing that from Alexander backwards the Italian potentates (not only those who have been called potentates, but every bar",
+        "ko_last": "그럼에도 누군가 교황 알렉산데르 이전에는 이탈리아의 세속 군주뿐 아니라 작은 영주와 귀족까지 교황의 세속 권력을 거의 중요하게 여기지 않았는데, 지금은 프랑스 왕도 그것을 두려워하고 교황이 그를 이탈리아에서 몰아내며 베네치아인을 파멸시킬 수 있을 만큼 강해진 이유를 묻는다면, 이미 알려진 일이라 해도 그 배경을 되살리는 것이 불필요하지 않을 것이다.",
+        "en_last": "y slightly—yet now a king of France trembles before it, and it has been able to drive him from Italy, and to ruin the Venetians—although this may be very manifest, it does not appear to me superfluous to recall it in some measure to memory."
+      },
+      {
+        "pair": 3,
+        "ko_first": "프랑스 왕 샤를이 이탈리아에 들어오기 전, 이 나라는 교황, 베네치아, 나폴리 왕, 밀라노 공작, 피렌체의 지배 아래 있었다.",
+        "en_first": "Before Charles, King of France, passed into Italy,[1] this country was under the dominion of the Pope, the Venetians, the King of Naples, the Duke of Milan, and the Florentines.",
+        "ko_last": "그래서 이탈리아에서는 교황의 세속 권력이 거의 존중받지 못했다.",
+        "en_last": "This was the reason why the temporal powers of the pope were little esteemed in Italy.[1] Charles VIII invaded Italy in 1494."
+      },
+      {
+        "pair": 4,
+        "ko_first": "그 뒤 알렉산데르 6세가 나타났다.",
+        "en_first": "Alexander the Sixth arose afterwards, who of all the pontiffs that have ever been showed how a pope with both money and arms was able to prevail; and through the instrumentality of the Duke Valentino, and by reason of the entry of the Frenc",
+        "ko_last": "그가 죽고 공작이 파멸한 뒤 교회는 그의 수고를 물려받았다.",
+        "en_last": "And although his intention was not to aggrandize the Church, but the duke, nevertheless, what he did contributed to the greatness of the Church, which, after his death and the ruin of the duke, became the heir to all his labours."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그 뒤 율리오 교황이 왔다.",
+        "en_first": "Pope Julius came afterwards and found the Church strong, possessing all the Romagna, the barons of Rome reduced to impotence, and, through the chastisements of Alexander, the factions wiped out; he also found the way open to accumulate mone",
+        "ko_last": "이전 교황들이 무력으로 교황권을 크게 만들었다면, 이제 레오가 선함과 무수한 덕성으로 그것을 더욱 위대하고 존경받는 것으로 만들기를 바랄 수 있다.",
+        "en_last": "Leo[2] found the pontificate most powerful, and it is to be hoped that, if others made it great in arms, he will make it still greater and more venerated by his goodness and infinite other virtues.[2] Pope Leo X was the Cardinal de’ Medici."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-12.html",
+    "ko_source_paragraphs": 92,
+    "en_source_paragraphs": 9,
+    "folded_en_notes": 8,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 9,
+    "ko_group_sizes": [
+      2,
+      4,
+      19,
+      4,
+      6,
+      4,
+      31,
+      8,
+      14
+    ],
+    "alignment_cost": 0.0599,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "앞에서 내가 논하려 했던 군주국의 여러 성격을 자세히 살펴보았고, 그들이 잘되거나 나빠지는 원인을 어느 정도 검토했으며, 많은 사람이 그것을 획득하고 유지하려고 사용한 방법을 제시했다.",
+        "en_first": "Having discoursed particularly on the characteristics of such principalities as in the beginning I proposed to discuss, and having considered in some degree the causes of there being good or bad, and having shown the methods by which many h",
+        "ko_last": "이제 그러한 국가들이 공격과 방어를 위해 일반적으로 사용하는 수단을 논하겠다.",
+        "en_last": "degree the causes of there being good or bad, and having shown the methods by which many have sought to acquire them and to hold them, it now remains for me to discuss generally the means of offence and defence which belong to each of them."
+      },
+      {
+        "pair": 2,
+        "ko_first": "앞에서 말했듯 군주는 좋은 기반을 가져야 한다.",
+        "en_first": "We have seen above how necessary it is for a prince to have his foundations well laid, otherwise it follows of necessity he will go to ruin.",
+        "ko_last": "좋은 군대가 없는 곳에는 좋은 법이 있을 수 없고, 좋은 군대가 있는 곳에는 좋은 법이 있어야 하므로 나는 법의 논의는 생략하고 군대에 대해 말하겠다.",
+        "en_last": "I shall leave the laws out of the discussion and shall speak of the arms."
+      },
+      {
+        "pair": 3,
+        "ko_first": "군주가 국가를 지키는 군대는 자기 군대이거나 용병이거나 원군이거나 혼합군이다.",
+        "en_first": "I say, therefore, that the arms with which a prince defends his state are either his own, or they are mercenaries, auxiliaries, or mixed.",
+        "ko_last": "용병의 결함을 더 분명히 보여 주겠다.",
+        "en_last": "He passed the whole length of Italy without resistance: so that it was true what Pope Alexander was wont to say: That the Frenchmen came into Italy with chalk in their hands, to mark up their lodgings, rather than with swords to fight.”"
+      },
+      {
+        "pair": 4,
+        "ko_first": "용병 지휘관은 뛰어난 군인일 수도 있고 그렇지 않을 수도 있다.",
+        "en_first": "I wish to demonstrate further the infelicity of these arms.",
+        "ko_last": "능력이 없다면 당연히 군주를 파멸시킨다.",
+        "en_last": "f they are, you cannot trust them, because they always aspire to their own greatness, either by oppressing you, who are their master, or others contrary to your intentions; but if the captain is not skilful, you are ruined in the usual way."
+      },
+      {
+        "pair": 5,
+        "ko_first": "누군가 용병이든 아니든 무기를 가진 사람은 누구나 그렇게 할 것이라고 대답한다면, 나는 군대는 군주나 공화국이 사용해야 한다고 답한다.",
+        "en_first": "And if it be urged that whoever is armed will act in the same way, whether mercenary or not, I reply that when arms have to be resorted to, either by a prince or a republic, then the prince ought to go in person and perform the duty of a ca",
+        "ko_last": "자기 군대를 가진 공화국은 외국 군대를 가진 국가보다 시민 한 사람의 지배 아래 떨어질 가능성이 훨씬 적다.",
+        "en_last": "The Switzers are completely armed and quite free."
+      },
+      {
+        "pair": 6,
+        "ko_first": "로마와 스파르타는 오랜 세월 무장하고 자유로웠다.",
+        "en_first": "Of ancient mercenaries, for example, there are the Carthaginians, who were oppressed by their mercenary soldiers after the first war with the Romans, although the Carthaginians had their own citizens for captains.",
+        "ko_last": "첫 번째 로마 전쟁이 끝난 뒤 카르타고 시민이 지휘관이었는데도 용병에게 거의 정복당할 뻔했다.",
+        "en_last": "After the death of Epaminondas, Philip of Macedon was made captain of their soldiers by the Thebans, and after victory he took away their liberty."
+      },
+      {
+        "pair": 7,
+        "ko_first": "필리포스 왕이 죽은 뒤 테베인은 마케도니아의 필리포스를 군대 지휘관으로 임명했고, 승리한 뒤 그는 그들의 자유를 빼앗았다.",
+        "en_first": "Duke Filippo being dead, the Milanese enlisted Francesco Sforza against the Venetians, and he, having overcome the enemy at Caravaggio,[2] allied himself with them to crush the Milanese, his masters.",
+        "ko_last": "이제 오랫동안 용병의 지배를 받아 온 이탈리아의 사례로 이끌려 왔으니, 더 거슬러 올라가 용병의 기원과 발전을 살펴보겠다.",
+        "en_last": "Count of Pitigliano; Nicolo Orsini, born 1442, died 1510.[7] Battle of Vaila in 1509."
+      },
+      {
+        "pair": 8,
+        "ko_first": "그러면 그들을 바로잡는 일이 더 쉬울 것이다.",
+        "en_first": "And as with these examples I have reached Italy, which has been ruled for many years by mercenaries, I wish to discuss them more seriously, in order that, having seen their rise and progress, one may be better prepared to counteract them.",
+        "ko_last": "이 군대를 처음 명성 있게 만든 사람은 로마냐 사람 알베리고 다 코니오였다.",
+        "en_last": "From this it came to pass that Italy fell partly into the hands of the Church and of republics, and, the Church consisting of priests and the republic of citizens unaccustomed to arms, both commenced to enlist foreigners."
+      },
+      {
+        "pair": 9,
+        "ko_first": "브라초와 스포르차가 그의 훈련에서 나왔고, 그들은 당시 이탈리아의 지배자가 되었다.",
+        "en_first": "The first who gave renown to this soldiery was Alberigo da Conio,[8] the Romagnian.",
+        "ko_last": "그렇게 그들은 이탈리아를 노예 상태와 치욕으로 이끌었다.",
+        "en_last": "He died in 1409."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-13.html",
+    "ko_source_paragraphs": 67,
+    "en_source_paragraphs": 11,
+    "folded_en_notes": 5,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 11,
+    "ko_group_sizes": [
+      5,
+      6,
+      1,
+      3,
+      8,
+      8,
+      3,
+      4,
+      11,
+      11,
+      7
+    ],
+    "alignment_cost": 0.0375,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "다른 쓸모없는 군대인 원군은 강한 세력을 불러 자기 군대와 함께 와서 방어해 달라고 요청할 때 사용된다.",
+        "en_first": "Auxiliaries, which are the other useless arm, are employed when a prince is called in with his forces to aid and defend, as was done by Pope Julius in the most recent times; for he, having, in the enterprise against Ferrara, had poor proof ",
+        "ko_last": "패배하면 군주도 파멸하고, 승리하면 그들의 포로가 되기 때문이다.",
+        "en_last": "III of Naples), surnamed “The Catholic,” born 1452, died 1516."
+      },
+      {
+        "pair": 2,
+        "ko_first": "고대 역사는 이런 사례로 가득하지만, 교황 율리오 2세의 최근 사례를 떠날 필요가 없다.",
+        "en_first": "And although ancient histories may be full of examples, I do not wish to leave this recent one of Pope Julius the Second, the peril of which cannot fail to be perceived; for he, wishing to get Ferrara, threw himself entirely into the hands ",
+        "ko_last": "적이 달아났고, 자기 군대가 아닌 다른 군대가 승리했기 때문이다.",
+        "en_last": " risen and driven out the conquerors (against all expectation, both his and others), it so came to pass that he did not become prisoner to his enemies, they having fled, nor to his auxiliaries, he having conquered by other arms than theirs."
+      },
+      {
+        "pair": 3,
+        "ko_first": "피렌체인은 군대가 전혀 없었으므로 피사를 공격하기 위해 프랑스군 만 명을 불렀다.",
+        "en_first": "The Florentines, being entirely without arms, sent ten thousand Frenchmen to take Pisa, whereby they ran more danger than at any other time of their troubles.",
+        "ko_last": "피렌체인은 군대가 전혀 없었으므로 피사를 공격하기 위해 프랑스군 만 명을 불렀다.",
+        "en_last": "The Florentines, being entirely without arms, sent ten thousand Frenchmen to take Pisa, whereby they ran more danger than at any other time of their troubles."
+      },
+      {
+        "pair": 4,
+        "ko_first": "그 결정은 그들이 이전 어떤 어려움보다 더 큰 위험에 빠지게 했다.",
+        "en_first": "The Emperor of Constantinople,[2] to oppose his neighbours, sent ten thousand Turks into Greece, who, on the war being finished, were not willing to quit; this was the beginning of the servitude of Greece to the infidels.[2] Joannes Cantacu",
+        "ko_last": "전쟁이 끝난 뒤 터키인은 떠나지 않았다.",
+        "en_last": "e,[2] to oppose his neighbours, sent ten thousand Turks into Greece, who, on the war being finished, were not willing to quit; this was the beginning of the servitude of Greece to the infidels.[2] Joannes Cantacuzenus, born 1300, died 1383."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그것이 그리스가 이교도에게 예속되는 시작이었다.",
+        "en_first": "Therefore, let him who has no desire to conquer make use of these arms, for they are much more hazardous than mercenaries, because with them the ruin is ready made; they are all united, all yield obedience to others; but with mercenaries, w",
+        "ko_last": "군주가 지휘관으로 세운 다른 사람이 짧은 시간 안에 군주를 해칠 만큼 권위를 얻기는 어렵다.",
+        "en_last": "The wise prince, therefore, has always avoided these arms and turned to his own; and has been willing rather to lose with them than to conquer with the others, not deeming that a real victory which is gained with the arms of others."
+      },
+      {
+        "pair": 6,
+        "ko_first": "용병에서는 비겁함이 가장 위험하고 원군에서는 용맹함이 가장 위험하다.",
+        "en_first": "I shall never hesitate to cite Cesare Borgia and his actions.",
+        "ko_last": "그것이 덜 위험하다고 생각해 오르시니와 비텔리 가문을 고용했다.",
+        "en_last": "d the Orsini and Vitelli, and when he relied on his own soldiers, on whose fidelity he could always count and found it ever increasing; he was never esteemed more highly than when every one saw that he was complete master of his own forces."
+      },
+      {
+        "pair": 7,
+        "ko_first": "그 뒤 용병도 불확실하고 불충하며 위험하다는 것을 알고 해산하고 자기 군대에 의존했다.",
+        "en_first": "I was not intending to go beyond Italian and recent examples, but I am unwilling to leave out Hiero, the Syracusan, he being one of those I have named above.",
+        "ko_last": "공작이 프랑스인만 가지고 있을 때와 오르시니&#183;비텔리를 가지고 있을 때, 그리고 자기 병사와 자기 힘에 의존할 때의 명성을 비교하면 된다.",
+        "en_last": "nary soldiery, constituted like our Italian condottieri, was of no use; and it appearing to him that he could neither keep them nor let them go, he had them all cut to pieces, and afterwards made war with his own forces and not with aliens."
+      },
+      {
+        "pair": 8,
+        "ko_first": "명성은 계속 높아졌지만 자기 군대의 완전한 지배자가 된 뒤에야 진정으로 높이 평가받았다.",
+        "en_first": "I wish also to recall to memory an instance from the Old Testament applicable to this subject.",
+        "ko_last": "그 지휘관들은 오늘날 이탈리아의 지휘관들과 같았다.",
+        "en_last": "In conclusion, the arms of others either fall from your back, or they weigh you down, or they bind you fast."
+      },
+      {
+        "pair": 9,
+        "ko_first": "그들을 유지하거나 해임할 수 없다고 판단해 모두 조각내 죽인 뒤 타인의 군대가 아닌 자기 군대로 전쟁했다.",
+        "en_first": "Charles the Seventh,[3] the father of King Louis the Eleventh,[4] having by good fortune and valour liberated France from the English, recognized the necessity of being armed with forces of his own, and he established in his kingdom ordinan",
+        "ko_last": "보병을 완전히 없애고 기병을 타인의 군대에 의존하게 만들었다.",
+        "en_last": "t, for the kingdom of France would be unconquerable if the ordinance of Charles had been enlarged or maintained.[3] Charles VII of France, surnamed “The Victorious,” born 1403, died 1461.[4] Louis XI, son of the above, born 1423, died 1483."
+      },
+      {
+        "pair": 10,
+        "ko_first": "프랑스 기병은 스위스인과 함께 싸우는 데 익숙해져 그들 없이는 이길 수 없다고 생각했다.",
+        "en_first": "But the scanty wisdom of man, on entering into an affair which looks well at first, cannot discern the poison that is hidden in it, as I have said above of hectic fevers.",
+        "ko_last": "그때부터 로마 제국의 힘은 약해졌고, 로마인에게서 빠져나간 모든 역량은 고트인에게 넘어갔다.",
+        "en_last": "l have added that the Roman power was at its zenith when every citizen acknowledged his liability to fight for the State, but that it began to decline as soon as this obligation was no longer recognised.”—_Pall Mall Gazette_, 15th May 1906."
+      },
+      {
+        "pair": 11,
+        "ko_first": "결론적으로 자기 군대가 없는 군주국은 안전하지 않다.",
+        "en_first": "I conclude, therefore, that no principality is secure without having its own forces; on the contrary, it is entirely dependent on good fortune, not having the valour which in adversity would defend it.",
+        "ko_last": "나는 전적으로 그 방법에 의지한다.",
+        "en_last": "found if the rules suggested by me shall be reflected upon, and if one will consider how Philip, the father of Alexander the Great, and many republics and princes have armed and organized themselves, to which rules I entirely commit myself."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-14.html",
+    "ko_source_paragraphs": 40,
+    "en_source_paragraphs": 4,
+    "folded_en_notes": 1,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      14,
+      12,
+      6,
+      8
+    ],
+    "alignment_cost": 0.0541,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "군주는 전쟁과 군사 제도와 훈련 외에는 다른 목표나 생각을 가져서도 안 되며, 다른 일을 자기 기술로 삼아서도 안 된다.",
+        "en_first": "A prince ought to have no other aim or thought, nor select anything else for his study, than war and its rules and discipline; for this is the sole art that belongs to him who rules, and it is of such force that it not only upholds those wh",
+        "ko_last": "평화 시에는 전쟁 시보다 더 많이 훈련해야 한다.",
+        "en_last": "He ought never, therefore, to have out of his thoughts this subject of war, and in peace he should addict himself more to its exercise than in war; this he can do in two ways, the one by action, the other by study."
+      },
+      {
+        "pair": 2,
+        "ko_first": "훈련은 행동과 정신이라는 두 방식으로 이루어진다.",
+        "en_first": "As regards action, he ought above all things to keep his men well organized and drilled, to follow incessantly the chase, by which he accustoms his body to hardships, and learns something of the nature of localities, and gets to find out ho",
+        "ko_last": "이 지식은 적을 찾고, 숙영지를 선택하고, 군대를 이끌고, 전투를 배치하고, 유리하게 도시를 포위하는 방법을 가르친다.",
+        "en_last": "And the prince that lacks this skill lacks the essential which it is desirable that a captain should possess, for it teaches him to surprise his enemy, to select quarters, to lead armies, to array the battle, to besiege towns to advantage."
+      },
+      {
+        "pair": 3,
+        "ko_first": "아카이아인의 군주 필로포이멘은 평화 시에도 전쟁의 방법 외에는 생각하지 않았다는 점에서 작가들에게 칭찬받았다.",
+        "en_first": "Philopoemen,[1] Prince of the Achaeans, among other praises which writers have bestowed on him, is commended because in time of peace he never had anything in his mind but the rules of war; and when he was in the country with friends, he of",
+        "ko_last": "정신 훈련에서는 군주가 역사를 읽고 위대한 인물의 행동을 연구해야 한다.",
+        "en_last": "is, confirming it with reasons, so that by these continual discussions there could never arise, in time of war, any unexpected circumstances that he could not deal with.[1] Philopoemen, “the last of the Greeks,” born 252 B.C., died 183 B.C."
+      },
+      {
+        "pair": 4,
+        "ko_first": "그들이 전쟁에서 어떻게 행동했는지 살피고, 승리와 패배의 원인을 검토해 패배는 피하고 승리는 본받아야 한다.",
+        "en_first": "But to exercise the intellect the prince should read histories, and study there the actions of illustrious men, to see how they have borne themselves in war, to examine the causes of their victories and defeat, so as to avoid the latter and",
+        "ko_last": "그래야 행운이 변할 때 그것에 저항할 준비가 되어 있다.",
+        "en_last": "observe some such rules, and never in peaceful times stand idle, but increase his resources with industry in such a way that they may be available to him in adversity, so that if fortune chances it may find him prepared to resist her blows."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-15.html",
+    "ko_source_paragraphs": 11,
+    "en_source_paragraphs": 2,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 2,
+    "ko_group_sizes": [
+      4,
+      7
+    ],
+    "alignment_cost": 0.0385,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "이제 군주가 신민과 친구들을 대할 때 지켜야 할 규칙을 살펴보아야 한다.",
+        "en_first": "It remains now to see what ought to be the rules of conduct for a prince towards subject and friends.",
+        "ko_last": "그러므로 국가를 유지하려는 군주는 필요할 때 선하지 않게 행동하는 법을 배워야 하며, 상황에 따라 그것을 사용하거나 사용하지 않을 줄 알아야 한다.",
+        "en_last": ", that he who neglects what is done for what ought to be done, sooner effects his ruin than his preservation; for a man who wishes to act entirely up to his professions of virtue soon meets with what destroys him among so much that is evil."
+      },
+      {
+        "pair": 2,
+        "ko_first": "따라서 군주에 관한 상상적 논의를 한쪽에 내려놓고 실제의 일을 논하겠다.",
+        "en_first": "Hence it is necessary for a prince wishing to hold his own to know how to do wrong, and to make use of it or not according to necessity.",
+        "ko_last": "모든 것을 세심하게 검토해 보면 덕처럼 보이는 어떤 성품은 그것을 따르면 군주를 파멸시키고, 악덕처럼 보이는 다른 성품은 그것을 따르면 군주에게 안전과 번영을 가져온다는 것을 알 수 있기 때문이다.",
+        "en_last": "h difficulty, for if everything is considered carefully, it will be found that something which looks like virtue, if followed, would be his ruin; whilst something else, which looks like vice, yet followed brings him security and prosperity."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-16.html",
+    "ko_source_paragraphs": 29,
+    "en_source_paragraphs": 5,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 5,
+    "ko_group_sizes": [
+      7,
+      3,
+      6,
+      10,
+      3
+    ],
+    "alignment_cost": 0.0331,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "앞에서 말한 성품 가운데 첫 번째 것부터 시작하겠다.",
+        "en_first": "Commencing then with the first of the above-named characteristics, I say that it would be well to be reputed liberal.",
+        "ko_last": "그가 이를 깨닫고 방식을 바꾸려 하면 곧바로 인색하다는 비난을 받는다.",
+        "en_last": "ing offended many and rewarded few, he is affected by the very first trouble and imperilled by whatever may be the first danger; recognizing this himself, and wishing to draw back from it, he runs at once into the reproach of being miserly."
+      },
+      {
+        "pair": 2,
+        "ko_first": "그러므로 군주는 관대함을 사람들에게 알려지는 방식으로 사용하면서도 자기에게 해가 되지 않게 할 수 없다.",
+        "en_first": "Therefore, a prince, not being able to exercise this virtue of liberality in such a way that it is recognized, except to his cost, if he is wise he ought not to fear the reputation of being mean, for in time he will come to be more consider",
+        "ko_last": "이렇게 하면 그는 아무것도 빼앗기지 않는 대다수 사람에게는 관대하게 행동하고, 아무것도 주지 않는 소수 사람에게만 인색하게 행동하는 셈이 된다.",
+        "en_last": " is able to engage in enterprises without burdening his people; thus it comes to pass that he exercises liberality towards all from whom he does not take, who are numberless, and meanness towards those to whom he does not give, who are few."
+      },
+      {
+        "pair": 3,
+        "ko_first": "우리 시대에는 인색하다고 평가받은 사람들만이 위대한 일을 해냈다.",
+        "en_first": "We have not seen great things done in our time except by those who have been considered mean; the rest have failed.",
+        "ko_last": "인색함은 군주가 통치할 수 있게 해 주는 악덕 가운데 하나이기 때문이다.",
+        "en_last": "ects, that he can defend himself, that he does not become poor and abject, that he is not forced to become rapacious, ought to hold of little account a reputation for being mean, for it is one of those vices which will enable him to govern."
+      },
+      {
+        "pair": 4,
+        "ko_first": "누군가는 카이사르가 관대함으로 제국을 얻었고, 많은 사람이 관대한 사람으로 평가받았기 때문에 높은 지위에 올랐다고 말할 수 있다.",
+        "en_first": "And if any one should say: Caesar obtained empire by liberality, and many others have reached the highest positions by having been liberal, and by being considered so, I answer: Either you are a prince in fact, or in a way to become one.",
+        "ko_last": "자기 재산을 쓰는 것만이 군주를 해친다.",
+        "en_last": "neither yours nor your subjects’ you can be a ready giver, as were Cyrus, Caesar, and Alexander; because it does not take away your reputation if you squander that of others, but adds to it; it is only squandering your own that injures you."
+      },
+      {
+        "pair": 5,
+        "ko_first": "관대함만큼 스스로를 소모시키는 것은 없다.",
+        "en_first": "And there is nothing wastes so rapidly as liberality, for even whilst you exercise it you lose the power to do so, and so become either poor or despised, or else, in avoiding poverty, rapacious and hated.",
+        "ko_last": "그러므로 약탈이라는 비난을 불러오고 미움까지 사는 관대함보다, 비난은 받더라도 증오는 일으키지 않는 인색함이라는 평판을 받아들이는 편이 더 현명하다.",
+        "en_last": "Therefore it is wiser to have a reputation for meanness which brings reproach without hatred, than to be compelled through seeking a reputation for liberality to incur a name for rapacity which begets reproach with hatred."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-17.html",
+    "ko_source_paragraphs": 52,
+    "en_source_paragraphs": 8,
+    "folded_en_notes": 3,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 8,
+    "ko_group_sizes": [
+      6,
+      2,
+      1,
+      3,
+      12,
+      11,
+      14,
+      3
+    ],
+    "alignment_cost": 0.045,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "앞에서 말한 다른 성품으로 넘어가겠다.",
+        "en_first": "Coming now to the other qualities mentioned above, I say that every prince ought to desire to be considered clement and not cruel.",
+        "ko_last": "그가 소수에게 본보기가 되는 처벌을 가하면, 과도한 자비 때문에 무질서가 계속되도록 내버려 두는 사람보다 더 자비로운 사람이 된다.",
+        "en_last": " murders or robberies; for these are wont to injure the whole people, whilst those executions which originate with a prince offend the individual only.[1] During the rioting between the Cancellieri and Panciatichi factions in 1502 and 1503."
+      },
+      {
+        "pair": 2,
+        "ko_first": "무질서에서는 살인과 약탈이 생겨 공동체 전체에 해를 끼친다.",
+        "en_first": "And of all princes, it is impossible for the new prince to avoid the imputation of cruelty, owing to new states being full of dangers.",
+        "ko_last": "새로운 군주는 새로운 국가에 수많은 위험이 가득하므로 다른 군주보다 잔혹하다는 비난을 피하기 어렵다.",
+        "en_last": "Hence Virgil, through the mouth of Dido, excuses the inhumanity of her reign owing to its being new, saying:"
+      },
+      {
+        "pair": 3,
+        "ko_first": "베르길리우스는 디도의 입을 빌려 다음과 같이 말했다.",
+        "en_first": "“Res dura, et regni novitas me talia cogunt Moliri, et late fines custode tueri.”[2]",
+        "ko_last": "베르길리우스는 디도의 입을 빌려 다음과 같이 말했다.",
+        "en_last": "“Res dura, et regni novitas me talia cogunt Moliri, et late fines custode tueri.”[2]"
+      },
+      {
+        "pair": 4,
+        "ko_first": "“가혹한 사정과 새 왕국의 불안이 나로 하여금 이런 조치를 취하게 하고 국경을 널리 지키게 한다.” 그러나 군주는 쉽게 믿거나 성급히 행동해서는 안 되고, 스스로 두려움에 빠져서도 안 된다.",
+        "en_first": "Nevertheless he ought to be slow to believe and to act, nor should he himself show fear, but proceed in a temperate manner with prudence and humanity, so that too much confidence may not make him incautious and too much distrust render him ",
+        "ko_last": "지나친 신뢰가 군주를 경솔하게 만들지 않도록 하고, 지나친 불신이 그를 견딜 수 없는 사람으로 만들지 않도록 해야 한다.",
+        "en_last": "against my will, my fate A throne unsettled, and an infant state, Bid me defend my realms with all my pow’rs, And guard with these severities my shores.Christopher Pitt."
+      },
+      {
+        "pair": 5,
+        "ko_first": "여기에서 사랑받는 것이 더 나은가, 두려움의 대상이 되는 것이 더 나은가라는 질문이 생긴다.",
+        "en_first": "Upon this a question arises: whether it be better to be loved than feared or feared than loved?",
+        "ko_last": "사랑은 의무의 끈으로 유지되는데, 사람들은 사악하므로 자기 이익이 생기면 언제든 그 끈을 끊는다.",
+        "en_last": "o is beloved than one who is feared, for love is preserved by the link of obligation which, owing to the baseness of men, is broken at every opportunity for their advantage; but fear preserves you by a dread of punishment which never fails."
+      },
+      {
+        "pair": 6,
+        "ko_first": "그러나 두려움은 결코 실패하지 않는 처벌의 공포로 유지된다.",
+        "en_first": "Nevertheless a prince ought to inspire fear in such a way that, if he does not win love, he avoids hatred; because he can endure very well being feared whilst he is not hated, which will always be as long as he abstains from the property of",
+        "ko_last": "그 평판이 없으면 군대를 단결시키고 어떤 행동에도 준비된 상태로 유지할 수 없기 때문이다.",
+        "en_last": "But when a prince is with his army, and has under control a multitude of soldiers, then it is quite necessary for him to disregard the reputation of cruelty, for without it he would never hold his army united or disposed to its duties."
+      },
+      {
+        "pair": 7,
+        "ko_first": "한니발의 놀라운 업적 가운데 하나는 수많은 민족으로 이루어진 거대한 군대를 이끌고 외국 땅에서 전쟁했는데도, 불운할 때나 성공할 때나 병사들끼리 또는 군주를 상대로 어떤 분열도 일어나지 않았다는 점이다.",
+        "en_first": "Among the wonderful deeds of Hannibal this one is enumerated: that having led an enormous army, composed of many various races of men, to fight in foreign lands, no dissensions arose either among them or against the prince, whether in his b",
+        "ko_last": "그러나 원로원의 통제 아래 살았으므로 이 해로운 성품은 감추어졌을 뿐 아니라 오히려 그의 영광이 되었다.",
+        "en_last": "ition, if he had been continued in the command, would have destroyed in time the fame and glory of Scipio; but, he being under the control of the Senate, this injurious characteristic not only concealed itself, but contributed to his glory."
+      },
+      {
+        "pair": 8,
+        "ko_first": "그러므로 사랑받는 것과 두려움의 대상이 되는 문제로 돌아가면, 사람들은 자기 뜻에 따라 사랑하고 군주의 뜻에 따라 두려워한다.",
+        "en_first": "Returning to the question of being feared or loved, I come to the conclusion that, men loving according to their own will and fearing according to that of the prince, a wise prince should establish himself on that which is in his own contro",
+        "ko_last": "앞에서 말했듯 오직 증오받는 일만 피하면 된다.",
+        "en_last": ", men loving according to their own will and fearing according to that of the prince, a wise prince should establish himself on that which is in his own control and not in that of others; he must endeavour only to avoid hatred, as is noted."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-18.html",
+    "ko_source_paragraphs": 50,
+    "en_source_paragraphs": 8,
+    "folded_en_notes": 6,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 8,
+    "ko_group_sizes": [
+      18,
+      5,
+      1,
+      3,
+      11,
+      6,
+      3,
+      3
+    ],
+    "alignment_cost": 0.038,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "군주가 신의를 지키고 책략 없이 정직하게 사는 것이 얼마나 칭찬받을 만한 일인지는 누구나 안다.",
+        "en_first": "Every one admits how praiseworthy it is in a prince to keep faith, and to live with integrity and not with craft.",
+        "ko_last": "그러나 사람들은 사악하고 군주에게 약속을 지키지 않으므로 군주도 그들에게 약속을 지킬 필요가 없다.",
+        "en_last": "ge is imitated directly from Cicero’s “De Officiis”: “Nam cum sint duo genera decertandi, unum per disceptationem, alterum per vim; cumque illud proprium sit hominis, hoc beluarum; confugiendum est ad posterius, si uti non licet superiore.”"
+      },
+      {
+        "pair": 2,
+        "ko_first": "군주가 약속을 지키지 않을 정당한 이유를 찾지 못하는 일은 결코 없다.",
+        "en_first": "But it is necessary to know well how to disguise this characteristic, and to be a great pretender and dissembler; and men are so simple, and so subject to present necessities, that he who seeks to deceive will always find someone who will a",
+        "ko_last": "사람들은 매우 단순하고 당장의 필요에 쉽게 굴복하므로, 속이려는 사람은 속을 사람을 언제나 찾을 수 있다.",
+        "en_last": "theless his deceits always succeeded according to his wishes,[3] because he well understood this side of mankind.[3] “Nondimanco sempre gli succederono gli inganni (ad votum).” The words “ad votum” are omitted in the Testina addition, 1550."
+      },
+      {
+        "pair": 3,
+        "ko_first": "최근의 사례 가운데 하나를 생략하고 싶지 않다.",
+        "en_first": "Alexander never did what he said, Cesare never said what he did.Italian Proverb.",
+        "ko_last": "최근의 사례 가운데 하나를 생략하고 싶지 않다.",
+        "en_last": "Alexander never did what he said, Cesare never said what he did.Italian Proverb."
+      },
+      {
+        "pair": 4,
+        "ko_first": "교황 알렉산데르 6세는 사람을 속이는 것 외에는 다른 일을 하지 않았고, 언제나 속일 대상을 찾았다.",
+        "en_first": "Therefore it is unnecessary for a prince to have all the good qualities I have enumerated, but it is very necessary to appear to have them.",
+        "ko_last": "그러나 그는 인간의 이러한 측면을 잘 알고 있었으므로 그의 속임수는 언제나 성공했다.",
+        "en_last": "ious, and that to appear to have them is useful; to appear merciful, faithful, humane, religious, upright, and to be so, but with a mind so framed that should you require not to be so, you may be able and know how to change to the opposite."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그러므로 군주가 앞에서 말한 모든 좋은 성품을 실제로 가질 필요는 없다.",
+        "en_first": "And you have to understand this, that a prince, especially a new one, cannot observe all those things for which men are esteemed, being often forced, in order to maintain the state, to act contrary to fidelity,[4] friendship, humanity, and ",
+        "ko_last": "그를 보고 듣는 사람에게 그는 완전히 자비롭고 신의가 있으며 인간적이고 정직하고 종교적인 사람처럼 보여야 한다.",
+        "en_last": " follows: “That great patron and Coryphaeus of this tribe, Nicolo Machiavel, laid down this for a master rule in his political scheme: ‘That the show of religion was helpful to the politician, but the reality of it hurtful and pernicious.’”"
+      },
+      {
+        "pair": 6,
+        "ko_first": "종교적인 사람처럼 보이는 것보다 더 필요한 것은 없다.",
+        "en_first": "For this reason a prince ought to take care that he never lets anything slip from his lips that is not replete with the above-named five qualities, that he may appear to him who sees and hears him altogether merciful, faithful, humane, upri",
+        "ko_last": "책임을 물을 법정이 없는 모든 사람의 행동, 특히 군주의 행동에서는 결과를 보게 된다.",
+        "en_last": "and those few dare not oppose themselves to the opinion of the many, who have the majesty of the state to defend them; and in the actions of all men, and especially of princes, which it is not prudent to challenge, one judges by the result."
+      },
+      {
+        "pair": 7,
+        "ko_first": "그러므로 군주는 국가를 획득하고 유지하는 데 집중해야 한다.",
+        "en_first": "For that reason, let a prince have the credit of conquering and holding his state, the means will always be considered honest, and he will be praised by everybody; because the vulgar are always taken by what a thing seems to be and by what ",
+        "ko_last": "대중은 외양과 결과에 이끌리며, 세상에는 대중밖에 없다.",
+        "en_last": " will be praised by everybody; because the vulgar are always taken by what a thing seems to be and by what comes of it; and in the world there are only the vulgar, for the few find a place there only when the many have no ground to rest on."
+      },
+      {
+        "pair": 8,
+        "ko_first": "소수는 다수가 의지할 곳을 가지고 있을 때 그 다수에 맞설 자리를 얻지 못한다.",
+        "en_first": "One prince[5] of the present time, whom it is not well to name, never preaches anything else but peace and good faith, and to both he is most hostile, and either, if he had kept it, would have deprived him of reputation and kingdom many a t",
+        "ko_last": "그가 평화와 신의를 지켰다면 명성과 국가를 여러 번 잃었을 것이다.",
+        "en_last": "308."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-19.html",
+    "ko_source_paragraphs": 173,
+    "en_source_paragraphs": 23,
+    "folded_en_notes": 1,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 23,
+    "ko_group_sizes": [
+      3,
+      4,
+      4,
+      10,
+      13,
+      6,
+      11,
+      5,
+      10,
+      5,
+      3,
+      12,
+      4,
+      7,
+      4,
+      6,
+      17,
+      13,
+      6,
+      9,
+      6,
+      9,
+      6
+    ],
+    "alignment_cost": 0.0428,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "앞에서 말한 성품 가운데 가장 중요한 것들을 논했으므로 나머지는 이 일반 원칙 아래에서 간단히 다루겠다.",
+        "en_first": "Now, concerning the characteristics of which mention is made above, I have spoken of the more important ones, the others I wish to discuss briefly under this generality, that the prince must consider, as has been in part said before, how to",
+        "ko_last": "그가 이 일을 피할 때마다 자기 역할을 다한 것이며, 다른 비난을 받아도 위험하지 않다.",
+        "en_last": "st consider, as has been in part said before, how to avoid those things which will make him hated or contemptible; and as often as he shall have succeeded he will have fulfilled his part, and he need not fear any danger in other reproaches."
+      },
+      {
+        "pair": 2,
+        "ko_first": "앞에서 말했듯 군주는 무엇보다 탐욕스럽고 신민의 재산과 가족을 빼앗는 사람이 될 때 미움받는다.",
+        "en_first": "It makes him hated above all things, as I have said, to be rapacious, and to be a violator of the property and women of his subjects, from both of which he must abstain.",
+        "ko_last": "그러면 군주에게는 소수의 야망만 상대하면 되고, 그들은 여러 방법으로 쉽게 제어할 수 있다.",
+        "en_last": "And when neither their property nor their honor is touched, the majority of men live content, and he has only to contend with the ambition of a few, whom he can curb with ease in many ways."
+      },
+      {
+        "pair": 3,
+        "ko_first": "군주가 변덕스럽고 경박하고 유약하고 겁이 많고 우유부단한 사람으로 여겨질 때 경멸받는다.",
+        "en_first": "It makes him contemptible to be considered fickle, frivolous, effeminate, mean-spirited, irresolute, from all of which a prince should guard himself as from a rock; and he should endeavour to show in his actions greatness, courage, gravity,",
+        "ko_last": "신민의 사적인 문제를 처리할 때에는 자기 판단을 돌이킬 수 없는 것으로 만들어야 한다.",
+        "en_last": "eatness, courage, gravity, and fortitude; and in his private dealings with his subjects let him show that his judgments are irrevocable, and maintain himself in such reputation that no one can hope either to deceive him or to get round him."
+      },
+      {
+        "pair": 4,
+        "ko_first": "누구도 그를 속이거나 휘두를 생각을 하지 못할 만큼의 평판을 유지해야 한다.",
+        "en_first": "That prince is highly esteemed who conveys this impression of himself, and he who is highly esteemed is not easily conspired against; for, provided it is well known that he is an excellent man and revered by his people, he can only be attac",
+        "ko_last": "외부 관계가 흔들리더라도 군주가 앞에서 말한 방식으로 살고 통치하며 포기하지 않는다면 어떤 공격도 견딜 수 있다.",
+        "en_last": "lready disturbed by conspiracy; and even should affairs outside be disturbed, if he has carried out his preparations and has lived as I have said, as long as he does not despair, he will resist every attack, as I said Nabis the Spartan did."
+      },
+      {
+        "pair": 5,
+        "ko_first": "스파르타의 나비스가 그랬다.",
+        "en_first": "But concerning his subjects, when affairs outside are disturbed he has only to fear that they will conspire secretly, from which a prince can easily secure himself by avoiding being hated and despised, and by keeping the people satisfied wi",
+        "ko_last": "한쪽에는 확실한 보상이 있고 다른 쪽에는 불확실하고 위험한 일이 있다.",
+        "en_last": "ook for every advantage; so that, seeing the gain from this course to be assured, and seeing the other to be doubtful and full of dangers, he must be a very rare friend, or a thoroughly obstinate enemy of the prince, to keep faith with you."
+      },
+      {
+        "pair": 6,
+        "ko_first": "그가 특별히 뛰어난 친구이거나 군주의 완강한 적이 아니라면 음모자에게 신의를 지키기 어렵다.",
+        "en_first": "And, to reduce the matter into a small compass, I say that, on the side of the conspirator, there is nothing but fear, jealousy, prospect of punishment to terrify him; but on the side of the prince there is the majesty of the principality, ",
+        "ko_last": "그래서 그는 어떤 피난처도 기대할 수 없다.",
+        "en_last": "For whereas in general the conspirator has to fear before the execution of his plot, in this case he has also to fear the sequel to the crime; because on account of it he has the people for an enemy, and thus cannot hope for any escape."
+      },
+      {
+        "pair": 7,
+        "ko_first": "이 문제에는 수많은 사례를 들 수 있지만 우리 조상 시대의 한 사례만으로 충분하다.",
+        "en_first": "Endless examples could be given on this subject, but I will be content with one, brought to pass within the memory of our fathers.",
+        "ko_last": "질서가 잘 잡힌 국가와 현명한 군주는 유력자를 절망하게 만들지 않고 민중을 만족시키고 평온하게 유지하기 위해 큰 노력을 기울여 왔다.",
+        "en_last": "Machiavelli’s strong condemnation of conspiracies may get its edge from his own very recent experience (February 1513), when he had been arrested and tortured for his alleged complicity in the Boscoli conspiracy."
+      },
+      {
+        "pair": 8,
+        "ko_first": "그것은 군주가 해야 할 가장 중요한 일 가운데 하나이기 때문이다.",
+        "en_first": "For this reason I consider that a prince ought to reckon conspiracies of little account when his people hold him in esteem; but when it is hostile to him, and bears hatred towards him, he ought to fear everything and everybody.",
+        "ko_last": "왕국을 세운 사람은 유력자의 야망과 오만을 알고 그들을 억제할 재갈이 필요하다고 판단했다.",
+        "en_last": "And well-ordered states and wise princes have taken every care not to drive the nobles to desperation, and to keep the people satisfied and contented, for this is one of the most important objects a prince can have."
+      },
+      {
+        "pair": 9,
+        "ko_first": "반면 두려움에서 생기는 민중의 증오를 알고 유력자를 상대로 민중을 보호하려 했다.",
+        "en_first": "Among the best ordered and governed kingdoms of our times is France, and in it are found many good institutions on which depend the liberty and security of the king; of these the first is the parliament and its authority, because he who fou",
+        "ko_last": "이러한 반론에 답하기 위해 몇몇 황제의 성품을 검토하고 그들의 파멸 원인이 내가 제시한 원칙과 모순되지 않는다는 것을 보여 주겠다.",
+        "en_last": "And further, I consider that a prince ought to cherish the nobles, but not so as to make himself hated by the people."
+      },
+      {
+        "pair": 10,
+        "ko_first": "동시에 당시의 일을 읽는 사람이 주목할 만한 점도 제시하겠다.",
+        "en_first": "It may appear, perhaps, to some who have examined the lives and deaths of the Roman emperors that many of them would be an example contrary to my opinion, seeing that some of them lived nobly and showed great qualities of soul, nevertheless",
+        "ko_last": "그들은 유력자의 야망과 민중의 무례함뿐 아니라 군대의 잔혹함과 탐욕도 견뎌야 했다.",
+        "en_last": "me of the emperors, and will show that the causes of their ruin were not different to those alleged by me; at the same time I will only submit for consideration those things that are noteworthy to him who studies the affairs of those times."
+      },
+      {
+        "pair": 11,
+        "ko_first": "군인과 민중을 동시에 만족시키기 어려웠기 때문에 이 문제는 매우 심각했고 많은 황제의 파멸을 가져왔다.",
+        "en_first": "It seems to me sufficient to take all those emperors who succeeded to the empire from Marcus the philosopher down to Maximinus; they were Marcus and his son Commodus, Pertinax, Julian, Severus and his son Antoninus Caracalla, Macrinus, Heli",
+        "ko_last": "군인들은 호전적이고 오만하며 잔혹하고 탐욕스러운 군주를 원했다.",
+        "en_last": "ll those emperors who succeeded to the empire from Marcus the philosopher down to Maximinus; they were Marcus and his son Commodus, Pertinax, Julian, Severus and his son Antoninus Caracalla, Macrinus, Heliogabalus, Alexander, and Maximinus."
+      },
+      {
+        "pair": 12,
+        "ko_first": "그들은 더 많은 급료를 받고 탐욕과 잔혹함을 만족시키기 위해 군주가 민중에게 그런 성품을 행사하기를 원했다.",
+        "en_first": "There is first to note that, whereas in other principalities the ambition of the nobles and the insolence of the people only have to be contended with, the Roman emperors had a third difficulty in having to put up with the cruelty and avari",
+        "ko_last": "또한 존경받게 만드는 많은 덕성을 지니고 있어 평생 두 집단을 적절한 한계 안에 두었으며 미움이나 경멸을 받지 않았다.",
+        "en_last": "emperors who through inexperience had need of special favour adhered more readily to the soldiers than to the people; a course which turned out advantageous to them or not, accordingly as the prince knew how to maintain authority over them."
+      },
+      {
+        "pair": 13,
+        "ko_first": "그러나 페르티낙스는 콤모두스 아래에서 방탕하게 사는 데 익숙해진 군인의 뜻에 반해 황제가 되었다.",
+        "en_first": "From these causes it arose that Marcus, Pertinax, and Alexander, being all men of modest life, lovers of justice, enemies to cruelty, humane, and benignant, came to a sad end except Marcus; he alone lived and died honoured, because he had s",
+        "ko_last": "여기에서 선한 행동으로도 증오를 살 수 있고 악한 행동으로도 증오를 살 수 있다는 점을 알아야 한다.",
+        "en_last": "reditary title, and owed nothing either to the soldiers or the people; and afterwards, being possessed of many virtues which made him respected, he always kept both orders in their places whilst he lived, and was neither hated nor despised."
+      },
+      {
+        "pair": 14,
+        "ko_first": "앞에서 말했듯 국가를 유지하려는 군주는 선하지 않게 행동해야 할 때가 많다.",
+        "en_first": "But Pertinax was created emperor against the wishes of the soldiers, who, being accustomed to live licentiously under Commodus, could not endure the honest life to which Pertinax wished to reduce them; thus, having given cause for hatred, t",
+        "ko_last": "반대로 콤모두스, 세베루스, 안토니누스 카라칼라, 막시미누스의 성품을 살펴보면 그들은 매우 잔혹하고 탐욕스러웠다.",
+        "en_last": " evil; for when that body is corrupt whom you think you have need of to maintain yourself—it may be either the people or the soldiers or the nobles—you have to submit to its humours and to gratify them, and then good works will do you harm."
+      },
+      {
+        "pair": 15,
+        "ko_first": "군인을 만족시키기 위해 민중에게 가할 수 있는 모든 해를 가했다.",
+        "en_first": "But let us come to Alexander, who was a man of such great goodness, that among the other praises which are accorded him is this, that in the fourteen years he held the empire no one was ever put to death by him unjudged; nevertheless, being",
+        "ko_last": "그의 성품은 군인과 민중의 눈에 그를 놀라운 인물로 보이게 했다.",
+        "en_last": "ars he held the empire no one was ever put to death by him unjudged; nevertheless, being considered effeminate and a man who allowed himself to be governed by his mother, he became despised, the army conspired against him, and murdered him."
+      },
+      {
+        "pair": 16,
+        "ko_first": "군인은 감탄하고 존경했으며 민중은 놀라고 두려워했다.",
+        "en_first": "Turning now to the opposite characters of Commodus, Severus, Antoninus Caracalla, and Maximinus, you will find them all cruel and rapacious-men who, to satisfy their soldiers, did not hesitate to commit every kind of iniquity against the pe",
+        "ko_last": "로마에 도착하자 원로원은 두려움 때문에 그를 황제로 선출하고 율리아누스를 죽였다.",
+        "en_last": "And because the actions of this man, as a new prince, were great, I wish to show briefly that he knew well how to counterfeit the fox and the lion, which natures, as I said above, it is necessary for a prince to imitate."
+      },
+      {
+        "pair": 17,
+        "ko_first": "이렇게 시작한 뒤 제국 전체의 지배자가 되려면 두 가지 어려움이 남았다.",
+        "en_first": "Knowing the sloth of the Emperor Julian, he persuaded the army in Sclavonia, of which he was captain, that it would be right to go to Rome and avenge the death of Pertinax, who had been killed by the praetorian soldiers; and under this pret",
+        "ko_last": "그러나 그의 잔혹함은 매우 크고 전례가 없었다.",
+        "en_last": " hated by the army; and it need not be wondered at that he, a new man, was able to hold the empire so well, because his supreme renown always protected him from that hatred which the people might have conceived against him for his violence."
+      },
+      {
+        "pair": 18,
+        "ko_first": "수많은 개인을 죽인 뒤 로마의 많은 민중과 알렉산드리아의 모든 민중을 살해했다.",
+        "en_first": "But his son Antoninus was a most eminent man, and had very excellent qualities, which made him admirable in the sight of the people and acceptable to the soldiers, for he was a warlike man, most enduring of fatigue, a despiser of all delica",
+        "ko_last": "아버지의 길을 따르기만 했다면 민중과 군인을 만족시켰을 것이다.",
+        "en_last": "Antoninus had not taken this care, but had contumeliously killed a brother of that centurion, whom also he daily threatened, yet retained in his bodyguard; which, as it turned out, was a rash thing to do, and proved the emperor’s ruin."
+      },
+      {
+        "pair": 19,
+        "ko_first": "그러나 잔혹하고 짐승 같은 성품을 지녀 군대에게 탐욕을 행사하고 방탕하게 만들기 위해 그들의 비위를 맞추기 시작했다.",
+        "en_first": "But let us come to Commodus, to whom it should have been very easy to hold the empire, for, being the son of Marcus, he had inherited it, and he had only to follow in the footsteps of his father to please his people and soldiers; but, being",
+        "ko_last": "그는 매우 호전적인 사람이었고, 앞에서 말한 알렉산데르의 유약함에 싫증난 군대가 그를 죽인 뒤 막시미누스를 황제로 세웠다.",
+        "en_last": "heatre to compete with gladiators, and doing other vile things, little worthy of the imperial majesty, he fell into contempt with the soldiers, and being hated by one party and despised by the other, he was conspired against and was killed."
+      },
+      {
+        "pair": 20,
+        "ko_first": "그러나 그는 오랫동안 제국을 유지하지 못했다.",
+        "en_first": "It remains to discuss the character of Maximinus.",
+        "ko_last": "헬리오가발루스, 마크리누스, 율리아누스는 완전히 경멸받아 곧 사라졌으므로 논하지 않겠다.",
+        "en_last": "onspired against him, to which may be added his own army; this latter, besieging Aquileia and meeting with difficulties in taking it, were disgusted with his cruelties, and fearing him less when they found so many against him, murdered him."
+      },
+      {
+        "pair": 21,
+        "ko_first": "이제 이 논의의 결론으로 돌아가겠다.",
+        "en_first": "I do not wish to discuss Heliogabalus, Macrinus, or Julian, who, being thoroughly contemptible, were quickly wiped out; but I will bring this discourse to a conclusion by saying that princes in our times have this difficulty of giving inord",
+        "ko_last": "민중이 더 큰 힘을 가지고 있기 때문이다.",
+        "en_last": "t was then more necessary to give satisfaction to the soldiers than to the people, it is now more necessary to all princes, except the Turk and the Soldan, to satisfy the people rather the soldiers, because the people are the more powerful."
+      },
+      {
+        "pair": 22,
+        "ko_first": "터키의 술탄은 언제나 보병 만 이천 명과 기병 만 오천 명을 곁에 두며, 그들에게 왕국의 안전과 힘이 달려 있다.",
+        "en_first": "From the above I have excepted the Turk, who always keeps round him twelve thousand infantry and fifteen thousand cavalry on which depend the security and strength of the kingdom, and it is necessary that, putting aside every consideration ",
+        "ko_last": "그러나 본론으로 돌아가자.",
+        "en_last": "w principality, because there are none of those difficulties in it that are met with in new ones; for although the prince is new, the constitution of the state is old, and it is framed so as to receive him as if he were its hereditary lord."
+      },
+      {
+        "pair": 23,
+        "ko_first": "앞의 논의를 살펴보면 말한 황제들이 파멸한 원인은 증오나 경멸이었음을 알 수 있다.",
+        "en_first": "But returning to the subject of our discourse, I say that whoever will consider it will acknowledge that either hatred or contempt has been fatal to the above-named emperors, and it will be recognized also how it happened that, a number of ",
+        "ko_last": "그러므로 새로운 군주는 세베루스의 행동에서 국가를 세우는 데 필요한 부분을 취하고, 마르쿠스의 행동에서 이미 안정되고 확고한 국가를 영광스럽게 유지하는 데 적합한 부분을 취해야 한다.",
+        "en_last": "gain, is it necessary to follow those of Severus, but he ought to take from Severus those parts which are necessary to found his state, and from Marcus those which are proper and glorious to keep a state that may already be stable and firm."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-20.html",
+    "ko_source_paragraphs": 75,
+    "en_source_paragraphs": 6,
+    "folded_en_notes": 1,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 6,
+    "ko_group_sizes": [
+      5,
+      14,
+      12,
+      6,
+      13,
+      25
+    ],
+    "alignment_cost": 0.0695,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "일부 군주들은 국가를 안전하게 유지하기 위해 신민의 무장을 해제했다.",
+        "en_first": "1.",
+        "ko_last": "이 모든 방법은 그것을 사용한 국가의 구체적인 조건을 살펴보지 않고는 확정적으로 판단하기 어렵다.",
+        "en_last": "And although one cannot give a final judgment on all of these things unless one possesses the particulars of those states in which a decision has to be made, nevertheless I will speak as comprehensively as the matter of itself will admit."
+      },
+      {
+        "pair": 2,
+        "ko_first": "그러나 주제가 허용하는 범위 안에서 일반적으로 말할 수 있는 점을 설명하겠다.",
+        "en_first": "2.",
+        "ko_last": "역사는 이러한 사례로 가득하다.",
+        "en_last": "g it; and these again, with time and opportunity, should be rendered soft and effeminate; and matters should be managed in such a way that all the armed men in the state shall be your own soldiers who in your old state were living near you."
+      },
+      {
+        "pair": 3,
+        "ko_first": "그러나 군주가 기존 국가에 새로운 영토를 합병했을 때에는 그 지역에서 군주의 편을 든 사람들을 제외하고 주민을 무장 해제해야 한다.",
+        "en_first": "3.",
+        "ko_last": "그러나 이 방법은 기대한 대로 작동하지 않았다.",
+        "en_last": "ss in the prince, because these factions will never be permitted in a vigorous principality; such methods for enabling one the more easily to manage subjects are only useful in times of peace, but if war comes this policy proves fallacious."
+      },
+      {
+        "pair": 4,
+        "ko_first": "바일라에서 패배하자 한 파벌이 즉시 용기를 얻어 베네치아의 지배를 빼앗았다.",
+        "en_first": "4.",
+        "ko_last": "그러므로 행운은 새로운 군주를 세습 군주보다 더 위대하게 만들고자 할 때 그에게 적을 만들어 주고, 그 적이 공격하도록 만든다.",
+        "en_last": "For this reason many consider that a wise prince, when he has the opportunity, ought with craft to foster some animosity against himself, so that, having crushed it, his renown may rise higher."
+      },
+      {
+        "pair": 5,
+        "ko_first": "군주가 그들을 극복함으로써 명성을 얻고, 적을 발판으로 삼아 더 높은 곳에 오르게 하기 위해서다.",
+        "en_first": "5.",
+        "ko_last": "그 동기가 군주에 대한 자연스러운 애정이 아니라 이전 정부에 대한 불만이었다면 그들을 친구로 유지하기는 어렵고 큰 수고가 든다.",
+        "en_last": "at it is easier for the prince to make friends of those men who were contented under the former government, and are therefore his enemies, than of those who, being discontented with it, were favourable to him and encouraged him to seize it."
+      },
+      {
+        "pair": 6,
+        "ko_first": "군주는 그들을 만족시킬 수 없기 때문이다.",
+        "en_first": "6.",
+        "ko_last": "그러나 요새를 믿고 민중의 증오를 가볍게 여기는 사람은 비난받아야 한다.",
+        "en_last": "Sylvester, 1898."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-21.html",
+    "ko_source_paragraphs": 63,
+    "en_source_paragraphs": 8,
+    "folded_en_notes": 1,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 8,
+    "ko_group_sizes": [
+      14,
+      4,
+      8,
+      12,
+      6,
+      2,
+      5,
+      12
+    ],
+    "alignment_cost": 0.0443,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "군주를 위대하게 만드는 것보다 위대한 사업과 비범한 모범은 없다.",
+        "en_first": "Nothing makes a prince so much esteemed as great enterprises and setting a fine example.",
+        "ko_last": "같은 구실로 아프리카를 공격했고, 이탈리아 원정을 벌였으며, 최근에는 프랑스를 공격했다.",
+        "en_last": "And his actions have arisen in such a way, one out of the other, that men have never been given time to work steadily against him."
+      },
+      {
+        "pair": 2,
+        "ko_first": "그는 언제나 큰일을 계획하고 실행했다.",
+        "en_first": "Again, it much assists a prince to set unusual examples in internal affairs, similar to those which are related of Messer Bernabo da Milano, who, when he had the opportunity, by any one in civil life doing some extraordinary thing, either g",
+        "ko_last": "군주가 국가의 내부 통치에서도 비범한 모범을 보이는 것은 매우 유익하다.",
+        "en_last": "And a prince ought, above all things, always endeavour in every action to gain for himself the reputation of being a great and remarkable man."
+      },
+      {
+        "pair": 3,
+        "ko_first": "베르나보 다 밀라노에 관한 이야기처럼, 시민 생활에서 선하거나 악한 비범한 행동을 한 사람이 나타나면 널리 이야기될 만한 방식으로 상이나 벌을 내려야 한다.",
+        "en_first": "A prince is also respected when he is either a true friend or a downright enemy, that is to say, when, without any reservation, he declares himself in favour of one party against the other; which course will always be more advantageous than",
+        "ko_last": "입장을 밝히지 않으면 승리한 세력의 먹이가 된다.",
+        "en_last": "Because he who conquers does not want doubtful friends who will not aid him in the time of trial; and he who loses will not harbour you because you did not willingly, sword in hand, court his fate."
+      },
+      {
+        "pair": 4,
+        "ko_first": "패배한 세력은 군주의 파멸을 기뻐하고 만족할 것이다.",
+        "en_first": "Antiochus went into Greece, being sent for by the &#198;tolians to drive out the Romans.",
+        "ko_last": "우유부단한 군주는 현재의 위험을 피하기 위해 대부분 중립을 따르고 대부분 파멸한다.",
+        "en_last": "But if he with whom you ally yourself loses, you may be sheltered by him, and whilst he is able he may aid you, and you become companions on a fortune that may rise again."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그러나 군주가 어느 한쪽의 편을 용감하게 들면, 동맹이 승리하더라도 그가 강해 군주가 그의 처분에 놓일 수는 있지만 감사와 사랑이라는 의무가 생긴다.",
+        "en_first": "In the second case, when those who fight are of such a character that you have no anxiety as to who may conquer, so much the more is it greater prudence to be allied, because you assist at the destruction of one by the aid of another who, i",
+        "ko_last": "군주는 자기 도움으로 한쪽을 파멸시키며, 그쪽은 현명했다면 군주가 살려 두어야 할 세력이다.",
+        "en_last": "But when it cannot be avoided, as happened to the Florentines when the Pope and Spain sent armies to attack Lombardy, then in such a case, for the above reasons, the prince ought to favour one of the parties."
+      },
+      {
+        "pair": 6,
+        "ko_first": "승리하면 군주의 힘 아래 놓이게 되고, 군주의 도움으로 승리하지 못하는 것은 불가능하다.",
+        "en_first": "Never let any Government imagine that it can choose perfectly safe courses; rather let it expect to have to take very doubtful ones, because it is found in ordinary affairs that one never seeks to avoid one trouble without running into anot",
+        "ko_last": "다만 군주는 앞에서 말한 것처럼 불가피한 경우가 아니면 자기보다 강한 세력과 결합해 다른 사람을 공격해서는 안 된다.",
+        "en_last": "ful ones, because it is found in ordinary affairs that one never seeks to avoid one trouble without running into another; but prudence consists in knowing how to distinguish the character of troubles, and for choice to take the lesser evil."
+      },
+      {
+        "pair": 7,
+        "ko_first": "승리하면 강한 동맹의 처분에 놓이기 때문이다.",
+        "en_first": "A prince ought also to show himself a patron of ability, and to honour the proficient in every art.",
+        "ko_last": "그러나 교황과 스페인이 군대를 이끌고 롬바르디아를 공격해 피렌체인이 선택을 피할 수 없었던 경우에는 앞에서 말한 이유로 한쪽에 서야 한다.",
+        "en_last": "ing his possessions for fear lest they be taken away from him or another from opening up trade for fear of taxes; but the prince ought to offer rewards to whoever wishes to do these things and designs in any way to honour his city or state."
+      },
+      {
+        "pair": 8,
+        "ko_first": "어떤 국가도 언제나 안전한 선택을 할 수 있다고 믿어서는 안 된다.",
+        "en_first": "Further, he ought to entertain the people with festivals and spectacles at convenient seasons of the year; and as every city is divided into guilds or into societies,[1] he ought to hold such bodies in esteem, and associate with them someti",
+        "ko_last": "그 위엄은 어떤 경우에도 부족해서는 안 된다.",
+        "en_last": "Perhaps our words “sects” or “clans” would be most appropriate."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-22.html",
+    "ko_source_paragraphs": 22,
+    "en_source_paragraphs": 4,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      7,
+      6,
+      4,
+      5
+    ],
+    "alignment_cost": 0.0299,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "군주의 대신을 선택하는 일은 중요하다.",
+        "en_first": "The choice of servants is of no little importance to a prince, and they are good or not according to the discrimination of the prince.",
+        "ko_last": "그가 저지른 첫 번째 잘못이 대신 선택에 있었기 때문이다.",
+        "en_last": "But when they are otherwise one cannot form a good opinion of him, for the prime error which he made was in choosing them."
+      },
+      {
+        "pair": 2,
+        "ko_first": "시에나의 군주 판돌포 페트루치의 대신 안토니오 다 베나프로를 아는 사람은 누구나 판돌포가 매우 현명한 사람이라고 평가할 수밖에 없었다.",
+        "en_first": "There were none who knew Messer Antonio da Venafro as the servant of Pandolfo Petrucci, Prince of Siena, who would not consider Pandolfo to be a very clever man in having Venafro for his servant.",
+        "ko_last": "사람이 어떤 사람이 하는 일과 말에서 선과 악을 구별할 판단력을 가지고 있다면, 자기 스스로 새로운 것을 만들어 내지 못하더라도 대신의 좋은 행동과 나쁜 행동을 알아보고 좋은 행동은 높이고 나쁜 행동은 바로잡을 수 있다.",
+        "en_last": "t is said and done, although he himself may not have the initiative, yet he can recognize the good and the bad in his servant, and the one he can praise and the other correct; thus the servant cannot hope to deceive him, and is kept honest."
+      },
+      {
+        "pair": 3,
+        "ko_first": "대신은 군주를 속일 수 없다는 것을 알고 선하게 행동하게 된다.",
+        "en_first": "But to enable a prince to form an opinion of his servant there is one test which never fails; when you see the servant thinking more of his own interests than of yours, and seeking inwardly his own profit in everything, such a man will neve",
+        "ko_last": "타인의 국가를 맡은 사람은 자기 자신보다 군주를 생각해야 하고, 군주와 관련되지 않은 일에는 마음을 두지 않아야 한다.",
+        "en_last": "od servant, nor will you ever be able to trust him; because he who has the state of another in his hands ought never to think of himself, but always of his prince, and never pay any attention to matters in which the prince is not concerned."
+      },
+      {
+        "pair": 4,
+        "ko_first": "반면 군주는 대신을 충성스럽게 유지하기 위해 그를 생각하고 존중하고 부유하게 만들며 은혜를 베풀고 명예와 직책을 나누어 주어야 한다.",
+        "en_first": "On the other hand, to keep his servant honest the prince ought to study him, honouring him, enriching him, doing him kindnesses, sharing with him the honours and cares; and at the same time let him see that he cannot stand alone, so that ma",
+        "ko_last": "그렇지 않으면 결말은 언제나 둘 가운데 한쪽에 해롭다.",
+        "en_last": "When, therefore, servants, and princes towards servants, are thus disposed, they can trust each other, but when it is otherwise, the end will always be disastrous for either one or the other."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-23.html",
+    "ko_source_paragraphs": 36,
+    "en_source_paragraphs": 6,
+    "folded_en_notes": 1,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 6,
+    "ko_group_sizes": [
+      6,
+      7,
+      7,
+      4,
+      7,
+      5
+    ],
+    "alignment_cost": 0.0337,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "나는 매우 중요한 문제를 생략하고 싶지 않다.",
+        "en_first": "I do not wish to leave out an important branch of this subject, for it is a danger from which princes are with difficulty preserved, unless they are very careful and discriminating.",
+        "ko_last": "아첨을 피하는 다른 방법은 사람들이 진실을 말해도 군주가 화내지 않는다는 사실을 알게 하는 것이다.",
+        "en_last": "Because there is no other way of guarding oneself from flatterers except letting men understand that to tell you the truth does not offend you; but when every one may tell you the truth, respect for you abates."
+      },
+      {
+        "pair": 2,
+        "ko_first": "그러나 누구나 진실을 말할 수 있다면 군주에 대한 존경은 줄어든다.",
+        "en_first": "Therefore a wise prince ought to hold a third course by choosing the wise men in his state, and giving to them only the liberty of speaking the truth to him, and then only of those things of which he inquires, and of none others; but he oug",
+        "ko_last": "그들 외에는 누구의 말도 듣지 말고, 결정한 일을 실행하며 그 결정에서 확고해야 한다.",
+        "en_last": "He who does otherwise is either overthrown by flatterers, or is so often changed by varying opinions that he falls into contempt."
+      },
+      {
+        "pair": 3,
+        "ko_first": "다른 방식으로 행동하는 군주는 아첨꾼 때문에 파멸하거나 다양한 조언 때문에 자주 결정을 바꾸고 그 결과 경멸받는다.",
+        "en_first": "I wish on this subject to adduce a modern example.",
+        "ko_last": "그래서 오늘 한 일을 내일 없애고, 무엇을 원하고 계획하는지 결코 이해할 수 없으며, 그의 결정은 신뢰받지 못한다.",
+        "en_last": "He married, first, Mary, daughter of Charles the Bold; after her death, Bianca Sforza; and thus became involved in Italian politics."
+      },
+      {
+        "pair": 4,
+        "ko_first": "그러므로 군주는 언제나 조언을 들어야 하지만, 타인이 원할 때가 아니라 자신이 원할 때 들어야 한다.",
+        "en_first": "A prince, therefore, ought always to take counsel, but only when he wishes and not when others wish; he ought rather to discourage every one from offering advice unless he asks it; but, however, he ought to be a constant inquirer, and after",
+        "ko_last": "누군가 어떤 이유로 진실을 말하지 않는다는 것을 알면 화를 내야 한다.",
+        "en_last": "t, however, he ought to be a constant inquirer, and afterwards a patient listener concerning the things of which he inquired; also, on learning that any one, on any consideration, has not told him the truth, he should let his anger be felt."
+      },
+      {
+        "pair": 5,
+        "ko_first": "일부 사람은 군주가 현명하다는 평판을 얻는 것이 군주 자신의 성품 때문이 아니라 주변의 좋은 조언자 때문이라고 생각한다.",
+        "en_first": "And if there are some who think that a prince who conveys an impression of his wisdom is not so through his own ability, but through the good advisers that he has around him, beyond doubt they are deceived, because this is an axiom which ne",
+        "ko_last": "그 대신이 곧 군주의 국가를 빼앗을 것이기 때문이다.",
+        "en_last": "In this case indeed he may be well governed, but it would not be for long, because such a governor would in a short time take away his state from him."
+      },
+      {
+        "pair": 6,
+        "ko_first": "스스로 현명하지 않은 군주가 여러 사람에게 조언을 구하면 일치된 조언을 얻지 못하고, 그 조언을 조화시킬 줄도 모른다.",
+        "en_first": "But if a prince who is not inexperienced should take counsel from more than one he will never get united counsels, nor will he know how to unite them.",
+        "ko_last": "따라서 좋은 조언은 어디에서 나오든 군주의 지혜에서 나와야 하며, 군주의 지혜가 좋은 조언에서 나오는 것은 아니다.",
+        "en_last": "Therefore it must be inferred that good counsels, whencesoever they come, are born of the wisdom of the prince, and not the wisdom of the prince from good counsels."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-24.html",
+    "ko_source_paragraphs": 28,
+    "en_source_paragraphs": 4,
+    "folded_en_notes": 0,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 4,
+    "ko_group_sizes": [
+      7,
+      4,
+      4,
+      13
+    ],
+    "alignment_cost": 0.0406,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "앞에서 말한 원칙들을 신중하게 지킨다면 새로운 군주는 오래된 세습 군주처럼 보이게 되고, 세습 군주보다 더 안전하고 확고한 지위를 얻을 수 있다.",
+        "en_first": "The previous suggestions, carefully observed, will enable a new prince to appear well established, and render him at once more secure and fixed in the state than if he had been long seated there.",
+        "ko_last": "따라서 새로운 군주국을 세우고 좋은 법과 좋은 군대와 좋은 친구와 좋은 모범으로 그것을 꾸민 군주는 두 배의 영광을 얻는다.",
+        "en_last": " him to have established a new principality, and adorned and strengthened it with good laws, good arms, good allies, and with a good example; so will it be a double disgrace to him who, born a prince, shall lose his state by want of wisdom."
+      },
+      {
+        "pair": 2,
+        "ko_first": "반대로 군주로 태어났으면서도 신중함이 부족해 국가를 잃은 사람은 두 배의 수치를 받는다.",
+        "en_first": "And if those seigniors are considered who have lost their states in Italy in our times, such as the King of Naples, the Duke of Milan, and others, there will be found in them, firstly, one common defect in regard to arms from the causes whi",
+        "ko_last": "이러한 결함이 없었다면 전장에 군대를 보낼 만큼 힘이 있는 국가를 잃지는 않았을 것이다.",
+        "en_last": "In the absence of these defects states that have power enough to keep an army in the field cannot be lost."
+      },
+      {
+        "pair": 3,
+        "ko_first": "마케도니아 왕 필리포스는 알렉산드로스 대왕의 아버지가 아니라 로마의 티투스 퀸티우스에게 패배한 필리포스를 말한다.",
+        "en_first": "Philip of Macedon, not the father of Alexander the Great, but he who was conquered by Titus Quintius, had not much territory compared to the greatness of the Romans and of Greece who attacked him, yet being a warlike man who knew how to att",
+        "ko_last": "마침내 몇몇 도시를 잃었지만 왕국은 유지했다.",
+        "en_last": "ked him, yet being a warlike man who knew how to attract the people and secure the nobles, he sustained the war against his enemies for many years, and if in the end he lost the dominion of some cities, nevertheless he retained the kingdom."
+      },
+      {
+        "pair": 4,
+        "ko_first": "그러므로 오랫동안 국가를 소유하다가 잃은 우리 군주들은 운명을 탓하지 말고 자기 무능을 탓해야 한다.",
+        "en_first": "Therefore, do not let our princes accuse fortune for the loss of their principalities after so many years’ possession, but rather their own sloth, because in quiet times they never thought there could be a change (it is a common defect in m",
+        "ko_last": "오직 자기 자신과 자기 역량에 의존하는 방어만이 훌륭하고 확실하며 지속적이다.",
+        "en_last": "in either does not happen, or, if it does, it will not be for your security, because that deliverance is of no avail which does not depend upon yourself; those only are reliable, certain, and durable that depend on yourself and your valour."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-25.html",
+    "ko_source_paragraphs": 57,
+    "en_source_paragraphs": 8,
+    "folded_en_notes": 1,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 8,
+    "ko_group_sizes": [
+      6,
+      7,
+      3,
+      12,
+      7,
+      12,
+      4,
+      6
+    ],
+    "alignment_cost": 0.0392,
+    "review_priority": "low",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "많은 사람은 과거에도 그랬고 지금도, 세상의 일은 운명과 신이 다스리므로 인간의 신중함으로 바로잡을 수 없으며 아무런 해결책도 없다고 생각해 왔다.",
+        "en_first": "It is not unknown to me how many men have had, and still have, the opinion that the affairs of the world are in such wise governed by fortune and by God that men with their wisdom cannot direct them and that no one can even help them; and b",
+        "ko_last": "나는 운명을 홍수가 났을 때 평야를 덮치고 나무와 건물을 쓰러뜨리며 한쪽 땅을 쓸어 다른 쪽에 쌓아 놓는 거센 강에 비유한다.",
+        "en_last": "erhaps a little less.[1] Frederick the Great was accustomed to say: “The older one gets the more convinced one becomes that his Majesty King Chance does three-quarters of the business of this miserable universe.” Sorel’s “Eastern Question.”"
+      },
+      {
+        "pair": 2,
+        "ko_first": "모든 사람이 그 앞에서 달아나고 아무도 저항할 수 없으며 모든 것이 그 힘에 굴복한다.",
+        "en_first": "I compare her to one of those raging rivers, which when in flood overflows the plains, sweeping away trees and buildings, bearing away the soil from place to place; everything flies before it, all yield to its violence, without being able i",
+        "ko_last": "우리 시대에 일어난 여러 변화의 무대이자 원인이 된 이탈리아를 살펴보면, 이 나라는 제방도 둑도 없는 평야임을 알 수 있다.",
+        "en_last": "So it happens with fortune, who shows her power where valour has not prepared to resist her, and thither she turns her forces where she knows that barriers and defences have not been raised to constrain her."
+      },
+      {
+        "pair": 3,
+        "ko_first": "독일이나 스페인이나 프랑스처럼 적절한 역량으로 방어되었다면 홍수는 그런 큰 변화를 일으키지 않았거나 아예 들어오지 못했을 것이다.",
+        "en_first": "And if you will consider Italy, which is the seat of these changes, and which has given to them their impulse, you will see it to be an open country without barriers and without any defence.",
+        "ko_last": "좀 더 구체적인 문제로 들어가 보면, 어떤 군주는 성품이나 행동을 전혀 바꾸지 않았는데도 오늘은 번영하고 내일은 파멸하는 것을 볼 수 있다.",
+        "en_last": "And this I consider enough to say concerning resistance to fortune in general."
+      },
+      {
+        "pair": 4,
+        "ko_first": "내 생각에 그것은 앞에서 길게 논한 원인, 곧 운명에 완전히 의지한 군주는 운명이 변할 때 파멸한다는 데서 생긴다.",
+        "en_first": "But confining myself more to the particular, I say that a prince may be seen happy to-day and ruined to-morrow without having shown any change of disposition or character.",
+        "ko_last": "행운의 변화도 여기에서 생긴다.",
+        "en_last": "This follows from what I have said, that two men working differently bring about the same effect, and of two working similarly, one attains his object and the other does not."
+      },
+      {
+        "pair": 5,
+        "ko_first": "신중하고 인내심 있게 행동하는 사람의 방식과 시대의 조건이 잘 맞으면 그는 번영한다.",
+        "en_first": "Changes in estate also issue from this, for if, to one who governs himself with caution and patience, times and affairs converge in such a way that his administration is successful, his fortune is made; but if times and affairs change, he i",
+        "ko_last": "교황 율리오 2세는 모든 일을 성급하게 처리했다.",
+        "en_last": "t be persuaded that it is well to leave it; and, therefore, the cautious man, when it is time to turn adventurous, does not know how to do it, hence he is ruined; but had he changed his conduct with the times fortune would not have changed."
+      },
+      {
+        "pair": 6,
+        "ko_first": "그는 시대와 상황이 자기 방식과 잘 맞았기 때문에 언제나 성공했다.",
+        "en_first": "Pope Julius the Second went to work impetuously in all his affairs, and found the times and circumstances conform so well to that line of action that he always met with success.",
+        "ko_last": "나는 그의 다른 행동은 생략하겠다.",
+        "en_last": "Because the King of France would have made a thousand excuses, and the others would have raised a thousand fears."
+      },
+      {
+        "pair": 7,
+        "ko_first": "모두 비슷했고 모두 성공했기 때문이다.",
+        "en_first": "I will leave his other actions alone, as they were all alike, and they all succeeded, for the shortness of his life did not let him experience the contrary; but if circumstances had arisen which required him to go cautiously, his ruin would",
+        "ko_last": "그는 본성이 이끄는 방식에서 결코 벗어나지 않았을 것이기 때문이다.",
+        "en_last": "tness of his life did not let him experience the contrary; but if circumstances had arisen which required him to go cautiously, his ruin would have followed, because he would never have deviated from those ways to which nature inclined him."
+      },
+      {
+        "pair": 8,
+        "ko_first": "결론적으로 운명이 변하고 인간이 자기 방식을 고집하면, 둘이 일치할 때에는 성공하고 일치하지 않을 때에는 실패한다.",
+        "en_first": "I conclude, therefore that, fortune being changeful and mankind steadfast in their ways, so long as the two are in agreement men are successful, but unsuccessful when they fall out.",
+        "ko_last": "젊은이는 덜 신중하고 더 사납고 더 대담하게 명령하기 때문이다.",
+        "en_last": "She is, therefore, always, woman-like, a lover of young men, because they are less cautious, more violent, and with more audacity command her."
+      }
+    ]
+  },
+  {
+    "file": "reread/the-prince/chapter-26.html",
+    "ko_source_paragraphs": 67,
+    "en_source_paragraphs": 13,
+    "folded_en_notes": 2,
+    "folded_ko_notes": 0,
+    "removed_heading_artifacts": [],
+    "status": "rewritten",
+    "pairs": 13,
+    "ko_group_sizes": [
+      2,
+      4,
+      4,
+      7,
+      7,
+      6,
+      9,
+      4,
+      11,
+      10,
+      1,
+      1,
+      1
+    ],
+    "alignment_cost": 2.4846,
+    "review_priority": "high",
+    "anchors": [
+      {
+        "pair": 1,
+        "ko_first": "지금까지 논한 모든 일을 생각해 보고, 현재의 시대가 새로운 군주에게 영광을 줄 만한지, 신중하고 역량 있는 사람이 자신에게 명예를 가져오고 이탈리아 민중 전체에게 이익을 줄 새로운 질서를 세울 기회가 있는지를 스스로 물어보았다.",
+        "en_first": "Having carefully considered the subject of the above discourses, and wondering within myself whether the present times were propitious to a new prince, and whether there were elements that would give an opportunity to a wise and virtuous on",
+        "ko_last": "그 결과 새로운 군주에게 유리한 일이 매우 많이 모여 있어, 이보다 더 적절한 시대가 있었는지 알기 어렵다고 생각한다.",
+        "en_last": " and virtuous one to introduce a new order of things which would do honour to him and good to the people of this country, it appears to me that so many things concur to favour a new prince that I never knew a time more fit than the present."
+      },
+      {
+        "pair": 2,
+        "ko_first": "앞에서 말했듯 모세의 역량이 드러나려면 이스라엘 민족이 노예 상태에 있어야 했고, 키루스의 위대함이 드러나려면 페르시아인이 메디아인의 억압을 받아야 했으며, 테세우스의 탁월함이 드러나려면 아테네인이 흩어져 있어야 했다.",
+        "en_first": "And if, as I said, it was necessary that the people of Israel should be captive so as to make manifest the ability of Moses; that the Persians should be oppressed by the Medes so as to discover the greatness of the soul of Cyrus; and that t",
+        "ko_last": "지도자도 없고 질서도 없으며, 패배하고 약탈당하고 찢기고 짓밟혔으며, 온갖 파멸을 견뎠다.",
+        "en_last": " is now in, that she should be more enslaved than the Hebrews, more oppressed than the Persians, more scattered than the Athenians; without head, without order, beaten, despoiled, torn, overrun; and to have endured every kind of desolation."
+      },
+      {
+        "pair": 3,
+        "ko_first": "이전에도 누군가에게서 이탈리아를 구원하도록 신이 보낸 사람이라는 희망을 품게 하는 작은 빛이 나타난 적이 있다.",
+        "en_first": "Although lately some spark may have been shown by one, which made us think he was ordained by God for our redemption, nevertheless it was afterwards seen, in the height of his career, that fortune rejected him; so that Italy, left as withou",
+        "ko_last": "이탈리아가 이러한 야만인의 잔혹함과 오만에서 구원해 달라고 신에게 기도하는 모습을 보라.",
+        "en_last": "It is seen also that she is ready and willing to follow a banner if only someone will raise it."
+      },
+      {
+        "pair": 4,
+        "ko_first": "이탈리아는 깃발을 들고 일어나는 사람을 따를 준비가 되어 있고 기꺼이 따른다.",
+        "en_first": "Nor is there to be seen at present one in whom she can place more hope than in your illustrious house,[1] with its valour and fortune, favoured by God and by the Church of which it is now the chief, and which could be made the head of this ",
+        "ko_last": "그들이 맞이한 기회는 지금보다 더 크지 않았다.",
+        "en_last": "In 1523 Giuliano was elected Pope, and took the title of Clement VII."
+      },
+      {
+        "pair": 5,
+        "ko_first": "그들이 맡은 일은 지금보다 더 정당하거나 더 쉬운 것도 아니었고, 신이 그들에게 지금보다 더 호의적이었던 것도 아니다.",
+        "en_first": "With us there is great justice, because that war is just which is necessary, and arms are hallowed when there is no other hope but in them.",
+        "ko_last": "바다가 갈라지고 구름이 길을 보여 주며 바위가 물을 내고 하늘에서 만나가 내렸다.",
+        "en_last": "God is not willing to do everything, and thus take away our free will and that share of glory which belongs to us."
+      },
+      {
+        "pair": 6,
+        "ko_first": "모든 것이 전하의 위대함에 기여했다.",
+        "en_first": "And it is not to be wondered at if none of the above-named Italians have been able to accomplish all that is expected from your illustrious house; and if in so many revolutions in Italy, and in so many campaigns, it has always appeared as i",
+        "ko_last": "그것은 과거의 제도가 좋지 않았고, 새로운 제도를 세울 줄 아는 사람이 없었기 때문이다.",
+        "en_last": "Such things when they are well founded and dignified will make him revered and admired, and in Italy there are not wanting opportunities to bring such into use in every form."
+      },
+      {
+        "pair": 7,
+        "ko_first": "새로운 군주에게 새로 세운 법과 질서보다 더 큰 명예를 가져다주는 것은 없다.",
+        "en_first": "Here there is great valour in the limbs whilst it fails in the head.",
+        "ko_last": "그래서 오랜 시간 동안 지난 스무 해의 수많은 전쟁에서 이탈리아인만으로 이루어진 군대는 언제나 좋지 않은 모습을 보였다.",
+        "en_last": "ccount of itself; the first witness to this is Il Taro, afterwards Allesandria, Capua, Genoa, Vaila, Bologna, Mestri.[2][2] The battles of Il Taro, 1495; Alessandria, 1499; Capua, 1501; Genoa, 1507; Vaila, 1509; Bologna, 1511; Mestri, 1513."
+      },
+      {
+        "pair": 8,
+        "ko_first": "타로, 알레산드리아, 카푸아, 제노바, 바일라, 볼로냐, 메스트리가 그것을 증명한다.",
+        "en_first": "If, therefore, your illustrious house wishes to follow these remarkable men who have redeemed their country, it is necessary before all things, as a true foundation for every enterprise, to be provided with your own forces, because there ca",
+        "ko_last": "병사 한 사람 한 사람은 훌륭하더라도 군주가 직접 지휘하고 군주가 영예를 주고 군주의 비용으로 유지한다는 것을 알면 함께 모였을 때 더욱 훌륭해진다.",
+        "en_last": "Therefore it is necessary to be prepared with such arms, so that you can be defended against foreigners by Italian valour."
+      },
+      {
+        "pair": 9,
+        "ko_first": "그러므로 이탈리아의 역량으로 외국 세력을 막으려면 이러한 군대를 준비해야 한다.",
+        "en_first": "And although Swiss and Spanish infantry may be considered very formidable, nevertheless there is a defect in both, by reason of which a third order would not only be able to oppose them, but might be relied upon to overthrow them.",
+        "ko_last": "따라서 두 보병의 결함을 알면 기병을 막고 다른 보병을 두려워하지 않는 새로운 군대를 만들 수 있다.",
+        "en_last": "And these are the kind of improvements which confer reputation and power upon a new prince."
+      },
+      {
+        "pair": 10,
+        "ko_first": "그것은 새로운 종류의 무기가 아니라 대형과 질서의 변화로 가능하다.",
+        "en_first": "This opportunity, therefore, ought not to be allowed to pass for letting Italy at last see her liberator appear.",
+        "ko_last": "이 야만인의 지배는 모든 사람에게 악취를 풍긴다.",
+        "en_last": " illustrious house take up this charge with that courage and hope with which all just enterprises are undertaken, so that under its standard our native country may be ennobled, and under its auspices may be verified that saying of Petrarch:"
+      },
+      {
+        "pair": 11,
+        "ko_first": "그러므로 전하의 빛나는 가문은 정당한 사업을 시작할 때 필요한 용기와 희망을 가지고 이 임무를 맡아야 한다.",
+        "en_first": "Virtu contro al Furore Prendera l’arme, e fia il combatter corto: Che l’antico valore Negli italici cuor non e ancor morto.",
+        "ko_last": "그러므로 전하의 빛나는 가문은 정당한 사업을 시작할 때 필요한 용기와 희망을 가지고 이 임무를 맡아야 한다.",
+        "en_last": "Virtu contro al Furore Prendera l’arme, e fia il combatter corto: Che l’antico valore Negli italici cuor non e ancor morto."
+      },
+      {
+        "pair": 12,
+        "ko_first": "그리하여 조국이 그 깃발 아래에서 고귀해지고, 전하의 영도 아래 페트라르카의 다음 말이 실현되게 해야 한다.",
+        "en_first": "Virtue against fury shall advance the fight, And it i’ th’ combat soon shall put to flight: For the old Roman valour is not dead, Nor in th’ Italians’ brests extinguished.",
+        "ko_last": "그리하여 조국이 그 깃발 아래에서 고귀해지고, 전하의 영도 아래 페트라르카의 다음 말이 실현되게 해야 한다.",
+        "en_last": "Virtue against fury shall advance the fight, And it i’ th’ combat soon shall put to flight: For the old Roman valour is not dead, Nor in th’ Italians’ brests extinguished."
+      },
+      {
+        "pair": 13,
+        "ko_first": "“광기는 짧은 싸움을 벌이리라.",
+        "en_first": "Edward Dacre, 1640.",
+        "ko_last": "옛 용맹이 아직 이탈리아인의 마음속에서 죽지 않았기 때문이다.”",
+        "en_last": "Edward Dacre, 1640."
+      }
+    ]
+  }
+]
