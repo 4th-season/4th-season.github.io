@@ -131,15 +131,19 @@ jobs:
           retention-days: 14
 
       - name: Record successful deployment
+        env:
+          DEPLOY_SHA: ${{ github.sha }}
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import json
+          import os
           result = json.loads(Path('/tmp/career-senior-live-result.json').read_text(encoding='utf-8'))
+          deploy_sha = os.environ['DEPLOY_SHA']
           content = f'''# 공개 배포 검증 완료
 
 - 검증 시각(UTC): `{result['verifiedAt']}`
-- 기준 커밋: `${{{{ github.sha }}}}`
+- 기준 커밋: `{deploy_sha}`
 - 시니어 직접 경로: `{result['seniorDirect']}`
 - 시니어 통합 경로: `{result['seniorIntegrated']}`
 - 청소년 기존 경로: `{result['youth']}`
