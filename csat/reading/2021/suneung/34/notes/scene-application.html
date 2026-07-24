@@ -1,0 +1,10 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3D 장면 적용 판단 | 수능 독서 Note</title><link rel="canonical" href="https://4th-season.com/csat/reading/2021/suneung/34/notes/scene-application.html"><style>body{margin:0;background:#f5f7fb;color:#1f2937;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.8}.page{width:min(820px,calc(100% - 24px));margin:28px auto}.card{background:#fff;border:1px solid #d8dee8;border-radius:18px;padding:26px}h1,h2{color:#274c77}.flow{padding:16px;border-radius:12px;background:#172235;color:#fff;white-space:pre-wrap}table{width:100%;border-collapse:collapse}th,td{padding:11px;border:1px solid #d8dee8}th{background:#eef4fb}a{color:#245d92}</style></head><body><main class="page"><article class="card"><h1>3D 장면 적용 판단</h1><p>보기 문제에서는 장면의 변화가 물체 자체의 변화인지, 관찰 시점에서 보이는 방식의 변화인지 먼저 판별해야 합니다.</p><h2>두 질문으로 나누기</h2><table><tr><th>질문</th><th>판단</th></tr><tr><td>물체 자체의 모양·크기·위치가 바뀌는가</td><td>모델링 단계의 정점과 표면 특성 확인</td></tr><tr><td>같은 물체가 관찰 시점에서 다르게 보이는가</td><td>렌더링 단계의 원근감·가려짐·화솟값 확인</td></tr></table><h2>대표 장면</h2><div class="flow">물체 자체가 커짐
+→ 정점 개수 유지
+→ 정점 간격 넓어짐
+
+모양을 유지한 물체가 관찰자에게서 멀어짐
+→ 모델링 삼각형 크기 유지
+→ 렌더링에서 화면상 작게 보임</div><h2>가려짐</h2><p>앞의 물체가 뒤의 물체 일부를 가리면 그 부분은 특정 관찰 시점의 2차원 화면에 나타나지 않습니다. 따라서 최종 화면의 화솟값을 정할 때 가려진 부분의 표면 특성은 사용되지 않습니다.</p><h2>화소 개수와 화솟값</h2><p>화면을 구성하는 화소 개수는 정해져 있습니다. 장면이 움직이거나 물체가 멀어져도 전체 화소 수가 매번 달라지는 것이 아니라, 각 화소에 부여되는 밝기와 색상 값이 달라집니다.</p><h2>오답 점검 순서</h2><div class="flow">1. 장면에서 실제로 변한 대상 확인
+2. 모델링 변화인지 렌더링 변화인지 분류
+3. 정점 개수·간격·상대 위치 조건 대조
+4. 화소 개수와 화솟값을 구분</div><details><summary>확인 문제</summary><p>풍선이 모양을 유지한 채 멀어져 작게 보이는 장면은 모델링에서 삼각형이 작아지는 것이 아니라 렌더링에서 원근감이 구현된 것입니다.</p></details><p><a href="../">본문으로 돌아가기</a></p></article></main></body></html>
