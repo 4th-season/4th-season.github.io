@@ -135,6 +135,16 @@ try {
     record('기존 청소년 화면 회귀 확인', false, error.message);
   }
 
+  try {
+    await page.goto(`${baseURL}/career-explorer/?audience=senior&start=experience`, { waitUntil: 'networkidle' });
+    assert(new URL(page.url()).pathname.endsWith('/career-explorer/senior/'), `시니어 경로로 이동하지 않음: ${page.url()}`);
+    const activeCode = await page.locator('.start-card.is-active').getAttribute('data-code');
+    assert(activeCode === 'experience', `시작 유형 전달 실패: ${activeCode}`);
+    record('audience=senior 통합 진입', true, page.url());
+  } catch (error) {
+    record('audience=senior 통합 진입', false, error.message);
+  }
+
   if (pageErrors.length) {
     record('콘솔·페이지 오류 없음', false, pageErrors.join(' | '));
   } else {
