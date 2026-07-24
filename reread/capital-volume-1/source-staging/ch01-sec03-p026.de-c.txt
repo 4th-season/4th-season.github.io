@@ -1,0 +1,1 @@
+Ihr relativer Wert kann konstant bleiben, obgleich ihr Wert wechselt,
